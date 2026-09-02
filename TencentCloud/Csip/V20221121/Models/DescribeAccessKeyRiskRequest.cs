@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Access key ID.
+        /// Access key ID
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public ulong? AccessKeyID{ get; set; }

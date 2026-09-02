@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Access key asset list.
+        /// Access key asset list
         /// </summary>
         [JsonProperty("Data")]
         public AccessKeyAsset[] Data{ get; set; }
 
         /// <summary>
-        /// Total quantity.
+        /// Total number
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

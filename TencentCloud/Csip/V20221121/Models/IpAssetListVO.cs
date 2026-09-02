@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? CFWStatus{ get; set; }
 
         /// <summary>
-        /// Asset creation time
+        /// Asset creation time.
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
-        /// network attack
+        /// Network attack
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InFlow{ get; set; }
 
         /// <summary>
-        /// outbound traffic
+        /// Outbound traffic
         /// </summary>
         [JsonProperty("OutFlow")]
         public string OutFlow{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? ScanTask{ get; set; }
 
         /// <summary>
-        /// weak password
+        /// Weak password
         /// </summary>
         [JsonProperty("WeakPassword")]
         public ulong? WeakPassword{ get; set; }
@@ -211,13 +211,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AddressId{ get; set; }
 
         /// <summary>
-        /// Member ID information
+        /// MemberId information
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// risk service exposure
+        /// Risk service exposure
         /// </summary>
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+        /// SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
         /// Parameter format: sha256:<64-bit hex>
         /// </summary>
         [JsonProperty("ContentHash")]
         public string ContentHash{ get; set; }
 
         /// <summary>
-        /// Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+        /// Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public long? EngineVersion{ get; set; }
 
         /// <summary>
-        /// Task status, fixed as SCANNING, indicates the task is received.
+        /// Task status, fixed as SCANNING, indicating the task has been received.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

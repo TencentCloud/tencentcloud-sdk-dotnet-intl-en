@@ -25,21 +25,21 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Credential provider flag (original text), such as tencentCam, aws, aliyun
+        /// Credential provider identifier (original), for example tencentCam, aws, aliyun
         /// </summary>
         [JsonProperty("System")]
         public string System{ get; set; }
 
         /// <summary>
         /// SecretID (masked)
-        /// Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+        /// Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
         /// </summary>
         [JsonProperty("SecretID")]
         public string SecretID{ get; set; }
 
         /// <summary>
         /// SecretKey (masked)
-        /// Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+        /// Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

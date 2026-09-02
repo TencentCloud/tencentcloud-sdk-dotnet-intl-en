@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public WebsiteRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of risk handling status
+        /// Status list
         /// </summary>
         [JsonProperty("StatusLists")]
         public FilterDataObject[] StatusLists{ get; set; }
 
         /// <summary>
-        /// List of risk levels
+        /// Danger Level List
         /// </summary>
         [JsonProperty("LevelLists")]
         public FilterDataObject[] LevelLists{ get; set; }
 
         /// <summary>
-        /// List of asset types
+        /// Asset Type List
         /// </summary>
         [JsonProperty("InstanceTypeLists")]
         public FilterDataObject[] InstanceTypeLists{ get; set; }
 
         /// <summary>
-        /// List of risk types
+        /// Risk Type List
         /// </summary>
         [JsonProperty("DetectEngineLists")]
         public FilterDataObject[] DetectEngineLists{ get; set; }

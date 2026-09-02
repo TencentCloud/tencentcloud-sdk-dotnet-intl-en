@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+        /// <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
-        /// <p>Row count of risk location</p>
+        /// <p>Line count where the risk resides</p>
         /// </summary>
         [JsonProperty("Line")]
         public ulong? Line{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// <p>Problem description</p>
+        /// <p>Issue description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Repair recommendation</p>
+        /// <p>Fixing suggestion</p>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }

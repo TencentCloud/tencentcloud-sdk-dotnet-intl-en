@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// AK id.
+        /// id of the AK
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// AK name.
+        /// AK name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,48 +43,48 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Account associate APPID.
+        /// APPID of the account
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Account associate Uin belonging to main account.
+        /// Uin of the main account
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Nickname of the main account.
+        /// Account nickname
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Sub-Account Uin belonging to.
+        /// Sub-account Uin it belongs to
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// Sub-Account nickname.
+        /// Sub-account nickname
         /// </summary>
         [JsonProperty("SubNickname")]
         public string SubNickname{ get; set; }
 
         /// <summary>
-        /// Root account AK.
-        /// Sub-Account AK.
-        /// 2 temporary key.
+        /// 0 root account AK
+        /// 1 Sub-account AK
+        /// 2 Temporary key
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Security advice enumeration.
-        /// Normal.
-        /// Process now.
-        /// 2 recommend reinforcement.
+        /// Security advice Enumerate
+        /// 0 Normal
+        /// 1 Process now
+        /// 2. Hardening is recommended.
         /// </summary>
         [JsonProperty("Advice")]
         public long? Advice{ get; set; }
@@ -102,14 +102,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccessKeyAlarmInfo[] AccessKeyRiskList{ get; set; }
 
         /// <summary>
-        /// Source IP quantity.
+        /// Source IP quantity
         /// </summary>
         [JsonProperty("IPCount")]
         public long? IPCount{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -121,23 +120,23 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastAccessTime{ get; set; }
 
         /// <summary>
-        /// AK status. 
-        /// 0: disabled.
-        /// 1: enabled.
-        /// 2: deleted (deleted in cam, the security center still retains the previous log).
+        /// AK status 
+        /// 0: Disable
+        /// 1: Enabled
+        /// 2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 0 means detected.
-        /// 1 indicates detecting.
+        /// 0 indicates detected
+        /// 1: Indicates detection in progress
         /// </summary>
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }
 
         /// <summary>
-        /// Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+        /// Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }

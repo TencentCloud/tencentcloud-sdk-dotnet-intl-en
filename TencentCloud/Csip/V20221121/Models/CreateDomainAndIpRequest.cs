@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Asset tags
+        /// Asset tag
         /// </summary>
         [JsonProperty("Tags")]
         public AssetTag[] Tags{ get; set; }

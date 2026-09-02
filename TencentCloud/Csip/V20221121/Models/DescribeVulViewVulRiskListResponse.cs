@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] VULTypeLists{ get; set; }
 
         /// <summary>
-        /// tag enumeration.
+        /// tag enumeration
         /// </summary>
         [JsonProperty("Tags")]
         public FilterDataObject[] Tags{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public PortViewPortRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of risk levels
+        /// Danger Level List
         /// </summary>
         [JsonProperty("LevelLists")]
         public FilterDataObject[] LevelLists{ get; set; }
 
         /// <summary>
-        /// List of suggestions
+        /// Disposal Suggestion List
         /// </summary>
         [JsonProperty("SuggestionLists")]
         public FilterDataObject[] SuggestionLists{ get; set; }
 
         /// <summary>
-        /// List of check source
+        /// Source List
         /// </summary>
         [JsonProperty("FromLists")]
         public FilterDataObject[] FromLists{ get; set; }

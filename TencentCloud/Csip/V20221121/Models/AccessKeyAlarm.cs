@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+        /// <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AlarmRuleID{ get; set; }
 
         /// <summary>
-        /// <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+        /// <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
         /// </summary>
         [JsonProperty("AlarmType")]
         public long? AlarmType{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastAlarmTime{ get; set; }
 
         /// <summary>
-        /// <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+        /// <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Aggregate date</p>
+        /// <p>Aggregation date</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// <p>Sub-account nickname</p>
+        /// <p>Belonging sub-account nickname</p>
         /// </summary>
         [JsonProperty("SubNickname")]
         public string SubNickname{ get; set; }
 
         /// <summary>
-        /// <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+        /// <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] LeakEvidence{ get; set; }
 
         /// <summary>
-        /// <p>Whether support editing trust account</p>
+        /// <p>Whether editing trusted accounts is supported</p>
         /// </summary>
         [JsonProperty("IsSupportEditWhiteAccount")]
         public bool? IsSupportEditWhiteAccount{ get; set; }
@@ -151,25 +151,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Evidence{ get; set; }
 
         /// <summary>
-        /// <p>Alarm rule flag</p>
+        /// <p>Alarm rule identifier</p>
         /// </summary>
         [JsonProperty("RuleKey")]
         public string RuleKey{ get; set; }
 
         /// <summary>
-        /// <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+        /// <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+        /// <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
         /// </summary>
         [JsonProperty("AIStatus")]
         public long? AIStatus{ get; set; }
 
         /// <summary>
-        /// <p>First alarm timestamp (in seconds)</p>
+        /// <p>Initial alarm timestamp (in seconds)</p>
         /// </summary>
         [JsonProperty("FirstAlarmTimestamp")]
         public long? FirstAlarmTimestamp{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? LastAlarmTimestamp{ get; set; }
 
         /// <summary>
-        /// <p>AI analysis failure description. Empty string if not failed.</p>
+        /// <p>AI analysis failure description, an empty string if no failure</p>
         /// </summary>
         [JsonProperty("AIFailedReason")]
         public string AIFailedReason{ get; set; }

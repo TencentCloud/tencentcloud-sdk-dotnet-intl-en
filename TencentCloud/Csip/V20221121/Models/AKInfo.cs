@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// ak id.
+        /// id of the ak
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// ak specific value. returns temporary key when temporary key is used.
+        /// `ak` specific value. This field returns the temporary key when the temporary key is used.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Associated account.
+        /// Associated account
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

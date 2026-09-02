@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+        /// <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

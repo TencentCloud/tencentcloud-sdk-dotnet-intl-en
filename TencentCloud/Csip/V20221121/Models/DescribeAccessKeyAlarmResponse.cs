@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm list.
+        /// Alarm list
         /// </summary>
         [JsonProperty("Data")]
         public AccessKeyAlarm[] Data{ get; set; }

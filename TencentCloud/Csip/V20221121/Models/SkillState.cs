@@ -25,21 +25,21 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// SKILL Installation Status
+        /// SKILL installation status
         /// Enumeration value:
         /// 0: Not installed
-        /// Installing
+        /// 1: Installing
         /// 2: Installed
         /// 3: Installation failure
         /// 4: Uninstalling
-        /// 5: Uninstallation failed.
+        /// 5: Uninstallation failed
         /// </summary>
         [JsonProperty("SkillInstallStatus")]
         public long? SkillInstallStatus{ get; set; }
 
         /// <summary>
         /// SKILL installation/uninstallation operation time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("SkillInstallTime")]
         public string SkillInstallTime{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Asset name.
+        /// Asset name
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Asset category.
+        /// Asset category
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// IP, domain name, asset ID, database ID, and more
+        /// IP/Domain/Asset ID, Database ID, etc.
         /// </summary>
         [JsonProperty("Asset")]
         public string Asset{ get; set; }

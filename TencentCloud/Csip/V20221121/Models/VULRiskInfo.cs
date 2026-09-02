@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Fix{ get; set; }
 
         /// <summary>
-        /// Technology reference/reference link.
+        /// Technical reference/Reference link
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Describe{ get; set; }
 
         /// <summary>
-        /// Affected component.
+        /// Affected component
         /// </summary>
         [JsonProperty("ImpactComponent")]
         public VulImpactComponentInfo[] ImpactComponent{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk Check Item ID
+        /// Risk check item ID
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
-        /// Cloud vendor name
+        /// Vendor name
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// risk name
+        /// Risk name
         /// </summary>
         [JsonProperty("RiskTitle")]
         public string RiskTitle{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskFixAdvance{ get; set; }
 
         /// <summary>
-        /// Boundary control
+        /// Boundary management and control
         /// </summary>
         [JsonProperty("DispositionType")]
         public string DispositionType{ get; set; }

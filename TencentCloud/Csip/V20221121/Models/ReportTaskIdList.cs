@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// List of task IDs
+        /// Task ID List
         /// </summary>
         [JsonProperty("TaskIdList")]
         public string[] TaskIdList{ get; set; }
 
         /// <summary>
-        /// User AppId
+        /// Tenant ID
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

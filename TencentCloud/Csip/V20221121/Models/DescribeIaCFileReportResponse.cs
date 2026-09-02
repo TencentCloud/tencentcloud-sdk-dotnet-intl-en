@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Detect file</p>
+        /// <p>Detection file.</p>
         /// </summary>
         [JsonProperty("File")]
         public string File{ get; set; }
 
         /// <summary>
-        /// <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+        /// <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

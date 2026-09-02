@@ -49,19 +49,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Task Completion Time
+        /// Task completion time
         /// </summary>
         [JsonProperty("TaskTime")]
         public string TaskTime{ get; set; }
 
         /// <summary>
-        /// report ID
+        /// Report ID
         /// </summary>
         [JsonProperty("ReportId")]
         public string ReportId{ get; set; }
 
         /// <summary>
-        /// report name
+        /// Report name
         /// </summary>
         [JsonProperty("ReportName")]
         public string ReportName{ get; set; }

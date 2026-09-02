@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk Check Item ID
+        /// Risk check item ID
         /// </summary>
         [JsonProperty("ItemId")]
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// Cloud vendor name
+        /// Vendor name
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// risk name
+        /// Risk name
         /// </summary>
         [JsonProperty("RiskTitle")]
         public string RiskTitle{ get; set; }

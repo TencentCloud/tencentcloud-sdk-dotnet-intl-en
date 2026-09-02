@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Account detailed information.
+        /// Account details
         /// </summary>
         [JsonProperty("User")]
         public AccessKeyUser User{ get; set; }

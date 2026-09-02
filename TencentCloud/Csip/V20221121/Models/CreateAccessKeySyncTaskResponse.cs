@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Initiate a sync task.
+        /// Trigger a sync task
         /// </summary>
         [JsonProperty("TaskID")]
         public long? TaskID{ get; set; }
 
         /// <summary>
-        /// 0: success; 1: failure.
+        /// 0: Success; 1: Failure
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }

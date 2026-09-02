@@ -25,18 +25,18 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm ID list
+        /// List of alarm IDs
         /// </summary>
         [JsonProperty("ID")]
         public NewAlertKey[] ID{ get; set; }
 
         /// <summary>
         /// Operation type. 
-        /// 1: Revoke disposal 
-        /// 2: Marked with processed 
+        /// 1: Undo disposal 
+        /// 2: Marked as processed 
         /// 3: Marked as ignored 
         /// 4: Cancel tag disposal
-        /// 5: Unmark ignore
+        /// 5: Untag and ignore
         /// </summary>
         [JsonProperty("OperateType")]
         public long? OperateType{ get; set; }

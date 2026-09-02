@@ -25,43 +25,43 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of risks
+        /// Risk list
         /// </summary>
         [JsonProperty("Data")]
         public AssetViewWeakPassRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of risk handling status
+        /// Status list
         /// </summary>
         [JsonProperty("StatusLists")]
         public FilterDataObject[] StatusLists{ get; set; }
 
         /// <summary>
-        /// List of risk levels
+        /// Danger Level List
         /// </summary>
         [JsonProperty("LevelLists")]
         public FilterDataObject[] LevelLists{ get; set; }
 
         /// <summary>
-        /// List of check source
+        /// Source List
         /// </summary>
         [JsonProperty("FromLists")]
         public FilterDataObject[] FromLists{ get; set; }
 
         /// <summary>
-        /// List of asset types
+        /// Asset Type List
         /// </summary>
         [JsonProperty("InstanceTypeLists")]
         public FilterDataObject[] InstanceTypeLists{ get; set; }
 
         /// <summary>
-        /// List of weak password types
+        /// Weak Password Type List
         /// </summary>
         [JsonProperty("PasswordTypeLists")]
         public FilterDataObject[] PasswordTypeLists{ get; set; }

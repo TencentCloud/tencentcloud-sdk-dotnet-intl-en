@@ -39,17 +39,17 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// Occurrence time
-        /// 10 minutes
-        /// 2:1 hour
+        /// 1: 10 minutes
+        /// 2: 1 hour
         /// 3: One day
-        /// 4: A week
+        /// 4: One week
         /// 5: One month
         /// </summary>
         [JsonProperty("TimeInterval")]
         public long? TimeInterval{ get; set; }
 
         /// <summary>
-        /// Event
+        /// Event that occurred
         /// </summary>
         [JsonProperty("EventContent")]
         public UebaEventContent EventContent{ get; set; }
@@ -62,8 +62,8 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// Alarm type
-        /// Prompt.
-        /// 1: low
+        /// 0: Notification
+        /// 1: Low risk
         /// 2: Medium risk
         /// 3: High risk
         /// 4: Critical
@@ -84,7 +84,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] OperateObject{ get; set; }
 
         /// <summary>
-        /// Operation method
+        /// Operation method.
         /// </summary>
         [JsonProperty("OperateMethod")]
         public string[] OperateMethod{ get; set; }
@@ -96,7 +96,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Chinese name in logs
+        /// Log Chinese name
         /// </summary>
         [JsonProperty("LogTypeStr")]
         public string LogTypeStr{ get; set; }

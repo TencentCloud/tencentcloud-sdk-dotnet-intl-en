@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk call record list.
+        /// Risk call record list
         /// </summary>
         [JsonProperty("Data")]
         public RiskCallRecord[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of records.
+        /// Total number of calls
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

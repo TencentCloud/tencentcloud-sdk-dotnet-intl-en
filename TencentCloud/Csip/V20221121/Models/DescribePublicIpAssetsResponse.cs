@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public IpAssetListVO[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of results
+        /// Total number.
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

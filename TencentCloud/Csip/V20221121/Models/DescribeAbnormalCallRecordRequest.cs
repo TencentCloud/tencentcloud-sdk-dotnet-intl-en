@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm rule ID.
+        /// Alarm rule ID
         /// </summary>
         [JsonProperty("AlarmRuleID")]
         public long? AlarmRuleID{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Access key.
+        /// Access key
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Source IP of the call.
+        /// Call source IP
         /// </summary>
         [JsonProperty("SourceIP")]
         public string SourceIP{ get; set; }

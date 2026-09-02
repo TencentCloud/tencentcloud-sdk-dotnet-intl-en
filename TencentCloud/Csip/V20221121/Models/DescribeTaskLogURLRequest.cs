@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Type of the task. `0`: Preview; `1`: Download
+        /// 0: Preview; 1: Download
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// List of task report IDs
+        /// Task Report ID List
         /// </summary>
         [JsonProperty("ReportItemKeyList")]
         public ReportItemKey[] ReportItemKeyList{ get; set; }
 
         /// <summary>
-        /// List of task IDs in the report
+        /// List of Task IDs in the Report
         /// </summary>
         [JsonProperty("ReportTaskIdList")]
         public ReportTaskIdList[] ReportTaskIdList{ get; set; }

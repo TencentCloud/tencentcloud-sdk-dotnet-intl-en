@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk record ID.
+        /// Risk record ID
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }

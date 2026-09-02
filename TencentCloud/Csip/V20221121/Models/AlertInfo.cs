@@ -25,20 +25,20 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// alarm ID
+        /// Alarm ID
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// alarm name
+        /// Alarm name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// Alarm source
-        /// CFW: Cloud Firewall
+        /// CFW: Cloud firewall
         /// WAF: Web application firewall
         /// CWP: Host Security
         /// CSIP: Cloud Security Center
@@ -47,9 +47,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// alarm level
-        /// Prompt.
-        /// 2: Low risk
+        /// Alarm level
+        /// 1: Prompt
+        /// 2: Low-risk
         /// 3: Medium risk
         /// 4: High risk
         /// 5: Critical
@@ -58,25 +58,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// attacker
+        /// Attacker
         /// </summary>
         [JsonProperty("Attacker")]
         public RoleInfo Attacker{ get; set; }
 
         /// <summary>
-        /// victim
+        /// Victim.
         /// </summary>
         [JsonProperty("Victim")]
         public RoleInfo Victim{ get; set; }
 
         /// <summary>
-        /// Evidence data (such as attack content, base64 encoded)
+        /// Evidence data (for example, attack content, base64 encoded)
         /// </summary>
         [JsonProperty("EvidenceData")]
         public string EvidenceData{ get; set; }
 
         /// <summary>
-        /// evidence location (for example protocol port)
+        /// Evidence location (such as protocol port)
         /// </summary>
         [JsonProperty("EvidenceLocation")]
         public string EvidenceLocation{ get; set; }
@@ -88,7 +88,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EvidencePath{ get; set; }
 
         /// <summary>
-        /// Initial alarm time
+        /// First alarm time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -119,7 +119,7 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// Processing status
-        /// 0: unprocessed, 1: ignored, 2: processed
+        /// 0: Unprocessed; 1: Ignored; 2: Processed.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -173,19 +173,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string NickName{ get; set; }
 
         /// <summary>
-        /// account ID
+        /// Account ID
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Behavior
+        /// Action
         /// </summary>
         [JsonProperty("Action")]
         public ulong? Action{ get; set; }
 
         /// <summary>
-        /// risk detection
+        /// Risk detection
         /// </summary>
         [JsonProperty("RiskInvestigation")]
         public string RiskInvestigation{ get; set; }
@@ -197,7 +197,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskTreatment{ get; set; }
 
         /// <summary>
-        /// log type
+        /// Log type
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

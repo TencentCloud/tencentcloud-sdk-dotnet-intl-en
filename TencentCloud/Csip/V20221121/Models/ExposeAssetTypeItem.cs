@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud service provider.
+        /// Cloud service provider
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
 
         /// <summary>
-        /// Vendor name.
+        /// Cloud vendor name
         /// </summary>
         [JsonProperty("ProviderName")]
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
 
         /// <summary>
-        /// Asset type name.
+        /// Asset type name
         /// </summary>
         [JsonProperty("AssetTypeName")]
         public string AssetTypeName{ get; set; }

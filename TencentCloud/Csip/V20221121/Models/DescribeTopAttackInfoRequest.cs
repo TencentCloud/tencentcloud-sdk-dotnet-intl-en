@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// 0: Default all 1: Asset ID 2: Domain name
+        /// 0: Default: All; 1: Asset ID; 2: Domain name
         /// </summary>
         [JsonProperty("AssetType")]
         public long? AssetType{ get; set; }

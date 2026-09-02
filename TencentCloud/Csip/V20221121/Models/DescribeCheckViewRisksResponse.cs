@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Number of risks from check perspective</p>
+        /// <p>Number of risks in the check perspective</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Risk list in check perspective</p>
+        /// <p>Risk list from the check perspective</p>
         /// </summary>
         [JsonProperty("CheckViewRiskList")]
         public CheckViewRiskItem[] CheckViewRiskList{ get; set; }
 
         /// <summary>
-        /// <p>Tag list of cspm standard from a checking perspective</p>
+        /// <p>cspm specification tag list from the checking perspective</p>
         /// </summary>
         [JsonProperty("StandardNameList")]
         public StandardItem[] StandardNameList{ get; set; }

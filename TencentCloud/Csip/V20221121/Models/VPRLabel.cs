@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+        /// <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+        /// <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of vulnerabilities
+        /// Vulnerability Risk List from Vulnerability Asset's Perspective
         /// </summary>
         [JsonProperty("Data")]
         public VULViewVULRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of risk levels
+        /// Danger Level List
         /// </summary>
         [JsonProperty("LevelLists")]
         public FilterDataObject[] LevelLists{ get; set; }
 
         /// <summary>
-        /// List of check source
+        /// Source List
         /// </summary>
         [JsonProperty("FromLists")]
         public FilterDataObject[] FromLists{ get; set; }
 
         /// <summary>
-        /// List of vulnerability types
+        /// Vulnerability Type List
         /// </summary>
         [JsonProperty("VULTypeLists")]
         public FilterDataObject[] VULTypeLists{ get; set; }

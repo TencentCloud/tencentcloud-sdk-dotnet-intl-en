@@ -25,16 +25,16 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Sub-engine type
-        /// Enumeration value:
+        /// Sub-engine type.
+        /// Enumeration values:
         /// AI: AI engine
-        /// STATIC: Static analysis engine
+        /// STATIC: static analysis engine
         /// </summary>
         [JsonProperty("ScanType")]
         public string ScanType{ get; set; }
 
         /// <summary>
-        /// The rule list hit by the engine
+        /// Hit rule list.
         /// </summary>
         [JsonProperty("RuleList")]
         public SkillScanRuleHit[] RuleList{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public SubUserInfo[] Data{ get; set; }
 
         /// <summary>
-        /// Manufacturer list
+        /// Manufacturer enumeration list
         /// </summary>
         [JsonProperty("CloudTypeLst")]
         public FilterDataObject[] CloudTypeLst{ get; set; }
 
         /// <summary>
-        /// Enumerate appid belonging to main account
+        /// appid list of the main account
         /// </summary>
         [JsonProperty("OwnerAppIDLst")]
         public FilterDataObject[] OwnerAppIDLst{ get; set; }

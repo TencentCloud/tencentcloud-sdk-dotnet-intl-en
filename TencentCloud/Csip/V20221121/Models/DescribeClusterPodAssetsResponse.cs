@@ -25,37 +25,37 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Data list
+        /// List
         /// </summary>
         [JsonProperty("Data")]
         public AssetClusterPod[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of results
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of cluster pod status
+        /// Cluster Pod Status Enumeration
         /// </summary>
         [JsonProperty("PodStatusList")]
         public FilterDataObject[] PodStatusList{ get; set; }
 
         /// <summary>
-        /// List of namespaces
+        /// Namespace Enumeration
         /// </summary>
         [JsonProperty("NamespaceList")]
         public FilterDataObject[] NamespaceList{ get; set; }
 
         /// <summary>
-        /// List of regions
+        /// Region Enumeration
         /// </summary>
         [JsonProperty("RegionList")]
         public FilterDataObject[] RegionList{ get; set; }
 
         /// <summary>
-        /// List of users (AppId)
+        /// Tenant Enumeration
         /// </summary>
         [JsonProperty("AppIdList")]
         public FilterDataObject[] AppIdList{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total quantity.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of services in risk
+        /// Risk Service List
         /// </summary>
         [JsonProperty("Data")]
         public ServerRisk[] Data{ get; set; }
 
         /// <summary>
-        /// List of asset types
+        /// Asset Type Enumeration
         /// </summary>
         [JsonProperty("InstanceTypeLists")]
         public FilterDataObject[] InstanceTypeLists{ get; set; }

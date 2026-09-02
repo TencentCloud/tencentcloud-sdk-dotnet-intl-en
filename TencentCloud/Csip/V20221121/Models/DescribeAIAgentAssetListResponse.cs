@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// asset list
+        /// Asset list
         /// </summary>
         [JsonProperty("AssetList")]
         public AIAgentAsset[] AssetList{ get; set; }

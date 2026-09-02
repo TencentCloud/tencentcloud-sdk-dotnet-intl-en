@@ -31,37 +31,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccessKeyRisk RiskInfo{ get; set; }
 
         /// <summary>
-        /// Total number of CAM policies.
+        /// Total number of CAM policies
         /// </summary>
         [JsonProperty("CamCount")]
         public long? CamCount{ get; set; }
 
         /// <summary>
-        /// Number of associated alarms for the account.
+        /// Alarm count associated with the account
         /// </summary>
         [JsonProperty("AlarmCount")]
         public long? AlarmCount{ get; set; }
 
         /// <summary>
-        /// Access method 0 API 1 console and API.
+        /// Access method. 0: API. 1: Console and API.
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// Access key Alarm count list.
+        /// List of access key alarm counts
         /// </summary>
         [JsonProperty("AccessKeyAlarmCount")]
         public AccessKeyAlarmCount[] AccessKeyAlarmCount{ get; set; }
 
         /// <summary>
-        /// Whether operation protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+        /// Whether operation protection is enabled. 0: Not enabled; 1: Enabled.
         /// </summary>
         [JsonProperty("ActionFlag")]
         public long? ActionFlag{ get; set; }
 
         /// <summary>
-        /// Whether login protection is enabled. valid values: 0 (not enabled), 1 (enabled).
+        /// Whether login protection is enabled. 0: not enabled; 1: enabled
         /// </summary>
         [JsonProperty("LoginFlag")]
         public long? LoginFlag{ get; set; }

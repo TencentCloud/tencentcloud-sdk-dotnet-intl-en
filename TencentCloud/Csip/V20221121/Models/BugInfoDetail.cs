@@ -79,13 +79,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ImpactOs{ get; set; }
 
         /// <summary>
-        /// Affected component
+        /// Components affected by the vulnerability
         /// </summary>
         [JsonProperty("ImpactCOMPENT")]
         public string ImpactCOMPENT{ get; set; }
 
         /// <summary>
-        /// Vulnerability Affected Version
+        /// Vulnerability affected version
         /// </summary>
         [JsonProperty("ImpactVersion")]
         public string ImpactVersion{ get; set; }

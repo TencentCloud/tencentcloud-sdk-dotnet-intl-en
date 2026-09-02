@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// id of the source IP.
+        /// Source IP id
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// Source IP.
+        /// Source IP
         /// </summary>
         [JsonProperty("SourceIP")]
         public string SourceIP{ get; set; }
@@ -43,32 +43,32 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Account associate APPID.
+        /// APPID of the account
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// IP region.
+        /// IP region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// API call method.
-        /// -1: uncounted.
-        /// 0: console invocation.
+        /// Calling method
+        /// -1: Uncounted
+        /// 0: Console invocation
         /// 1:API
         /// </summary>
         [JsonProperty("EventType")]
         public long? EventType{ get; set; }
 
         /// <summary>
-        /// IP type.
-        /// 0: within the account (unremarked).
-        /// 1: external accounts (unremarked).
-        /// 2: within the account (remarked).
-        /// 3: external account (remarked).
+        /// IP type
+        /// 0: within the account (no remark)
+        /// 1: Outside the account (no remarks)
+        /// 2: Within the account (remarked)
+        /// 3: Outside the account   (Remarks added)
         /// </summary>
         [JsonProperty("IPType")]
         public long? IPType{ get; set; }
@@ -80,7 +80,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccessKeyAlarmInfo[] AccessKeyAlarmList{ get; set; }
 
         /// <summary>
-        /// ak information list.
+        /// ak information list
         /// </summary>
         [JsonProperty("AKInfo")]
         public AKInfo[] AKInfo{ get; set; }
@@ -98,25 +98,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastAccessTime{ get; set; }
 
         /// <summary>
-        /// IP associated instance ID. if an empty string, represents an asset not within the account.
+        /// Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Associated instance name.
+        /// IP associated instance name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Account associate Uin.
+        /// Uin of the account
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Nickname.
+        /// Nickname
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
@@ -128,20 +128,20 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? ShowStatus{ get; set; }
 
         /// <summary>
-        /// ISP field.
+        /// Carrier field
         /// </summary>
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
 
         /// <summary>
-        /// vpc information outside the account.
+        /// vpc information outside the account
         /// </summary>
         [JsonProperty("VpcInfo")]
         public SourceIPVpcInfo[] VpcInfo{ get; set; }
 
         /// <summary>
-        /// Cloud type.
-        /// 0 for tencent cloud.
+        /// Cloud type
+        /// 0: Tencent Cloud
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }

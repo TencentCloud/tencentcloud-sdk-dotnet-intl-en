@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud account ID.
+        /// Cloud Account ID
         /// </summary>
         [JsonProperty("CloudAccountID")]
         public string CloudAccountID{ get; set; }
@@ -43,14 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -68,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VulName{ get; set; }
 
         /// <summary>
-        /// Vulnerability type.
+        /// vulnerability type
         /// </summary>
         [JsonProperty("VulCategory")]
         public string VulCategory{ get; set; }
@@ -80,7 +79,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VulLevel{ get; set; }
 
         /// <summary>
-        /// CVE id.
+        /// CVE ID
         /// </summary>
         [JsonProperty("CveID")]
         public string CveID{ get; set; }
@@ -92,37 +91,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Container ID.
+        /// Container ID
         /// </summary>
         [JsonProperty("ContainerID")]
         public string ContainerID{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk remediation recommendation.
+        /// Vulnerability risk remediation recommendations
         /// </summary>
         [JsonProperty("Fix")]
         public string Fix{ get; set; }
 
         /// <summary>
-        /// Linux vulnerability.
+        /// Linux vulnerability
         /// </summary>
         [JsonProperty("VulCategoryName")]
         public string VulCategoryName{ get; set; }
 
         /// <summary>
-        /// Vulnerability level name.
+        /// Vulnerability level name
         /// </summary>
         [JsonProperty("VulLevelName")]
         public string VulLevelName{ get; set; }
 
         /// <summary>
-        /// Instance status chinese information.
+        /// Chinese information of instance status
         /// </summary>
         [JsonProperty("InstanceStatusName")]
         public string InstanceStatusName{ get; set; }
 
         /// <summary>
-        /// Tenant ID.
+        /// Tenant ID
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }

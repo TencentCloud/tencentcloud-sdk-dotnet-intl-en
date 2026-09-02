@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud account ID.
+        /// Cloud Account ID
         /// </summary>
         [JsonProperty("CloudAccountID")]
         public string CloudAccountID{ get; set; }
@@ -43,37 +43,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Risk name.
+        /// Risk name
         /// </summary>
         [JsonProperty("RiskName")]
         public string RiskName{ get; set; }
 
         /// <summary>
-        /// Risk classification.
+        /// Risk classification
         /// </summary>
         [JsonProperty("RiskCategory")]
         public string RiskCategory{ get; set; }
 
         /// <summary>
-        /// Risk level.
+        /// Risk level
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Risk description.
+        /// Risk description
         /// </summary>
         [JsonProperty("RiskDesc")]
         public string RiskDesc{ get; set; }
 
         /// <summary>
-        /// Risk result.
+        /// Risk result
         /// </summary>
         [JsonProperty("RiskResult")]
         public string RiskResult{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FixAdvice{ get; set; }
 
         /// <summary>
-        /// Linux vulnerability.
+        /// Linux vulnerability
         /// </summary>
         [JsonProperty("RiskCategoryName")]
         public string RiskCategoryName{ get; set; }
 
         /// <summary>
-        /// Risk name.
+        /// Risk level name
         /// </summary>
         [JsonProperty("RiskLevelName")]
         public string RiskLevelName{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Tenant ID.
+        /// Tenant ID
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }

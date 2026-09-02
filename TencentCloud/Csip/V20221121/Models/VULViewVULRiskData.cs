@@ -31,19 +31,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// Impact assets.
+        /// Affect assets
         /// </summary>
         [JsonProperty("NoHandleCount")]
         public long? NoHandleCount{ get; set; }
 
         /// <summary>
-        /// Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Component.
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Index{ get; set; }
 
         /// <summary>
-        /// Vulnerability type.
+        /// Vulnerability type
         /// </summary>
         [JsonProperty("VULType")]
         public string VULType{ get; set; }
@@ -109,19 +109,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Payload{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact component.
+        /// Vulnerability Impact component
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact version.
+        /// Affected versions of the vulnerability
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// Risks.
+        /// Risk point
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }
@@ -163,55 +163,55 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PCMGRId{ get; set; }
 
         /// <summary>
-        /// Vulnerability tag. during searching, emergency mandatory parameter VulTag=SuggestRepair/EMGCVul.
+        /// Vulnerability tag. During searching, you must pass in `VulTag=SuggestRepair/EMGCVul` for emergency and mandatory vulnerabilities.
         /// </summary>
         [JsonProperty("VulTag")]
         public string[] VulTag{ get; set; }
 
         /// <summary>
-        /// Vulnerability disclosure time.
+        /// Vulnerability disclosure time
         /// </summary>
         [JsonProperty("DisclosureTime")]
         public string DisclosureTime{ get; set; }
 
         /// <summary>
-        /// Attack intensity.
+        /// Attack heat
         /// </summary>
         [JsonProperty("AttackHeat")]
         public ulong? AttackHeat{ get; set; }
 
         /// <summary>
-        /// Whether a mandatory vulnerability: 1 - yes; 0 - no.
+        /// Whether it is a mandatory vulnerability. 1: yes, 0: no
         /// </summary>
         [JsonProperty("IsSuggest")]
         public long? IsSuggest{ get; set; }
 
         /// <summary>
-        /// Disposal task id.
+        /// Disposal task id
         /// </summary>
         [JsonProperty("HandleTaskId")]
         public string HandleTaskId{ get; set; }
 
         /// <summary>
-        /// Engine source.
+        /// Engine source
         /// </summary>
         [JsonProperty("EngineSource")]
         public string EngineSource{ get; set; }
 
         /// <summary>
-        /// New vulnerability risk id.
+        /// New vulnerability risk id
         /// </summary>
         [JsonProperty("VulRiskId")]
         public string VulRiskId{ get; set; }
 
         /// <summary>
-        /// New version vulnerability id.
+        /// New version vulnerability id
         /// </summary>
         [JsonProperty("TvdID")]
         public string TvdID{ get; set; }
 
         /// <summary>
-        /// Is it possible to perform a one-click physical examination. valid values: 1-yes, 0-not allowed.
+        /// Is one-click physical examination possible? 1: allowed, 0: not allowed.
         /// </summary>
         [JsonProperty("IsOneClick")]
         public ulong? IsOneClick{ get; set; }

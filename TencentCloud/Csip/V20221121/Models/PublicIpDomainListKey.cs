@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// IP/Domain
+        /// Asset Value
         /// </summary>
         [JsonProperty("Asset")]
         public string Asset{ get; set; }

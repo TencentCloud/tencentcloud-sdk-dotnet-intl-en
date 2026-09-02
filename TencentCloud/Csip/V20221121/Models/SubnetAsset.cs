@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// UIN
+        /// uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Region
+        /// Region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// VPC id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC name
+        /// VPC Name
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// User name
+        /// Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
-        /// CIDR block
+        /// cidr
         /// </summary>
         [JsonProperty("CIDR")]
         public string CIDR{ get; set; }
@@ -91,31 +91,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Number of CVMs
+        /// CVM Count
         /// </summary>
         [JsonProperty("CVM")]
         public long? CVM{ get; set; }
 
         /// <summary>
-        /// Number of available IPs
+        /// Available IP Count
         /// </summary>
         [JsonProperty("AvailableIp")]
         public long? AvailableIp{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Configuration risks
+        /// Configuration risk
         /// </summary>
         [JsonProperty("ConfigureRisk")]
         public long? ConfigureRisk{ get; set; }
 
         /// <summary>
-        /// Number of tasks.
+        /// Number of tasks
         /// </summary>
         [JsonProperty("ScanTask")]
         public long? ScanTask{ get; set; }

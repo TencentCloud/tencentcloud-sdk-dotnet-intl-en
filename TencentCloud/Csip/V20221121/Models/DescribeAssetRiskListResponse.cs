@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Number of risks from asset perspective
+        /// Number of risks from the asset perspective
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Risk list from asset perspective
+        /// Risk list from the asset perspective
         /// </summary>
         [JsonProperty("AssetRiskList")]
         public AssetRiskItem[] AssetRiskList{ get; set; }
 
         /// <summary>
-        /// Standard name collection
+        /// Collection of MLPS standard names
         /// </summary>
         [JsonProperty("StandardNameList")]
         public StandardItem[] StandardNameList{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Result storage duration (30/60/90/120/150/180 days)</p>
+        /// <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }

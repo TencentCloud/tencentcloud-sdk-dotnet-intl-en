@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Credential data list
+        /// Credential data list.
         /// </summary>
         [JsonProperty("Data")]
         public KeySandboxCredential[] Data{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Max number of returned results
+        /// Query Quantity Limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Query offset
+        /// Query Offset Position
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting order. Values: `asc` (ascending), `desc` (descending).
+        /// Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Specify the field used for sorting
+        /// Fields to Sort
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
 
         /// <summary>
-        /// Filtered columns and content
+        /// Filtered Columns and Content
         /// </summary>
         [JsonProperty("Filters")]
         public WhereFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Start time of the query period. 
+        /// Can be left blank. Log usage query time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the query period.
+        /// Can be left blank. Log usage query time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Top attack types/attackers by count
+        /// Top attack types/attacker count
         /// </summary>
         [JsonProperty("TopAttackInfo")]
         public TagCount[] TopAttackInfo{ get; set; }

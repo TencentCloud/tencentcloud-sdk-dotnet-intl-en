@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public OrganizationUserInfo[] Data{ get; set; }
 
         /// <summary>
-        /// Join method enumeration
+        /// Joining method enumeration
         /// </summary>
         [JsonProperty("JoinTypeLst")]
         public FilterDataObject[] JoinTypeLst{ get; set; }
 
         /// <summary>
-        /// Cloud vendor enumeration
+        /// Cloud service provider enumeration
         /// </summary>
         [JsonProperty("CloudTypeLst")]
         public FilterDataObject[] CloudTypeLst{ get; set; }

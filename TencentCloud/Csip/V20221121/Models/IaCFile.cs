@@ -73,25 +73,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? RiskTotalCnt{ get; set; }
 
         /// <summary>
-        /// <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+        /// <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
         /// </summary>
         [JsonProperty("RiskLevelCnt")]
         public KeyValueInt[] RiskLevelCnt{ get; set; }
 
         /// <summary>
-        /// <p>Scan time</p>
+        /// <p>Scan time.</p>
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
-        /// <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+        /// <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+        /// <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
         /// </summary>
         [JsonProperty("FailType")]
         public long? FailType{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud account ID.
+        /// Cloud Account ID
         /// </summary>
         [JsonProperty("CloudAccountID")]
         public string CloudAccountID{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Tenant ID.
+        /// Tenant ID
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }
 
         /// <summary>
-        /// Account name.
+        /// Cloud account name
         /// </summary>
         [JsonProperty("CloudAccountName")]
         public string CloudAccountName{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CmdLine{ get; set; }
 
         /// <summary>
-        /// Listening port list.
+        /// Listening port list
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }

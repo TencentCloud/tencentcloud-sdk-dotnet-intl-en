@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Key</p>
+        /// <p>Key.</p>
         /// </summary>
         [JsonProperty("Key")]
         public long? Key{ get; set; }

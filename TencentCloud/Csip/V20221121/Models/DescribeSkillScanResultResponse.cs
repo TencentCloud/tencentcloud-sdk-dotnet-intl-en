@@ -27,9 +27,9 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// Detection status
         /// Enumeration value:
-        /// SUCCESS: Detection completed, results returned.
-        /// SCANNING: Detection in progress
-        /// NOT_FOUND: No detection record.
+        /// SUCCESS: Detection complete, results returned
+        /// SCANNING: detection in progress
+        /// NOT_FOUND: No detection record
         /// FAILED: Detection failed
         /// </summary>
         [JsonProperty("Status")]

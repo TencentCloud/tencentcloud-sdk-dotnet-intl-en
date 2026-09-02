@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppID{ get; set; }
 
         /// <summary>
-        /// CVE id
+        /// CVE ID
         /// </summary>
         [JsonProperty("CVEId")]
         public string CVEId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TaskPercent{ get; set; }
 
         /// <summary>
-        /// Task Time
+        /// Task time
         /// </summary>
         [JsonProperty("TaskTime")]
         public long? TaskTime{ get; set; }

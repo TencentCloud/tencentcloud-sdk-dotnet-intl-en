@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud boundary analytics asset classification list.
+        /// Cloud boundary analysis asset classification list
         /// </summary>
         [JsonProperty("ExposeAssetTypeList")]
         public ExposeAssetTypeItem[] ExposeAssetTypeList{ get; set; }

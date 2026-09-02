@@ -25,7 +25,8 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Fusion rule ID (9xxxx)
+        /// Fusion rule ID
+        /// Parameter format: such as 9xxxx
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }

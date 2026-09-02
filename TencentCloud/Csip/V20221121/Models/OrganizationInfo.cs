@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// member account name
+        /// Member account name
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// administrator account name
+        /// Admin account name
         /// </summary>
         [JsonProperty("AdminName")]
         public string AdminName{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? SubAccountCount{ get; set; }
 
         /// <summary>
-        /// Number of abnormal sub-accounts
+        /// Number of exceptional sub-accounts
         /// </summary>
         [JsonProperty("AbnormalSubUserCount")]
         public long? AbnormalSubUserCount{ get; set; }
@@ -169,7 +169,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? QuotaConsumer{ get; set; }
 
         /// <summary>
-        /// Number of activations by admin/delegated admin
+        /// Number of enabled admins/delegated admins
         /// </summary>
         [JsonProperty("EnableAdminCount")]
         public long? EnableAdminCount{ get; set; }

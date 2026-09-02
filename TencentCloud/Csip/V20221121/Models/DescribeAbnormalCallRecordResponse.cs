@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Invocation record list.
+        /// Call record list
         /// </summary>
         [JsonProperty("Data")]
         public CallRecord[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of records.
+        /// Total number of call records
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

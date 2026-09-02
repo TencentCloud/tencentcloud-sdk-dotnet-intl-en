@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Status  0: unprocessed 1: fixed 2: ignored.
+        /// Status. 0: unprocessed; 1: processed; 2: ignored
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Alarm ID list.
+        /// List of alarm IDs
         /// </summary>
         [JsonProperty("AlarmIDList")]
         public long?[] AlarmIDList{ get; set; }
 
         /// <summary>
-        /// Risk ID list.
+        /// Risk ID list
         /// </summary>
         [JsonProperty("RiskIDList")]
         public long?[] RiskIDList{ get; set; }

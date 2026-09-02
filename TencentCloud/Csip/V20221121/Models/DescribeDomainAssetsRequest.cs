@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public Filter Filter{ get; set; }
 
         /// <summary>
-        /// CSC tags of the asset
+        /// Security Center Custom Tag
         /// </summary>
         [JsonProperty("Tags")]
         public AssetTag[] Tags{ get; set; }

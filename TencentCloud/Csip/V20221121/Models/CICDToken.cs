@@ -49,13 +49,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Token{ get; set; }
 
         /// <summary>
-        /// <p>Scanning result storage duration</p>
+        /// <p>Result storage duration of scan</p>
         /// </summary>
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// <p>Scanned file</p>
+        /// <p>Scanned file.</p>
         /// </summary>
         [JsonProperty("FileCnt")]
         public ulong? FileCnt{ get; set; }

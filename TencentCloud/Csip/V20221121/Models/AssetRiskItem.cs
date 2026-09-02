@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// <p>Cloud vendor</p>
+        /// <p>Cloud service provider.</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckType{ get; set; }
 
         /// <summary>
-        /// <p>Risk level</p>
+        /// <p>Risk level.</p>
         /// </summary>
         [JsonProperty("Severity")]
         public string Severity{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskRuleId{ get; set; }
 
         /// <summary>
-        /// <p>Disposal categorization</p>
+        /// <p>Handling category</p>
         /// </summary>
         [JsonProperty("Classify")]
         public string Classify{ get; set; }

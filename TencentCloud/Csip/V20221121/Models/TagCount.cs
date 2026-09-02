@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Product Name
+        /// Product name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

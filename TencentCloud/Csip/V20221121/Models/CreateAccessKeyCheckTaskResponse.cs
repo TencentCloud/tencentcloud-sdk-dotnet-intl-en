@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 0 indicates success. 1 indicates failure.
+        /// 0: Indicates success; 1: Indicates failure
         /// </summary>
         [JsonProperty("Code")]
         public ulong? Code{ get; set; }

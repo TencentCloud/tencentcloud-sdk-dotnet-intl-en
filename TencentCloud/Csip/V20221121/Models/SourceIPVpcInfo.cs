@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VpcID{ get; set; }
 
         /// <summary>
-        /// vpc name.
+        /// VPC name.
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }

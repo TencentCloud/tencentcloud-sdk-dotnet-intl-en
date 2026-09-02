@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Task ID
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Filter conditions.
+        /// Filter criteria.
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>AppID of the associated tenant for the order</p>
+        /// <p>AppID of the associated tenant of the order</p>
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }
 
         /// <summary>
-        /// <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+        /// <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
         /// </summary>
         [JsonProperty("OrderStatus")]
         public long? OrderStatus{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TotalQuota{ get; set; }
 
         /// <summary>
-        /// <p>Consumed quota.</p>
+        /// <p>Consumed quota</p>
         /// </summary>
         [JsonProperty("UsedCount")]
         public long? UsedCount{ get; set; }
 
         /// <summary>
-        /// <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+        /// <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+        /// <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <p>Purchase period</p>
+        /// <p>Purchase period.</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+        /// <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
         /// </summary>
         [JsonProperty("BetaEndTime")]
         public string BetaEndTime{ get; set; }

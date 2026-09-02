@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Filter value
+        /// English Translation
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Filter name
+        /// Chinese Translation
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

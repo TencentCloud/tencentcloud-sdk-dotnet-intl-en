@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// List of report IDs.
+        /// Log ID List
         /// </summary>
         [JsonProperty("TaskLogList")]
         public string[] TaskLogList{ get; set; }

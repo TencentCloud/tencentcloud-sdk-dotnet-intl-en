@@ -25,8 +25,8 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Base64 encoding of the ZIP file content
-        /// Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+        /// Base64-encoded ZIP file content
+        /// Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
         /// </summary>
         [JsonProperty("FileBase64")]
         public string FileBase64{ get; set; }

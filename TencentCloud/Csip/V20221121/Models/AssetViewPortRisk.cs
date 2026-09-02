@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Affected assets
+        /// Affect assets
         /// </summary>
         [JsonProperty("AffectAsset")]
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -49,43 +49,43 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Network protocol
+        /// Protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Components
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Service
+        /// Service.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// Last detected 
+        /// Latest Recognition Time
         /// </summary>
         [JsonProperty("RecentTime")]
         public string RecentTime{ get; set; }
 
         /// <summary>
-        /// First detected
+        /// First Recognition Time
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+        /// Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
         /// </summary>
         [JsonProperty("Suggestion")]
         public ulong? Suggestion{ get; set; }
 
         /// <summary>
-        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+        /// Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Frontend index
+        /// Front-end Index
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// User `appid`
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -139,13 +139,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// Service judgment, high-risk service, web service, other service
+        /// Service judgment. high_risk_service: high-risk service. web_service: web service. other_service: other service.
         /// </summary>
         [JsonProperty("ServiceJudge")]
         public string ServiceJudge{ get; set; }
 
         /// <summary>
-        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+        /// Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
         /// </summary>
         [JsonProperty("XspmStatus")]
         public ulong? XspmStatus{ get; set; }

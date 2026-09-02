@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// listener name
+        /// Listener name
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }

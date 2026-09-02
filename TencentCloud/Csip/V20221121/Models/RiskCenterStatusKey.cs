@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User AppId
+        /// APP ID
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

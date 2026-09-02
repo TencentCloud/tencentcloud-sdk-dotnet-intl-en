@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ScanTaskInfo[] Data{ get; set; }
 
         /// <summary>
-        /// List of account UINs
+        /// Host Account ID List
         /// </summary>
         [JsonProperty("UINList")]
         public string[] UINList{ get; set; }

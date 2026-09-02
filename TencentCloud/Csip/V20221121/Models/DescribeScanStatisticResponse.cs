@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Port service quantity.
+        /// Number of port services
         /// </summary>
         [JsonProperty("PortServiceCount")]
         public ulong? PortServiceCount{ get; set; }
 
         /// <summary>
-        /// Number of Web services.
+        /// Number of Web services
         /// </summary>
         [JsonProperty("WebAppCount")]
         public ulong? WebAppCount{ get; set; }
@@ -43,31 +43,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? WeakPasswordCount{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk quantity.
+        /// Vulnerability risk quantity
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
 
         /// <summary>
-        /// High-Risk port service quantity.
+        /// Number of high-risk port services
         /// </summary>
         [JsonProperty("HighRiskPortServiceCount")]
         public ulong? HighRiskPortServiceCount{ get; set; }
 
         /// <summary>
-        /// Number of Web services at risk.
+        /// Number of risky Web services
         /// </summary>
         [JsonProperty("RiskWebAppCount")]
         public ulong? RiskWebAppCount{ get; set; }
 
         /// <summary>
-        /// Newly-Added port services in the last 7 days.
+        /// Number of new port services in the last 7 days
         /// </summary>
         [JsonProperty("PortServiceIncrement")]
         public ulong? PortServiceIncrement{ get; set; }
 
         /// <summary>
-        /// Newly-Added Web services in the last 7 days.
+        /// Number of Web services added in the last 7 days
         /// </summary>
         [JsonProperty("WebAppIncrement")]
         public ulong? WebAppIncrement{ get; set; }

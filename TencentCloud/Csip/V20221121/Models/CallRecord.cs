@@ -25,81 +25,81 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Invocation record ID.
+        /// Call record ID
         /// </summary>
         [JsonProperty("CallID")]
         public string CallID{ get; set; }
 
         /// <summary>
-        /// Access key.
+        /// Access key
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Access key remark.
+        /// Access key remark
         /// </summary>
         [JsonProperty("AccessKeyRemark")]
         public string AccessKeyRemark{ get; set; }
 
         /// <summary>
-        /// Access key ID.
+        /// Access Key ID
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public ulong? AccessKeyID{ get; set; }
 
         /// <summary>
-        /// Source IP of the call.
+        /// Source IP for calls
         /// </summary>
         [JsonProperty("SourceIP")]
         public string SourceIP{ get; set; }
 
         /// <summary>
-        /// Source IP of the call remark.
+        /// Source IP remark of a call
         /// </summary>
         [JsonProperty("SourceIPRemark")]
         public string SourceIPRemark{ get; set; }
 
         /// <summary>
-        /// Source IP region of the call.
+        /// Region of the source IP
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// IP type 0: within the account (unremarked) 1: outside the account (unremarked) 2: within the account (remarked) 3: outside the account (remarked).
+        /// IP type. 0: within the account (no remark). 1: outside the account (no remark). 2: within the account (remarked). 3: outside the account (remarked)
         /// </summary>
         [JsonProperty("IPType")]
         public long? IPType{ get; set; }
 
         /// <summary>
-        /// Call interface name.
+        /// Name of the called API
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
-        /// Call the product name.
+        /// API call product name
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// Invocation type.
-        /// 0: console invocation.
+        /// Invocation type
+        /// 0: Console invocation
         /// 1:API
         /// </summary>
         [JsonProperty("EventType")]
         public long? EventType{ get; set; }
 
         /// <summary>
-        /// Type of user: CAMUser/root/AssumedRole.
+        /// Type of user. Valid values: `CAMUser`, `root`, `AssumedRole`.
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// User/Role name.
+        /// User/role name
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -111,44 +111,44 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] PolicySet{ get; set; }
 
         /// <summary>
-        /// Number of calls.
+        /// Call count
         /// </summary>
         [JsonProperty("CallCount")]
         public long? CallCount{ get; set; }
 
         /// <summary>
-        /// Error code.
+        /// Call error code
         /// 0: Successful
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// First time call time.
+        /// First call time
         /// </summary>
         [JsonProperty("FirstCallTime")]
         public string FirstCallTime{ get; set; }
 
         /// <summary>
-        /// Call time.
+        /// Last call time
         /// </summary>
         [JsonProperty("LastCallTime")]
         public string LastCallTime{ get; set; }
 
         /// <summary>
-        /// IP associated asset ID. if an empty string, means not associated with.
+        /// ID of the associated asset for the IP. If it is an empty string, the IP is not associated with any asset.
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Associated asset name of the IP.
+        /// IP associated asset name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Aggregate date.
+        /// Aggregation date
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
@@ -166,19 +166,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? ShowStatus{ get; set; }
 
         /// <summary>
-        /// Carrier.
+        /// Internet service provider.
         /// </summary>
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
 
         /// <summary>
-        /// vpc information list outside the account.
+        /// List of vpc information outside the account
         /// </summary>
         [JsonProperty("VpcInfo")]
         public SourceIPVpcInfo[] VpcInfo{ get; set; }
 
         /// <summary>
-        /// Request client list.
+        /// List of call request clients
         /// </summary>
         [JsonProperty("ReqClient")]
         public string[] ReqClient{ get; set; }

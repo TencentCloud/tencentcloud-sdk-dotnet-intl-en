@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// The unique ID.
+        /// Unique ID
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckType{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -61,73 +61,73 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Affected assets
+        /// Affect assets
         /// </summary>
         [JsonProperty("AffectAsset")]
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// First detected
+        /// First Recognition Time
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Last detected 
+        /// Latest Recognition Time
         /// </summary>
         [JsonProperty("RecentTime")]
         public string RecentTime{ get; set; }
 
         /// <summary>
-        /// Source of the task
+        /// Source.
         /// </summary>
         [JsonProperty("From")]
         public string From{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// relevant standards
+        /// Relevant standards
         /// </summary>
         [JsonProperty("CFGSTD")]
         public string CFGSTD{ get; set; }
 
         /// <summary>
-        /// Configuration details.
+        /// Configuration detail
         /// </summary>
         [JsonProperty("CFGDescribe")]
         public string CFGDescribe{ get; set; }
 
         /// <summary>
-        /// Fix suggestion
+        /// Fixing suggestion
         /// </summary>
         [JsonProperty("CFGFix")]
         public string CFGFix{ get; set; }
 
         /// <summary>
-        /// URL of the help documentation
+        /// Help Document Link
         /// </summary>
         [JsonProperty("CFGHelpURL")]
         public string CFGHelpURL{ get; set; }
 
         /// <summary>
-        /// Data entry key
+        /// Front-end Usage Index
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// User AppId
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// When the asset type is LBL, show this field to locate the specific LB.
+        /// This field is displayed when the asset type is LBL, to help locate the specific LB.
         /// </summary>
         [JsonProperty("ClbId")]
         public string ClbId{ get; set; }

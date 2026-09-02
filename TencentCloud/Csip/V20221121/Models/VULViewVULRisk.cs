@@ -25,37 +25,37 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
 
         /// <summary>
-        /// Affected assets
+        /// Affect assets
         /// </summary>
         [JsonProperty("NoHandleCount")]
         public long? NoHandleCount{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Components
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Last detected 
+        /// Latest Recognition Time
         /// </summary>
         [JsonProperty("RecentTime")]
         public string RecentTime{ get; set; }
 
         /// <summary>
-        /// First detected
+        /// First Recognition Time
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// Frontend index
+        /// Front-end Index
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VULName{ get; set; }
 
         /// <summary>
-        /// CVE number
+        /// cve
         /// </summary>
         [JsonProperty("CVE")]
         public string CVE{ get; set; }
@@ -115,25 +115,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Payload{ get; set; }
 
         /// <summary>
-        /// Affected component
+        /// Vulnerability Impact Component
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Technology reference
+        /// Technical reference
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
-        /// Vulnerability Affected Version
+        /// Affected versions
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// risks
+        /// Risk Points
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Nick{ get; set; }
 
         /// <summary>
-        /// User `appid`
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }

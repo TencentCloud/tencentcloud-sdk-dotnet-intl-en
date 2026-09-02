@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Cloud vendor</p>
+        /// <p>Cloud service provider.</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CloudAccountName{ get; set; }
 
         /// <summary>
-        /// <p>Cloud Account</p>
+        /// <p>Cloud account</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
 
         /// <summary>
-        /// <p>Domain name</p>
+        /// <p>Domain Name.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AclList{ get; set; }
 
         /// <summary>
-        /// <p>Asset ID</p>
+        /// <p>Asset ID.</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? RiskWebAppCount{ get; set; }
 
         /// <summary>
-        /// <p>Number of weak passwords.</p>
+        /// <p>Number of weak passwords</p>
         /// </summary>
         [JsonProperty("WeakPasswordCount")]
         public ulong? WeakPasswordCount{ get; set; }
 
         /// <summary>
-        /// <p>Vulnerability count</p>
+        /// <p>Number of vulnerabilities</p>
         /// </summary>
         [JsonProperty("VulCount")]
         public ulong? VulCount{ get; set; }
@@ -223,31 +223,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Tag{ get; set; }
 
         /// <summary>
-        /// <p>Remark</p>
+        /// <p>Remarks.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Number of risks to be governed</p>
+        /// <p>Number of risks pending governance</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskCount")]
         public ulong? ToGovernedRiskCount{ get; set; }
 
         /// <summary>
-        /// <p>Risk content to be governed</p>
+        /// <p>Risk content pending governance</p>
         /// </summary>
         [JsonProperty("ToGovernedRiskContent")]
         public string ToGovernedRiskContent{ get; set; }
 
         /// <summary>
-        /// <p>Type icon of asset</p>
+        /// <p>Asset type icon</p>
         /// </summary>
         [JsonProperty("AssetTypeIconURL")]
         public string AssetTypeIconURL{ get; set; }
 
         /// <summary>
-        /// <p>Asset type 3D icon</p>
+        /// <p>3D icon of asset type</p>
         /// </summary>
         [JsonProperty("AssetTypeIconSolidURL")]
         public string AssetTypeIconSolidURL{ get; set; }

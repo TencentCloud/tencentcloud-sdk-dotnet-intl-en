@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AgentName{ get; set; }
 
         /// <summary>
-        /// <p>agent model name usage</p>
+        /// <p>Model name used by the agent</p>
         /// </summary>
         [JsonProperty("AgentModel")]
         public string[] AgentModel{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+        /// <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
         /// </summary>
         [JsonProperty("MetadataRiskList")]
         public string[] MetadataRiskList{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string IdentityTimeLast{ get; set; }
 
         /// <summary>
-        /// <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+        /// <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
         /// </summary>
         [JsonProperty("IdentityMethod")]
         public string IdentityMethod{ get; set; }
 
         /// <summary>
-        /// <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+        /// <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
         /// </summary>
         [JsonProperty("ExposureStatus")]
         public string ExposureStatus{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MetadataRiskURL{ get; set; }
 
         /// <summary>
-        /// <p>None</p>
+        /// <p>Credential Skill installation status</p>
         /// </summary>
         [JsonProperty("SkillState")]
         public SkillState SkillState{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public TrafficPluginState TrafficPluginState{ get; set; }
 
         /// <summary>
-        /// <p>Sandbox rule status for traffic</p>
+        /// <p>Traffic sandbox rule status</p>
         /// </summary>
         [JsonProperty("TrafficRuleState")]
         public TrafficRuleState[] TrafficRuleState{ get; set; }

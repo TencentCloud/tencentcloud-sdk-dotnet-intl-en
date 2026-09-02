@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Temp download URL of the report
+        /// Return Report Temporary Download URL
         /// </summary>
         [JsonProperty("Data")]
         public TaskLogURL[] Data{ get; set; }

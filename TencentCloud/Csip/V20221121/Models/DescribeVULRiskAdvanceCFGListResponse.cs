@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public VULRiskAdvanceCFGList[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of results
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

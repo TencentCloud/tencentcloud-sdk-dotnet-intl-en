@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Mapping of asset type and instance type.
+        /// Asset type and instance type mapping relationship
         /// </summary>
         [JsonProperty("InstanceTypeList")]
         public FilterDataObject[] InstanceTypeList{ get; set; }

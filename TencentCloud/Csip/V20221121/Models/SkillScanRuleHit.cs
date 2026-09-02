@@ -25,13 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+        /// Fusion rule number
+        /// Parameter format: such as 9xxxx
         /// </summary>
         [JsonProperty("RuleID")]
         public string RuleID{ get; set; }
 
         /// <summary>
-        /// Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+        /// Risk discovery description
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

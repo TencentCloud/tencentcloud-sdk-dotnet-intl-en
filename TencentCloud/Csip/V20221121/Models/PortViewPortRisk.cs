@@ -31,43 +31,43 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? NoHandleCount{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Network protocol
+        /// Protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Components
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Last detected 
+        /// Latest Recognition Time
         /// </summary>
         [JsonProperty("RecentTime")]
         public string RecentTime{ get; set; }
 
         /// <summary>
-        /// First detected
+        /// First Recognition Time
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+        /// Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
         /// </summary>
         [JsonProperty("Suggestion")]
         public ulong? Suggestion{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string From{ get; set; }
 
         /// <summary>
-        /// Data entry key
+        /// Front-end Index
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// User AppId
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Service
+        /// Service.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }

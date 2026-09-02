@@ -27,19 +27,19 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// Event type
         /// 1: Statement retrieval
-        /// 2: Filter search
+        /// 2: Filter retrieval
         /// </summary>
         [JsonProperty("EventType")]
         public long? EventType{ get; set; }
 
         /// <summary>
-        /// Statement retrieval content
+        /// Content for statement retrieval
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// retrieval condition
+        /// Retrieval criteria
         /// </summary>
         [JsonProperty("Filters")]
         public WhereFilter[] Filters{ get; set; }

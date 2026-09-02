@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// member account name
+        /// Member account name
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
@@ -151,9 +151,9 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AuthType{ get; set; }
 
         /// <summary>
-        /// Tencent Cloud Group Account
-        /// Tencent Cloud access account
-        /// 2: non-Tencent Cloud
+        /// 0 Tencent Cloud Group Account
+        /// 1 Tencent Cloud access account
+        /// 2. Non-Tencent Cloud
         /// </summary>
         [JsonProperty("TcMemberType")]
         public long? TcMemberType{ get; set; }

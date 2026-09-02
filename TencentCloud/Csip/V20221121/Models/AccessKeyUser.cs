@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Account ID.
+        /// Account ID
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
@@ -37,21 +37,21 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 0 root account 1 sub-account.
+        /// 0 Root account 1 Sub-account
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Access method.
+        /// Access method
         /// 0 API
-        /// 1 console and API.
+        /// 1 Console and API
         /// </summary>
         [JsonProperty("AccessType")]
         public long? AccessType{ get; set; }
 
         /// <summary>
-        /// Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+        /// Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
         /// </summary>
         [JsonProperty("Advice")]
         public long? Advice{ get; set; }
@@ -69,37 +69,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccessKeyAlarmInfo[] AccessKeyRiskList{ get; set; }
 
         /// <summary>
-        /// Account associate APPID.
+        /// APPID of the account
         /// </summary>
         [JsonProperty("AppID")]
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Nickname of the main account.
+        /// Main account nickname
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Sub-Account nickname.
+        /// Sub-account nickname
         /// </summary>
         [JsonProperty("SubNickname")]
         public string SubNickname{ get; set; }
 
         /// <summary>
-        /// Account Uin belonging to main account.
+        /// Uin of the main account to which the account belongs
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Account self uin, same as root account uin when it is the root account.
+        /// Account's own uin. For a root account, it is the same as the root account uin.
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// Login IP.
+        /// Login IP
         /// </summary>
         [JsonProperty("LoginIP")]
         public string LoginIP{ get; set; }
@@ -111,7 +111,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LoginLocation{ get; set; }
 
         /// <summary>
-        /// Log-In time.
+        /// Log-in time
         /// </summary>
         [JsonProperty("LoginTime")]
         public string LoginTime{ get; set; }
@@ -123,29 +123,29 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ISP{ get; set; }
 
         /// <summary>
-        /// Whether operation protection is enabled.
-        /// 0 not enabled.
-        /// 1: enabled.
+        /// Whether operation protection is enabled
+        /// 0: not enabled
+        /// 1: On.
         /// </summary>
         [JsonProperty("ActionFlag")]
         public long? ActionFlag{ get; set; }
 
         /// <summary>
-        /// Is login protection enabled?.
-        /// 0 not enabled.
-        /// 1: enabled.
+        /// Whether login protection is enabled
+        /// 0: not enabled
+        /// 1: On.
         /// </summary>
         [JsonProperty("LoginFlag")]
         public long? LoginFlag{ get; set; }
 
         /// <summary>
-        /// 0 means detected. 1 means detecting.
+        /// 0 indicates detected, and 1 indicates in-progress detection.
         /// </summary>
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }
 
         /// <summary>
-        /// Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+        /// Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }

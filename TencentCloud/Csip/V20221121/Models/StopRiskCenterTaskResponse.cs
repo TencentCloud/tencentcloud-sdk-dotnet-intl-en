@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// `0`: Operation succeeded; Others: failed
+        /// Stopping succeeds when Status is 0.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

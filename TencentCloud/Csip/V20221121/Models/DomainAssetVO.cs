@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] AssetId{ get; set; }
 
         /// <summary>
-        /// Asset Name
+        /// Asset name
         /// </summary>
         [JsonProperty("AssetName")]
         public string[] AssetName{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? WAFStatus{ get; set; }
 
         /// <summary>
-        /// Asset Creation Time
+        /// Asset creation time
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsCloud{ get; set; }
 
         /// <summary>
-        /// network attack
+        /// Network attack
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// port risk
+        /// Port risk
         /// </summary>
         [JsonProperty("PortRisk")]
         public ulong? PortRisk{ get; set; }
@@ -199,13 +199,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// Associated instance type
+        /// Type of the associated instance
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// Member ID information
+        /// memberId information
         /// </summary>
         [JsonProperty("MemberId")]
         public string MemberId{ get; set; }

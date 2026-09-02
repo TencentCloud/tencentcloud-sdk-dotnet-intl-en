@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] AppIdList{ get; set; }
 
         /// <summary>
-        /// Cluster protection status enumeration.
+        /// Cluster Protection Status Enumeration
         /// </summary>
         [JsonProperty("ProtectStatusList")]
         public FilterDataObject[] ProtectStatusList{ get; set; }

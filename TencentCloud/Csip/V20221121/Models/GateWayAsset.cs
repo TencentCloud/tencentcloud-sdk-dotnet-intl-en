@@ -37,19 +37,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Asset ID.
+        /// Asset ID
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Asset name.
+        /// Asset name
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// VPC id.
+        /// VPC id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public Tag[] Tag{ get; set; }
 
         /// <summary>
-        /// Outbound peak bandwidth.
+        /// Outbound peak bandwidth
         /// </summary>
         [JsonProperty("OutboundPeakBandwidth")]
         public string OutboundPeakBandwidth{ get; set; }
 
         /// <summary>
-        /// Inbound peak bandwidth.
+        /// Inbound peak bandwidth
         /// </summary>
         [JsonProperty("InboundPeakBandwidth")]
         public string InboundPeakBandwidth{ get; set; }
@@ -115,38 +115,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InboundCumulativeFlow{ get; set; }
 
         /// <summary>
-        /// Network attack.
+        /// Network attack
         /// </summary>
         [JsonProperty("NetworkAttack")]
         public long? NetworkAttack{ get; set; }
 
         /// <summary>
-        /// Expose ports.
+        /// Exposed port
         /// </summary>
         [JsonProperty("ExposedPort")]
         public long? ExposedPort{ get; set; }
 
         /// <summary>
-        /// Exposed vulnerability.
+        /// Exposed vulnerability
         /// </summary>
         [JsonProperty("ExposedVUL")]
         public long? ExposedVUL{ get; set; }
 
         /// <summary>
-        /// Configuration risk.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("ConfigureRisk")]
         public long? ConfigureRisk{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Number of tasks.
+        /// Number of tasks
         /// </summary>
         [JsonProperty("ScanTask")]
         public long? ScanTask{ get; set; }
@@ -158,7 +157,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Nickname.
+        /// Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
@@ -176,7 +175,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsCore{ get; set; }
 
         /// <summary>
-        /// Risk service exposure.
+        /// Risk service exposure
         /// </summary>
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }
@@ -200,7 +199,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// Weak password risk.
+        /// Weak password risk
         /// </summary>
         [JsonProperty("WeakPasswordRisk")]
         public ulong? WeakPasswordRisk{ get; set; }

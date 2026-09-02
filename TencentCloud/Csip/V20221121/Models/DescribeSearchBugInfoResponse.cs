@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public DataSearchBug Data{ get; set; }
 
         /// <summary>
-        /// Status code. Valid values: 0: successful; others: failed.
+        /// Status value. 0: query successful. Non-zero: query failed.
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// Status message. Valid values: success: successful query; fail: failed query.
+        /// Status information. success: query succeeded. fail: query failed.
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

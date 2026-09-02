@@ -37,30 +37,30 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CredentialName{ get; set; }
 
         /// <summary>
-        /// Credential Type
+        /// Credential type
         /// Enumeration value:
-        /// access: normal Key (Key-Value pair)
+        /// access: standard Key (Key-Value pair)
         /// sts: STS temporary key credential
         /// </summary>
         [JsonProperty("CredentialType")]
         public string CredentialType{ get; set; }
 
         /// <summary>
-        /// Effective machine scope
+        /// Scope of effective machines
         /// </summary>
         [JsonProperty("CredentialEffectScope")]
         public CredentialEffectScope CredentialEffectScope{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

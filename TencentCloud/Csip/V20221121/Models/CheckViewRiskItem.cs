@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Check item rule ID</p>
+        /// <p>check item rule ID</p>
         /// </summary>
         [JsonProperty("RiskRuleId")]
         public string RiskRuleId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckType{ get; set; }
 
         /// <summary>
-        /// <p>Risk level</p>
+        /// <p>Risk level.</p>
         /// </summary>
         [JsonProperty("Severity")]
         public string Severity{ get; set; }
 
         /// <summary>
-        /// <p>1 risk item exists</p>
+        /// <p>There is 1 risk item</p>
         /// </summary>
         [JsonProperty("RiskDesc")]
         public string RiskDesc{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Cloud vendor</p>
+        /// <p>Cloud service provider.</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -103,13 +103,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// <p>Disposal categorization</p>
+        /// <p>Handling category</p>
         /// </summary>
         [JsonProperty("Classify")]
         public string Classify{ get; set; }
 
         /// <summary>
-        /// <p>cspm standard clauses</p>
+        /// <p>cspm specification clause</p>
         /// </summary>
         [JsonProperty("StandardTerms")]
         public StandardTerm[] StandardTerms{ get; set; }

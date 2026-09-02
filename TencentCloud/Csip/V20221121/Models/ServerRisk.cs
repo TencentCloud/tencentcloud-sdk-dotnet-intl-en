@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Service tag
+        /// Mapping Tag
         /// </summary>
         [JsonProperty("ServiceTag")]
         public string ServiceTag{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Affected assets
+        /// Affect assets
         /// </summary>
         [JsonProperty("AffectAsset")]
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -61,37 +61,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Network protocol
+        /// Protocol
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Components
+        /// component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Service
+        /// Service.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// Last detected 
+        /// Latest Recognition Time
         /// </summary>
         [JsonProperty("RecentTime")]
         public string RecentTime{ get; set; }
 
         /// <summary>
-        /// First detected
+        /// First Recognition Time
         /// </summary>
         [JsonProperty("FirstTime")]
         public string FirstTime{ get; set; }
@@ -109,19 +109,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+        /// Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Unique ID of the asset
+        /// Unique ID of Asset
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// User `appid`
+        /// User appid.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
@@ -175,13 +175,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string StatusCode{ get; set; }
 
         /// <summary>
-        /// New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+        /// New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
         /// </summary>
         [JsonProperty("NewLevel")]
         public string NewLevel{ get; set; }
 
         /// <summary>
-        /// Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+        /// Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
         /// </summary>
         [JsonProperty("XspmStatus")]
         public ulong? XspmStatus{ get; set; }

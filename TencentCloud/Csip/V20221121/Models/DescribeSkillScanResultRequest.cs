@@ -32,17 +32,17 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ContentHash{ get; set; }
 
         /// <summary>
-        /// Specify the engine version number
-        /// Value for reference: API response of CreateSkillScan
+        /// Specify the engine version number.
+        /// Parameter value for reference: returned by the CreateSkillScan API.
         /// </summary>
         [JsonProperty("EngineVersion")]
         public long? EngineVersion{ get; set; }
 
         /// <summary>
-        /// Report signature address validity
+        /// Address validity period of the report signature
         /// Unit: hr
-        /// Default value: 8760 (1 year).
-        /// Supplementary explanation: The returned ReportURL takes effect.
+        /// Default value: 8760 (1 year)
+        /// Supplementary description: It takes effect on the returned ReportURL.
         /// </summary>
         [JsonProperty("ReportURLExpireHours")]
         public long? ReportURLExpireHours{ get; set; }

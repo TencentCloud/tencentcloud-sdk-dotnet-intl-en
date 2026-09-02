@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Data of risk assets
+        /// Risky Asset Related Data
         /// </summary>
         [JsonProperty("RiskStatusKeys")]
         public RiskCenterStatusKey[] RiskStatusKeys{ get; set; }
 
         /// <summary>
-        /// Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+        /// Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+        /// Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

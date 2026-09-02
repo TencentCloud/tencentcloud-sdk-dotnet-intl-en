@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Impact assets.
+        /// Affect assets
         /// </summary>
         [JsonProperty("NoHandleCount")]
         public long? NoHandleCount{ get; set; }
 
         /// <summary>
-        /// Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
@@ -80,56 +80,48 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// User Nickname
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Configuration name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Configuration name
         /// </summary>
         [JsonProperty("CFGName")]
         public string CFGName{ get; set; }
 
         /// <summary>
-        /// Check type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Check type
         /// </summary>
         [JsonProperty("CheckType")]
         public string CheckType{ get; set; }
 
         /// <summary>
         /// -
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CFGSTD")]
         public string CFGSTD{ get; set; }
 
         /// <summary>
         /// Description
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CFGDescribe")]
         public string CFGDescribe{ get; set; }
 
         /// <summary>
         /// Fixing suggestion
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CFGFix")]
         public string CFGFix{ get; set; }
 
         /// <summary>
-        /// Help documentation.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Help documentation
         /// </summary>
         [JsonProperty("CFGHelpURL")]
         public string CFGHelpURL{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Token integration</p>
+        /// <p>Integration Token</p>
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }

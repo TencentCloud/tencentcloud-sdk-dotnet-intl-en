@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskRuleId{ get; set; }
 
         /// <summary>
-        /// <p>Cloud vendor</p>
+        /// <p>Cloud service provider.</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskName{ get; set; }
 
         /// <summary>
-        /// <p>Risk damage</p>
+        /// <p>Risk and damage</p>
         /// </summary>
         [JsonProperty("RiskInfluence")]
         public string RiskInfluence{ get; set; }

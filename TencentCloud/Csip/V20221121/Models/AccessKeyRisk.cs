@@ -25,76 +25,76 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk name.
+        /// Risk name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Risk level.
-        /// 0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+        /// Risk level
+        /// 0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }
 
         /// <summary>
-        /// Risk record ID.
+        /// Risk record ID
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Risk rule ID.
+        /// Risk rule ID
         /// </summary>
         [JsonProperty("RiskRuleID")]
         public long? RiskRuleID{ get; set; }
 
         /// <summary>
-        /// Risk type.
-        /// Configuration risk.
+        /// Risk type
+        /// 0 - Configuration risk
         /// </summary>
         [JsonProperty("RiskType")]
         public long? RiskType{ get; set; }
 
         /// <summary>
-        /// Access key.
+        /// Access key
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Access key ID.
+        /// Access Key ID
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public ulong? AccessKeyID{ get; set; }
 
         /// <summary>
-        /// Access key remark.
+        /// Access key remark
         /// </summary>
         [JsonProperty("AccessKeyRemark")]
         public string AccessKeyRemark{ get; set; }
 
         /// <summary>
-        /// Detection time of risk.
+        /// Risk detection time
         /// </summary>
         [JsonProperty("RiskTime")]
         public string RiskTime{ get; set; }
 
         /// <summary>
-        /// Risk status.
-        /// 0 - unprocessed 2 - ignored 3 - converged.
+        /// Risk status
+        /// 0: unprocessed; 2: ignored; 3: converged
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Risk Tag.
+        /// Risk tag
         /// </summary>
         [JsonProperty("Tag")]
         public string[] Tag{ get; set; }
 
         /// <summary>
-        /// Risk evidence.
+        /// Risk evidence
         /// </summary>
         [JsonProperty("Evidence")]
         public string Evidence{ get; set; }
@@ -106,41 +106,41 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Account associate Uin belonging to main account.
+        /// Uin of the main account
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Nickname of the main account.
+        /// Nickname of the main account
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Sub-Account Uin belonging to.
+        /// Uin of the associated sub-account
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }
 
         /// <summary>
-        /// Sub-Account nickname.
+        /// Sub-account nickname
         /// </summary>
         [JsonProperty("SubNickname")]
         public string SubNickname{ get; set; }
 
         /// <summary>
-        /// Account type.
-        /// 0 root account AK 1 sub-account AK.
-        /// 2 temporary key.
+        /// Account type
+        /// 0-Root Account AK, 1-Sub-account AK
+        /// 2 Temporary key
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
         /// Detection status.
-        /// 0: detected.
-        /// 1 indicates detecting.
+        /// 0 means detected
+        /// 1: Indicates detection in progress
         /// </summary>
         [JsonProperty("CheckStatus")]
         public long? CheckStatus{ get; set; }
@@ -152,19 +152,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Query parameter corresponding to the risk.
+        /// Query parameter corresponding to the risk
         /// </summary>
         [JsonProperty("QueryParam")]
         public string QueryParam{ get; set; }
 
         /// <summary>
-        /// Cloud type 0 for tencent cloud 4 for alibaba cloud.
+        /// Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// Related AK list, including AK name and remark.
+        /// List of related AKs, including AK names and remarks
         /// </summary>
         [JsonProperty("RelatedAK")]
         public AKInfo[] RelatedAK{ get; set; }

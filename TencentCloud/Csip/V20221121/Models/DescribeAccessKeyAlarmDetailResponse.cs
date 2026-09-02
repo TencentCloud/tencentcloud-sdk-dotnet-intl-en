@@ -31,19 +31,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public AccessKeyAlarm AlarmInfo{ get; set; }
 
         /// <summary>
-        /// Number of CAM policies in the associated account.
+        /// Number of CAM policies of the associated account
         /// </summary>
         [JsonProperty("CamCount")]
         public long? CamCount{ get; set; }
 
         /// <summary>
-        /// Number of AK risks.
+        /// Number of AK risks
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }
 
         /// <summary>
-        /// Alarm policy description.
+        /// Alarm policy description
         /// </summary>
         [JsonProperty("AlarmDesc")]
         public string AlarmDesc{ get; set; }

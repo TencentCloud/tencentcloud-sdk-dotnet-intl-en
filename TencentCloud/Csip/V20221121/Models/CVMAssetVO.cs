@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Asset name.
+        /// Asset name
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? CWPStatus{ get; set; }
 
         /// <summary>
-        /// Asset creation time.
+        /// Asset creation time
         /// </summary>
         [JsonProperty("AssetCreateTime")]
         public string AssetCreateTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Private IP.
+        /// Private IP
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// CWP Agent UUID.
+        /// Host security Agent UUID
         /// </summary>
         [JsonProperty("InstanceUuid")]
         public string InstanceUuid{ get; set; }
 
         /// <summary>
-        /// CVM host UUID.
+        /// CVM UUID
         /// </summary>
         [JsonProperty("InstanceQUuid")]
         public string InstanceQUuid{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ProcessCount{ get; set; }
 
         /// <summary>
-        /// Software application.
+        /// Software application
         /// </summary>
         [JsonProperty("AppCount")]
         public string AppCount{ get; set; }
@@ -217,13 +217,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? PortCount{ get; set; }
 
         /// <summary>
-        /// Network attack.
+        /// Network attack
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
-        /// Network access.
+        /// Network access
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }
@@ -235,25 +235,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Intercept{ get; set; }
 
         /// <summary>
-        /// Inbound peak bandwidth.
+        /// Inbound peak bandwidth
         /// </summary>
         [JsonProperty("InBandwidth")]
         public string InBandwidth{ get; set; }
 
         /// <summary>
-        /// Outbound peak bandwidth.
+        /// Outbound peak bandwidth
         /// </summary>
         [JsonProperty("OutBandwidth")]
         public string OutBandwidth{ get; set; }
 
         /// <summary>
-        /// Total inbound traffic.
+        /// Total inbound traffic
         /// </summary>
         [JsonProperty("InFlow")]
         public string InFlow{ get; set; }
 
         /// <summary>
-        /// Outbound cumulative traffic.
+        /// Outbound cumulative traffic
         /// </summary>
         [JsonProperty("OutFlow")]
         public string OutFlow{ get; set; }
@@ -265,25 +265,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Malicious outgoing request.
+        /// Malicious outgoing request
         /// </summary>
         [JsonProperty("NetWorkOut")]
         public ulong? NetWorkOut{ get; set; }
 
         /// <summary>
-        /// Port risk.
+        /// Port risk
         /// </summary>
         [JsonProperty("PortRisk")]
         public ulong? PortRisk{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk.
+        /// Vulnerability risk
         /// </summary>
         [JsonProperty("VulnerabilityRisk")]
         public ulong? VulnerabilityRisk{ get; set; }
 
         /// <summary>
-        /// Configuration risk.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         public ulong? ConfigurationRisk{ get; set; }
@@ -313,7 +313,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Os{ get; set; }
 
         /// <summary>
-        /// Risk service exposure.
+        /// Risk service exposure
         /// </summary>
         [JsonProperty("RiskExposure")]
         public long? RiskExposure{ get; set; }
@@ -331,104 +331,104 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsNewAsset{ get; set; }
 
         /// <summary>
-        /// 0: not installed; 1: install; 2: installing.
+        /// 0: not installed; 1: installed; 2: installing
         /// </summary>
         [JsonProperty("CVMAgentStatus")]
         public long? CVMAgentStatus{ get; set; }
 
         /// <summary>
-        /// 1: enable 0: not enabled.
+        /// 1: Enable; 0: Not enabled
         /// </summary>
         [JsonProperty("CVMStatus")]
         public long? CVMStatus{ get; set; }
 
         /// <summary>
-        /// 1: client installed 0: not installed 2: Agentless.
+        /// 1: Installed on the client 0: Not installed 2: Agentless
         /// </summary>
         [JsonProperty("DefenseModel")]
         public long? DefenseModel{ get; set; }
 
         /// <summary>
-        /// 1: installed 0: not installed.
+        /// 1: installed; 0: not installed
         /// </summary>
         [JsonProperty("TatStatus")]
         public long? TatStatus{ get; set; }
 
         /// <summary>
-        /// cpu trend chart.
+        /// cpu trend chart
         /// </summary>
         [JsonProperty("CpuTrend")]
         public Element[] CpuTrend{ get; set; }
 
         /// <summary>
-        /// Memory trend chart.
+        /// Memory trend chart
         /// </summary>
         [JsonProperty("MemoryTrend")]
         public Element[] MemoryTrend{ get; set; }
 
         /// <summary>
-        /// 1: agent online 0: agent offline 2: host offline.
+        /// 1: agent online 0: agent offline 2: Host offline
         /// </summary>
         [JsonProperty("AgentStatus")]
         public long? AgentStatus{ get; set; }
 
         /// <summary>
-        /// Number of shutdowns this month.
+        /// Number of protection shutdowns this month
         /// </summary>
         [JsonProperty("CloseDefenseCount")]
         public long? CloseDefenseCount{ get; set; }
 
         /// <summary>
-        /// Running state.
+        /// Running status.
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
-        /// Security group data.
+        /// Security group data
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Physical memory occupied KB.
+        /// Physical memory usage in KB
         /// </summary>
         [JsonProperty("AgentMemRss")]
         public long? AgentMemRss{ get; set; }
 
         /// <summary>
-        /// CPU utilization percentage.
+        /// CPU utilization percentage
         /// </summary>
         [JsonProperty("AgentCpuPer")]
         public float? AgentCpuPer{ get; set; }
 
         /// <summary>
-        /// Actual appid belonging to cvm.
+        /// appid that the cvm actually belongs to
         /// </summary>
         [JsonProperty("RealAppid")]
         public long? RealAppid{ get; set; }
 
         /// <summary>
-        /// Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+        /// Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
 
         /// <summary>
-        /// Host protection status enumeration.
-        /// 0: not installed.
-        /// Basic edition protection.
-        /// 2: inclusive edition protection.
-        /// 3: protection by pro edition.
-        /// 4: ultimate edition protection.
-        /// 5: offline.
-        /// 6: shutdown.
+        /// Host Protection Status Enumeration
+        /// 0: not installed
+        /// 1: In basic edition protection
+        /// 2: In inclusive edition protection
+        /// 3: Protection by pro edition
+        /// 4: Flagship edition protection
+        /// 5: offline
+        /// 6: Shutdown
         /// </summary>
         [JsonProperty("ProtectStatus")]
         public long? ProtectStatus{ get; set; }
 
         /// <summary>
-        /// Last offline time.
+        /// Last offline time
         /// </summary>
         [JsonProperty("OfflineTime")]
         public string OfflineTime{ get; set; }

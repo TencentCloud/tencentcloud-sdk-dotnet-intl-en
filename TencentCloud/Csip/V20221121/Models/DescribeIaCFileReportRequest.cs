@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Asset ID</p>
+        /// <p>Asset ID.</p>
         /// </summary>
         [JsonProperty("AssetId")]
         public ulong? AssetId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Account uin itself.
+        /// Account's own uin
         /// </summary>
         [JsonProperty("SubUin")]
         public string SubUin{ get; set; }

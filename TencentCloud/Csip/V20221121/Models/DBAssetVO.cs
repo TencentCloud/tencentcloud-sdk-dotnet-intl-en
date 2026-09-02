@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Asset name.
+        /// Asset name
         /// </summary>
         [JsonProperty("AssetName")]
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// vpc Tag.
+        /// vpc tag
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
@@ -79,19 +79,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Configuration risk.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("ConfigurationRisk")]
         public ulong? ConfigurationRisk{ get; set; }
 
         /// <summary>
-        /// Network attack.
+        /// Network attack
         /// </summary>
         [JsonProperty("Attack")]
         public ulong? Attack{ get; set; }
 
         /// <summary>
-        /// Network access.
+        /// Network access
         /// </summary>
         [JsonProperty("Access")]
         public ulong? Access{ get; set; }

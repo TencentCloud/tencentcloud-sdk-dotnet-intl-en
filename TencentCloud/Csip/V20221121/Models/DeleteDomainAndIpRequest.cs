@@ -31,31 +31,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// asset
+        /// Asset
         /// </summary>
         [JsonProperty("Content")]
         public PublicIpDomainListKey[] Content{ get; set; }
 
         /// <summary>
-        /// Whether to retain the path configuration. `1`: Retain; Others: Do not retain. It defaults to do not retain if not specified.
+        /// Whether to retain path configuration. 1: Yes; Other: No. No if not specified by default.
         /// </summary>
         [JsonProperty("RetainPath")]
         public long? RetainPath{ get; set; }
 
         /// <summary>
-        /// Whether to ignore this asset in the future. `1`: Ignore; Others: Do not ignore. It defaults to ignore if not specified.
+        /// Whether to ignore this asset in the future. 1: Yes; Other: No. No if not specified by default.
         /// </summary>
         [JsonProperty("IgnoreAsset")]
         public long? IgnoreAsset{ get; set; }
 
         /// <summary>
-        /// Asset tags
+        /// Asset tag
         /// </summary>
         [JsonProperty("Tags")]
         public AssetTag[] Tags{ get; set; }
 
         /// <summary>
-        /// Deletion mode. Values: `ALL` (delete all). If it's not specified, `Content` is required.
+        /// Delete type. ALL: deleting all, which will directly ignore the content of Content; Other value: not all, and Content is required. Other value by default.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public PortRiskAdvanceCFGParamItem[] PortRisk{ get; set; }
 
         /// <summary>
-        /// Advanced vulnerability scan configuration
+        /// Vulnerability Risk Advanced Configuration
         /// </summary>
         [JsonProperty("VulRisk")]
         public TaskCenterVulRiskInputParam[] VulRisk{ get; set; }
 
         /// <summary>
-        /// Advanced weak password check configuration
+        /// Weak Password Risk Advanced Configuration
         /// </summary>
         [JsonProperty("WeakPwdRisk")]
         public TaskCenterWeakPwdRiskInputParam[] WeakPwdRisk{ get; set; }
 
         /// <summary>
-        /// Advanced configuration risk scan configuration
+        /// Advanced Configuration of Configuration Risk
         /// </summary>
         [JsonProperty("CFGRisk")]
         public TaskCenterCFGRiskInputParam[] CFGRisk{ get; set; }

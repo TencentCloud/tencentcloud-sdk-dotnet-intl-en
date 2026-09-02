@@ -1,0 +1,127 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Csip.V20221121.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DspmAssetTableInfo : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>Asset instance id</p>
+        /// </summary>
+        [JsonProperty("AssetId")]
+        public string AssetId{ get; set; }
+
+        /// <summary>
+        /// <p>Database name</p>
+        /// </summary>
+        [JsonProperty("DbName")]
+        public string DbName{ get; set; }
+
+        /// <summary>
+        /// <p>schema name.</p>
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// <p>Table name</p>
+        /// </summary>
+        [JsonProperty("TableName")]
+        public string TableName{ get; set; }
+
+        /// <summary>
+        /// <p>number of fields</p>
+        /// </summary>
+        [JsonProperty("FieldCount")]
+        public ulong? FieldCount{ get; set; }
+
+        /// <summary>
+        /// <p>Number of sensitive fields</p>
+        /// </summary>
+        [JsonProperty("SensitiveFieldCount")]
+        public ulong? SensitiveFieldCount{ get; set; }
+
+        /// <summary>
+        /// <p>Data item id set</p>
+        /// </summary>
+        [JsonProperty("RuleIds")]
+        public ulong?[] RuleIds{ get; set; }
+
+        /// <summary>
+        /// <p>Set of data item names</p>
+        /// </summary>
+        [JsonProperty("RuleNames")]
+        public string[] RuleNames{ get; set; }
+
+        /// <summary>
+        /// <p>Categorization id set</p>
+        /// </summary>
+        [JsonProperty("CategoryIds")]
+        public ulong?[] CategoryIds{ get; set; }
+
+        /// <summary>
+        /// <p>Category name collection</p>
+        /// </summary>
+        [JsonProperty("CategoryNames")]
+        public string[] CategoryNames{ get; set; }
+
+        /// <summary>
+        /// <p>Category details</p>
+        /// </summary>
+        [JsonProperty("CategoryDetails")]
+        public DspmIdentifyCategoryDetail[] CategoryDetails{ get; set; }
+
+        /// <summary>
+        /// <p>Data table id</p>
+        /// </summary>
+        [JsonProperty("TableId")]
+        public ulong? TableId{ get; set; }
+
+        /// <summary>
+        /// <p>Table annotation</p>
+        /// </summary>
+        [JsonProperty("TableComment")]
+        public string TableComment{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "AssetId", this.AssetId);
+            this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "FieldCount", this.FieldCount);
+            this.SetParamSimple(map, prefix + "SensitiveFieldCount", this.SensitiveFieldCount);
+            this.SetParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
+            this.SetParamArraySimple(map, prefix + "RuleNames.", this.RuleNames);
+            this.SetParamArraySimple(map, prefix + "CategoryIds.", this.CategoryIds);
+            this.SetParamArraySimple(map, prefix + "CategoryNames.", this.CategoryNames);
+            this.SetParamArrayObj(map, prefix + "CategoryDetails.", this.CategoryDetails);
+            this.SetParamSimple(map, prefix + "TableId", this.TableId);
+            this.SetParamSimple(map, prefix + "TableComment", this.TableComment);
+        }
+    }
+}
+

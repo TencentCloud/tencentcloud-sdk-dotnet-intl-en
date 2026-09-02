@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// 0 means Tencent Cloud
+        /// 0 indicates Tencent Cloud
         /// 1 indicates AWS
         /// </summary>
         [JsonProperty("CloudType")]

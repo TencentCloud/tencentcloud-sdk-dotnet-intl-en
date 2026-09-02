@@ -25,14 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Credential key name (original), such as SecretId, SecretKey, Token
+        /// Credential key name (original text), for example, SecretId, SecretKey, and Token.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
         /// Credential key-value (masked)
-        /// Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+        /// Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

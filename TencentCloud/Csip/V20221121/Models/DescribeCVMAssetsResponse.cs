@@ -91,19 +91,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] OsList{ get; set; }
 
         /// <summary>
-        /// Mapping of asset type and instance type.
+        /// Mapping between asset types and instance types
         /// </summary>
         [JsonProperty("AssetMapInstanceTypeList")]
         public AssetInstanceTypeMap[] AssetMapInstanceTypeList{ get; set; }
 
         /// <summary>
-        /// Public network private network enumeration.
+        /// Public/private network enumeration
         /// </summary>
         [JsonProperty("PublicPrivateAttr")]
         public FilterDataObject[] PublicPrivateAttr{ get; set; }
 
         /// <summary>
-        /// Host protection status.
+        /// Host protection status
         /// </summary>
         [JsonProperty("ProtectStatusList")]
         public FilterDataObject[] ProtectStatusList{ get; set; }

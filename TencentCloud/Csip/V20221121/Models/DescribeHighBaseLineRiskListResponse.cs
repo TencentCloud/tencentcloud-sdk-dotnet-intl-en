@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Number of high-risk risks.
+        /// Number of high-risk baseline risks
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// High-Risk baseline risk list.
+        /// List of risks in high-risk baselines
         /// </summary>
         [JsonProperty("HighBaseLineRiskList")]
         public HighBaseLineRiskItem[] HighBaseLineRiskList{ get; set; }

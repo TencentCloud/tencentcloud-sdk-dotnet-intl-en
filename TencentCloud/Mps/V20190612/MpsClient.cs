@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1387";
 
         /// <summary>
         /// Client constructor.
@@ -3035,6 +3035,27 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// Query the result corresponding to a Hunyuan3D task.
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="QueryHunyuan3DTaskResponse"/></returns>
+        public Task<QueryHunyuan3DTaskResponse> QueryHunyuan3DTask(QueryHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuan3DTaskResponse>(req, "QueryHunyuan3DTask");
+        }
+
+        /// <summary>
+        /// Query the result corresponding to a Hunyuan3D task.
+        /// </summary>
+        /// <param name="req"><see cref="QueryHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="QueryHunyuan3DTaskResponse"/></returns>
+        public QueryHunyuan3DTaskResponse QueryHunyuan3DTaskSync(QueryHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<QueryHunyuan3DTaskResponse>(req, "QueryHunyuan3DTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query an episode project.
         /// </summary>
         /// <param name="req"><see cref="QueryProjectRequest"/></param>
@@ -3094,6 +3115,27 @@ namespace TencentCloud.Mps.V20190612
         public ResetWorkflowResponse ResetWorkflowSync(ResetWorkflowRequest req)
         {
             return InternalRequestAsync<ResetWorkflowResponse>(req, "ResetWorkflow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Submit creation of a Hunyuan 3D task.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="SubmitHunyuan3DTaskResponse"/></returns>
+        public Task<SubmitHunyuan3DTaskResponse> SubmitHunyuan3DTask(SubmitHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuan3DTaskResponse>(req, "SubmitHunyuan3DTask");
+        }
+
+        /// <summary>
+        /// Submit creation of a Hunyuan 3D task.
+        /// </summary>
+        /// <param name="req"><see cref="SubmitHunyuan3DTaskRequest"/></param>
+        /// <returns><see cref="SubmitHunyuan3DTaskResponse"/></returns>
+        public SubmitHunyuan3DTaskResponse SubmitHunyuan3DTaskSync(SubmitHunyuan3DTaskRequest req)
+        {
+            return InternalRequestAsync<SubmitHunyuan3DTaskResponse>(req, "SubmitHunyuan3DTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

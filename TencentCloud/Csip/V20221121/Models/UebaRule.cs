@@ -37,16 +37,16 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Policy type
-        /// System policy
-        /// custom policy
+        /// Policy type.
+        /// 0: System policy
+        /// 1: Create custom policy
         /// </summary>
         [JsonProperty("RuleType")]
         public long? RuleType{ get; set; }
 
         /// <summary>
         /// Policy level
-        /// Prompt.
+        /// 0: Prompt.
         /// 1: low
         /// 2: Medium risk
         /// 3: High risk
@@ -74,7 +74,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? HitCount{ get; set; }
 
         /// <summary>
-        /// Associated account Appid.
+        /// Appid of the associated account
         /// </summary>
         [JsonProperty("AppID")]
         public string AppID{ get; set; }
@@ -98,14 +98,14 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// Custom rule specific content
+        /// Specific content of the custom rule
         /// </summary>
         [JsonProperty("CustomRuleDetail")]
         public UebaCustomRule CustomRuleDetail{ get; set; }
 
         /// <summary>
         /// Cloud type
-        /// 0 Tencent Cloud
+        /// Tencent Cloud: 0
         /// aws:1
         /// </summary>
         [JsonProperty("CloudType")]

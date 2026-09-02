@@ -25,20 +25,20 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Risk level.
-        /// High - high risk, middle - medium risk, low - low risk, info - Note.
+        /// Risk level
+        /// high risk / Medium risk / low risk / Notification
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Component.
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Release date.
+        /// Vulnerability release time
         /// </summary>
         [JsonProperty("PublishTime")]
         public string PublishTime{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskId{ get; set; }
 
         /// <summary>
-        /// Vulnerability type.
+        /// Vulnerability type
         /// </summary>
         [JsonProperty("VULType")]
         public string VULType{ get; set; }
@@ -92,32 +92,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Payload{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact component.
+        /// Vulnerability Impact component
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Technology reference.
+        /// Technical reference
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact version.
+        /// Vulnerability Impact version
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// Risks.
+        /// Risk point
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }
 
         /// <summary>
         /// User Nickname
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
@@ -130,92 +129,79 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// User UIN
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
         /// Fixing suggestion
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Fix")]
         public string Fix{ get; set; }
 
         /// <summary>
         /// Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EMGCVulType")]
         public long? EMGCVulType{ get; set; }
 
         /// <summary>
         /// CVSS score
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CVSS")]
         public float? CVSS{ get; set; }
 
         /// <summary>
-        /// Attack intensity.
+        /// Attack heat
         /// 0/1/2/3 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AttackHeat")]
         public long? AttackHeat{ get; set; }
 
         /// <summary>
-        /// Detection status 0 unscanned 1 scan in progress 2 scan complete.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
         /// </summary>
         [JsonProperty("ScanStatus")]
         public long? ScanStatus{ get; set; }
 
         /// <summary>
-        /// 1/0 whether compulsory.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether 1/0 is required
         /// </summary>
         [JsonProperty("IsSuggest")]
         public long? IsSuggest{ get; set; }
 
         /// <summary>
         /// Tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VulTag")]
         public string[] VulTag{ get; set; }
 
         /// <summary>
-        /// Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
         /// </summary>
         [JsonProperty("SupportProduct")]
         public string SupportProduct{ get; set; }
 
         /// <summary>
-        /// Vulnerability detection task id.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability detection task id
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
         /// Primary key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
 
         /// <summary>
-        /// Vulnerability id old version.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability id (legacy version)
         /// </summary>
         [JsonProperty("PcmgrID")]
         public string PcmgrID{ get; set; }
 
         /// <summary>
-        /// Vulnerability id new version.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Vulnerability id New version
         /// </summary>
         [JsonProperty("TvdID")]
         public string TvdID{ get; set; }

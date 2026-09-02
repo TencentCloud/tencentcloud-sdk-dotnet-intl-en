@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Tenant UIN
+        /// Tenant uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Tenant name
+        /// Tenant Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Pod ID
+        /// pod id
         /// </summary>
         [JsonProperty("AssetId")]
         public string AssetId{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MachineId{ get; set; }
 
         /// <summary>
-        /// host name
+        /// MachineName
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// Associated container number
+        /// Number of associated containers
         /// </summary>
         [JsonProperty("ContainerCount")]
         public long? ContainerCount{ get; set; }

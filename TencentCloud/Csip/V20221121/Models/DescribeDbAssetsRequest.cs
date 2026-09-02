@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public Filter Filter{ get; set; }
 
         /// <summary>
-        /// Asset types. Values: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
+        /// Asset type: MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
         /// </summary>
         [JsonProperty("AssetTypes")]
         public string[] AssetTypes{ get; set; }

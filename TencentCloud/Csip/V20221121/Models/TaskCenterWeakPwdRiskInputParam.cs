@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Check item ID
+        /// Detection Item ID
         /// </summary>
         [JsonProperty("CheckItemId")]
         public long? CheckItemId{ get; set; }
 
         /// <summary>
-        /// Whether to enable. `0`: no, `1`: yes.
+        /// Whether to enable. 0-Not to Enable; 1-Enable.
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Impact assets.
+        /// Affect assets
         /// </summary>
         [JsonProperty("AffectAsset")]
         public string AffectAsset{ get; set; }
 
         /// <summary>
-        /// Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Asset type.
+        /// Asset type
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Component.
+        /// Component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FirstTime{ get; set; }
 
         /// <summary>
-        /// Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+        /// Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Vulnerability type.
+        /// Vulnerability type
         /// </summary>
         [JsonProperty("VULType")]
         public string VULType{ get; set; }
@@ -115,19 +115,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Port{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact component.
+        /// Vulnerability Impact component
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact version.
+        /// Vulnerability Impact version
         /// </summary>
         [JsonProperty("AppVersion")]
         public string AppVersion{ get; set; }
 
         /// <summary>
-        /// Risks.
+        /// Risk point
         /// </summary>
         [JsonProperty("VULURL")]
         public string VULURL{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public float? CVSS{ get; set; }
 
         /// <summary>
-        /// Frontend index id.
+        /// Frontend index id
         /// </summary>
         [JsonProperty("Index")]
         public string Index{ get; set; }
@@ -211,25 +211,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Vulnerability Tag.
+        /// Vulnerability tag
         /// </summary>
         [JsonProperty("VulTag")]
         public string[] VulTag{ get; set; }
 
         /// <summary>
-        /// Vulnerability disclosure time.
+        /// Vulnerability disclosure time
         /// </summary>
         [JsonProperty("DisclosureTime")]
         public string DisclosureTime{ get; set; }
 
         /// <summary>
-        /// Attack intensity.
+        /// Attack level
         /// </summary>
         [JsonProperty("AttackHeat")]
         public ulong? AttackHeat{ get; set; }
 
         /// <summary>
-        /// Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+        /// Whether vulnerability 1 is mandatory. 0 indicates false.
         /// </summary>
         [JsonProperty("IsSuggest")]
         public long? IsSuggest{ get; set; }
@@ -241,31 +241,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string HandleTaskId{ get; set; }
 
         /// <summary>
-        /// Engine source.
+        /// Engine source
         /// </summary>
         [JsonProperty("EngineSource")]
         public string EngineSource{ get; set; }
 
         /// <summary>
-        /// New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+        /// New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
         /// </summary>
         [JsonProperty("VulRiskId")]
         public string VulRiskId{ get; set; }
 
         /// <summary>
-        /// New version vulnerability id.
+        /// Vulnerability id of the new version
         /// </summary>
         [JsonProperty("TvdID")]
         public string TvdID{ get; set; }
 
         /// <summary>
-        /// Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+        /// Whether to perform one-click physical examination. 1: yes, 0: no.
         /// </summary>
         [JsonProperty("IsOneClick")]
         public ulong? IsOneClick{ get; set; }
 
         /// <summary>
-        /// Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+        /// Whether it is a POC scan. 0: non-POC; 1: POC
         /// </summary>
         [JsonProperty("IsPOC")]
         public ulong? IsPOC{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm record ID.
+        /// Alarm record ID
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// `0`: Task created successfully. `-1`: There are unauthorized assets. 
+        /// 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// List of unauthorized assets
+        /// Unauthenticated Asset List
         /// </summary>
         [JsonProperty("UnAuthAsset")]
         public string[] UnAuthAsset{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// All alarms list
+        /// All Alarm List
         /// </summary>
         [JsonProperty("AlertList")]
         public AlertInfo[] AlertList{ get; set; }
 
         /// <summary>
-        /// Number of Major Categories of Alarm
+        /// Number of major alarm categories
         /// </summary>
         [JsonProperty("AlertTypeCount")]
         public TagCount[] AlertTypeCount{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// Return status
+        /// Returned status information.
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }

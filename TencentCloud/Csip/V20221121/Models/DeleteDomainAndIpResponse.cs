@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Number of deleted assets
+        /// Number of Deleted Assets
         /// </summary>
         [JsonProperty("Data")]
         public long? Data{ get; set; }

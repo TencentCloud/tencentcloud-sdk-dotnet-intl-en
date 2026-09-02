@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Tag search filter criteria
+        /// Filter criteria for tag search
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] OperatedMemberId{ get; set; }
 
         /// <summary>
-        /// 0: Default all 1: Asset ID 2: Domain name
+        /// 0: Default: All; 1: Asset ID; 2: Domain name
         /// </summary>
         [JsonProperty("AssetType")]
         public long? AssetType{ get; set; }

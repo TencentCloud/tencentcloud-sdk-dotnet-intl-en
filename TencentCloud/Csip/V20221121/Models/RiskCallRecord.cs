@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// API name.
+        /// API name
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
-        /// Chinese description of the API.
+        /// Chinese description of the api
         /// </summary>
         [JsonProperty("EventDescCN")]
         public string EventDescCN{ get; set; }
 
         /// <summary>
-        /// Interface description.
+        /// Interface description
         /// </summary>
         [JsonProperty("EventDescEN")]
         public string EventDescEN{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Subnet (32-bit mask)
+        /// Subnet (supports only 32-bit)
         /// </summary>
         [JsonProperty("Subnet")]
         public ulong? Subnet{ get; set; }
 
         /// <summary>
-        /// Connected VPC (32-bit mask)
+        /// Interconnected VPC (supports only 32-bit)
         /// </summary>
         [JsonProperty("ConnectedVpc")]
         public ulong? ConnectedVpc{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetId{ get; set; }
 
         /// <summary>
-        /// Region
+        /// region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// CVM (only 32-bit)
+        /// CVM (supports only 32-bit)
         /// </summary>
         [JsonProperty("CVM")]
         public ulong? CVM{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AssetName{ get; set; }
 
         /// <summary>
-        /// CIDR block
+        /// CIDR Network Segmentation
         /// </summary>
         [JsonProperty("CIDR")]
         public string CIDR{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// UIN
+        /// uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// User name
+        /// Nickname
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }

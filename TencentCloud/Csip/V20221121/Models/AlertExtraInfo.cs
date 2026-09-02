@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LeakContent{ get; set; }
 
         /// <summary>
-        /// Leak API
+        /// Leak APIs
         /// </summary>
         [JsonProperty("LeakAPI")]
         public string LeakAPI{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SecretID{ get; set; }
 
         /// <summary>
-        /// hit rule
+        /// Matched rule
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string AttackContent{ get; set; }
 
         /// <summary>
-        /// Attack IP profiling
+        /// Attack IP profiling.
         /// </summary>
         [JsonProperty("AttackIPProfile")]
         public string AttackIPProfile{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ServiceProcess{ get; set; }
 
         /// <summary>
-        /// Filename
+        /// File name
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -169,7 +169,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FileLastAccessTime{ get; set; }
 
         /// <summary>
-        /// file modification time
+        /// File modification time
         /// </summary>
         [JsonProperty("FileModifyTime")]
         public string FileModifyTime{ get; set; }
@@ -199,13 +199,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VirusFileTags{ get; set; }
 
         /// <summary>
-        /// behavioral characteristics
+        /// Behavioral characteristics
         /// </summary>
         [JsonProperty("BehavioralCharacteristics")]
         public string BehavioralCharacteristics{ get; set; }
 
         /// <summary>
-        /// process name (PID)
+        /// Process name (PID)
         /// </summary>
         [JsonProperty("ProcessNamePID")]
         public string ProcessNamePID{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ProcessPath{ get; set; }
 
         /// <summary>
-        /// Command line of the process
+        /// Process command line
         /// </summary>
         [JsonProperty("ProcessCommandLine")]
         public string ProcessCommandLine{ get; set; }
@@ -235,13 +235,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ExecutedCommand{ get; set; }
 
         /// <summary>
-        /// Affected Filename
+        /// Affected file name
         /// </summary>
         [JsonProperty("AffectedFileName")]
         public string AffectedFileName{ get; set; }
 
         /// <summary>
-        /// bait path
+        /// Bait path
         /// </summary>
         [JsonProperty("DecoyPath")]
         public string DecoyPath{ get; set; }
@@ -253,7 +253,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MaliciousProcessFileSize{ get; set; }
 
         /// <summary>
-        /// Malicious process file MD5
+        /// MD5 of the malicious process file
         /// </summary>
         [JsonProperty("MaliciousProcessFileMD5")]
         public string MaliciousProcessFileMD5{ get; set; }
@@ -271,13 +271,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MaliciousProcessPath{ get; set; }
 
         /// <summary>
-        /// malicious process start time
+        /// Malicious process startup time
         /// </summary>
         [JsonProperty("MaliciousProcessStartTime")]
         public string MaliciousProcessStartTime{ get; set; }
 
         /// <summary>
-        /// command content
+        /// Command
         /// </summary>
         [JsonProperty("CommandContent")]
         public string CommandContent{ get; set; }
@@ -295,7 +295,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// Add new permission
+        /// Added permission
         /// </summary>
         [JsonProperty("NewPermissions")]
         public string NewPermissions{ get; set; }
@@ -313,13 +313,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ClassName{ get; set; }
 
         /// <summary>
-        /// class loader
+        /// Class loader to which it belongs
         /// </summary>
         [JsonProperty("ClassLoader")]
         public string ClassLoader{ get; set; }
 
         /// <summary>
-        /// File size
+        /// Individual file size
         /// </summary>
         [JsonProperty("ClassFileSize")]
         public string ClassFileSize{ get; set; }
@@ -337,7 +337,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ParentClassName{ get; set; }
 
         /// <summary>
-        /// inherit an API
+        /// Inherit interfaces
         /// </summary>
         [JsonProperty("InheritedInterface")]
         public string InheritedInterface{ get; set; }
@@ -349,7 +349,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// payload content
+        /// Payload content
         /// </summary>
         [JsonProperty("PayloadContent")]
         public string PayloadContent{ get; set; }
@@ -379,43 +379,43 @@ namespace TencentCloud.Csip.V20221121.Models
         public string FilePermission{ get; set; }
 
         /// <summary>
-        /// Information field from log analysis
+        /// Information fields that come from log analysis
         /// </summary>
         [JsonProperty("FromLogAnalysisData")]
         public KeyValue[] FromLogAnalysisData{ get; set; }
 
         /// <summary>
-        /// probe hit
+        /// Cache hit probe
         /// </summary>
         [JsonProperty("HitProbe")]
         public string HitProbe{ get; set; }
 
         /// <summary>
-        /// hit honeypot
+        /// Hit a honeypot
         /// </summary>
         [JsonProperty("HitHoneyPot")]
         public string HitHoneyPot{ get; set; }
 
         /// <summary>
-        /// command list
+        /// Command list
         /// </summary>
         [JsonProperty("CommandList")]
         public string CommandList{ get; set; }
 
         /// <summary>
-        /// Attack event description
+        /// Description of the attack event
         /// </summary>
         [JsonProperty("AttackEventDesc")]
         public string AttackEventDesc{ get; set; }
 
         /// <summary>
-        /// Process information
+        /// Process information.
         /// </summary>
         [JsonProperty("ProcessInfo")]
         public string ProcessInfo{ get; set; }
 
         /// <summary>
-        /// Login username & password
+        /// Use username and password
         /// </summary>
         [JsonProperty("UserNameAndPwd")]
         public string UserNameAndPwd{ get; set; }
@@ -433,7 +433,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// Host protection hit policy is a combination of policy ID and Policy Name
+        /// Host protection hit policy, which is a combination of the policy ID and policy name.
         /// </summary>
         [JsonProperty("HitStrategy")]
         public string HitStrategy{ get; set; }
@@ -451,13 +451,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PID{ get; set; }
 
         /// <summary>
-        /// Container Pod name
+        /// Pod name of the container
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }
 
         /// <summary>
-        /// Container Pod ID
+        /// Pod ID of the container
         /// </summary>
         [JsonProperty("PodID")]
         public string PodID{ get; set; }
@@ -469,13 +469,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Response{ get; set; }
 
         /// <summary>
-        /// system call
+        /// System call
         /// </summary>
         [JsonProperty("SystemCall")]
         public string SystemCall{ get; set; }
 
         /// <summary>
-        /// Operation type
+        /// Operation type.
         /// </summary>
         [JsonProperty("Verb")]
         public string Verb{ get; set; }
@@ -505,61 +505,61 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Destination address (container reverse shell)
+        /// Target address (container reverse shell)
         /// </summary>
         [JsonProperty("TargetAddress")]
         public string TargetAddress{ get; set; }
 
         /// <summary>
-        /// Malicious request domain name (container malicious outbound connection)
+        /// Malicious request domain name (malicious outbound connection of a container)
         /// </summary>
         [JsonProperty("MaliciousRequestDomain")]
         public string MaliciousRequestDomain{ get; set; }
 
         /// <summary>
-        /// Rule Type (Container K8sAPI Exception Request)
+        /// Rule type (exceptional request of the K8s API in the container)
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Requested Resource (Container K8sAPI Exception Request)
+        /// Requested resource (exceptional request for K8s API of a container)
         /// </summary>
         [JsonProperty("RequestURI")]
         public string RequestURI{ get; set; }
 
         /// <summary>
-        /// Request Initiating User (Container K8sAPI Exception Request)
+        /// Request initiating user (container K8s API abnormal request)
         /// </summary>
         [JsonProperty("RequestUser")]
         public string RequestUser{ get; set; }
 
         /// <summary>
-        /// Request Object (Container K8sAPI Exception Request)
+        /// Request object (exceptional K8s API request in a container)
         /// </summary>
         [JsonProperty("RequestObject")]
         public string RequestObject{ get; set; }
 
         /// <summary>
-        /// Response object (container K8sAPI exception request)
+        /// object (for exceptional requests from the K8s API in a container)
         /// </summary>
         [JsonProperty("ResponseObject")]
         public string ResponseObject{ get; set; }
 
         /// <summary>
-        /// File type (Container file tamper)
+        /// File type (container file tampering)
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Tag feature (malicious outbound connection of container)
+        /// Tag feature (container malicious outbound connection)
         /// </summary>
         [JsonProperty("TIType")]
         public string TIType{ get; set; }
 
         /// <summary>
-        /// Source IP Address (Container K8sAPI Exception Request)
+        /// Source IP address (exceptional request to the K8s API of a container)
         /// </summary>
         [JsonProperty("SourceIP")]
         public string SourceIP{ get; set; }

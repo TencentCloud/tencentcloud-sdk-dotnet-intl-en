@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VULName{ get; set; }
 
         /// <summary>
-        /// Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+        /// Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// Source of the check task
+        /// Recognition source
         /// </summary>
         [JsonProperty("CheckFrom")]
         public string CheckFrom{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// Risk type.
+        /// Risk type
         /// </summary>
         [JsonProperty("VULType")]
         public string VULType{ get; set; }
 
         /// <summary>
-        /// Affected versions
+        /// Affected version
         /// </summary>
         [JsonProperty("ImpactVersion")]
         public string ImpactVersion{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Payload{ get; set; }
 
         /// <summary>
-        /// Technology reference
+        /// Technical reference
         /// </summary>
         [JsonProperty("References")]
         public string References{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CVSS{ get; set; }
 
         /// <summary>
-        /// Attack intensity
+        /// Attack level
         /// </summary>
         [JsonProperty("AttackHeat")]
         public string AttackHeat{ get; set; }
 
         /// <summary>
-        /// Security Product Support Status
+        /// Security product support status
         /// </summary>
         [JsonProperty("ServiceSupport")]
         public ServiceSupport[] ServiceSupport{ get; set; }

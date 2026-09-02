@@ -31,25 +31,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Access key ID.
+        /// Access key ID
         /// </summary>
         [JsonProperty("AccessKeyID")]
         public ulong? AccessKeyID{ get; set; }
 
         /// <summary>
-        /// ID of the source IP for the call.
+        /// ID of the call source IP
         /// </summary>
         [JsonProperty("SourceIPID")]
         public ulong? SourceIPID{ get; set; }
 
         /// <summary>
-        /// Access account uin.
+        /// Access account uin
         /// </summary>
         [JsonProperty("AccUin")]
         public string AccUin{ get; set; }
 
         /// <summary>
-        /// Access key. Note: Temporary key is unsupported.
+        /// Access key. Note: unsupported for temporary keys.
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }

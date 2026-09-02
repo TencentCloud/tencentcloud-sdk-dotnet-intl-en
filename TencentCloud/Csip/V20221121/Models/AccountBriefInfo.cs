@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Nick{ get; set; }
 
         /// <summary>
-        /// <p>account Uin</p>
+        /// <p>Account Uin</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }

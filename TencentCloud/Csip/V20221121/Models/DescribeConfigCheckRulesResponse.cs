@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Risk rule list
+        /// List of risk rules
         /// </summary>
         [JsonProperty("RuleList")]
         public RiskRuleInfo[] RuleList{ get; set; }
 
         /// <summary>
-        /// Cloud vendor type options
+        /// Cloud vendor type option
         /// </summary>
         [JsonProperty("ProviderList")]
         public AttributeOptionSet[] ProviderList{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public AttributeOptionSet[] RiskLevelList{ get; set; }
 
         /// <summary>
-        /// Disposal categorization options
+        /// Disposal category options
         /// </summary>
         [JsonProperty("DispositionTypeList")]
         public AttributeOptionSet[] DispositionTypeList{ get; set; }

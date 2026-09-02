@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Security product support.
+        /// Security product support status
         /// </summary>
         [JsonProperty("ServiceSupport")]
         public ServiceSupport[] ServiceSupport{ get; set; }
 
         /// <summary>
-        /// Vulnerability trends.
+        /// Vulnerability trends
         /// </summary>
         [JsonProperty("VulTrend")]
         public VulTrend[] VulTrend{ get; set; }
 
         /// <summary>
-        /// Vulnerability supplementary information.
+        /// Vulnerability supplementary information
         /// </summary>
         [JsonProperty("VulData")]
         public VULRiskInfo VulData{ get; set; }
 
         /// <summary>
-        /// Assistant q&a id.
+        /// Q&A id of the assistant
         /// </summary>
         [JsonProperty("QuestionId")]
         public string QuestionId{ get; set; }

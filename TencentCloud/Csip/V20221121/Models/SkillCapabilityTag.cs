@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+        /// Capacity tag identification
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Capacity Tag Display Name
+        /// Display name of the capability tag
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

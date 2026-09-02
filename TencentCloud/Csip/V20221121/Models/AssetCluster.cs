@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Tenant uin.
+        /// Tenant uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -79,58 +79,58 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Cluster protection status, enumerate on the left, display on the right.
-        /// Protection status of the cluster. 
-        /// 0: not connected.
-        /// Unprotected. 
-        /// 2: partial protection. 
-        /// 3: under protection. 
-        /// 4: access exception. 
-        /// 5: accessing. 
-        /// Uninstalling. 
-        /// 7: uninstallation exception.
+        /// Cluster protection status. Enumerations on the left and displays on the right.
+        /// Cluster protection status 
+        /// 0: Not connected
+        /// 1: No protection 
+        /// 2: Partial protection 
+        /// 3: Under protection 
+        /// 4: Access exception 
+        /// 5: Accessing 
+        /// 6: Uninstalling 
+        /// 7: Uninstallation exception
         /// </summary>
         [JsonProperty("ProtectStatus")]
         public long? ProtectStatus{ get; set; }
 
         /// <summary>
-        /// Access information, being empty indicates no access exception info.
+        /// Access information. Being not empty indicates an access exception message.
         /// </summary>
         [JsonProperty("ProtectInfo")]
         public string ProtectInfo{ get; set; }
 
         /// <summary>
-        /// VPC id.
+        /// VPC id
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// VPC name.
+        /// VPC name
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// kubernetes version.
+        /// kubernetes version
         /// </summary>
         [JsonProperty("KubernetesVersion")]
         public string KubernetesVersion{ get; set; }
 
         /// <summary>
-        /// Runtime component.
+        /// Runtime component
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }
 
         /// <summary>
-        /// Runtime component version.
+        /// Runtime component version
         /// </summary>
         [JsonProperty("ComponentVersion")]
         public string ComponentVersion{ get; set; }
 
         /// <summary>
-        /// Component status.
+        /// Component status
         /// </summary>
         [JsonProperty("ComponentStatus")]
         public string ComponentStatus{ get; set; }
@@ -142,7 +142,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckTime{ get; set; }
 
         /// <summary>
-        /// Associated hosts.
+        /// Number of associated hosts
         /// </summary>
         [JsonProperty("MachineCount")]
         public long? MachineCount{ get; set; }
@@ -160,13 +160,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ServiceCount{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk.
+        /// Vulnerability risk
         /// </summary>
         [JsonProperty("VulRisk")]
         public long? VulRisk{ get; set; }
 
         /// <summary>
-        /// Configuration risk.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("CFGRisk")]
         public long? CFGRisk{ get; set; }
@@ -190,7 +190,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsNewAsset{ get; set; }
 
         /// <summary>
-        /// Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+        /// Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }

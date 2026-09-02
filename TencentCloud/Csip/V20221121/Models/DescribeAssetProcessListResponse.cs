@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Process quantity.
+        /// Process quantity
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Process list.
+        /// Process list
         /// </summary>
         [JsonProperty("AssetProcessList")]
         public AssetProcessItem[] AssetProcessList{ get; set; }

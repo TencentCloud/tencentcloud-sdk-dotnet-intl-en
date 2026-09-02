@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Specification ID
+        /// Regulation ID
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// Standard name
+        /// Specification name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

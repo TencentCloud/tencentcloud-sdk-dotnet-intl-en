@@ -1,0 +1,204 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Csip.V20221121.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeDspmPayInfoResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// APPID
+        /// </summary>
+        [JsonProperty("AppID")]
+        public long? AppID{ get; set; }
+
+        /// <summary>
+        /// Order status. 0: not purchased. 1: normal. 2: isolated. 3: terminated. 6: in trial. 7: expired.
+        /// </summary>
+        [JsonProperty("OrderStatus")]
+        public long? OrderStatus{ get; set; }
+
+        /// <summary>
+        /// Number of purchased database instances
+        /// </summary>
+        [JsonProperty("AssetNum")]
+        public long? AssetNum{ get; set; }
+
+        /// <summary>
+        /// Purchased audit log volume (TB)
+        /// </summary>
+        [JsonProperty("LogStorage")]
+        public float? LogStorage{ get; set; }
+
+        /// <summary>
+        /// Number of database instances in use
+        /// </summary>
+        [JsonProperty("UsedAssetNum")]
+        public long? UsedAssetNum{ get; set; }
+
+        /// <summary>
+        /// Used audit log volume (TB)
+        /// </summary>
+        [JsonProperty("UsedLogStorage")]
+        public float? UsedLogStorage{ get; set; }
+
+        /// <summary>
+        /// Total purchased sql storage (unit: million)
+        /// </summary>
+        [JsonProperty("SqlTotal")]
+        public ulong? SqlTotal{ get; set; }
+
+        /// <summary>
+        /// Purchased sql qps
+        /// </summary>
+        [JsonProperty("SqlQps")]
+        public ulong? SqlQps{ get; set; }
+
+        /// <summary>
+        /// Payment mode. 0: pay-as-you-go; 1: prepaid
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// Whether to purchase separately. 1: separate purchase; 2: shared by other accounts
+        /// </summary>
+        [JsonProperty("IsSelfBuy")]
+        public long? IsSelfBuy{ get; set; }
+
+        /// <summary>
+        /// Order start time.
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// Order expiration time
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 0: user not set; 1: set auto-renewal by user; 2: set not to auto-renew by user
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public long? AutoRenew{ get; set; }
+
+        /// <summary>
+        /// Order duration
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public long? TimeSpan{ get; set; }
+
+        /// <summary>
+        /// Duration unit.
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// Resource ID
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
+
+        /// <summary>
+        /// Open beta end time
+        /// </summary>
+        [JsonProperty("BetaEndTime")]
+        public string BetaEndTime{ get; set; }
+
+        /// <summary>
+        /// Current system time.
+        /// </summary>
+        [JsonProperty("TimeNow")]
+        public string TimeNow{ get; set; }
+
+        /// <summary>
+        /// Whether to share with other accounts. 1: yes; 2: no
+        /// </summary>
+        [JsonProperty("IsShareToOther")]
+        public long? IsShareToOther{ get; set; }
+
+        /// <summary>
+        /// uin
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// Nickname
+        /// </summary>
+        [JsonProperty("NickName")]
+        public string NickName{ get; set; }
+
+        /// <summary>
+        /// Purchase information
+        /// </summary>
+        [JsonProperty("InquireData")]
+        public InquireInfo[] InquireData{ get; set; }
+
+        /// <summary>
+        /// Edition (Professional: professional; Trial: trial)
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "AppID", this.AppID);
+            this.SetParamSimple(map, prefix + "OrderStatus", this.OrderStatus);
+            this.SetParamSimple(map, prefix + "AssetNum", this.AssetNum);
+            this.SetParamSimple(map, prefix + "LogStorage", this.LogStorage);
+            this.SetParamSimple(map, prefix + "UsedAssetNum", this.UsedAssetNum);
+            this.SetParamSimple(map, prefix + "UsedLogStorage", this.UsedLogStorage);
+            this.SetParamSimple(map, prefix + "SqlTotal", this.SqlTotal);
+            this.SetParamSimple(map, prefix + "SqlQps", this.SqlQps);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "IsSelfBuy", this.IsSelfBuy);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "BetaEndTime", this.BetaEndTime);
+            this.SetParamSimple(map, prefix + "TimeNow", this.TimeNow);
+            this.SetParamSimple(map, prefix + "IsShareToOther", this.IsShareToOther);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "NickName", this.NickName);
+            this.SetParamArrayObj(map, prefix + "InquireData.", this.InquireData);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

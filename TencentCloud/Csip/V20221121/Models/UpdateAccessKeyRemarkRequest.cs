@@ -37,25 +37,25 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Source IP name.
+        /// Source IP Name
         /// </summary>
         [JsonProperty("SourceIPList")]
         public string[] SourceIPList{ get; set; }
 
         /// <summary>
-        /// ak name.
+        /// ak name
         /// </summary>
         [JsonProperty("AccessKeyList")]
         public string[] AccessKeyList{ get; set; }
 
         /// <summary>
-        /// ID of the source IP.
+        /// ID of the source IP
         /// </summary>
         [JsonProperty("SourceIPIDList")]
         public ulong?[] SourceIPIDList{ get; set; }
 
         /// <summary>
-        /// AK ID.
+        /// ID of the AK
         /// </summary>
         [JsonProperty("AccessKeyIDList")]
         public ulong?[] AccessKeyIDList{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string By{ get; set; }
 
         /// <summary>
-        /// Cloud service provider.
+        /// Cloud service provider
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }

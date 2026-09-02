@@ -25,21 +25,21 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Filter item
+        /// Filtered Items
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Filter value
+        /// Filtered Value
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Central platform definition:.
-        /// 1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
-        /// Exact match fills 7. fuzzy matching fills 9. 
+        /// Central platform definition:
+        /// 1 equal 2 greater than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 exact matching 14 bitwise AND
+        /// Enter 7 for exact match and 9 for fuzzy matching. 
         /// </summary>
         [JsonProperty("OperatorType")]
         public long? OperatorType{ get; set; }

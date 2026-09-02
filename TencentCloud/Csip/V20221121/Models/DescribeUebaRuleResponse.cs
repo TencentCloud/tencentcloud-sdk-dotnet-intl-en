@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public UebaRule[] Data{ get; set; }
 
         /// <summary>
-        /// Alarm category enumeration for custom policy
+        /// Enumeration of alarm types corresponding to a custom policy.
         /// </summary>
         [JsonProperty("AlterType")]
         public FilterDataObject[] AlterType{ get; set; }

@@ -25,17 +25,16 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Whether to exclude the mode
+        /// Whether to exclude mode
         /// Enumeration values:
-        /// 0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-        /// 1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+        /// 0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+        /// 1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
         /// </summary>
         [JsonProperty("Exclude")]
         public long? Exclude{ get; set; }
 
         /// <summary>
-        /// Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
         /// </summary>
         [JsonProperty("Instances")]
         public string[] Instances{ get; set; }

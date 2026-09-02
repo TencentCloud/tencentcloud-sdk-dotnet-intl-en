@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] VULTypeLists{ get; set; }
 
         /// <summary>
-        /// Risk level list.
+        /// Risk level list
         /// </summary>
         [JsonProperty("RiskLevels")]
         public FilterDataObject[] RiskLevels{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] Tags{ get; set; }
 
         /// <summary>
-        /// Product support.
+        /// Product support status
         /// </summary>
         [JsonProperty("ProductSupport")]
         public FilterDataObject[] ProductSupport{ get; set; }
 
         /// <summary>
-        /// Product support.
+        /// Product support status
         /// </summary>
         [JsonProperty("CheckStatus")]
         public FilterDataObject[] CheckStatus{ get; set; }
 
         /// <summary>
-        /// Attack intensity enumeration.
+        /// Attack level enumeration
         /// </summary>
         [JsonProperty("AttackHeat")]
         public FilterDataObject[] AttackHeat{ get; set; }

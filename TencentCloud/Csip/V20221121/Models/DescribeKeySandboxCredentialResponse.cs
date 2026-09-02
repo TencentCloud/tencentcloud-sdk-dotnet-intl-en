@@ -37,8 +37,8 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CredentialName{ get; set; }
 
         /// <summary>
-        /// Credential Type
-        /// Enumeration value:
+        /// Credential type
+        /// Enumeration values:
         /// access: standard key
         /// sts: STS temporary key
         /// </summary>
@@ -46,37 +46,35 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CredentialType{ get; set; }
 
         /// <summary>
-        /// Effective machine scope
+        /// Scope of effective machines
         /// </summary>
         [JsonProperty("CredentialEffectScope")]
         public CredentialEffectScope CredentialEffectScope{ get; set; }
 
         /// <summary>
         /// Normal key credential data (masked). Returned when CredentialType is access.
-        /// Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
         /// </summary>
         [JsonProperty("Access")]
         public AccessCredentialOutput[] Access{ get; set; }
 
         /// <summary>
         /// STS credential data (masked). Returned when CredentialType is sts.
-        /// Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
         /// </summary>
         [JsonProperty("STS")]
         public STSCredentialOutput STS{ get; set; }
 
         /// <summary>
         /// Creation time.
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Update time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string RiskContent{ get; set; }
 
         /// <summary>
-        /// <p>Cloud service provider</p>
+        /// <p>Cloud service provider.</p>
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ProviderName{ get; set; }
 
         /// <summary>
-        /// <p>cloud account</p>
+        /// <p>Cloud account</p>
         /// </summary>
         [JsonProperty("CloudAccountId")]
         public string CloudAccountId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CheckStatus{ get; set; }
 
         /// <summary>
-        /// <p>User AppID</p>
+        /// <p>User AppID.</p>
         /// </summary>
         [JsonProperty("AppID")]
         public ulong? AppID{ get; set; }
@@ -113,6 +113,12 @@ namespace TencentCloud.Csip.V20221121.Models
         /// </summary>
         [JsonProperty("AssetType")]
         public string AssetType{ get; set; }
+
+        /// <summary>
+        /// <p>Risk ignore reason</p>
+        /// </summary>
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "AppID", this.AppID);
             this.SetParamSimple(map, prefix + "AssetType", this.AssetType);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
         }
     }
 }

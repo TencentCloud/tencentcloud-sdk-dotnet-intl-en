@@ -25,26 +25,26 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Product name.
+        /// Product name:
         /// "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// Total number of processed assets.
+        /// Total number of fixed assets
         /// </summary>
         [JsonProperty("SupportHandledCount")]
         public long? SupportHandledCount{ get; set; }
 
         /// <summary>
-        /// Total number of supported assets.
+        /// Total number of supported assets
         /// </summary>
         [JsonProperty("SupportTotalCount")]
         public long? SupportTotalCount{ get; set; }
 
         /// <summary>
-        /// Whether the product is supported: 1 for supported; 0 for unsupported.
+        /// Whether the product is supported. 1: supported; 0: not supported
         /// </summary>
         [JsonProperty("IsSupport")]
         public bool? IsSupport{ get; set; }

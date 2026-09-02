@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Number of created assets
+        /// Returns the Number of Successful Creations
         /// </summary>
         [JsonProperty("Data")]
         public long? Data{ get; set; }

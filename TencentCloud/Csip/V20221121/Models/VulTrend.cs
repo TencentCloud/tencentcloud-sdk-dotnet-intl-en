@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Number of affected assets.
+        /// Number of affected assets
         /// </summary>
         [JsonProperty("AffectAssetCount")]
         public long? AffectAssetCount{ get; set; }
 
         /// <summary>
-        /// Number of users affected.
+        /// Number of impacted users
         /// </summary>
         [JsonProperty("AffectUserCount")]
         public long? AffectUserCount{ get; set; }
 
         /// <summary>
-        /// Number of attacks.
+        /// Number of attacks
         /// </summary>
         [JsonProperty("AttackCount")]
         public long? AttackCount{ get; set; }

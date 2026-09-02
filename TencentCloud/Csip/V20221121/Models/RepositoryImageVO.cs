@@ -37,19 +37,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Nickname.
+        /// Nickname
         /// </summary>
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
         /// <summary>
-        /// Mirror id.
+        /// Image id
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Image name.
+        /// Image Name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceSize{ get; set; }
 
         /// <summary>
-        /// Build times.
+        /// Build Times
         /// </summary>
         [JsonProperty("BuildCount")]
         public long? BuildCount{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Authorization status.
+        /// Authorization status
         /// </summary>
         [JsonProperty("AuthStatus")]
         public long? AuthStatus{ get; set; }
 
         /// <summary>
-        /// Mirror version.
+        /// Mirror version
         /// </summary>
         [JsonProperty("InstanceVersion")]
         public string InstanceVersion{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Repository address.
+        /// Repository address
         /// </summary>
         [JsonProperty("RepositoryUrl")]
         public string RepositoryUrl{ get; set; }
 
         /// <summary>
-        /// Repository name.
+        /// Repository name
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? IsCore{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk.
+        /// Vulnerability risk
         /// </summary>
         [JsonProperty("VulRisk")]
         public long? VulRisk{ get; set; }
 
         /// <summary>
-        /// Check task.
+        /// Check task
         /// </summary>
         [JsonProperty("CheckCount")]
         public long? CheckCount{ get; set; }

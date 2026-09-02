@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// Result Code
+        /// Result code
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }

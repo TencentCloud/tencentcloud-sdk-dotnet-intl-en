@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Cloud boundary analysis path within node.
+        /// Content within the cloud boundary analysis path node
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

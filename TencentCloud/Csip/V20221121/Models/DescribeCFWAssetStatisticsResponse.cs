@@ -55,37 +55,37 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? CVMAssetTotal{ get; set; }
 
         /// <summary>
-        /// Configuration risk.
+        /// Configuration risk
         /// </summary>
         [JsonProperty("CFGTotal")]
         public long? CFGTotal{ get; set; }
 
         /// <summary>
-        /// Port risk.
+        /// Port risk
         /// </summary>
         [JsonProperty("PortTotal")]
         public long? PortTotal{ get; set; }
 
         /// <summary>
-        /// Content risk.
+        /// Content risk
         /// </summary>
         [JsonProperty("WebsiteTotal")]
         public long? WebsiteTotal{ get; set; }
 
         /// <summary>
-        /// Risk service exposure.
+        /// Risk service exposure
         /// </summary>
         [JsonProperty("ServerTotal")]
         public long? ServerTotal{ get; set; }
 
         /// <summary>
-        /// Weak password risk.
+        /// Weak password risk
         /// </summary>
         [JsonProperty("WeakPasswordTotal")]
         public long? WeakPasswordTotal{ get; set; }
 
         /// <summary>
-        /// Vulnerability risk.
+        /// Vulnerability risk
         /// </summary>
         [JsonProperty("VULTotal")]
         public long? VULTotal{ get; set; }

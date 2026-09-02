@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? PortHighLevel{ get; set; }
 
         /// <summary>
-        /// 	Total number of weak password risks.
+        /// 	Total number of weak password risks
         /// </summary>
         [JsonProperty("WeakPasswordTotal")]
         public ulong? WeakPasswordTotal{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// Number of vulnerability risks.
+        /// Number of Vulnerability Risks
         /// </summary>
         [JsonProperty("VULTotal")]
         public long? VULTotal{ get; set; }
@@ -92,38 +92,36 @@ namespace TencentCloud.Csip.V20221121.Models
 
         /// <summary>
         /// Mapping Service Risk Count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerTotal")]
         public long? ServerTotal{ get; set; }
 
         /// <summary>
         /// High Mapping Service Risk Count
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServerHighLevel")]
         public long? ServerHighLevel{ get; set; }
 
         /// <summary>
-        /// Number of host baseline risks.
+        /// Number of host baseline risks
         /// </summary>
         [JsonProperty("HostBaseLineRiskTotal")]
         public long? HostBaseLineRiskTotal{ get; set; }
 
         /// <summary>
-        /// Number of high-risk risks.
+        /// Number of high-risk risks in the host baseline
         /// </summary>
         [JsonProperty("HostBaseLineRiskHighLevel")]
         public long? HostBaseLineRiskHighLevel{ get; set; }
 
         /// <summary>
-        /// Baseline risk count of the container.
+        /// Number of baseline risks in the container
         /// </summary>
         [JsonProperty("PodBaseLineRiskTotal")]
         public long? PodBaseLineRiskTotal{ get; set; }
 
         /// <summary>
-        /// Number of high-risk baseline risks in the container.
+        /// Number of high-risk risks in the container baseline
         /// </summary>
         [JsonProperty("PodBaseLineRiskHighLevel")]
         public long? PodBaseLineRiskHighLevel{ get; set; }

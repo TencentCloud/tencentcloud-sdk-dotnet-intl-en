@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+        /// Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
         /// </summary>
         [JsonProperty("AIStatus")]
         public long? AIStatus{ get; set; }
 
         /// <summary>
-        /// AI Analysis Task ID
+        /// AI analysis task ID
         /// </summary>
         [JsonProperty("AITaskID")]
         public string AITaskID{ get; set; }
 
         /// <summary>
-        /// Alarm AI analysis result, base64 format, avoid data interception
+        /// Alarm AI analysis result in base64 format to avoid data interception.
         /// </summary>
         [JsonProperty("AIResult")]
         public string AIResult{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Feedback{ get; set; }
 
         /// <summary>
-        /// Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+        /// Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
         /// </summary>
         [JsonProperty("FeedbackResult")]
         public long? FeedbackResult{ get; set; }

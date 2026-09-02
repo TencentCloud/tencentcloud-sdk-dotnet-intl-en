@@ -25,21 +25,21 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Alarm type/risktype.
-        /// Alarm type:.
-        /// Abnormal calls.
-        /// Leakage detection.
-        /// 2 custom.
+        /// Alarm type/Risk type
+        /// Alarm type:
+        /// 0Abnormal calls
+        /// 1. Leakage detection
+        /// Custom parameter 2.
         /// 
-        /// Risk type:.
-        /// Configuration risk.
-        /// Custom risk.
+        /// Risk type:
+        /// 0: Configuration risk
+        /// 1: Custom risk
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// Alarm count/number of risks.
+        /// Alarm count / risk quantity
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

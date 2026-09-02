@@ -49,13 +49,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// asset ID
+        /// Asset ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// city
+        /// City
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Province{ get; set; }
 
         /// <summary>
-        /// nation
+        /// national
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// latitude
+        /// Latitude
         /// </summary>
         [JsonProperty("Latitude")]
         public string Latitude{ get; set; }
 
         /// <summary>
-        /// longitude
+        /// Longitude
         /// </summary>
         [JsonProperty("Longitude")]
         public string Longitude{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Enterprise Name
+        /// Enterprise name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MD5{ get; set; }
 
         /// <summary>
-        /// Malicious process filename
+        /// Malicious process file name
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ContainerName{ get; set; }
 
         /// <summary>
-        /// container ID
+        /// Container ID
         /// </summary>
         [JsonProperty("ContainerID")]
         public string ContainerID{ get; set; }

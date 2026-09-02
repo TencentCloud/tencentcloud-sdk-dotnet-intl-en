@@ -37,19 +37,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public long?[] RiskIDList{ get; set; }
 
         /// <summary>
-        /// Access key list.
+        /// Access key list
         /// </summary>
         [JsonProperty("AccessKeyList")]
         public string[] AccessKeyList{ get; set; }
 
         /// <summary>
-        /// Account uin list.
+        /// List of account uins
         /// </summary>
         [JsonProperty("SubUinList")]
         public string[] SubUinList{ get; set; }
 
         /// <summary>
-        /// Risk rule id list.
+        /// List of risk rule IDs
         /// </summary>
         [JsonProperty("RiskRuleIDList")]
         public long?[] RiskRuleIDList{ get; set; }

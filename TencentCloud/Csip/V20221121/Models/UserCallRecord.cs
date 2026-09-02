@@ -25,14 +25,14 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Source IP of the call.
+        /// Source IP of the api call
         /// </summary>
         [JsonProperty("SourceIP")]
         public string SourceIP{ get; set; }
 
         /// <summary>
-        /// Invocation type.
-        /// 0: console invocation.
+        /// Invocation type
+        /// 0: Console invocation
         /// 1:API
         /// </summary>
         [JsonProperty("EventType")]
@@ -45,44 +45,44 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? CallCount{ get; set; }
 
         /// <summary>
-        /// Error code.
+        /// Call error code
         /// 0: Successful
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// First time call time.
+        /// First call time
         /// </summary>
         [JsonProperty("FirstCallTime")]
         public string FirstCallTime{ get; set; }
 
         /// <summary>
-        /// Call time.
+        /// Last call time
         /// </summary>
         [JsonProperty("LastCallTime")]
         public string LastCallTime{ get; set; }
 
         /// <summary>
-        /// Source IP of the call remark.
+        /// Remark on source IP of the api call
         /// </summary>
         [JsonProperty("SourceIPRemark")]
         public string SourceIPRemark{ get; set; }
 
         /// <summary>
-        /// Source IP region of the call.
+        /// Region of the source IP of the api call
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// User/Role name.
+        /// User/role name
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Aggregate date.
+        /// Aggregation date
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppID{ get; set; }
 
         /// <summary>
-        /// Carrier.
+        /// Internet service provider.
         /// </summary>
         [JsonProperty("ISP")]
         public string ISP{ get; set; }

@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public FilterDataObject[] AppIdList{ get; set; }
 
         /// <summary>
-        /// Public network private network enumeration
+        /// Public/private network enumeration
         /// </summary>
         [JsonProperty("PublicPrivateAttr")]
         public FilterDataObject[] PublicPrivateAttr{ get; set; }

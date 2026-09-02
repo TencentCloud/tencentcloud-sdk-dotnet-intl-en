@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// start time of the task
+        /// Task start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -175,7 +175,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// Exception information
+        /// Exception message
         /// </summary>
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? CompleteAssetNumber{ get; set; }
 
         /// <summary>
-        /// risk count
+        /// Risk count
         /// </summary>
         [JsonProperty("RiskCount")]
         public long? RiskCount{ get; set; }

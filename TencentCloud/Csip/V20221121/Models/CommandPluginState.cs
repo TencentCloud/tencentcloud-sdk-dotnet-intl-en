@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+        /// <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
         /// </summary>
         [JsonProperty("InstallStatus")]
         public string InstallStatus{ get; set; }

@@ -61,13 +61,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string By{ get; set; }
 
         /// <summary>
-        /// Cloud account ID.
+        /// Cloud Account ID
         /// </summary>
         [JsonProperty("CloudAccountID")]
         public string CloudAccountID{ get; set; }
 
         /// <summary>
-        /// Cloud service provider.
+        /// cloud service provider
         /// </summary>
         [JsonProperty("Provider")]
         public string Provider{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+        /// <p>Primary key ID, no business significance, used only as a unique key</p>
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string OwnerNickName{ get; set; }
 
         /// <summary>
-        /// <p>Member ID information belonging to main account</p>
+        /// <p>memberId information belonging to main account</p>
         /// </summary>
         [JsonProperty("OwnerMemberID")]
         public string OwnerMemberID{ get; set; }
 
         /// <summary>
-        /// <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+        /// <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
         /// </summary>
         [JsonProperty("CloudType")]
         public long? CloudType{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public bool? IsAccessCloudAudit{ get; set; }
 
         /// <summary>
-        /// <p>Security check for configuration risk required or not</p>
+        /// <p>Whether to configure a security check for risks</p>
         /// </summary>
         [JsonProperty("IsAccessCheck")]
         public bool? IsAccessCheck{ get; set; }
 
         /// <summary>
-        /// <p>Whether configure user behavior management policy</p>
+        /// <p>Whether to configure a user behavior management policy</p>
         /// </summary>
         [JsonProperty("IsAccessUeba")]
         public bool? IsAccessUeba{ get; set; }

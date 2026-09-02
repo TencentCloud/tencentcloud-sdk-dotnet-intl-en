@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Delete ID list</p>
+        /// <p>List of deleted IDs</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }

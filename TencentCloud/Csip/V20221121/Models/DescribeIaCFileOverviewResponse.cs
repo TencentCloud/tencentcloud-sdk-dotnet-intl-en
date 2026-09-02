@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Number of files.</p>
+        /// <p>Number of files</p>
         /// </summary>
         [JsonProperty("TotalFile")]
         public ulong? TotalFile{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Task name
+        /// Task name.
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+        /// 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
         /// </summary>
         [JsonProperty("ScanAssetType")]
         public long? ScanAssetType{ get; set; }
 
         /// <summary>
-        /// Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+        /// Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
         /// </summary>
         [JsonProperty("ScanItem")]
         public string[] ScanItem{ get; set; }
 
         /// <summary>
-        /// Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+        /// 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
         /// </summary>
         [JsonProperty("ScanPlanType")]
         public long? ScanPlanType{ get; set; }
@@ -55,49 +55,49 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// List of assets to scan
+        /// Scanned Asset Information List
         /// </summary>
         [JsonProperty("Assets")]
         public TaskAssetObject[] Assets{ get; set; }
 
         /// <summary>
-        /// Details of a scheduled scan task
+        /// Scan Plan Details
         /// </summary>
         [JsonProperty("ScanPlanContent")]
         public string ScanPlanContent{ get; set; }
 
         /// <summary>
-        /// IP/Domain name/URL
+        /// IP/Domain/URL Array
         /// </summary>
         [JsonProperty("SelfDefiningAssets")]
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
-        /// Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+        /// Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
         /// </summary>
         [JsonProperty("ScanFrom")]
         public string ScanFrom{ get; set; }
 
         /// <summary>
-        /// Advanced settings
+        /// Advanced configuration
         /// </summary>
         [JsonProperty("TaskAdvanceCFG")]
         public TaskAdvanceCFG TaskAdvanceCFG{ get; set; }
 
         /// <summary>
-        /// Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+        /// Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
         /// </summary>
         [JsonProperty("TaskMode")]
         public long? TaskMode{ get; set; }
 
         /// <summary>
-        /// Asset tags
+        /// Asset tag
         /// </summary>
         [JsonProperty("Tags")]
         public AssetTag Tags{ get; set; }
 
         /// <summary>
-        /// Task completed callback webhook url
+        /// webhook URL for task completion callback
         /// </summary>
         [JsonProperty("FinishWebHook")]
         public string FinishWebHook{ get; set; }

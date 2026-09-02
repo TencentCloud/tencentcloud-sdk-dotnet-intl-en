@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// report name
+        /// Report Name
         /// </summary>
         [JsonProperty("TaskLogName")]
         public string TaskLogName{ get; set; }
 
         /// <summary>
-        /// Report ID.
+        /// Report ID
         /// </summary>
         [JsonProperty("TaskLogId")]
         public string TaskLogId{ get; set; }

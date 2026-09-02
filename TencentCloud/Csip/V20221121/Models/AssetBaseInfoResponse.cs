@@ -169,7 +169,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? SystemInstallationPackageNum{ get; set; }
 
         /// <summary>
-        /// remaining protection duration
+        /// Remaining protection duration
         /// </summary>
         [JsonProperty("SurplusProtectDay")]
         public ulong? SurplusProtectDay{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ProtectLevel{ get; set; }
 
         /// <summary>
-        /// protection duration
+        /// Protection duration
         /// </summary>
         [JsonProperty("ProtectedDay")]
         public ulong? ProtectedDay{ get; set; }

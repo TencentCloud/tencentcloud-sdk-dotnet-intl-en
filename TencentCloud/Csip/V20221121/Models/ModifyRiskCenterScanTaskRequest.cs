@@ -79,7 +79,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] SelfDefiningAssets{ get; set; }
 
         /// <summary>
-        /// Advanced configuration.
+        /// Advanced Configuration
         /// </summary>
         [JsonProperty("TaskAdvanceCFG")]
         public TaskAdvanceCFG TaskAdvanceCFG{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TaskMode{ get; set; }
 
         /// <summary>
-        /// Task complete callback webhook url.
+        /// webhook URL for task completion callbacks
         /// </summary>
         [JsonProperty("FinishWebHook")]
         public string FinishWebHook{ get; set; }

@@ -25,9 +25,9 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Filter criteria list: supported filter conditions as follows:
+        /// Filter criteria list. Supported filter conditions are as follows:
         /// CredentialName - Credential name (fuzzy matching)
-        /// CredentialType - Credential type (exact match). Parameter values: access, sts.
+        /// CredentialType - Credential type (exact match). Valid values: access, sts
         /// </summary>
         [JsonProperty("Filter")]
         public Filter Filter{ get; set; }

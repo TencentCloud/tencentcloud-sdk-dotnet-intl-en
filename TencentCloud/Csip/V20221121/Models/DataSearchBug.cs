@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Query status code
+        /// Return to Query Status
         /// </summary>
         [JsonProperty("StateCode")]
         public string StateCode{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public BugInfoDetail[] DataBug{ get; set; }
 
         /// <summary>
-        /// Vulnerability impact assets details
+        /// Vulnerability impact asset details
         /// </summary>
         [JsonProperty("DataAsset")]
         public AssetInfoDetail[] DataAsset{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? CWPFix{ get; set; }
 
         /// <summary>
-        /// Product Support Status
+        /// Product support status
         /// </summary>
         [JsonProperty("DataSupport")]
         public ProductSupport[] DataSupport{ get; set; }

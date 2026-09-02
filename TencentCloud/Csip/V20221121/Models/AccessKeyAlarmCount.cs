@@ -25,37 +25,37 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Access key ID.
+        /// Access key ID
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Access key.
+        /// Access key
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Alarm count.
+        /// Alarm count
         /// </summary>
         [JsonProperty("AlarmCount")]
         public long? AlarmCount{ get; set; }
 
         /// <summary>
-        /// Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+        /// Access key status: `0`: disabled, `1`: enabled, `2`: deleted
         /// </summary>
         [JsonProperty("AccessKeyStatus")]
         public long? AccessKeyStatus{ get; set; }
 
         /// <summary>
-        /// AK creation time.
+        /// AK creation time
         /// </summary>
         [JsonProperty("AccessKeyCreateTime")]
         public string AccessKeyCreateTime{ get; set; }
 
         /// <summary>
-        /// AK last usage time. returns "-" if never used.
+        /// Last AK usage time. If it has never been used, "-" is returned.
         /// </summary>
         [JsonProperty("LastAccessTime")]
         public string LastAccessTime{ get; set; }

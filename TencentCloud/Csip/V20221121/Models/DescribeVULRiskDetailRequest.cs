@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] MemberId{ get; set; }
 
         /// <summary>
-        /// Risk id.
+        /// Risk id
         /// </summary>
         [JsonProperty("RiskId")]
         public string RiskId{ get; set; }
