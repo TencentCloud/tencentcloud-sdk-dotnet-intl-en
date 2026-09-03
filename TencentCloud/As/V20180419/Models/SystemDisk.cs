@@ -25,25 +25,28 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-        /// <Li>LOCAL_BASIC: local hard disk.</li>.
-        /// <Li>LOCAL_SSD: local ssd.</li>.
-        /// <Li>CLOUD_BASIC: general cloud disk.</li>.
-        /// <Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-        /// <Li>CLOUD_SSD: cloud ssd</li>.
-        /// <Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-        /// <Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-        /// <Li>CLOUD_TSSD: ultra ssd.</li>.
-        /// <li>Default value: CLOUD_PREMIUM.</li>
+        /// <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// System disk size, in GB. Default value: 50.
+        /// <p>System disk size (GB). Default value: 50</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
+        /// <summary>
+        /// <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
 
 
         /// <summary>
@@ -53,6 +56,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         }
     }
 }

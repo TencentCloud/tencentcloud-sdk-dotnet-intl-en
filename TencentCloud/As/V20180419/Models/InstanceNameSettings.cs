@@ -41,8 +41,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceNameStyle{ get; set; }
 
         /// <summary>
-        /// CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name suffix of a CVM instance. The suffix length must be 1 to 105 characters, and the total length of the InstanceName value plus the suffix cannot exceed 107 characters.
         /// </summary>
         [JsonProperty("InstanceNameSuffix")]
         public string InstanceNameSuffix{ get; set; }

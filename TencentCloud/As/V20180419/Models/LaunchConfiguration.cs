@@ -25,209 +25,208 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Project ID of the instance.
+        /// <p>Project ID of the instance.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Launch configuration ID
+        /// <p>Launch configuration ID.</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// Launch configuration name.
+        /// <p>Startup configuration name.</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationName")]
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// Instance model.
+        /// <p>Instance model.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Information of the instance's system disk configuration.
+        /// <p>Instance system disk configuration information.</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// Information of the instance's data disk configuration.
+        /// <p>Instance data disk configuration information.</p>
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
 
         /// <summary>
-        /// Instance login settings.
+        /// <p>Instance login settings.</p>
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LimitedLoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Information of the public network bandwidth configuration.
+        /// <p>Public network bandwidth-related information settings.</p>
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Security group of the instance.
+        /// <p>Security group to which an instance belongs.</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Auto scaling group associated with the launch configuration.
+        /// <p>The scaling group bound to the launch configuration.</p>
         /// </summary>
         [JsonProperty("AutoScalingGroupAbstractSet")]
         public AutoScalingGroupAbstract[] AutoScalingGroupAbstractSet{ get; set; }
 
         /// <summary>
-        /// Custom data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Custom data.</p>
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
         /// <summary>
-        /// Specifies the startup configuration creation time. uses UTC standard time.
+        /// <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Conditions of enhancement services for the instance and their settings.
+        /// <p>Enhanced services enabling situation of the instance and its settings.</p>
         /// </summary>
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }
 
         /// <summary>
-        /// Image ID.
+        /// <p>Image ID.</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+        /// <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
         /// </summary>
         [JsonProperty("LaunchConfigurationStatus")]
         public string LaunchConfigurationStatus{ get; set; }
 
         /// <summary>
-        /// Instance billing type. valid values:.
-        /// <Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-        /// <Li>SPOTPAID: spot payment</li>.
-        /// <Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-        /// <Li>CDCPAID: dedicated cluster payment</li>.
+        /// <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
         /// <summary>
-        /// Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
 
         /// <summary>
-        /// List of instance models.
+        /// <p>Instance model list.</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+        /// <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+        /// <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Version
+        /// <p>Version number.</p>
         /// </summary>
         [JsonProperty("VersionNumber")]
         public long? VersionNumber{ get; set; }
 
         /// <summary>
-        /// Last update time is in standard UTC time.
+        /// <p>Update time in standard <code>UTC</code> format.</p>
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+        /// <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
         /// </summary>
         [JsonProperty("CamRoleName")]
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// Value of InstanceTypesCheckPolicy upon the last operation.
+        /// <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
         /// </summary>
         [JsonProperty("LastOperationInstanceTypesCheckPolicy")]
         public string LastOperationInstanceTypesCheckPolicy{ get; set; }
 
         /// <summary>
-        /// CVM hostname settings.
+        /// <p>Related settings for the CVM host name (HostName).</p>
         /// </summary>
         [JsonProperty("HostNameSettings")]
         public HostNameSettings HostNameSettings{ get; set; }
 
         /// <summary>
-        /// Settings of CVM instance names
+        /// <p>Related settings for the cloud server instance name (InstanceName).</p>
         /// </summary>
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }
 
         /// <summary>
-        /// Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+        /// <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+        /// <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
         /// </summary>
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
 
         /// <summary>
-        /// HPC ID<br>
-        /// Note: This field is default to empty
+        /// <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }
 
         /// <summary>
-        /// IPv6 public network bandwidth configuration.
+        /// <p>IPv6 public network bandwidth-related information settings.</p>
         /// </summary>
         [JsonProperty("IPv6InternetAccessible")]
         public IPv6InternetAccessible IPv6InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Placement group ID, supporting specification of only one.
+        /// <p>Placement Group id. Only one can be specified.</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// Image family name.
+        /// <p>Image family name.</p>
         /// </summary>
         [JsonProperty("ImageFamily")]
         public string ImageFamily{ get; set; }
 
         /// <summary>
-        /// CDC ID.
+        /// <p>Local dedicated cluster ID.</p>
         /// </summary>
         [JsonProperty("DedicatedClusterId")]
         public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>ENI configuration of the launch configuration.</p>
+        /// </summary>
+        [JsonProperty("NetworkInterfaces")]
+        public NetworkInterface[] NetworkInterfaces{ get; set; }
 
 
         /// <summary>
@@ -268,6 +267,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
             this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+            this.SetParamArrayObj(map, prefix + "NetworkInterfaces.", this.NetworkInterfaces);
         }
     }
 }

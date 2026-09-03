@@ -15,44 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Tione.V20211111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResetUserPasswordRequest : AbstractModel
+    public class LocalDisk : AbstractModel
     {
         
         /// <summary>
-        /// Username.
-        /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
-
-        /// <summary>
-        /// Instance ID.
+        /// Node ID.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Host IP, IP range ending with % to denote permission for all IPs in the range
+        /// Local path.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
-
-        /// <summary>
-        /// New password, required length 8-32, include at least two of English, digits and symbols.
-        /// </summary>
-        [JsonProperty("Password")]
-        public string Password{ get; set; }
-
-        /// <summary>
-        /// Encryption password
-        /// </summary>
-        [JsonProperty("EncryptedPassword")]
-        public string EncryptedPassword{ get; set; }
+        [JsonProperty("LocalPath")]
+        public string LocalPath{ get; set; }
 
 
         /// <summary>
@@ -60,11 +44,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
+            this.SetParamSimple(map, prefix + "LocalPath", this.LocalPath);
         }
     }
 }

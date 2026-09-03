@@ -28,7 +28,7 @@ namespace TencentCloud.As.V20180419
 
        private const string endpoint = "as.intl.tencentcloudapi.com";
        private const string version = "2018-04-19";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -221,11 +221,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This interface (CreateLaunchConfiguration) is used to create new launch configuration.
+        /// This API is used to create a new launch configuration.
         /// 
-        /// * To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.
+        /// * Launch configuration can be partially modified through [ModifyLaunchConfigurationAttributes](https://www.tencentcloud.com/document/api/377/31298?from_cn_redirect=1). If a new launch configuration is needed, it is advisable to create a new one.
         /// 
-        /// By default, 50 launch configurations can be created per region. For details, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+        /// * A maximum of 50 launch configurations can be created per region by default. For details, see usage limits (https://www.tencentcloud.com/document/product/377/3120?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
         /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>
@@ -235,11 +235,11 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// This interface (CreateLaunchConfiguration) is used to create new launch configuration.
+        /// This API is used to create a new launch configuration.
         /// 
-        /// * To modify a launch configuration, use [ModifyLaunchConfigurationAttributes](https://intl.cloud.tencent.com/document/api/377/31298?from_cn_redirect=1) to partially modify fields. If needed, create a new launch configuration.
+        /// * Launch configuration can be partially modified through [ModifyLaunchConfigurationAttributes](https://www.tencentcloud.com/document/api/377/31298?from_cn_redirect=1). If a new launch configuration is needed, it is advisable to create a new one.
         /// 
-        /// By default, 50 launch configurations can be created per region. For details, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+        /// * A maximum of 50 launch configurations can be created per region by default. For details, see usage limits (https://www.tencentcloud.com/document/product/377/3120?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateLaunchConfigurationRequest"/></param>
         /// <returns><see cref="CreateLaunchConfigurationResponse"/></returns>

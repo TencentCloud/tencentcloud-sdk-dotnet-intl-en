@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1340";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -197,6 +197,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the DB engine version list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDBEnginesResponse"/></returns>
+        public Task<DescribeDBEnginesResponse> DescribeDBEngines(DescribeDBEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBEnginesResponse>(req, "DescribeDBEngines");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the DB engine version list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBEnginesRequest"/></param>
+        /// <returns><see cref="DescribeDBEnginesResponse"/></returns>
+        public DescribeDBEnginesResponse DescribeDBEnginesSync(DescribeDBEnginesRequest req)
+        {
+            return InternalRequestAsync<DescribeDBEnginesResponse>(req, "DescribeDBEngines")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -932,27 +953,6 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to reset user password.
-        /// </summary>
-        /// <param name="req"><see cref="ResetUserPasswordRequest"/></param>
-        /// <returns><see cref="ResetUserPasswordResponse"/></returns>
-        public Task<ResetUserPasswordResponse> ResetUserPassword(ResetUserPasswordRequest req)
-        {
-            return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword");
-        }
-
-        /// <summary>
-        /// This API is used to reset user password.
-        /// </summary>
-        /// <param name="req"><see cref="ResetUserPasswordRequest"/></param>
-        /// <returns><see cref="ResetUserPasswordResponse"/></returns>
-        public ResetUserPasswordResponse ResetUserPasswordSync(ResetUserPasswordRequest req)
-        {
-            return InternalRequestAsync<ResetUserPasswordResponse>(req, "ResetUserPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

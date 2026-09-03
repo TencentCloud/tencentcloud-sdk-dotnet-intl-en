@@ -28,7 +28,7 @@ namespace TencentCloud.Tione.V20211111
 
        private const string endpoint = "tione.intl.tencentcloudapi.com";
        private const string version = "2021-11-11";
-       private const string sdkVersion = "SDK_NET_3.0.1211";
+       private const string sdkVersion = "SDK_NET_3.0.1388";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Tione.V20211111
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to create a model training task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingTaskRequest"/></param>
+        /// <returns><see cref="CreateTrainingTaskResponse"/></returns>
+        public Task<CreateTrainingTaskResponse> CreateTrainingTask(CreateTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingTaskResponse>(req, "CreateTrainingTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a model training task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateTrainingTaskRequest"/></param>
+        /// <returns><see cref="CreateTrainingTaskResponse"/></returns>
+        public CreateTrainingTaskResponse CreateTrainingTaskSync(CreateTrainingTaskRequest req)
+        {
+            return InternalRequestAsync<CreateTrainingTaskResponse>(req, "CreateTrainingTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>

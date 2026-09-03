@@ -25,7 +25,7 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+        /// <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }

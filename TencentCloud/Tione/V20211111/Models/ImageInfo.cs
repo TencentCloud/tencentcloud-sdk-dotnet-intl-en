@@ -66,6 +66,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("SupportDataPipeline")]
         public bool? SupportDataPipeline{ get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ImageSecret")]
+        public ImageSecret ImageSecret{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
             this.SetParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
+            this.SetParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
         }
     }
 }

@@ -26,28 +26,24 @@ namespace TencentCloud.As.V20180419.Models
         
         /// <summary>
         /// Network billing type. Valid values: <li>BANDWIDTH_PREPAID: prepaid by bandwidth;</li> <li>TRAFFIC_POSTPAID_BY_HOUR: postpaid by traffic per hour;</li> <li>BANDWIDTH_POSTPAID_BY_HOUR: postpaid by bandwidth per hour;</li> <li>BANDWIDTH_PACKAGE: bandwidth package users.</li> Default value: TRAFFIC_POSTPAID_BY_HOUR.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// The maximum outbound bandwidth in Mbps of the public network. The default value is 0 Mbps. The upper limit of bandwidth varies by model. For more information, see [Purchase Network Bandwidth](https://intl.cloud.tencent.com/document/product/213/509?from_cn_redirect=1).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public network outbound bandwidth cap. Unit: Mbps. Default value: 0 Mbps. Bandwidth cap range varies by model. For specific limitations, see [Purchase Network Bandwidth](https://www.tencentcloud.com/document/product/213/509?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public ulong? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li> <li>FALSE: Do not allocate a public IP address.</li> When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature based on your needs. By default, this feature is enabled. When the public network bandwidth is 0, public IP address assignment is not allowed.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to assign a public IP address. Valid values: <li>TRUE: Allocate a public IP address.</li><li>FALSE: Do not allocate a public IP address.</li>When the public network bandwidth is greater than 0 Mbps, you can choose whether to enable this feature. By default, a public IP address is assigned. When the public network bandwidth is 0, assigning a public IP address is not allowed.
         /// </summary>
         [JsonProperty("PublicIpAssigned")]
         public bool? PublicIpAssigned{ get; set; }
 
         /// <summary>
-        /// Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://intl.cloud.tencent.com/document/api/215/19209?from_cn_redirect=1) API.
-        /// Note: this field may return null, indicating that no valid value was found.
+        /// Bandwidth package ID, which can be obtained from the `BandwidthPackageId` in the return value from the [DescribeBandwidthPackages](https://www.tencentcloud.com/document/api/215/19209?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }

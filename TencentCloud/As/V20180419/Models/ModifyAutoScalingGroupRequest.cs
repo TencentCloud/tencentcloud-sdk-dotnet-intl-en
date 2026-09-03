@@ -59,7 +59,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// <P>Maximum number of instances. value range: [0,2000]. to meet the requirement, the maximum value must be equal to or greater than the expected value, and the expected value must be equal to or greater than the minimum value.</p>.
+        /// <p>Maximum instance count, value range: [0, 2000]. The maximum value must be greater than or equal to the expected value, and the expected value must be greater than or equal to the minimum value.</p><p>Value range: [0, 2000]</p>
         /// </summary>
         [JsonProperty("MaxSize")]
         public ulong? MaxSize{ get; set; }

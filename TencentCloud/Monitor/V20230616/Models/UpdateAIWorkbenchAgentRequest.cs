@@ -1,0 +1,120 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Monitor.V20230616.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class UpdateAIWorkbenchAgentRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>Agent ID</p>
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
+        /// <summary>
+        /// <p>Agent name</p>
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// <p>Agent description</p>
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// <p>Agent Category.</p>
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
+
+        /// <summary>
+        /// <p>Agent Tag.</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>Agent prompt</p>
+        /// </summary>
+        [JsonProperty("Instruction")]
+        public InstructionConfig Instruction{ get; set; }
+
+        /// <summary>
+        /// <p>List of associated skill IDs.</p>
+        /// </summary>
+        [JsonProperty("SkillIds")]
+        public string[] SkillIds{ get; set; }
+
+        /// <summary>
+        /// <p>Source</p>
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// <p>Status.</p>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// <p>ID of the associated resource map</p>
+        /// </summary>
+        [JsonProperty("ResourceMapId")]
+        public string ResourceMapId{ get; set; }
+
+        /// <summary>
+        /// <p>Associated mcp</p>
+        /// </summary>
+        [JsonProperty("MCPIds")]
+        public string[] MCPIds{ get; set; }
+
+        /// <summary>
+        /// <p>Environment variables required by the agent at runtime</p>
+        /// </summary>
+        [JsonProperty("EnvVars")]
+        public EnvVar[] EnvVars{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "Instruction.", this.Instruction);
+            this.SetParamArraySimple(map, prefix + "SkillIds.", this.SkillIds);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ResourceMapId", this.ResourceMapId);
+            this.SetParamArraySimple(map, prefix + "MCPIds.", this.MCPIds);
+            this.SetParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+        }
+    }
+}
+

@@ -61,7 +61,8 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo CosPathInfo{ get; set; }
 
         /// <summary>
-        /// GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+        /// GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GooseFSx")]
         public GooseFSx GooseFSx{ get; set; }

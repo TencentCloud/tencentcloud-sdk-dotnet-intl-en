@@ -25,53 +25,52 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// Launch configuration ID. obtain in the following ways:.
-        /// <li>Queries the launch configuration ID by logging in to the [console](https://console.cloud.tencent.com/autoscaling/config).</li>.
-        /// <li>Get the launch configuration ID by calling the api [DescribeLaunchConfigurations](https://intl.cloud.tencent.com/document/api/377/20445?from_cn_redirect=1) and retrieving the LaunchConfigurationId from the returned information.</li>.
+        /// <p>Launch configuration ID. Obtain it in the following ways:</p><li>Log in to the [console](https://console.cloud.tencent.com/autoscaling/config) and query the launch configuration ID.</li><li>Call the API [DescribeLaunchConfigurations](https://www.tencentcloud.com/document/api/377/20445?from_cn_redirect=1) and obtain the launch configuration ID from the `LaunchConfigurationId` in the returned information.</li>
         /// </summary>
         [JsonProperty("LaunchConfigurationId")]
         public string LaunchConfigurationId{ get; set; }
 
         /// <summary>
-        /// Whether to clear data disk information. This parameter is optional and the default value is `false`.
-        /// Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+        /// <p>Whether to clear data disk information. This parameter is optional and defaults to false.<br>Enter true to clear "data disk" information. After clearing, newly created CVMs will not contain any data disk.</p>
         /// </summary>
         [JsonProperty("ClearDataDisks")]
         public bool? ClearDataDisks{ get; set; }
 
         /// <summary>
-        /// Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
-        /// Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+        /// <p>Whether to clear the MachineName-related settings of the CVM. Optional. It is false by default.<br>Set to true to clear the host name settings. After clearing, newly created CVMs will not have a host name configured.</p>
         /// </summary>
         [JsonProperty("ClearHostNameSettings")]
         public bool? ClearHostNameSettings{ get; set; }
 
         /// <summary>
-        /// Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
-        /// Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the as-{{AutoScalingGroupName}} format.
+        /// <p>Whether to clear the CVM instance name related settings. This parameter is optional and is false by default.<br>If set to true, the host name setting information is cleared. After clearing, newly created CVMs will be configured based on "as-{{ scaling group AutoScalingGroupName }}".</p>
         /// </summary>
         [JsonProperty("ClearInstanceNameSettings")]
         public bool? ClearInstanceNameSettings{ get; set; }
 
         /// <summary>
-        /// Whether to clear placement group information. This parameter is optional. Default value: `false`.
-        /// `True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+        /// <p>Whether to clear the placement group information. This parameter is optional and defaults to false.<br>Set it to true to clear the placement group information. After clearing, newly created hosts will not be assigned to any placement group.</p>
         /// </summary>
         [JsonProperty("ClearDisasterRecoverGroupIds")]
         public bool? ClearDisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// Whether to clear the instance tag list. This parameter is optional, and its default value is false.
-        /// If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.
+        /// <p>Whether to clear the instance tag list. This parameter is optional and is false by default.<br>If true is filled in, it indicates that the instance tag list should be cleared. After the list is cleared, the CVMs created based on this will not be bound to the tags in the list.</p>
         /// </summary>
         [JsonProperty("ClearInstanceTags")]
         public bool? ClearInstanceTags{ get; set; }
 
         /// <summary>
-        /// Whether to clear metadata, optional, defaults to false. Setting it to true will clear metadata, the CVMs created based on this will not be associated with custom metadata.
+        /// <p>Whether to clear MetaData. This parameter is optional and defaults to false. Enter true to clear MetaData. After clearing, newly created CVMs will not associate custom Metadata.</p>
         /// </summary>
         [JsonProperty("ClearMetadata")]
         public bool? ClearMetadata{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to clear the NetworkInterfaces in the launch configuration. If the value is TRUE, clear it; if not passed or FALSE, this field will not be processed.</p>
+        /// </summary>
+        [JsonProperty("ClearNetworkInterfaces")]
+        public bool? ClearNetworkInterfaces{ get; set; }
 
 
         /// <summary>
@@ -86,6 +85,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
             this.SetParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
             this.SetParamSimple(map, prefix + "ClearMetadata", this.ClearMetadata);
+            this.SetParamSimple(map, prefix + "ClearNetworkInterfaces", this.ClearNetworkInterfaces);
         }
     }
 }

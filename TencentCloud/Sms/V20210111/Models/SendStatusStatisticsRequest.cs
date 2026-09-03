@@ -25,14 +25,14 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+        /// Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
         /// End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-        /// Note: `EndTime` must be after `BeginTime`.
+        /// Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

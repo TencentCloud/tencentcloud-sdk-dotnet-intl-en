@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1211</VersionPrefix>
+    <VersionPrefix>3.0.1388</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,35 +51,55 @@
     <Compile Include="V20211111\Models\AuthToken.cs" />
     <Compile Include="V20211111\Models\AuthTokenBase.cs" />
     <Compile Include="V20211111\Models\AuthTokenLimit.cs" />
+    <Compile Include="V20211111\Models\CBSConfig.cs" />
     <Compile Include="V20211111\Models\CFSConfig.cs" />
+    <Compile Include="V20211111\Models\CFSTurbo.cs" />
+    <Compile Include="V20211111\Models\CodeRepoConfig.cs" />
     <Compile Include="V20211111\Models\Container.cs" />
     <Compile Include="V20211111\Models\ContainerStatus.cs" />
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
+    <Compile Include="V20211111\Models\CreateTrainingTaskRequest.cs" />
+    <Compile Include="V20211111\Models\CreateTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\CronScaleJob.cs" />
     <Compile Include="V20211111\Models\CrossTenantENIInfo.cs" />
+    <Compile Include="V20211111\Models\DataConfig.cs" />
+    <Compile Include="V20211111\Models\DataSetConfig.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceGroupsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeModelServiceGroupsResponse.cs" />
+    <Compile Include="V20211111\Models\EncodedStartCmdInfo.cs" />
     <Compile Include="V20211111\Models\EnvVar.cs" />
     <Compile Include="V20211111\Models\ExecAction.cs" />
+    <Compile Include="V20211111\Models\ExposeNetworkConfig.cs" />
+    <Compile Include="V20211111\Models\ExposePortConfig.cs" />
     <Compile Include="V20211111\Models\Filter.cs" />
+    <Compile Include="V20211111\Models\GooseFS.cs" />
     <Compile Include="V20211111\Models\GooseFSx.cs" />
     <Compile Include="V20211111\Models\GpuDetail.cs" />
+    <Compile Include="V20211111\Models\HDFSConfig.cs" />
     <Compile Include="V20211111\Models\HTTPGetAction.cs" />
     <Compile Include="V20211111\Models\HealthProbe.cs" />
     <Compile Include="V20211111\Models\HorizontalPodAutoscaler.cs" />
+    <Compile Include="V20211111\Models\HostPath.cs" />
     <Compile Include="V20211111\Models\ImageInfo.cs" />
+    <Compile Include="V20211111\Models\ImageSecret.cs" />
     <Compile Include="V20211111\Models\InferCodeInfo.cs" />
+    <Compile Include="V20211111\Models\LocalDisk.cs" />
     <Compile Include="V20211111\Models\LogConfig.cs" />
     <Compile Include="V20211111\Models\ModelInfo.cs" />
     <Compile Include="V20211111\Models\NumOrPercent.cs" />
     <Compile Include="V20211111\Models\Option.cs" />
     <Compile Include="V20211111\Models\Pod.cs" />
+    <Compile Include="V20211111\Models\PodSSHInfo.cs" />
     <Compile Include="V20211111\Models\Probe.cs" />
     <Compile Include="V20211111\Models\ProbeAction.cs" />
     <Compile Include="V20211111\Models\PublicDataSourceFS.cs" />
+    <Compile Include="V20211111\Models\RDMAConfig.cs" />
+    <Compile Include="V20211111\Models\ResourceConfigInfo.cs" />
     <Compile Include="V20211111\Models\ResourceGroupInfo.cs" />
     <Compile Include="V20211111\Models\ResourceInfo.cs" />
+    <Compile Include="V20211111\Models\ResourceSupplyAttribute.cs" />
     <Compile Include="V20211111\Models\RollingUpdate.cs" />
+    <Compile Include="V20211111\Models\SSHConfig.cs" />
     <Compile Include="V20211111\Models\ScheduledAction.cs" />
     <Compile Include="V20211111\Models\SchedulingPolicy.cs" />
     <Compile Include="V20211111\Models\Service.cs" />
@@ -87,10 +107,12 @@
     <Compile Include="V20211111\Models\ServiceGroup.cs" />
     <Compile Include="V20211111\Models\ServiceInfo.cs" />
     <Compile Include="V20211111\Models\ServiceLimit.cs" />
+    <Compile Include="V20211111\Models\StartCmdInfo.cs" />
     <Compile Include="V20211111\Models\StatefulSetCondition.cs" />
     <Compile Include="V20211111\Models\TCPSocketAction.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />
     <Compile Include="V20211111\Models\TagFilter.cs" />
+    <Compile Include="V20211111\Models\TrainToolConfig.cs" />
     <Compile Include="V20211111\Models\VolumeMount.cs" />
     <Compile Include="V20211111\Models\WorkloadStatus.cs" />
   </ItemGroup>
