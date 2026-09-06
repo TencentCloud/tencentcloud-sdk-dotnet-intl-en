@@ -25,43 +25,37 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <p>Node IP information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// <p>Node types, such as sqlengine, tdstore, mc</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Unique identifier of the node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// <p>Node port information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// <p>Availability zone of the node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>Machine ip of the node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

@@ -21,9 +21,15 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateDBInstancesRequest : AbstractModel
+    public class CreateStandbyDBInstanceRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>Primary instance id</p>
+        /// </summary>
+        [JsonProperty("PrimaryInstanceId")]
+        public string PrimaryInstanceId{ get; set; }
+
         /// <summary>
         /// <p>Creating an Instance Region</p>
         /// </summary>
@@ -67,22 +73,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? Replications{ get; set; }
 
         /// <summary>
-        /// <p>Instance count. Maximum is 10.</p>
-        /// </summary>
-        [JsonProperty("InstanceCount")]
-        public long? InstanceCount{ get; set; }
-
-        /// <summary>
         /// <p>Number of replicas</p>
         /// </summary>
         [JsonProperty("FullReplications")]
         public long? FullReplications{ get; set; }
-
-        /// <summary>
-        /// <p>Create an instance version, using the current latest version by default</p>
-        /// </summary>
-        [JsonProperty("CreateVersion")]
-        public string CreateVersion{ get; set; }
 
         /// <summary>
         /// <p>Instance name. The required length is 1-60. It can contain Chinese characters, English case, digits, hyphens (-), and underscores (_).</p>
@@ -91,19 +85,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// <p>Tag key-value pair array</p>
-        /// </summary>
-        [JsonProperty("ResourceTags")]
-        public ResourceTag[] ResourceTags{ get; set; }
-
-        /// <summary>
-        /// <p>Initialize instance parameters. For example:<br>character_set_server (character set, defaults to utf8),<br>lower_case_table_names (table name case sensitivity, 0 - sensitive; 1 - insensitive, default is 0)</p>
-        /// </summary>
-        [JsonProperty("InitParams")]
-        public InstanceParam[] InitParams{ get; set; }
-
-        /// <summary>
-        /// <p>Time unit, m: month</p>
+        /// <p>Time unit. y: year, m: month, d: day</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
@@ -133,12 +115,6 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// <p>Number of control nodes</p>
-        /// </summary>
-        [JsonProperty("MCNum")]
-        public long? MCNum{ get; set; }
-
-        /// <summary>
         /// <p>Custom port</p>
         /// </summary>
         [JsonProperty("Vport")]
@@ -163,7 +139,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
+        /// <p>Instance Architecture Type. "hybrid" is supported since v19.0.0</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
@@ -175,46 +151,22 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// <p>AZ mode. 1: Single AZ, 2: Multi-AZ non-primary AZ, 3: Multi-AZ primary AZ</p>
+        /// <p>Tag key-value pair array</p>
         /// </summary>
-        [JsonProperty("AZMode")]
-        public long? AZMode{ get; set; }
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Instance mode</p>
+        /// <p>Region of the primary instance</p>
+        /// </summary>
+        [JsonProperty("PrimaryInstanceRegion")]
+        public string PrimaryInstanceRegion{ get; set; }
+
+        /// <summary>
+        /// <p>Instance mode, normal: standard type; enhanced: enhanced</p>
         /// </summary>
         [JsonProperty("InstanceMode")]
         public string InstanceMode{ get; set; }
-
-        /// <summary>
-        /// <p>Parameter template id</p>
-        /// </summary>
-        [JsonProperty("TemplateId")]
-        public string TemplateId{ get; set; }
-
-        /// <summary>
-        /// <p>Compatible mode, enum:MySQL,HBase</p>
-        /// </summary>
-        [JsonProperty("SQLMode")]
-        public string SQLMode{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("AutoScaleConfig")]
-        public AutoScalingConfig AutoScaleConfig{ get; set; }
-
-        /// <summary>
-        /// <p>Security group binding list</p>
-        /// </summary>
-        [JsonProperty("SecurityGroupIds")]
-        public string[] SecurityGroupIds{ get; set; }
-
-        /// <summary>
-        /// <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
-        /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
 
         /// <summary>
         /// <p>dbaadmin password</p>
@@ -223,16 +175,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+        /// <p>Bind the security group id list</p>
         /// </summary>
-        [JsonProperty("EncryptionEnable")]
-        public long? EncryptionEnable{ get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonProperty("AutoScaleConfigs")]
-        public AutoScalingConfig[] AutoScaleConfigs{ get; set; }
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
 
 
         /// <summary>
@@ -240,6 +186,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "PrimaryInstanceId", this.PrimaryInstanceId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -247,34 +194,24 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "Disk", this.Disk);
             this.SetParamSimple(map, prefix + "StorageNodeNum", this.StorageNodeNum);
             this.SetParamSimple(map, prefix + "Replications", this.Replications);
-            this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "FullReplications", this.FullReplications);
-            this.SetParamSimple(map, prefix + "CreateVersion", this.CreateVersion);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
-            this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "StorageNodeCpu", this.StorageNodeCpu);
             this.SetParamSimple(map, prefix + "StorageNodeMem", this.StorageNodeMem);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamSimple(map, prefix + "MCNum", this.MCNum);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
-            this.SetParamSimple(map, prefix + "AZMode", this.AZMode);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "PrimaryInstanceRegion", this.PrimaryInstanceRegion);
             this.SetParamSimple(map, prefix + "InstanceMode", this.InstanceMode);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "SQLMode", this.SQLMode);
-            this.SetParamObj(map, prefix + "AutoScaleConfig.", this.AutoScaleConfig);
-            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "Password", this.Password);
-            this.SetParamSimple(map, prefix + "EncryptionEnable", this.EncryptionEnable);
-            this.SetParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

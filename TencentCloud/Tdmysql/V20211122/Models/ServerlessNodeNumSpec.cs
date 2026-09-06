@@ -21,20 +21,20 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class ServerlessNodeNumSpec : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// 
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
+        [JsonProperty("MinNodeNum")]
+        public long? MinNodeNum{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
+        /// 
         /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("MaxNodeNum")]
+        public long? MaxNodeNum{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "MinNodeNum", this.MinNodeNum);
+            this.SetParamSimple(map, prefix + "MaxNodeNum", this.MaxNodeNum);
         }
     }
 }

@@ -38,15 +38,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>Creating an Instance Version</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CreateVersion")]
         public string CreateVersion{ get; set; }
 
         /// <summary>
-        /// <p>Initialize instance parameter</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("InitParams")]
         public InstanceParam[] InitParams{ get; set; }
@@ -70,15 +68,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? StorageNodeNum{ get; set; }
 
         /// <summary>
-        /// <p>Instance tag information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -146,62 +142,54 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// <p>CPU cores of the control node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MCCpu")]
         [System.Obsolete]
         public long? MCCpu{ get; set; }
 
         /// <summary>
-        /// <p>CPU size of the control node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MCMem")]
         [System.Obsolete]
         public long? MCMem{ get; set; }
 
         /// <summary>
-        /// <p>CPU cores of the computing node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ComputerNodeCpu")]
         [System.Obsolete]
         public long? ComputerNodeCpu{ get; set; }
 
         /// <summary>
-        /// <p>Compute node memory size</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ComputerNodeMem")]
         [System.Obsolete]
         public long? ComputerNodeMem{ get; set; }
 
         /// <summary>
-        /// <p>CPU cores of the storage node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageNodeCpu")]
         public long? StorageNodeCpu{ get; set; }
 
         /// <summary>
-        /// <p>Storage node memory size</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageNodeMem")]
         public long? StorageNodeMem{ get; set; }
 
         /// <summary>
-        /// <p>Number of control nodes</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MCNum")]
         [System.Obsolete]
         public long? MCNum{ get; set; }
 
         /// <summary>
-        /// <p>Renewal flag</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -213,57 +201,49 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// <p>User tag, inner: internal user; external: external user</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AccountTag")]
         public string AccountTag{ get; set; }
 
         /// <summary>
-        /// <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
         /// <p>&quot;0000-00-00 00:00:00&quot;</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DestroyedAt")]
         public string DestroyedAt{ get; set; }
 
         /// <summary>
         /// <p>&quot;0000-00-00 00:00:00&quot;</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireAt")]
         public string ExpireAt{ get; set; }
 
         /// <summary>
         /// <p>&quot;0000-00-00 00:00:00&quot;</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolatedAt")]
         public string IsolatedAt{ get; set; }
 
         /// <summary>
         /// <p>&quot;0000-00-00 00:00:00&quot;</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolatedFrom")]
         public string IsolatedFrom{ get; set; }
 
         /// <summary>
         /// <p>1</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Replications")]
         public long? Replications{ get; set; }
@@ -275,36 +255,31 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? FullReplications{ get; set; }
 
         /// <summary>
-        /// <p>Account information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// <p>Account information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
-        /// <p>Account information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// <p>AZ information</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// <p>Instance node</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Nodes")]
         public InstanceNode[] Nodes{ get; set; }
@@ -337,22 +312,19 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? CdcNodeNum{ get; set; }
 
         /// <summary>
-        /// <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AZMode")]
         public long? AZMode{ get; set; }
 
         /// <summary>
-        /// <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StandbyFlag")]
         public long? StandbyFlag{ get; set; }
 
         /// <summary>
-        /// <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StandbySecondaryNum")]
         public long? StandbySecondaryNum{ get; set; }
@@ -437,10 +409,16 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public AnalysisRelationInfo[] AnalysisRelationInfos{ get; set; }
 
         /// <summary>
-        /// <p>Analysis engine instance info</p>
+        /// <p>Analysis engine instance information</p>
         /// </summary>
         [JsonProperty("AnalysisInstanceInfo")]
         public AnalysisInstanceInfo AnalysisInstanceInfo{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AutoScaleConfigs")]
+        public AutoScalingConfig[] AutoScaleConfigs{ get; set; }
 
 
         /// <summary>
@@ -511,6 +489,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "AnalysisMode", this.AnalysisMode);
             this.SetParamArrayObj(map, prefix + "AnalysisRelationInfos.", this.AnalysisRelationInfos);
             this.SetParamObj(map, prefix + "AnalysisInstanceInfo.", this.AnalysisInstanceInfo);
+            this.SetParamArrayObj(map, prefix + "AutoScaleConfigs.", this.AutoScaleConfigs);
         }
     }
 }

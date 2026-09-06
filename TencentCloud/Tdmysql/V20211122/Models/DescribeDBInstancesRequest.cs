@@ -43,10 +43,22 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+        /// <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
         /// </summary>
         [JsonProperty("EngineType")]
         public string EngineType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("OrderDirection")]
+        public string OrderDirection{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }
     }
 }

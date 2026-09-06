@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class DeleteVoiceRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// <p>Voice ID.</p>
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
+        [JsonProperty("VoiceId")]
+        public string VoiceId{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
+        /// <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether the default application or a newly created application.</p>
         /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("SubAppId")]
+        public string SubAppId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

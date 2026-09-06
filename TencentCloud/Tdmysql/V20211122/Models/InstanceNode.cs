@@ -25,183 +25,157 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// Primary key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Instance ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
         /// Node Id
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// Instance Ip
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Eni IP of the instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// Instance Port
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Instance SpecCode
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// Instance NodeName
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Instance Cpu
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Instance memory
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Instance Disk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Disk")]
         public long? Disk{ get; set; }
 
         /// <summary>
-        /// Instance type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Instance status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// instance version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance LocalDNS
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("LocalDNS")]
         public string LocalDNS{ get; set; }
 
         /// <summary>
-        /// Instance Region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance log disk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("LogDisk")]
         public long? LogDisk{ get; set; }
 
         /// <summary>
-        /// Instance data disk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DataDisk")]
         public long? DataDisk{ get; set; }
 
         /// <summary>
-        /// Zone ID of the instance
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ZoneID")]
         public string ZoneID{ get; set; }
 
         /// <summary>
-        /// Instance SpecName
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// Instance Replicas
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// Instance Shards
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Shards")]
         public long? Shards{ get; set; }
 
         /// <summary>
-        /// Instance data replica
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DataReplicas")]
         public long? DataReplicas{ get; set; }
 
         /// <summary>
-        /// Initialize parameter
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Params")]
         public string Params{ get; set; }
 
         /// <summary>
-        /// Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

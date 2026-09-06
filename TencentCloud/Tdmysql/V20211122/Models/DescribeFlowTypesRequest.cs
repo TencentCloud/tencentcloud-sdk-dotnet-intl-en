@@ -21,29 +21,15 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class DescribeFlowTypesRequest : AbstractModel
     {
         
-        /// <summary>
-        /// <p>ccu minimum value</p>
-        /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
-
-        /// <summary>
-        /// <p>Maximum value of ccu</p>
-        /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3D80EA95-07CB-3BD7-AB22-6D1BCDBA6B91}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1388</VersionPrefix>
+    <VersionPrefix>3.0.1389</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -62,6 +62,8 @@
     <Compile Include="V20211122\Models\BackupStatisticsModel.cs" />
     <Compile Include="V20211122\Models\BackupTypeStatisticsModel.cs" />
     <Compile Include="V20211122\Models\BinlogInfo.cs" />
+    <Compile Include="V20211122\Models\BreakStandbyDBInstanceRelationRequest.cs" />
+    <Compile Include="V20211122\Models\BreakStandbyDBInstanceRelationResponse.cs" />
     <Compile Include="V20211122\Models\CancelIsolateDBInstancesRequest.cs" />
     <Compile Include="V20211122\Models\CancelIsolateDBInstancesResponse.cs" />
     <Compile Include="V20211122\Models\CloneInstanceModel.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="V20211122\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="V20211122\Models\CreateDBSBackupRequest.cs" />
     <Compile Include="V20211122\Models\CreateDBSBackupResponse.cs" />
+    <Compile Include="V20211122\Models\CreateStandbyDBInstanceRequest.cs" />
+    <Compile Include="V20211122\Models\CreateStandbyDBInstanceResponse.cs" />
     <Compile Include="V20211122\Models\CreateUsersRequest.cs" />
     <Compile Include="V20211122\Models\CreateUsersResponse.cs" />
     <Compile Include="V20211122\Models\DBEngineInfo.cs" />
@@ -87,6 +91,8 @@
     <Compile Include="V20211122\Models\DeleteDBSBackupSetsResponse.cs" />
     <Compile Include="V20211122\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20211122\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBCharsetsRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBEnginesRequest.cs" />
     <Compile Include="V20211122\Models\DescribeDBEnginesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBInstanceDetailRequest.cs" />
@@ -117,6 +123,10 @@
     <Compile Include="V20211122\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20211122\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowTypesRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowTypesResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeInstanceDataReservedSpaceRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeInstanceDataReservedSpaceResponse.cs" />
     <Compile Include="V20211122\Models\DescribeInstanceSSLStatusRequest.cs" />
     <Compile Include="V20211122\Models\DescribeInstanceSSLStatusResponse.cs" />
     <Compile Include="V20211122\Models\DescribeMaintenanceWindowRequest.cs" />
@@ -130,6 +140,8 @@
     <Compile Include="V20211122\Models\DescribeSlowLogsResponse.cs" />
     <Compile Include="V20211122\Models\DescribeSpecsRequest.cs" />
     <Compile Include="V20211122\Models\DescribeSpecsResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeStandbyDBInstanceRelationDetailRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeStandbyDBInstanceRelationDetailResponse.cs" />
     <Compile Include="V20211122\Models\DescribeUserPrivilegesRequest.cs" />
     <Compile Include="V20211122\Models\DescribeUserPrivilegesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeUsersRequest.cs" />
@@ -139,6 +151,7 @@
     <Compile Include="V20211122\Models\ExpandInstanceRequest.cs" />
     <Compile Include="V20211122\Models\ExpandInstanceResponse.cs" />
     <Compile Include="V20211122\Models\Explain.cs" />
+    <Compile Include="V20211122\Models\FlowType.cs" />
     <Compile Include="V20211122\Models\InstanceFilter.cs" />
     <Compile Include="V20211122\Models\InstanceInfo.cs" />
     <Compile Include="V20211122\Models\InstanceNode.cs" />
@@ -160,6 +173,8 @@
     <Compile Include="V20211122\Models\ModifyDBSBackupPolicyResponse.cs" />
     <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentRequest.cs" />
     <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceDataReservedSpaceRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceDataReservedSpaceResponse.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNameRequest.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNetworkRequest.cs" />
@@ -173,6 +188,8 @@
     <Compile Include="V20211122\Models\NodeInfo.cs" />
     <Compile Include="V20211122\Models\ParamConstraint.cs" />
     <Compile Include="V20211122\Models\ParamDesc.cs" />
+    <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesRequest.cs" />
+    <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesResponse.cs" />
     <Compile Include="V20211122\Models\ResetUserPasswordInfo.cs" />
     <Compile Include="V20211122\Models\ResetUsersPasswordRequest.cs" />
     <Compile Include="V20211122\Models\ResetUsersPasswordResponse.cs" />
@@ -182,7 +199,9 @@
     <Compile Include="V20211122\Models\SecurityGroup.cs" />
     <Compile Include="V20211122\Models\SecurityGroupBound.cs" />
     <Compile Include="V20211122\Models\ServerlessCcu.cs" />
+    <Compile Include="V20211122\Models\ServerlessNodeNumSpec.cs" />
     <Compile Include="V20211122\Models\SlowLogData.cs" />
+    <Compile Include="V20211122\Models\StandbyDBInstanceRelation.cs" />
     <Compile Include="V20211122\Models\StorageNodeSpec.cs" />
     <Compile Include="V20211122\Models\TablePrivileges.cs" />
     <Compile Include="V20211122\Models\UpgradeInstanceRequest.cs" />

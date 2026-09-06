@@ -21,20 +21,26 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class BreakStandbyDBInstanceRelationRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// Disaster Recovery instance ID
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
+        /// Whether to force disconnection
         /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("IsForce")]
+        public bool? IsForce{ get; set; }
+
+        /// <summary>
+        /// Latency in seconds. 0 means do not check.
+        /// </summary>
+        [JsonProperty("SyncDelay")]
+        public long? SyncDelay{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IsForce", this.IsForce);
+            this.SetParamSimple(map, prefix + "SyncDelay", this.SyncDelay);
         }
     }
 }

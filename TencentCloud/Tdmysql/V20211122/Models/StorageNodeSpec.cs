@@ -25,8 +25,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <p>Specification code</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
@@ -68,15 +67,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? StorageNodeMinDisk{ get; set; }
 
         /// <summary>
-        /// <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// <p>Default disk size of storage node for frontend display</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StorageNodeDefaultDisk")]
         public long? StorageNodeDefaultDisk{ get; set; }

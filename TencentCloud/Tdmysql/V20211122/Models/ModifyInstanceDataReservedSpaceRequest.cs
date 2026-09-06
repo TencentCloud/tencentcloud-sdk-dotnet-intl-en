@@ -21,20 +21,20 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class ModifyInstanceDataReservedSpaceRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// <p>Instance ID.</p>
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
+        /// <p>Target reserved space size to modify</p><p>Unit: GB</p>
         /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("ReservedSpaceGB")]
+        public float? ReservedSpaceGB{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ReservedSpaceGB", this.ReservedSpaceGB);
         }
     }
 }

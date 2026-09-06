@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmysql.V20211122.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class TextToSpeechSyncOutputOption : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>hex: Audio base64 encoding, </li><li>url: Audio URL, valid for 24 hours.</li></ul>
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
-
-        /// <summary>
-        /// <p>Maximum value of ccu</p>
-        /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public InstanceInfo[] Instances{ get; set; }
 
         /// <summary>
-        /// <p>Total number of conditions met</p>
+        /// <p>Total number of items that meet the conditions.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

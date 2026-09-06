@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1360";
+       private const string sdkVersion = "SDK_NET_3.0.1389";
 
         /// <summary>
         /// Client constructor.
@@ -115,6 +115,48 @@ namespace TencentCloud.Vod.V20180717
         public CloneCDNDomainResponse CloneCDNDomainSync(CloneCDNDomainRequest req)
         {
             return InternalRequestAsync<CloneCDNDomainResponse>(req, "CloneCDNDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice cloning task. It generates an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech. Voice cloning is an asynchronous task. The voice ID and audio audition are generated after task completion.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceAsyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceAsyncResponse"/></returns>
+        public Task<CloneVoiceAsyncResponse> CloneVoiceAsync(CloneVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceAsyncResponse>(req, "CloneVoiceAsync");
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice cloning task. It generates an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech. Voice cloning is an asynchronous task. The voice ID and audio audition are generated after task completion.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceAsyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceAsyncResponse"/></returns>
+        public CloneVoiceAsyncResponse CloneVoiceAsyncSync(CloneVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceAsyncResponse>(req, "CloneVoiceAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice cloning task to clone an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceSyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceSyncResponse"/></returns>
+        public Task<CloneVoiceSyncResponse> CloneVoiceSync(CloneVoiceSyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceSyncResponse>(req, "CloneVoiceSync");
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice cloning task to clone an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech.
+        /// </summary>
+        /// <param name="req"><see cref="CloneVoiceSyncRequest"/></param>
+        /// <returns><see cref="CloneVoiceSyncResponse"/></returns>
+        public CloneVoiceSyncResponse CloneVoiceSyncSync(CloneVoiceSyncRequest req)
+        {
+            return InternalRequestAsync<CloneVoiceSyncResponse>(req, "CloneVoiceSync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1990,6 +2032,31 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// This API is used to delete a specified voice by voice ID. Deletion is irreversible and the voice cannot be used for subsequent APIs. It only supports deletion of voices for this account. System preset voices cannot be deleted.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be deleted before activation (not found means non-operational). They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public Task<DeleteVoiceResponse> DeleteVoice(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice");
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified voice by voice ID. Deletion is irreversible and the voice cannot be used for subsequent APIs. It only supports deletion of voices for this account. System preset voices cannot be deleted.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be deleted before activation (not found means non-operational). They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceRequest"/></param>
+        /// <returns><see cref="DeleteVoiceResponse"/></returns>
+        public DeleteVoiceResponse DeleteVoiceSync(DeleteVoiceRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceResponse>(req, "DeleteVoice")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete a custom watermarking template.
         /// </summary>
         /// <param name="req"><see cref="DeleteWatermarkTemplateRequest"/></param>
@@ -3377,6 +3444,31 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Query the available timbre list under the current account. It supports filtering by optional conditions such as voice ID, kind, name, gender, age, language, tag, and scenario.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be queried before activation. They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public Task<DescribeVoicesResponse> DescribeVoices(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices");
+        }
+
+        /// <summary>
+        /// Query the available timbre list under the current account. It supports filtering by optional conditions such as voice ID, kind, name, gender, age, language, tag, and scenario.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be queried before activation. They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoicesRequest"/></param>
+        /// <returns><see cref="DescribeVoicesResponse"/></returns>
+        public DescribeVoicesResponse DescribeVoicesSync(DescribeVoicesRequest req)
+        {
+            return InternalRequestAsync<DescribeVoicesResponse>(req, "DescribeVoices")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query custom watermarking templates and supports paged queries by filters.
         /// </summary>
         /// <param name="req"><see cref="DescribeWatermarkTemplatesRequest"/></param>
@@ -3415,6 +3507,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeWordSamplesResponse DescribeWordSamplesSync(DescribeWordSamplesRequest req)
         {
             return InternalRequestAsync<DescribeWordSamplesResponse>(req, "DescribeWordSamples")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice design task. It generates a custom voice based on a natural language description. You can also specify a voice profile, such as name, gender, age, language, tag, and scenario. If trial text is attached upon submission, an audio audition is generated after task completion. Voice design is an asynchronous task, and the voice ID is generated after task completion.
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public Task<DesignVoiceAsyncResponse> DesignVoiceAsync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync");
+        }
+
+        /// <summary>
+        /// This API is used to initiate a voice design task. It generates a custom voice based on a natural language description. You can also specify a voice profile, such as name, gender, age, language, tag, and scenario. If trial text is attached upon submission, an audio audition is generated after task completion. Voice design is an asynchronous task, and the voice ID is generated after task completion.
+        /// </summary>
+        /// <param name="req"><see cref="DesignVoiceAsyncRequest"/></param>
+        /// <returns><see cref="DesignVoiceAsyncResponse"/></returns>
+        public DesignVoiceAsyncResponse DesignVoiceAsyncSync(DesignVoiceAsyncRequest req)
+        {
+            return InternalRequestAsync<DesignVoiceAsyncResponse>(req, "DesignVoiceAsync")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5321,6 +5434,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// Initiate a speech synthesis task to convert text into speech, oriented towards long text scenarios (maximum 200,000 characters), supporting specified timbre and synthesis parameters such as speaking rate, volume, pitch, sampling rate, and output format. Speech synthesis is an asynchronous task, and audio results are generated upon completion.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public Task<TextToSpeechAsyncResponse> TextToSpeechAsync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync");
+        }
+
+        /// <summary>
+        /// Initiate a speech synthesis task to convert text into speech, oriented towards long text scenarios (maximum 200,000 characters), supporting specified timbre and synthesis parameters such as speaking rate, volume, pitch, sampling rate, and output format. Speech synthesis is an asynchronous task, and audio results are generated upon completion.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechAsyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechAsyncResponse"/></returns>
+        public TextToSpeechAsyncResponse TextToSpeechAsyncSync(TextToSpeechAsyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechAsyncResponse>(req, "TextToSpeechAsync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Initiate a speech synthesis task to convert text into speech.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechSyncResponse"/></returns>
+        public Task<TextToSpeechSyncResponse> TextToSpeechSync(TextToSpeechSyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSyncResponse>(req, "TextToSpeechSync");
+        }
+
+        /// <summary>
+        /// Initiate a speech synthesis task to convert text into speech.
+        /// </summary>
+        /// <param name="req"><see cref="TextToSpeechSyncRequest"/></param>
+        /// <returns><see cref="TextToSpeechSyncResponse"/></returns>
+        public TextToSpeechSyncResponse TextToSpeechSyncSync(TextToSpeechSyncRequest req)
+        {
+            return InternalRequestAsync<TextToSpeechSyncResponse>(req, "TextToSpeechSync")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a Token for invoking the AIGC API. After creation, data sync has a delay. It becomes queryable or deletable after about 30 seconds.
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
@@ -5338,6 +5493,31 @@ namespace TencentCloud.Vod.V20180717
         public UpdateAigcApiTokenResponse UpdateAigcApiTokenSync(UpdateAigcApiTokenRequest req)
         {
             return InternalRequestAsync<UpdateAigcApiTokenResponse>(req, "UpdateAigcApiToken")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update the profile of a voice by voice ID, including its name, description, gender, age, language, tags, and scenarios, and returns the complete voice information after the update. Only voices under this account can be updated. System preset voices do not support update.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be updated before activation. They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public Task<UpdateVoiceResponse> UpdateVoice(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice");
+        }
+
+        /// <summary>
+        /// This API is used to update the profile of a voice by voice ID, including its name, description, gender, age, language, tags, and scenarios, and returns the complete voice information after the update. Only voices under this account can be updated. System preset voices do not support update.
+        /// 
+        /// Note: Newly designed or cloned voice types cannot be updated before activation. They are activated only after the newly created voice type is used for TTS once.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateVoiceRequest"/></param>
+        /// <returns><see cref="UpdateVoiceResponse"/></returns>
+        public UpdateVoiceResponse UpdateVoiceSync(UpdateVoiceRequest req)
+        {
+            return InternalRequestAsync<UpdateVoiceResponse>(req, "UpdateVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

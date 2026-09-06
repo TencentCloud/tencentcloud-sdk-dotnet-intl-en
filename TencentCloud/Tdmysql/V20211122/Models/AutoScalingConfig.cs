@@ -25,18 +25,22 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// <p>Minimum value of ccu</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RangeMin")]
         public float? RangeMin{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RangeMax")]
         public float? RangeMax{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ResourceType")]
+        public string ResourceType{ get; set; }
 
 
         /// <summary>
@@ -46,6 +50,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         {
             this.SetParamSimple(map, prefix + "RangeMin", this.RangeMin);
             this.SetParamSimple(map, prefix + "RangeMax", this.RangeMax);
+            this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
         }
     }
 }

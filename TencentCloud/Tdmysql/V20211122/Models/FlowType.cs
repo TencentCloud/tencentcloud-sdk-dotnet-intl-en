@@ -21,20 +21,20 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ServerlessCcu : AbstractModel
+    public class FlowType : AbstractModel
     {
         
         /// <summary>
-        /// <p>ccu minimum value</p>
+        /// <p>Task Type Name. Subsequently, you can filter FlowName in the output parameters of DescribeFlows.</p>
         /// </summary>
-        [JsonProperty("MinCcu")]
-        public float? MinCcu{ get; set; }
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of ccu</p>
+        /// <p>Chinese description of the task type.</p>
         /// </summary>
-        [JsonProperty("MaxCcu")]
-        public float?[] MaxCcu{ get; set; }
+        [JsonProperty("FlowDesc")]
+        public string FlowDesc{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MinCcu", this.MinCcu);
-            this.SetParamArraySimple(map, prefix + "MaxCcu.", this.MaxCcu);
+            this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamSimple(map, prefix + "FlowDesc", this.FlowDesc);
         }
     }
 }

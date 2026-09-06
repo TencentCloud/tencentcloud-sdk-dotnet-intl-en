@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1388";
+       private const string sdkVersion = "SDK_NET_3.0.1389";
 
         /// <summary>
         /// Client constructor.
@@ -51,6 +51,27 @@ namespace TencentCloud.Tdmysql.V20211122
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
+        }
+
+        /// <summary>
+        /// This API is used to terminate the replication between the primary instance and the disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="BreakStandbyDBInstanceRelationRequest"/></param>
+        /// <returns><see cref="BreakStandbyDBInstanceRelationResponse"/></returns>
+        public Task<BreakStandbyDBInstanceRelationResponse> BreakStandbyDBInstanceRelation(BreakStandbyDBInstanceRelationRequest req)
+        {
+            return InternalRequestAsync<BreakStandbyDBInstanceRelationResponse>(req, "BreakStandbyDBInstanceRelation");
+        }
+
+        /// <summary>
+        /// This API is used to terminate the replication between the primary instance and the disaster recovery instance.
+        /// </summary>
+        /// <param name="req"><see cref="BreakStandbyDBInstanceRelationRequest"/></param>
+        /// <returns><see cref="BreakStandbyDBInstanceRelationResponse"/></returns>
+        public BreakStandbyDBInstanceRelationResponse BreakStandbyDBInstanceRelationSync(BreakStandbyDBInstanceRelationRequest req)
+        {
+            return InternalRequestAsync<BreakStandbyDBInstanceRelationResponse>(req, "BreakStandbyDBInstanceRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -138,6 +159,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to create disaster recovery instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandbyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateStandbyDBInstanceResponse"/></returns>
+        public Task<CreateStandbyDBInstanceResponse> CreateStandbyDBInstance(CreateStandbyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateStandbyDBInstanceResponse>(req, "CreateStandbyDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to create disaster recovery instances in batches.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandbyDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateStandbyDBInstanceResponse"/></returns>
+        public CreateStandbyDBInstanceResponse CreateStandbyDBInstanceSync(CreateStandbyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateStandbyDBInstanceResponse>(req, "CreateStandbyDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create users in batches.
         /// </summary>
         /// <param name="req"><see cref="CreateUsersRequest"/></param>
@@ -197,6 +239,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query supported character sets.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public Task<DescribeDBCharsetsResponse> DescribeDBCharsets(DescribeDBCharsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCharsetsResponse>(req, "DescribeDBCharsets");
+        }
+
+        /// <summary>
+        /// This API is used to query supported character sets.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public DescribeDBCharsetsResponse DescribeDBCharsetsSync(DescribeDBCharsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCharsetsResponse>(req, "DescribeDBCharsets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -516,6 +579,48 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to obtain all task types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTypesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTypesResponse"/></returns>
+        public Task<DescribeFlowTypesResponse> DescribeFlowTypes(DescribeFlowTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowTypesResponse>(req, "DescribeFlowTypes");
+        }
+
+        /// <summary>
+        /// This API is used to obtain all task types.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTypesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTypesResponse"/></returns>
+        public DescribeFlowTypesResponse DescribeFlowTypesSync(DescribeFlowTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowTypesResponse>(req, "DescribeFlowTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the data retention space of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDataReservedSpaceResponse"/></returns>
+        public Task<DescribeInstanceDataReservedSpaceResponse> DescribeInstanceDataReservedSpace(DescribeInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDataReservedSpaceResponse>(req, "DescribeInstanceDataReservedSpace");
+        }
+
+        /// <summary>
+        /// This API is used to query the data retention space of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDataReservedSpaceResponse"/></returns>
+        public DescribeInstanceDataReservedSpaceResponse DescribeInstanceDataReservedSpaceSync(DescribeInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDataReservedSpaceResponse>(req, "DescribeInstanceDataReservedSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the SSL status of an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSSLStatusRequest"/></param>
@@ -600,7 +705,7 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// This API is used to list available component specifications.
+        /// This API is used to query sales specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
         /// <returns><see cref="DescribeSpecsResponse"/></returns>
@@ -610,13 +715,34 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
-        /// This API is used to list available component specifications.
+        /// This API is used to query sales specifications.
         /// </summary>
         /// <param name="req"><see cref="DescribeSpecsRequest"/></param>
         /// <returns><see cref="DescribeSpecsResponse"/></returns>
         public DescribeSpecsResponse DescribeSpecsSync(DescribeSpecsRequest req)
         {
             return InternalRequestAsync<DescribeSpecsResponse>(req, "DescribeSpecs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query disaster recovery connection relationships of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandbyDBInstanceRelationDetailRequest"/></param>
+        /// <returns><see cref="DescribeStandbyDBInstanceRelationDetailResponse"/></returns>
+        public Task<DescribeStandbyDBInstanceRelationDetailResponse> DescribeStandbyDBInstanceRelationDetail(DescribeStandbyDBInstanceRelationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeStandbyDBInstanceRelationDetailResponse>(req, "DescribeStandbyDBInstanceRelationDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query disaster recovery connection relationships of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandbyDBInstanceRelationDetailRequest"/></param>
+        /// <returns><see cref="DescribeStandbyDBInstanceRelationDetailResponse"/></returns>
+        public DescribeStandbyDBInstanceRelationDetailResponse DescribeStandbyDBInstanceRelationDetailSync(DescribeStandbyDBInstanceRelationDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeStandbyDBInstanceRelationDetailResponse>(req, "DescribeStandbyDBInstanceRelationDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -852,6 +978,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// This API is used to modify the reserved space for instance data.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDataReservedSpaceResponse"/></returns>
+        public Task<ModifyInstanceDataReservedSpaceResponse> ModifyInstanceDataReservedSpace(ModifyInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDataReservedSpaceResponse>(req, "ModifyInstanceDataReservedSpace");
+        }
+
+        /// <summary>
+        /// This API is used to modify the reserved space for instance data.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDataReservedSpaceResponse"/></returns>
+        public ModifyInstanceDataReservedSpaceResponse ModifyInstanceDataReservedSpaceSync(ModifyInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDataReservedSpaceResponse>(req, "ModifyInstanceDataReservedSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify instance name.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
@@ -953,6 +1100,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Reset the permissions of the dbaadmin account.
+        /// </summary>
+        /// <param name="req"><see cref="ResetDbaAdminPrivilegesRequest"/></param>
+        /// <returns><see cref="ResetDbaAdminPrivilegesResponse"/></returns>
+        public Task<ResetDbaAdminPrivilegesResponse> ResetDbaAdminPrivileges(ResetDbaAdminPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ResetDbaAdminPrivilegesResponse>(req, "ResetDbaAdminPrivileges");
+        }
+
+        /// <summary>
+        /// Reset the permissions of the dbaadmin account.
+        /// </summary>
+        /// <param name="req"><see cref="ResetDbaAdminPrivilegesRequest"/></param>
+        /// <returns><see cref="ResetDbaAdminPrivilegesResponse"/></returns>
+        public ResetDbaAdminPrivilegesResponse ResetDbaAdminPrivilegesSync(ResetDbaAdminPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ResetDbaAdminPrivilegesResponse>(req, "ResetDbaAdminPrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
