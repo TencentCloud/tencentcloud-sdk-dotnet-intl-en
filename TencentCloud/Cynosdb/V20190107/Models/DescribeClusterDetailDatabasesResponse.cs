@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database information
+        /// <p>Database information.</p>
         /// </summary>
         [JsonProperty("DbInfos")]
         public DbInfo[] DbInfos{ get; set; }
 
         /// <summary>
-        /// The total count
+        /// <p>Total.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

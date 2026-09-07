@@ -21,20 +21,25 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TagInfo : AbstractModel
+    public class InstanceChargePrepaid : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// Purchase duration. unit: month.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TagKey")]
-        public string TagKey{ get; set; }
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
-        /// Tag value.
+        /// NOTIFY_AND_MANUAL_RENEW: notifies that the account is about to expire but does not automatically renew the account.
+        /// NOTIFY_AND_AUTO_RENEW: specifies expiration notification and auto-renewal.
+        /// DISABLE_NOTIFY_AND_MANUAL_RENEW: no notification is sent upon expiration, and the instance is not renewed automatically.
+        /// Defaults to notify expiration without auto-renew.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
-        [JsonProperty("TagValue")]
-        public string TagValue{ get; set; }
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
 
 
         /// <summary>
@@ -42,8 +47,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
-            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         }
     }
 }

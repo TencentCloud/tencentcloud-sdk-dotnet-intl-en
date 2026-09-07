@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+        /// <p>This field has been deprecated. The current version no longer transmits this value.</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]

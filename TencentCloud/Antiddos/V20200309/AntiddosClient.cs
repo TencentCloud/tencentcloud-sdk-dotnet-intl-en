@@ -28,7 +28,7 @@ namespace TencentCloud.Antiddos.V20200309
 
        private const string endpoint = "antiddos.intl.tencentcloudapi.com";
        private const string version = "2020-03-09";
-       private const string sdkVersion = "SDK_NET_3.0.1354";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Antiddos.V20200309
         public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancerSync(AssociateDDoSEipLoadBalancerRequest req)
         {
             return InternalRequestAsync<AssociateDDoSEipLoadBalancerResponse>(req, "AssociateDDoSEipLoadBalancer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to purchase Anti-DDoS packages.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBgpInstanceRequest"/></param>
+        /// <returns><see cref="CreateBgpInstanceResponse"/></returns>
+        public Task<CreateBgpInstanceResponse> CreateBgpInstance(CreateBgpInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateBgpInstanceResponse>(req, "CreateBgpInstance");
+        }
+
+        /// <summary>
+        /// This API is used to purchase Anti-DDoS packages.
+        /// </summary>
+        /// <param name="req"><see cref="CreateBgpInstanceRequest"/></param>
+        /// <returns><see cref="CreateBgpInstanceResponse"/></returns>
+        public CreateBgpInstanceResponse CreateBgpInstanceSync(CreateBgpInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateBgpInstanceResponse>(req, "CreateBgpInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

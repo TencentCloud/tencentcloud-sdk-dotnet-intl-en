@@ -28,7 +28,7 @@ namespace TencentCloud.Cynosdb.V20190107
 
        private const string endpoint = "cynosdb.intl.tencentcloudapi.com";
        private const string version = "2019-01-07";
-       private const string sdkVersion = "SDK_NET_3.0.1389";
+       private const string sdkVersion = "SDK_NET_3.0.1390";
 
         /// <summary>
         /// Client constructor.
@@ -1562,6 +1562,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public DescribeClusterReadOnlyResponse DescribeClusterReadOnlySync(DescribeClusterReadOnlyRequest req)
         {
             return InternalRequestAsync<DescribeClusterReadOnlyResponse>(req, "DescribeClusterReadOnly")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the automated storage expansion configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageAutoExpandRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageAutoExpandResponse"/></returns>
+        public Task<DescribeClusterStorageAutoExpandResponse> DescribeClusterStorageAutoExpand(DescribeClusterStorageAutoExpandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterStorageAutoExpandResponse>(req, "DescribeClusterStorageAutoExpand");
+        }
+
+        /// <summary>
+        /// This API is used to query the automated storage expansion configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStorageAutoExpandRequest"/></param>
+        /// <returns><see cref="DescribeClusterStorageAutoExpandResponse"/></returns>
+        public DescribeClusterStorageAutoExpandResponse DescribeClusterStorageAutoExpandSync(DescribeClusterStorageAutoExpandRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterStorageAutoExpandResponse>(req, "DescribeClusterStorageAutoExpand")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3242,6 +3263,27 @@ namespace TencentCloud.Cynosdb.V20190107
         public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryptionSync(ModifyClusterGlobalEncryptionRequest req)
         {
             return InternalRequestAsync<ModifyClusterGlobalEncryptionResponse>(req, "ModifyClusterGlobalEncryption")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify cluster
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterLevelRequest"/></param>
+        /// <returns><see cref="ModifyClusterLevelResponse"/></returns>
+        public Task<ModifyClusterLevelResponse> ModifyClusterLevel(ModifyClusterLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterLevelResponse>(req, "ModifyClusterLevel");
+        }
+
+        /// <summary>
+        /// Modify cluster
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterLevelRequest"/></param>
+        /// <returns><see cref="ModifyClusterLevelResponse"/></returns>
+        public ModifyClusterLevelResponse ModifyClusterLevelSync(ModifyClusterLevelRequest req)
+        {
+            return InternalRequestAsync<ModifyClusterLevelResponse>(req, "ModifyClusterLevel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

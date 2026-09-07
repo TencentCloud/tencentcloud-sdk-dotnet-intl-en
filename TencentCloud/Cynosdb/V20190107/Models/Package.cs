@@ -50,6 +50,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageType{ get; set; }
 
         /// <summary>
+        /// Resource package edition
+        /// base - basic, common - general, enterprise - business
+        /// </summary>
+        [JsonProperty("PackageVersion")]
+        public string PackageVersion{ get; set; }
+
+        /// <summary>
         /// Resource package region of use.
         /// China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
         /// </summary>
@@ -120,6 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "PackageVersion", this.PackageVersion);
             this.SetParamSimple(map, prefix + "PackageRegion", this.PackageRegion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "PackageTotalSpec", this.PackageTotalSpec);

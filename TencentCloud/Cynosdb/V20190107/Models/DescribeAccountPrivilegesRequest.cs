@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Host{ get; set; }
 
         /// <summary>
-        /// When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+        /// Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
         /// </summary>
         [JsonProperty("Db")]
         public string Db{ get; set; }
 
         /// <summary>
-        /// Object type in a specified database. Valid values: `table`, `*`.
+        /// Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The database name can be specified when `Type` is 'table'.
+        /// When Type is "table", it is used to specify the table name. Required when Type is "table".
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }

@@ -21,29 +21,17 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeInstanceSpecsRequest : AbstractModel
+    public class ModifyClusterLevelRequest : AbstractModel
     {
         
         /// <summary>
-        /// <p>Database type, value ranges from...to... </p><li> MYSQL </li>
+        /// <p>Cluster ID.</p>
         /// </summary>
-        [JsonProperty("DbType")]
-        public string DbType{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Whether required to return AZ information</p>
-        /// </summary>
-        [JsonProperty("IncludeZoneStocks")]
-        public bool? IncludeZoneStocks{ get; set; }
-
-        /// <summary>
-        /// <p>Instance machine type.</p>
-        /// </summary>
-        [JsonProperty("DeviceType")]
-        public string DeviceType{ get; set; }
-
-        /// <summary>
-        /// <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+        /// <p>Cluster level</p>
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
@@ -54,9 +42,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DbType", this.DbType);
-            this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
-            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         }
     }

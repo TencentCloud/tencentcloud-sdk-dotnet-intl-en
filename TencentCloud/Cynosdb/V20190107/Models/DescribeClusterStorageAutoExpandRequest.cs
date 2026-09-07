@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Antiddos.V20200309.Models
+namespace TencentCloud.Cynosdb.V20190107.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TagInfo : AbstractModel
+    public class DescribeClusterStorageAutoExpandRequest : AbstractModel
     {
         
         /// <summary>
-        /// Tag key.
+        /// <p>Cluster ID.</p>
         /// </summary>
-        [JsonProperty("TagKey")]
-        public string TagKey{ get; set; }
-
-        /// <summary>
-        /// Tag value.
-        /// </summary>
-        [JsonProperty("TagValue")]
-        public string TagValue{ get; set; }
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
-            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }
