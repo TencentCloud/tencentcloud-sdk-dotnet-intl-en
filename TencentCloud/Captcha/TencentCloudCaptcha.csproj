@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{39D5883D-7A4D-3B59-9517-0DFDD1B08F9C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1311</VersionPrefix>
+    <VersionPrefix>3.0.1391</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,7 +48,28 @@
 
   <ItemGroup>
     <Compile Include="V20190722\CaptchaClient.cs" />
+    <Compile Include="V20190722\Models\CreateCaptchaInfoInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\CreateCaptchaInfoInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\CreateIpWhiteListInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\CreateIpWhiteListInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteIpWhiteListInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteIpWhiteListInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaConsoleDataInternational.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaConsoleSubDataInternational.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaInfoListInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaInfoListInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaIpWhiteListDataNew.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaResultRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCaptchaResultResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCaptchaWhiteListItem.cs" />
+    <Compile Include="V20190722\Models\DescribeIpWhiteListInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeIpWhiteListInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyCaptchaInfoInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyCaptchaInfoInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyIpWhiteListInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyIpWhiteListInternationalResponse.cs" />
+    <Compile Include="V20190722\Models\OrderByInternational.cs" />
+    <Compile Include="V20190722\Models\RemoveCaptchaInfoInternationalRequest.cs" />
+    <Compile Include="V20190722\Models\RemoveCaptchaInfoInternationalResponse.cs" />
   </ItemGroup>
 </Project>
