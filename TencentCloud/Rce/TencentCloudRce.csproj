@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1374</VersionPrefix>
+    <VersionPrefix>3.0.1392</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20201103\RceClient.cs" />
+    <Compile Include="V20201103\Models\DescribeRiskAssessmentRequest.cs" />
+    <Compile Include="V20201103\Models\DescribeRiskAssessmentResponse.cs" />
+    <Compile Include="V20201103\Models\InputBizCryptoData.cs" />
+    <Compile Include="V20201103\Models\OutputRiskAssessment.cs" />
+    <Compile Include="V20201103\Models\OutputRiskAssessmentExtraInfoPair.cs" />
+    <Compile Include="V20201103\Models\OutputRiskAssessmentInfo.cs" />
     <Compile Include="V20260130\RceClient.cs" />
     <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProRequest.cs" />
     <Compile Include="V20260130\Models\AssessDeviceRiskPremiumProResponse.cs" />
@@ -64,12 +71,5 @@
     <Compile Include="V20260130\Models\IPLocation.cs" />
     <Compile Include="V20260130\Models\IPNetwork.cs" />
     <Compile Include="V20260130\Models\RiskLabel.cs" />
-    <Compile Include="V20201103\RceClient.cs" />
-    <Compile Include="V20201103\Models\DescribeRiskAssessmentRequest.cs" />
-    <Compile Include="V20201103\Models\DescribeRiskAssessmentResponse.cs" />
-    <Compile Include="V20201103\Models\InputBizCryptoData.cs" />
-    <Compile Include="V20201103\Models\OutputRiskAssessment.cs" />
-    <Compile Include="V20201103\Models\OutputRiskAssessmentExtraInfoPair.cs" />
-    <Compile Include="V20201103\Models\OutputRiskAssessmentInfo.cs" />
   </ItemGroup>
 </Project>

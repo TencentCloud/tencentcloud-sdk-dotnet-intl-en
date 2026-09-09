@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string LanguageBoost{ get; set; }
 
         /// <summary>
-        /// <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+        /// <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
         /// </summary>
         [JsonProperty("Output")]
         public TextToSpeechSyncOutputOption Output{ get; set; }
