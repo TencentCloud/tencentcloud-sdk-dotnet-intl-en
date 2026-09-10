@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// <p>Types of CVM instances. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>InstanceType specifies a single instance type. By setting InstanceTypes, you can specify multiple instance types and invalidate the original InstanceType. Specific values can be obtained by calling the API <a href="https://www.tencentcloud.com/document/api/213/15749?from_cn_redirect=1">DescribeInstanceTypeConfigs</a> to obtain the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
+        /// <p>Types of CVM instances. Different instance models specify different resource specifications, and a maximum of 10 instance models are supported.<br>InstanceType specifies a single instance type. By setting InstanceTypes, you can specify multiple instance types and invalidate the original InstanceType. Specific values can be obtained by calling the API <a href="https://www.tencentcloud.com/document/product/213/33254">DescribeZoneInstanceConfigInfos</a> to obtain the latest specification table or see <a href="https://www.tencentcloud.com/document/product/213/11518?from_cn_redirect=1">Instance Specifications</a>.</p>
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.As.V20180419.Models
         public string CamRoleName{ get; set; }
 
         /// <summary>
-        /// <p>Hyper Computing Cluster ID. You can obtain this parameter by calling the <a href="https://www.tencentcloud.com/document/product/213/83220?from_cn_redirect=1">DescribeHpcClusters</a> API.<br>Note: This field is empty by default.</p>
+        /// <p>Hyper Computing Cluster ID. This parameter is currently not supported on the international site.</p>
         /// </summary>
         [JsonProperty("HpcClusterId")]
         public string HpcClusterId{ get; set; }

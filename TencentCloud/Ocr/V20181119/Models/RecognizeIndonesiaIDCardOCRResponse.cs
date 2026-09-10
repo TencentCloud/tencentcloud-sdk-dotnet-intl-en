@@ -135,7 +135,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// Card Warning Information
         /// 
-        /// -9101 Alarm for covered certificate
+        /// -9101 Alarm for incomplete or covered certificate
         /// -9102 Alarm for photocopied certificate
         /// -9103 Alarm for photographed certificate
         /// -9104 Alarm for tamper certificate

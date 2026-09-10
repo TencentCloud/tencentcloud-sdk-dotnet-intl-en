@@ -48,6 +48,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("InvokeLLM")]
         public InvokeLLM InvokeLLM{ get; set; }
 
+        /// <summary>
+        /// Information passed through to the client
+        /// </summary>
+        [JsonProperty("TransparentData")]
+        public TransparentData TransparentData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
             this.SetParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
+            this.SetParamObj(map, prefix + "TransparentData.", this.TransparentData);
         }
     }
 }

@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220901.Models
+namespace TencentCloud.Trtc.V20190722.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AICrawlerDetection : AbstractModel
+    public class TransparentData : AbstractModel
     {
         
         /// <summary>
-        /// Whether AI crawler detection is enabled. Valid values:
-        /// <li>`on`: Enable;</li>
-        /// <li>off: Disable.</li>
+        /// Information passed through to the client
         /// </summary>
-        [JsonProperty("Enabled")]
-        public string Enabled{ get; set; }
-
-        /// <summary>
-        /// Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
-        /// <li>Deny: block;</li>
-        /// <li>Monitor: observation;</li>
-        /// <li>Allow: allow;</li>
-        /// <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
-        /// </summary>
-        [JsonProperty("Action")]
-        public SecurityAction Action{ get; set; }
+        [JsonProperty("Data")]
+        public string Data{ get; set; }
 
 
         /// <summary>
@@ -48,8 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
-            this.SetParamObj(map, prefix + "Action.", this.Action);
+            this.SetParamSimple(map, prefix + "Data", this.Data);
         }
     }
 }
