@@ -25,76 +25,82 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+        /// <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
         /// </summary>
         [JsonProperty("TeamRoleType")]
         public long? TeamRoleType{ get; set; }
 
         /// <summary>
-        /// Admin account.
+        /// <p>Administrator account.</p>
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
-        /// Creator.
+        /// <p>Creator.</p>
         /// </summary>
         [JsonProperty("CreateUser")]
         public string CreateUser{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Number of team members.
+        /// <p>Number of team members.</p>
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
 
         /// <summary>
-        /// Number of bound mini program teams.
+        /// <p>Number of bound mini program teams.</p>
         /// </summary>
         [JsonProperty("BindMiniTeamCount")]
         public long? BindMiniTeamCount{ get; set; }
 
         /// <summary>
-        /// Name of the bound team.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("BindTeamName")]
         public string BindTeamName{ get; set; }
 
         /// <summary>
-        /// Team registration link.
+        /// <p>Team registration link.</p>
         /// </summary>
         [JsonProperty("RegisterLink")]
         public string RegisterLink{ get; set; }
 
         /// <summary>
-        /// Superapp name. Only returned for mini program teams.
+        /// <p>Superapp name. Only returned for querying details of mini program teams.</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Team expiration time. 0 indicates no expiration. 
+        /// <p>Team expiration time. 0 indicates no expiration.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+        /// <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>Administrator name.</p>
+        /// </summary>
+        [JsonProperty("AdminUserName")]
+        public string AdminUserName{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "AdminUserName", this.AdminUserName);
         }
     }
 }

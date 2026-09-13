@@ -28,7 +28,7 @@ namespace TencentCloud.Tcsas.V20250106
 
        private const string endpoint = "tcsas.intl.tencentcloudapi.com";
        private const string version = "2025-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1353";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -285,7 +285,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to generate a mini game secret key.
+        /// This API is used to create a mini game secret key.
         /// </summary>
         /// <param name="req"><see cref="CreateMNGAppSecretRequest"/></param>
         /// <returns><see cref="CreateMNGAppSecretResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to generate a mini game secret key.
+        /// This API is used to create a mini game secret key.
         /// </summary>
         /// <param name="req"><see cref="CreateMNGAppSecretRequest"/></param>
         /// <returns><see cref="CreateMNGAppSecretResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the line chart data for selected superapp metrics.
+        /// This API is used to query the time-series data for selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
         /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the line chart data for selected superapp metrics.
+        /// This API is used to query the time-series data for selected superapp metrics.
         /// </summary>
         /// <param name="req"><see cref="DescribeAPPDataDetailLineChartRequest"/></param>
         /// <returns><see cref="DescribeAPPDataDetailLineChartResponse"/></returns>
@@ -894,7 +894,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the advertising line chart data for a mini program within a specified date range.
+        /// This API is used to query the time-series advertising data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
@@ -904,7 +904,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the advertising line chart data for a mini program within a specified date range.
+        /// This API is used to query the time-series advertising data for a mini program within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeAdvertisingLineChartResponse"/></returns>
@@ -1167,7 +1167,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game visit analysis line chart.
+        /// This API is used to query the time-series visit data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
@@ -1177,7 +1177,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game visit analysis line chart.
+        /// This API is used to query the time-series visit data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAccessAnalysisLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAccessAnalysisLineChartResponse"/></returns>
@@ -1251,7 +1251,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game advertising data in a line chart format.
+        /// This API is used to query the time-series advertising data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
@@ -1261,7 +1261,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game advertising data in a line chart format.
+        /// This API is used to query the time-series advertising data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGAdvertisingLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGAdvertisingLineChartResponse"/></returns>
@@ -1419,7 +1419,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game MAU line chart.
+        /// This API is used to query the time-series MAU data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
@@ -1429,7 +1429,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game MAU line chart.
+        /// This API is used to query the time-series MAU data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGMAULineChartResponse"/></returns>
@@ -1482,7 +1482,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game payment line chart.
+        /// This API is used to query the time-series payment data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
@@ -1492,7 +1492,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini game payment line chart.
+        /// This API is used to query the time-series payment data of a mini game.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNGPaymentLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNGPaymentLineChartResponse"/></returns>
@@ -1776,6 +1776,48 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query mini game version approval details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGVersionAuditDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGVersionAuditDetailResponse"/></returns>
+        public Task<DescribeMNGVersionAuditDetailResponse> DescribeMNGVersionAuditDetail(DescribeMNGVersionAuditDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGVersionAuditDetailResponse>(req, "DescribeMNGVersionAuditDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query mini game version approval details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGVersionAuditDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNGVersionAuditDetailResponse"/></returns>
+        public DescribeMNGVersionAuditDetailResponse DescribeMNGVersionAuditDetailSync(DescribeMNGVersionAuditDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGVersionAuditDetailResponse>(req, "DescribeMNGVersionAuditDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini game version approval records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGVersionAuditListRequest"/></param>
+        /// <returns><see cref="DescribeMNGVersionAuditListResponse"/></returns>
+        public Task<DescribeMNGVersionAuditListResponse> DescribeMNGVersionAuditList(DescribeMNGVersionAuditListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGVersionAuditListResponse>(req, "DescribeMNGVersionAuditList");
+        }
+
+        /// <summary>
+        /// This API is used to query mini game version approval records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNGVersionAuditListRequest"/></param>
+        /// <returns><see cref="DescribeMNGVersionAuditListResponse"/></returns>
+        public DescribeMNGVersionAuditListResponse DescribeMNGVersionAuditListSync(DescribeMNGVersionAuditListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNGVersionAuditListResponse>(req, "DescribeMNGVersionAuditList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini program details.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPRequest"/></param>
@@ -2007,7 +2049,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program monthly active user data in a line chart format.
+        /// This API is used to query the time-series MAU data of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
@@ -2017,7 +2059,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program monthly active user data in a line chart format.
+        /// This API is used to query the time-series MAU data of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPMAULineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPMAULineChartResponse"/></returns>
@@ -2154,7 +2196,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program visit analysis line chart within a given date range.
+        /// This API is used to query the time-series visit data of a mini program within a given date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
@@ -2164,7 +2206,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program visit analysis line chart within a given date range.
+        /// This API is used to query the time-series visit data of a mini program within a given date range.
         /// </summary>
         /// <param name="req"><see cref="DescribeMNPReportDataLineChartRequest"/></param>
         /// <returns><see cref="DescribeMNPReportDataLineChartResponse"/></returns>
@@ -2385,6 +2427,48 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
+        /// This API is used to query mini program version approval details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionAuditDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionAuditDetailResponse"/></returns>
+        public Task<DescribeMNPVersionAuditDetailResponse> DescribeMNPVersionAuditDetail(DescribeMNPVersionAuditDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionAuditDetailResponse>(req, "DescribeMNPVersionAuditDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query mini program version approval details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionAuditDetailRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionAuditDetailResponse"/></returns>
+        public DescribeMNPVersionAuditDetailResponse DescribeMNPVersionAuditDetailSync(DescribeMNPVersionAuditDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionAuditDetailResponse>(req, "DescribeMNPVersionAuditDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query mini program version approval records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionAuditListRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionAuditListResponse"/></returns>
+        public Task<DescribeMNPVersionAuditListResponse> DescribeMNPVersionAuditList(DescribeMNPVersionAuditListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionAuditListResponse>(req, "DescribeMNPVersionAuditList");
+        }
+
+        /// <summary>
+        /// This API is used to query mini program version approval records.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMNPVersionAuditListRequest"/></param>
+        /// <returns><see cref="DescribeMNPVersionAuditListResponse"/></returns>
+        public DescribeMNPVersionAuditListResponse DescribeMNPVersionAuditListSync(DescribeMNPVersionAuditListRequest req)
+        {
+            return InternalRequestAsync<DescribeMNPVersionAuditListResponse>(req, "DescribeMNPVersionAuditList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the mini program payment data details within a specified date range.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataDetailRequest"/></param>
@@ -2406,7 +2490,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program payment line chart within a specified date range.
+        /// This API is used to query the time-series payment data of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
         /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
@@ -2416,7 +2500,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query the mini program payment line chart within a specified date range.
+        /// This API is used to query the time-series payment data of a mini program.
         /// </summary>
         /// <param name="req"><see cref="DescribePaymentDataLineChartRequest"/></param>
         /// <returns><see cref="DescribePaymentDataLineChartResponse"/></returns>
@@ -2490,7 +2574,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query a list of teams.
+        /// This API is used to query the teams.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>
@@ -2500,7 +2584,7 @@ namespace TencentCloud.Tcsas.V20250106
         }
 
         /// <summary>
-        /// This API is used to query a list of teams.
+        /// This API is used to query the teams.
         /// </summary>
         /// <param name="req"><see cref="DescribeTeamListRequest"/></param>
         /// <returns><see cref="DescribeTeamListResponse"/></returns>

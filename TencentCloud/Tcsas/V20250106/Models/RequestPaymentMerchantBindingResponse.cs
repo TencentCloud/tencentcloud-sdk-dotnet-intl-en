@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+        /// <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
         /// </summary>
         [JsonProperty("Data")]
         public MerchantBindApprovalResp Data{ get; set; }

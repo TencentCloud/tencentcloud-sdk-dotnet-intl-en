@@ -25,28 +25,34 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Platform ID.
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Team administrator.
+        /// <p>Team admin.</p>
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }
+
+        /// <summary>
+        /// <p>Team admin user IDs.</p>
+        /// </summary>
+        [JsonProperty("AdminUserIds")]
+        public string[] AdminUserIds{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "TeamName", this.TeamName);
             this.SetParamSimple(map, prefix + "PlatformId", this.PlatformId);
             this.SetParamSimple(map, prefix + "AdminUserId", this.AdminUserId);
+            this.SetParamArraySimple(map, prefix + "AdminUserIds.", this.AdminUserIds);
         }
     }
 }

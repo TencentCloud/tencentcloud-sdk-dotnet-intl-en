@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1393";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -208,6 +208,31 @@ namespace TencentCloud.Ocr.V20181119
         public HKIDCardOCRResponse HKIDCardOCRSync(HKIDCardOCRRequest req)
         {
             return InternalRequestAsync<HKIDCardOCRResponse>(req, "HKIDCardOCR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API recognizes the Residence Permit for Hong Kong, Macao, and Taiwan, China Residents. Its OCR feature supports content detection and recognition of all fields on both sides, including name, sex, date of birth, address, identity card number, issuing authority, validity period, number of issuances, and travel permit number (a key field). It can be applied to information recognition scenarios for Residence Permit for Hong Kong, Macao, and Taiwan, China Residents, such as bank account opening and user registration. 
+        /// 
+        /// Default API request rate limit: 20 requests/second.
+        /// </summary>
+        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
+        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
+        public Task<HmtResidentPermitOCRResponse> HmtResidentPermitOCR(HmtResidentPermitOCRRequest req)
+        {
+            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR");
+        }
+
+        /// <summary>
+        /// This API recognizes the Residence Permit for Hong Kong, Macao, and Taiwan, China Residents. Its OCR feature supports content detection and recognition of all fields on both sides, including name, sex, date of birth, address, identity card number, issuing authority, validity period, number of issuances, and travel permit number (a key field). It can be applied to information recognition scenarios for Residence Permit for Hong Kong, Macao, and Taiwan, China Residents, such as bank account opening and user registration. 
+        /// 
+        /// Default API request rate limit: 20 requests/second.
+        /// </summary>
+        /// <param name="req"><see cref="HmtResidentPermitOCRRequest"/></param>
+        /// <returns><see cref="HmtResidentPermitOCRResponse"/></returns>
+        public HmtResidentPermitOCRResponse HmtResidentPermitOCRSync(HmtResidentPermitOCRRequest req)
+        {
+            return InternalRequestAsync<HmtResidentPermitOCRResponse>(req, "HmtResidentPermitOCR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

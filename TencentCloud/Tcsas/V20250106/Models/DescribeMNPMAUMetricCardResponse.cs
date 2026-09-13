@@ -25,7 +25,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Data display at the top of the page.
+        /// Response data.
         /// </summary>
         [JsonProperty("Data")]
         public MAUIndicatorCard Data{ get; set; }

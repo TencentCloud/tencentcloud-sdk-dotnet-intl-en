@@ -25,70 +25,76 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Team ID.
+        /// <p>Team ID.</p>
         /// </summary>
         [JsonProperty("TeamId")]
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// Team name.
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("TeamName")]
         public string TeamName{ get; set; }
 
         /// <summary>
-        /// Admin user ID.
+        /// <p>Admin user ID.</p>
         /// </summary>
         [JsonProperty("AdminUserId")]
         public string AdminUserId{ get; set; }
 
         /// <summary>
-        /// Admin account.
+        /// <p>Admin account.</p>
         /// </summary>
         [JsonProperty("AdminUserAccount")]
         public string AdminUserAccount{ get; set; }
 
         /// <summary>
-        /// Admin username.
+        /// <p>Admin username.</p>
         /// </summary>
         [JsonProperty("AdminUserName")]
         public string AdminUserName{ get; set; }
 
         /// <summary>
-        /// Number of team members.
+        /// <p>Number of team members.</p>
         /// </summary>
         [JsonProperty("MemberCount")]
         public long? MemberCount{ get; set; }
 
         /// <summary>
-        /// Team registration link.
+        /// <p>Team registration link.</p>
         /// </summary>
         [JsonProperty("RegisterLink")]
         public string RegisterLink{ get; set; }
 
         /// <summary>
-        /// Team role types. 
+        /// <p>Team role types.</p>
         /// </summary>
         [JsonProperty("TeamRoleTypeList")]
         public long?[] TeamRoleTypeList{ get; set; }
 
         /// <summary>
-        /// Associated team ID.
+        /// <p>Associated team ID.</p>
         /// </summary>
         [JsonProperty("RelatedTeamId")]
         public long? RelatedTeamId{ get; set; }
 
         /// <summary>
-        /// Team expiration time. 0 indicates no expiration.
+        /// <p>Team expiration time. 0 indicates no expiration.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+        /// <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>Information of multiple team admin users.</p>
+        /// </summary>
+        [JsonProperty("AdminUsers")]
+        public TeamAdminUserInfo[] AdminUsers{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "RelatedTeamId", this.RelatedTeamId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "AdminUsers.", this.AdminUsers);
         }
     }
 }

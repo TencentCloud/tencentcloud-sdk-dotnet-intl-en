@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Rce.V20260130.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class RegisterEvent : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>The result of the register</p>
+        /// </summary>
+        [JsonProperty("RegisterResult")]
+        public Result RegisterResult{ get; set; }
+
+        /// <summary>
+        /// <p>The detail information of the user</p>
+        /// </summary>
+        [JsonProperty("UserInfo")]
+        public User UserInfo{ get; set; }
+
+        /// <summary>
+        /// <p>The personal information of the account when registered</p>
+        /// </summary>
+        [JsonProperty("Person")]
+        public Person Person{ get; set; }
+
+        /// <summary>
+        /// <p>The billing address the user provided when registered</p>
+        /// </summary>
+        [JsonProperty("BillingAddress")]
+        public Address BillingAddress{ get; set; }
+
+        /// <summary>
+        /// <p>The delivery address the user provided when registered</p>
+        /// </summary>
+        [JsonProperty("DeliveryAddress")]
+        public Address DeliveryAddress{ get; set; }
+
+        /// <summary>
+        /// <p>The detail information of the inviter who invited the user to your business</p>
+        /// </summary>
+        [JsonProperty("Inviter")]
+        public Inviter Inviter{ get; set; }
+
+        /// <summary>
+        /// <p>The custom parameters agreed with RCE. An array of objects in K:V format. e.g.[{"Key": "ApproverName", "Value": "bob"},{"Key":"ApproverPhone","Value": "+86131****5678"}]</p>
+        /// </summary>
+        [JsonProperty("Cust")]
+        public Cust[] Cust{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamObj(map, prefix + "RegisterResult.", this.RegisterResult);
+            this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
+            this.SetParamObj(map, prefix + "Person.", this.Person);
+            this.SetParamObj(map, prefix + "BillingAddress.", this.BillingAddress);
+            this.SetParamObj(map, prefix + "DeliveryAddress.", this.DeliveryAddress);
+            this.SetParamObj(map, prefix + "Inviter.", this.Inviter);
+            this.SetParamArrayObj(map, prefix + "Cust.", this.Cust);
+        }
+    }
+}
+

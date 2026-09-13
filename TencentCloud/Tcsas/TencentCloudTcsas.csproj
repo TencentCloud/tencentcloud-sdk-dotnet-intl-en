@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4FE02EAD-36EB-3BF7-AED6-3FB3FCFD4DB8}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1353</VersionPrefix>
+    <VersionPrefix>3.0.1394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -211,6 +211,8 @@
     <Compile Include="V20250106\Models\DescribeMNGAppSecretRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGAppSecretResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGAppSecretResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAuditDetailAppAuditInfo.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGAuditListAppInfoResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGCategoryRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGCategoryResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGDomainACLRequest.cs" />
@@ -270,6 +272,13 @@
     <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateListResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGSubscribeMessageTemplateResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNGVersionAuditListResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNGVersionResponse.cs" />
@@ -288,6 +297,8 @@
     <Compile Include="V20250106\Models\DescribeMNPApprovalListRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPApprovalListResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAuditDetailAppAuditInfo.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPAuditListAppInfoResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPCategoryRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPCategoryResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPDomainACLRequest.cs" />
@@ -345,6 +356,13 @@
     <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPSubscribeMessageTemplateResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPTeamMerchantInfoRes.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditDetailRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditDetailResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditDetailResponse.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditInfoResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditListRequest.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditListResp.cs" />
+    <Compile Include="V20250106\Models\DescribeMNPVersionAuditListResponse.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionRequest.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResp.cs" />
     <Compile Include="V20250106\Models\DescribeMNPVersionResponse.cs" />
@@ -480,6 +498,7 @@
     <Compile Include="V20250106\Models\RollbackMNPVersionResponse.cs" />
     <Compile Include="V20250106\Models\StringData.cs" />
     <Compile Include="V20250106\Models\SubscribeMessageTemplateLibraryKeywordI18nInfoResp.cs" />
+    <Compile Include="V20250106\Models\TeamAdminUserInfo.cs" />
     <Compile Include="V20250106\Models\UnbindMNPPaymentMerchantRequest.cs" />
     <Compile Include="V20250106\Models\UnbindMNPPaymentMerchantResponse.cs" />
     <Compile Include="V20250106\Models\UnbindPaymentMerchantRequest.cs" />

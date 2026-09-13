@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.intl.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1392";
+       private const string sdkVersion = "SDK_NET_3.0.1394";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Rce.V20260130
         public AssessEnvironmentRiskResponse AssessEnvironmentRiskSync(AssessEnvironmentRiskRequest req)
         {
             return InternalRequestAsync<AssessEnvironmentRiskResponse>(req, "AssessEnvironmentRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.
+        /// </summary>
+        /// <param name="req"><see cref="ReportEventRequest"/></param>
+        /// <returns><see cref="ReportEventResponse"/></returns>
+        public Task<ReportEventResponse> ReportEvent(ReportEventRequest req)
+        {
+            return InternalRequestAsync<ReportEventResponse>(req, "ReportEvent");
+        }
+
+        /// <summary>
+        /// Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.
+        /// </summary>
+        /// <param name="req"><see cref="ReportEventRequest"/></param>
+        /// <returns><see cref="ReportEventResponse"/></returns>
+        public ReportEventResponse ReportEventSync(ReportEventRequest req)
+        {
+            return InternalRequestAsync<ReportEventResponse>(req, "ReportEvent")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

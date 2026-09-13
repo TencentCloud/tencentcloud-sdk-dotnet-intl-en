@@ -25,25 +25,25 @@ namespace TencentCloud.Tcsas.V20250106.Models
     {
         
         /// <summary>
-        /// Pagination offset.
+        /// <p>Pagination offset.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page.
+        /// <p>Pagination count.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Platform ID.
+        /// <p>Platform ID.</p>
         /// </summary>
         [JsonProperty("PlatformId")]
         public string PlatformId{ get; set; }
 
         /// <summary>
-        /// Search keyword (team name).
+        /// <p>Team name.</p>
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
