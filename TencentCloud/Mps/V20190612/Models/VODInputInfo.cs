@@ -25,37 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p><em>Bucket ID</em> where the media processing object file resides</p>
+        /// 
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// <p>Region of the Bucket where the media processing object file resides</p>
+        /// 
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>Input path of the media processing object file</p>
+        /// 
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }
 
         /// <summary>
-        /// <p>VOD application ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+        /// 
         /// </summary>
         [JsonProperty("VodBasic")]
         public long? VodBasic{ get; set; }
 
         /// <summary>
-        /// <p>VOD Standard Edition FileId</p>
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

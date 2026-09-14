@@ -25,16 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Top Speed Codec type. Available values:
-        /// <li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
-        /// <li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
-        /// Leave it blank to keep it unchanged.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Upper limit of video bitrate. Leave blank to keep unchanged.
+        /// 
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public long? MaxVideoBitrate{ get; set; }

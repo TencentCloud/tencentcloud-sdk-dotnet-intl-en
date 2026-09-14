@@ -48,6 +48,12 @@ namespace TencentCloud.Tcsas.V20250106.Models
         [JsonProperty("MerchantName")]
         public string MerchantName{ get; set; }
 
+        /// <summary>
+        /// <p>Payment currency.</p>
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcsas.V20250106.Models
             this.SetParamSimple(map, prefix + "ApprovalStatus", this.ApprovalStatus);
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "MerchantName", this.MerchantName);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
         }
     }
 }

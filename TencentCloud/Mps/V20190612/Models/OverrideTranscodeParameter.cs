@@ -25,59 +25,59 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
+        /// Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Valid values:
-        /// <li>0: retain</li>
-        /// <li>1: remove</li>
+        /// Indicates whether to remove video data. Parameter value:
+        /// <li>`0`: retention;</li>
+        /// <li>1: Remove.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio data. Valid values:
-        /// <li>0: retain</li>
-        /// <li>1: remove</li>
+        /// Indicates whether to remove audio data. Parameter value:
+        /// <li>`0`: retention;</li>
+        /// <li>1: Remove.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameter.
+        /// Video stream configuration parameters.
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfoForUpdate VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameter.
+        /// Audio stream configuration parameters.
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// Top Speed Codec transcoding parameter.
+        /// 
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
-        /// Subtitle stream configuration parameter.
+        /// Subtitle stream configuration parameters.
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// Specifies the external audio track parameter.
+        /// External audio track parameter.
         /// </summary>
         [JsonProperty("AddonAudioStream")]
         public MediaInputInfo[] AddonAudioStream{ get; set; }
 
         /// <summary>
-        /// Extension field for transcoding.
+        /// Transcoding extension field.
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

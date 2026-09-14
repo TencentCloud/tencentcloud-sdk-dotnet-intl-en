@@ -25,51 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// ID of a watermarking template.
+        /// <p>Watermark template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Custom watermark parameter, which is valid if `Definition` is 0.
-        /// This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
-        /// Custom watermark parameter is not available for screenshot.
+        /// <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawWatermarkParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// Text content of up to 100 characters. This field is required only when the watermark type is text.
-        /// Text watermark is not available for screenshot.
+        /// <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
         /// <summary>
-        /// SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
-        /// SVG watermark is not available for screenshot.
+        /// <p>SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.<br>SVG watermark does not support screenshot watermarking.</p>
         /// </summary>
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }
 
         /// <summary>
-        /// Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
-        /// <li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
-        /// <li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
-        /// <li>If the value is less than 0 (for example, -n), a watermark will appear n seconds before the end of a video.</li>
-        /// 
-        /// Note: It is only used for video scenarios. Screenshots are not supported.
+        /// <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a watermark, in seconds.
-        /// <li>If not set or set to 0, a watermark will last until the end of a video.</li>
-        /// <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-        /// <li>If the value is less than 0 (for example, -n), a watermark will disappear n seconds before the end of a video.</li>
-        /// 
-        /// Note: It is only used for video scenarios. Screenshots are not supported.
+        /// <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

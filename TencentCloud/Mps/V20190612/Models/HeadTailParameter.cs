@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Opening scene list.
+        /// 
         /// </summary>
         [JsonProperty("HeadSet")]
         public MediaInputInfo[] HeadSet{ get; set; }
 
         /// <summary>
-        /// Ending list.
+        /// 
         /// </summary>
         [JsonProperty("TailSet")]
         public MediaInputInfo[] TailSet{ get; set; }

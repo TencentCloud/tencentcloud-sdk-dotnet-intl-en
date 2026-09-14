@@ -25,15 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+        /// 
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// Reference Type.
-        /// Note:
-        /// 1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+        /// 
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }

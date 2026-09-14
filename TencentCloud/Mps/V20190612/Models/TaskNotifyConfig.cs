@@ -67,7 +67,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+        /// 
         /// </summary>
         [JsonProperty("AwsSQS")]
         public AwsSQS AwsSQS{ get; set; }

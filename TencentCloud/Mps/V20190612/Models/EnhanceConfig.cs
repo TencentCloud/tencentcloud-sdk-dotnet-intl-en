@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video enhancement configuration.
+        /// 
         /// </summary>
         [JsonProperty("VideoEnhance")]
         public VideoEnhanceConfig VideoEnhance{ get; set; }
 
         /// <summary>
-        /// Audio enhancement configuration.
+        /// 
         /// </summary>
         [JsonProperty("AudioEnhance")]
         public AudioEnhanceConfig AudioEnhance{ get; set; }

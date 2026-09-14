@@ -25,8 +25,8 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Resource ID. The field content is user-defined.
-        /// It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+        /// Resource tagging. The field content is user-customized;
+        /// Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
         /// This field corresponds to the cid field in the Speke request.
         /// Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
         /// </summary>
@@ -34,27 +34,28 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+        /// DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
         /// 
-        /// Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+        /// Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
         /// </summary>
         [JsonProperty("KeyServerUrl")]
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+        /// Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }
 
         /// <summary>
         /// Encryption method. Valid values:
-        /// cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-        /// cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+        /// cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+        /// cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+        /// 
         /// If it is left unspecified:
         /// Use cbcs for FairPlay by default.
         /// Use cenc for PlayReady and Widevine by default.
-        /// Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+        /// WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
         /// Use cenc for Widevine+PlayReady by default.
         /// </summary>
         [JsonProperty("EncryptionMethod")]
@@ -62,7 +63,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Substream encryption rule. Default value: preset0.
-        /// preset 0: use the same key to encrypt all substreams
+        /// preset 0: use the same key to encrypt all substreams;
         /// preset1: use different keys for each substream
         /// </summary>
         [JsonProperty("EncryptionPreset")]

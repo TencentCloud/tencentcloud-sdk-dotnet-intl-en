@@ -25,21 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// Capability configuration switch. Valid values:
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type, available values:
-        /// <li>HDR10</li>
-        /// <li>HLG</li>
-        /// Default Value: HDR10.
-        /// Note: The video encoding method should be h264 or h265.
-        /// Note: The video encoding bit depth is 10.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

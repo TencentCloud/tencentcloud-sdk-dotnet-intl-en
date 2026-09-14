@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public SmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
 
         /// <summary>
-        /// <p>id of the subtitle removal suppression template.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubtitleEmbedId")]
         public long? SubtitleEmbedId{ get; set; }
 
         /// <summary>
-        /// <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+        /// 
         /// </summary>
         [JsonProperty("UseOriginalPos")]
         public long? UseOriginalPos{ get; set; }
 
         /// <summary>
-        /// <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+        /// 
         /// </summary>
         [JsonProperty("UseOriginalSize")]
         public long? UseOriginalSize{ get; set; }

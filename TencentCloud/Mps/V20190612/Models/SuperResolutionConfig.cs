@@ -25,27 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// Capability configuration switch. Available values:
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type, available values:
-        /// <li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-        /// <li>hq: Targeting high-resolution video super-resolution.</li>
-        /// Default value: lq.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Super-resolution multiple, optional value:
-        /// <li>2: Currently only support 2x super resolution.</li>
-        /// Default value: 2.
+        /// 
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

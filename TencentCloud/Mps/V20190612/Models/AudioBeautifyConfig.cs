@@ -25,19 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether to enable the feature. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF` </li>
-        /// Default value: `ON`.
+        /// <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type. Multiple selections allowed. Valid values:
-        /// <li>declick: noise removal</li>
-        /// <li>deesser: Dental Click Suppression</li>
-        /// Default value: declick.
+        /// <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
         /// </summary>
         [JsonProperty("Types")]
         public string[] Types{ get; set; }

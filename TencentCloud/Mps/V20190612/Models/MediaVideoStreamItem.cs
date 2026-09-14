@@ -25,78 +25,73 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Bitrate of a video stream in bps.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bitrate of the video stream. Unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Height of a video stream in px.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Height of a video stream. Unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Width of a video stream in px.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Video stream width in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Video stream codec, such as h264.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Video stream encoding format, for example, h264.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Frame rate in Hz.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Frame rate. Measurement unit: hz.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Colorspace.
+        /// 
         /// </summary>
         [JsonProperty("ColorPrimaries")]
         public string ColorPrimaries{ get; set; }
 
         /// <summary>
-        /// Colorspace.
+        /// 
         /// </summary>
         [JsonProperty("ColorSpace")]
         public string ColorSpace{ get; set; }
 
         /// <summary>
-        /// Colorspace.
+        /// 
         /// </summary>
         [JsonProperty("ColorTransfer")]
         public string ColorTransfer{ get; set; }
 
         /// <summary>
-        /// HDR type.
+        /// 
         /// </summary>
         [JsonProperty("HdrType")]
         public string HdrType{ get; set; }
 
         /// <summary>
-        /// Video Codecs.
+        /// 
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// Numerator of the frame rate
+        /// 
         /// </summary>
         [JsonProperty("FpsNumerator")]
         public long? FpsNumerator{ get; set; }
 
         /// <summary>
-        /// Denominator of the frame rate
+        /// 
         /// </summary>
         [JsonProperty("FpsDenominator")]
         public long? FpsDenominator{ get; set; }

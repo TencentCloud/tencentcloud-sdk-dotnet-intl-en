@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Request decryption key uri address.
+        /// 
         /// </summary>
         [JsonProperty("Uri")]
         public string Uri{ get; set; }
 
         /// <summary>
-        /// Encryption key (32-byte hexadecimal string).
+        /// 
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Encryption initialization vector (32-byte hexadecimal string).
+        /// 
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }

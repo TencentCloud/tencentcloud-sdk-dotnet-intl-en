@@ -37,10 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public RuleConditionItem[] Conditions{ get; set; }
 
         /// <summary>
-        /// Logical operator for the list of conditions. Valid values:
         /// 
-        /// - &&: logical AND
-        /// - ||: logical OR
         /// </summary>
         [JsonProperty("Linker")]
         public string Linker{ get; set; }

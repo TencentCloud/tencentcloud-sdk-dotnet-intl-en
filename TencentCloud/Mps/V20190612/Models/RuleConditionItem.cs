@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Key of the quality inspection item condition.
+        /// 
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Value corresponding to the condition.
+        /// 
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

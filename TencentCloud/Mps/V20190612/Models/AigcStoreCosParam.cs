@@ -25,21 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+        /// 
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+        /// 
         /// </summary>
         [JsonProperty("CosBucketRegion")]
         public string CosBucketRegion{ get; set; }
 
         /// <summary>
-        /// Store to the bucket path of cos.
-        /// Option.
-        /// Example value: my_file.
+        /// 
         /// </summary>
         [JsonProperty("CosBucketPath")]
         public string CosBucketPath{ get; set; }

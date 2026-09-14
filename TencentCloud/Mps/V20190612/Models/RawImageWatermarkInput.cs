@@ -25,34 +25,34 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input content of watermark image. JPEG and PNG images are supported.
+        /// Input content of the watermark image. jpeg and png image formats are supported.
         /// </summary>
         [JsonProperty("ImageContent")]
         public MediaInputInfo ImageContent{ get; set; }
 
         /// <summary>
-        /// Watermark width. % and px formats are supported:
-        /// <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
-        /// <li>If the string ends in px, the `Width` of the watermark will be in px; for example, `100px` means that `Width` is 100 px.</li>
+        /// Width of a watermark, supporting two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+        /// <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
         /// Default value: 10%.
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// Watermark height. % and px formats are supported:
-        /// <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
-        /// <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px.</li>
-        /// Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+        /// Height of a watermark. Supports two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+        /// <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
+        /// Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
         /// <summary>
-        /// Repeat type of an animated watermark. Valid values:
-        /// <li>`once`: no longer appears after watermark playback ends.</li>
-        /// <li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
-        /// <li>`repeat` (default): repeats the playback until the video ends.</li>
+        /// Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
+        /// <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
+        /// <li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+        /// <li>repeat: Watermark loops until the video ends (default value).</li>
         /// </summary>
         [JsonProperty("RepeatType")]
         public string RepeatType{ get; set; }

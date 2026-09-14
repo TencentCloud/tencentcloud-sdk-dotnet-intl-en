@@ -25,22 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Reference video url. Must be external network accessible.
-        /// This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-        /// The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-        /// If the reference video is a video for editing, the first and last frames cannot be defined.
+        /// <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
         /// </summary>
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+        /// <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
         /// </summary>
         [JsonProperty("ReferType")]
         public string ReferType{ get; set; }
 
         /// <summary>
-        /// The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+        /// <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
         /// </summary>
         [JsonProperty("KeepOriginalSound")]
         public string KeepOriginalSound{ get; set; }

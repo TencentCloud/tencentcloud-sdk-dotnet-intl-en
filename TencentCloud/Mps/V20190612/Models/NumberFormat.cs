@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start value of the `{number}` variable. Default value: 0.
+        /// The starting value of the `{number}` variable. Default value: 0.
         /// </summary>
         [JsonProperty("InitialValue")]
         public ulong? InitialValue{ get; set; }
 
         /// <summary>
-        /// Increment of the `{number}` variable. Default value: 1.
+        /// The growth step length of the `{number}` variable, with a default value of 1.
         /// </summary>
         [JsonProperty("Increment")]
         public ulong? Increment{ get; set; }
 
         /// <summary>
-        /// Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+        /// Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
         /// </summary>
         [JsonProperty("MinLength")]
         public ulong? MinLength{ get; set; }
 
         /// <summary>
-        /// Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+        /// Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
         /// </summary>
         [JsonProperty("PlaceHolder")]
         public string PlaceHolder{ get; set; }

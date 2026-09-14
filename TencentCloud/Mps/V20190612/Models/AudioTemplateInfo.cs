@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? AudioChannel{ get; set; }
 
         /// <summary>
-        /// <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+        /// 
         /// </summary>
         [JsonProperty("TrackChannelInfo")]
         public AudioTrackChannelInfo TrackChannelInfo{ get; set; }

@@ -25,40 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Bitrate of an audio stream in bps.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bitrate of the audio stream. Unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Sample rate of an audio stream in Hz.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sampling rate of the audio stream. Unit: hz.
         /// </summary>
         [JsonProperty("SamplingRate")]
         public long? SamplingRate{ get; set; }
 
         /// <summary>
-        /// Audio stream codec, such as aac.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio stream encoding format, for example, aac.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Number of audio channels, for example 2.
+        /// 
         /// </summary>
         [JsonProperty("Channel")]
         public long? Channel{ get; set; }
 
         /// <summary>
-        /// Audio Codecs.
+        /// 
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// Audio loudness.
+        /// 
         /// </summary>
         [JsonProperty("Loudness")]
         public float? Loudness{ get; set; }

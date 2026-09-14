@@ -25,26 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Whether audio mixing is enabled. Value range:
-        /// 0: Disable audio mixing
-        /// 1: Enable audio mixing
-        /// Default value: 0
+        /// 
         /// </summary>
         [JsonProperty("ChannelsRemix")]
         public long? ChannelsRemix{ get; set; }
 
         /// <summary>
-        /// Merge audio track input type, available values:
-        /// track: Indicates usage of the audio track id.
-        /// track_channel: Indicates usage of audio track id and sound channel id.
-        /// Default: track.
-        /// Note: If the original video is multichannel, recommend using track_channel.
+        /// 
         /// </summary>
         [JsonProperty("SelectType")]
         public string SelectType{ get; set; }
 
         /// <summary>
-        /// Audio track info
+        /// 
         /// </summary>
         [JsonProperty("InputTrackInfo")]
         public TrackInfo[] InputTrackInfo{ get; set; }

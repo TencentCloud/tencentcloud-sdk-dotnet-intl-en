@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -73,6 +73,27 @@ namespace TencentCloud.Mps.V20190612
         public BatchProcessMediaResponse BatchProcessMediaSync(BatchProcessMediaRequest req)
         {
             return InternalRequestAsync<BatchProcessMediaResponse>(req, "BatchProcessMedia")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeVoiceRequest"/></param>
+        /// <returns><see cref="ChangeVoiceResponse"/></returns>
+        public Task<ChangeVoiceResponse> ChangeVoice(ChangeVoiceRequest req)
+        {
+            return InternalRequestAsync<ChangeVoiceResponse>(req, "ChangeVoice");
+        }
+
+        /// <summary>
+        /// Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
+        /// </summary>
+        /// <param name="req"><see cref="ChangeVoiceRequest"/></param>
+        /// <returns><see cref="ChangeVoiceResponse"/></returns>
+        public ChangeVoiceResponse ChangeVoiceSync(ChangeVoiceRequest req)
+        {
+            return InternalRequestAsync<ChangeVoiceResponse>(req, "ChangeVoice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -371,7 +392,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create an AIGC documentation generation video task.
+        /// Creates an AIGC document-to-video task.
         /// This API is used to query tasks.
         /// </summary>
         /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
@@ -382,7 +403,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to create an AIGC documentation generation video task.
+        /// Creates an AIGC document-to-video task.
         /// This API is used to query tasks.
         /// </summary>
         /// <param name="req"><see cref="CreateDocToVideoTaskRequest"/></param>
@@ -2584,6 +2605,31 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
+        /// Modify the status of an AIGC document-to-video task.
+        /// 
+        /// Contains two actions: confirm and regenerate.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocToVideoTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDocToVideoTaskStatusResponse"/></returns>
+        public Task<ModifyDocToVideoTaskStatusResponse> ModifyDocToVideoTaskStatus(ModifyDocToVideoTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDocToVideoTaskStatusResponse>(req, "ModifyDocToVideoTaskStatus");
+        }
+
+        /// <summary>
+        /// Modify the status of an AIGC document-to-video task.
+        /// 
+        /// Contains two actions: confirm and regenerate.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocToVideoTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDocToVideoTaskStatusResponse"/></returns>
+        public ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatusSync(ModifyDocToVideoTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDocToVideoTaskStatusResponse>(req, "ModifyDocToVideoTaskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify a custom image sprite generating template.
         /// </summary>
         /// <param name="req"><see cref="ModifyImageSpriteTemplateRequest"/></param>
@@ -2990,18 +3036,18 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-        /// - Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+        /// This API is used to initiate a processing task for URL video links or media files in COS. Features include:
+        /// - Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
         /// - Adaptive bitrate streaming conversion for audios/videos.
         /// - Video-to-GIF conversion.
-        /// - Time point screenshot of videos.
+        /// - Screenshot taking at specified time points.
         /// - Sampled screenshot of videos.
         /// - Image sprite of video screenshots.
-        /// - Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+        /// - Media quality inspection (such as media format diagnosis, audio/video content detection, and no-reference scoring, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
         /// - Smart subtitle (such as subtitle generation and translation).
         /// - Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
-        /// - Smart content moderation (such as pornography detection and sensitive information detection).
-        /// - Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+        /// - Intelligent content moderation (such as pornography detection and sensitive information detection).
+        /// -.
         /// - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>
@@ -3012,18 +3058,18 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-        /// - Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+        /// This API is used to initiate a processing task for URL video links or media files in COS. Features include:
+        /// - Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
         /// - Adaptive bitrate streaming conversion for audios/videos.
         /// - Video-to-GIF conversion.
-        /// - Time point screenshot of videos.
+        /// - Screenshot taking at specified time points.
         /// - Sampled screenshot of videos.
         /// - Image sprite of video screenshots.
-        /// - Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+        /// - Media quality inspection (such as media format diagnosis, audio/video content detection, and no-reference scoring, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
         /// - Smart subtitle (such as subtitle generation and translation).
         /// - Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
-        /// - Smart content moderation (such as pornography detection and sensitive information detection).
-        /// - Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+        /// - Intelligent content moderation (such as pornography detection and sensitive information detection).
+        /// -.
         /// - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
         /// </summary>
         /// <param name="req"><see cref="ProcessMediaRequest"/></param>

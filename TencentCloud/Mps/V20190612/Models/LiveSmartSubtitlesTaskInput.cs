@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Smart subtitle template ID.	
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// User extension field, which does not need to be filled in for general scenarios.
+        /// 
         /// </summary>
         [JsonProperty("UserExtPara")]
         public string UserExtPara{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// URL of a video.
+        /// Video URL.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

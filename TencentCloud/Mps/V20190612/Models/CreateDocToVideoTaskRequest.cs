@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public DocToVideoCosInfo CosInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

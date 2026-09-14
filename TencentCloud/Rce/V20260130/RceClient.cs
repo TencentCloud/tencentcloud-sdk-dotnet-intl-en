@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.intl.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1395";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Rce.V20260130
         public AssessEnvironmentRiskResponse AssessEnvironmentRiskSync(AssessEnvironmentRiskRequest req)
         {
             return InternalRequestAsync<AssessEnvironmentRiskResponse>(req, "AssessEnvironmentRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Used to obtain real-time risk information for events. It evaluates and returns risk decision results, risk scores, and risk tags based on device risk, environmental risk, account risk, behavioral risk, and historical reported event data for critical events in your business.
+        /// </summary>
+        /// <param name="req"><see cref="AssessRiskRequest"/></param>
+        /// <returns><see cref="AssessRiskResponse"/></returns>
+        public Task<AssessRiskResponse> AssessRisk(AssessRiskRequest req)
+        {
+            return InternalRequestAsync<AssessRiskResponse>(req, "AssessRisk");
+        }
+
+        /// <summary>
+        /// Used to obtain real-time risk information for events. It evaluates and returns risk decision results, risk scores, and risk tags based on device risk, environmental risk, account risk, behavioral risk, and historical reported event data for critical events in your business.
+        /// </summary>
+        /// <param name="req"><see cref="AssessRiskRequest"/></param>
+        /// <returns><see cref="AssessRiskResponse"/></returns>
+        public AssessRiskResponse AssessRiskSync(AssessRiskRequest req)
+        {
+            return InternalRequestAsync<AssessRiskResponse>(req, "AssessRisk")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

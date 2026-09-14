@@ -25,41 +25,37 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Notification type:
-        /// TDMQ-CMQ: Message Queue
-        /// "URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
         /// 
-        /// <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
         /// <summary>
-        /// HTTP callback URL. This is required if NotifyType is URL.
+        /// 
         /// </summary>
         [JsonProperty("NotifyUrl")]
         public string NotifyUrl{ get; set; }
 
         /// <summary>
-        /// Queue and Topic models are provided.
+        /// 
         /// </summary>
         [JsonProperty("CmqModel")]
         public string CmqModel{ get; set; }
 
         /// <summary>
-        /// Region when NotifyType is set to TDMQ-CMQ. For example, sh or bj.
+        /// 
         /// </summary>
         [JsonProperty("CmqRegion")]
         public string CmqRegion{ get; set; }
 
         /// <summary>
-        /// This field is valid when the model is Queue. It indicates the name of the TDMQ for CMQ queue for receiving event notifications.
+        /// 
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// This field is valid when the model is Topic. It indicates the name of the TDMQ for CMQ topic for receiving event notifications.
+        /// 
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

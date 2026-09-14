@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Audio noise reduction configuration.
+        /// 
         /// </summary>
         [JsonProperty("Denoise")]
         public AudioDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
-        /// Audio separation configuration.
+        /// 
         /// </summary>
         [JsonProperty("Separate")]
         public AudioSeparateConfig Separate{ get; set; }
 
         /// <summary>
-        /// Volume equalization configuration.
+        /// 
         /// </summary>
         [JsonProperty("VolumeBalance")]
         public VolumeBalanceConfig VolumeBalance{ get; set; }
 
         /// <summary>
-        /// Audio beautification configuration.
+        /// 
         /// </summary>
         [JsonProperty("Beautify")]
         public AudioBeautifyConfig Beautify{ get; set; }

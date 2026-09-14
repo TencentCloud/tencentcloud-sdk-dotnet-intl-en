@@ -28,37 +28,37 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Encryption type.
         /// 
         /// - simpleaes
-        /// Can only be used for HLS. format support: ts and mp4.
-        /// Only can be used in slice mode. cannot be used in singlefile mode.
+        /// Can only be used for HLS. Format support: ts and mp4.
+        /// Only slice mode can be used. singlefile mode cannot be used.
         /// 
         /// - fairplay:
-        /// Can only be used for HLS. the segment format can only be mp4.
-        /// Supports slice mode or singlefile mode.
+        /// Can only be used for HLS. The segment format can only be mp4.
+        /// Slice mode or singlefile mode can be used.
         /// 
         /// - widevine:
-        /// Can be used for HLS and DASH. the slice format can only be mp4.
-        /// Output HLS: specifies the slicing or singlefile mode can be used.
-        /// OutputOutput DASH]: can only be in singlefile mode.
+        /// Can be used for HLS and DASH. The segment format can only be mp4.
+        /// Output HLS: The slicing or singlefile mode can be used.
+        /// Output DASH: can only be in singlefile mode
         /// 
         /// - playready:
-        /// Can be used for HLS and DASH. the slice format can only be mp4.
-        /// Output HLS: specifies the slicing or singlefile mode can be used.
-        /// Output DASH: can only be in singlefile mode.
+        /// Can be used for HLS and DASH. The segment format can only be mp4.
+        /// Output HLS: The slicing or singlefile mode can be used.
+        /// Output DASH: can only be in singlefile mode
         /// 
         /// - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
-        /// Can only be used for HLS. valid values: mp4.
-        /// Supports slice mode or single file mode.
+        /// Can only be used for HLS. The segment format can only be mp4.
+        /// Slice mode or singlefile mode can be used.
         /// 
         /// - widevine+playready:
-        /// Applicable to HLS and MPEG-DASH. the format can only be mp4.
-        /// HLS format can use slice mode or single file mode.
-        /// Specifies that only singlefile mode can be used for MPEG-DASH.
+        /// Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
+        /// For HLS format, you can use the slicing mode or singlefile mode.
+        /// For MPEG-DASH, only singlefile mode can be used.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// SimpleAes encrypted information.
+        /// 
         /// </summary>
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }

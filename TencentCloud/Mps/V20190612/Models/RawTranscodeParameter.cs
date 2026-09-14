@@ -25,43 +25,43 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+        /// Muxing format. Available values: mp4, flv, hls, mp3, flac, ogg, and m4a. Among them, mp3, flac, ogg, and m4a are for audio-only files.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Valid values:
-        /// <li>0: retain;</li>
-        /// <li>1: remove.</li>
+        /// Indicates whether to remove video data. Parameter value:
+        /// <li>`0`: retention;</li>
+        /// <li>1: Remove.</li>
         /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio data. Valid values:
-        /// <li>0: retain;</li>
-        /// <li>1: remove.</li>
+        /// Whether to remove audio data. Parameter Value:
+        /// <li>`0`: retention;</li>
+        /// <li>1: Remove.</li>
         /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+        /// Video stream configuration parameters. This field is required when RemoveVideo is 0.
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+        /// Audio stream configuration parameters. This field is required when RemoveAudio is 0.
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// TESHD transcoding parameter.
+        /// TSC transcoding parameters.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// Audio/Video enhancement configuration
+        /// 
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// Subtitle parameter
+        /// 
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }

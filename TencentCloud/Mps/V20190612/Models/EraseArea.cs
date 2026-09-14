@@ -25,37 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// X-axis coordinate of the upper left corner of the region.
-        /// For example, when Unit is set to 1, which means using the percentage unit, 0.05 indicates that the horizontal distance from the top-left corner of the region to the top-left corner of the entire frame is 5% of the frame width.
+        /// <p>Top-left X-axis coordinate of the area.<br>For example, when Unit is 1, meaning percentage is used, 0.05 indicates the horizontal distance from the top-left corner of the area to the top-left corner of the entire frame is 5% of the frame width.</p>
         /// </summary>
         [JsonProperty("LeftTopX")]
         public float? LeftTopX{ get; set; }
 
         /// <summary>
-        /// Y-axis coordinate of the upper left corner.
-        /// For example, when Unit is set to 1, which means using the percentage unit, 0.1 indicates that the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the frame height.
+        /// <p>Y-coordinate of the upper left corner of the region.<br>For example, when Unit is 1, meaning usage percentage, 0.1 indicates the vertical distance from the upper left corner of the region to the upper left corner of the entire frame is 10% of the screen height.</p>
         /// </summary>
         [JsonProperty("LeftTopY")]
         public float? LeftTopY{ get; set; }
 
         /// <summary>
-        /// X-axis coordinate of the bottom-right corner of the region.
-        /// For example, when Unit is set to 1, which means using the percentage unit, 0.75 indicates that the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.
+        /// <p>X-coordinate of the bottom-right corner of the region.<br>For example, when Unit is 1, meaning percentage is used, 0.75 indicates the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
         /// </summary>
         [JsonProperty("RightBottomX")]
         public float? RightBottomX{ get; set; }
 
         /// <summary>
-        /// Y-axis coordinate of the bottom-right corner of the region.
-        /// For example, when Unit is set to 1, which means using the percentage unit, 0.9 indicates that the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the frame height.
+        /// <p>Y-coordinate of the region's bottom-right corner.<br>For example, when Unit is 1 (percentage), 0.9 means the vertical distance from the bottom-right corner of the region to the top-left corner of the entire frame is 90% of the screen height.</p>
         /// </summary>
         [JsonProperty("RightBottomY")]
         public float? RightBottomY{ get; set; }
 
         /// <summary>
-        /// Coordinate unit
-        /// -Percentage
-        /// - 2 pixel values
+        /// <p>Coordinate unit</p><ul><li>1 Percentage</li><li>2 Pixel value</li></ul>
         /// </summary>
         [JsonProperty("Unit")]
         public ulong? Unit{ get; set; }

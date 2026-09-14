@@ -25,35 +25,35 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Type of input source object. valid values:.
-        /// <Li>COS: specifies the cos origin.</li>
-        /// <Li>URL: the url source.</li>
-        /// <Li>AWS-S3: aws source. currently only supports transcoding tasks.</li>
-        /// <Li>VOD: video-on-demand pro edition (VOD Pro). </li>
+        /// Type of the input source object. Supported values:
+        /// <li>COS: COS origin</li>
+        /// <li> URL: URL source</li>
+        /// <li> AWS-S3: AWS source, currently only support transcoding task </li>
+        /// <li> VOD: VOD Pro Edition </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+        /// Required when `Type` is `COS`. It represents the COS object information for media processing.
         /// </summary>
         [JsonProperty("CosInputInfo")]
         public CosInputInfo CosInputInfo{ get; set; }
 
         /// <summary>
-        /// Valid when Type is URL. This item is required and indicates the media processing URL object information.
+        /// 
         /// </summary>
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }
 
         /// <summary>
-        /// Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+        /// 
         /// </summary>
         [JsonProperty("S3InputInfo")]
         public S3InputInfo S3InputInfo{ get; set; }
 
         /// <summary>
-        /// Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+        /// 
         /// </summary>
         [JsonProperty("VODInputInfo")]
         public VODInputInfo VODInputInfo{ get; set; }

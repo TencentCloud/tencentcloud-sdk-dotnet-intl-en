@@ -25,78 +25,67 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Container, such as m4a and mp4.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Container type, for example, m4a and mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Sum of the average bitrate of a video stream and that of an audio stream in bps.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum value of the height of a video stream in px.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum height of a video stream. Unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum value of the width of a video stream in px.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Maximum video stream width in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Video duration in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Video duration, unit: seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Selected angle during video recording in degrees.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Selection angle during video shooting. Unit: degree.
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
 
         /// <summary>
         /// Video stream information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
         /// <summary>
         /// Audio stream information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// Video duration in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Video duration, unit: seconds.
         /// </summary>
         [JsonProperty("VideoDuration")]
         public float? VideoDuration{ get; set; }
 
         /// <summary>
-        /// Audio duration in seconds.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Audio duration, in seconds.
         /// </summary>
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }

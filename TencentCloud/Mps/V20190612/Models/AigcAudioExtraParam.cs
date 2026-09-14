@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Resource ID. Specify this based on your needs.</p>
+        /// 
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }

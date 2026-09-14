@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Smart erasing template id.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawSmartEraseParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+        /// 
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideEraseParameter OverrideParameter{ get; set; }
@@ -49,15 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Output path of the file, which can be a relative or absolute path.
-        /// To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-        /// Relative path example:
-        /// <li>Filename_{Variable name}.{format}</li>
-        /// <li>Filename.{format}</li>
-        /// Absolute path example:
-        /// <li>/Custom path/Filename_{Variable name}.{format}</li>
         /// 
-        /// **Note**: Currently does not support the `BatchProcessMedia` API.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

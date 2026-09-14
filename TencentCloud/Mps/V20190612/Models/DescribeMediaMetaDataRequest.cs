@@ -25,10 +25,16 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input information of the file that needs to get meta information.
+        /// <p>Input information of the file that needs to get meta information.</p>
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
+
+        /// <summary>
+        /// <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "InputInfo.", this.InputInfo);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }
