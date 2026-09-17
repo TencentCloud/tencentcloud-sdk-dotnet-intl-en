@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Frame-specific tag name.
+        /// 
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Category list of frame-specific tag names. `CategorySet.N` indicates the N+1-level category.
-        /// For example, if the `Tag` is "tower", and `CategorySet` contains two elements (`CategorySet.0` is "scene", and `CategorySet.1` is "architecture"), then the frame-specific tag is "tower", the first-level category is "scene", and the second-level category is "architecture".
+        /// 
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }
 
         /// <summary>
-        /// Confidence of intelligently generated frame-specific tag between 0 and 100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

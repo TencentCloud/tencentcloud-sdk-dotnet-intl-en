@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Method of receiving event notifications. "PUSH" is [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), "PULL" is [reliable callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+        /// 
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for domain names or IP addresses to receive V3 version event notifications.
+        /// 
         /// </summary>
         [JsonProperty("NotificationUrl")]
         public string NotificationUrl{ get; set; }
 
         /// <summary>
-        /// Whether to receive [video upload complete](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+        /// 
         /// </summary>
         [JsonProperty("UploadMediaCompleteEventSwitch")]
         public string UploadMediaCompleteEventSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to receive [video deletion completion](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notification. "OFF" means the event notification is ignored, and "ON" means to receive event notifications.
+        /// 
         /// </summary>
         [JsonProperty("DeleteMediaCompleteEventSwitch")]
         public string DeleteMediaCompleteEventSwitch{ get; set; }
 
         /// <summary>
-        /// Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, "ON" means to receive event notifications.
+        /// 
         /// </summary>
         [JsonProperty("PersistenceCompleteEventSwitch")]
         public string PersistenceCompleteEventSwitch{ get; set; }

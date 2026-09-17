@@ -25,61 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of a video analysis template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Video analysis template name. The length cannot exceed 64 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Video analysis template description, with a length limit of 256 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent Classification Task Control Parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public MPSAIAnalysisConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent tag task control parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("TagConfigure")]
         public MPSAIAnalysisConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the intelligent cover task.</p>
+        /// 
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public MPSAIAnalysisConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Task control parameters for intelligent frame tagging.</p>
+        /// 
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public MPSAIAnalysisConfigureInfo FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Task control parameter for intelligent splitting.</p>
+        /// 
         /// </summary>
         [JsonProperty("SplitConfigure")]
         public MPSAIAnalysisConfigureInfo SplitConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent highlights task control parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public MPSAIAnalysisConfigureInfo HighlightConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the intelligent video opening/closing credits task.</p>
+        /// 
         /// </summary>
         [JsonProperty("OpeningAndEndingConfigure")]
         public MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure{ get; set; }

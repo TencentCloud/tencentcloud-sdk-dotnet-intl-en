@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("QuotaType")]
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaLimit=Text, used to select ApiToken for quota limit.</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }

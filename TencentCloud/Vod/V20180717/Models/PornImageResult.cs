@@ -25,26 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The confidence score for the moderation result. Value range: 0-100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// The suggestion for handling the detected pornographic content. Valid values:
-        /// <li>pass/li>
-        /// <li>review</li>
-        /// <li>block</li>
+        /// 
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The label for the detected pornographic content. Valid values:
-        /// <li>porn</li>
-        /// <li>sexy</li>
-        /// <li>vulgar</li>
-        /// <li>intimacy</li>
+        /// 
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

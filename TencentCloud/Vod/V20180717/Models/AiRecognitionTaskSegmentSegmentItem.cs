@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File ID, which is valid only when a VOD file is processed and the subsegments generated through segmentation are also VOD files.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Split video segment URL.
+        /// 
         /// </summary>
         [JsonProperty("SegmentUrl")]
         public string SegmentUrl{ get; set; }
 
         /// <summary>
-        /// Confidence of split segment. Value range: 0-100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Start time offset of split segment in seconds.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of split segment in seconds.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Split cover image URL.
+        /// 
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
 
         /// <summary>
-        /// Special field, which should be ignored.
+        /// 
         /// </summary>
         [JsonProperty("SpecialInfo")]
         public string SpecialInfo{ get; set; }

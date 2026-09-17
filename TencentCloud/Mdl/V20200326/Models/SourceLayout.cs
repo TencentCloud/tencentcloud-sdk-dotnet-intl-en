@@ -25,19 +25,19 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
         /// </summary>
         [JsonProperty("LeftOffset")]
         public ulong? LeftOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
         /// </summary>
         [JsonProperty("RightOffset")]
         public ulong? RightOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Offset percentage of bottom margin, range 0-50
         /// </summary>
         [JsonProperty("BottomOffset")]
         public ulong? BottomOffset{ get; set; }

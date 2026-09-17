@@ -25,19 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Large model enhancement switch. Available values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-        /// <li>weak: weak;</li>
-        /// <li>NORMAL: The scaling group is normal.</li>
-        /// <li>strong: strong.</li>
-        /// Default value: normal.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,62 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subapplication ID.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The subapplication name.
+        /// 
         /// </summary>
         [JsonProperty("SubAppIdName")]
         public string SubAppIdName{ get; set; }
 
         /// <summary>
-        /// Subapplication overview.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Subapplication status. Valid values:
-        /// <li>On: enabled</li>
-        /// <li>Off: disabled</li>
-        /// <li>Destroying: terminating</li>
-        /// <li>Destroyed: terminated</li>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Mode of this application. Valid values:
-        /// -fileid: Only in fileid mode
-        /// -fileid+path: FileID & Path mode
-        /// Leave empty to select FileID mode by default
+        /// 
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Storage regions enabled for the sub-app.
+        /// 
         /// </summary>
         [JsonProperty("StorageRegions")]
         public string[] StorageRegions{ get; set; }
 
         /// <summary>
-        /// tag bound to the sub-application.
+        /// 
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }

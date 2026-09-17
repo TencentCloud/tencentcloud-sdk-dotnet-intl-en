@@ -25,42 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task type. Valid values:
-        /// <li>Classification: intelligent categorization</li>
-        /// <li>Cover: intelligent cover generating</li>
-        /// <li>Tag: intelligent tagging</li>
-        /// <li>FrameTag: intelligent frame tagging</li>
-        /// <li>Highlight: intelligent highlight generating</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
+        /// 
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
+        /// 
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
+        /// 
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
+        /// 
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
+        /// 
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }

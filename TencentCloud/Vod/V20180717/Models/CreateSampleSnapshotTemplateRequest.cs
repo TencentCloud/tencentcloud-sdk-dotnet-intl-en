@@ -25,83 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Sampling screenshot type, Valid value:
-        /// <li>Percent: by percent.</li>
-        /// <li>Time: By time interval.</li>
+        /// 
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
 
         /// <summary>
-        /// Sampling interval.
-        /// <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-        /// <li>When SampleType is Time, specify the sampling interval in seconds.</li>
+        /// 
         /// </summary>
         [JsonProperty("SampleInterval")]
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Sample screenshot template name. Length limit: 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
-        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
-        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-        /// The default value is 0.
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// The maximum value of screenshot height (or short side), value ranges from 0 to [128, 4096], measurement unit: px.
-        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
-        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
-        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
-        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
-        /// The default value is 0.
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Resolution adaptation, available values:
-        /// <li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-        /// <li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-        /// Default value: open.
+        /// 
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Image format. Value can be jpg and png. Default is jpg.
+        /// 
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-        /// <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-        /// <li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-        /// <li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-        /// <li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-        /// Default value: black.
+        /// 
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

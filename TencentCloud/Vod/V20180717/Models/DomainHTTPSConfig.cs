@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+        /// 
         /// </summary>
         [JsonProperty("CertExpireTime")]
         public string CertExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Certificate ID in Tencent Cloud SSL product.</p>
+        /// 
         /// </summary>
         [JsonProperty("CloudCertId")]
         public string CloudCertId{ get; set; }

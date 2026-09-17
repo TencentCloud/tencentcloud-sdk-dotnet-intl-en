@@ -25,97 +25,97 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Request start time (RFC3339)</p>
+        /// 
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }
 
         /// <summary>
-        /// <p>Gateway layer request ID</p>
+        /// 
         /// </summary>
         [JsonProperty("ReqId")]
         public string ReqId{ get; set; }
 
         /// <summary>
-        /// <p>Dialogue ID returned by the backend model</p>
+        /// 
         /// </summary>
         [JsonProperty("ChatId")]
         public string ChatId{ get; set; }
 
         /// <summary>
-        /// <p>HTTP status code returned to client</p>
+        /// 
         /// </summary>
         [JsonProperty("StatusCode")]
         public ulong? StatusCode{ get; set; }
 
         /// <summary>
-        /// <p>Model name</p>
+        /// 
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// <p>Application ID</p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>api_key after masking: first 8 digits + **** (return without modification when length ≤ 8)</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiKey")]
         public string ApiKey{ get; set; }
 
         /// <summary>
-        /// <p>Whether to return in streaming mode</p>
+        /// 
         /// </summary>
         [JsonProperty("Stream")]
         public bool? Stream{ get; set; }
 
         /// <summary>
-        /// <p>Number of input tokens</p>
+        /// 
         /// </summary>
         [JsonProperty("InputTokens")]
         public long? InputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Number of output tokens</p>
+        /// 
         /// </summary>
         [JsonProperty("OutputTokens")]
         public long? OutputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Number of tokens with prompt cache hit</p>
+        /// 
         /// </summary>
         [JsonProperty("CacheInputTokens")]
         public long? CacheInputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Total tokens</p>
+        /// 
         /// </summary>
         [JsonProperty("TotalTokens")]
         public long? TotalTokens{ get; set; }
 
         /// <summary>
-        /// <p>tokens per second in the generation stage</p>
+        /// 
         /// </summary>
         [JsonProperty("TPS")]
         public float? TPS{ get; set; }
 
         /// <summary>
-        /// <p>Time To First Token</p><p>Measurement unit: seconds</p>
+        /// 
         /// </summary>
         [JsonProperty("TTFT")]
         public float? TTFT{ get; set; }
 
         /// <summary>
-        /// <p>End-to-end total time</p><p>Unit: seconds</p>
+        /// 
         /// </summary>
         [JsonProperty("Total")]
         public float? Total{ get; set; }
 
         /// <summary>
-        /// <p>Entry protocol:completions / responses / anthropic</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiType")]
         public string ApiType{ get; set; }

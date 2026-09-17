@@ -25,28 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The stream type. Valid values:
-        /// <li>`audio`: Audio only</li>
-        /// <li>`video`: Video (may include audio)</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The video width (px) if `Type` is `video`.
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// The video height (px) if `Type` is `video`.
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// The file size (bytes).
-        /// <font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+        /// 
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }

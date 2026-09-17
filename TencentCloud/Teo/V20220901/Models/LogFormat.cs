@@ -25,51 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Predefined output format for log shipping. Valid values:
-        /// <li>json: Use JSON Lines as the predefined log output format. In each log entry, fields are displayed as key-value pairs.</li>
-        /// <li>csv: Use the predefined log output format csv, where each log entry only is presented as field values only, excluding field names. </li>
+        /// <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
         /// </summary>
         [JsonProperty("FormatType")]
         public string FormatType{ get; set; }
 
         /// <summary>
-        /// A string added before each log delivery batch. Each log delivery batch may contain multiple log records.
+        /// <p>A string added before each log delivery batch. Each log delivery batch may contain multiple log records.</p>
         /// </summary>
         [JsonProperty("BatchPrefix")]
         public string BatchPrefix{ get; set; }
 
         /// <summary>
-        /// A string appended after each log delivery batch.
+        /// <p>A string appended after each log delivery batch.</p>
         /// </summary>
         [JsonProperty("BatchSuffix")]
         public string BatchSuffix{ get; set; }
 
         /// <summary>
-        /// A string added before each log record.
+        /// <p>Log prefix, a string added before each log record.</p>
         /// </summary>
         [JsonProperty("RecordPrefix")]
         public string RecordPrefix{ get; set; }
 
         /// <summary>
-        /// A string appended after each log record.
+        /// <p>Single-line log suffix, a string appended after each log record.</p>
         /// </summary>
         [JsonProperty("RecordSuffix")]
         public string RecordSuffix{ get; set; }
 
         /// <summary>
-        /// A string inserted between log records as a separator. Valid values:
-        /// <li>\n: line break;</li>
-        /// <li>\t: tab character;</li>
-        /// <li>,: Half-width comma. </li>
+        /// <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
         /// </summary>
         [JsonProperty("RecordDelimiter")]
         public string RecordDelimiter{ get; set; }
 
         /// <summary>
-        /// A string inserted between fields as a separator within a single log record. Valid values:
-        /// <li>\t: tab character;</li>
-        /// <li>,: half-width comma;</li>
-        /// <li>;: Half-width semicolon. </li>
+        /// <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+        /// </summary>
+        [JsonProperty("RecordTemplate")]
+        public string RecordTemplate{ get; set; }
+
+        /// <summary>
+        /// <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
         /// </summary>
         [JsonProperty("FieldDelimiter")]
         public string FieldDelimiter{ get; set; }
@@ -86,6 +84,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RecordPrefix", this.RecordPrefix);
             this.SetParamSimple(map, prefix + "RecordSuffix", this.RecordSuffix);
             this.SetParamSimple(map, prefix + "RecordDelimiter", this.RecordDelimiter);
+            this.SetParamSimple(map, prefix + "RecordTemplate", this.RecordTemplate);
             this.SetParamSimple(map, prefix + "FieldDelimiter", this.FieldDelimiter);
         }
     }

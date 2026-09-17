@@ -25,35 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Video metadata.
+        /// 
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// Video playback address for WeChat Mini Program audit
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Status of video release on WeChat Mini Program
-        /// <li>Pass: succeeded.</li>
-        /// <li>Rejected: rejected.</li>
+        /// 
         /// </summary>
         [JsonProperty("ReviewResult")]
         public string ReviewResult{ get; set; }
 
         /// <summary>
-        /// WeChat Mini Program audit element.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ReviewSummary")]
         public MediaMiniProgramReviewElem[] ReviewSummary{ get; set; }

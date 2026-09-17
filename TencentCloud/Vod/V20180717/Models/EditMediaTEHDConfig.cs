@@ -25,14 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum video bitrate. Valid when Type is specified as top speed Codec.
-        /// Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+        /// 
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

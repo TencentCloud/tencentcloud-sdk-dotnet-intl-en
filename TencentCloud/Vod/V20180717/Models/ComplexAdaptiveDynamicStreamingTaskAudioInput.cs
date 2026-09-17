@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+        /// 
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+        /// 
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioTrackIdx")]
         public ulong? AudioTrackIdx{ get; set; }

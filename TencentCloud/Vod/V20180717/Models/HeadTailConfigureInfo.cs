@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of video opening and ending credits recognition task. Valid values:
-        /// <li>ON: enables video opening and ending credits recognition task;</li>
-        /// <li>OFF: disables video opening and ending credits recognition task.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

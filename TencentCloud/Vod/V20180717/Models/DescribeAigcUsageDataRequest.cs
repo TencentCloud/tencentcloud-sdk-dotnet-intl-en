@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: Video</li><li>Image: Image</li><li>Text: Text</li><li>Audio: Audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("AigcType")]
         public string AigcType{ get; set; }
 
         /// <summary>
-        /// <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] APIKeys{ get; set; }
 
         /// <summary>
-        /// <p>Query cursor</p>
+        /// 
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// <p>Size per page, maximum 200, it will be truncated to 200</p>
+        /// 
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>RequestId of the raw text. Valid at that time when AigcType is TextDetail.</p>
+        /// 
         /// </summary>
         [JsonProperty("ReqId")]
         public string ReqId{ get; set; }

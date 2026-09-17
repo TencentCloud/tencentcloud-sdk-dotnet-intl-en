@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The string after packaging the processing result, specifically coordinated with the backend altogether.
+        /// 
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

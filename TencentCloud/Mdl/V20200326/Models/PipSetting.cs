@@ -25,31 +25,31 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio selection: LIVE_SOURCE or AD_SOURCE
         /// </summary>
         [JsonProperty("AudioSelection")]
         public string AudioSelection{ get; set; }
 
         /// <summary>
-        /// 
+        /// Live streaming source layout configuration
         /// </summary>
         [JsonProperty("LiveSourceLayout")]
         public SourceLayout LiveSourceLayout{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advertisement source layout configuration
         /// </summary>
         [JsonProperty("AdSourceLayout")]
         public SourceLayout AdSourceLayout{ get; set; }
 
         /// <summary>
-        /// 
+        /// Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
         /// </summary>
         [JsonProperty("BackgroundImgUrl")]
         public string BackgroundImgUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
         /// </summary>
         [JsonProperty("AdSourceUrl")]
         public string AdSourceUrl{ get; set; }

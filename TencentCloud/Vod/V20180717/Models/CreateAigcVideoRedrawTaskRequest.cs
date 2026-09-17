@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>File information of the input video for the AIGC video conversion task. The input video duration should be less than 90 seconds, and the size should be within 2GB.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the AIGC video conversion task.</p>
+        /// 
         /// </summary>
         [JsonProperty("TaskInfo")]
         public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }
 
         /// <summary>
-        /// <p>Output media file configuration for the AIGC video conversion task.</p>
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcVideoRedrawOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+        /// 
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field, used when special purpose.</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

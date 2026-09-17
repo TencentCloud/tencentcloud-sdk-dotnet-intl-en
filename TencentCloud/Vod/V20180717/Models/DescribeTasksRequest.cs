@@ -25,51 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Filter condition: Task status. Available values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed).
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Filter criteria: file ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Filter condition: Task creation time.
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// Filter condition: Task end time.
+        /// 
         /// </summary>
         [JsonProperty("FinishTime")]
         public TimeRange FinishTime{ get; set; }
 
         /// <summary>
-        /// Sorting method. Selectable fields for Sort.Field:
-        /// <li> CreateTime Task creation time.</li>
-        /// <li>FinishTime Task end time.</li>
+        /// 
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination identifier, used for batch pulling: When a single request cannot retrieve all data, the interface will return ScrollToken. Carry over in next request, will start obtaining from the next record.
+        /// 
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

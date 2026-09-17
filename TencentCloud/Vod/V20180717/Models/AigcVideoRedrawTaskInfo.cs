@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>For description of style. Limited to 50 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }

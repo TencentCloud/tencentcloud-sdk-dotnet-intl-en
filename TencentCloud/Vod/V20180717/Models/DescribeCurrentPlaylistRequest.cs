@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The unique identifier of the playlist.
+        /// 
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// The length of the returned playlist. maximum is 10, default value is 5.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

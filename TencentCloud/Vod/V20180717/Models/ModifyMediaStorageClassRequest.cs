@@ -25,36 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier list of media files. Maximum length: 100.
+        /// 
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// Target storage type. Valid values:
-        /// <li> STANDARD: Standard storage.</li>
-        /// <li> STANDARD_IA: Infrequent storage.</li>
-        /// <li>ARCHIVE: Archive storage.</li>
-        /// <li> DEEP_ARCHIVE: Deep archive storage.</li>
+        /// 
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the mode for the retrieval (also known as unfreeze) operation. For details, refer to [Data retrieval and retrieval mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
-        /// When the current storage type of a media file is archive storage, the following values are available:
-        /// <li>Expedited: Speed mode.</li>
-        /// <li>Standard: Standard mode.</li>
-        /// <li>Bulk: batch mode.</li>
-        /// When the current storage type of the media file is DEEP_ARCHIVE, the following values are available:
-        /// <li>Standard: Standard mode.</li>
-        /// <li>Bulk: Batch mode.</li>
+        /// 
         /// </summary>
         [JsonProperty("RestoreTier")]
         public string RestoreTier{ get; set; }

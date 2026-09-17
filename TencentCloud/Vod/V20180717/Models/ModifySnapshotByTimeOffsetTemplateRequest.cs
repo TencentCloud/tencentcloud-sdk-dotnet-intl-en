@@ -25,63 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of the screenshot template at specified time point.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Screenshot template name at specified time point. Length limit: 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Resolution adaptation, available values:
-        /// <li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-        /// <li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-        /// Default value: open.
+        /// 
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Image format. Value can be jpg and png.
+        /// 
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-        /// <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-        /// <li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-        /// <li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-        /// <li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-        /// Default value: black.
+        /// 
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

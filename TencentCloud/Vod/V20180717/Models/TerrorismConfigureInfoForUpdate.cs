@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for recognition of terrorism content in images
+        /// 
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for OCR-based recognition of terrorism content
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

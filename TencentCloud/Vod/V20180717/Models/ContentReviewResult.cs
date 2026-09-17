@@ -25,55 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The result type. Valid values:
-        /// <li>Porn.Image: Pornographic content in the image</li>
-        /// <li>Terrorism.Image: Terrorist content in the image</li>
-        /// <li>Political.Image: Politically sensitive content in the image</li>
-        /// <li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-        /// <li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-        /// <li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("PornImageResult")]
         public PornImageResult PornImageResult{ get; set; }
 
         /// <summary>
-        /// The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("TerrorismImageResult")]
         public TerrorismImageResult TerrorismImageResult{ get; set; }
 
         /// <summary>
-        /// The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("PoliticalImageResult")]
         public PoliticalImageResult PoliticalImageResult{ get; set; }
 
         /// <summary>
-        /// The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("PornOcrResult")]
         public ContentReviewOcrResult PornOcrResult{ get; set; }
 
         /// <summary>
-        /// The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("TerrorismOcrResult")]
         public ContentReviewOcrResult TerrorismOcrResult{ get; set; }
 
         /// <summary>
-        /// The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// 
         /// </summary>
         [JsonProperty("PoliticalOcrResult")]
         public ContentReviewOcrResult PoliticalOcrResult{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Information set of transcoding with each specification. Each element represents a result of transcoding with a specification.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeSet")]
         public MediaTranscodeItem[] TranscodeSet{ get; set; }

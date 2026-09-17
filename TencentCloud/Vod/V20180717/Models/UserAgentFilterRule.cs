@@ -25,25 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+        /// UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// UserAgent list.
+        /// 
         /// </summary>
         [JsonProperty("UserAgents")]
         public string[] UserAgents{ get; set; }
 
         /// <summary>
-        /// Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+        /// Rule type:
+        /// <li>all: take effect for all files;</li>
+        /// <li>file: The specified file suffix takes effect;</li>
+        /// <li>directory: specify the path to take effect;</li>
+        /// <li>path: The absolute path takes effect.</li>
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+        /// Matching content under the corresponding type of RuleType:
+        /// <li>Fill with * when set to all;</li>
+        /// <li>For file, fill in the extension, such as jpg or txt;</li>
+        /// <li>For directory, fill in the path, such as /xxx/test/;</li>
+        /// <li>For path, fill in the absolute path, such as /xxx/test.html.</li>
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }

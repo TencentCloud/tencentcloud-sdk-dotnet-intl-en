@@ -25,41 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The moderation template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// The suggestion. Valid values:
-        /// <li>pass</li>
-        /// <li>review</li>
-        /// <li>block</li>
+        /// 
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
-        /// `Form` indicates the type of inappropriate content detected. Valid values:
-        /// <li>`Image` (people or icons in images)</li>
-        /// <li>`OCR` (text in images)</li>
-        /// <li>`ASR` (speech)</li>
-        /// <li>`Voice`</li>
-        /// `Label` indicates the violation label. Valid values:
-        /// <li>`Porn` (pornographic content)</li>
-        /// <li>`Terror` (terrorist content)</li>
-        /// <li>`Polity` (politically sensitive content)</li>
-        /// <li>`Ad` (advertisement)</li>
-        /// <li>`Illegal` (illegal content)</li>
-        /// <li>`Abuse`</li>
-        /// <li>`Moan`</li>
+        /// 
         /// </summary>
         [JsonProperty("TypeSet")]
         public string[] TypeSet{ get; set; }
 
         /// <summary>
-        /// The moderation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("ReviewTime")]
         public string ReviewTime{ get; set; }

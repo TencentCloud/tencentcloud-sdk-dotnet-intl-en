@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Media ID of the main media file.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Adaptive Bitrate Parameters support a maximum of 8.
+        /// 
         /// </summary>
         [JsonProperty("StreamParaSet")]
         public ComplexAdaptiveDynamicStreamingTaskStreamPara[] StreamParaSet{ get; set; }
 
         /// <summary>
-        /// Credits list, supports multiple opening and ending sequences, with a maximum of 4 supported. If this field is filled, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
+        /// 
         /// </summary>
         [JsonProperty("HeadTailSet")]
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// Multilingual audio stream parameters, supports a maximum of 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you need to add the audio stream from the main media file to the output adaptive bitrate stream, you must specify it here. The order of elements in an array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+        /// 
         /// </summary>
         [JsonProperty("AudioSet")]
         public ComplexAdaptiveDynamicStreamingTaskAudioInput[] AudioSet{ get; set; }
 
         /// <summary>
-        /// Multilingual subtitle parameters, with a maximum of 16 supported. Each element in an array corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in an array determines the order of subtitle streams in the adaptive bitrate stream.
+        /// 
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public ComplexAdaptiveDynamicStreamingTaskSubtitleInput[] SubtitleSet{ get; set; }

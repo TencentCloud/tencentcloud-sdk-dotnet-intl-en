@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Input video information that needs to get face information.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcFaceInputFileInfo[] FileInfos{ get; set; }

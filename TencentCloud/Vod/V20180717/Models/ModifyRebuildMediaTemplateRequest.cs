@@ -25,71 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video rebirth template number.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// Video rebirth template name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Video rebirth template description.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Video Rebirth Video Control Information.
+        /// 
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// Video Rebirth Audio Control Information.
+        /// 
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }
 
         /// <summary>
-        /// Output target video control information.
+        /// 
         /// </summary>
         [JsonProperty("TargetVideoInfo")]
         public RebuildMediaTargetVideoStream TargetVideoInfo{ get; set; }
 
         /// <summary>
-        /// Output target audio control information.
+        /// 
         /// </summary>
         [JsonProperty("TargetAudioInfo")]
         public RebuildMediaTargetAudioStream TargetAudioInfo{ get; set; }
 
         /// <summary>
-        /// Container format. Available values: mp4, flv, and hls.
+        /// 
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Available values:
-        /// <li>`0`: reserved</li>
-        /// <li>1: Remove</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Remove audio data. Available values:
-        /// <li>`0`: reserved</li>
-        /// <li>1: Remove</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }

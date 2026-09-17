@@ -25,18 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of object recognition task. Valid values:
-        /// <li>ON: enables intelligent object recognition task;</li>
-        /// <li>OFF: disables intelligent object recognition task.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Object library. Valid values:
-        /// <li>Default: default object library;</li>
-        /// <li>UserDefine: custom object library.</li>
-        /// <li>All: both default and custom object libraries will be used.</li>
+        /// 
         /// </summary>
         [JsonProperty("ObjectLibrary")]
         public string ObjectLibrary{ get; set; }

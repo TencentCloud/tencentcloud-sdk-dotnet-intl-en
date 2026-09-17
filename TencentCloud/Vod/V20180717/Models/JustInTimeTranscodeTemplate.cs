@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template type.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Template name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Video parameter configuration.
+        /// 
         /// </summary>
         [JsonProperty("VideoConfigure")]
         public VideoConfigureInfo VideoConfigure{ get; set; }
 
         /// <summary>
-        /// Watermark parameter configuration.
+        /// 
         /// </summary>
         [JsonProperty("WatermarkConfigure")]
         public WatermarkConfigureData WatermarkConfigure{ get; set; }

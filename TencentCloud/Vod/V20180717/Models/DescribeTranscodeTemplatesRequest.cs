@@ -25,66 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Filter condition for the unique identifier of the transcoding template. The array can contain up to 100 unique identifiers.
+        /// 
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Condition for filtering templates by type. Valid values:
-        /// <li>Preset: system preset template;</li>
-        /// <li>Custom: User-defined template.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Muxing format filter condition. Available values:
-        /// <li>Video: Video format that contains both video stream and audio stream in a muxing format.</li>
-        /// <li>PureAudio: Pure audio format, a muxing format that can only contain audio streams.</li>
+        /// 
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
 
         /// <summary>
-        /// Top Speed Codec filter conditions for filtering standard transcoding or TSC transcoding templates. Available values:
-        /// <li>Common: standard transcoding template.</li>
-        /// <li>TEHD: Ultra-HD template.</li>
+        /// 
         /// </summary>
         [JsonProperty("TEHDType")]
         public string TEHDType{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Enhancement type. Valid values:
-        /// <li>VideoEnhance: video enhancement only.</li>
-        /// <li>AudioEnhance (audio enhancement only).</li>
-        /// <li>AudioVideoEnhance: audio and video enhancement included.</li>
-        /// <li>AnyEnhance (including video enhancement only, audio enhancement only, audio and video enhancement)</li>
-        /// <li>None (non-enhanced)</li>
+        /// 
         /// </summary>
         [JsonProperty("EnhanceType")]
         public string EnhanceType{ get; set; }
 
         /// <summary>
-        /// Enhance scenario configuration. Available values: <li>common (general): general enhancement parameter, suitable for basic optimization parameters of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement. It uses AI technology to improve the overall video resolution and image clarity.</li> <li>short_play (mini-drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity to improve viewing experience.</li> <li>short_video (short video): optimizes complex and diverse image quality issues, targets complex scenarios in short videos, improves video quality, and addresses multiple visual problems.</li> <li>game (gaming video): restores motion blur, enhances details, focuses on improving game detail clarity, restores motion blur areas, and makes the game screen content clearer and more vivid.</li> <li>HD_movie_series (UHD TV shows and movies): achieves ultra-high-definition smooth effects, targets the demand for UHD videos in broadcasting and OTT scenarios, and generates UHD standard videos in 4K 60fps HDR. Supports broadcasting scenario format standards.</li> <li>LQ_material (low-quality material/classic film restoration): improves overall resolution, specifically optimizes issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li> <li>lecture (showroom/e-commerce/conference/lecture): beautifies and enhances face effects, specifically optimizes face regions, noise reduction, and burr processing for scenarios where figures are explained in showrooms, e-commerce, conferences, or lectures.</li>
+        /// 
         /// </summary>
         [JsonProperty("EnhanceScenarioType")]
         public string EnhanceScenarioType{ get; set; }

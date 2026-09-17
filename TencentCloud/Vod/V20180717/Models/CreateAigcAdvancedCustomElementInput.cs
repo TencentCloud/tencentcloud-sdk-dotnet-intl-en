@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Subject name.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementName")]
         public string ElementName{ get; set; }
 
         /// <summary>
-        /// <p>Subject description.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementDescription")]
         public string ElementDescription{ get; set; }
 
         /// <summary>
-        /// <p>Subject reference method.</p>
+        /// 
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// <p>Main voice type.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementVoiceId")]
         public string ElementVoiceId{ get; set; }
 
         /// <summary>
-        /// <p>Reference video.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementVideoList")]
         public string ElementVideoList{ get; set; }
 
         /// <summary>
-        /// <p>Subject reference diagram.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementImageList")]
         public string ElementImageList{ get; set; }
 
         /// <summary>
-        /// <p>Subject configuration tag.</p>
+        /// 
         /// </summary>
         [JsonProperty("TagList")]
         public string TagList{ get; set; }

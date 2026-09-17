@@ -25,19 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable video quality remastering. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF`</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The video quality remastering type. This parameter is valid only if `Switch` is `ON`.
-        /// <li>`weak`</li>
-        /// <li>`normal`</li>
-        /// <li>`strong`</li>
-        /// Default value: `weak`.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

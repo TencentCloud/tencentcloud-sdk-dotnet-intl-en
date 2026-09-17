@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Face image ID.
+        /// 
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }
 
         /// <summary>
-        /// Face image address.
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

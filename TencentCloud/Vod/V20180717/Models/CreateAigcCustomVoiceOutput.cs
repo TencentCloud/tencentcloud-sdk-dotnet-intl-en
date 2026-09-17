@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Custom timbre list.</p>
+        /// 
         /// </summary>
         [JsonProperty("InfoList")]
         public CustomVoiceInfo[] InfoList{ get; set; }

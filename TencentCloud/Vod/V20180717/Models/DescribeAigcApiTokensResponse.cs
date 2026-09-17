@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>API Token list</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiTokens")]
         public string[] ApiTokens{ get; set; }
 
         /// <summary>
-        /// <p>ExtInfo info, which corresponds one-to-one to the API Token list</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfos")]
         public string[] ExtInfos{ get; set; }

@@ -25,39 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Watermarking template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-        /// VOD does not support adding text watermarks on screenshots.
+        /// 
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
 
         /// <summary>
-        /// SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-        /// VOD does not support adding SVG watermarks on screenshots.
+        /// 
         /// </summary>
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }
 
         /// <summary>
-        /// Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-        /// <li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-        /// <li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-        /// <li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of a watermark in seconds.
-        /// <li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-        /// <li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-        /// <li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

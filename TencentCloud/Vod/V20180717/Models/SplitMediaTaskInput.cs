@@ -25,37 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Offset of the video splitting start time in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Offset of the video splitting end time in seconds.
-        /// <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
-        /// <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
-        /// <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in if you need to execute task flow on the generated new video.
+        /// 
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// Output information of a video splitting task.
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SplitMediaOutputConfig OutputConfig{ get; set; }

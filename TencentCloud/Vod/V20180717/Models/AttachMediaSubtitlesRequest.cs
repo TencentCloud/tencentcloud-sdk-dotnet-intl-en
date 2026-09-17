@@ -25,39 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of a media file.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Operation. Values as follows:
-        /// <li>Attach: Associate subtitles.</li>
-        /// <li>Detach: Remove associated subtitles.</li>
+        /// 
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// Unique identifier of the subtitle.
+        /// 
         /// </summary>
         [JsonProperty("SubtitleIds")]
         public string[] SubtitleIds{ get; set; }
 
         /// <summary>
-        /// Unique identifier for default subtitle. Leave empty to not set default subtitle.
+        /// 
         /// </summary>
         [JsonProperty("DefaultSubtitleId")]
         public string DefaultSubtitleId{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

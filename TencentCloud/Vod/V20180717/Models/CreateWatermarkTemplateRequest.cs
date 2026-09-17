@@ -25,75 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Watermark type. Valid values:
-        /// <li>image: image watermark.</li>
-        /// <li>Text: text watermark.</li>
-        /// <li>svg: SVG watermark.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Watermark template name. The length cannot exceed 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Origin position. Valid values:
-        /// <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
-        /// <li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
-        /// <li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
-        /// <li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
-        /// Default value: TopLeft.
+        /// 
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
-        /// <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
-        /// <li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means XPos is 100 pixels.</li>
-        /// Default value: 0px.
+        /// 
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// The vertical position of the watermark origin from the origin of coordinates of the video image. Supports two formats: % and px.
-        /// <li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-        /// <li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
-        /// Default value: 0px.
+        /// 
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// Image watermark template. This field is required when Type is image. Invalid field when Type is text.
+        /// 
         /// </summary>
         [JsonProperty("ImageTemplate")]
         public ImageWatermarkInput ImageTemplate{ get; set; }
 
         /// <summary>
-        /// Text watermarking template. This field is required when Type is text. Invalid field when Type is image.
+        /// 
         /// </summary>
         [JsonProperty("TextTemplate")]
         public TextWatermarkTemplateInput TextTemplate{ get; set; }
 
         /// <summary>
-        /// SVG Watermark Template. This field is required when Type is svg. Invalid field when Type is image or text.
+        /// 
         /// </summary>
         [JsonProperty("SvgTemplate")]
         public SvgWatermarkInput SvgTemplate{ get; set; }

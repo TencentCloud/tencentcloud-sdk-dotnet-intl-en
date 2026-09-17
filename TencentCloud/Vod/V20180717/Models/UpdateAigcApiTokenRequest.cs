@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether it is the default application or a newly created application), you must fill in this field with the application ID.</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>To refresh the Api Key</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
 
         /// <summary>
-        /// <p>Merge (default, merges ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+        /// 
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// <p>Extended information of the token</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of the time point screenshot template.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video noise inspection switch, optional values:
-        /// <li>ON: enabled;</li>
-        /// <li>OFF: disabled.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

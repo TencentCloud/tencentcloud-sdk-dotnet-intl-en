@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template name. The length cannot exceed 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Video parameter configuration.
+        /// 
         /// </summary>
         [JsonProperty("VideoConfigure")]
         public VideoConfigureInfo VideoConfigure{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public long? SubAppId{ get; set; }
 
         /// <summary>
-        /// Watermark parameter configuration.
+        /// 
         /// </summary>
         [JsonProperty("WatermarkConfigure")]
         public WatermarkConfigureInfo WatermarkConfigure{ get; set; }
 
         /// <summary>
-        /// Template description. The length cannot exceed 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

@@ -25,79 +25,79 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique ID of the transcoding template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+        /// 
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// <p>Transcoding template name. The length cannot exceed 64 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Template description, with a length limit of 256 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// <p>Video stream configuration parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfoForUpdate VideoTemplate{ get; set; }
 
         /// <summary>
-        /// <p>Audio stream configuration parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// <p>TSC transcoding parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
         /// <summary>
-        /// <p>Audio/Video enhancement configuration.</p>
+        /// 
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfigForUpdate EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>
+        /// 
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
 
         /// <summary>
-        /// <p>Extended parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

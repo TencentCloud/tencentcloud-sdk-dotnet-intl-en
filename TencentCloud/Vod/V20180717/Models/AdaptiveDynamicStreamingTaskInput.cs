@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Adaptive bitrate streaming template ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+        /// 
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// <p>Traceable watermark.</p>
+        /// 
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// <p>Copyright watermark.</p>
+        /// 
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// <p>Digital watermark.</p>
+        /// 
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// <p>External subtitle file, with subtitle ID as the element, supports multiple subtitles, up to 16.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public string[] SubtitleSet{ get; set; }
 
         /// <summary>
-        /// <p>List of subtitle suppression information. A maximum of 2 are supported.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubtitleInfoSet")]
         public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
         /// <summary>
-        /// <p>Third-party DRM encrypted information. Task flow is not currently supported to initiate task via third-party DRM information.</p>
+        /// 
         /// </summary>
         [JsonProperty("DrmInfo")]
         public ThirdPartyDrmInfo DrmInfo{ get; set; }

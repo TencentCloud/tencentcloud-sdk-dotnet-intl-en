@@ -25,22 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
 
         /// <summary>
-        /// Screenshot URL.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// List of watermarking template IDs if the screenshots are watermarked.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

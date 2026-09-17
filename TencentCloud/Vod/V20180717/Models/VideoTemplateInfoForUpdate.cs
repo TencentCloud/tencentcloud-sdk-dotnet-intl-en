@@ -25,97 +25,97 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports fixed CRF bitrate control method.</li>
+        /// 
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// <p>Video frame rate. Value ranges from 0 to 100. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+        /// 
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// <p>Bitrate of video stream. Value ranges from 0 to [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+        /// 
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// <p>Resolution adaptation, available values:</p><li>open: Enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li><li>close: Disable. At this point, Width represents the width of the video, and Height indicates the height.</li>
+        /// 
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of the video stream height (or short side). Value ranges from 0 to [128, 8192]. Measurement unit: px.</p>
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// <p>Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:</p><li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Maintain video aspect ratio with edges filled with black.</li><li>white: Maintain video aspect ratio with edge remainder filled with white.</li><li>gauss: Maintain video aspect ratio with Gaussian blur filling for the rest of the edges.</li>
+        /// 
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// <p>Control factor for constant video bitrate. Value range: [1, 51]. Enter 0 to indicate that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect).</li><li>When the encoding format of the specified video stream is H.266, this field is required. The recommended value is 28.</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+        /// 
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
 
         /// <summary>
-        /// <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+        /// 
         /// </summary>
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }
 
         /// <summary>
-        /// <p>Whether the transcoding output remains HDR when the original video is HDR (High Dynamic Range). Value ranges from:</p><li>ON: If the raw file is HDR, the transcoding output remains HDR; otherwise, the output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the raw file is HDR or SDR, the transcoding output is SDR.</li>
+        /// 
         /// </summary>
         [JsonProperty("PreserveHDRSwitch")]
         public string PreserveHDRSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Encoding tag, valid only when the video stream encoding format is H.265. Value range:</p><li>hvc1 means hvc1 tag;</li><li>hev1 means hev1 tag.</li>Default value: hvc1.
+        /// 
         /// </summary>
         [JsonProperty("CodecTag")]
         public string CodecTag{ get; set; }
 
         /// <summary>
-        /// <p>Gop value unit.</p><p>Enumeration value:</p><ul><li>frame: Represents the number of frames.</li><li>second: Represents seconds.</li></ul><p>Default value: frame</p>
+        /// 
         /// </summary>
         [JsonProperty("GopUnit")]
         public string GopUnit{ get; set; }
 
         /// <summary>
-        /// <p>Bitrate control mode.</p><p>Enumeration value:</p><ul><li>VBR: Variable Bit Rate, dynamic bitrate (VBR), adjusts the output bitrate based on the complexity of the video image to ensure higher image quality, suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate, average bitrate, maintains a stable average bitrate of the output video as much as possible but allows short-term bitrate fluctuation, suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate, constant bitrate, maintains a constant output bitrate regardless of image complexity changes, suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor, constant quality factor, controls video quality by setting a quality factor to achieve constant quality encoding of videos, with bitrate adjustment based on content complexity, suitable for scenarios where maintaining a certain quality is desired.</li></ul><p>Default value: VBR</p>
+        /// 
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// <p>Maximum number of consecutive B-frames, set to auto by default. -1 means change to automatic value.</p><p>Value ranges from -1 to 16.</p>
+        /// 
         /// </summary>
         [JsonProperty("Bframes")]
         public long? Bframes{ get; set; }
 
         /// <summary>
-        /// <p>Average segment duration. 0 or blank means auto, which automatically chooses appropriate segment duration based on video features such as GOP.</p><p>Value ranges from 0 to 10.</p><p>Measurement unit: seconds.</p><p>Supports only transcoding templates, not currently supported for adaptive bitrate templates.</p>
+        /// 
         /// </summary>
         [JsonProperty("HlsTime")]
         public long? HlsTime{ get; set; }
 
         /// <summary>
-        /// <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls and mobile video.</li><li>main: Mainstream Profile, provides I, p, and B frames, and supports both interlaced and non-interlaced modes. Primarily used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction to the main Profile and supports custom quantification. Widely used in Blu-ray storage and HDTV scenarios.</li><li>default: Automatic filling along with the original video.</li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+        /// 
         /// </summary>
         [JsonProperty("VideoProfile")]
         public string VideoProfile{ get; set; }

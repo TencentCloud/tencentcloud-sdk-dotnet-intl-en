@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1392</VersionPrefix>
+    <VersionPrefix>3.0.1396</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,37 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="V20240718\VodClient.cs" />
-    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\CreateStorageCredentialsRequest.cs" />
-    <Compile Include="V20240718\Models\CreateStorageCredentialsResponse.cs" />
-    <Compile Include="V20240718\Models\CreateStorageRequest.cs" />
-    <Compile Include="V20240718\Models\CreateStorageResponse.cs" />
-    <Compile Include="V20240718\Models\Credentials.cs" />
-    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosRequest.cs" />
-    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosResponse.cs" />
-    <Compile Include="V20240718\Models\DescribeStorageRequest.cs" />
-    <Compile Include="V20240718\Models\DescribeStorageResponse.cs" />
-    <Compile Include="V20240718\Models\Filter.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpEndpointInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeader.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeaderInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginCondition.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginParameter.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginFileInfo.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginFixedFileConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginPrefixConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationOriginSuffixConfig.cs" />
-    <Compile Include="V20240718\Models\IncrementalMigrationStrategyInfo.cs" />
-    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyRequest.cs" />
-    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyResponse.cs" />
-    <Compile Include="V20240718\Models\SortBy.cs" />
-    <Compile Include="V20240718\Models\StorageInfo.cs" />
     <Compile Include="V20180717\VodClient.cs" />
     <Compile Include="V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="V20180717\Models\AIRecognitionTemplateItem.cs" />
@@ -109,6 +78,7 @@
     <Compile Include="V20180717\Models\AiAnalysisTaskTagResult.cs" />
     <Compile Include="V20180717\Models\AiContentReviewResult.cs" />
     <Compile Include="V20180717\Models\AiContentReviewTaskInput.cs" />
+    <Compile Include="V20180717\Models\AiCutOutConfig.cs" />
     <Compile Include="V20180717\Models\AiRecognitionResult.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResult.cs" />
     <Compile Include="V20180717\Models\AiRecognitionTaskAsrFullTextResultInput.cs" />
@@ -203,6 +173,14 @@
     <Compile Include="V20180717\Models\AigcFaceIdentityInfo.cs" />
     <Compile Include="V20180717\Models\AigcFaceInfo.cs" />
     <Compile Include="V20180717\Models\AigcFaceInputFileInfo.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DMeshInfo.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DMultiViewImageInfo.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DOutputConfig.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DReferenceImageInfo.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DTask.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DTaskInput.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DTaskOutput.cs" />
+    <Compile Include="V20180717\Models\AigcHunyuan3DTaskOutputFileInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageOutputConfig.cs" />
     <Compile Include="V20180717\Models\AigcImageSceneInfo.cs" />
     <Compile Include="V20180717\Models\AigcImageTask.cs" />
@@ -234,6 +212,7 @@
     <Compile Include="V20180717\Models\AnimatedGraphicsTemplate.cs" />
     <Compile Include="V20180717\Models\ApplyUploadRequest.cs" />
     <Compile Include="V20180717\Models\ApplyUploadResponse.cs" />
+    <Compile Include="V20180717\Models\AreaCLSTargetInfo.cs" />
     <Compile Include="V20180717\Models\ArtifactRepairInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
@@ -286,8 +265,11 @@
     <Compile Include="V20180717\Models\ClipTask2017.cs" />
     <Compile Include="V20180717\Models\CloneCDNDomainRequest.cs" />
     <Compile Include="V20180717\Models\CloneCDNDomainResponse.cs" />
+    <Compile Include="V20180717\Models\CloneVoiceAsyncInput.cs" />
+    <Compile Include="V20180717\Models\CloneVoiceAsyncOutput.cs" />
     <Compile Include="V20180717\Models\CloneVoiceAsyncRequest.cs" />
     <Compile Include="V20180717\Models\CloneVoiceAsyncResponse.cs" />
+    <Compile Include="V20180717\Models\CloneVoiceAsyncTask.cs" />
     <Compile Include="V20180717\Models\CloneVoiceSyncRequest.cs" />
     <Compile Include="V20180717\Models\CloneVoiceSyncResponse.cs" />
     <Compile Include="V20180717\Models\ColorEnhanceInfo.cs" />
@@ -347,6 +329,8 @@
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcCustomVoiceTask.cs" />
+    <Compile Include="V20180717\Models\CreateAigcHunyuan3DTaskRequest.cs" />
+    <Compile Include="V20180717\Models\CreateAigcHunyuan3DTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskRequest.cs" />
     <Compile Include="V20180717\Models\CreateAigcImageTaskResponse.cs" />
     <Compile Include="V20180717\Models\CreateAigcQuotaRequest.cs" />
@@ -389,6 +373,8 @@
     <Compile Include="V20180717\Models\CreateImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\CreateKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\CreateLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateMPSTemplateRequest.cs" />
@@ -431,6 +417,7 @@
     <Compile Include="V20180717\Models\CreateWordSamplesResponse.cs" />
     <Compile Include="V20180717\Models\CustomVoiceInfo.cs" />
     <Compile Include="V20180717\Models\DNSVerifyInfo.cs" />
+    <Compile Include="V20180717\Models\DailyPlayStatInfo.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteAIAnalysisTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteAIRecognitionTemplateRequest.cs" />
@@ -465,6 +452,8 @@
     <Compile Include="V20180717\Models\DeleteImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\DeleteKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\DeleteKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\DeleteLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\DeleteMPSTemplateRequest.cs" />
@@ -536,6 +525,8 @@
     <Compile Include="V20180717\Models\DescribeCDNUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCLSLogsetsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCLSLogsetsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSPushTargetsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeCLSPushTargetsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCLSTopicsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCLSTopicsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCdnLogsRequest.cs" />
@@ -546,6 +537,10 @@
     <Compile Include="V20180717\Models\DescribeContentReviewTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeCurrentPlaylistRequest.cs" />
     <Compile Include="V20180717\Models\DescribeCurrentPlaylistResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMediaPlayStatResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDailyMostPlayedStatResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDefaultDistributionConfigRequest.cs" />
@@ -570,6 +565,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeJustInTimeTranscodeTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeKnowledgeBasesRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeKnowledgeBasesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeLLMComprehendTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
@@ -626,9 +623,13 @@
     <Compile Include="V20180717\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeWordSamplesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeWordSamplesResponse.cs" />
+    <Compile Include="V20180717\Models\DesignVoiceAsyncInput.cs" />
+    <Compile Include="V20180717\Models\DesignVoiceAsyncOutput.cs" />
     <Compile Include="V20180717\Models\DesignVoiceAsyncRequest.cs" />
     <Compile Include="V20180717\Models\DesignVoiceAsyncResponse.cs" />
+    <Compile Include="V20180717\Models\DesignVoiceAsyncTask.cs" />
     <Compile Include="V20180717\Models\DiffusionEnhanceInfo.cs" />
+    <Compile Include="V20180717\Models\DomainCLSTargetInfo.cs" />
     <Compile Include="V20180717\Models\DomainDetailInfo.cs" />
     <Compile Include="V20180717\Models\DomainHTTPSConfig.cs" />
     <Compile Include="V20180717\Models\DomainQUICConfig.cs" />
@@ -733,6 +734,7 @@
     <Compile Include="V20180717\Models\ImportMediaKnowledgeRequest.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeResponse.cs" />
     <Compile Include="V20180717\Models\ImportMediaKnowledgeTask.cs" />
+    <Compile Include="V20180717\Models\ImportMediaKnowledgeTaskInput.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityRequest.cs" />
     <Compile Include="V20180717\Models\InspectMediaQualityResponse.cs" />
     <Compile Include="V20180717\Models\IpFilter.cs" />
@@ -743,6 +745,8 @@
     <Compile Include="V20180717\Models\JustInTimeTranscodeTemplate.cs" />
     <Compile Include="V20180717\Models\KnowledgeAnalysisInfo.cs" />
     <Compile Include="V20180717\Models\KnowledgeAnalysisResult.cs" />
+    <Compile Include="V20180717\Models\KnowledgeBaseDetail.cs" />
+    <Compile Include="V20180717\Models\KnowledgeBaseInfo.cs" />
     <Compile Include="V20180717\Models\KnowledgeBasesInfo.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsr.cs" />
     <Compile Include="V20180717\Models\LLMComprehendAsrForUpdate.cs" />
@@ -767,6 +771,8 @@
     <Compile Include="V20180717\Models\MPSAiMediaInfo.cs" />
     <Compile Include="V20180717\Models\MPSAiMediaItem.cs" />
     <Compile Include="V20180717\Models\MPSAiMediaTask.cs" />
+    <Compile Include="V20180717\Models\MPSEmbedSubtitleTemplate.cs" />
+    <Compile Include="V20180717\Models\MPSEmbedSubtitleTemplateForUpdate.cs" />
     <Compile Include="V20180717\Models\MPSEraseArea.cs" />
     <Compile Include="V20180717\Models\MPSEraseTimeArea.cs" />
     <Compile Include="V20180717\Models\MPSOutputFile.cs" />
@@ -785,6 +791,11 @@
     <Compile Include="V20180717\Models\MPSSmartSubtitleTemplateForUpdate.cs" />
     <Compile Include="V20180717\Models\MPSSmartSubtitlesTaskInput.cs" />
     <Compile Include="V20180717\Models\MPSSubTaskResult.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleBoardConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleEmbedConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleLayoutConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleOutlineConfig.cs" />
+    <Compile Include="V20180717\Models\MPSSubtitleShadowConfig.cs" />
     <Compile Include="V20180717\Models\MPSTaskOutput.cs" />
     <Compile Include="V20180717\Models\MPSTemplate.cs" />
     <Compile Include="V20180717\Models\MPSUpdateSmartEraseSubtitleConfig.cs" />
@@ -865,6 +876,8 @@
     <Compile Include="V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultDistributionConfigRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultDistributionConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionRequest.cs" />
     <Compile Include="V20180717\Models\ModifyDefaultStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\ModifyEnhanceMediaTemplateRequest.cs" />
@@ -877,6 +890,8 @@
     <Compile Include="V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyJustInTimeTranscodeTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyKnowledgeBaseRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyKnowledgeBaseResponse.cs" />
     <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyLLMComprehendTemplateResponse.cs" />
     <Compile Include="V20180717\Models\ModifyMPSTemplateRequest.cs" />
@@ -936,6 +951,7 @@
     <Compile Include="V20180717\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestResponse.cs" />
+    <Compile Include="V20180717\Models\PatternConfig.cs" />
     <Compile Include="V20180717\Models\PersistenceCompleteTask.cs" />
     <Compile Include="V20180717\Models\PlayStatFileInfo.cs" />
     <Compile Include="V20180717\Models\PlayStatInfo.cs" />
@@ -1003,12 +1019,19 @@
     <Compile Include="V20180717\Models\QualityEnhanceTaskOutput.cs" />
     <Compile Include="V20180717\Models\QualityEvaluationConfigureInfo.cs" />
     <Compile Include="V20180717\Models\QualityEvaluationConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\QualityInspectConfig.cs" />
+    <Compile Include="V20180717\Models\QualityInspectContainerDiagnoseResultItem.cs" />
     <Compile Include="V20180717\Models\QualityInspectItem.cs" />
+    <Compile Include="V20180717\Models\QualityInspectLLMDetectionIssue.cs" />
+    <Compile Include="V20180717\Models\QualityInspectLLMDetectionReport.cs" />
+    <Compile Include="V20180717\Models\QualityInspectLLMDetectionResultItem.cs" />
     <Compile Include="V20180717\Models\QualityInspectResultItem.cs" />
+    <Compile Include="V20180717\Models\QualityInspectStrategy.cs" />
     <Compile Include="V20180717\Models\QualityInspectTask.cs" />
     <Compile Include="V20180717\Models\QualityInspectTaskInput.cs" />
     <Compile Include="V20180717\Models\QualityInspectTaskOutput.cs" />
     <Compile Include="V20180717\Models\QualityInspectTemplateItem.cs" />
+    <Compile Include="V20180717\Models\QualityInspectTimeSpotCheck.cs" />
     <Compile Include="V20180717\Models\Quic.cs" />
     <Compile Include="V20180717\Models\RebuildAudioInfo.cs" />
     <Compile Include="V20180717\Models\RebuildMediaByTemplateRequest.cs" />
@@ -1088,6 +1111,8 @@
     <Compile Include="V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\SemanticsSearchResult.cs" />
+    <Compile Include="V20180717\Models\SetCLSPushTargetRequest.cs" />
+    <Compile Include="V20180717\Models\SetCLSPushTargetResponse.cs" />
     <Compile Include="V20180717\Models\SetDrmKeyProviderInfoRequest.cs" />
     <Compile Include="V20180717\Models\SetDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\SetVodDomainCertificateRequest.cs" />
@@ -1136,9 +1161,12 @@
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechAsyncInput.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechAsyncOutput.cs" />
     <Compile Include="V20180717\Models\TextToSpeechAsyncOutputOption.cs" />
     <Compile Include="V20180717\Models\TextToSpeechAsyncRequest.cs" />
     <Compile Include="V20180717\Models\TextToSpeechAsyncResponse.cs" />
+    <Compile Include="V20180717\Models\TextToSpeechAsyncTask.cs" />
     <Compile Include="V20180717\Models\TextToSpeechSyncOutputOption.cs" />
     <Compile Include="V20180717\Models\TextToSpeechSyncRequest.cs" />
     <Compile Include="V20180717\Models\TextToSpeechSyncResponse.cs" />
@@ -1174,6 +1202,9 @@
     <Compile Include="V20180717\Models\VideoConfigureInfo.cs" />
     <Compile Include="V20180717\Models\VideoConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\VideoDenoiseInfo.cs" />
+    <Compile Include="V20180717\Models\VideoDubbingAsyncInput.cs" />
+    <Compile Include="V20180717\Models\VideoDubbingAsyncOutput.cs" />
+    <Compile Include="V20180717\Models\VideoDubbingAsyncTask.cs" />
     <Compile Include="V20180717\Models\VideoEnhanceConfig.cs" />
     <Compile Include="V20180717\Models\VideoFrameInterpolationInfo.cs" />
     <Compile Include="V20180717\Models\VideoTemplateInfo.cs" />
@@ -1194,5 +1225,36 @@
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTask.cs" />
     <Compile Include="V20180717\Models\WechatMiniProgramPublishTaskInput.cs" />
     <Compile Include="V20180717\Models\WechatPublishTask.cs" />
+    <Compile Include="V20240718\VodClient.cs" />
+    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\CreateIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsRequest.cs" />
+    <Compile Include="V20240718\Models\CreateStorageCredentialsResponse.cs" />
+    <Compile Include="V20240718\Models\CreateStorageRequest.cs" />
+    <Compile Include="V20240718\Models\CreateStorageResponse.cs" />
+    <Compile Include="V20240718\Models\Credentials.cs" />
+    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\DeleteIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosRequest.cs" />
+    <Compile Include="V20240718\Models\DescribeIncrementalMigrationStrategyInfosResponse.cs" />
+    <Compile Include="V20240718\Models\DescribeStorageRequest.cs" />
+    <Compile Include="V20240718\Models\DescribeStorageResponse.cs" />
+    <Compile Include="V20240718\Models\Filter.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpEndpointInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeader.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpHeaderInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginCondition.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationHttpOriginParameter.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginFileInfo.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginFixedFileConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginPrefixConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationOriginSuffixConfig.cs" />
+    <Compile Include="V20240718\Models\IncrementalMigrationStrategyInfo.cs" />
+    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyRequest.cs" />
+    <Compile Include="V20240718\Models\ModifyIncrementalMigrationStrategyResponse.cs" />
+    <Compile Include="V20240718\Models\SortBy.cs" />
+    <Compile Include="V20240718\Models\StorageInfo.cs" />
   </ItemGroup>
 </Project>

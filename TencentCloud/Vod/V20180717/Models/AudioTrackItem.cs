@@ -25,37 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Source of media material for audio segment, which can be:
-        /// <li>ID of VOD media files</li>
-        /// <li>Download URL of other media files</li>
-        /// Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+        /// 
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+        /// 
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }
 
         /// <summary>
-        /// Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+        /// 
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// The target audio duration, in seconds.
-        /// <li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-        /// <li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+        /// 
         /// </summary>
         [JsonProperty("TargetDuration")]
         public float? TargetDuration{ get; set; }
 
         /// <summary>
-        /// Operation on audio segment, such as volume adjustment.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>id of the intelligent erasing template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("RawParameter")]
         public MPSRawSmartEraseParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public MPSOverrideEraseParameter OverrideParameter{ get; set; }

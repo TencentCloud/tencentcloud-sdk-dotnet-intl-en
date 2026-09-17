@@ -25,21 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The ID of the media file.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The moderation template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// The type of moderated content. Valid values:
-        /// <li>`Media`: The original audio/video.</li>
-        /// <li>`Cover`: Thumbnails.</li>
+        /// 
         /// </summary>
         [JsonProperty("ReviewContents")]
         public string[] ReviewContents{ get; set; }

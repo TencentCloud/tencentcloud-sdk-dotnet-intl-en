@@ -25,50 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of transcoding tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeTaskSet")]
         public TranscodeTaskInput[] TranscodeTaskSet{ get; set; }
 
         /// <summary>
-        /// List of animated image generating tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AnimatedGraphicTaskSet")]
         public AnimatedGraphicTaskInput[] AnimatedGraphicTaskSet{ get; set; }
 
         /// <summary>
-        /// List of time point screencapturing tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTaskSet")]
         public SnapshotByTimeOffsetTaskInput[] SnapshotByTimeOffsetTaskSet{ get; set; }
 
         /// <summary>
-        /// List of sampled screencapturing tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SampleSnapshotTaskSet")]
         public SampleSnapshotTaskInput[] SampleSnapshotTaskSet{ get; set; }
 
         /// <summary>
-        /// List of image sprite generating tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ImageSpriteTaskSet")]
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }
 
         /// <summary>
-        /// List of cover generating tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CoverBySnapshotTaskSet")]
         public CoverBySnapshotTaskInput[] CoverBySnapshotTaskSet{ get; set; }
 
         /// <summary>
-        /// List of adaptive bitrate streaming tasks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTaskSet")]
         public AdaptiveDynamicStreamingTaskInput[] AdaptiveDynamicStreamingTaskSet{ get; set; }

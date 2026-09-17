@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Material information.
+        /// 
         /// </summary>
         [JsonProperty("Person")]
         public AiSamplePerson Person{ get; set; }
 
         /// <summary>
-        /// Failed processing of facial feature positioning information.
+        /// 
         /// </summary>
         [JsonProperty("FailFaceInfoSet")]
         public AiSampleFailFaceInfo[] FailFaceInfoSet{ get; set; }

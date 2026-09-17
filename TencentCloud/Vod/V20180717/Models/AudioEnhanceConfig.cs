@@ -25,29 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Audio noise reduction configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Denoise")]
         public AudioDenoiseInfo Denoise{ get; set; }
 
         /// <summary>
-        /// Audio separation configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Separate")]
         public AudioSeparateInfo Separate{ get; set; }
 
         /// <summary>
-        /// Volume equalization configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VolumeBalance")]
         public AudioVolumeBalanceInfo VolumeBalance{ get; set; }
 
         /// <summary>
-        /// Volume beautification configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Beautify")]
         public AudioBeautifyInfo Beautify{ get; set; }

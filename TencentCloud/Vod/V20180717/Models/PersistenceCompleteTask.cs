@@ -25,16 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Consolidate the generated Media ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The source of clipping solidification has the following three types.
-        /// <li>SimpleHlsClip: Comes from simple HLS edit;</li>
-        /// <li>FastEditMedia: Comes from quick media editing;</li>
-        /// <li>LiveRealTimeClip: comes from live stream clipping.</li>
+        /// 
         /// </summary>
         [JsonProperty("PersistenceSource")]
         public string PersistenceSource{ get; set; }

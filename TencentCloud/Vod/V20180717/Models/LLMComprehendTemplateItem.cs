@@ -25,55 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the image asynchronous processing template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Image asynchronous processing template name.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Description information of the image asynchronous processing template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Resolution level, optional values:</p><ul><li>Audio: Audio-level resolution</li><li>Video: Video-level resolution</li></ul>
+        /// 
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// <p>Segment summary parse configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummary Summary{ get; set; }
 
         /// <summary>
-        /// <p>Text transcription parse configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsr Asr{ get; set; }
 
         /// <summary>
-        /// <p>Face recognition parse configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("FaceRecognition")]
         public LLMComprehendFaceRecognition FaceRecognition{ get; set; }
 
         /// <summary>
-        /// <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -87,6 +93,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamObj(map, prefix + "Summary.", this.Summary);
             this.SetParamObj(map, prefix + "Asr.", this.Asr);

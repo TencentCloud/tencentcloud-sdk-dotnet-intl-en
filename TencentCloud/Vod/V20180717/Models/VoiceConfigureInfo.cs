@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Audio (mute, bass, pop) detection switch, optional values: 
-        /// <li>ON: on; </li>
-        /// <li>OFF: off. </li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

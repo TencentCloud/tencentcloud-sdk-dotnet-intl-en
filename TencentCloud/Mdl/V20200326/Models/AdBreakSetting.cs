@@ -49,13 +49,13 @@ namespace TencentCloud.Mdl.V20200326.Models
         public LSqueezeSetting LSqueezeSetting{ get; set; }
 
         /// <summary>
-        /// 
+        /// Picture in picture configuration
         /// </summary>
         [JsonProperty("PipSetting")]
         public PipSetting PipSetting{ get; set; }
 
         /// <summary>
-        /// 
+        /// Circular setting
         /// </summary>
         [JsonProperty("BorderFrameSetting")]
         public BorderFrameSetting BorderFrameSetting{ get; set; }

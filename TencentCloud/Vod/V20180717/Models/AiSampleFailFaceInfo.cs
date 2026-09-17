@@ -25,21 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// It corresponds to incorrect image subscripts in the `FaceContents` input parameter, starting from 0.
+        /// 
         /// </summary>
         [JsonProperty("Index")]
         public ulong? Index{ get; set; }
 
         /// <summary>
-        /// Error code. Valid values:
-        /// <li>0: success;</li>
-        /// <li>Other values: failure.</li>
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

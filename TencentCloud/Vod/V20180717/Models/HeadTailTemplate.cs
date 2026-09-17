@@ -25,54 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Head Tail Template Number.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Template name, supports up to 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description, up to 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+        /// 
         /// </summary>
         [JsonProperty("HeadCandidateSet")]
         public string[] HeadCandidateSet{ get; set; }
 
         /// <summary>
-        /// Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+        /// 
         /// </summary>
         [JsonProperty("TailCandidateSet")]
         public string[] TailCandidateSet{ get; set; }
 
         /// <summary>
-        /// Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-        /// <li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-        /// <li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-        /// <li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-        /// <li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-        /// Default value: stretch.
+        /// 
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

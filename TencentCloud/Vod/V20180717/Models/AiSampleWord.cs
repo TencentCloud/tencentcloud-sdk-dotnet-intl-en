@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Keyword.
+        /// 
         /// </summary>
         [JsonProperty("Keyword")]
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// Keyword tag.
+        /// 
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// Keyword use case.
+        /// 
         /// </summary>
         [JsonProperty("UsageSet")]
         public string[] UsageSet{ get; set; }
 
         /// <summary>
-        /// Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

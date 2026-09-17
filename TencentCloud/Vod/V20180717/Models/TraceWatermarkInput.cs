@@ -25,15 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to use digital watermarks. This parameter is required. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// This parameter has been deprecated.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         [System.Obsolete]

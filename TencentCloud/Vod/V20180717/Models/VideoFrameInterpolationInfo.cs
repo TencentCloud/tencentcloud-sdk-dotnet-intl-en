@@ -25,15 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable smart frame interpolation. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF`</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+        /// 
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

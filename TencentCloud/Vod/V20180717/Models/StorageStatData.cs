@@ -25,39 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// VOD storage billing region. Valid values:
-        /// <li>Chinese Mainland</li>
-        /// <li>Outside Chinese Mainland</li>
+        /// 
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Current total storage capacity in bytes.
+        /// 
         /// </summary>
         [JsonProperty("TotalStorage")]
         public ulong? TotalStorage{ get; set; }
 
         /// <summary>
-        /// Current STANDARD_IA storage capacity in bytes.
+        /// 
         /// </summary>
         [JsonProperty("InfrequentStorage")]
         public ulong? InfrequentStorage{ get; set; }
 
         /// <summary>
-        /// Current STANDARD storage capacity in bytes.
+        /// 
         /// </summary>
         [JsonProperty("StandardStorage")]
         public ulong? StandardStorage{ get; set; }
 
         /// <summary>
-        /// Current ARCHIVE storage usage in bytes
+        /// 
         /// </summary>
         [JsonProperty("ArchiveStorage")]
         public ulong? ArchiveStorage{ get; set; }
 
         /// <summary>
-        /// Current DEEP ARCHIVE storage usage in bytes
+        /// 
         /// </summary>
         [JsonProperty("DeepArchiveStorage")]
         public ulong? DeepArchiveStorage{ get; set; }

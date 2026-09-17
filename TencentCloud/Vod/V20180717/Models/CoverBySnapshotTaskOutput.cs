@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Cover URL.
+        /// 
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

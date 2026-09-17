@@ -25,10 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The ID of the NAT gateway, such as `nat-df45454`.
+        /// NAT gateway ID, for example, `nat-df45454`.
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
+
+        /// <summary>
+        /// Ignores operation risks.
+        /// </summary>
+        [JsonProperty("IgnoreOperationRisk")]
+        public bool? IgnoreOperationRisk{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+            this.SetParamSimple(map, prefix + "IgnoreOperationRisk", this.IgnoreOperationRisk);
         }
     }
 }

@@ -25,27 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The cropping type. Valid values:
-        /// <li>Circle: Cropping to circle. `Radius` specifies the radius of the output image.</li>
-        /// <li>Rectangle: Cropping to rectangle. `Width` and `Height` specify the width and height of the output image.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The width (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+        /// 
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// The height (pixels) of the output image. This parameter is valid if `Type` is `Rectangle`.
+        /// 
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// The radius of the output image. This parameter is valid if `Type` is `Circle`.
+        /// 
         /// </summary>
         [JsonProperty("Radius")]
         public long? Radius{ get; set; }

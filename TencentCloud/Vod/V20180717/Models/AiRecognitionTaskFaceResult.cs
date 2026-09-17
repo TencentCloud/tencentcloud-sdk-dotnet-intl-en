@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+        /// 
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input information of face recognition task.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskFaceResultInput Input{ get; set; }
 
         /// <summary>
-        /// Face recognition task output information.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskFaceResultOutput Output{ get; set; }
 
         /// <summary>
-        /// The progress of a face recognition task. Value range: 0-100.
+        /// 
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// The time when the face recognition task started, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// The time when the face recognition task was completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

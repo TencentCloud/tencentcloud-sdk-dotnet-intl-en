@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total number of log topics.
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Log topic list.
+        /// 
         /// </summary>
         [JsonProperty("Topics")]
         public CLSTopicInfo[] Topics{ get; set; }

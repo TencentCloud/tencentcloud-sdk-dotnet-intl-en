@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image recognition involves control parameters for inappropriate information.
+        /// 
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// ASR-based recognition involves control parameters for inappropriate information.
+        /// 
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Text recognition involves control parameters for inappropriate information.
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

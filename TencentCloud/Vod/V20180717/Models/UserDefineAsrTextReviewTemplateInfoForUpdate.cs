@@ -25,28 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable custom ASR-based recognition. Valid values:
-        /// <li>ON</li>
-        /// <li>OFF</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
-        /// Up to 10 labels are allowed, each containing no more than 16 characters.
+        /// 
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+        /// 
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+        /// 
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The blur type. Valid values:
-        /// <li>`Gaussian`</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+        /// 
         /// </summary>
         [JsonProperty("Radius")]
         public long? Radius{ get; set; }
 
         /// <summary>
-        /// The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+        /// 
         /// </summary>
         [JsonProperty("Sigma")]
         public long? Sigma{ get; set; }

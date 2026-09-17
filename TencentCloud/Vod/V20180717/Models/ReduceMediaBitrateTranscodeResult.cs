@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+        /// 
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// The error message.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of a transcoding task.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public TranscodeTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Transcoding task output.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public MediaTranscodeItem Output{ get; set; }
 
         /// <summary>
-        /// The transcoding progress. Value range: 0-100.
+        /// 
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// The start time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// The end time of the transcoding task, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

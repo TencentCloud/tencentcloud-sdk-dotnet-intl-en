@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Encryption type:</p><ul><li>FairPlay: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>PlayReady: Can be used for HLS and DASH. The slice format can only be mp4.</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: Can only be used for HLS. The slice format can only be mp4.</li><li>Widevine PlayReady composite: Can be used for HLS and MPEG-DASH. The slice format can only be mp4.</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("DrmTypes")]
         public string[] DrmTypes{ get; set; }
 
         /// <summary>
-        /// <p>External DRM vendor information.</p>
+        /// 
         /// </summary>
         [JsonProperty("SPEKEDrm")]
         public SPEKEDrm SPEKEDrm{ get; set; }

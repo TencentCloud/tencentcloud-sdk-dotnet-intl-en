@@ -25,56 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Scenario-based video parameter configuration.
+        /// 
         /// </summary>
         [JsonProperty("SceneInfo")]
         public AigcVideoSceneInfo SceneInfo{ get; set; }
 
         /// <summary>
-        /// Scenario-based output media file configuration for video tasks.
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SceneAigcVideoOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// Input image list. Supported image formats: jpg, jpeg, png, webp.
         /// 
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+        /// 
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+        /// 
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// Reserved field, used for special purpose.
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
         /// <summary>
-        /// Customize prompt
+        /// 
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }

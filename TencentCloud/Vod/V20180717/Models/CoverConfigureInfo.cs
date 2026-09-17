@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of intelligent cover generating task. Valid values:
-        /// <li>ON: enables intelligent cover generating task;</li>
-        /// <li>OFF: disables intelligent cover generating task.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

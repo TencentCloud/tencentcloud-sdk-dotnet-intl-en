@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of intelligently generated thumbnails
-        /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+        /// 
         /// </summary>
         [JsonProperty("CoverSet")]
         public MediaAiAnalysisCoverItem[] CoverSet{ get; set; }
 
         /// <summary>
-        /// URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+        /// 
         /// </summary>
         [JsonProperty("CoverSetFileUrl")]
         public string CoverSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// 
         /// </summary>
         [JsonProperty("CoverSetFileUrlExpireTime")]
         public string CoverSetFileUrlExpireTime{ get; set; }

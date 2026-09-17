@@ -25,31 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Anti-hotlink configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+        /// Hotlink protection configuration switch. Value:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Configure timestamp hotlink protection mode A.
+        /// 
         /// </summary>
         [JsonProperty("TypeA")]
         public AuthenticationTypeA TypeA{ get; set; }
 
         /// <summary>
-        /// Timestamp hotlink protection mode B configuration.
+        /// 
         /// </summary>
         [JsonProperty("TypeB")]
         public AuthenticationTypeB TypeB{ get; set; }
 
         /// <summary>
-        /// Timestamp hotlink protection mode C configuration.
+        /// 
         /// </summary>
         [JsonProperty("TypeC")]
         public AuthenticationTypeC TypeC{ get; set; }
 
         /// <summary>
-        /// Timestamp hotlink protection mode D configuration.
+        /// 
         /// </summary>
         [JsonProperty("TypeD")]
         public AuthenticationTypeD TypeD{ get; set; }

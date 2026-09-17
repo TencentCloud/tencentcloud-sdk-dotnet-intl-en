@@ -25,14 +25,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// List of instance IDs successfully terminated.
+        /// <p>List of instance IDs successfully terminated.</p>
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// List of instances with termination failed (returned when partially successful).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>List of instances with termination failed (returned when partially successful).</p>
         /// </summary>
         [JsonProperty("FailedInstanceSet")]
         public FailedInstance[] FailedInstanceSet{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// Availability zone list of all regions.
+        /// <p>AZ list of all regions.</p>
         /// </summary>
         [JsonProperty("ZoneSet")]
         public ZoneInfo[] ZoneSet{ get; set; }
 
         /// <summary>
-        /// Total number of availability zones.
+        /// <p>Total number of availability zones.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

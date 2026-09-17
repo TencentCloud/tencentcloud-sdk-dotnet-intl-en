@@ -25,135 +25,115 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media filename.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Media file description.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Category ID of media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Category name of media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }
 
         /// <summary>
-        /// Category path to media file separated by "-", such as "new first-level category - new second-level category".
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// Cover image address of media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// Media file container, such as mp4 and flv.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// URL of source media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
-        /// Source information of media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SourceInfo")]
         public MediaSourceData SourceInfo{ get; set; }
 
         /// <summary>
-        /// Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+        /// 
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// Media storage path.
+        /// 
         /// </summary>
         [JsonProperty("StoragePath")]
         public string StoragePath{ get; set; }
 
         /// <summary>
-        /// Tag information of media file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// Unique ID of an LVB recording file.
+        /// 
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
 
         /// <summary>
-        /// File type:
-        /// <li>Video: video file</li>
-        /// <li>Audio: audio file</li>
-        /// <li>Image: image file</li>
+        /// 
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// File status: Normal: normal, Forbidden: banned.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Storage class of a media file:
-        /// <li>STANDARD</li>
-        /// <li>STANDARD_IA</li>
-        /// <li>ARCHIVE</li>
-        /// <li>DEEP_ARCHIVE</li>
+        /// 
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }

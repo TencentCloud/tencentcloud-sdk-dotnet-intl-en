@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Quota list</p>
+        /// 
         /// </summary>
         [JsonProperty("QuotaSet")]
         public AigcQuotaItem[] QuotaSet{ get; set; }
 
         /// <summary>
-        /// <p>Total quantity.</p>
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Media file ID, the globally unique ID of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID.</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Optional parameter. This parameter is used for passing through to the media processing service (MPS) to trigger MPS video processing tasks from VOD.
+        /// 
         /// </summary>
         [JsonProperty("MPSProcessMediaParams")]
         public string MPSProcessMediaParams{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the video content analysis task. Valid when MPSProcessMediaParams is empty.</p>
+        /// 
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public MPSAiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the smart subtitle task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+        /// 
         /// </summary>
         [JsonProperty("SmartSubtitlesTask")]
         public MPSSmartSubtitlesTaskInput SmartSubtitlesTask{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the intelligent erasure task of type kind. Valid when MPSProcessMediaParams is empty.</p>
+        /// 
         /// </summary>
         [JsonProperty("SmartEraseTask")]
         public MPSSmartEraseTaskInput SmartEraseTask{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field. Used for special purpose.</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

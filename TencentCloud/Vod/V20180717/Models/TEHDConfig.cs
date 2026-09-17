@@ -25,14 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-        /// Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+        /// 
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

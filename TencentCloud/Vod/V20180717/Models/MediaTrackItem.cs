@@ -25,48 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Segment type. Valid values:
-        /// <li>Video: video segment.</li>
-        /// <li>Audio: audio segment.</li>
-        /// <li>Sticker: sticker segment.</li>
-        /// <li>Transition: transition.</li>
-        /// <li>Empty: empty segment.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Video segment, which is valid if `Type` is `Video`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoItem")]
         public VideoTrackItem VideoItem{ get; set; }
 
         /// <summary>
-        /// Audio segment, which is valid if `Type` is `Audio`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AudioItem")]
         public AudioTrackItem AudioItem{ get; set; }
 
         /// <summary>
-        /// Sticker segment, which is valid if `Type` is `Sticker`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StickerItem")]
         public StickerTrackItem StickerItem{ get; set; }
 
         /// <summary>
-        /// Transition, which is valid if `Type` is `Transition`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TransitionItem")]
         public MediaTransitionItem TransitionItem{ get; set; }
 
         /// <summary>
-        /// Empty segment, which is valid if `Type` is `Empty`. It is used as placeholder on time axis. <li>If you want a period of silence between two audio segments, you can use `EmptyTrackItem` to hold the place.</li>
-        /// <li>Use `EmptyTrackItem` as a placeholder to locate an item.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EmptyItem")]
         public EmptyTrackItem EmptyItem{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Name of recognized object.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of segments that contain an object.
+        /// 
         /// </summary>
         [JsonProperty("SegmentSet")]
         [System.Obsolete]
         public AiRecognitionTaskObjectSeqmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// List of fragments in which the object appears.
+        /// 
         /// </summary>
         [JsonProperty("RecognitionSegmentSet")]
         public AiRecognitionTaskObjectSegmentItem[] RecognitionSegmentSet{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Filtering condition for the unique identifier of the image async processing template. The maximum array length is 100.
+        /// 
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

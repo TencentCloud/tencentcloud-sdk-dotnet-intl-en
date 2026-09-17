@@ -25,23 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Acceleration region. Valid values:
-        /// <li>Chinese Mainland</li>
-        /// <li>Outside Chinese Mainland</li>
+        /// 
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Reason why acceleration is disabled by Tencent Cloud. Valid values:
-        /// <li>ForLegalReasons: legal reasons</li>
-        /// <li>ForOverdueBills: overdue payment</li>
+        /// 
         /// </summary>
         [JsonProperty("TencentDisableReason")]
         public string TencentDisableReason{ get; set; }
 
         /// <summary>
-        /// CNAME of the acceleration domain name
+        /// 
         /// </summary>
         [JsonProperty("TencentEdgeDomain")]
         public string TencentEdgeDomain{ get; set; }

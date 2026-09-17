@@ -25,78 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task status. Valid values:
-        /// WAITING: waiting;
-        /// PROCESSING: processing;
-        /// FINISH: completed.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code
-        /// <li>0: success;</li>
-        /// <li>Other values: failure.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// ID of published video file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Release on WeChat template ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// ID of the transcoding template corresponding to the published video. 0 represents the source video.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }
 
         /// <summary>
-        /// Release on WeChat status. Valid values:
-        /// <li>FAIL: failure;</li>
-        /// <li>SUCCESS: success;</li>
-        /// <li>AUDITNOTPASS: rejected</li>
-        /// <li>NOTTRIGGERED: release on WeChat not initiated yet.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WechatStatus")]
         public string WechatStatus{ get; set; }
 
         /// <summary>
-        /// WeChat `Vid`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WechatVid")]
         public string WechatVid{ get; set; }
 
         /// <summary>
-        /// WeChat address.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WechatUrl")]
         public string WechatUrl{ get; set; }

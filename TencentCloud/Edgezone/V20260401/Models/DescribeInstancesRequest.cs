@@ -25,43 +25,55 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// Instance ID list for filtering by instance ID
+        /// <p>Instance ID list for filtering by instance ID</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Instance name, supports fuzzy matching
+        /// <p>Instance name, supports fuzzy matching.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Availability zone code for filtering instances in the specified availability zone
+        /// <p>Availability zone code for filtering instances in the specified availability zone</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+        /// <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string[] InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Public IPv4 address list, used for filtering instances by public IP address
+        /// <p>Public network ID.</p>
+        /// </summary>
+        [JsonProperty("PublicNetworkId")]
+        public string PublicNetworkId{ get; set; }
+
+        /// <summary>
+        /// <p>VPC ID.</p>
+        /// </summary>
+        [JsonProperty("PrivateNetworkId")]
+        public string PrivateNetworkId{ get; set; }
+
+        /// <summary>
+        /// <p>Public IPv4 address list, used for filtering instances by public IP address</p>
         /// </summary>
         [JsonProperty("PublicIps")]
         public string[] PublicIps{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: 0
+        /// <p>Offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results. Default 20. Maximum 100.
+        /// <p>Number of returned results. Default 20. Maximum 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -76,6 +88,8 @@ namespace TencentCloud.Edgezone.V20260401.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArraySimple(map, prefix + "InstanceStatus.", this.InstanceStatus);
+            this.SetParamSimple(map, prefix + "PublicNetworkId", this.PublicNetworkId);
+            this.SetParamSimple(map, prefix + "PrivateNetworkId", this.PrivateNetworkId);
             this.SetParamArraySimple(map, prefix + "PublicIps.", this.PublicIps);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);

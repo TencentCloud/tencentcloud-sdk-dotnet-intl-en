@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video shake and ghost detection switch, optional values:
-        /// <li>ON: turn on;</li>
-        /// <li>OFF: turn off. </li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

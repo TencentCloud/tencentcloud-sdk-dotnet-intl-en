@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain.
+        /// 
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Deployment status.
+        /// 
         /// </summary>
         [JsonProperty("DeployStatus")]
         public string DeployStatus{ get; set; }
 
         /// <summary>
-        /// Cname record.
+        /// 
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// Create Time
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// cdn domain configuration information.
+        /// 
         /// </summary>
         [JsonProperty("Config")]
         public CDNDomainConfig Config{ get; set; }

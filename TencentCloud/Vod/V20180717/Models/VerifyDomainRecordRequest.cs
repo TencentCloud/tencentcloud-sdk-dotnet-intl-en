@@ -25,23 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Need to access the VOD acceleration domain name.
+        /// 
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2024, they must fill this field with the app ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>	
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// VerifyType:
-        /// <li>dns: DNS Parse verification; </li>
-        /// <li>fIle: Document verification.</li>
         /// 
-        /// Default value: dns.
         /// </summary>
         [JsonProperty("VerifyType")]
         public string VerifyType{ get; set; }

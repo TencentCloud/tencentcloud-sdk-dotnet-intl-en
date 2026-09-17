@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// User-defined character video moderation control parameter.
+        /// 
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfo FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// User custom voice video moderation control parameter.
+        /// 
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// User custom text video moderation control parameter.
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfo OcrReviewInfo{ get; set; }

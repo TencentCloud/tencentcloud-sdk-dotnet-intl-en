@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Whether to enable beauty effects.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Beauty option.</p>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Intensity of beauty effects.</p>
+        /// 
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }
 
         /// <summary>
-        /// <p>Attach the resource path.</p>
+        /// 
         /// </summary>
         [JsonProperty("ResourcePath")]
         public string ResourcePath{ get; set; }
 
         /// <summary>
-        /// <p>Additional information.</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

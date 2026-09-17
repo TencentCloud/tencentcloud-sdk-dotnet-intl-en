@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Task ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Processing status.</p>
+        /// 
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// <p>voice_id customized by users. Do not return if the task fails.</p>
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// <p>If the audition text is passed in the request body, this parameter returns the audio audition in link format, otherwise this parameter is empty.</p>
+        /// 
         /// </summary>
         [JsonProperty("DemoAudio")]
         public string DemoAudio{ get; set; }
 
         /// <summary>
-        /// <p>Pass-through parameter passed in this call.</p>
+        /// 
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
         /// <summary>
-        /// <p>Task creation time.</p>
+        /// 
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }

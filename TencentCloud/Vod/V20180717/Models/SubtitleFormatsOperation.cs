@@ -25,18 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The modification type. Valid values:
-        /// <li>add: Add the formats specified by `Formats`.</li>
-        /// <li>delete: Delete the formats specified by `Formats`.<l/i>
-        /// <li>reset: Reset the format list to formats specified by `Formats`.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The subtitle format list. Valid values:
-        /// <li>vtt</li>
-        /// <li>srt</li>
+        /// 
         /// </summary>
         [JsonProperty("Formats")]
         public string[] Formats{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Face recognition task list</p>
+        /// 
         /// </summary>
         [JsonProperty("FaceRecognitionTasks")]
         public FaceRecognitionTask[] FaceRecognitionTasks{ get; set; }

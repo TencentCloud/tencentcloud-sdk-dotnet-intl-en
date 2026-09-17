@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Subject ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }
 
         /// <summary>
-        /// <p>Entity information.</p>
+        /// 
         /// </summary>
         [JsonProperty("ElementInfo")]
         public string ElementInfo{ get; set; }

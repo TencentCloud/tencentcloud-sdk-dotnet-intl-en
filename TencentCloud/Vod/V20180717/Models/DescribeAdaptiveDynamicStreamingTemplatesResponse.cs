@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The total number of records matching the filter criteria.
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of transcoding to adaptive bitrate streaming template details.
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTemplateSet")]
         public AdaptiveDynamicStreamingTemplate[] AdaptiveDynamicStreamingTemplateSet{ get; set; }

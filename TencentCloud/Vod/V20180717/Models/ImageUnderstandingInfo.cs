@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image understanding collection.
+        /// 
         /// </summary>
         [JsonProperty("ImageUnderstandingSet")]
         public ImageUnderstandingItem[] ImageUnderstandingSet{ get; set; }

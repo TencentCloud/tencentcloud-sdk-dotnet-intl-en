@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
+        /// 
         /// </summary>
         [JsonProperty("AutoAreas")]
         public MPSEraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// <p>Width of the sample video or image, in pixels.</p>
+        /// 
         /// </summary>
         [JsonProperty("SampleWidth")]
         public ulong? SampleWidth{ get; set; }
 
         /// <summary>
-        /// <p>Height of the sample video or image, in pixels.</p>
+        /// 
         /// </summary>
         [JsonProperty("SampleHeight")]
         public ulong? SampleHeight{ get; set; }

@@ -25,29 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+        /// 
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Region to enable acceleration. Valid values:
-        /// <li>`Chinese Mainland`</li>
-        /// <li>`Outside Chinese Mainland`</li>
-        /// <li>`Global`</li>
-        /// If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+        /// 
         /// </summary>
         [JsonProperty("AccelerateArea")]
         public string AccelerateArea{ get; set; }
 
         /// <summary>
-        /// Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

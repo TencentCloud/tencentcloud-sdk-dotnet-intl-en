@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of intelligently generated video tags
-        /// <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+        /// 
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisTagItem[] TagSet{ get; set; }
 
         /// <summary>
-        /// URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+        /// 
         /// </summary>
         [JsonProperty("TagSetFileUrl")]
         public string TagSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+        /// 
         /// </summary>
         [JsonProperty("TagSetFileUrlExpireTime")]
         public string TagSetFileUrlExpireTime{ get; set; }

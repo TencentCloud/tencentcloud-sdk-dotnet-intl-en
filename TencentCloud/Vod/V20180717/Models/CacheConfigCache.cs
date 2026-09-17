@@ -25,31 +25,39 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Path cache configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+        /// Path cache configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Cache expiration time settings<li>Unit: second. The maximum value is 365 days.</li>
+        /// 
         /// </summary>
         [JsonProperty("CacheTime")]
         public ulong? CacheTime{ get; set; }
 
         /// <summary>
-        /// Advanced cache expiration configuration. When enabled, the max-age value returned by the origin site will be compared with the cache expiration time set in CacheRules, and the minimum value will be used to cache the node. Values: <li>on: enabled; </li> <li >off: off. </li>
+        /// Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("CompareMaxAge")]
         public string CompareMaxAge{ get; set; }
 
         /// <summary>
-        /// Force caching, values: <li>on: on; </li> <li>off: off. </li>
+        /// Force cache. Value:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// When the origin site returns the Set-Cookie header, whether the node caches the header and body: <li>on: on, does not cache the header and body;</li> <li>off: off, follows user customization Node caching rules. </li>
+        /// Whether to cache the Set-Cookie header and body on the node when the origin server response contains the Set-Cookie header.
+        /// <li>on: Enable. Do not cache the header or body;</li>
+        /// <li>off: disabled, following user-defined node cache rules.</li>
         /// </summary>
         [JsonProperty("IgnoreSetCookie")]
         public string IgnoreSetCookie{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Segment summary parsing configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummary Summary{ get; set; }
 
         /// <summary>
-        /// <p>Text transcription parsing configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsr Asr{ get; set; }
 
         /// <summary>
-        /// <p>Face identification configuration</p>
+        /// 
         /// </summary>
         [JsonProperty("FaceRecognition")]
         public LLMComprehendFaceRecognition FaceRecognition{ get; set; }

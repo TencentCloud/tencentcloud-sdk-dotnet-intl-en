@@ -25,46 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subtitle name. Length limit: 64 characters
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Subtitle language. Common values are as follows:
-        /// <li>zh: Chinese.</li>
-        /// <li>en: English;</li>
-        /// <li>ja: Japanese;</li>
-        /// <li>ko: Korean;</li>
-        /// <li>vi: Vietnamese;</li>
-        /// <li>ms: Malay;</li>
-        /// <li>th: Thai;</li>
-        /// <li>pt: Portuguese;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ar: Arabic;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>hi: Hindi;</li>
-        /// <li>fr: French.</li>
-        /// For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+        /// 
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// Subtitle format. Valid value:
-        /// <li>vtt</li>
+        /// 
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
+        /// 
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+        /// 
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

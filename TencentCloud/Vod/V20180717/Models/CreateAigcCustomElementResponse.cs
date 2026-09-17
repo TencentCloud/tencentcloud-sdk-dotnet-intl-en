@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subject ID. Need to record the returned subject ID yourself.
+        /// 
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }

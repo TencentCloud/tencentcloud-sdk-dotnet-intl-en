@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Information set of sampled screenshots with the specified specifications. Each element represents a set of sampled screenshots with the same specification.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SampleSnapshotSet")]
         public MediaSampleSnapshotItem[] SampleSnapshotSet{ get; set; }

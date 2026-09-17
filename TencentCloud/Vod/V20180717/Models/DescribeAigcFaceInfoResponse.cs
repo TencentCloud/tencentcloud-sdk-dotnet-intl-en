@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Face information.
+        /// 
         /// </summary>
         [JsonProperty("FaceInfoSet")]
         public AigcFaceInfo[] FaceInfoSet{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Output file info of the AIGC video task.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcVideoTaskOutputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+        /// 
         /// </summary>
         [JsonProperty("ProcedureTaskIds")]
         public string[] ProcedureTaskIds{ get; set; }
 
         /// <summary>
-        /// <p>Usage information for AIGC video tasks.</p>
+        /// 
         /// </summary>
         [JsonProperty("Usage")]
         public AigcVideoTaskUsage Usage{ get; set; }

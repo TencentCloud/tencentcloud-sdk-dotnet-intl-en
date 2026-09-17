@@ -25,86 +25,85 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Player configuration name.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Player configuration type. Valid values:</p><li>Preset: system predefined configuration.</li><li>Custom: user-customized configuration.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: adaptive bitrate stream output;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
+        /// 
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+        /// 
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Allowed output of unencrypted adaptive bitstream template ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// <p>Allowed output of DRM adaptive bitstream template content.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
 
         /// <summary>
-        /// <p>Allowed output transcoding template ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// <p>Allowed output sprite template ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("ImageSpriteDefinition")]
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// <p>The player displays names for substreams of different resolution.</p>
+        /// 
         /// </summary>
         [JsonProperty("ResolutionNameSet")]
         public ResolutionNameInfo[] ResolutionNameSet{ get; set; }
 
         /// <summary>
-        /// <p>Player configuration creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Last player configuration modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Domain name used during playback. A value of Default indicates usage of the domain name in the <a href="https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1">default distribution configuration</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <p>Scheme used during playback. Value ranges from:</p><li>Default: Use the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li><li>HTTP;</li><li>HTTPS.</li>
+        /// 
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// <p>Template description information.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

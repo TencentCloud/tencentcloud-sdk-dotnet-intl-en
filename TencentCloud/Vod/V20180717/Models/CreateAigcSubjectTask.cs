@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Task ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Task status.</p><p>Enumeration value:</p><ul><li>PROCESSING: Processing</li><li>FINISH: Completed</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extended error code. A null string indicates success, other values indicate failure.</p>
+        /// 
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// <p>Error message.</p>
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Input of the task to create an AIGC subject.</p>
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public CreateAigcSubjectInput Input{ get; set; }
 
         /// <summary>
-        /// <p>Output of the task to create an AIGC subject.</p>
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public CreateAigcSubjectOutput Output{ get; set; }
 
         /// <summary>
-        /// <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

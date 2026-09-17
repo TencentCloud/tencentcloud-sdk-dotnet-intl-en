@@ -25,13 +25,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// List of successfully created instance IDs.
+        /// <p>List of successfully created instance IDs.</p>
         /// </summary>
         [JsonProperty("InstanceIdSet")]
         public string[] InstanceIdSet{ get; set; }
 
         /// <summary>
-        /// Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+        /// <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
         /// </summary>
         [JsonProperty("FailedCount")]
         public ulong? FailedCount{ get; set; }

@@ -25,16 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The type of live stream to clip. Valid values:
-        /// <li>Original (<b>default</b>)</li>
-        /// <li>Transcoding</li>
+        /// Live stream type. Valid values:
+        /// <li>Original (original stream, <b>default value</b>).</li>
+        /// <li>Transcoding (transcoding stream).</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The transcoding template ID.
-        /// <b>This is required if `Type` is `Transcoding`.</b>
+        /// Live streaming transcoding template ID.
+        /// <b>Required when Type is "Transcoding".</b>
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }

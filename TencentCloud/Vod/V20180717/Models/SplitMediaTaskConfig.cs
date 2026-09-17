@@ -25,31 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The offset time of the start of video stripping, unit: seconds. 
-        /// <li>Leave it blank or fill in 0, which means that the transcoded video starts from the starting position of the original video;</li>
-        /// <li>When the value is greater than 0 (assumed to be n), it means that after transcoding The video starts from the n-th second position of the original video;</li>
-        /// <li>When the value is less than 0 (assumed to be -n), it means that the transcoded video starts from the position n seconds before the end of the original video. </li>
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// Offset time at the end of video stripping, unit: seconds. 
-        /// <li>Leave it blank or fill it in with 0, which means that the transcoded video will continue until the end of the original video;</li>
-        /// <li>When the value is greater than 0 (assumed to be n), it means that the transcoded video will continue until the end of the original video. The video continues until the nth second of the original video and terminates;</li>
-        /// <li>When the value is less than 0 (assumed to be -n), it means that the transcoded video continues until n seconds before the end of the original video. </li>
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+        /// 
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// The video is split into strips to output information.
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SplitMediaOutputConfig OutputConfig{ get; set; }

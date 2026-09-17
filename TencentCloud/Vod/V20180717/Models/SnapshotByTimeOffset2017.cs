@@ -25,24 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Error code
-        /// <li>0: success;</li>
-        /// <li>Other values: failure.</li>
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Specific time point of screenshot in milliseconds.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }
 
         /// <summary>
-        /// Address of output screenshot file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

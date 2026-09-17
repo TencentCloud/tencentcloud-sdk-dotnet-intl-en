@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>FileId of image processing.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>Image URL.</p>
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>Image processing parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("ImageTaskInput")]
         public ProcessImageAsyncTaskInput ImageTaskInput{ get; set; }
 
         /// <summary>
-        /// <p>Output media file configuration for the image processing task.</p>
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public ProcessImageAsyncOutputConfig OutputConfig{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Information set of image sprites with specified specifications. Each element represents a set of image sprites with the same specification.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ImageSpriteSet")]
         public MediaImageSpriteItem[] ImageSpriteSet{ get; set; }

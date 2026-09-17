@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Quota type</p><p>Enumeration value:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("QuotaType")]
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaLimit=Text, used to select the ApiToken that needs quota limit</p>
+        /// 
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
 
         /// <summary>
-        /// <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("QuotaLimit")]
         public ulong? QuotaLimit{ get; set; }
 
         /// <summary>
-        /// <p>Amount already used</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: piece</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: token</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Usage")]
         public ulong? Usage{ get; set; }

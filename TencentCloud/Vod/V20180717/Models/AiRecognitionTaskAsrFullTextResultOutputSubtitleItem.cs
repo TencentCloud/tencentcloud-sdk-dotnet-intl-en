@@ -25,35 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
-        /// <font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+        /// 
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Media Asset Subtitle Name for player display. Valid only when Format is vtt.
-        /// <font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Subtitle language.
+        /// 
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// The format of the subtitle files. Valid values:
-        /// <li>vtt</li>
-        /// <li>srt</li>
+        /// 
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// The URL of a subtitle file.
+        /// 
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Task flow template name filter conditions. The array can contain up to 100 conditions.</p>
+        /// 
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// <p>Filtering condition for the task flow template type. Valid values:</p><li>Preset: system preset task flow template;</li><li>Custom: user-defined task flow template.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Paging offset. Default value: 0.</p>
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Specify the field to sort the returned results in ascending or descending order. Sort.Field currently only supports CreateTime. Sort.Order can be desc (descending order) or asc (ascending order).</p><p>Input parameter limitation: Currently only the CreateTime field is supported for sorting.</p>
+        /// 
         /// </summary>
         [JsonProperty("SortBy")]
         public SortBy[] SortBy{ get; set; }

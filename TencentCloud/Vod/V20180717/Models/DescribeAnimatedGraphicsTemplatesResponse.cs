@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total number of records that meet the filtering conditions.
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Rotation diagram template details list.
+        /// 
         /// </summary>
         [JsonProperty("AnimatedGraphicsTemplateSet")]
         public AnimatedGraphicsTemplate[] AnimatedGraphicsTemplateSet{ get; set; }

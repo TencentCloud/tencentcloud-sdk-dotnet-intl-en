@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Faceid.V20180301.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetWxNFCResultRequest : AbstractModel
+    public class MPSEmbedSubtitleTemplateForUpdate : AbstractModel
     {
         
         /// <summary>
-        /// <p>Unique identifier ID returned by the frontend NFC SDK</p>
+        /// 
         /// </summary>
-        [JsonProperty("NFCToken")]
-        public string NFCToken{ get; set; }
+        [JsonProperty("Definition")]
+        public long? Definition{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Comment")]
+        public string Comment{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SubtitleEmbedConfig")]
+        public MPSSubtitleEmbedConfig SubtitleEmbedConfig{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NFCToken", this.NFCToken);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamObj(map, prefix + "SubtitleEmbedConfig.", this.SubtitleEmbedConfig);
         }
     }
 }

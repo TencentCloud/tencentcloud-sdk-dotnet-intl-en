@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Voice prohibition control parameter.
+        /// 
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public ProhibitedAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Text prohibited control parameters.
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public ProhibitedOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of intelligent media information processed by MPS
+        /// 
         /// </summary>
         [JsonProperty("AiMediaList")]
         public MPSAiMediaItem[] AiMediaList{ get; set; }

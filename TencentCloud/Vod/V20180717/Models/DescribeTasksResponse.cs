@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task summary list.
+        /// 
         /// </summary>
         [JsonProperty("TaskSet")]
         public TaskSimpleInfo[] TaskSet{ get; set; }
 
         /// <summary>
-        /// Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+        /// 
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

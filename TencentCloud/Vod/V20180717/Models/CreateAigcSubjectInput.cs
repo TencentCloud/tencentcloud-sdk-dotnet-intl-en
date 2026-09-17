@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Subject name.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubjectName")]
         public string SubjectName{ get; set; }
 
         /// <summary>
-        /// <p>Subject image.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubjectImages")]
         public string[] SubjectImages{ get; set; }
 
         /// <summary>
-        /// <p>Main video.</p>
+        /// 
         /// </summary>
         [JsonProperty("SubjectVideos")]
         public string[] SubjectVideos{ get; set; }
 
         /// <summary>
-        /// <p>Primary voice ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

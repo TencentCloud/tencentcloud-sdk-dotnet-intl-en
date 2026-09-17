@@ -25,83 +25,80 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task flow name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Type of a task flow template. Valid values:
-        /// <li>Preset: preset task flow template;</li>
-        /// <li>Custom: custom task flow template.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Template description. Length limit: 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Parameter of video processing task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// The information of the intelligent moderation task\*.
-        /// <font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// Parameter of AI-based content analysis task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// Parameters for the AI content recognition task.
+        /// 
         /// </summary>
         [JsonProperty("AiRecognitionTaskSet")]
         public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
 
         /// <summary>
-        /// This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// Parameter of a release on WeChat Mini Program task.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MiniProgramPublishTask")]
         public WechatMiniProgramPublishTaskInput MiniProgramPublishTask{ get; set; }
 
         /// <summary>
-        /// The information of the moderation task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
+        /// </summary>
+        [JsonProperty("ImportMediaKnowledgeTaskSet")]
+        public ImportMediaKnowledgeTaskInput[] ImportMediaKnowledgeTaskSet{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -122,6 +119,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
             this.SetParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
             this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+            this.SetParamArrayObj(map, prefix + "ImportMediaKnowledgeTaskSet.", this.ImportMediaKnowledgeTaskSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

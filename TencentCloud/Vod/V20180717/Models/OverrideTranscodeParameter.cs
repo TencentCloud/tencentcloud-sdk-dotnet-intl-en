@@ -25,47 +25,46 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+        /// 
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Indicates whether to remove video data. Valid values:
-        /// <li>`0`: reserved;</li>
-        /// <li>1: Remove.</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Indicates whether to remove audio data. Valid values:
-        /// <li>`0`: reserved;</li>
-        /// <li>1: Remove.</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfoForUpdate VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// Top Speed Codec transcoding configuration parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("StdExtInfo")]
+        public string StdExtInfo{ get; set; }
 
 
         /// <summary>
@@ -79,6 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
         }
     }
 }

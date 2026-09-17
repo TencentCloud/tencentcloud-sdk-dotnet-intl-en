@@ -25,43 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Material name, length limited to 20 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Material application scenario. Available values:
-        /// 1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-        /// 2. Review: For inappropriate content, equivalent to Review.Face.
-        /// 3. All: Include all of the above, equivalent to 1+2.
+        /// 
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Material description, with a length limit of 1024 characters.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-        /// Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+        /// 
         /// </summary>
         [JsonProperty("FaceContents")]
         public string[] FaceContents{ get; set; }
 
         /// <summary>
-        /// material tag
-        /// <li>Array length limit: 20 tags;</li>
-        /// <li>Length limit for a single tag: 128 characters.</li>
+        /// 
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

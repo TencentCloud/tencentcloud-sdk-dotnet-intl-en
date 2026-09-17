@@ -25,32 +25,52 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether there is no audio track in the media file. Value ranges from...to...
-        /// <li>0: No, have audio tracks;</li>
-        /// <li>1: Yes, no audio track.</li>
+        /// 
         /// </summary>
         [JsonProperty("NoAudio")]
         public long? NoAudio{ get; set; }
 
         /// <summary>
-        /// Whether there is no video track in the media file. Value ranges from...to...
-        /// <li>0: No, meaning there is a video track;</li>
-        /// <li>1: Yes, no video track.</li>
+        /// 
         /// </summary>
         [JsonProperty("NoVideo")]
         public long? NoVideo{ get; set; }
 
         /// <summary>
-        /// Video picture quality score, value ranges from 0 to 100.
+        /// 
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public ulong? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// List of abnormalities detected in audio and video quality.
+        /// 
         /// </summary>
         [JsonProperty("QualityInspectResultSet")]
         public QualityInspectResultItem[] QualityInspectResultSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("QualityEvaluationMeanOpinionScore")]
+        public float? QualityEvaluationMeanOpinionScore{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AestheticEvaluationScore")]
+        public long? AestheticEvaluationScore{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ContainerDiagnoseResultSet")]
+        public QualityInspectContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("LLMDetectionReport")]
+        public QualityInspectLLMDetectionReport LLMDetectionReport{ get; set; }
 
 
         /// <summary>
@@ -62,6 +82,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "NoVideo", this.NoVideo);
             this.SetParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
             this.SetParamArrayObj(map, prefix + "QualityInspectResultSet.", this.QualityInspectResultSet);
+            this.SetParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+            this.SetParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
+            this.SetParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
+            this.SetParamObj(map, prefix + "LLMDetectionReport.", this.LLMDetectionReport);
         }
     }
 }

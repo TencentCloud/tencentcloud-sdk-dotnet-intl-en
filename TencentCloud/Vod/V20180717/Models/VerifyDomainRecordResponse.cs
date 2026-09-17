@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether the verification is successful.
+        /// 
         /// </summary>
         [JsonProperty("Result")]
         public bool? Result{ get; set; }

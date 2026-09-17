@@ -25,18 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable artifact removal. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The artifact removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-        /// <li>`weak`</li>
-        /// <li>`strong`</li>
-        /// Default value: `weak`.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

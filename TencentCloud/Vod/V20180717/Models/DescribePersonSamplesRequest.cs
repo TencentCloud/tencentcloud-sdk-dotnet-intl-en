@@ -25,48 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Pulled material type. Valid values:
-        /// <li>UserDefine: User-customized material library;</li>
-        /// <li>Default: Default sample library.</li>
         /// 
-        /// Default value: UserDefine, pull user-customized material library materials.
-        /// Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Material ID, with an array length limit of 100.
+        /// 
         /// </summary>
         [JsonProperty("PersonIds")]
         public string[] PersonIds{ get; set; }
 
         /// <summary>
-        /// Material name. Array length limit: 20.
+        /// 
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Material tag. Array length limit: 20.
+        /// 
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 100. Maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// The direct connect gateway ID.
+        /// Direct Connect gateway ID.
         /// </summary>
         [JsonProperty("DirectConnectGatewayId")]
         public string DirectConnectGatewayId{ get; set; }
 
         /// <summary>
-        /// IDC subnet IP range
+        /// IDC subnet CIDR block.
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

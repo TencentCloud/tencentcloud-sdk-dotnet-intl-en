@@ -25,46 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Material ID.
+        /// 
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Name. Length limit: 128 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description. Length limit: 1024 characters.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Material application scenario. Available values:
-        /// 1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-        /// 2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
-        /// 3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+        /// 
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// Facial operation information.
+        /// 
         /// </summary>
         [JsonProperty("FaceOperationInfo")]
         public AiSampleFaceOperation FaceOperationInfo{ get; set; }
 
         /// <summary>
-        /// Tag operation information.
+        /// 
         /// </summary>
         [JsonProperty("TagOperationInfo")]
         public AiSampleTagOperation TagOperationInfo{ get; set; }

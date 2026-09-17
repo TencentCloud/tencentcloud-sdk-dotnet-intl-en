@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Name of intelligently generated category.
+        /// 
         /// </summary>
         [JsonProperty("Classification")]
         public string Classification{ get; set; }
 
         /// <summary>
-        /// Confidence of intelligently generated category between 0 and 100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

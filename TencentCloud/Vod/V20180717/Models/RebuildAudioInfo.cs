@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Audio noise reduction control parameters.
+        /// 
         /// </summary>
         [JsonProperty("AudioDenoiseInfo")]
         public AudioDenoiseInfo AudioDenoiseInfo{ get; set; }

@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Voice name.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Voice description.</p>
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }
 
         /// <summary>
-        /// <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Age")]
         public string Age{ get; set; }
 
         /// <summary>
-        /// <p>Language.</p>
+        /// 
         /// </summary>
         [JsonProperty("Languages")]
         public string[] Languages{ get; set; }
 
         /// <summary>
-        /// <p>Tag.</p>
+        /// 
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// <p>Scenario.</p>
+        /// 
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
 
         /// <summary>
-        /// <p>Audition audio.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }

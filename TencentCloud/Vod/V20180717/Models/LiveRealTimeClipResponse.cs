@@ -37,14 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>ID of the edited video task flow after solidification.</p>
+        /// <p>Edited video task flow ID after solidification.</p>
         /// </summary>
         [JsonProperty("VodTaskId")]
         public string VodTaskId{ get; set; }
 
         /// <summary>
         /// <p>Edited video metadata.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

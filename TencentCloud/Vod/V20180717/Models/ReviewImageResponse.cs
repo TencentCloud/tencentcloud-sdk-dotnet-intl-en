@@ -25,15 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+        /// 
         /// </summary>
         [JsonProperty("ReviewResultSet")]
         [System.Obsolete]
         public ContentReviewResult[] ReviewResultSet{ get; set; }
 
         /// <summary>
-        /// The image moderation result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MediaReviewResult")]
         public ReviewImageResult MediaReviewResult{ get; set; }

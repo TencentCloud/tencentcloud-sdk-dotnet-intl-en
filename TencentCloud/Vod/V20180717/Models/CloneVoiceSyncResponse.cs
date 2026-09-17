@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Cloned timbre</p>
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// <p>Audition audio.</p>
+        /// 
         /// </summary>
         [JsonProperty("DemoAudio")]
         public string DemoAudio{ get; set; }
 
         /// <summary>
-        /// <p>Extended information.</p>
+        /// 
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

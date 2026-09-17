@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+        /// 
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// The error message.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// The input of an adaptive bitrate task.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public AdaptiveDynamicStreamingTaskInput Input{ get; set; }
 
         /// <summary>
-        /// The output of an adaptive bitrate task.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public AdaptiveDynamicStreamingInfoItem Output{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IDC subnet information
+        /// IDC subnet information.
         /// </summary>
         [JsonProperty("DirectConnectSubnetSet")]
         public DirectConnectSubnet[] DirectConnectSubnetSet{ get; set; }

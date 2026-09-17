@@ -25,13 +25,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// Instance detail list
+        /// <p>Instance detail list</p>
         /// </summary>
         [JsonProperty("InstanceSet")]
         public Instance[] InstanceSet{ get; set; }
 
         /// <summary>
-        /// Number of Eligible Instances
+        /// <p>Number of eligible instances.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

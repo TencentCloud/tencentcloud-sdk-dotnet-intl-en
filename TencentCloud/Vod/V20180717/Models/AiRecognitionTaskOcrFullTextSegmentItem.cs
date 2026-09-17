@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Start time offset of recognized segment in seconds.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of recognition segment in seconds.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Recognition segment result set.
+        /// 
         /// </summary>
         [JsonProperty("TextSet")]
         public AiRecognitionTaskOcrFullTextSegmentTextItem[] TextSet{ get; set; }

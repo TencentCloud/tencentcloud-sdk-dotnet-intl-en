@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Speech keyword recognition result set
-        /// <font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+        /// 
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskAsrWordsResultItem[] ResultSet{ get; set; }
 
         /// <summary>
-        /// URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+        /// 
         /// </summary>
         [JsonProperty("ResultSetFileUrl")]
         public string ResultSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+        /// 
         /// </summary>
         [JsonProperty("ResultSetFileUrlExpireTime")]
         public string ResultSetFileUrlExpireTime{ get; set; }

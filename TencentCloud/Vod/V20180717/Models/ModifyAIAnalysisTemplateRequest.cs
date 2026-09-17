@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of an audio and video content analysis template.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Audio and video content analysis template name. Length limit: 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Audio/video content analysis template description. Length limit: 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Intelligent classification task control parameters.
+        /// 
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfoForUpdate ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent tag task control parameter.
+        /// 
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfoForUpdate TagConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent Cover Task Control Parameters.
+        /// 
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public CoverConfigureInfoForUpdate CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent frame tagging task control parameter.
+        /// 
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfoForUpdate FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent Highlights Compilation Task Control Parameters.
+        /// 
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public HighlightsConfigureInfoForUpdate HighlightConfigure{ get; set; }

@@ -31,11 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CastId{ get; set; }
 
         /// <summary>
-        /// Retweet status. Valid values:
-        /// <li>Working: running.</li>
-        /// <li>Scheduled: start up after reaching the scheduled time;</li>
-        /// <li>Stopped: relay has been stopped;</li>
-        /// <li>Idle: idle.</li>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

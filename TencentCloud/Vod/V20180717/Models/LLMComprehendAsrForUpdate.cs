@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Text transcription task switch. Available values:
-        /// -ON: Enable the transcription task.
-        /// -OFF: Disable text transcription task.
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

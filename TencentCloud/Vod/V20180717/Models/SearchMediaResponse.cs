@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Total records that meet search criteria.</p><li>Maximum value: 5000. When the number of records hit exceeds 5000, this field will return 5000 instead of the actual total count.</li>
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Media file information list.</p>
+        /// 
         /// </summary>
         [JsonProperty("MediaInfoSet")]
         public MediaInfo[] MediaInfoSet{ get; set; }

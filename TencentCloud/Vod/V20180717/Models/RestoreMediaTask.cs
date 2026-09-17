@@ -25,47 +25,44 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File ID
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Original storage class
+        /// 
         /// </summary>
         [JsonProperty("OriginalStorageClass")]
         public string OriginalStorageClass{ get; set; }
 
         /// <summary>
-        /// Target storage class. For temporary retrieval, the target storage class is the same as the original.
+        /// 
         /// </summary>
         [JsonProperty("TargetStorageClass")]
         public string TargetStorageClass{ get; set; }
 
         /// <summary>
-        /// Retrieval mode. Valid values:
-        /// <li>Expedited</li>
-        /// <li>Standard</li>
-        /// <li>Bulk</li>
+        /// 
         /// </summary>
         [JsonProperty("RestoreTier")]
         public string RestoreTier{ get; set; }
 
         /// <summary>
-        /// Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+        /// 
         /// </summary>
         [JsonProperty("RestoreDay")]
         public long? RestoreDay{ get; set; }
 
         /// <summary>
-        /// This field has been disused.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         [System.Obsolete]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// This field has been disused.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         [System.Obsolete]

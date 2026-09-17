@@ -25,78 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The image restoration parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("RepairInfo")]
         public RepairInfo RepairInfo{ get; set; }
 
         /// <summary>
-        /// The smart frame interpolation parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoFrameInterpolationInfo")]
         public VideoFrameInterpolationInfo VideoFrameInterpolationInfo{ get; set; }
 
         /// <summary>
-        /// The super resolution parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SuperResolutionInfo")]
         public SuperResolutionInfo SuperResolutionInfo{ get; set; }
 
         /// <summary>
-        /// The high dynamic range (HDR) configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("HDRInfo")]
         public HDRInfo HDRInfo{ get; set; }
 
         /// <summary>
-        /// The image noise removal parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("VideoDenoiseInfo")]
         public VideoDenoiseInfo VideoDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// The color enhancement parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ColorInfo")]
         public ColorEnhanceInfo ColorInfo{ get; set; }
 
         /// <summary>
-        /// The detail enhancement parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("SharpInfo")]
         public SharpEnhanceInfo SharpInfo{ get; set; }
 
         /// <summary>
-        /// The face enhancement parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FaceInfo")]
         public FaceEnhanceInfo FaceInfo{ get; set; }
 
         /// <summary>
-        /// The low-light enhancement parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("LowLightInfo")]
         public LowLightEnhanceInfo LowLightInfo{ get; set; }
 
         /// <summary>
-        /// The banding removal parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ScratchRepairInfo")]
         public ScratchRepairInfo ScratchRepairInfo{ get; set; }
 
         /// <summary>
-        /// The artifact removal parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ArtifactRepairInfo")]
         public ArtifactRepairInfo ArtifactRepairInfo{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for custom facial recognition
+        /// 
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for custom ASR-based recognition
+        /// 
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for custom OCR-based recognition
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

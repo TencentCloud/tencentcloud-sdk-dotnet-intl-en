@@ -25,99 +25,97 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the transcoding template.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public string Definition{ get; set; }
 
         /// <summary>
-        /// <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+        /// 
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// <p>Transcoding template name.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Template description information.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
+        /// 
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
+        /// 
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// <p>TSC transcoding parameter.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// <p>Audio/Video enhancement configuration.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
+        /// 
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
 
         /// <summary>
-        /// <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Segment type. Valid only when Container is hls.</p>
+        /// 
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
 
         /// <summary>
-        /// <p>Extended parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

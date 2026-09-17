@@ -25,25 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }
 
         /// <summary>
-        /// <p>Paging offset. Default value: 0.</p>
+        /// 
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -56,6 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

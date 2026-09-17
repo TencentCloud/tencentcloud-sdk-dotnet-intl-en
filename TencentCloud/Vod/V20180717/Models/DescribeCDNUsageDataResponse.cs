@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time granularity, unit: minute.
+        /// 
         /// </summary>
         [JsonProperty("DataInterval")]
         public long? DataInterval{ get; set; }
 
         /// <summary>
-        /// CDN statistics.
+        /// 
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

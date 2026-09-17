@@ -25,16 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of text keyword recognition task. Valid values:
-        /// <li>ON: enables text keyword recognition task;</li>
-        /// <li>OFF: disables text keyword recognition task.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Keyword filter tag, which specifies the keyword tag that needs to be returned. If this parameter is left empty, all results will be returned.
-        /// There can be up to 10 tags, each with a length limit of 16 characters.
+        /// 
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

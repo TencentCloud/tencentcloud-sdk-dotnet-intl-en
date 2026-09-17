@@ -25,49 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Model name.</p>
+        /// 
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// <p>Model version.</p>
+        /// 
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li> <li>Other ModelName not currently supported.</li></p>
+        /// 
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+        /// 
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>To prevent the model from generating video prompt content. Supports a maximum of 1000 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li></p>
+        /// 
+        /// </summary>
+        [JsonProperty("AudioInfos")]
+        public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VideoInfos")]
+        public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public bool? EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// <p>Output file of the AIGC image generation result.</p>
+        /// 
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcAudioOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// <p>Additional parameter</p>
+        /// 
         /// </summary>
         [JsonProperty("AdditionalParameters")]
         public string AdditionalParameters{ get; set; }
@@ -83,6 +95,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
             this.SetParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+            this.SetParamArrayObj(map, prefix + "AudioInfos.", this.AudioInfos);
+            this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
             this.SetParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
             this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);

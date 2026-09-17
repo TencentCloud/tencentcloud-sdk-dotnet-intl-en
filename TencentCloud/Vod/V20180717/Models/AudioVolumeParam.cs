@@ -25,20 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to mute. Valid values: 0, 1.
-        /// <li>0: not muted.</li>
-        /// <li>1: muted.</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Mute")]
         public long? Mute{ get; set; }
 
         /// <summary>
-        /// Audio gain. Value range: 0-10.
-        /// <li>If the value is greater than 1, the volume will be increased.</li>
-        /// <li>If the value is smaller than 1, the volume will be decreased.</li>
-        /// <li>0 and 1: no change.</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Gain")]
         public float? Gain{ get; set; }

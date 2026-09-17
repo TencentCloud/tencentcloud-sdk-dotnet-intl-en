@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// UserAgent blacklist and whitelist configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+        /// UserAgent allowlist/blocklist configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// UA blacklist/whitelist effect rule list
+        /// 
         /// </summary>
         [JsonProperty("FilterRules")]
         public UserAgentFilterRule[] FilterRules{ get; set; }

@@ -25,41 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch of face recognition task. Valid values:
-        /// <li>ON: enables intelligent face recognition task;</li>
-        /// <li>OFF: disables intelligent face recognition task.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+        /// 
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
-        /// <li>`entertainment`: people in the entertainment industry</li>
-        /// <li>`sport`: sports celebrities</li>
-        /// <li>`politician`: politically sensitive people</li>
+        /// 
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
-        /// You can specify up to 100 labels, with each containing up to 16 characters.
+        /// 
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// Figure library. Valid values:
-        /// <li>Default: default figure library;</li>
-        /// <li>UserDefine: custom figure library.</li>
-        /// <li>All: both default and custom figure libraries will be used.</li>
-        /// Default value: All (both default and custom figure libraries will be used.)
+        /// 
         /// </summary>
         [JsonProperty("FaceLibrary")]
         public string FaceLibrary{ get; set; }

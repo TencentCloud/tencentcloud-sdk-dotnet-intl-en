@@ -25,16 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-        /// <li>`Enabled`: enable</li>
-        /// <li>`Disabled`: disable</li>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-        /// `EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+        /// 
         /// </summary>
         [JsonProperty("EncryptedKey")]
         public string EncryptedKey{ get; set; }

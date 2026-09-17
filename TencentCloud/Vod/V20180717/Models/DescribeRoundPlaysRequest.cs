@@ -25,50 +25,50 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Filter criteria: playlist identifier, array length limit: 100.
+        /// 
         /// </summary>
         [JsonProperty("RoundPlayIds")]
         public string[] RoundPlayIds{ get; set; }
 
         /// <summary>
-        /// Filter criteria: playlist status, optional values: <li>enabled: startup status;</li> <li>disabled: stopped status.</li>.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Filter criteria: playlist creation time.
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// Filter criteria: playlist update time.
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public TimeRange UpdateTime{ get; set; }
 
         /// <summary>
-        /// Scrolling identifier which is used for pulling in batches. if a single request cannot pull all the data entries, the API will return `scrolltoken`, and if the next request carries it, the next pull will start from the next entry.
+        /// 
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         [System.Obsolete]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. default value: 10. maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

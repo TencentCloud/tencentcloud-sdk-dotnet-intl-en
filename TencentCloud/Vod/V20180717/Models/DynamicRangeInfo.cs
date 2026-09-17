@@ -25,17 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The dynamic range information. Valid values:
-        /// <li>`SDR`: Standard Dynamic Range</li>
-        /// <li>`HDR`: High Dynamic Range</li>
+        /// Visual dynamic range information. Valid values:
+        /// <li>SDR: Standard Dynamic Range;</li>
+        /// <li>HDR: High Dynamic Range.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-        /// <li>`hdr10`</li>
-        /// <li>`hlg`</li>
+        /// High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+        /// <li>hdr10: refers to the hdr10 standard;</li>
+        /// <li>hlg: refers to the hlg standard.</li>
         /// </summary>
         [JsonProperty("HDRType")]
         public string HDRType{ get; set; }

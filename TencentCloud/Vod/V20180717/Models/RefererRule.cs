@@ -25,31 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+        /// Rule type:
+        /// <li>all: take effect for all files;</li>
+        /// <li>file: The specified file suffix takes effect;</li>
+        /// <li>directory: specify the path to take effect;</li>
+        /// <li>path: The absolute path takes effect.</li>
         /// </summary>
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+        /// Matching content under the corresponding type of RuleType:
+        /// <li>Fill with * when set to all;</li>
+        /// <li>For file, fill in the extension, such as jpg or txt;</li>
+        /// <li>For directory, fill in the path, such as /xxx/test/;</li>
+        /// <li>For path, fill in the absolute path, such as /xxx/test.html.</li>
         /// </summary>
         [JsonProperty("RulePaths")]
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+        /// referer configuration type. Value:
+        /// <li>whitelist: allowlist;</li>
+        /// <li>blocklist: Blocklist.</li>
         /// </summary>
         [JsonProperty("RefererType")]
         public string RefererType{ get; set; }
 
         /// <summary>
-        /// Referer content list
+        /// 
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }
 
         /// <summary>
-        /// Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
+        /// Whether to allow empty referer:
+        /// When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+        /// If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
         /// </summary>
         [JsonProperty("AllowEmpty")]
         public bool? AllowEmpty{ get; set; }

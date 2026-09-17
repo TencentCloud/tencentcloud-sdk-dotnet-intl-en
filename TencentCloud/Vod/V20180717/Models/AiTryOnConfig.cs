@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+        /// 
         /// </summary>
         [JsonProperty("ClothesFileInfos")]
         public SceneAigcImageTaskInputFileInfo[] ClothesFileInfos{ get; set; }
 
         /// <summary>
-        /// <p>Dress up command Prompt.</p>
+        /// 
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }

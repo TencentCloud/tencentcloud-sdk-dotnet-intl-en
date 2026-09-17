@@ -25,91 +25,103 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template name. The length cannot exceed 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Frame interception interval, unit: seconds, minimum value 1.
+        /// 
+        /// </summary>
+        [JsonProperty("Configs")]
+        public QualityInspectConfig[] Configs{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("Strategy")]
+        public QualityInspectStrategy Strategy{ get; set; }
+
+        /// <summary>
+        /// 
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame jitter and ghosting detection.
+        /// 
         /// </summary>
         [JsonProperty("JitterConfigure")]
         public JitterConfigureInfoForUpdate JitterConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame blur detection.
+        /// 
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfoForUpdate BlurConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for low-light and overexposure detection in video frames.
+        /// 
         /// </summary>
         [JsonProperty("AbnormalLightingConfigure")]
         public AbnormalLightingConfigureInfoForUpdate AbnormalLightingConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for screen glitch detection in video footage.
+        /// 
         /// </summary>
         [JsonProperty("CrashScreenConfigure")]
         public CrashScreenConfigureInfoForUpdate CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video picture black edge, white edge, black screen, and white screen detection.
+        /// 
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame noise detection.
+        /// 
         /// </summary>
         [JsonProperty("NoiseConfigure")]
         public NoiseConfigureInfoForUpdate NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame mosaic detection.
+        /// 
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfoForUpdate MosaicConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame QR code detection.
+        /// 
         /// </summary>
         [JsonProperty("QRCodeConfigure")]
         public QRCodeConfigureInfoForUpdate QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// Audio (mute, bass, clipping) detection control parameters.
+        /// 
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfoForUpdate VoiceConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame quality evaluation.
+        /// 
         /// </summary>
         [JsonProperty("QualityEvaluationConfigure")]
         public QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure{ get; set; }
@@ -124,6 +136,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
             this.SetParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);

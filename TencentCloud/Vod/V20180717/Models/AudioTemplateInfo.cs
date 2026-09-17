@@ -25,54 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The audio codec.
-        /// If `Container` is `mp3`, the valid value is:
-        /// <li>`libmp3lame`</li>
-        /// If `Container` is `ogg` or `flac`, the valid value is:
-        /// <li>`flac`</li>
-        /// If `Container` is `m4a`, the valid values are:
-        /// <li>`libfdk_aac`</li>
-        /// <li>`libmp3lame`</li>
-        /// <li>`ac3`</li>
-        /// If `Container` is `mp4` or `flv`, the valid values are:
-        /// <li>`libfdk_aac` (Recommended for MP4)</li>
-        /// <li>`libmp3lame` (Recommended for FLV)</li>
-        /// <li>`mp2`</li>
-        /// If `Container` is `hls`, the valid value is:
-        /// <li>`libfdk_aac`</li>
-        /// If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
-        /// <li>`libfdk_aac`</li>
-        /// If `Container` is `wav`, the valid value is:
-        /// <li>`pcm16`</li>
+        /// 
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
-        /// When the value is 0, it means VOD automatically sets the bitrate.
+        /// 
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// The audio sample rate. Valid values:
-        /// <li>`16000` (valid only if `Codec` is `pcm16`)</li>
-        /// <li>`32000`</li>
-        /// <li>`44100`</li>
-        /// <li>`48000`</li>
-        /// Unit: Hz.
+        /// 
         /// </summary>
         [JsonProperty("SampleRate")]
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// Audio channel system. Valid values:
-        /// <li>1: mono-channel</li>
-        /// <li>2: dual-channel</li>
-        /// <li>6: stereo</li>
-        /// You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-        /// Default value: 2
+        /// 
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }

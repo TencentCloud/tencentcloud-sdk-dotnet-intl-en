@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The TRTC application ID.
+        /// 
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// The TRTC room ID.
+        /// 
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// The recording task ID.
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// The IDs of users whose streams are mixed.
+        /// 
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

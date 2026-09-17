@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task ID.
+        /// 
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+        /// 
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error message.
+        /// 
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task progress, with a value range of [0-100].
+        /// 
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input information for asynchronous task processing of images.
+        /// 
         /// </summary>
         [JsonProperty("Input")]
         public ProcessImageAsyncInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of asynchronous image processing tasks.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public ProcessImageAsyncOutput Output{ get; set; }
 
         /// <summary>
-        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+        /// 
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

@@ -25,53 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of offensive information involved in suspected clips.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result suggestions for identifying violations in suspected clips. Value ranges from...to...
-        /// <li>review: suspected violation, suggest re-examination;</li>
-        /// <li>block: Confirmed violation. Suggest banning.</li>
+        /// 
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// The most likely label for the suspicious content. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+        /// 
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Rule violation subtag.
+        /// 
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// Suspected segment is prohibited in the form of, value ranges from...to...
-        /// <li>Image: The figure or icon on the screen;</li>
-        /// <li>OCR: Text on screen.</li>
+        /// 
         /// </summary>
         [JsonProperty("Form")]
         public string Form{ get; set; }
 
         /// <summary>
-        /// Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+        /// 
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Valid when Form is OCR, means the OCR Text Content that comes out.
+        /// 
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+        /// 
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }

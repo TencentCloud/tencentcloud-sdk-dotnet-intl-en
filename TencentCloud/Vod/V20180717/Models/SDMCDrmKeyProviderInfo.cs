@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The user ID assigned by SDMC, which can contain up to 128 characters.
+        /// 
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
         /// <summary>
-        /// The secret ID assigned by SDMC, which can contain up to 128 characters.
+        /// 
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// The secret key assigned by SDMC, which can contain up to 128 characters.
+        /// 
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+        /// 
         /// </summary>
         [JsonProperty("FairPlayCertificateUrl")]
         public string FairPlayCertificateUrl{ get; set; }

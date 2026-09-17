@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Figure ID.
+        /// 
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// Figure name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Figure description.
+        /// 
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Face information.
+        /// 
         /// </summary>
         [JsonProperty("FaceInfoSet")]
         public AiSampleFaceInfo[] FaceInfoSet{ get; set; }
 
         /// <summary>
-        /// Figure tag.
+        /// 
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// Use case.
+        /// 
         /// </summary>
         [JsonProperty("UsageSet")]
         public string[] UsageSet{ get; set; }
 
         /// <summary>
-        /// Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

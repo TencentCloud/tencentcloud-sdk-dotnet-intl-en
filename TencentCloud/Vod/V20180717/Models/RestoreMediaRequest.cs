@@ -25,31 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier list of media files. Maximum length: 100.
+        /// 
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+        /// 
         /// </summary>
         [JsonProperty("RestoreDay")]
         public ulong? RestoreDay{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-        /// <li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-        /// <li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-        /// <li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-        /// When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-        /// <li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-        /// <li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+        /// 
         /// </summary>
         [JsonProperty("RestoreTier")]
         public string RestoreTier{ get; set; }

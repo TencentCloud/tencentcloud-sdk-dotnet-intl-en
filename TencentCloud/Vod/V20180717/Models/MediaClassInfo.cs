@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The category ID.
+        /// 
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Parent category ID, which is -1 for a first-level category.
+        /// 
         /// </summary>
         [JsonProperty("ParentId")]
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// The category name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
+        /// 
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// The IDs of the immediate subcategories of the current category.
+        /// 
         /// </summary>
         [JsonProperty("SubClassIdSet")]
         public long?[] SubClassIdSet{ get; set; }
 
         /// <summary>
-        /// The category name. This parameter is not recommended. Please use `Name` instead.
+        /// 
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }

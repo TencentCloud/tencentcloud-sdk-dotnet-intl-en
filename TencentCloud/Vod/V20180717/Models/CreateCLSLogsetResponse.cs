@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Log Set ID.
+        /// 
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }

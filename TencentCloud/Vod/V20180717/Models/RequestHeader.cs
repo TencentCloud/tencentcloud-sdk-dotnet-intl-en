@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+        /// Custom request header configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Custom request header configuration rules
+        /// 
         /// </summary>
         [JsonProperty("HeaderRules")]
         public HttpHeaderPathRule[] HeaderRules{ get; set; }

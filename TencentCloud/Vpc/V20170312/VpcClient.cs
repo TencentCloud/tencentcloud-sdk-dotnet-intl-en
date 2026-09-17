@@ -28,7 +28,7 @@ namespace TencentCloud.Vpc.V20170312
 
        private const string endpoint = "vpc.intl.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1337";
+       private const string sdkVersion = "SDK_NET_3.0.1396";
 
         /// <summary>
         /// Client constructor.
@@ -633,6 +633,27 @@ namespace TencentCloud.Vpc.V20170312
         public CheckAssistantCidrResponse CheckAssistantCidrSync(CheckAssistantCidrRequest req)
         {
             return InternalRequestAsync<CheckAssistantCidrResponse>(req, "CheckAssistantCidr")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query whether the gateway traffic monitoring is enabled.
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public Task<CheckGatewayFlowMonitorResponse> CheckGatewayFlowMonitor(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor");
+        }
+
+        /// <summary>
+        /// This API is used to query whether the gateway traffic monitoring is enabled.
+        /// </summary>
+        /// <param name="req"><see cref="CheckGatewayFlowMonitorRequest"/></param>
+        /// <returns><see cref="CheckGatewayFlowMonitorResponse"/></returns>
+        public CheckGatewayFlowMonitorResponse CheckGatewayFlowMonitorSync(CheckGatewayFlowMonitorRequest req)
+        {
+            return InternalRequestAsync<CheckGatewayFlowMonitorResponse>(req, "CheckGatewayFlowMonitor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1980,7 +2001,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to delete a NAT gateway.
-        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
+        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and associated EIPs are unbound.When deleting a NAT gateway, you need to unbind the associated EIPs. Therefore, the caller must have CAM permissions for vpc:DisassociateAddress and vpc:ModifyAddressesBandwidth.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayResponse"/></returns>
@@ -1991,7 +2012,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// This API is used to delete a NAT gateway.
-        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
+        /// When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and associated EIPs are unbound.When deleting a NAT gateway, you need to unbind the associated EIPs. Therefore, the caller must have CAM permissions for vpc:DisassociateAddress and vpc:ModifyAddressesBandwidth.
         /// </summary>
         /// <param name="req"><see cref="DeleteNatGatewayRequest"/></param>
         /// <returns><see cref="DeleteNatGatewayResponse"/></returns>
@@ -3331,6 +3352,31 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// This API is used to query the traffic monitoring details of a NAT gateway.
+        /// 
+        /// - You can only use this API to query a single gateway instance. The input parameter `NatGatewayId` supports at most one value, and it must be passed.- If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring is enabled in the corresponding gateway details page in the console.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayFlowMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayFlowMonitorDetailResponse"/></returns>
+        public Task<DescribeNatGatewayFlowMonitorDetailResponse> DescribeNatGatewayFlowMonitorDetail(DescribeNatGatewayFlowMonitorDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayFlowMonitorDetailResponse>(req, "DescribeNatGatewayFlowMonitorDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the traffic monitoring details of a NAT gateway.
+        /// 
+        /// - You can only use this API to query a single gateway instance. The input parameter `NatGatewayId` supports at most one value, and it must be passed.- If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring is enabled in the corresponding gateway details page in the console.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayFlowMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayFlowMonitorDetailResponse"/></returns>
+        public DescribeNatGatewayFlowMonitorDetailResponse DescribeNatGatewayFlowMonitorDetailSync(DescribeNatGatewayFlowMonitorDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayFlowMonitorDetailResponse>(req, "DescribeNatGatewayFlowMonitorDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the NAT gateway's SNAT forwarding rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
@@ -3348,6 +3394,27 @@ namespace TencentCloud.Vpc.V20170312
         public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRulesSync(DescribeNatGatewaySourceIpTranslationNatRulesRequest req)
         {
             return InternalRequestAsync<DescribeNatGatewaySourceIpTranslationNatRulesResponse>(req, "DescribeNatGatewaySourceIpTranslationNatRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the information of saleable availability zones (AZs) for NAT gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayZonesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayZonesResponse"/></returns>
+        public Task<DescribeNatGatewayZonesResponse> DescribeNatGatewayZones(DescribeNatGatewayZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayZonesResponse>(req, "DescribeNatGatewayZones");
+        }
+
+        /// <summary>
+        /// This API is used to query the information of saleable availability zones (AZs) for NAT gateways.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayZonesRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayZonesResponse"/></returns>
+        public DescribeNatGatewayZonesResponse DescribeNatGatewayZonesSync(DescribeNatGatewayZonesRequest req)
+        {
+            return InternalRequestAsync<DescribeNatGatewayZonesResponse>(req, "DescribeNatGatewayZones")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6075,7 +6142,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+        /// This API is used to refresh the route between a NAT gateway and Direct Connect and update the associated route table.
         /// </summary>
         /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
         /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>
@@ -6085,7 +6152,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+        /// This API is used to refresh the route between a NAT gateway and Direct Connect and update the associated route table.
         /// </summary>
         /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
         /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>

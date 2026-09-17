@@ -25,108 +25,118 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Template type. Available values:
-        /// <li>Preset: system preset template;</li>
-        /// <li>Custom: User-defined template.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Template Name
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Frame interception interval in seconds.
+        /// 
         /// </summary>
-        [JsonProperty("ScreenshotInterval")]
-        public float? ScreenshotInterval{ get; set; }
+        [JsonProperty("Configs")]
+        public QualityInspectConfig[] Configs{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame jitter and ghosting detection.
+        /// 
         /// </summary>
-        [JsonProperty("JitterConfigure")]
-        public JitterConfigureInfo JitterConfigure{ get; set; }
+        [JsonProperty("Strategy")]
+        public QualityInspectStrategy Strategy{ get; set; }
 
         /// <summary>
-        /// Control parameters for video frame blur detection.
-        /// </summary>
-        [JsonProperty("BlurConfigure")]
-        public BlurConfigureInfo BlurConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for low-light and overexposure detection in video frames.
-        /// </summary>
-        [JsonProperty("AbnormalLightingConfigure")]
-        public AbnormalLightingConfigureInfo AbnormalLightingConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for screen glitch detection in video footage.
-        /// </summary>
-        [JsonProperty("CrashScreenConfigure")]
-        public CrashScreenConfigureInfo CrashScreenConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for video picture black edge, white edge, black screen, and white screen detection.
-        /// </summary>
-        [JsonProperty("BlackWhiteEdgeConfigure")]
-        public BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for video frame noise detection.
-        /// </summary>
-        [JsonProperty("NoiseConfigure")]
-        public NoiseConfigureInfo NoiseConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for video frame mosaic detection.
-        /// </summary>
-        [JsonProperty("MosaicConfigure")]
-        public MosaicConfigureInfo MosaicConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for video frame QR code detection.
-        /// </summary>
-        [JsonProperty("QRCodeConfigure")]
-        public QRCodeConfigureInfo QRCodeConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for video frame quality evaluation.
-        /// </summary>
-        [JsonProperty("QualityEvaluationConfigure")]
-        public QualityEvaluationConfigureInfo QualityEvaluationConfigure{ get; set; }
-
-        /// <summary>
-        /// Control parameters for audio (mute, bass, clipping) detection.
-        /// </summary>
-        [JsonProperty("VoiceConfigure")]
-        public VoiceConfigureInfo VoiceConfigure{ get; set; }
-
-        /// <summary>
-        /// Template creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("ScreenshotInterval")]
+        public float? ScreenshotInterval{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("JitterConfigure")]
+        public JitterConfigureInfo JitterConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BlurConfigure")]
+        public BlurConfigureInfo BlurConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("AbnormalLightingConfigure")]
+        public AbnormalLightingConfigureInfo AbnormalLightingConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("CrashScreenConfigure")]
+        public CrashScreenConfigureInfo CrashScreenConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("BlackWhiteEdgeConfigure")]
+        public BlackWhiteEdgeConfigureInfo BlackWhiteEdgeConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NoiseConfigure")]
+        public NoiseConfigureInfo NoiseConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MosaicConfigure")]
+        public MosaicConfigureInfo MosaicConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("QRCodeConfigure")]
+        public QRCodeConfigureInfo QRCodeConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("QualityEvaluationConfigure")]
+        public QualityEvaluationConfigureInfo QualityEvaluationConfigure{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("VoiceConfigure")]
+        public VoiceConfigureInfo VoiceConfigure{ get; set; }
 
 
         /// <summary>
@@ -138,6 +148,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamObj(map, prefix + "Strategy.", this.Strategy);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
             this.SetParamObj(map, prefix + "JitterConfigure.", this.JitterConfigure);
             this.SetParamObj(map, prefix + "BlurConfigure.", this.BlurConfigure);
@@ -149,8 +163,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "QRCodeConfigure.", this.QRCodeConfigure);
             this.SetParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
             this.SetParamObj(map, prefix + "VoiceConfigure.", this.VoiceConfigure);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

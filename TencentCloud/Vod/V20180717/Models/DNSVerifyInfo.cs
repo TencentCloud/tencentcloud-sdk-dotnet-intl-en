@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// sub-parsing.
+        /// 
         /// </summary>
         [JsonProperty("SubDomain")]
         public string SubDomain{ get; set; }
 
         /// <summary>
-        /// parse value.
+        /// 
         /// </summary>
         [JsonProperty("Record")]
         public string Record{ get; set; }
 
         /// <summary>
-        /// parsing type.
+        /// 
         /// </summary>
         [JsonProperty("RecordType")]
         public string RecordType{ get; set; }

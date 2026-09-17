@@ -25,42 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The maximum value of the video stream width (or long side), value range: 0 and [128, 1920], unit: px. 
-        /// <li>When Width and Height are both 0, the resolution is from the same source;</li>
-        /// <li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-        /// < li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-        /// <li>When both Width and Height are non-0, the resolution is specified by the user. </li>
         /// 
-        /// Default value: 0.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// The maximum value of the video stream height (or short side), value range: 0 and [128, 1920], unit: px. 
-        /// <li>When Width and Height are both 0, the resolution is from the same source;</li>
-        /// <li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-        /// < li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-        /// <li>When both Width and Height are non-0, the resolution is specified by the user. </li>
         /// 
-        /// Default value: 0.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Resolution adaptive, optional values:
-        /// <li>open: open, at this time, Width represents the long side of the video, and Height represents the short side of the video;</li>
-        /// <li>close: closed, at this time , Width represents the width of the video, and Height represents the height of the video. </li>
         /// 
-        /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
-        /// When the value is 0, VOD automatically sets the bitrate.
+        /// 
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

@@ -25,100 +25,137 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Bound Physical Machine ID
+        /// <p>Bound Physical Machine ID</p>
         /// </summary>
         [JsonProperty("MachineId")]
         public string MachineId{ get; set; }
 
         /// <summary>
-        /// Model specifications
+        /// <p>Model specifications</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Availability zone code
+        /// <p>Availability zone code</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Image ID
+        /// <p>Image ID.</p>
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// Image version number
+        /// <p>Image version number</p>
         /// </summary>
         [JsonProperty("VersionNumber")]
+        [System.Obsolete]
         public string VersionNumber{ get; set; }
 
         /// <summary>
-        /// Instance status, value range: allocating, running, isolating, isolated, terminating, error.
+        /// <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Operation status: normal, starting, stopping, stopped, rebooting.
+        /// <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
         /// </summary>
         [JsonProperty("OperateStatus")]
         public string OperateStatus{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>VPC ID.</p>
         /// </summary>
         [JsonProperty("PrivateNetworkId")]
         public string PrivateNetworkId{ get; set; }
 
         /// <summary>
-        /// private IPv4 address
+        /// <p>Private IPv4 address</p>
         /// </summary>
         [JsonProperty("PrivateIp")]
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// private IPv6 address
+        /// <p>Private IPv6 address</p>
         /// </summary>
         [JsonProperty("PrivateIpV6")]
         public string PrivateIpV6{ get; set; }
 
         /// <summary>
-        /// Public network ID
+        /// <p>Public network ID.</p>
         /// </summary>
         [JsonProperty("PublicNetworkId")]
         public string PublicNetworkId{ get; set; }
 
         /// <summary>
-        /// Public IPv4 address
+        /// <p>Public IPv4 address</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Public IPv6 address
+        /// <p>Public IPv6 address</p>
         /// </summary>
         [JsonProperty("PublicIpV6")]
         public string PublicIpV6{ get; set; }
 
         /// <summary>
-        /// Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+        /// <p>File System Type</p>
+        /// </summary>
+        [JsonProperty("FileSystemType")]
+        public string FileSystemType{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
+
+        /// <summary>
+        /// <p>Instance family flag</p>
+        /// </summary>
+        [JsonProperty("InstanceFamily")]
+        public string InstanceFamily{ get; set; }
+
+        /// <summary>
+        /// <p>Model Family Name</p>
+        /// </summary>
+        [JsonProperty("InstanceFamilyName")]
+        public string InstanceFamilyName{ get; set; }
+
+        /// <summary>
+        /// <p>CPU Model</p>
+        /// </summary>
+        [JsonProperty("CpuType")]
+        public string CpuType{ get; set; }
+
+        /// <summary>
+        /// <p>CPU cores.</p>
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// <p>Memory size.</p>
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
 
 
         /// <summary>
@@ -141,7 +178,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
             this.SetParamSimple(map, prefix + "PublicNetworkId", this.PublicNetworkId);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PublicIpV6", this.PublicIpV6);
+            this.SetParamSimple(map, prefix + "FileSystemType", this.FileSystemType);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+            this.SetParamSimple(map, prefix + "InstanceFamilyName", this.InstanceFamilyName);
+            this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
         }
     }
 }

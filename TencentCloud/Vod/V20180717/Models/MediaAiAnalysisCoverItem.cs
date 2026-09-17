@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Address of intelligently generated cover.
+        /// 
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// Confidence of intelligently generated cover between 0 and 100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

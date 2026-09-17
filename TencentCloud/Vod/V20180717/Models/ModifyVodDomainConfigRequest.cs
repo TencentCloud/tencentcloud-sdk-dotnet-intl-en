@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name.
+        /// 
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
+        /// 
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
+        /// 
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// QUIC configuration.
+        /// 
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// IP access restriction rule.
+        /// 
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Queried logset list.
+        /// 
         /// </summary>
         [JsonProperty("Logsets")]
         public CLSLogsetInfo[] Logsets{ get; set; }

@@ -25,115 +25,118 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+        /// Domain acceleration region:
+        /// <li>mainland: domestic acceleration in China;</li>
+        /// <li>overseas: acceleration outside the Chinese mainland;</li>
+        /// <li>global: global acceleration.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Origin server configuration.
+        /// 
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// IP allowlist/blocklist configuration.
+        /// 
         /// </summary>
         [JsonProperty("IpFilter")]
         public IpFilter IpFilter{ get; set; }
 
         /// <summary>
-        /// UA Blocklist/Allowlist Configuration.
+        /// 
         /// </summary>
         [JsonProperty("UserAgentFilter")]
         public UserAgentFilter UserAgentFilter{ get; set; }
 
         /// <summary>
-        /// 301/302 origin follow configuration.
+        /// 
         /// </summary>
         [JsonProperty("FollowRedirect")]
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// Request header configuration.
+        /// 
         /// </summary>
         [JsonProperty("RequestHeader")]
         public RequestHeader RequestHeader{ get; set; }
 
         /// <summary>
-        /// Response header configuration.
+        /// 
         /// </summary>
         [JsonProperty("ResponseHeader")]
         public ResponseHeader ResponseHeader{ get; set; }
 
         /// <summary>
-        /// Cache expiration time settings.
+        /// 
         /// </summary>
         [JsonProperty("Cache")]
         public Cache Cache{ get; set; }
 
         /// <summary>
-        /// Https configuration.
+        /// 
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// Timestamp hotlink protection configuration.
+        /// 
         /// </summary>
         [JsonProperty("Authentication")]
         public Authentication Authentication{ get; set; }
 
         /// <summary>
-        /// Access protocol force redirection configuration.
+        /// 
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Referer Anti-leech Configuration.
+        /// 
         /// </summary>
         [JsonProperty("Referer")]
         public Referer Referer{ get; set; }
 
         /// <summary>
-        /// Browser cache configuration.
+        /// 
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// Ipv6 access configuration
+        /// 
         /// </summary>
         [JsonProperty("Ipv6Access")]
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
-        /// Quic access configuration.
+        /// 
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// AWS S3 origin authentication configuration.
+        /// 
         /// </summary>
         [JsonProperty("AwsPrivateAccess")]
         public AwsPrivateAccess AwsPrivateAccess{ get; set; }
 
         /// <summary>
-        /// Alibaba Cloud OSS authentication configuration.
+        /// 
         /// </summary>
         [JsonProperty("OssPrivateAccess")]
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
         /// <summary>
-        /// Huawei cloud object storage back-to-origin authentication configuration.
+        /// 
         /// </summary>
         [JsonProperty("HwPrivateAccess")]
         public HwPrivateAccess HwPrivateAccess{ get; set; }
 
         /// <summary>
-        /// Authentication configuration for cross-origin access to object storage of other vendors.
+        /// 
         /// </summary>
         [JsonProperty("OthersPrivateAccess")]
         public OthersPrivateAccess OthersPrivateAccess{ get; set; }

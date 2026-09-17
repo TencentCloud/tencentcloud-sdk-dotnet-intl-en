@@ -25,31 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Alibaba Cloud OSS return-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+        /// Aliyun OSS origin-pull authentication configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Access ID.
+        /// 
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// Key.
+        /// 
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Region.
+        /// 
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// BucketName.
+        /// 
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }

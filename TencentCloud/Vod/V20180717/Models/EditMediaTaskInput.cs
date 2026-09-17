@@ -25,21 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Input video source type. Valid values: File, Stream.
+        /// 
         /// </summary>
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
         /// <summary>
-        /// Information of input video file. This field has a value only when `InputType` is `File`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("FileInfoSet")]
         public EditMediaFileInfo[] FileInfoSet{ get; set; }
 
         /// <summary>
-        /// Input stream information. This field has a value only when `InputType` is `Stream`.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("StreamInfoSet")]
         public EditMediaStreamInfo[] StreamInfoSet{ get; set; }

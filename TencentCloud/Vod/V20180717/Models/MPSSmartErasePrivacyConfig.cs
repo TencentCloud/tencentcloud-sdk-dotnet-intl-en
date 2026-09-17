@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("PrivacyModel")]
         public string PrivacyModel{ get; set; }
 
         /// <summary>
-        /// <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("PrivacyTargets")]
         public string[] PrivacyTargets{ get; set; }

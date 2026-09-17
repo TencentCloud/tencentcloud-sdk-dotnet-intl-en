@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
+        /// 
         /// </summary>
         [JsonProperty("AudioFileInfo")]
         public AigcAudioCloneInputFileInfo AudioFileInfo{ get; set; }
 
         /// <summary>
-        /// <p>Custom voice ID.</p>
+        /// 
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// <p>Clone audition parameters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// <p>Example audio for voice replication.</p>
+        /// 
         /// </summary>
         [JsonProperty("PromptAudioFileInfo")]
         public AigcAudioCloneInputFileInfo PromptAudioFileInfo{ get; set; }
 
         /// <summary>
-        /// <p>Text content of the sample audio.</p>
+        /// 
         /// </summary>
         [JsonProperty("PromptText")]
         public string PromptText{ get; set; }
 
         /// <summary>
-        /// <p>Pass-through parameter.</p>
+        /// 
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }

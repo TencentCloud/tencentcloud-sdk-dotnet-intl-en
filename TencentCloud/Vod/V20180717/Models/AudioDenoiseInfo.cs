@@ -25,18 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable noise removal. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF`</li>
-        /// Default value: `OFF`.
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-        /// <li>normal: normal audio noise reduction.</li>
-        /// Default value: normal.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

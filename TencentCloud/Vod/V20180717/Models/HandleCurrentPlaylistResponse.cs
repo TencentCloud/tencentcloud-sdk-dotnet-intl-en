@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of successfully operated programs.
+        /// 
         /// </summary>
         [JsonProperty("RoundPlaylist")]
         public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }

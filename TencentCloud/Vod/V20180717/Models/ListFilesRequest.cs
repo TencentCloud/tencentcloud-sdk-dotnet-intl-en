@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+        /// 
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+        /// 
         /// </summary>
         [JsonProperty("Delimiter")]
         public string Delimiter{ get; set; }
 
         /// <summary>
-        /// ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
+        /// 
         /// </summary>
         [JsonProperty("MaxKeys")]
         public long? MaxKeys{ get; set; }
 
         /// <summary>
-        /// Starting object key marker
+        /// 
         /// </summary>
         [JsonProperty("Marker")]
         public string Marker{ get; set; }
 
         /// <summary>
-        /// File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+        /// 
         /// </summary>
         [JsonProperty("Categories")]
         public string[] Categories{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Total current media volume.
+        /// 
         /// </summary>
         [JsonProperty("MediaCount")]
         public ulong? MediaCount{ get; set; }
 
         /// <summary>
-        /// Current total storage capacity, in bytes.
+        /// 
         /// </summary>
         [JsonProperty("TotalStorage")]
         public ulong? TotalStorage{ get; set; }
 
         /// <summary>
-        /// Current standard storage capacity, in bytes.
+        /// 
         /// </summary>
         [JsonProperty("StandardStorage")]
         public ulong? StandardStorage{ get; set; }
 
         /// <summary>
-        /// Current infrequent access storage capacity in bytes.
+        /// 
         /// </summary>
         [JsonProperty("InfrequentStorage")]
         public ulong? InfrequentStorage{ get; set; }
 
         /// <summary>
-        /// Current archive storage capacity, in bytes.
+        /// 
         /// </summary>
         [JsonProperty("ArchiveStorage")]
         public ulong? ArchiveStorage{ get; set; }
 
         /// <summary>
-        /// Current deep archive storage capacity, in bytes.
+        /// 
         /// </summary>
         [JsonProperty("DeepArchiveStorage")]
         public ulong? DeepArchiveStorage{ get; set; }
 
         /// <summary>
-        /// Storage usage in billing regions.
+        /// 
         /// </summary>
         [JsonProperty("StorageStat")]
         public StorageStatData[] StorageStat{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subtitle information list
+        /// 
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public MediaSubtitleItem[] SubtitleSet{ get; set; }

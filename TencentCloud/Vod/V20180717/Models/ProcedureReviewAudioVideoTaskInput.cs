@@ -25,16 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The moderation template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// The type of moderated content. Valid values:
-        /// <li>`Media`: The original audio/video.</li>
-        /// <li>`Cover`: Thumbnails.</li>
-        /// If this parameter is not specified or an empty array is passed in, `Media` will be used.
+        /// 
         /// </summary>
         [JsonProperty("ReviewContents")]
         public string[] ReviewContents{ get; set; }

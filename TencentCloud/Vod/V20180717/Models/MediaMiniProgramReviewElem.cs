@@ -25,29 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Audit type. 
-        /// <li>Porn: porn image,</li>
-        /// <li>Porn.Ocr: porn text,</li>
-        /// <li>Porn.Asr: porn speech,</li>
-        /// <li>Terrorism: terrorism image,</li>
-        /// <li>Political: politically sensitive image,</li>
-        /// <li>Political.Ocr: politically sensitive text</li>
-        /// <li>Political.Asr: politically sensitive speech</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Audit suggestion.
-        /// <li>pass: normal,</li>
-        /// <li>block: violating,</li>
-        /// <li>review: suspected of violation.</li>
+        /// 
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Confidence of audit result between 0 and 100.
+        /// 
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

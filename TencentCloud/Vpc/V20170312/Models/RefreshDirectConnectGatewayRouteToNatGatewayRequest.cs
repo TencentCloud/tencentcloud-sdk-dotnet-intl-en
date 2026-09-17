@@ -25,19 +25,19 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC ID
+        /// VPC ID.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The NAT gateway ID.
+        /// NAT gateway ID.
         /// </summary>
         [JsonProperty("NatGatewayId")]
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+        /// Whether it is pre-refresh. Valid values: true (yes) and false (no).
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

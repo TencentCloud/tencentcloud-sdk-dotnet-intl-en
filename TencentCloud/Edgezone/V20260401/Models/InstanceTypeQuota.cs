@@ -43,6 +43,12 @@ namespace TencentCloud.Edgezone.V20260401.Models
         public string InstanceFamily{ get; set; }
 
         /// <summary>
+        /// Model family name
+        /// </summary>
+        [JsonProperty("InstanceFamilyName")]
+        public string InstanceFamilyName{ get; set; }
+
+        /// <summary>
         /// Number of CPU cores.
         /// </summary>
         [JsonProperty("CpuCores")]
@@ -97,6 +103,24 @@ namespace TencentCloud.Edgezone.V20260401.Models
         public ulong? DataDiskCount{ get; set; }
 
         /// <summary>
+        /// Second set of data disk types
+        /// </summary>
+        [JsonProperty("SecondaryDataDiskType")]
+        public string SecondaryDataDiskType{ get; set; }
+
+        /// <summary>
+        /// Data disk size of the second group (GB)
+        /// </summary>
+        [JsonProperty("SecondaryDataDiskSize")]
+        public long? SecondaryDataDiskSize{ get; set; }
+
+        /// <summary>
+        /// Number of data disks in the second set
+        /// </summary>
+        [JsonProperty("SecondaryDataDiskCount")]
+        public long? SecondaryDataDiskCount{ get; set; }
+
+        /// <summary>
         /// Disk description string (backward compatibility).
         /// </summary>
         [JsonProperty("DiskType")]
@@ -115,7 +139,7 @@ namespace TencentCloud.Edgezone.V20260401.Models
         public string GpuType{ get; set; }
 
         /// <summary>
-        /// Quota quantity. 0 indicates no restriction.
+        /// Quota quantity
         /// </summary>
         [JsonProperty("Quota")]
         public ulong? Quota{ get; set; }
@@ -129,6 +153,7 @@ namespace TencentCloud.Edgezone.V20260401.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+            this.SetParamSimple(map, prefix + "InstanceFamilyName", this.InstanceFamilyName);
             this.SetParamSimple(map, prefix + "CpuCores", this.CpuCores);
             this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
             this.SetParamSimple(map, prefix + "MemoryGb", this.MemoryGb);
@@ -138,6 +163,9 @@ namespace TencentCloud.Edgezone.V20260401.Models
             this.SetParamSimple(map, prefix + "DataDiskType", this.DataDiskType);
             this.SetParamSimple(map, prefix + "DataDiskSize", this.DataDiskSize);
             this.SetParamSimple(map, prefix + "DataDiskCount", this.DataDiskCount);
+            this.SetParamSimple(map, prefix + "SecondaryDataDiskType", this.SecondaryDataDiskType);
+            this.SetParamSimple(map, prefix + "SecondaryDataDiskSize", this.SecondaryDataDiskSize);
+            this.SetParamSimple(map, prefix + "SecondaryDataDiskCount", this.SecondaryDataDiskCount);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "NetworkInterfaceType", this.NetworkInterfaceType);
             this.SetParamSimple(map, prefix + "GpuType", this.GpuType);

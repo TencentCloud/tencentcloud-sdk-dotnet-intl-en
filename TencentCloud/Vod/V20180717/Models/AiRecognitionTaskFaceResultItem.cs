@@ -25,27 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of figure.
+        /// 
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Figure library type, indicating to which figure library the recognized figure belongs:
-        /// <li>Default: default figure library;</li>
-        /// <li>UserDefine: custom figure library.</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Figure name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Result set of segments that contain a figure.
+        /// 
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskFaceSegmentItem[] SegmentSet{ get; set; }

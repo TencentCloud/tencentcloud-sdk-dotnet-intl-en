@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+        /// Path cache follows the origin site configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Heuristic cache configuration.
+        /// 
         /// </summary>
         [JsonProperty("HeuristicCache")]
         public HeuristicCache HeuristicCache{ get; set; }

@@ -25,28 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The file ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The type of the media played. Valid values:
-        /// <li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-        /// <li>`Original`: The original file.</li>
-        /// The file must be in HLS format.
+        /// 
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// ID of the program to be played, assigned by the system.
+        /// 
         /// </summary>
         [JsonProperty("ItemId")]
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

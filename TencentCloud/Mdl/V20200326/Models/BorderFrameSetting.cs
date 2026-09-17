@@ -25,13 +25,13 @@ namespace TencentCloud.Mdl.V20200326.Models
     {
         
         /// <summary>
-        /// 
+        /// Live streaming source layout configuration
         /// </summary>
         [JsonProperty("LiveSourceLayout")]
         public SourceLayout LiveSourceLayout{ get; set; }
 
         /// <summary>
-        /// 
+        /// Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
         /// </summary>
         [JsonProperty("BackgroundImgUrl")]
         public string BackgroundImgUrl{ get; set; }

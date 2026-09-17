@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Information array of adaptive bitrate streaming.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingSet")]
         public AdaptiveDynamicStreamingInfoItem[] AdaptiveDynamicStreamingSet{ get; set; }

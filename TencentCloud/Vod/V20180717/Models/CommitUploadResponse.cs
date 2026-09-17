@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the media file.</p>
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>Media playback address.</p>
+        /// 
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
-        /// <p>Media cover address.</p>
+        /// 
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

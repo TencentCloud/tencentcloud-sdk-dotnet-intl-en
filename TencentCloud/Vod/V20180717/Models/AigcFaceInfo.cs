@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Principal ID. Need to do it yourself to record the returned principal ID.
+        /// 
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Face information list.
+        /// 
         /// </summary>
         [JsonProperty("FaceInfoList")]
         public AigcFaceIdentityInfo[] FaceInfoList{ get; set; }

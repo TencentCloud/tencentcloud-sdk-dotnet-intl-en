@@ -25,61 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of intelligent analysis template.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Intelligent analysis template name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Intelligent analysis template description.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Intelligent Classification Task Control Parameters.
+        /// 
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent tag task control parameter.
+        /// 
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent Cover Task Control Parameters.
+        /// 
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent frame tagging task control parameter.
+        /// 
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of an intelligent highlight generating task.
+        /// 
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public HighlightsConfigureInfo HighlightConfigure{ get; set; }
 
         /// <summary>
-        /// Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

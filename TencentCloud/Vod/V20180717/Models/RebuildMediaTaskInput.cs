@@ -25,103 +25,103 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The file ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// The start offset (seconds). If you do not specify this, the segment will start from the beginning of the video.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// The end offset (seconds). If you do not specify this, the segment will end at the end of the video.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Audio and video quality rebirth template number.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// The video quality remastering parameters.
+        /// 
         /// </summary>
         [JsonProperty("RepairInfo")]
         public RepairInfo RepairInfo{ get; set; }
 
         /// <summary>
-        /// The smart frame interpolation parameters.
+        /// 
         /// </summary>
         [JsonProperty("VideoFrameInterpolationInfo")]
         public VideoFrameInterpolationInfo VideoFrameInterpolationInfo{ get; set; }
 
         /// <summary>
-        /// The super resolution parameters.
+        /// 
         /// </summary>
         [JsonProperty("SuperResolutionInfo")]
         public SuperResolutionInfo SuperResolutionInfo{ get; set; }
 
         /// <summary>
-        /// The high dynamic range (HDR) parameters.
+        /// 
         /// </summary>
         [JsonProperty("HDRInfo")]
         public HDRInfo HDRInfo{ get; set; }
 
         /// <summary>
-        /// The image noise removal parameters.
+        /// 
         /// </summary>
         [JsonProperty("VideoDenoiseInfo")]
         public VideoDenoiseInfo VideoDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// The noise removal parameters.
+        /// 
         /// </summary>
         [JsonProperty("AudioDenoiseInfo")]
         public AudioDenoiseInfo AudioDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// The color enhancement parameters.
+        /// 
         /// </summary>
         [JsonProperty("ColorInfo")]
         public ColorEnhanceInfo ColorInfo{ get; set; }
 
         /// <summary>
-        /// The detail enhancement parameters.
+        /// 
         /// </summary>
         [JsonProperty("SharpInfo")]
         public SharpEnhanceInfo SharpInfo{ get; set; }
 
         /// <summary>
-        /// The face enhancement parameters.
+        /// 
         /// </summary>
         [JsonProperty("FaceInfo")]
         public FaceEnhanceInfo FaceInfo{ get; set; }
 
         /// <summary>
-        /// The low-light enhancement parameters.
+        /// 
         /// </summary>
         [JsonProperty("LowLightInfo")]
         public LowLightEnhanceInfo LowLightInfo{ get; set; }
 
         /// <summary>
-        /// The banding removal parameters.
+        /// 
         /// </summary>
         [JsonProperty("ScratchRepairInfo")]
         public ScratchRepairInfo ScratchRepairInfo{ get; set; }
 
         /// <summary>
-        /// The artifact removal (smoothing) parameters.
+        /// 
         /// </summary>
         [JsonProperty("ArtifactRepairInfo")]
         public ArtifactRepairInfo ArtifactRepairInfo{ get; set; }
 
         /// <summary>
-        /// The output parameters of the file.
+        /// 
         /// </summary>
         [JsonProperty("TargetInfo")]
         public RebuildMediaTargetInfo TargetInfo{ get; set; }

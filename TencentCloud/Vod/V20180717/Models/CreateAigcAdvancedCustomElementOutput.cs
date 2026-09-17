@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Custom subject list.</p>
+        /// 
         /// </summary>
         [JsonProperty("InfoList")]
         public AdvancedElementInfo[] InfoList{ get; set; }

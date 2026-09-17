@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Segment file list.
+        /// 
         /// </summary>
         [JsonProperty("MediaSegmentSet")]
         public string[] MediaSegmentSet{ get; set; }

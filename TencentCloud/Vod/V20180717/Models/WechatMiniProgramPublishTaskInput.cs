@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// ID of the transcoding template corresponding to the published video. 0 represents the source video.
+        /// 
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }

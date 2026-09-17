@@ -25,34 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media ID.
+        /// 
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Audio and video type for operation. Valid values:
-        /// <li>Transcode: transcoding output;</li>
-        /// <li>Original: original audio/video.</li>
-        /// Note: The audio and video to operate must be in HLS format.
+        /// 
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
+        /// 
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public long? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// Start time offset of media editing, in seconds.
+        /// 
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of media editing, in seconds.
+        /// 
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

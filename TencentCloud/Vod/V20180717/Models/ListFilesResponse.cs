@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether the response entry is truncated.
+        /// 
         /// </summary>
         [JsonProperty("IsTruncated")]
         public bool? IsTruncated{ get; set; }
 
         /// <summary>
-        /// This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+        /// 
         /// </summary>
         [JsonProperty("NextMarker")]
         public string NextMarker{ get; set; }
 
         /// <summary>
-        /// The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+        /// 
         /// </summary>
         [JsonProperty("CommonPrefixes")]
         public string[] CommonPrefixes{ get; set; }
 
         /// <summary>
-        /// Object entry.
+        /// 
         /// </summary>
         [JsonProperty("Contents")]
         public FileContent[] Contents{ get; set; }

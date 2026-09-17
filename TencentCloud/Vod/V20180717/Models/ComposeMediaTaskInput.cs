@@ -25,20 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+        /// 
         /// </summary>
         [JsonProperty("Tracks")]
         public MediaTrack[] Tracks{ get; set; }
 
         /// <summary>
-        /// Canvas used for composing video file.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("Canvas")]
         public Canvas Canvas{ get; set; }
 
         /// <summary>
-        /// Information of output media file.
+        /// 
         /// </summary>
         [JsonProperty("Output")]
         public ComposeMediaOutput Output{ get; set; }

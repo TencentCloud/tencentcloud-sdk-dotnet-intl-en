@@ -25,30 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time point screencapturing template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Screencapturing mode. Valid values:
-        /// <li>Time: screencaptures by time point</li>
-        /// <li>Percent: screencaptures by percentage</li>
+        /// 
         /// </summary>
         [JsonProperty("PositionType")]
         public string PositionType{ get; set; }
 
         /// <summary>
-        /// Screenshot position:
-        /// <li>For time point screencapturing, this means to take a screenshot at a specified time point (in seconds) and use it as the cover</li>
-        /// <li>For percentage screencapturing, this value means to take a screenshot at a specified percentage of the video duration and use it as the cover</li>
+        /// 
         /// </summary>
         [JsonProperty("PositionValue")]
         public float? PositionValue{ get; set; }
 
         /// <summary>
-        /// List of up to 10 image or text watermarks.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }

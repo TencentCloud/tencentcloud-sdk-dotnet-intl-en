@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The region to which the log set belongs, the values are: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> < li>ap-chongqing: Chongqing; </li> <li>ap-nanjing: Nanjing; </li> <li>ap-shanghai: Shanghai; </li> <li>ap-singapore: Singapore. </li>
+        /// 
         /// </summary>
         [JsonProperty("CLSRegion")]
         public string CLSRegion{ get; set; }
 
         /// <summary>
-        /// Log topic ID.
+        /// 
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

@@ -55,13 +55,13 @@ namespace TencentCloud.Edgezone.V20260401.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Area code
+        /// Area code.
         /// </summary>
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
         /// <summary>
-        /// Zone Name
+        /// Region name.
         /// </summary>
         [JsonProperty("LocationName")]
         public string LocationName{ get; set; }

@@ -25,132 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Voice translation recognition task switch. Available values:
-        /// <li>ON: enabled;</li>
-        /// <li>OFF: Disable.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full-text recognition results. To avoid duplicate charges, it is forbidden to enable speech translation recognition and ASR full-text recognition functions simultaneously.
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Media source language. This parameter is required when Switch is ON. Value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>ja: Japanese;</li>
-        /// <li>ko: Korean;</li>
-        /// <li>vi: Vietnamese;</li>
-        /// <li>ms: Malay.</li>
-        /// <li>th: Thai;</li>
-        /// <li>pt: Portuguese;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ar: Arabic;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>hi: Hindi;</li>
-        /// <li>fr: French.</li>
+        /// 
         /// </summary>
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// Translation target language. This parameter is valid when Switch is ON.
-        /// If this parameter is left empty or filled with an empty string, it means that only full speech recognition is performed, and no translation is performed (the billing item matches that of AsrFullTextConfigure full speech recognition).
-        /// Otherwise, the parameter value range is divided into the following cases:
-        /// When SrcLanguage is zh (Chinese), the value ranges from...to...
-        /// <li>en: English;</li>
-        /// <li>ja: Japanese;</li>
-        /// <li>ko: Korean;</li>
-        /// <li>fr: French;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ru: Russian;</li>
-        /// <li>pt: Portuguese;</li>
-        /// <li>vi: Vietnamese;</li>
-        /// <li>id: Indonesian;</li>
-        /// <li>th: Thai;</li>
-        /// <li>ms: Malay.</li>
-        /// When SrcLanguage is en (English), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>ja: Japanese;</li>
-        /// <li>ko: Korean;</li>
-        /// <li>fr: French;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ru: Russian;</li>
-        /// <li>pt: Portuguese;</li>
-        /// <li>vi: Vietnamese;</li>
-        /// <li>id: Indonesian;</li>
-        /// <li>th: Thai;</li>
-        /// <li>ms: Malay.</li>
-        /// <li>ar: Arabic;</li>
-        /// <li>hi: Hindi.</li>
-        /// When SrcLanguage is ja (Japanese), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>ko: Korean.</li>
-        /// When SrcLanguage is ko (Korean), the parameter value range is
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>ja: Japanese.</li>
-        /// When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the parameter value range is
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English.</li>
-        /// When SrcLanguage is pt (Portuguese), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>fr: French;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ru: Russian.</li>
-        /// When SrcLanguage is tr (Turkish), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>fr: French;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>ru: Russian;</li>
-        /// <li>pt: Portuguese.</li>
-        /// When SrcLanguage is es (Spanish), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>fr: French;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ru: Russian;</li>
-        /// <li>pt: Portuguese.</li>
-        /// When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-        /// <li>en: English.</li>
-        /// When SrcLanguage is fr (French), the value ranges from...to...
-        /// <li>zh: Chinese;</li>
-        /// <li>en: English;</li>
-        /// <li>es: Spanish;</li>
-        /// <li>it: Italian;</li>
-        /// <li>de: German;</li>
-        /// <li>tr: Turkish;</li>
-        /// <li>ru: Russian;</li>
-        /// <li>pt: Portuguese.</li>
+        /// 
         /// </summary>
         [JsonProperty("DstLanguage")]
         public string DstLanguage{ get; set; }
 
         /// <summary>
-        /// Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
-        /// <li>vtt: Generate a WebVTT subtitle file.</li>
-        /// <li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will add generated subtitles to media assets.
+        /// 
         /// </summary>
         [JsonProperty("SubtitleFormats")]
         public string[] SubtitleFormats{ get; set; }
 
         /// <summary>
-        /// Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
-        /// <font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
+        /// 
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }

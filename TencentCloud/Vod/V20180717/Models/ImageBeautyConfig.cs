@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Beauty effect item.</p>
+        /// 
         /// </summary>
         [JsonProperty("BeautyEffectItems")]
         public BeautyEffectItem[] BeautyEffectItems{ get; set; }
 
         /// <summary>
-        /// <p>Beauty filter item.</p>
+        /// 
         /// </summary>
         [JsonProperty("BeautyFilterItems")]
         public BeautyFilterItem[] BeautyFilterItems{ get; set; }

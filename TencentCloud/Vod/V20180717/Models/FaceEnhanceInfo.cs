@@ -25,16 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether to enable face enhancement. Valid values:
-        /// <li>`ON`</li>
-        /// <li>`OFF`</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The face enhancement strength. This parameter is valid only if `Switch` is `ON`. Value range: 0.0 – 1.0.
-        /// Default value: `0.0`.
+        /// 
         /// </summary>
         [JsonProperty("Intensity")]
         public float? Intensity{ get; set; }

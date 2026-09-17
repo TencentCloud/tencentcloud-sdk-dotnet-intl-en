@@ -25,23 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+        /// <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Type of the MPS Template that needs to be deleted. Value:
-        /// <li>Transcode: delete transcoding template.</li>
-        /// <li>AIAnalysis: Create intelligent analysis template.</li>
-        /// <li>SmartSubtitle: Create an intelligent subtitle template.</li>
-        /// <li>SmartErase: Create an intelligent erasure template.</li>
+        /// <p>Type of MPS template that needs to be deleted. Parameter Value:</p><li>AIAnalysis: create intelligent analysis template.</li><li>SmartSubtitle: create intelligent subtitle template.</li><li>SmartErase: create intelligent erasure template.</li><li>EmbedSubtitle: subtitle suppression template.</li>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// Template Unique Identifier of the MPS task.
+        /// <p>Unique identifier of the MPS task template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

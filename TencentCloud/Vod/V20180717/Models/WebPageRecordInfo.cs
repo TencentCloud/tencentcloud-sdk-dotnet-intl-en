@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Panoramic recording Url.
+        /// 
         /// </summary>
         [JsonProperty("RecordUrl")]
         public string RecordUrl{ get; set; }
 
         /// <summary>
-        /// Panoramic recording task ID.
+        /// 
         /// </summary>
         [JsonProperty("RecordTaskId")]
         public string RecordTaskId{ get; set; }

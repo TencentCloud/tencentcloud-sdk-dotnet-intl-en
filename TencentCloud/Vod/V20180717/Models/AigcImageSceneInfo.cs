@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Required when Type is ai_try_on. Represents AI dress up config.</p>
+        /// 
         /// </summary>
         [JsonProperty("AiTryOnConfig")]
         public AiTryOnConfig AiTryOnConfig{ get; set; }
 
         /// <summary>
-        /// <p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
 
         /// <summary>
-        /// <p>Required when Type is product_image. It represents the AI product image config.</p>
+        /// 
         /// </summary>
         [JsonProperty("ProductImageConfig")]
         public ProductImageConfig ProductImageConfig{ get; set; }

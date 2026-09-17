@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Log topic ID.
+        /// 
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

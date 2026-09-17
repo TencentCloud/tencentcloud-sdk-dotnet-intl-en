@@ -25,16 +25,22 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Current library list of media assets to import</p>
+        /// 
         /// </summary>
         [JsonProperty("Bases")]
         public string[] Bases{ get; set; }
 
         /// <summary>
-        /// <p>Media analysis information in the knowledge base</p>
+        /// 
         /// </summary>
         [JsonProperty("KnowledgeAnalysisInfos")]
         public KnowledgeAnalysisInfo[] KnowledgeAnalysisInfos{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("KnowledgeBaseDetails")]
+        public KnowledgeBaseDetail[] KnowledgeBaseDetails{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamArraySimple(map, prefix + "Bases.", this.Bases);
             this.SetParamArrayObj(map, prefix + "KnowledgeAnalysisInfos.", this.KnowledgeAnalysisInfos);
+            this.SetParamArrayObj(map, prefix + "KnowledgeBaseDetails.", this.KnowledgeBaseDetails);
         }
     }
 }

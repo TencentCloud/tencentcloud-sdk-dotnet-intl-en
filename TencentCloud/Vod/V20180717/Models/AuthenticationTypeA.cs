@@ -25,37 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The key to calculate the signature; only uppercase and lowercase letters and numbers are allowed, with a length of 6~32 characters.
+        /// Key used for signature calculation.
+        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Signature parameter name setting; only uppercase and lowercase letters, numbers or underscores are allowed, the length is 1~100 characters, and it cannot start with a number.
+        /// Signature parameter name setting;
+        /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
         /// </summary>
         [JsonProperty("SignParam")]
         public string SignParam{ get; set; }
 
         /// <summary>
-        /// Signature expiration time setting; the unit is seconds, and the maximum value can be set to 630720000.
+        /// Signature expiration time setting;
+        /// In seconds. Maximum settable value: 630720000.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// File extension list settings for authentication/non-authentication; if the character * is included, it means all files.
+        /// List of filename extensions for authentication/no authentication settings;
+        /// If it contains the character *, it indicates all files.
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// whitelist: whitelist, indicating that all types except the FileExtensions list will be authenticated; blacklist: blacklist, indicating that only the types in FileExtensions will be authenticated.
+        /// whitelist: allowlist, means to authenticate all types except the FileExtensions list;
+        /// blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// Alternate key for calculating signature; only uppercase and lowercase letters and numbers are allowed, length 6~32 characters.
+        /// Secondary key for signature calculation;
+        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
+        /// 
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

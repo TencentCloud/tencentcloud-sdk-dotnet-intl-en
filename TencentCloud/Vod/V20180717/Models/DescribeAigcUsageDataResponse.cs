@@ -25,14 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>AIGC stats.</p>
+        /// 
         /// </summary>
         [JsonProperty("AigcUsageDataSet")]
         public AigcUsageDataItem[] AigcUsageDataSet{ get; set; }
 
         /// <summary>
-        /// <p>Detailed log</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AigcTextDetails")]
         public AigcTextDetail AigcTextDetails{ get; set; }

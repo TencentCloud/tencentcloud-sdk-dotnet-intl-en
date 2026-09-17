@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Output type of the synthesis result. </p><p>Enumeration values: </p><ul><li>fileId: Generate a new VOD file ID</li><li>url: Audio URL, valid for 24 hours.</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

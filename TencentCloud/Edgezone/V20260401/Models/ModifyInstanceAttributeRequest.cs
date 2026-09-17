@@ -40,12 +40,14 @@ namespace TencentCloud.Edgezone.V20260401.Models
         /// New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
         /// </summary>
         [JsonProperty("NewPublicIp")]
+        [System.Obsolete]
         public string NewPublicIp{ get; set; }
 
         /// <summary>
         /// IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
         /// </summary>
         [JsonProperty("IpType")]
+        [System.Obsolete]
         public string IpType{ get; set; }
 
 

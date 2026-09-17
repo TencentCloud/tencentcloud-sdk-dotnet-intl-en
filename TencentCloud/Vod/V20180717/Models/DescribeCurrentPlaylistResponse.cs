@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Current playlist information.
+        /// 
         /// </summary>
         [JsonProperty("CurrentPlaylist")]
         public RoundPlayFilePlayInfo[] CurrentPlaylist{ get; set; }

@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the intelligent erasure template</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Length limit for the smart erasing template name: 64 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+        /// 
         /// </summary>
         [JsonProperty("EraseType")]
         public string EraseType{ get; set; }
 
         /// <summary>
-        /// <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+        /// 
         /// </summary>
         [JsonProperty("EraseSubtitleConfig")]
         public MPSSmartEraseSubtitleConfig EraseSubtitleConfig{ get; set; }
 
         /// <summary>
-        /// <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+        /// 
         /// </summary>
         [JsonProperty("EraseWatermarkConfig")]
         public MPSSmartEraseWatermarkConfig EraseWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
+        /// 
         /// </summary>
         [JsonProperty("ErasePrivacyConfig")]
         public MPSSmartErasePrivacyConfig ErasePrivacyConfig{ get; set; }
 
         /// <summary>
-        /// <p>Width of the sample video or image, in pixels.</p>
+        /// 
         /// </summary>
         [JsonProperty("SampleWidth")]
         public ulong? SampleWidth{ get; set; }
 
         /// <summary>
-        /// <p>Height of the sample video or image, in pixels.</p>
+        /// 
         /// </summary>
         [JsonProperty("SampleHeight")]
         public ulong? SampleHeight{ get; set; }

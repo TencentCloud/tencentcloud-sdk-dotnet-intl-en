@@ -25,58 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The unique identifier of the playlist.
+        /// 
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, for customers who enable vod, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// The playback start time, in [iso 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+        /// 
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The program list.
-        /// <Li>Array length limit: 100.</li>.
+        /// 
         /// </summary>
         [JsonProperty("RoundPlaylist")]
         public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }
 
         /// <summary>
-        /// The playlist name (not longer than 64 characters).
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The playlist description (not longer than 256 characters).
+        /// 
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// Playback status, optional values:<li>disabled: stop playback.</li><li>enabled: start playback after the duration has elapsed.</li>.
+        /// 
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Play mode, optional values:.
-        /// <Li>Loop: loop the playlist;</li>.
-        /// <Li>Linear: single play, stop playback after the playlist finishes.</li>.
+        /// 
         /// </summary>
         [JsonProperty("PlayBackMode")]
         public string PlayBackMode{ get; set; }
 
         /// <summary>
-        /// Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback will stop after expiration. "9999-12-31t23:59:59+08:00" means no expiration.
+        /// 
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

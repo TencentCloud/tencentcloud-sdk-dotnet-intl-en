@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Voice information after the update.</p>
+        /// 
         /// </summary>
         [JsonProperty("Voice")]
         public VoiceInfo Voice{ get; set; }

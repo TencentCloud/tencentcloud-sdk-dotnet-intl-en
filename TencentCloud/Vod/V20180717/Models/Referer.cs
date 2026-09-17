@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// referer Blacklist and whitelist configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+        /// Referrer blocklist configuration switch. Parameter value:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Referer blacklist/whitelist configuration rule
+        /// 
         /// </summary>
         [JsonProperty("RefererRules")]
         public RefererRule[] RefererRules{ get; set; }

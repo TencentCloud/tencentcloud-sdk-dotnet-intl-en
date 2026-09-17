@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Speech keyword.
+        /// 
         /// </summary>
         [JsonProperty("Word")]
         public string Word{ get; set; }
 
         /// <summary>
-        /// List of time segments that contain the speech keyword.
+        /// 
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrWordsSegmentItem[] SegmentSet{ get; set; }

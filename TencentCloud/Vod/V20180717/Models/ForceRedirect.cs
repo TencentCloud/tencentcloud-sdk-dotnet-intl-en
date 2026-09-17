@@ -25,25 +25,29 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+        /// Access the forced redirect configuration switch. Value:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+        /// Access forced redirect type:
+        /// <li>http: Force HTTP redirect</li>
+        /// <li>https: Force HTTPS redirection</li>
         /// </summary>
         [JsonProperty("RedirectType")]
         public string RedirectType{ get; set; }
 
         /// <summary>
-        /// Status code returned for forced redirect Supports 301, 302.
+        /// 
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public ulong? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// Whether to return the newly added header during force redirection.
+        /// 
         /// </summary>
         [JsonProperty("CarryHeaders")]
         public string CarryHeaders{ get; set; }

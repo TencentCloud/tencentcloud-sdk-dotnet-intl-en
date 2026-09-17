@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image URLs of subjects from different perspectives.
-        /// Image format. Valid values: .jpg, .jpeg, and .png.
-        /// The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+        /// 
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Result information of animated image generating task
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AnimatedGraphicsSet")]
         public MediaAnimatedGraphicsItem[] AnimatedGraphicsSet{ get; set; }

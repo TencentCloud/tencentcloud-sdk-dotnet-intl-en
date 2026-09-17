@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image recognition involves task control parameters for unsafe information.
+        /// 
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfo ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Text identification involves task control parameters for unsafe information.
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

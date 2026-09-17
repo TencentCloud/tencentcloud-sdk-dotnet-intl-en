@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Non-existent file ID list.
+        /// 
         /// </summary>
         [JsonProperty("NotExistFileIdSet")]
         public string[] NotExistFileIdSet{ get; set; }

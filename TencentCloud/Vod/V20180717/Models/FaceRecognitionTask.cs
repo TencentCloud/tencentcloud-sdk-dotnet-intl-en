@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Face identification template No.</p>
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Output file information</p>
+        /// 
         /// </summary>
         [JsonProperty("OutputFile")]
         public FaceRecognitionOutputFileInfo[] OutputFile{ get; set; }

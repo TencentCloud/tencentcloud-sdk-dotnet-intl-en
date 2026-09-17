@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.intl.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1380";
+       private const string sdkVersion = "SDK_NET_3.0.1396";
 
         /// <summary>
         /// Client constructor.
@@ -299,6 +299,27 @@ namespace TencentCloud.Cls.V20201016
         public CreateAlarmShieldResponse CreateAlarmShieldSync(CreateAlarmShieldRequest req)
         {
             return InternalRequestAsync<CreateAlarmShieldResponse>(req, "CreateAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliverTaskResponse"/></returns>
+        public Task<CreateCLSDeliverTaskResponse> CreateCLSDeliverTask(CreateCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliverTaskResponse>(req, "CreateCLSDeliverTask");
+        }
+
+        /// <summary>
+        /// Create a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="CreateCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="CreateCLSDeliverTaskResponse"/></returns>
+        public CreateCLSDeliverTaskResponse CreateCLSDeliverTaskSync(CreateCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCLSDeliverTaskResponse>(req, "CreateCLSDeliverTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1046,6 +1067,27 @@ namespace TencentCloud.Cls.V20201016
         public DeleteAlarmShieldResponse DeleteAlarmShieldSync(DeleteAlarmShieldRequest req)
         {
             return InternalRequestAsync<DeleteAlarmShieldResponse>(req, "DeleteAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliverTaskResponse"/></returns>
+        public Task<DeleteCLSDeliverTaskResponse> DeleteCLSDeliverTask(DeleteCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliverTaskResponse>(req, "DeleteCLSDeliverTask");
+        }
+
+        /// <summary>
+        /// Delete a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="DeleteCLSDeliverTaskResponse"/></returns>
+        public DeleteCLSDeliverTaskResponse DeleteCLSDeliverTaskSync(DeleteCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteCLSDeliverTaskResponse>(req, "DeleteCLSDeliverTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1802,6 +1844,27 @@ namespace TencentCloud.Cls.V20201016
         public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistorySync(DescribeAlertRecordHistoryRequest req)
         {
             return InternalRequestAsync<DescribeAlertRecordHistoryResponse>(req, "DescribeAlertRecordHistory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to get the CLS delivery task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSDeliverTasksRequest"/></param>
+        /// <returns><see cref="DescribeCLSDeliverTasksResponse"/></returns>
+        public Task<DescribeCLSDeliverTasksResponse> DescribeCLSDeliverTasks(DescribeCLSDeliverTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSDeliverTasksResponse>(req, "DescribeCLSDeliverTasks");
+        }
+
+        /// <summary>
+        /// This API is used to get the CLS delivery task list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCLSDeliverTasksRequest"/></param>
+        /// <returns><see cref="DescribeCLSDeliverTasksResponse"/></returns>
+        public DescribeCLSDeliverTasksResponse DescribeCLSDeliverTasksSync(DescribeCLSDeliverTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeCLSDeliverTasksResponse>(req, "DescribeCLSDeliverTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3106,6 +3169,27 @@ namespace TencentCloud.Cls.V20201016
         public ModifyAlarmShieldResponse ModifyAlarmShieldSync(ModifyAlarmShieldRequest req)
         {
             return InternalRequestAsync<ModifyAlarmShieldResponse>(req, "ModifyAlarmShield")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="ModifyCLSDeliverTaskResponse"/></returns>
+        public Task<ModifyCLSDeliverTaskResponse> ModifyCLSDeliverTask(ModifyCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyCLSDeliverTaskResponse>(req, "ModifyCLSDeliverTask");
+        }
+
+        /// <summary>
+        /// Modify a CLS shipping task
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCLSDeliverTaskRequest"/></param>
+        /// <returns><see cref="ModifyCLSDeliverTaskResponse"/></returns>
+        public ModifyCLSDeliverTaskResponse ModifyCLSDeliverTaskSync(ModifyCLSDeliverTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyCLSDeliverTaskResponse>(req, "ModifyCLSDeliverTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

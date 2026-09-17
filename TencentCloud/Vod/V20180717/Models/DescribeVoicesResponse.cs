@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Available timbre list.</p>
+        /// 
         /// </summary>
         [JsonProperty("Voices")]
         public VoiceInfo[] Voices{ get; set; }
 
         /// <summary>
-        /// <p>Total number of available voices</p>
+        /// 
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

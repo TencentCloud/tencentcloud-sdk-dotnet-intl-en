@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
+        /// 
         /// </summary>
         [JsonProperty("LeftTopX")]
         public float? LeftTopX{ get; set; }
 
         /// <summary>
-        /// <p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
+        /// 
         /// </summary>
         [JsonProperty("LeftTopY")]
         public float? LeftTopY{ get; set; }
 
         /// <summary>
-        /// <p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+        /// 
         /// </summary>
         [JsonProperty("RightBottomX")]
         public float? RightBottomX{ get; set; }
 
         /// <summary>
-        /// <p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
+        /// 
         /// </summary>
         [JsonProperty("RightBottomY")]
         public float? RightBottomY{ get; set; }
 
         /// <summary>
-        /// <p>Coordinate unit - 1 percentage - 2 pixel value</p>
+        /// 
         /// </summary>
         [JsonProperty("Unit")]
         public ulong? Unit{ get; set; }

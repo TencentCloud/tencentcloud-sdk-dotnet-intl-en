@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template id.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Task output file.
+        /// 
         /// </summary>
         [JsonProperty("OutputFile")]
         public MPSOutputFileInfo[] OutputFile{ get; set; }

@@ -25,25 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Super resolution control switch. Optional values:
-        /// <li>ON: Enable super resolution;</li>
-        /// <li>OFF: Disable screen super resolution.</li>
+        /// 
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-        /// <li>`lq`: For low-resolution videos with obvious noise</li>
-        /// <li>`hq`: For high-resolution videos</li>
-        /// Default value: `lq`.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The ratio of the target resolution to the original resolution. Valid values: `2`.
-        /// Default value: `2`.
+        /// 
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+        /// 
         /// </summary>
         [JsonProperty("CLSRegion")]
         public string CLSRegion{ get; set; }
 
         /// <summary>
-        /// Log Set ID of Log Topic.
+        /// 
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// Log topic ID list. If left empty, means query all log topics.
+        /// 
         /// </summary>
         [JsonProperty("TopicIds")]
         public string[] TopicIds{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 20. Maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Edgezone.V20260401.Models
     {
         
         /// <summary>
-        /// Instance ID list. Maximum number of IDs: 100.
+        /// <p>Instance ID list. Maximum number of IDs: 100.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

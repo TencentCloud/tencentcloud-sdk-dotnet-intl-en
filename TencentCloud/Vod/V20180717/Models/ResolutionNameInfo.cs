@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Length of video short side in px.
+        /// 
         /// </summary>
         [JsonProperty("MinEdgeLength")]
         public ulong? MinEdgeLength{ get; set; }
 
         /// <summary>
-        /// Display name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

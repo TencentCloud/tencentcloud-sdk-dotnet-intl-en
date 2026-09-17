@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Parameters for recognition of pornographic content in images
+        /// 
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PornImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for ASR-based recognition of pornographic content
+        /// 
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PornAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Parameters for OCR-based recognition of pornographic content
+        /// 
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PornOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

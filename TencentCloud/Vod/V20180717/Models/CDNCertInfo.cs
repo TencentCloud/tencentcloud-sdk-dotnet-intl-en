@@ -25,25 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+        /// Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Server certificate information.
+        /// 
         /// </summary>
         [JsonProperty("Certificate")]
         public string Certificate{ get; set; }
 
         /// <summary>
-        /// Server key information.
+        /// 
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }
 
         /// <summary>
-        /// Certificate expiration time; no need to fill in when configured as an input parameter.
+        /// Certificate expiration time;
+        /// No need to fill when used as an input parameter configuration.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

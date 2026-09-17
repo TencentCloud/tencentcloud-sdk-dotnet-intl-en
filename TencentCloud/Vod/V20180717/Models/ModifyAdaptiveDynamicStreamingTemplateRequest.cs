@@ -25,67 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of the adaptive transcoding template.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template name. The length cannot exceed 64 characters.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Adaptive Transcoding Format, with a value range of
-        /// <li>HLS;</li>
-        /// <li>MPEG-DASH.</li>
+        /// 
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
-        /// <li>`0`: no,</li>
-        /// <li>1: Yes.</li>
+        /// 
         /// </summary>
         [JsonProperty("DisableHigherVideoBitrate")]
         public ulong? DisableHigherVideoBitrate{ get; set; }
 
         /// <summary>
-        /// Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
-        /// <li>`0`: no,</li>
-        /// <li>1: Yes.</li>
+        /// 
         /// </summary>
         [JsonProperty("DisableHigherVideoResolution")]
         public ulong? DisableHigherVideoResolution{ get; set; }
 
         /// <summary>
-        /// Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
-        /// Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
+        /// 
         /// </summary>
         [JsonProperty("StreamInfos")]
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Segment type, valid when Format is HLS. Value range:
-        /// <li>ts: ts slicing;</li>
-        /// <li>fmp4: fmp4 segment.</li>
+        /// 
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("SegmentDuration")]
+        public long? SegmentDuration{ get; set; }
 
 
         /// <summary>
@@ -102,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamSimple(map, prefix + "SegmentType", this.SegmentType);
+            this.SetParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
         }
     }
 }

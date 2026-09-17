@@ -25,87 +25,79 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// The remaster template ID.
+        /// 
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// The template type. Valid values:
-        /// <li>`Preset`</li>
-        /// <li>`Custom`</li>
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The remaster template name.
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The template description.
+        /// 
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Audio-visual quality revival video control info.
+        /// 
         /// </summary>
         [JsonProperty("RebuildVideoInfo")]
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// Audio-visual quality revival audio control info.
+        /// 
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }
 
         /// <summary>
-        /// Output video control information.
+        /// 
         /// </summary>
         [JsonProperty("TargetVideoInfo")]
         public RebuildMediaTargetVideoStream TargetVideoInfo{ get; set; }
 
         /// <summary>
-        /// Output audio control information.
+        /// 
         /// </summary>
         [JsonProperty("TargetAudioInfo")]
         public RebuildMediaTargetAudioStream TargetAudioInfo{ get; set; }
 
         /// <summary>
-        /// The output file format. Valid values: `mp4` (default), `hls`.
+        /// 
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Whether to remove video data. Valid values:
-        /// <li>`0`: No</li>
-        /// <li>`1`: Yes</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// Whether to remove audio data. Valid values:
-        /// <li>`0`: No</li>
-        /// <li>`1`: Yes</li>
-        /// Default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// The template creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The last updated time of the template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// 
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

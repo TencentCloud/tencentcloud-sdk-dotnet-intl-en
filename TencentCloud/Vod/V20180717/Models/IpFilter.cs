@@ -25,25 +25,30 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// IP black and white list configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+        /// IP allowlist/blocklist configuration switch. Parameter value:
+        /// <li>`on`: Enable;</li>
+        /// <li>`off`: Cache.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// IP blacklist and whitelist types: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+        /// IP allowlist/blocklist type:
+        /// <li>whitelist: allowlist;</li>
+        /// <li>blocklist: blocklist.</li>
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP black and white list, supports: IP in the form of X.X.X.X, or network segment in the form of /8, /16, /24; Can populate up to 50 whitelists or 50 blacklists.
+        /// IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+        /// Fill up to 50 allowlist entries or 50 blocklist entries.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+        /// 
         /// </summary>
         [JsonProperty("FilterRules")]
         public IpFilterPathRule[] FilterRules{ get; set; }

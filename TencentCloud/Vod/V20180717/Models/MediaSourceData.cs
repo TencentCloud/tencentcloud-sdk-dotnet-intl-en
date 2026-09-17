@@ -25,40 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media file source category:
-        /// <li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
-        /// <li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
-        /// <li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
-        /// <li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
-        /// <li>WebPageRecord: comes from panoramic recording.</li>
-        /// <li>Unknown: Unknown source.</li>
+        /// 
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// Field passed through when the user creates a file.
+        /// 
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// Live recording information is valid when file source is Record.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("LiveRecordInfo")]
         public LiveRecordInfo LiveRecordInfo{ get; set; }
 
         /// <summary>
-        /// TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TrtcRecordInfo")]
         public TrtcRecordInfo TrtcRecordInfo{ get; set; }
 
         /// <summary>
-        /// Panoramic recording information. Valid when the file source is WebPageRecord.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("WebPageRecordInfo")]
         public WebPageRecordInfo WebPageRecordInfo{ get; set; }

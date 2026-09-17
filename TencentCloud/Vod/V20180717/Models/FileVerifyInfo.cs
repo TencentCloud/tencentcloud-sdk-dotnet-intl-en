@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File verification URL guidance.
+        /// 
         /// </summary>
         [JsonProperty("FileVerifyUrl")]
         public string FileVerifyUrl{ get; set; }
 
         /// <summary>
-        /// File verification domain name list.
+        /// 
         /// </summary>
         [JsonProperty("FileVerifyDomains")]
         public string[] FileVerifyDomains{ get; set; }
 
         /// <summary>
-        /// File verification file name.
+        /// 
         /// </summary>
         [JsonProperty("FileVerifyName")]
         public string FileVerifyName{ get; set; }

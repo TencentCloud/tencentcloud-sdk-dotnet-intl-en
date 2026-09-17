@@ -25,33 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+        /// 
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+        /// 
         /// </summary>
         [JsonProperty("Definitions")]
         public ulong?[] Definitions{ get; set; }
 
         /// <summary>
-        /// Pagination offset. default value: 0.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. default value: 10. maximum value: 100.
+        /// 
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Template type filter. valid values:.
-        /// <Li>Preset: system preset template;</li>.
-        /// <Li>Custom: user-defined template.</li>.
+        /// 
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

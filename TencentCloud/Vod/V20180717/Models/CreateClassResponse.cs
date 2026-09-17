@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Category ID
+        /// 
         /// </summary>
         [JsonProperty("ClassId")]
         public ulong? ClassId{ get; set; }
