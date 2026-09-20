@@ -25,19 +25,29 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Authentication involves scoring unsafe information, with a score from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Authentication result suggestions involving unsafe information. Value range:
+        /// <li>pass;</li>
+        /// <li>review;</li>
+        /// <li>block.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result tag for authentication involving unsafe information. Value range:
+        /// <li>guns: weapons and firearms;</li>
+        /// <li>crowd: crowd gathering;</li>
+        /// <li>police: police force;</li>
+        /// <li>bloody: graphic violence;</li>
+        /// <li>banners: violent and terrorist flags;</li>
+        /// <li>explosion: explosions and fires;</li>
+        /// <li>scenario: Violent and terrorist visuals.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

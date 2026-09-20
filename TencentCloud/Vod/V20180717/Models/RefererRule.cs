@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Rule type:
         /// <li>all: take effect for all files;</li>
         /// <li>file: The specified file suffix takes effect;</li>
-        /// <li>directory: specify the path to take effect;</li>
+        /// <li>directory: The specified path takes effect;</li>
         /// <li>path: The absolute path takes effect.</li>
         /// </summary>
         [JsonProperty("RuleType")]
@@ -47,21 +47,21 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// referer configuration type. Value:
         /// <li>whitelist: allowlist;</li>
-        /// <li>blocklist: Blocklist.</li>
+        /// <li>blacklist: blocklist.</li>
         /// </summary>
         [JsonProperty("RefererType")]
         public string RefererType{ get; set; }
 
         /// <summary>
-        /// 
+        /// referer list.
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }
 
         /// <summary>
         /// Whether to allow empty referer:
-        /// When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
-        /// If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+        /// When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that empty referer is not allowed;
+        /// If the anti-hotlinking type is blocklist, true indicates to deny empty referers, and false indicates not to deny empty referers.
         /// </summary>
         [JsonProperty("AllowEmpty")]
         public bool? AllowEmpty{ get; set; }

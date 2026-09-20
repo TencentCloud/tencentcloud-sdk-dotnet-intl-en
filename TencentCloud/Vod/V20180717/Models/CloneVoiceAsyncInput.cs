@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Cloning audio URL. Valid when AudioData is empty.</p>
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Input audio fileId</p>
         /// </summary>
         [JsonProperty("AudioFileId")]
         public string AudioFileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio language</p>
         /// </summary>
         [JsonProperty("LanguageBoost")]
         public string LanguageBoost{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended parameters in the format of a JSON string.</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }

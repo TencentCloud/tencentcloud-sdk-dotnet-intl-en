@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media file ID.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of plays.</p>
         /// </summary>
         [JsonProperty("PlayTimes")]
         public ulong? PlayTimes{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Playback traffic volume, unit: byte.</p>
         /// </summary>
         [JsonProperty("Traffic")]
         public ulong? Traffic{ get; set; }

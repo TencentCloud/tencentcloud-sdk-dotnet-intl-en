@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Prompt for image generation background. If this field is default, inspiration is generated automatically.
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Prompt content used to prevent the model from generating images.
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// A detailed product description helps generate images that better meet requirements.
         /// </summary>
         [JsonProperty("ProductDesc")]
         public string ProductDesc{ get; set; }
 
         /// <summary>
-        /// 
+        /// Special requirements. If any, input them through this field.
         /// </summary>
         [JsonProperty("MoreRequirement")]
         public string MoreRequirement{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
         /// </summary>
         [JsonProperty("OutputImageCount")]
         public ulong? OutputImageCount{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
         /// </summary>
         [JsonProperty("TransparencyThreshold")]
         public long? TransparencyThreshold{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
         /// </summary>
         [JsonProperty("OpaqueThreshold")]
         public long? OpaqueThreshold{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
         /// </summary>
         [JsonProperty("EdgeSamplingStep")]
         public long? EdgeSamplingStep{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Edge expansion steps</p><p>Default value: 5</p>
         /// </summary>
         [JsonProperty("EdgeExpansionStep")]
         public long? EdgeExpansionStep{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
         /// </summary>
         [JsonProperty("EdgeBlendingIntensity")]
         public float? EdgeBlendingIntensity{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Md5 value of the media file.
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sha1 value of the media file.
         /// </summary>
         [JsonProperty("Sha1")]
         public string Sha1{ get; set; }

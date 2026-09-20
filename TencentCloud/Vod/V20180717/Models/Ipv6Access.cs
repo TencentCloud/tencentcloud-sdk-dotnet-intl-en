@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch for enabling ipv6 access configuration for the domain. Valid values:
+        /// Domain name activation switch for ipv6 access configuration. Valid values:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>

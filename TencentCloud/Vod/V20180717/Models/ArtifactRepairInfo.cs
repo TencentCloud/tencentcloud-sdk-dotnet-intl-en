@@ -25,13 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Artifact (burr) removal control switch. Available values:
+        /// <li>ON: enable artifact (burr) removal;</li>
+        /// <li>OFF: Disable artifact removal (burr).</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+        /// <li>weak: slight artifact removal (burr);</li>
+        /// <li>strong: Strong artifact removal (burr).</li>
+        /// Default value: weak.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,19 +25,27 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio separation control switch. Available values:
+        /// <li>ON: enable audio separation;</li>
+        /// <li>OFF: Disable audio separation.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scenario type. Valid values:
+        /// <li>normal: voice and background sound scenario</li>
+        /// <li>music: singing accompaniment scenario</li>
+        /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output audio track. Available values:
+        /// <li>vocal: output voice.</li>
+        /// <li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+        /// Default value: vocal.
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }

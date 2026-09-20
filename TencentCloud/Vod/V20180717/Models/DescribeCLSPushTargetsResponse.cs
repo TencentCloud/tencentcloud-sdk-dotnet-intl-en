@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Total number of domain name pushes.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name push to CLS target list.
         /// </summary>
         [JsonProperty("DomainCLSTargets")]
         public DomainCLSTargetInfo[] DomainCLSTargets{ get; set; }

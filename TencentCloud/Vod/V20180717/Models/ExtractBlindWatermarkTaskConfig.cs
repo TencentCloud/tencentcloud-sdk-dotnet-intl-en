@@ -25,7 +25,8 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+        /// If left empty, the default segment duration is 5 seconds.
         /// </summary>
         [JsonProperty("SegmentDuration")]
         public long? SegmentDuration{ get; set; }

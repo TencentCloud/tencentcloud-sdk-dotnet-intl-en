@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video splitting recognition task switch. Value range:
+        /// <li>ON: enable the intelligent video splitting recognition task;</li>
+        /// <li>OFF: Disable the intelligent video splitting recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

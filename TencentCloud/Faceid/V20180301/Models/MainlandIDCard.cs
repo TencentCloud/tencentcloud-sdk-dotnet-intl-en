@@ -25,36 +25,31 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// <p>name</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Name</p>
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
         /// <p>Gender</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
         /// <p>Ethnicity</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nation")]
         public string Nation{ get; set; }
 
         /// <summary>
         /// <p>Birthday</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
         /// <p>Address</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Address")]
         [System.Obsolete]
@@ -62,28 +57,24 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// <p>Identity card number</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
         /// <p>Address</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }
 
         /// <summary>
         /// <p>Issuing authority</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Authority")]
         public string Authority{ get; set; }
 
         /// <summary>
         /// <p>Validity period</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }

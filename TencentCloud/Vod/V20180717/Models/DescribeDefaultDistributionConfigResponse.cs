@@ -25,26 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Distribute the configured domain name (abandoned).</p>
         /// </summary>
         [JsonProperty("DomainName")]
         [System.Obsolete]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Distribute the configured domain name.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
         /// </summary>
         [JsonProperty("PlayKey")]
         public string PlayKey{ get; set; }

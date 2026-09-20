@@ -25,19 +25,21 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Error code.
+        /// <li>0: success;</li>
+        /// <li>Other value: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Screenshot time, in milliseconds.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Screenshot output file address.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

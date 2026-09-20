@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Output file information of the AIGC video conversion task.</p>
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawOutputFileInfo FileInfo{ get; set; }

@@ -25,43 +25,51 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values:
+        /// WAITING: waiting.
+        /// PROCESSING: Processing;
+        /// FINISH: completed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code.
+        /// <li>0: success;</li>
+        /// <li>Other value: Failed.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video file ID for publishing.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoding template ID for the published video. 0 represents the original video.
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// WeChat Mini Program Video Publishing status. Parameter Value:
+        /// <li>Pass: published successfully;</li>
+        /// <li>Failed: Release failure;</li>
+        /// <li>Rejected: The audio and video moderation failed to pass.</li>
         /// </summary>
         [JsonProperty("PublishResult")]
         public string PublishResult{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Time point screenshot template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of screenshot time points. Time points support two formats: s and %.</p><li>The unit for a string that ends with s is second. For example, 3.5s means the time point is at 3.5 seconds.</li><li>The unit for a string that ends with % is a percentage of the video duration. For example, 10% means the time point is at 10% of the video's total duration.</li>
         /// </summary>
         [JsonProperty("ExtTimeOffsetSet")]
         public string[] ExtTimeOffsetSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
         /// </summary>
         [JsonProperty("TimeOffsetSet")]
         public float?[] TimeOffsetSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }

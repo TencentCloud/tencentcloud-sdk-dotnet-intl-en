@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
         /// </summary>
         [JsonProperty("NoAudio")]
         public long? NoAudio{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
         /// </summary>
         [JsonProperty("NoVideo")]
         public long? NoVideo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video picture quality score. Value range: [0, 100].</p>
         /// </summary>
         [JsonProperty("QualityEvaluationScore")]
         public ulong? QualityEvaluationScore{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of abnormalities detected in audio and video quality.</p>
         /// </summary>
         [JsonProperty("QualityInspectResultSet")]
         public QualityInspectResultItem[] QualityInspectResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>No-reference quality score of the video (MOS).</p>
         /// </summary>
         [JsonProperty("QualityEvaluationMeanOpinionScore")]
         public float? QualityEvaluationMeanOpinionScore{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video aesthetic score. Value range: [0, 100].</p>
         /// </summary>
         [JsonProperty("AestheticEvaluationScore")]
         public long? AestheticEvaluationScore{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Exception items detected in format diagnosis.</p>
         /// </summary>
         [JsonProperty("ContainerDiagnoseResultSet")]
         public QualityInspectContainerDiagnoseResultItem[] ContainerDiagnoseResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>LLM AIGC quality detection result.</p>
         /// </summary>
         [JsonProperty("LLMDetectionReport")]
         public QualityInspectLLMDetectionReport LLMDetectionReport{ get; set; }

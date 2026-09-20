@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video clipping task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video editing task source file ID.
         /// </summary>
         [JsonProperty("SrcFileId")]
         public string SrcFileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// File information of the video editing output.
         /// </summary>
         [JsonProperty("FileInfo")]
         public ClipFileInfo2017 FileInfo{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Sorting field.
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sorting method. Available values: Asc (ascending), Desc (descending).
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

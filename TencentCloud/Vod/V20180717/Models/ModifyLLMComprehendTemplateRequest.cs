@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Unique identifier of the Large Model Understanding template.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Large model parsing template name. Length limit: 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Large model parsing template description. Length limit: 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Segment summary parsing configuration</p>
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummaryForUpdate Summary{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Text transcription parsing configuration</p>
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsrForUpdate Asr{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Facial recognition configuration</p>
         /// </summary>
         [JsonProperty("FaceRecognition")]
         public LLMComprehendFaceRecognitionForUpdate FaceRecognition{ get; set; }

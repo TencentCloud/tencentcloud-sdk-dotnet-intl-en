@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Voice description.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Voice settings</p>
         /// </summary>
         [JsonProperty("VoiceSettings")]
         public VoiceSettings VoiceSettings{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audition synthetic text, up to 500 characters</p>
         /// </summary>
         [JsonProperty("PreviewText")]
         public string PreviewText{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended parameters in the format of a JSON string.</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

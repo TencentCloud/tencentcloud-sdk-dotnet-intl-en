@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public long? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Push target to set for logs in the Chinese mainland.
         /// </summary>
         [JsonProperty("ChineseMainlandCLSTargetInfo")]
         public AreaCLSTargetInfo ChineseMainlandCLSTargetInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Push target for logs outside the Chinese mainland to be set.
         /// </summary>
         [JsonProperty("OutsideChineseMainlandCLSTargetInfo")]
         public AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo{ get; set; }

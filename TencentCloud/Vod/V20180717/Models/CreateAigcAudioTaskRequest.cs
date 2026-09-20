@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Description of the generated audio</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video information for reference.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output parameter</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcAudioOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
         /// </summary>
         [JsonProperty("AdditionalParameters")]
         public string AdditionalParameters{ get; set; }

@@ -25,73 +25,83 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Watermark template unique identifier.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Watermark type. Valid values:
+        /// <li>image: image watermark;</li>
+        /// <li>text: text watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Watermark template name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template description information.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Horizontal position of the watermark image origin point from the video origin point.
+        /// <li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+        /// <li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vertical position of the watermark image origin point from the video origin point.
+        /// <li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+        /// <li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image watermark template. This field is valid only when Type is image.
         /// </summary>
         [JsonProperty("ImageTemplate")]
         public ImageWatermarkTemplate ImageTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text watermarking template. This field is valid only when Type is text.
         /// </summary>
         [JsonProperty("TextTemplate")]
         public TextWatermarkTemplateInput TextTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// SVG watermark template. This field is valid when Type is `svg`.
         /// </summary>
         [JsonProperty("SvgTemplate")]
         public SvgWatermarkInput SvgTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Origin position. Valid values:
+        /// <li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+        /// <li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+        /// <li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+        /// <li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }

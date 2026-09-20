@@ -25,31 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Template ID. The transcoding template ID corresponding to the video released by the mini program. 0 indicates the original video.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video metadata.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video playback address for Mini Program Audio and Video review.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// Publishing status of the mini program video:
+        /// <li>Pass: Succeeded.</li>
+        /// <li>Rejected: failed.</li>
         /// </summary>
         [JsonProperty("ReviewResult")]
         public string ReviewResult{ get; set; }
 
         /// <summary>
-        /// 
+        /// Mini Program Audio and Video moderation element.
         /// </summary>
         [JsonProperty("ReviewSummary")]
         public MediaMiniProgramReviewElem[] ReviewSummary{ get; set; }

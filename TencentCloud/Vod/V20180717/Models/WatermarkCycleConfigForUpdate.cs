@@ -25,19 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Duration of watermark display in a watermark cycle, in seconds.
         /// </summary>
         [JsonProperty("DisplayDuration")]
         public float? DisplayDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Duration of a watermark cycle, in seconds.
+        /// Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
         /// </summary>
         [JsonProperty("CycleDuration")]
         public float? CycleDuration{ get; set; }

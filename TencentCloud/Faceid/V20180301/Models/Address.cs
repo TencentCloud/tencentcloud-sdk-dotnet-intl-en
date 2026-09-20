@@ -25,61 +25,61 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Nationality.
+        /// Country
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
-        /// Post code.
+        /// Postal code
         /// </summary>
         [JsonProperty("PostalCode")]
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Subregion.
+        /// Sub-region
         /// </summary>
         [JsonProperty("Subdivision")]
         public string Subdivision{ get; set; }
 
         /// <summary>
-        /// City.
+        /// city
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// Complete address.
+        /// Complete address
         /// </summary>
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }
 
         /// <summary>
-        /// The first line of address.
+        /// First line of the address bar
         /// </summary>
         [JsonProperty("LineOne")]
         public string LineOne{ get; set; }
 
         /// <summary>
-        /// The second line of address.
+        /// Second line of the address bar
         /// </summary>
         [JsonProperty("LineTwo")]
         public string LineTwo{ get; set; }
 
         /// <summary>
-        /// The third line of address.
+        /// Third line of the address bar
         /// </summary>
         [JsonProperty("LineThree")]
         public string LineThree{ get; set; }
 
         /// <summary>
-        /// The fourth line of address.
+        /// Fourth line of the address bar
         /// </summary>
         [JsonProperty("LineFour")]
         public string LineFour{ get; set; }
 
         /// <summary>
-        /// The fifth line of address.
+        /// Fifth line of the address bar
         /// </summary>
         [JsonProperty("LineFive")]
         public string LineFive{ get; set; }

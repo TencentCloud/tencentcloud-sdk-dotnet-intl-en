@@ -25,55 +25,55 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Video analysis template name, with a length limit of 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video analysis template description. Length limit: 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent Classification Task Control Parameters.</p>
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public MPSAIAnalysisConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Control parameter for the intelligent tag task.</p>
         /// </summary>
         [JsonProperty("TagConfigure")]
         public MPSAIAnalysisConfigureInfo TagConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent Cover Task Control Parameters.</p>
         /// </summary>
         [JsonProperty("CoverConfigure")]
         public MPSAIAnalysisConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Control parameters for the intelligent frame-specific tagging task.</p>
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public MPSAIAnalysisConfigureInfo FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent splitting task control parameters.</p>
         /// </summary>
         [JsonProperty("SplitConfigure")]
         public MPSAIAnalysisConfigureInfo SplitConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Control parameter for the intelligent highlights task.</p>
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public MPSAIAnalysisConfigureInfo HighlightConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent opening and ending content task control parameters.</p>
         /// </summary>
         [JsonProperty("OpeningAndEndingConfigure")]
         public MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure{ get; set; }

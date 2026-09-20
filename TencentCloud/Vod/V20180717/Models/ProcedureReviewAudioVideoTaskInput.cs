@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Moderation template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content for review. Available values:
+        /// <li>Media: original audio/video;</li>
+        /// <li>Cover: cover.</li>
+        /// If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
         /// </summary>
         [JsonProperty("ReviewContents")]
         public string[] ReviewContents{ get; set; }

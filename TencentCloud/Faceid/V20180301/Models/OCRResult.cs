@@ -26,78 +26,67 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// <p>Whether the identity authentication or OCR process is successful.</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsPass")]
         public bool? IsPass{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the front side ID image</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Base64 of the front image of the identity document</p>
         /// </summary>
         [JsonProperty("CardImageBase64")]
         public string CardImageBase64{ get; set; }
 
         /// <summary>
-        /// <p>ID card recognition result</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>ID document recognition result</p>
         /// </summary>
         [JsonProperty("CardInfo")]
         [System.Obsolete]
         public CardInfo CardInfo{ get; set; }
 
         /// <summary>
-        /// <p>Document recognition result (when CheckMode value is 4, return the OriginalCardInfo field; other scenarios return the current field)</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>ID document recognition result (when CheckMode value is 4, the OriginalCardInfo field is returned; in other scenarios, the current field is returned)</p>
         /// </summary>
         [JsonProperty("NormalCardInfo")]
         public NormalCardInfo NormalCardInfo{ get; set; }
 
         /// <summary>
         /// <p>Request id</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the cropped ID image</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Base64 of the front cropped image of the identity document</p>
         /// </summary>
         [JsonProperty("CardCutImageBase64")]
         public string CardCutImageBase64{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the cropped image of the back side of the ID</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Base64 of the edge-cropped image of the back of an identity document</p>
         /// </summary>
         [JsonProperty("CardBackCutImageBase64")]
         public string CardBackCutImageBase64{ get; set; }
 
         /// <summary>
-        /// <p>Alarm code</p><p>Enumeration value:</p><ul><li>9101: Alarm for incomplete document border</li><li>9102: Alarm for document photocopy</li><li>9103: Alarm for rephotographing</li><li>9104: PS alarm</li><li>9107: Reflective alarm</li><li>9108: Blurry alarm</li><li>9109: Alarm capability not enabled</li></ul>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Alarm code</p><p>Enumeration value:</p><ul><li>-9101: alarm for incomplete document border</li><li>-9102: alarm for document photocopy</li><li>-9103: alarm for document rephotographing</li><li>-9104: document PS alarm</li><li>-9107: document reflective alarm</li><li>-9108: alarm for blurry document</li><li>-9109: alarm capability not enabled</li></ul>
         /// </summary>
         [JsonProperty("WarnCardInfos")]
         public long?[] WarnCardInfos{ get; set; }
 
         /// <summary>
-        /// <p>Original document recognition information (the current field will be returned when CheckMode value is 4)</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Original document recognition information (when CheckMode value is 4, the current field will be returned)</p>
         /// </summary>
         [JsonProperty("OriginalCardInfo")]
         public string OriginalCardInfo{ get; set; }
 
         /// <summary>
-        /// <p>Document portrait matting</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Portrait matting in the document</p>
         /// </summary>
         [JsonProperty("HeadImageBase64")]
         public string HeadImageBase64{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the back side ID image</p>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Base64 of the back image of the identity document</p>
         /// </summary>
         [JsonProperty("CardBackImageBase64")]
         public string CardBackImageBase64{ get; set; }

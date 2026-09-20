@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1394";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -76,7 +76,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
-        /// 
         /// This API is used to set the alias SmartStructuralPro.
         /// 
         /// The default API request rate limit is 5 requests per second.
@@ -90,7 +89,6 @@ namespace TencentCloud.Ocr.V20181119
 
         /// <summary>
         /// This API supports identifying and extracting field information in structured scenarios such as complex scenarios and multiple formats. Key scenarios include: finance, health care, transportation, travel, insurance. Click [experience now](https://ocrdemo.cloud.tencent.com/).
-        /// 
         /// This API is used to set the alias SmartStructuralPro.
         /// 
         /// The default API request rate limit is 5 requests per second.

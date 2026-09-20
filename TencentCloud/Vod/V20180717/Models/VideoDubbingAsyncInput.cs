@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Input video Url</p>
         /// </summary>
         [JsonProperty("InputUrl")]
         public string InputUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>FileId of the input video</p>
         /// </summary>
         [JsonProperty("InputFileId")]
         public string InputFileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video source language. The default value is zh.</p>
         /// </summary>
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Target language of the video. Default: en.</p>
         /// </summary>
         [JsonProperty("DstLanguage")]
         public string DstLanguage{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Dubbing model</p>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

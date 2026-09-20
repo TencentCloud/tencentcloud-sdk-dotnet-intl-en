@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Whether the filter is enabled.</p><p>Enumeration values: </p><ul><li>ON: On</li><li>OFF: Off</li></ul>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter item.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter strength.</p>
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

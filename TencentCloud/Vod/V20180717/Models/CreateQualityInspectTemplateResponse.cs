@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Audio and video quality inspection template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media file ID</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Input of the import knowledge base task.</p>
         /// </summary>
         [JsonProperty("Input")]
         public ImportMediaKnowledgeTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error code. 0 indicates success, and other values indicate failure.</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error message.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

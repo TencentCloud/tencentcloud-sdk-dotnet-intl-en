@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Player's ID in hexadecimal, 6 digits.
         /// </summary>
         [JsonProperty("Uv")]
         public string Uv{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated.
         /// </summary>
         [JsonProperty("Uid")]
         [System.Obsolete]

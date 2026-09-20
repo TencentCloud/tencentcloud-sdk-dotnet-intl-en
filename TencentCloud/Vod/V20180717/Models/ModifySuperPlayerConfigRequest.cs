@@ -25,73 +25,81 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Player configuration name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Played audio and video type. Available values:
+        /// <li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+        /// <li>Transcode: transcode;</li>
+        /// <li>Original: original audio/video.</li>
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Switch for playing DRM-protected adaptive bitstream:
+        /// <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+        /// <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Allowed output of unencrypted adaptive bitstream template ID.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingDefinition")]
         public ulong? AdaptiveDynamicStreamingDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Allowed output of DRM adaptive bitstream template content.
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfoForUpdate DrmStreamingsInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Allowed output transcoding template ID.
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Allowed output sprite template ID.
         /// </summary>
         [JsonProperty("ImageSpriteDefinition")]
         public ulong? ImageSpriteDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Player's display name for substreams of different resolutions.
         /// </summary>
         [JsonProperty("ResolutionNames")]
         public ResolutionNameInfo[] ResolutionNames{ get; set; }
 
         /// <summary>
-        /// 
+        /// Domain name used during playback. Enter `Default` to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scheme used during playback. Valid values:
+        /// <li>Default: use the Scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1);</li>
+        /// <li>HTTP;</li>
+        /// <li>HTTPS.</li>
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

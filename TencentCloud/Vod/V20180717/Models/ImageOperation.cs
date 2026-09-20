@@ -25,25 +25,28 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image processing type. Optional types:
+        /// <li>Scale: Image thumbnail processing;</li>
+        /// <li>CenterCut: image cropping;</li>
+        /// <li>Blur: fuzzily process an image.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image thumbnail processing. This parameter is valid only when Type is Scale.
         /// </summary>
         [JsonProperty("Scale")]
         public ImageScale Scale{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image cropping. Valid only when Type is CenterCut.
         /// </summary>
         [JsonProperty("CenterCut")]
         public ImageCenterCut CenterCut{ get; set; }
 
         /// <summary>
-        /// 
+        /// Blur the image. This parameter is valid only when Type is Blur.
         /// </summary>
         [JsonProperty("Blur")]
         public ImageBlur Blur{ get; set; }

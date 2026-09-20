@@ -25,73 +25,76 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media processing task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task stream status. Valid values:
+        /// <li>WAITING: waiting.</li>
+        /// <li>PROCESSING: Processing;</li>
+        /// <li>FINISH: completed</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. `0` indicates success. Other values indicate failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input information of the file for digital watermark extraction.
         /// </summary>
         [JsonProperty("InputInfo")]
         public ExtractBlindWatermarkInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
         /// </summary>
         [JsonProperty("IsDetected")]
         public bool? IsDetected{ get; set; }
 
         /// <summary>
-        /// 
+        /// Extracted digital watermark content. This field will not be returned if no watermark is detected.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 
+        /// Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
         /// </summary>
         [JsonProperty("ResultUV")]
         public string ResultUV{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration for digital watermark extraction.
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkConfig")]
         public ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

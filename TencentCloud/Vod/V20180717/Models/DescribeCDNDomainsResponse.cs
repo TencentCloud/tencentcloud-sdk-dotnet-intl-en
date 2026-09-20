@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// List of domain names.
         /// </summary>
         [JsonProperty("DomainSet")]
         public CDNDomainInfo[] DomainSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Total number of CDN domains under this application.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

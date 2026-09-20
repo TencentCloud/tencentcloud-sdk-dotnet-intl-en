@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         [System.Obsolete]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Carousel playlist details list.</p>
         /// </summary>
         [JsonProperty("RoundPlaySet")]
         public RoundPlayInfo[] RoundPlaySet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

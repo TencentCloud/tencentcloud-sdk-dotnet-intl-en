@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Heuristic cache configuration.
         /// </summary>
         [JsonProperty("HeuristicCache")]
         public HeuristicCache HeuristicCache{ get; set; }

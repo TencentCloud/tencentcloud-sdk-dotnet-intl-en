@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Matting target type: "foreground" / "pattern"</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
         /// </summary>
         [JsonProperty("PatternConfig")]
         public PatternConfig PatternConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

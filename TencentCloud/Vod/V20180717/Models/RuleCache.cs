@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Rule type:
         /// <li>all: take effect for all files;</li>
         /// <li>file: The specified file suffix takes effect;</li>
-        /// <li>directory: The specified path takes effect;</li>
+        /// <li>directory: specify the path to take effect;</li>
         /// <li>path: The absolute path takes effect.</li>
         /// </summary>
         [JsonProperty("RuleType")]
@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] RulePaths{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cache configuration.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public RuleCacheConfig CacheConfig{ get; set; }

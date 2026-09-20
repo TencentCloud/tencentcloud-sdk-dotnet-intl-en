@@ -26,77 +26,66 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// Passport ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Full name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
         /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Surname")]
         public string Surname{ get; set; }
 
         /// <summary>
-        /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("GivenName")]
         public string GivenName{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Gender (F-Female, M-Male)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Gender (F: female, M: male).
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Expiration date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Validity period.
         /// </summary>
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
         /// <summary>
         /// Issuing country
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuingCountry")]
         public string IssuingCountry{ get; set; }
 
         /// <summary>
-        /// Nationality code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Country region code
         /// </summary>
         [JsonProperty("NationalityCode")]
         public string NationalityCode{ get; set; }
 
         /// <summary>
-        /// The first line at the bottom, the MRZ Code sequence
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MRZ Code sequence in the first row at the bottom
         /// </summary>
         [JsonProperty("PassportCodeFirst")]
         public string PassportCodeFirst{ get; set; }
 
         /// <summary>
-        /// The second line at the bottom, the MRZ Code sequence
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MRZ Code sequence in the second line from the bottom
         /// </summary>
         [JsonProperty("PassportCodeSecond")]
         public string PassportCodeSecond{ get; set; }

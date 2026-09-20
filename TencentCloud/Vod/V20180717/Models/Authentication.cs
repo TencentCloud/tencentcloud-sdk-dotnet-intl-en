@@ -33,25 +33,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of timestamp hotlink protection mode A.
         /// </summary>
         [JsonProperty("TypeA")]
         public AuthenticationTypeA TypeA{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of timestamp hotlink protection mode B.
         /// </summary>
         [JsonProperty("TypeB")]
         public AuthenticationTypeB TypeB{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of timestamp hotlink protection mode C.
         /// </summary>
         [JsonProperty("TypeC")]
         public AuthenticationTypeC TypeC{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of timestamp hotlink protection mode D.
         /// </summary>
         [JsonProperty("TypeD")]
         public AuthenticationTypeD TypeD{ get; set; }

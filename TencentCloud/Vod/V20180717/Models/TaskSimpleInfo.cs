@@ -25,55 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task type. Value:
+        /// <li>Procedure: video processing task;</li>
+        /// <li>EditMedia: video editing task;</li>
+        /// <li>ReduceMediaBitrate: bitrate reduction task;</li>
+        /// <li>WechatDistribute: publishing on WeChat task;</li>
+        /// <li>ReviewAudioVideo: audio/video moderation task;</li>
+        /// <li>MPSWorkflowTask: MPS video processing task.</li>
+        /// Task types compatible with the 2017 version:
+        /// <li>Transcode: video transcoding task;</li>
+        /// <li>SnapshotByTimeOffset: video screencapturing task;</li>
+        /// <li>Concat: video splicing task;</li>
+        /// <li>Clip: video clipping task;</li>
+        /// <li>ImageSprites: capture image sprite task.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task execution start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not started, this field is empty.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task end time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). If the task is not completed yet, this field is empty.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source context, used to pass through user request information.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

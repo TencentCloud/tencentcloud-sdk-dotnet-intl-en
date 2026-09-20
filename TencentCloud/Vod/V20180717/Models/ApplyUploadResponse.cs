@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Bucket, used as the bucket_name for uploading API URL.</p>
         /// </summary>
         [JsonProperty("StorageBucket")]
         public string StorageBucket{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Storage campus, used for the Region of the upload API Host.</p>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
         /// </summary>
         [JsonProperty("VodSessionKey")]
         public string VodSessionKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media storage path, the object Key for storing media uploaded through the API.</p>
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cover storage path, the object Key for uploading and storing the cover via the API.</p>
         /// </summary>
         [JsonProperty("CoverStoragePath")]
         public string CoverStoragePath{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Temporary credentials for access verification of the upload API.</p>
         /// </summary>
         [JsonProperty("TempCertificate")]
         public TempCertificate TempCertificate{ get; set; }

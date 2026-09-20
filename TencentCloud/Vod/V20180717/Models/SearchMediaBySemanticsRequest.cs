@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Content to search</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
         /// </summary>
         [JsonProperty("Categories")]
         public string[] Categories{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
         /// </summary>
         [JsonProperty("Persons")]
         public string[] Persons{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
         /// </summary>
         [JsonProperty("TaskTypes")]
         public string[] TaskTypes{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Scenario-based image generation parameter configuration.
         /// </summary>
         [JsonProperty("SceneInfo")]
         public AigcVideoSceneInfo SceneInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of input images.
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Configuration of the output media file for the scenario-based image generation task.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SceneAigcVideoOutputConfig OutputConfig{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
         /// </summary>
         [JsonProperty("CheckDuration")]
         public long? CheckDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
         /// </summary>
         [JsonProperty("CheckInterval")]
         public long? CheckInterval{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
         /// </summary>
         [JsonProperty("SkipDuration")]
         public long? SkipDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of loops.</p><p>Value range: [0, 1000]</p>
         /// </summary>
         [JsonProperty("CirclesNumber")]
         public long? CirclesNumber{ get; set; }

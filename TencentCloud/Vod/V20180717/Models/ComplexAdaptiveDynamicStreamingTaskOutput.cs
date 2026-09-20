@@ -25,25 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Adaptive bitrate template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Adaptive bitrate stream packaging format. Available values:
+        /// <li>HLS;</li>
+        /// <li>MPEG-DASH.</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 
+        /// DRM solution type. Available values:
+        /// <li>Empty string: unencrypted;</li>
+        /// <li>SimpleAES;</li>
+        /// <li>Widevine;</li>
+        /// <li>FairPlay.</li>
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback address of the adaptive bitrate stream.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

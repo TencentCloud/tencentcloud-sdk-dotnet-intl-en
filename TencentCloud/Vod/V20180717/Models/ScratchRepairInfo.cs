@@ -25,19 +25,24 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Scratch control switch. Available values:
+        /// <li>ON: turn on scratch removal;</li>
+        /// <li>OFF: disables scratch removal.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+        /// Default: 0.0.
         /// </summary>
         [JsonProperty("Intensity")]
         public float? Intensity{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+        /// <li>normal: normal scratch removal;</li>
+        /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Signature expiration time settings;
+        /// Signature expiration time setting;
         /// In seconds. Maximum settable value: 630720000.
         /// </summary>
         [JsonProperty("ExpireTime")]
@@ -40,20 +40,20 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// List of filename extensions for authentication/no authentication settings;
-        /// If it contains the character *, it indicates all files.
+        /// If it contains the character *, it means all files.
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
         /// whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-        /// blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+        /// blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// Signature parameter name settings;
+        /// Signature parameter name setting;
         /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
         /// </summary>
         [JsonProperty("SignParam")]

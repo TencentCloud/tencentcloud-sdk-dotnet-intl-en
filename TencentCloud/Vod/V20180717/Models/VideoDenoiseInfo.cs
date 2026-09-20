@@ -25,13 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video noise reduction control switch. Available values:
+        /// <li>ON: turn on video noise reduction</li>
+        /// <li>OFF: Turn off video noise reduction.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video noise reduction type. It is valid only when the video noise reduction control switch is ON. Available values:
+        /// <li>weak: light video noise reduction;</li>
+        /// <li>strong: strong video noise reduction.</li>
+        /// Default value: weak.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

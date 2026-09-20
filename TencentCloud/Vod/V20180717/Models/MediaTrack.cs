@@ -25,13 +25,18 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Track type. Valid values:
+        /// <ul>
+        /// <li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+        /// <li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+        /// <li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+        /// </ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of media segments on track.
         /// </summary>
         [JsonProperty("TrackItems")]
         public MediaTrackItem[] TrackItems{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Array of video timestamp information.
         /// </summary>
         [JsonProperty("KeyFrameDescSet")]
         public MediaKeyFrameDescItem[] KeyFrameDescSet{ get; set; }

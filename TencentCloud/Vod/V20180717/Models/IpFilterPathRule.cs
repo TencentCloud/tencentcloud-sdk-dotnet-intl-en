@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+        /// IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
         /// Fill up to 50 allowlist entries or 50 blocklist entries.
         /// </summary>
         [JsonProperty("Filters")]
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Rule type:
         /// <li>all: take effect for all files;</li>
         /// <li>file: The specified file suffix takes effect;</li>
-        /// <li>directory: The specified path takes effect;</li>
+        /// <li>directory: specify the path to take effect;</li>
         /// <li>path: The absolute path takes effect.</li>
         /// </summary>
         [JsonProperty("RuleType")]

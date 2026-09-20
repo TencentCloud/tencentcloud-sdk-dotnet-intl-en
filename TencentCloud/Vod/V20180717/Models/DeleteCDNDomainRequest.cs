@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

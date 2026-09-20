@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle suppression configuration</p>
         /// </summary>
         [JsonProperty("SubtitleEmbedConfig")]
         public MPSSubtitleEmbedConfig SubtitleEmbedConfig{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Video parameter information.</p>
         /// </summary>
         [JsonProperty("Video")]
         public VideoTemplateInfo Video{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio parameter information.</p>
         /// </summary>
         [JsonProperty("Audio")]
         public AudioTemplateInfo Audio{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Top Speed Codec transcoding parameters.</p>
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfig TEHDConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio/video enhancement configurations.</p>
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended parameter.</p>
         /// </summary>
         [JsonProperty("StdExtInfo")]
         public string StdExtInfo{ get; set; }

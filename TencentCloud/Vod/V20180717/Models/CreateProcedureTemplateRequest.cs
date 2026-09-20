@@ -25,62 +25,62 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task flow name (supports Chinese, up to 20 characters).</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Transcoding template description. Length limit: 256 characters.</p>
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video processing type task parameters.</p>
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>AI content review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Parameters for the AI content analysis task.</p>
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Parameters for the AI content recognition task.</p>
         /// </summary>
         [JsonProperty("AiRecognitionTaskSet")]
         public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         [System.Obsolete]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Parameters for the audio and video moderation task.</p>
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task parameter for importing Intelligent Media Assets knowledge base.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledgeTaskSet")]
         public ImportMediaKnowledgeTaskInput[] ImportMediaKnowledgeTaskSet{ get; set; }

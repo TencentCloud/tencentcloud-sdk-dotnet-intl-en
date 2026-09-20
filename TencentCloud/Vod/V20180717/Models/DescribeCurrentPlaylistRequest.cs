@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Carousel playlist unique identifier.</p>
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Length of the returned playlist. Maximum: 10. Default value: 5.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

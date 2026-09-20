@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video frame jitter and ghosting detection switch. Available values:
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

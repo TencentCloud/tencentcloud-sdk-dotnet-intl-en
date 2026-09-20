@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1396</VersionPrefix>
+    <VersionPrefix>3.0.1397</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,11 +71,16 @@
     <Compile Include="V20180301\Models\CheckIdCardInformationResponse.cs" />
     <Compile Include="V20180301\Models\CheckIdNameDateRequest.cs" />
     <Compile Include="V20180301\Models\CheckIdNameDateResponse.cs" />
+    <Compile Include="V20180301\Models\Company.cs" />
     <Compile Include="V20180301\Models\CompareFaceLivenessRequest.cs" />
     <Compile Include="V20180301\Models\CompareFaceLivenessResponse.cs" />
     <Compile Include="V20180301\Models\CompareResult.cs" />
+    <Compile Include="V20180301\Models\CreateEKYCWebhookRequest.cs" />
+    <Compile Include="V20180301\Models\CreateEKYCWebhookResponse.cs" />
     <Compile Include="V20180301\Models\CreateUploadUrlRequest.cs" />
     <Compile Include="V20180301\Models\CreateUploadUrlResponse.cs" />
+    <Compile Include="V20180301\Models\DeleteEKYCWebhookRequest.cs" />
+    <Compile Include="V20180301\Models\DeleteEKYCWebhookResponse.cs" />
     <Compile Include="V20180301\Models\DetectAIFakeFacesRequest.cs" />
     <Compile Include="V20180301\Models\DetectAIFakeFacesResponse.cs" />
     <Compile Include="V20180301\Models\DetectReflectLivenessAndCompareRequest.cs" />
@@ -87,6 +92,8 @@
     <Compile Include="V20180301\Models\GeneralCard.cs" />
     <Compile Include="V20180301\Models\GenerateReflectSequenceRequest.cs" />
     <Compile Include="V20180301\Models\GenerateReflectSequenceResponse.cs" />
+    <Compile Include="V20180301\Models\GetAMLScreeningResultRequest.cs" />
+    <Compile Include="V20180301\Models\GetAMLScreeningResultResponse.cs" />
     <Compile Include="V20180301\Models\GetFaceIdResultIntlRequest.cs" />
     <Compile Include="V20180301\Models\GetFaceIdResultIntlResponse.cs" />
     <Compile Include="V20180301\Models\GetFaceIdTokenIntlRequest.cs" />
@@ -113,6 +120,8 @@
     <Compile Include="V20180301\Models\IndonesiaIDCard.cs" />
     <Compile Include="V20180301\Models\InternationalIDPassport.cs" />
     <Compile Include="V20180301\Models\JapanIDCard.cs" />
+    <Compile Include="V20180301\Models\ListEKYCWebhooksRequest.cs" />
+    <Compile Include="V20180301\Models\ListEKYCWebhooksResponse.cs" />
     <Compile Include="V20180301\Models\LivenessCompareRequest.cs" />
     <Compile Include="V20180301\Models\LivenessCompareResponse.cs" />
     <Compile Include="V20180301\Models\MLIDCard.cs" />
@@ -132,6 +141,7 @@
     <Compile Include="V20180301\Models\OCRResult.cs" />
     <Compile Include="V20180301\Models\PakistanDrivingLicense.cs" />
     <Compile Include="V20180301\Models\PakistanIDCard.cs" />
+    <Compile Include="V20180301\Models\Person.cs" />
     <Compile Include="V20180301\Models\PhilippinesDrivingLicense.cs" />
     <Compile Include="V20180301\Models\PhilippinesSSSID.cs" />
     <Compile Include="V20180301\Models\PhilippinesTinID.cs" />
@@ -140,12 +150,21 @@
     <Compile Include="V20180301\Models\PhoneVerificationRequest.cs" />
     <Compile Include="V20180301\Models\PhoneVerificationResponse.cs" />
     <Compile Include="V20180301\Models\RetrievalLivenessExtraInfo.cs" />
+    <Compile Include="V20180301\Models\RunAMLNameScreeningRequest.cs" />
+    <Compile Include="V20180301\Models\RunAMLNameScreeningResponse.cs" />
     <Compile Include="V20180301\Models\SingaporeIDCard.cs" />
     <Compile Include="V20180301\Models\TaiWanIDCard.cs" />
     <Compile Include="V20180301\Models\ThailandIDCard.cs" />
+    <Compile Include="V20180301\Models\UpdateAMLCustomerProfileRequest.cs" />
+    <Compile Include="V20180301\Models\UpdateAMLCustomerProfileResponse.cs" />
+    <Compile Include="V20180301\Models\UpdateAMLOngoingScreeningStatusRequest.cs" />
+    <Compile Include="V20180301\Models\UpdateAMLOngoingScreeningStatusResponse.cs" />
+    <Compile Include="V20180301\Models\UpdateEKYCWebhookRequest.cs" />
+    <Compile Include="V20180301\Models\UpdateEKYCWebhookResponse.cs" />
     <Compile Include="V20180301\Models\VerificationDetail.cs" />
     <Compile Include="V20180301\Models\VideoLivenessCompareRequest.cs" />
     <Compile Include="V20180301\Models\VideoLivenessCompareResponse.cs" />
     <Compile Include="V20180301\Models\WebVerificationConfigIntl.cs" />
+    <Compile Include="V20180301\Models\WebhookList.cs" />
   </ItemGroup>
 </Project>

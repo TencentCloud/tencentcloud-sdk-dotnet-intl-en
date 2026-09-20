@@ -25,43 +25,63 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Origin position. Currently only support:
+        /// <li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the mosaic origin is at the top left corner of the image or text.</li>
+        /// Default value: TopLeft.
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Horizontal position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `XPos` of a mosaic is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+        /// <li>If a string ends with px, it means the mosaic XPos is specified in pixels. For example, 100px means the XPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+        /// <li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Width of the mosaic, supporting two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
+        /// <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+        /// Default value: 10%.
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Height of a mosaic, supporting two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
+        /// <li>If a string ends with px, it means the unit for the mosaic Height is pixel. For example, 100px means the Height is 100 pixels.</li>
+        /// Default value: 10%.
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
+        /// <li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+        /// <li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+        /// <li>When the value is less than 0 (assuming -n), the mosaic appears n seconds before the end of a video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time offset of a mosaic, in seconds.
+        /// <li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+        /// <li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
+        /// <li>When the value is less than 0 (assuming -n), the mosaic lasts until n seconds before the end of a video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

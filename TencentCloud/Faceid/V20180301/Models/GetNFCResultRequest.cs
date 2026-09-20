@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string NFCToken{ get; set; }
 
         /// <summary>
-        /// Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+        /// Identity card number / passport number / Hong Kong and Macao travel permit
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }

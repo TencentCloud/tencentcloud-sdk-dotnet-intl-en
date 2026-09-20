@@ -25,25 +25,29 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Font type. Currently, two are supported:
+        /// <li>simkai.ttf: support Chinese and English;</li>
+        /// <li>arial.ttf: English only.</li>
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Font size. Format: Npx, where N is a numerical value.
         /// </summary>
         [JsonProperty("FontSize")]
         public string FontSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text opacity, value ranges from 0 to 1.
+        /// <li>0: completely transparent.</li>
+        /// <li>1: completely opaque.</li>
         /// </summary>
         [JsonProperty("FontAlpha")]
         public float? FontAlpha{ get; set; }

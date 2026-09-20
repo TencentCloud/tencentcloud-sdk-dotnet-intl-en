@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Input file information of the AIGC video conversion task.</p>
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>AIGC video conversion task parameter information.</p>
         /// </summary>
         [JsonProperty("TaskInfo")]
         public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output configuration for AIGC video conversion.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcVideoRedrawOutputConfig OutputConfig{ get; set; }

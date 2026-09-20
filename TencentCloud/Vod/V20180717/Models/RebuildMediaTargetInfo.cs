@@ -25,55 +25,64 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Output filename, up to 64 characters. By default, the system specifies the generated file name.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description. It can contain up to 128 characters. The default description is empty.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+        /// <li>Default value: 0, indicate other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output file container format. Available values: mp4, flv, hls. Default: mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output video information.
         /// </summary>
         [JsonProperty("VideoStream")]
         public RebuildMediaTargetVideoStream VideoStream{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output audio information.
         /// </summary>
         [JsonProperty("AudioStream")]
         public RebuildMediaTargetAudioStream AudioStream{ get; set; }
 
         /// <summary>
+        /// Indicates whether to remove video data. Valid values:
+        /// <li>0: retention</li>
+        /// <li>1: Remove</li>
         /// 
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
+        /// Indicates whether to remove audio data. Available values:
+        /// <li>0: retention</li>
+        /// <li>1: Remove</li>
         /// 
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }

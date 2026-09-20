@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// MPS video processing task.
         /// </summary>
         [JsonProperty("SubTaskSet")]
         public MPSSubTaskResult[] SubTaskSet{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// The time offset of this screenshot in the video file, in <font color=red>ms</font>.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL address of the screenshot.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of template IDs used for watermarking if the screenshot is watermarked.
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

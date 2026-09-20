@@ -25,31 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media file source category:
+        /// <li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+        /// <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+        /// <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
+        /// <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
+        /// <li>WebPageRecord: comes from panoramic recording.</li>
+        /// <li>Unknown: Unknown source.</li>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Field passed through when a user creates a file.
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// Live recording information is valid when the file source is Record.
         /// </summary>
         [JsonProperty("LiveRecordInfo")]
         public LiveRecordInfo LiveRecordInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// TRTC Companion Recording Information. Valid when the file source is TrtcRecord.
         /// </summary>
         [JsonProperty("TrtcRecordInfo")]
         public TrtcRecordInfo TrtcRecordInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Panoramic recording information. Valid when the file source is WebPageRecord.
         /// </summary>
         [JsonProperty("WebPageRecordInfo")]
         public WebPageRecordInfo WebPageRecordInfo{ get; set; }

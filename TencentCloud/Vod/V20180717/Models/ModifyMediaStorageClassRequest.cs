@@ -25,25 +25,36 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique identifier list of media files. Maximum length: 100.
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// Destination storage class. Optional values:
+        /// <li> STANDARD: standard storage.</li>
+        /// <li> STANDARD_IA: Infrequent storage.</li>
+        /// <li> ARCHIVE: Archive storage.</li>
+        /// <li> DEEP_ARCHIVE: deep archive storage.</li>
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Retrieval mode. When converting the file storage type from archive or deep archive to standard storage, you need to specify the retrieval (also known as unfreeze) operation mode. For details, see [Data Retrieval and Retrieval Mode](https://www.tencentcloud.com/document/product/266/56196?from_cn_redirect=1#retake).
+        /// When the current storage type of the media file is archive storage, the parameter values are as follows:
+        /// <li>Expedited: speed mode.</li>
+        /// <li>Standard: standard mode.</li>
+        /// <li>Bulk: batch mode.</li>
+        /// When the current storage type of a media file is DEEP_ARCHIVE, the following values are available:
+        /// <li>Standard: standard mode.</li>
+        /// <li>Bulk: batch mode.</li>
         /// </summary>
         [JsonProperty("RestoreTier")]
         public string RestoreTier{ get; set; }

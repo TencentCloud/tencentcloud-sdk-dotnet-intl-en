@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Operation type. Available values: add, delete, reset.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Tag. Length limit: 128 characters.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

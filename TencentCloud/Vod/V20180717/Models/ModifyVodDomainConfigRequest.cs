@@ -25,37 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Domain name.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>QUIC configuration.</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>IP access restriction rule.</p>
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }

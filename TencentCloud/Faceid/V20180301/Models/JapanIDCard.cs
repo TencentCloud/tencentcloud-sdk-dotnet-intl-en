@@ -25,43 +25,37 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Full name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name.
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity card
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
         /// Age
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Age")]
         public string Age{ get; set; }
 
         /// <summary>
         /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Expire date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration time.
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }

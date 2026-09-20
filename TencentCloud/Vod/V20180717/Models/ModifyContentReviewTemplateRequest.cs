@@ -25,67 +25,71 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique identifier of the content review template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content review template name, with a length limit of 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content review template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameters for unsafe information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfoForUpdate TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameters for offensive information.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfoForUpdate PornConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameter for inappropriate information.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfoForUpdate PoliticalConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Prohibited control parameters. Restricted content includes:
+        /// <li>Abusive language;</li>
+        /// <li>Drug-related violation.</li>
         /// </summary>
         [JsonProperty("ProhibitedConfigure")]
         public ProhibitedConfigureInfoForUpdate ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// User-defined content review control parameters.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfoForUpdate UserDefineConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Frame interception interval in seconds. Minimum value: 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the review result enters the review wall (for manual recognition of the review result).
+        /// <li>ON: yes</li>
+        /// <li>OFF: no</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }

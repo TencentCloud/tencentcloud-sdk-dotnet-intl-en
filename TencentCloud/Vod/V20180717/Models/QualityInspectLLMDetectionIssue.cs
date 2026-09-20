@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Issue category tag.</p>
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Issue description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Issue start time.</p><p>Unit: ms.</p>
         /// </summary>
         [JsonProperty("StartTimeMs")]
         public long? StartTimeMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Issue end time.</p><p>Unit: ms.</p>
         /// </summary>
         [JsonProperty("EndTimeMs")]
         public long? EndTimeMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Additional data (JSON format), such as severity and other supplementary information.</p>
         /// </summary>
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }

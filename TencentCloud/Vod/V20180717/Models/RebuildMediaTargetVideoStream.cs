@@ -25,49 +25,75 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Encoding format for video streams. Optional values:
+        /// <li>libx264: H.264 encoding;</li>
+        /// <li>libx265: H.265 encoding;</li>
+        /// <li>av1: AOMedia Video 1 encoding.</li>
+        /// The default encoding format for video streams is H.264.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 
+        /// Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+        /// When the value is 0, VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
+        /// Resolution adaptation. Available values:
+        /// <li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
         /// 
+        /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
+        /// Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// 
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
+        /// Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// 
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
+        /// Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+        /// <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+        /// <li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
         /// 
+        /// Default value: stretch.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+        /// If this parameter is 0 or left blank, the system will automatically set the GOP length.
         /// </summary>
         [JsonProperty("Gop")]
         public long? Gop{ get; set; }

@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string HeuristicCacheTimeSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unit: seconds.
         /// </summary>
         [JsonProperty("HeuristicCacheTime")]
         public ulong? HeuristicCacheTime{ get; set; }

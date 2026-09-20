@@ -25,88 +25,78 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The final result of this verification. `0` indicates that the person is the same as that in the photo.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// The description of the final verification result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Final result description of this verification
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// The result of this liveness detection process. `0` indicates success.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Liveness detection result of this verification. 0 indicates success.
         /// </summary>
         [JsonProperty("LivenessErrorCode")]
         public long? LivenessErrorCode{ get; set; }
 
         /// <summary>
-        /// The result description of this liveness detection process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of the liveness detection result for this verification
         /// </summary>
         [JsonProperty("LivenessErrorMsg")]
         public string LivenessErrorMsg{ get; set; }
 
         /// <summary>
-        /// The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
         /// </summary>
         [JsonProperty("CompareErrorCode")]
         public long? CompareErrorCode{ get; set; }
 
         /// <summary>
-        /// The result description of this comparison process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Result description of this verification comparison
         /// </summary>
         [JsonProperty("CompareErrorMsg")]
         public string CompareErrorMsg{ get; set; }
 
         /// <summary>
-        /// The timestamp (ms) of this verification process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Verification timestamp (ms) this time
         /// </summary>
         [JsonProperty("ReqTimestamp")]
         public ulong? ReqTimestamp{ get; set; }
 
         /// <summary>
-        /// The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
         /// </summary>
         [JsonProperty("Similarity")]
         public float? Similarity{ get; set; }
 
         /// <summary>
-        /// Unique ID of this verification process.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Unique identifier for this verification
         /// </summary>
         [JsonProperty("Seq")]
         public string Seq{ get; set; }
 
         /// <summary>
-        /// Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+        /// Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
         /// -Details as follows:
         /// 01-User eyes closed throughout
-        /// 02-User not completed specified action
+        /// 02 - User has not completed the specified action
         /// 03-Suspected rephotography attack
-        /// 04-Suspected Synthesis Attack
-        /// 05-Suspected fraudulent template
+        /// 04-Suspected synthesis attack
+        /// 05-Suspected fraud template
         /// 06-Suspected watermark
         /// 07-Reflection validation failed
-        /// 08 - Suspected change of person midway
-        /// 09-Poor face quality
-        /// 10 - Distance validation failed
+        /// 08-Suspected midway change person
+        /// 09: Poor face quality
+        /// 10-distance check failed
         /// 11-Suspected adversarial sample attack
-        /// 12 - Suspected attack traces in the mouth area
-        /// 13 - Suspected attack traces exist in the eye area
-        /// 14 - Eye or mouth obstruction
+        /// 12-Mouth area suspected of attack traces
+        /// 13-Eye area suspected to have attack traces
+        /// 14-Eye or mouth covered
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// Example value: ["01"].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LivenessInfoTag")]
         public string[] LivenessInfoTag{ get; set; }

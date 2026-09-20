@@ -25,13 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio operation type. Valid values:
+        /// <li>Volume: audio volume adjustment.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio volume adjustment parameter. Valid when Type is Volume.
         /// </summary>
         [JsonProperty("VolumeParam")]
         public AudioVolumeParam VolumeParam{ get; set; }

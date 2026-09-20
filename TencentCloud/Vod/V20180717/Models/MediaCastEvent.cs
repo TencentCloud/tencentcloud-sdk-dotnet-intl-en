@@ -25,13 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media forwarding ID.
         /// </summary>
         [JsonProperty("CastId")]
         public string CastId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Retweet status. Valid values:
+        /// <li>Working: running.</li>
+        /// <li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+        /// <li>Stopped: relay stopped;</li>
+        /// <li>Idle: idle.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

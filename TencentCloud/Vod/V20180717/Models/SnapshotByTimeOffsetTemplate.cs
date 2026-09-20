@@ -25,67 +25,87 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique identifier of the screenshot template at the specified time point.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template type. Valid values:
+        /// <li>Preset: system preset template;</li>
+        /// <li>Custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Screenshot template name at specified time point.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template description information.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum value of the screenshot width (or long edge) in px. Value range: 0 and [128, 4096].
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum value of the screenshot height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+        /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+        /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+        /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resolution adaptation. Available values:
+        /// <li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+        /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image format.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filling method. When the width and height parameters in the screenshot configuration are inconsistent with the aspect ratio of the original video, the processing method for the screenshot is "padding". Optional filling modes:
+        /// <li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
+        /// <li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+        /// <li>white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white.</li>
+        /// <li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>
+        /// Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

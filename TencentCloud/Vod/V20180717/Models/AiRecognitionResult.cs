@@ -25,61 +25,77 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type. Valid values:
+        /// <li>FaceRecognition: face recognition.</li>
+        /// <li>AsrWordsRecognition: speech keyword recognition.</li>
+        /// <li>OcrWordsRecognition: text keyword recognition.</li>
+        /// <li>AsrFullTextRecognition: full speech recognition.</li>
+        /// <li>AsrTranslateRecognition: voice translation recognition,</li>
+        /// <li>OcrFullTextRecognition: full text recognition,</li>
+        /// <li>HeadTailRecognition: video start and end recognition,</li>
+        /// <li>ObjectRecognition: object recognition.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video start and end recognition result. When Type is
+        /// Valid for HeadTailRecognition.
         /// </summary>
         [JsonProperty("HeadTailTask")]
         public AiRecognitionTaskHeadTailResult HeadTailTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video splitting recognition result, which is valid when Type is
+        /// Valid for SegmentRecognition.
         /// </summary>
         [JsonProperty("SegmentTask")]
         public AiRecognitionTaskSegmentResult SegmentTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face recognition result, which is valid when Type is 
+        /// Valid for FaceRecognition.
         /// </summary>
         [JsonProperty("FaceTask")]
         public AiRecognitionTaskFaceResult FaceTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Speech keyword recognition result. When Type is
+        /// Valid for AsrWordsRecognition.
         /// </summary>
         [JsonProperty("AsrWordsTask")]
         public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Full speech recognition result. When Type is
+        /// Valid when AsrFullTextRecognition is used.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Voice translation result. Valid when Type is AsrTranslateRecognition.
         /// </summary>
         [JsonProperty("AsrTranslateTask")]
         public AiRecognitionTaskAsrTranslateResult AsrTranslateTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text keyword recognition result. When Type is
+        /// Valid for OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsTask")]
         public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Full text recognition result. When Type is
+        /// Valid when OcrFullTextRecognition is used.
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Object recognition result, which is valid when Type is
+        /// Valid for ObjectRecognition.
         /// </summary>
         [JsonProperty("ObjectTask")]
         public AiRecognitionTaskObjectResult ObjectTask{ get; set; }

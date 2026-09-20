@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video Rebirth Task ID, which can be used to query the status of video re-creation tasks.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

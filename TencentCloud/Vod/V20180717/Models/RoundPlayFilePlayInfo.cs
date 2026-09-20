@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Playlist program ID assigned by the system.
         /// </summary>
         [JsonProperty("ItemId")]
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Media file identifier.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("StartPlayTime")]
         public string StartPlayTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback duration, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback progress, in seconds.
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }

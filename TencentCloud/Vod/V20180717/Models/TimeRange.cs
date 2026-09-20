@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <li>Equal to or greater than this time (start time).</li>
+        /// <li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("After")]
         public string After{ get; set; }
 
         /// <summary>
-        /// 
+        /// <li>Less than this time (end time).</li>
+        /// <li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("Before")]
         public string Before{ get; set; }

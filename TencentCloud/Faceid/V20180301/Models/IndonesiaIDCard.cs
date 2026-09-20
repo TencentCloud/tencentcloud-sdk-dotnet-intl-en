@@ -25,120 +25,103 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID number
         /// </summary>
         [JsonProperty("NIK")]
         public string NIK{ get; set; }
 
         /// <summary>
         /// Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Nama")]
         public string Nama{ get; set; }
 
         /// <summary>
-        /// Birth place/Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Birthplace/Date of birth
         /// </summary>
         [JsonProperty("TempatTglLahir")]
         public string TempatTglLahir{ get; set; }
 
         /// <summary>
-        /// Gender
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sex
         /// </summary>
         [JsonProperty("JenisKelamin")]
         public string JenisKelamin{ get; set; }
 
         /// <summary>
         /// Blood type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GolDarah")]
         public string GolDarah{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Alamat")]
         public string Alamat{ get; set; }
 
         /// <summary>
         /// Street
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RTRW")]
         public string RTRW{ get; set; }
 
         /// <summary>
         /// Village
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KelDesa")]
         public string KelDesa{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("Kecamatan")]
         public string Kecamatan{ get; set; }
 
         /// <summary>
-        /// Religious beliefs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Religious belief
         /// </summary>
         [JsonProperty("Agama")]
         public string Agama{ get; set; }
 
         /// <summary>
         /// Marital status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("StatusPerkawinan")]
         public string StatusPerkawinan{ get; set; }
 
         /// <summary>
-        /// Job
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Occupation
         /// </summary>
         [JsonProperty("Perkerjaan")]
         public string Perkerjaan{ get; set; }
 
         /// <summary>
         /// Nationality
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("KewargaNegaraan")]
         public string KewargaNegaraan{ get; set; }
 
         /// <summary>
-        /// ID card validity period
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Validity period of the ID card
         /// </summary>
         [JsonProperty("BerlakuHingga")]
         public string BerlakuHingga{ get; set; }
 
         /// <summary>
-        /// Date of issue
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Issue date
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }
 
         /// <summary>
         /// Province
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Provinsi")]
         public string Provinsi{ get; set; }
 
         /// <summary>
-        /// City
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// city
         /// </summary>
         [JsonProperty("Kota")]
         public string Kota{ get; set; }

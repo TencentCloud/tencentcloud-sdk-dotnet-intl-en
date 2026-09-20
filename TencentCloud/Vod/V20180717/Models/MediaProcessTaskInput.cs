@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video transcoding task list.
         /// </summary>
         [JsonProperty("TranscodeTaskSet")]
         public TranscodeTaskInput[] TranscodeTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of video-to-GIF tasks.
         /// </summary>
         [JsonProperty("AnimatedGraphicTaskSet")]
         public AnimatedGraphicTaskInput[] AnimatedGraphicTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of time point screencapturing tasks for videos.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTaskSet")]
         public SnapshotByTimeOffsetTaskInput[] SnapshotByTimeOffsetTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of sampled screenshot tasks for videos.
         /// </summary>
         [JsonProperty("SampleSnapshotTaskSet")]
         public SampleSnapshotTaskInput[] SampleSnapshotTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of image sprite tasks for videos.
         /// </summary>
         [JsonProperty("ImageSpriteTaskSet")]
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task list of screencapturing for cover image tasks for videos.
         /// </summary>
         [JsonProperty("CoverBySnapshotTaskSet")]
         public CoverBySnapshotTaskInput[] CoverBySnapshotTaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of video to adaptive streaming tasks.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTaskSet")]
         public AdaptiveDynamicStreamingTaskInput[] AdaptiveDynamicStreamingTaskSet{ get; set; }

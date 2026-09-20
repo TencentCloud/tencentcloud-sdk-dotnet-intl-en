@@ -25,31 +25,35 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sampling method. Valid value:
+        /// <li>Percent: interval sampling based on percentage.</li>
+        /// <li>Time: sampling based on time interval.</li>
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sampling interval
+        /// <li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+        /// <li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of generated screenshot URLs.
         /// </summary>
         [JsonProperty("ImageUrlSet")]
         public string[] ImageUrlSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of template IDs if the screenshot is watermarked.
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

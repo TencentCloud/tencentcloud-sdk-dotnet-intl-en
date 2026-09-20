@@ -26,15 +26,15 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// http header setting method:
-        /// <li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+        /// <li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
         /// <li>del: delete. Delete specified HTTP header parameters;</li>
-        /// <li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+        /// <li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
         /// </summary>
         [JsonProperty("HeaderMode")]
         public string HeaderMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// http header name, up to 100 characters.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

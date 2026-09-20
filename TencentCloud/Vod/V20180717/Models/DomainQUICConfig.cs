@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// QUIC configuration status. Available values:
+        /// <li>Enabled: enabled;</li>
+        /// <li>Disabled: Disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

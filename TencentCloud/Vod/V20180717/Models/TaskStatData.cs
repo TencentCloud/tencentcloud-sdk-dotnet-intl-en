@@ -25,19 +25,99 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type.
+        /// <li> Transcoding: standard transcoding.</li>
+        /// <li> Transcoding-TESHD: TSC transcoding.</li>
+        /// <li> Editing: video editing</li>
+        /// <li> Editing-TESHD: extremely fast high-definition video editing</li>
+        /// <li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+        /// <li> ContentAudit: content moderation.</li>
+        /// <li>ContentRecognition: content recognition.</li>
+        /// <li> RemoveWatermark: watermark removal</li>
+        /// <li> ExtractTraceWatermark: extract watermark.</li>
+        /// <li> AddTraceWatermark: Add watermark</li>
+        /// <li> RebuildMedia: audio and video quality revival</li>
+        /// <li> QualityInspect: audio and video quality inspection</li>
+        /// <li>Transcode: Transcoding, including standard transcoding, top speed Codec, and video editing (not recommended)</li>
+        /// <li>VoiceTranslation: speech translation</li>
+        /// <li>JITTranscoding: JIT transcoding</li>
+        /// <li>VideoSnapshot: video screenshot.</li>
+        /// <li>JITEncryption: instant encryption</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistics overview of the number of tasks. Unit: seconds.
         /// </summary>
         [JsonProperty("Summary")]
         public TaskStatDataItem[] Summary{ get; set; }
 
         /// <summary>
-        /// 
+        /// Details of task statistics data for varying specifications.
+        /// Transcoding specification:
+        /// <li>Remuxing: transmuxing</li>
+        /// <li>Audio: audio transcoding.</li>
+        /// <li>Standard.H264.SD: H.264 encoding for SD transcoding</li>
+        /// <li>Standard.H264.HD: H.264 encoding high-definition transcoding</li>
+        /// <li>Standard.H264.FHD: H.264 encoding for full HD transcoding</li>
+        /// <li>Standard.H264.2K: H.264 encoding 2K transcode.</li>
+        /// <li>Standard.H264.4K: H.264 encoding 4K transcode.</li>
+        /// <li>Standard.H265.SD: H.265 encoding SD transcode.</li>
+        /// <li>Standard.H265.HD: H.265 encoding high-definition transcoding.</li>
+        /// <li>Standard.H265.FHD: H.265 encoding for full HD transcoding</li>
+        /// <li>Standard.H265.2K: H.265 encoding 2K transcode</li>
+        /// <li>Standard.H265.4K: H.265 encoding 4K transcode</li>
+        /// <li>TESHD-10.H264.SD: H.264 encoding SD TSC transcoding</li>
+        /// <li>TESHD-10.H264.HD: H.264 encoding high-definition TSC transcoding</li>
+        /// <li>TESHD-10.H264.FHD: H.264 full HD TSC transcoding</li>
+        /// <li>TESHD-10.H264.2K: H.264 encoding 2K TSC transcoding</li>
+        /// <li>TESHD-10.H264.4K: H.264 encoding 4K TSC transcoding</li>
+        /// <li>TESHD-10.H265.SD: H.265 encoding SD TSC transcoding</li>
+        /// <li>TESHD-10.H265.HD: H.265 encoding high-definition TSC transcoding</li>
+        /// <li>TESHD-10.H265.FHD: H.265 encoding full HD TSC transcoding</li>
+        /// <li>TESHD-10.H265.2K: H.265 encoding 2K TSC transcoding</li>
+        /// <li>TESHD-10.H265.4K: H.265 encoding 4K TSC transcoding</li>
+        /// <li>Edit.Audio: audio editing</li>
+        /// <li>Edit.H264.SD: H.264 encoding for SD video editing</li>
+        /// <li>Edit.H264.HD: H.264 encoding for high-definition video editing</li>
+        /// <li>Edit.H264.FHD: Full HD video editing with H.264 encoding</li>
+        /// <li>Edit.H264.2K: H.264 encoding 2K video editing</li>
+        /// <li>Edit.H264.4K: H.264 encoding 4K video editing</li>
+        /// <li>Edit.H265.SD: H.265 encoding SD video editing</li>
+        /// <li>Edit.H265.HD: H.265 encoding for high-definition video editing</li>
+        /// <li>Edit.H265.FHD: Full HD video editing with H.265 encoding</li>
+        /// <li>Edit.H265.2K: H.265 encoding 2K video editing</li>
+        /// <li>Edit.H265.4K: H.265 encoding 4K video editing</li>
+        /// <li>Edit.TESHD-10.H264.SD: H.264 encoding, SD, extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H264.HD: H.264 encoding high-definition extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H264.FHD: H.264 encoding full HD extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H264.2K: H.264 encoding 2K extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H264.4K: H.264 encoding 4K extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H265.SD: H.265 encoding for standard definition extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H265.HD: H.265 encoding high-definition extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H265.FHD: H.265 encoding full HD extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H265.2K: H.265 encoding 2K extremely fast high-definition video editing</li>
+        /// <li>Edit.TESHD-10.H265.4K: H.265 encoding 4K extremely fast high-definition video editing</li>
+        /// Watermark removal and audio and video quality revival specifications:
+        /// <li>480P: short side ≤ 480px</li>
+        /// <li>720P: Short side ≤ 720px</li>
+        /// <li>1080P: Short side ≤ 1080px</li>
+        /// <li>2K: short side ≤ 1440px</li>
+        /// <li>4K: short side ≤ 2160px</li>
+        /// <li>8K: short side ≤ 4320px</li>
+        /// <li>Audio: audio.</li>
+        /// Real-time transcoding specification:
+        /// <li>JITTranscoding.H264.SD: H.264 encoding SD JIT transcoding</li>
+        /// <li>JITTranscoding.H264.HD: H.264 encoding high-definition JIT transcoding</li>
+        /// <li>JITTranscoding.H264.FHD: H.264 encoding full HD JIT transcoding</li>
+        /// <li>JITTranscoding.H264.2K: H.264 encoding 2K JIT transcoding</li>
+        /// <li>JITTranscoding.Audio: JIT audio transcoding</li>
+        /// <li>JITTranscoding.Copy: remux and JIT transcoding</li>
+        /// Video screenshot specification:
+        /// <li>SnapshotByTimeOffset: time point screenshot.</li>
+        /// <li>SampleSnapshot: sampled screenshot</li>
+        /// <li>ImageSprite: sprite sheet</li>
         /// </summary>
         [JsonProperty("Details")]
         public SpecificationDataItem[] Details{ get; set; }

@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Intelligent tag task switch. Valid values:
+        /// <li>ON: enable intelligent tag task</li>
+        /// <li>OFF: disables the intelligent tag task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

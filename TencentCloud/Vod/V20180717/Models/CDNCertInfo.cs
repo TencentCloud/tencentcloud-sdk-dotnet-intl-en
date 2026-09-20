@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Certificate information.
         /// </summary>
         [JsonProperty("Certificate")]
         public string Certificate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key information.
         /// </summary>
         [JsonProperty("PrivateKey")]
         public string PrivateKey{ get; set; }

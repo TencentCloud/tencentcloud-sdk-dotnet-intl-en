@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video enhancement configuration.
         /// </summary>
         [JsonProperty("VideoEnhance")]
         public VideoEnhanceConfig VideoEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio enhancement configuration.
         /// </summary>
         [JsonProperty("AudioEnhance")]
         public AudioEnhanceConfig AudioEnhance{ get; set; }

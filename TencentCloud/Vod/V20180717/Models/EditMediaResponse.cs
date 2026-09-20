@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video editing task ID. This can be used to query the status of the edit task (task type: EditMedia).
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

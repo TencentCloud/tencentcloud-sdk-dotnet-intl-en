@@ -25,37 +25,41 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable watermark. Valid values:
+        /// <li>ON: Enable watermark;</li>
+        /// <li>OFF: Turn off watermark.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Watermark Url.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// Width of a watermark.
+        /// <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Height of the watermark.
+        /// <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means the XPos is 10% of the video width.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }

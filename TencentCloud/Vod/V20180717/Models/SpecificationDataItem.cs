@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task specification.
         /// </summary>
         [JsonProperty("Specification")]
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 
+        /// Statistical data.
         /// </summary>
         [JsonProperty("Data")]
         public TaskStatDataItem[] Data{ get; set; }

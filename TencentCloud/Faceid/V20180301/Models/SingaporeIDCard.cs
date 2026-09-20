@@ -25,23 +25,20 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Chinese Name
         /// </summary>
         [JsonProperty("ChName")]
         [System.Obsolete]
         public string ChName{ get; set; }
 
         /// <summary>
-        /// Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Chinese Name
         /// </summary>
         [JsonProperty("ChineseName")]
         public string ChineseName{ get; set; }
 
         /// <summary>
         /// English name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("EnName")]
         [System.Obsolete]
@@ -49,93 +46,80 @@ namespace TencentCloud.Faceid.V20180301.Models
 
         /// <summary>
         /// English name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity card number
         /// </summary>
         [JsonProperty("ID")]
         [System.Obsolete]
         public string ID{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity number
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Gender
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sex
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
         /// Country of birth
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CountryOfBirth")]
         [System.Obsolete]
         public string CountryOfBirth{ get; set; }
 
         /// <summary>
-        /// Nationality
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Country of birth
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
         /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Address (on the back)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address (back field)
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// Race (on the back)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Nationality (back field)
         /// </summary>
         [JsonProperty("Race")]
         public string Race{ get; set; }
 
         /// <summary>
-        ///  NRIC number (on the back)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Nric number (back field)
         /// </summary>
         [JsonProperty("NRICCode")]
         public string NRICCode{ get; set; }
 
         /// <summary>
-        /// Post number (on the front)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Post number (back field)
         /// </summary>
         [JsonProperty("PostCode")]
         public string PostCode{ get; set; }
 
         /// <summary>
-        /// Date of expiry (on the back)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expires on (back field)
         /// </summary>
         [JsonProperty("DateOfExpiration")]
         public string DateOfExpiration{ get; set; }
 
         /// <summary>
-        /// Date of issue (on the back)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Issue date (field on the back)
         /// </summary>
         [JsonProperty("DateOfIssue")]
         public string DateOfIssue{ get; set; }

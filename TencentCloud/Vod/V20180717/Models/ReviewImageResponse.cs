@@ -25,14 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image moderation job result.
+        /// <font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
         /// </summary>
         [JsonProperty("ReviewResultSet")]
         [System.Obsolete]
         public ContentReviewResult[] ReviewResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image moderation job result.
         /// </summary>
         [JsonProperty("MediaReviewResult")]
         public ReviewImageResult MediaReviewResult{ get; set; }

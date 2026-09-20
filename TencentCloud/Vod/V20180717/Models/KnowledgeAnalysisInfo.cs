@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Large model parsing template number</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Large model parsing result</p>
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public KnowledgeAnalysisResult[] AnalysisResults{ get; set; }

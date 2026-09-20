@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log push target in the Chinese mainland.
         /// </summary>
         [JsonProperty("ChineseMainlandCLSTargetInfo")]
         public AreaCLSTargetInfo ChineseMainlandCLSTargetInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log push targets outside the Chinese mainland.
         /// </summary>
         [JsonProperty("OutsideChineseMainlandCLSTargetInfo")]
         public AreaCLSTargetInfo OutsideChineseMainlandCLSTargetInfo{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video motion graphic result information
         /// </summary>
         [JsonProperty("AnimatedGraphicsSet")]
         public MediaAnimatedGraphicsItem[] AnimatedGraphicsSet{ get; set; }

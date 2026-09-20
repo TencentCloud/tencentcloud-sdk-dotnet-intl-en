@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Category ID
         /// </summary>
         [JsonProperty("ClassId")]
         public ulong? ClassId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category name. Length limit: 1-64 characters.
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

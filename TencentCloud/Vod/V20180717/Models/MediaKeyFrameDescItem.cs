@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video offset time of the timestamp, in seconds.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public float? TimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Timestamp content string, limited to 1–128 characters.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

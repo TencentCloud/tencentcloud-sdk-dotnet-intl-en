@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// 
+        /// User agent list.
         /// </summary>
         [JsonProperty("UserAgents")]
         public string[] UserAgents{ get; set; }

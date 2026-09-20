@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Container type, for example, m4a, mp4.
+        /// Container type, for example, m4a and mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+        /// Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum video stream height in px.
+        /// Maximum height of the video stream. Unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Selection angle during video shooting. Unit: degree.
+        /// Selection angle during video shooting. Measurement unit: degree.
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? VideoDuration{ get; set; }
 
         /// <summary>
-        /// Audio duration, in seconds.
+        /// Audio duration in seconds.
         /// </summary>
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }

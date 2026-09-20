@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID for Audio and Video Quality Regeneration. You can query the status of the audio and video quality regeneration task through this ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

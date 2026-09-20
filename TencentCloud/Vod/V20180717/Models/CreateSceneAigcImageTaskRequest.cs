@@ -25,49 +25,52 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scenario-based image generation parameter configuration.
         /// </summary>
         [JsonProperty("SceneInfo")]
         public AigcImageSceneInfo SceneInfo{ get; set; }
 
         /// <summary>
+        /// Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
         /// 
+        /// - AI outfit change scenario: Input Only 1 **model** image.
+        /// - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output media file configuration for scenario-based image generation tasks.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SceneAigcImageOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reserved field, used for special purposes.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Tag list in the time segment.</p>
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisFrameTagItem[] TagSet{ get; set; }

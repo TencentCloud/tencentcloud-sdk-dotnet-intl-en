@@ -25,25 +25,37 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Encoding format for audio streams. Optional values:
+        /// <li>libfdk_aac: suitable for mp4 files.</li>
+        /// Default value: libfdk_aac.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sampling rate of the audio stream. Available values:
+        /// <li>16000</li>
+        /// <li>32000</li>
+        /// <li>44100</li>
+        /// <li>48000</li>
+        /// Unit: Hz.
+        /// Default value: 16000.
         /// </summary>
         [JsonProperty("SampleRate")]
         public long? SampleRate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of audio channels. Available values:
+        /// <li>1: mono.</li>
+        /// <li>2: stereo.</li>
+        /// Default value: 2.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+        /// When the value is 0, the audio bitrate is set automatically.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

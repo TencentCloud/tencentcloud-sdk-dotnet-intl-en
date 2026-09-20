@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 
+        /// Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
         /// </summary>
         [JsonProperty("Quality")]
         public long? Quality{ get; set; }

@@ -25,50 +25,44 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Full Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity card number
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Gender
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Sex
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// Lisence type
-        /// MyKad ID card
-        /// MyPR Permanent resident ID card
+        /// Document type
+        /// MyKad identity card
+        /// MyPR permanent residence permit
         /// MyTentera Military ID card
         /// MyKAS Temporary ID card
         /// POLIS Police ID card
-        /// IKAD Labor ID card
+        /// IKAD labor ID card
         /// MyKid Juvenile ID card
-        /// Example: MyKad
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }

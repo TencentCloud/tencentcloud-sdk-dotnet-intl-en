@@ -25,25 +25,34 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Logset region:
+        /// <li>ap-guangzhou: Guangzhou;</li>
+        /// <li>ap-beijing: Beijing;</li>
+        /// <li>ap-chengdu: Chengdu;</li>
+        /// <li>ap-chongqing: Chongqing.</li>
+        /// <li>ap-nanjing: Nanjing;</li>
+        /// <li>ap-shanghai: Shanghai;</li>
+        /// <li>ap-singapore: Singapore.</li>
         /// </summary>
         [JsonProperty("CLSRegion")]
         public string CLSRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the destination topic for delivery.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 
+        /// ID of the target set for submission.
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Log delivery status.
+        /// ON: enabled.
+        /// OFF: disabled.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

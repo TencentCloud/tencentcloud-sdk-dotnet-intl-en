@@ -25,19 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Score of authentication involving offensive content. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result suggestions for authenticating offensive content. Value range:
+        /// <li>pass;</li>
+        /// <li>review;</li>
+        /// <li>block.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result tag for authenticating offensive content. Value range:
+        /// <li>porn: pornography;</li>
+        /// <li>sexy: sexy;</li>
+        /// <li>vulgar: Vulgar;</li>
+        /// <li>intimacy: intimate behavior.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

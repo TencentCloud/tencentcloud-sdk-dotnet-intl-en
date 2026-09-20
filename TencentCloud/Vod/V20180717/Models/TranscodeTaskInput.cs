@@ -25,67 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Video transcoding template ID.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
         /// </summary>
         [JsonProperty("WatermarkSet")]
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Traceable watermark.</p>
         /// </summary>
         [JsonProperty("TraceWatermark")]
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Copyright watermark.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermark")]
         public CopyRightWatermarkInput CopyRightWatermark{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Digital watermark.</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Mosaic list. Up to 10 mosaics are supported.</p>
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
         /// </summary>
         [JsonProperty("HeadTailSet")]
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>End time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video lasts until the end of the original video.</li><li>If the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li><li>If the value is less than 0 (assuming -n), the transcoded video lasts until n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Custom video transcoding parameters.</p>
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideTranscodeParameter OverrideParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle suppression information list. Up to 2 are supported.</p>
         /// </summary>
         [JsonProperty("SubtitleInfoSet")]
         public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }

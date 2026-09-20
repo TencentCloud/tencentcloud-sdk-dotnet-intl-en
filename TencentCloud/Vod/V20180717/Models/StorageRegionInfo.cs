@@ -25,31 +25,35 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Storage region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// Store region description information.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Status. Whether it is enabled. Valid values:
+        /// <li>opened: enabled.</li>
+        /// <li>unopened: not activated.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether it is the default storage region. true: yes; false: no.
         /// </summary>
         [JsonProperty("IsDefault")]
         public bool? IsDefault{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage area. Valid values:
+        /// <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+        /// <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

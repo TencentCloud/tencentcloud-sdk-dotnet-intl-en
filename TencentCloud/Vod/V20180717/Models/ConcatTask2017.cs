@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video splicing task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video splicing source file information.
         /// </summary>
         [JsonProperty("FileInfoSet")]
         public ConcatFileInfo2017[] FileInfoSet{ get; set; }

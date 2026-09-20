@@ -25,61 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Model version.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio content for reference.</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Reference video info.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public bool? EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output result file output of AIGC image generation.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcAudioOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Additional parameter.</p>
         /// </summary>
         [JsonProperty("AdditionalParameters")]
         public string AdditionalParameters{ get; set; }

@@ -25,25 +25,32 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// List of rule violation tags to return. Optional values:
+        /// <li>Porn: Pornography;</li>
+        /// <li>Terror: violence.</li>
+        /// <li>Polity: inappropriate information;</li>
+        /// <li>Illegal: illegal activities;</li>
+        /// <li>Abuse: verbal abuse;</li>
+        /// <li>Ad: advertisement;</li>
+        /// <li>Moan: panting.</li>
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Review template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Review template description information, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

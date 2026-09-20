@@ -25,67 +25,67 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image quality restoration control parameters.
         /// </summary>
         [JsonProperty("RepairInfo")]
         public RepairInfo RepairInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent frame interpolation control parameters.
         /// </summary>
         [JsonProperty("VideoFrameInterpolationInfo")]
         public VideoFrameInterpolationInfo VideoFrameInterpolationInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Image super-resolution control parameters.
         /// </summary>
         [JsonProperty("SuperResolutionInfo")]
         public SuperResolutionInfo SuperResolutionInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// High dynamic range type control parameter.
         /// </summary>
         [JsonProperty("HDRInfo")]
         public HDRInfo HDRInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video noise reduction control parameters.
         /// </summary>
         [JsonProperty("VideoDenoiseInfo")]
         public VideoDenoiseInfo VideoDenoiseInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Color enhancement control parameters.
         /// </summary>
         [JsonProperty("ColorInfo")]
         public ColorEnhanceInfo ColorInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detail enhancement control parameters.
         /// </summary>
         [JsonProperty("SharpInfo")]
         public SharpEnhanceInfo SharpInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face enhancement control parameters.
         /// </summary>
         [JsonProperty("FaceInfo")]
         public FaceEnhanceInfo FaceInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Low-light control parameters.
         /// </summary>
         [JsonProperty("LowLightInfo")]
         public LowLightEnhanceInfo LowLightInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scratch removal control parameter.
         /// </summary>
         [JsonProperty("ScratchRepairInfo")]
         public ScratchRepairInfo ScratchRepairInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Artifact removal control parameter.
         /// </summary>
         [JsonProperty("ArtifactRepairInfo")]
         public ArtifactRepairInfo ArtifactRepairInfo{ get; set; }

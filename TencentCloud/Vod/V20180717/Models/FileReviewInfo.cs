@@ -25,13 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// Media review information\*.
         /// 
+        /// \* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("MediaReviewInfo")]
         public ReviewInfo MediaReviewInfo{ get; set; }
 
         /// <summary>
+        /// Media cover review info\*.
         /// 
+        /// \* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CoverReviewInfo")]
         public ReviewInfo CoverReviewInfo{ get; set; }

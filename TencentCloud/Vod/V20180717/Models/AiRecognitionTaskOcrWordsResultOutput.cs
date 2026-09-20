@@ -25,19 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Text keyword recognition result set.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskOcrWordsResultItem[] ResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("ResultSetFileUrl")]
         public string ResultSetFileUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ResultSetFileUrlExpireTime")]
         public string ResultSetFileUrlExpireTime{ get; set; }

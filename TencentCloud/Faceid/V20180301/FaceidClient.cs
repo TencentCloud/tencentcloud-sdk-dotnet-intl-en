@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1396";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -264,6 +264,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// This API is used to create an EKYC Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKYCWebhookRequest"/></param>
+        /// <returns><see cref="CreateEKYCWebhookResponse"/></returns>
+        public Task<CreateEKYCWebhookResponse> CreateEKYCWebhook(CreateEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<CreateEKYCWebhookResponse>(req, "CreateEKYCWebhook");
+        }
+
+        /// <summary>
+        /// This API is used to create an EKYC Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKYCWebhookRequest"/></param>
+        /// <returns><see cref="CreateEKYCWebhookResponse"/></returns>
+        public CreateEKYCWebhookResponse CreateEKYCWebhookSync(CreateEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<CreateEKYCWebhookResponse>(req, "CreateEKYCWebhook")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
         /// The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
         /// </summary>
@@ -283,6 +304,27 @@ namespace TencentCloud.Faceid.V20180301
         public CreateUploadUrlResponse CreateUploadUrlSync(CreateUploadUrlRequest req)
         {
             return InternalRequestAsync<CreateUploadUrlResponse>(req, "CreateUploadUrl")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API deletes the Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKYCWebhookRequest"/></param>
+        /// <returns><see cref="DeleteEKYCWebhookResponse"/></returns>
+        public Task<DeleteEKYCWebhookResponse> DeleteEKYCWebhook(DeleteEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<DeleteEKYCWebhookResponse>(req, "DeleteEKYCWebhook");
+        }
+
+        /// <summary>
+        /// This API deletes the Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKYCWebhookRequest"/></param>
+        /// <returns><see cref="DeleteEKYCWebhookResponse"/></returns>
+        public DeleteEKYCWebhookResponse DeleteEKYCWebhookSync(DeleteEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<DeleteEKYCWebhookResponse>(req, "DeleteEKYCWebhook")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -354,6 +396,27 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// Queries the AML name list screening result.
+        /// </summary>
+        /// <param name="req"><see cref="GetAMLScreeningResultRequest"/></param>
+        /// <returns><see cref="GetAMLScreeningResultResponse"/></returns>
+        public Task<GetAMLScreeningResultResponse> GetAMLScreeningResult(GetAMLScreeningResultRequest req)
+        {
+            return InternalRequestAsync<GetAMLScreeningResultResponse>(req, "GetAMLScreeningResult");
+        }
+
+        /// <summary>
+        /// Queries the AML name list screening result.
+        /// </summary>
+        /// <param name="req"><see cref="GetAMLScreeningResultRequest"/></param>
+        /// <returns><see cref="GetAMLScreeningResultResponse"/></returns>
+        public GetAMLScreeningResultResponse GetAMLScreeningResultSync(GetAMLScreeningResultRequest req)
+        {
+            return InternalRequestAsync<GetAMLScreeningResultResponse>(req, "GetAMLScreeningResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for 72 hours (72*3600s) after generation and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultIntlRequest"/></param>
@@ -417,12 +480,12 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API verifies NFC data. Pass in the NFCToken returned by the SDK, the document fields to be verified, and the portrait photo. The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 1 hour. The service is billed per query. 
-        /// The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for travelling to and from Hong Kong, China and Macao, China, and Chinese resident passports: 
+        /// This API verifies NFC data. Pass in the NFCToken returned by the SDK, along with the document fields and portrait photo to be verified.The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 10 minutes. The service is billed per query. 
+        /// The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for traveling to and from Hong Kong and Macao, and international passports with an NFC chip: 
         /// 
         /// -Chinese mainland second-generation resident identity card: identity card number, name, sex, ethnicity, date of birth, address, issuing authority, validity start time, validity end time, portrait photo 
-        /// -Exit-Entry Permit for Travelling to and from Hong Kong, China and Macao, China: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
-        /// -Chinese resident passport: passport number, Chinese name, English name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
+        /// -Exit-Entry Permit for Traveling to and from Hong Kong and Macao: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
+        /// -International passports with an NFC chip: passport number, name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
         /// </summary>
         /// <param name="req"><see cref="GetNFCResultRequest"/></param>
         /// <returns><see cref="GetNFCResultResponse"/></returns>
@@ -432,12 +495,12 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API verifies NFC data. Pass in the NFCToken returned by the SDK, the document fields to be verified, and the portrait photo. The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 1 hour. The service is billed per query. 
-        /// The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for travelling to and from Hong Kong, China and Macao, China, and Chinese resident passports: 
+        /// This API verifies NFC data. Pass in the NFCToken returned by the SDK, along with the document fields and portrait photo to be verified.The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 10 minutes. The service is billed per query. 
+        /// The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for traveling to and from Hong Kong and Macao, and international passports with an NFC chip: 
         /// 
         /// -Chinese mainland second-generation resident identity card: identity card number, name, sex, ethnicity, date of birth, address, issuing authority, validity start time, validity end time, portrait photo 
-        /// -Exit-Entry Permit for Travelling to and from Hong Kong, China and Macao, China: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
-        /// -Chinese resident passport: passport number, Chinese name, English name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
+        /// -Exit-Entry Permit for Traveling to and from Hong Kong and Macao: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
+        /// -International passports with an NFC chip: passport number, name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
         /// </summary>
         /// <param name="req"><see cref="GetNFCResultRequest"/></param>
         /// <returns><see cref="GetNFCResultResponse"/></returns>
@@ -448,7 +511,11 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+        /// NFC verification service: obtain Token information (valid for 10 minutes) for the NFC identify request. This API supports NFC recognition and verification of the following documents:
+        /// 
+        /// -Chinese mainland second-generation resident identity card
+        /// -Exit-Entry Permit for Traveling to and from Hong Kong and Macao
+        /// -International passports with an NFC chip
         /// </summary>
         /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
         /// <returns><see cref="GetNFCTokenResponse"/></returns>
@@ -458,7 +525,11 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+        /// NFC verification service: obtain Token information (valid for 10 minutes) for the NFC identify request. This API supports NFC recognition and verification of the following documents:
+        /// 
+        /// -Chinese mainland second-generation resident identity card
+        /// -Exit-Entry Permit for Traveling to and from Hong Kong and Macao
+        /// -International passports with an NFC chip
         /// </summary>
         /// <param name="req"><see cref="GetNFCTokenRequest"/></param>
         /// <returns><see cref="GetNFCTokenResponse"/></returns>
@@ -490,7 +561,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// After completing the Web verification process, call this API with the verification token (BizToken) to query the verification result info. The BizToken is valid within three days (259,200 seconds) after application and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
@@ -500,7 +571,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+        /// After completing the Web verification process, call this API with the verification token (BizToken) to query the verification result info. The BizToken is valid within three days (259,200 seconds) after application and can be called multiple times.
         /// </summary>
         /// <param name="req"><see cref="GetWebVerificationResultIntlRequest"/></param>
         /// <returns><see cref="GetWebVerificationResultIntlResponse"/></returns>
@@ -570,6 +641,27 @@ namespace TencentCloud.Faceid.V20180301
         public ImageRecognitionV2Response ImageRecognitionV2Sync(ImageRecognitionV2Request req)
         {
             return InternalRequestAsync<ImageRecognitionV2Response>(req, "ImageRecognitionV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API queries the list of Webhook configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ListEKYCWebhooksRequest"/></param>
+        /// <returns><see cref="ListEKYCWebhooksResponse"/></returns>
+        public Task<ListEKYCWebhooksResponse> ListEKYCWebhooks(ListEKYCWebhooksRequest req)
+        {
+            return InternalRequestAsync<ListEKYCWebhooksResponse>(req, "ListEKYCWebhooks");
+        }
+
+        /// <summary>
+        /// This API queries the list of Webhook configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ListEKYCWebhooksRequest"/></param>
+        /// <returns><see cref="ListEKYCWebhooksResponse"/></returns>
+        public ListEKYCWebhooksResponse ListEKYCWebhooksSync(ListEKYCWebhooksRequest req)
+        {
+            return InternalRequestAsync<ListEKYCWebhooksResponse>(req, "ListEKYCWebhooks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -656,6 +748,90 @@ namespace TencentCloud.Faceid.V20180301
         public PhoneVerificationResponse PhoneVerificationSync(PhoneVerificationRequest req)
         {
             return InternalRequestAsync<PhoneVerificationResponse>(req, "PhoneVerification")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// AML name list screening
+        /// </summary>
+        /// <param name="req"><see cref="RunAMLNameScreeningRequest"/></param>
+        /// <returns><see cref="RunAMLNameScreeningResponse"/></returns>
+        public Task<RunAMLNameScreeningResponse> RunAMLNameScreening(RunAMLNameScreeningRequest req)
+        {
+            return InternalRequestAsync<RunAMLNameScreeningResponse>(req, "RunAMLNameScreening");
+        }
+
+        /// <summary>
+        /// AML name list screening
+        /// </summary>
+        /// <param name="req"><see cref="RunAMLNameScreeningRequest"/></param>
+        /// <returns><see cref="RunAMLNameScreeningResponse"/></returns>
+        public RunAMLNameScreeningResponse RunAMLNameScreeningSync(RunAMLNameScreeningRequest req)
+        {
+            return InternalRequestAsync<RunAMLNameScreeningResponse>(req, "RunAMLNameScreening")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// AML name list screening
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAMLCustomerProfileRequest"/></param>
+        /// <returns><see cref="UpdateAMLCustomerProfileResponse"/></returns>
+        public Task<UpdateAMLCustomerProfileResponse> UpdateAMLCustomerProfile(UpdateAMLCustomerProfileRequest req)
+        {
+            return InternalRequestAsync<UpdateAMLCustomerProfileResponse>(req, "UpdateAMLCustomerProfile");
+        }
+
+        /// <summary>
+        /// AML name list screening
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAMLCustomerProfileRequest"/></param>
+        /// <returns><see cref="UpdateAMLCustomerProfileResponse"/></returns>
+        public UpdateAMLCustomerProfileResponse UpdateAMLCustomerProfileSync(UpdateAMLCustomerProfileRequest req)
+        {
+            return InternalRequestAsync<UpdateAMLCustomerProfileResponse>(req, "UpdateAMLCustomerProfile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Changes the status of continuous name list screening.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAMLOngoingScreeningStatusRequest"/></param>
+        /// <returns><see cref="UpdateAMLOngoingScreeningStatusResponse"/></returns>
+        public Task<UpdateAMLOngoingScreeningStatusResponse> UpdateAMLOngoingScreeningStatus(UpdateAMLOngoingScreeningStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateAMLOngoingScreeningStatusResponse>(req, "UpdateAMLOngoingScreeningStatus");
+        }
+
+        /// <summary>
+        /// Changes the status of continuous name list screening.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAMLOngoingScreeningStatusRequest"/></param>
+        /// <returns><see cref="UpdateAMLOngoingScreeningStatusResponse"/></returns>
+        public UpdateAMLOngoingScreeningStatusResponse UpdateAMLOngoingScreeningStatusSync(UpdateAMLOngoingScreeningStatusRequest req)
+        {
+            return InternalRequestAsync<UpdateAMLOngoingScreeningStatusResponse>(req, "UpdateAMLOngoingScreeningStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API updates the Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKYCWebhookRequest"/></param>
+        /// <returns><see cref="UpdateEKYCWebhookResponse"/></returns>
+        public Task<UpdateEKYCWebhookResponse> UpdateEKYCWebhook(UpdateEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<UpdateEKYCWebhookResponse>(req, "UpdateEKYCWebhook");
+        }
+
+        /// <summary>
+        /// This API updates the Webhook configuration.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKYCWebhookRequest"/></param>
+        /// <returns><see cref="UpdateEKYCWebhookResponse"/></returns>
+        public UpdateEKYCWebhookResponse UpdateEKYCWebhookSync(UpdateEKYCWebhookRequest req)
+        {
+            return InternalRequestAsync<UpdateEKYCWebhookResponse>(req, "UpdateEKYCWebhook")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

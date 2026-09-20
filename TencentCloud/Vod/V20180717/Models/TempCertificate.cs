@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Temporary security credential Id.
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Temporary security credential Key.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Token value.
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// 
+        /// The time when the certificate is invalid. Return a Unix timestamp accurate to the second.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public ulong? ExpiredTime{ get; set; }

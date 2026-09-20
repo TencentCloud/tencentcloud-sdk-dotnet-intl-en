@@ -26,56 +26,48 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// VIN of Philippines VoteID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("VIN")]
         public string VIN{ get; set; }
 
         /// <summary>
-        /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
         /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Civil status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Marital status
         /// </summary>
         [JsonProperty("CivilStatus")]
         public string CivilStatus{ get; set; }
 
         /// <summary>
         /// Nationality
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Citizenship")]
         public string Citizenship{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// Region
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Region.
         /// </summary>
         [JsonProperty("PrecinctNo")]
         public string PrecinctNo{ get; set; }

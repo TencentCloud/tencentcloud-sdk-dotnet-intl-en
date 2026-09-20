@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// DNS parse information
         /// </summary>
         [JsonProperty("DNSVerifyInfo")]
         public DNSVerifyInfo DNSVerifyInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// File validation information
         /// </summary>
         [JsonProperty("FileVerifyInfo")]
         public FileVerifyInfo FileVerifyInfo{ get; set; }

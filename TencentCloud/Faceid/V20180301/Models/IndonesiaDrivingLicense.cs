@@ -26,56 +26,48 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
         /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// No.
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
         /// Expiration date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// Date of issue
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Issue date
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }
 
         /// <summary>
         /// Issuing country
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuedCountry")]
         public string IssuedCountry{ get; set; }

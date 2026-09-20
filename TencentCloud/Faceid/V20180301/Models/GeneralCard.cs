@@ -25,158 +25,136 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID number
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Personal number, which is returned when it is a passport
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Personal number. It is returned when the identity document type is a passport.
         /// </summary>
         [JsonProperty("PersonalNumber")]
         public string PersonalNumber{ get; set; }
 
         /// <summary>
-        /// The first line of passport machine reading code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MRZ line 1 of the passport
         /// </summary>
         [JsonProperty("PassportCodeFirst")]
         public string PassportCodeFirst{ get; set; }
 
         /// <summary>
-        /// The first line of passport machine reading code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// MRZ line 2 of the passport
         /// </summary>
         [JsonProperty("PassportCodeSecond")]
         public string PassportCodeSecond{ get; set; }
 
         /// <summary>
-        /// Date of expiry in the format of YYYY-MM-DD
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration date in YYYY-MM-DD format
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// Valid date in the format of YYYY-MM-DD
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration date in YYYY-MM-DD format
         /// </summary>
         [JsonProperty("DueDate")]
         public string DueDate{ get; set; }
 
         /// <summary>
-        /// Date of issue in the format of YYYY-MM-DD
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Issue date in YYYY-MM-DD format
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }
 
         /// <summary>
         /// Issuing authority
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuedAuthority")]
         public string IssuedAuthority{ get; set; }
 
         /// <summary>
-        /// Issuing country, which is returned following the ISO 3166 country coding specification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: MYS
+        /// Issuing country. Return following the ISO 3166 country coding specification.
         /// </summary>
         [JsonProperty("IssuedCountry")]
         public string IssuedCountry{ get; set; }
 
         /// <summary>
-        /// Full Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
         /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// Gender on the license
-        /// - M: male
-        /// - F: female
-        /// - X: other gender
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: M
+        /// Gender on the document
+        /// -M: male
+        /// -F: female
+        /// - X: Other gender identity
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Age. 0 indicates that no valid information is obtained.
-        /// Example: 0
+        /// Age. 0 indicates no valid info is obtained.
         /// </summary>
         [JsonProperty("Age")]
         public string Age{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
         /// Birth place
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("BirthPlace")]
         public string BirthPlace{ get; set; }
 
         /// <summary>
-        /// Nationality, which is returned following the ISO 3166 country coding specification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: IND
+        /// Document nationality. Return following the ISO 3166 country coding specification.
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
         /// Registration number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("RegistrationNumber")]
         public string RegistrationNumber{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Document address information
         /// </summary>
         [JsonProperty("Address")]
         public Address Address{ get; set; }
 
         /// <summary>
-        /// Localized name.
+        /// Localized name
         /// </summary>
         [JsonProperty("FullNameLocal")]
         public string FullNameLocal{ get; set; }
 
         /// <summary>
-        /// Localization.
+        /// Localized name
         /// </summary>
         [JsonProperty("FirstNameLocal")]
         public string FirstNameLocal{ get; set; }
 
         /// <summary>
-        /// Localized surname.
+        /// Localized last name
         /// </summary>
         [JsonProperty("LastNameLocal")]
         public string LastNameLocal{ get; set; }

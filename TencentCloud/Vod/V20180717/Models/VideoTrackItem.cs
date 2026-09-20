@@ -25,67 +25,90 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media material source of the video clip, which can be:
+        /// <li>Media file ID for VOD;</li>
+        /// <li>Download URL of other media files.</li>
+        /// Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start time of the video clip in the material file, in seconds. Default value: 0.
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target duration of the video clip, in seconds.
+        /// <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+        /// <li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
         /// </summary>
         [JsonProperty("TargetDuration")]
         public float? TargetDuration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video origin position. Valid values:
+        /// <li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+        /// Default value: Center.
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// 
+        /// Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+        /// <li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+        /// <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+        /// <li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+        /// <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+        /// Default value: 0px.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Width of a video clip, supporting two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+        /// <li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+        /// <li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+        /// <li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+        /// <li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Height of a video clip, supporting two formats: % and px.
+        /// <li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+        /// </li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+        /// <li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+        /// <li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+        /// <li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Perform operations on audio, such as muting.
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }
 
         /// <summary>
-        /// 
+        /// Operation performed on the image, for example, image rotation.
         /// </summary>
         [JsonProperty("ImageOperations")]
         public ImageTransform[] ImageOperations{ get; set; }

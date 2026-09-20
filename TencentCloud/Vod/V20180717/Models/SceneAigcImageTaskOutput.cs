@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Information of the output file of an AIGC image generation task.
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcImageTaskOutputFileInfo[] FileInfos{ get; set; }

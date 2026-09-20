@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video quality evaluation switch. Available values:
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video quality rating filter threshold. Only time periods with values below this threshold are returned.
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }

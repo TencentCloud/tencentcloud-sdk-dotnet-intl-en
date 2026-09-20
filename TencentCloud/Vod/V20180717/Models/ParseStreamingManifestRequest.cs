@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Content of the index file to be parsed.</p>
         /// </summary>
         [JsonProperty("MediaManifestContent")]
         public string MediaManifestContent{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
         /// </summary>
         [JsonProperty("ManifestType")]
         public string ManifestType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique identifier for rotation diagram template.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

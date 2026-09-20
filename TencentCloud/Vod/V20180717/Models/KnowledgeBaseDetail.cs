@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Knowledge base ID</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseId")]
         public string KnowledgeBaseId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Associated large model parsing template</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Storage time</p>
         /// </summary>
         [JsonProperty("ImportTime")]
         public string ImportTime{ get; set; }

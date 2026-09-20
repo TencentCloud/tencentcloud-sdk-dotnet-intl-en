@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Super-resolution configuration.
         /// </summary>
         [JsonProperty("SuperResolution")]
         public SuperResolutionInfo SuperResolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Advanced super-resolution configuration.
         /// </summary>
         [JsonProperty("AdvancedSuperResolution")]
         public AdvancedSuperResolutionConfig AdvancedSuperResolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// Denoising configuration.
         /// </summary>
         [JsonProperty("Denoise")]
         public ImageDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
-        /// 
+        /// Comprehensive enhancement configuration.
         /// </summary>
         [JsonProperty("ImageQualityEnhance")]
         public ImageQualityEnhanceInfo ImageQualityEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Color enhancement configuration.
         /// </summary>
         [JsonProperty("ColorEnhance")]
         public ColorEnhanceInfo ColorEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detail enhancement configuration.
         /// </summary>
         [JsonProperty("SharpEnhance")]
         public SharpEnhanceInfo SharpEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face enhancement configuration.
         /// </summary>
         [JsonProperty("FaceEnhance")]
         public FaceEnhanceInfo FaceEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// Low-light enhancement configuration.
         /// </summary>
         [JsonProperty("LowLightEnhance")]
         public LowLightEnhanceInfo LowLightEnhance{ get; set; }

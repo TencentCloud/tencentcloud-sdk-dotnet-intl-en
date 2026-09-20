@@ -25,55 +25,60 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values:
+        /// <li>PROCESSING: Processing;</li>
+        /// <li>FINISH: completed</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. 0 indicates success. Other values indicate failure:
+        /// <li>40000: Invalid input parameters. Check the input parameters;</li>
+        /// <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+        /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. An empty string indicates success, and any other value indicates failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input information of the copyright watermark extraction task.
         /// </summary>
         [JsonProperty("Input")]
         public ExtractCopyRightWatermarkTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information of the copyright watermark extraction task.
         /// </summary>
         [JsonProperty("Output")]
         public ExtractCopyRightWatermarkTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

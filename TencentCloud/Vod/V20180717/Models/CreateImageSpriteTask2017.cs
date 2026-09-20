@@ -25,49 +25,49 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Screenshot sprite task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error message.</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Capture the CSS sprite file ID.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Total number of small images in the sprite sheet.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Addresses for capturing CSS sprites output.</p>
         /// </summary>
         [JsonProperty("ImageSpriteUrlSet")]
         public string[] ImageSpriteUrlSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
         /// </summary>
         [JsonProperty("WebVttUrl")]
         public string WebVttUrl{ get; set; }

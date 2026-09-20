@@ -25,37 +25,42 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type. Valid values:
+        /// <li>Classification: intelligent classification.</li>
+        /// <li>Cover: intelligent thumbnail generating.</li>
+        /// <li>Tag: intelligent tag.</li>
+        /// <li>FrameTag: intelligent frame-by-frame tagging.</li>
+        /// <li>Highlight: intelligent highlights</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the intelligent video content analysis classification task. Valid when TaskType is Classification.
         /// </summary>
         [JsonProperty("ClassificationTask")]
         public AiAnalysisTaskClassificationResult ClassificationTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the video content analysis intelligent cover task. Valid when the task type is `Cover`.
         /// </summary>
         [JsonProperty("CoverTask")]
         public AiAnalysisTaskCoverResult CoverTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the intelligent tag task for video content analysis. Valid when the task type is Tag.
         /// </summary>
         [JsonProperty("TagTask")]
         public AiAnalysisTaskTagResult TagTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the intelligent frame-specific tagging task for video content analysis. Valid when TaskType is `FrameTag`.
         /// </summary>
         [JsonProperty("FrameTagTask")]
         public AiAnalysisTaskFrameTagResult FrameTagTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the intelligent video content analysis highlight task. Valid when TaskType is Highlight.
         /// </summary>
         [JsonProperty("HighlightTask")]
         public AiAnalysisTaskHighlightResult HighlightTask{ get; set; }

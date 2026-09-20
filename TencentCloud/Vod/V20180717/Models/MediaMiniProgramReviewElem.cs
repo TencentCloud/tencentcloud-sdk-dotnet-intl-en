@@ -25,19 +25,29 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio and video moderation type. 
+        /// <li>Porn: The visual involves offensive content,</li>
+        /// <li>Porn.Ocr: text involves offensive content,</li>
+        /// <li>Porn.Asr: The sound involves offensive content,</li>
+        /// <li>Terrorism: The visual involves unsafe information,</li>
+        /// <li>Political: The visual involves inappropriate information,</li>
+        /// <li>Political.Ocr: The text involves inappropriate information,</li>
+        /// <li>Political.Asr: The sound involves inappropriate information.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio and video review comments.
+        /// <li>pass: confirm normal,</li>
+        /// <li>block: confirmed violation,</li>
+        /// <li>review: suspected violation.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Confidence of the audio/video moderation result. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

@@ -25,25 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Start time offset of video splitting, in seconds.
+        /// <li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+        /// <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
+        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time offset of video splitting, in seconds.
+        /// <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
+        /// <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video ends n seconds before the original video ends.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in when you want to automatically execute a task flow on the generated new video.
         /// </summary>
         [JsonProperty("ProcedureName")]
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video splitting output information.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SplitMediaOutputConfig OutputConfig{ get; set; }

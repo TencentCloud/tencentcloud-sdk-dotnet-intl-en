@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Entries per page</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>scroll_token returned in the previous page response, used for turning to the next page</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Text generation details</p>
         /// </summary>
         [JsonProperty("Data")]
         public AigcTextDetailData[] Data{ get; set; }

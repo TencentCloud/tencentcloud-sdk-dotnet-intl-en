@@ -25,115 +25,122 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Media file name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Media file description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiry date of the media file in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted. "9999-12-31T23:59:59Z" means it never expires.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category ID of the media file.
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category name of the media file.
         /// </summary>
         [JsonProperty("ClassName")]
         public string ClassName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 
+        /// Thumbnail URL of the media file.
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Muxing format of the media file, such as mp4 and flv.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL address of the original media file.
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Source information of the media file.
         /// </summary>
         [JsonProperty("SourceInfo")]
         public MediaSourceData SourceInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage region of media files, for example, ap-chongqing. See region list.
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Media storage path.
         /// </summary>
         [JsonProperty("StoragePath")]
         public string StoragePath{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag information of a media file.
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unique identifier of the live streaming recording file.
         /// </summary>
         [JsonProperty("Vid")]
         public string Vid{ get; set; }
 
         /// <summary>
-        /// 
+        /// File type:
+        /// <li>Video: video file</li>
+        /// <li>Audio: audio file</li>
+        /// <li>Image: image file</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 
+        /// File status: Normal: normal, Forbidden: blocked.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage class of a media file
+        /// <li> STANDARD: standard storage.</li>
+        /// <li> STANDARD_IA: Infrequent storage.</li>
+        /// <li> ARCHIVE: Archive storage.</li>
+        /// <li> DEEP_ARCHIVE: Deep archive storage.</li>
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }

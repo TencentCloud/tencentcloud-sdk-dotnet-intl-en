@@ -25,25 +25,30 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Subject name. It cannot exceed 20 characters.
         /// </summary>
         [JsonProperty("ElementName")]
         public string ElementName{ get; set; }
 
         /// <summary>
+        /// Subject description.
         /// 
+        /// Up to 100 characters.
         /// </summary>
         [JsonProperty("ElementDescription")]
         public string ElementDescription{ get; set; }
 
         /// <summary>
-        /// 
+        /// Front reference image of the subject.
+        /// Supports passing an image URL (ensure it is accessible).
+        /// Image format: .jpg, .jpeg, and .png are supported.
+        /// The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
         /// </summary>
         [JsonProperty("ElementFrontalImage")]
         public string ElementFrontalImage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
         /// </summary>
         [JsonProperty("ElementReferList")]
         public ElementReferInfo[] ElementReferList{ get; set; }

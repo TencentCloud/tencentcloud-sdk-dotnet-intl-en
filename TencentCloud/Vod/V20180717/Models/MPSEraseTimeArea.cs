@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Start time, unit: ms</p>
         /// </summary>
         [JsonProperty("BeginMs")]
         public ulong? BeginMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>End time, unit: ms</p>
         /// </summary>
         [JsonProperty("EndMs")]
         public ulong? EndMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of regions removed during the period</p>
         /// </summary>
         [JsonProperty("Areas")]
         public MPSEraseArea[] Areas{ get; set; }

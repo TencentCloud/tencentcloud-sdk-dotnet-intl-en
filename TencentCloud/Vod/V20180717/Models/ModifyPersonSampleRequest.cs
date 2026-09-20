@@ -25,43 +25,46 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Material ID.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Name, with a length limit of 128 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description. Length limit: 1024 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Material application scenario. Available values:
+        /// 1. Recognition: used for content recognition, equivalent to Recognition.Face.
+        /// 2. Review: used for inappropriate content recognition, equivalent to Review.Face.
+        /// 3. All: for content recognition and inappropriate content recognition, equivalent to 1+2.
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// 
+        /// Facial operation information.
         /// </summary>
         [JsonProperty("FaceOperationInfo")]
         public AiSampleFaceOperation FaceOperationInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag operation information.
         /// </summary>
         [JsonProperty("TagOperationInfo")]
         public AiSampleTagOperation TagOperationInfo{ get; set; }

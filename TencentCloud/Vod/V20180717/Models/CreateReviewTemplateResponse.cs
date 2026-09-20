@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Review template unique identifier.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

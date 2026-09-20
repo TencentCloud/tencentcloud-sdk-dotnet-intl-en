@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>List of knowledge bases currently importing media assets</p>
         /// </summary>
         [JsonProperty("Bases")]
         public string[] Bases{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media analysis information in the knowledge base</p>
         /// </summary>
         [JsonProperty("KnowledgeAnalysisInfos")]
         public KnowledgeAnalysisInfo[] KnowledgeAnalysisInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Detailed information about the repository list currently imported into the media asset and the parsing template used</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseDetails")]
         public KnowledgeBaseDetail[] KnowledgeBaseDetails{ get; set; }

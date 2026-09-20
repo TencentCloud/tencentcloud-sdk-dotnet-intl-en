@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Image transcoding output configuration.</p>
         /// </summary>
         [JsonProperty("EncodeConfig")]
         public ImageEncodeConfig EncodeConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Image enhancement configuration.</p>
         /// </summary>
         [JsonProperty("EnhanceConfig")]
         public ImageEnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Image beauty effect configuration.</p>
         /// </summary>
         [JsonProperty("BeautyConfig")]
         public ImageBeautyConfig BeautyConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Ai cutout configuration</p>
         /// </summary>
         [JsonProperty("AiCutOutConfig")]
         public AiCutOutConfig AiCutOutConfig{ get; set; }

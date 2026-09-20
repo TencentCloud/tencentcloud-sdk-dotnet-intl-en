@@ -25,55 +25,62 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Filename, which contains up to 64 characters.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description. Up to 128 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+        /// <li>Default value: 0, indicate other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Muxing format. Available values: mp4 and mp3. Among them, mp3 is for audio-only files.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output video information.
         /// </summary>
         [JsonProperty("VideoStream")]
         public OutputVideoStream VideoStream{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output audio content.
         /// </summary>
         [JsonProperty("AudioStream")]
         public OutputAudioStream AudioStream{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether to remove video data. Available values:
+        /// <li>0: retention</li>
+        /// <li>1: Remove</li>
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indicates whether to remove audio data. Available values:
+        /// <li>0: retention</li>
+        /// <li>1: Remove</li>
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }

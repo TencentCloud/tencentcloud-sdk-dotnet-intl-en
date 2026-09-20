@@ -25,49 +25,51 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Transcoding task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code.
+        /// <li>0: success;</li>
+        /// <li>Other value: unsuccessful.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoded file ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Name of the transcoded file.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video duration, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public ulong? Duration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Address of a cover.
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback information generated after video transcoding.
         /// </summary>
         [JsonProperty("PlayInfoSet")]
         public TranscodePlayInfo2017[] PlayInfoSet{ get; set; }

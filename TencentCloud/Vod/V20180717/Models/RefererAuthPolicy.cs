@@ -25,25 +25,33 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) setting status. Available values:
+        /// <li>Enabled: enable;</li>
+        /// <li>Disabled: disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Referer verification type. Available values:
+        /// <li>Black: blocklist verification method. An HTTP request carrying a Referer in the Referers list will be rejected.</li>
+        /// <li>White: whitelist method validation. HTTP requests are allowed only when they carry a Referer in the Referers list.</li>
+        /// When Status is Enabled, AuthType must be assigned a value.
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of Referers used for verification. Supports up to 400 Referers. When Status value is Enabled, Referers cannot be an empty array. For the Referer format, see the format of the domain.
         /// </summary>
         [JsonProperty("Referers")]
         public string[] Referers{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to allow access to this domain name with a null Referer. Available values:
+        /// <li>Yes: yes.</li>
+        /// <li>No: no</li>
+        /// When Status is Enabled, BlankRefererAllowed must be assigned a value.
         /// </summary>
         [JsonProperty("BlankRefererAllowed")]
         public string BlankRefererAllowed{ get; set; }

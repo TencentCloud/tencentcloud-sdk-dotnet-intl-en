@@ -26,74 +26,60 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example:  SAN, Nan
         /// </summary>
         [JsonProperty("CnName")]
         public string CnName{ get; set; }
 
         /// <summary>
         /// English name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: SAN, Nan
         /// </summary>
         [JsonProperty("EnName")]
         public string EnName{ get; set; }
 
         /// <summary>
-        /// Telex code correspondint to the Chinese name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Chinese name telegraph code
         /// </summary>
         [JsonProperty("TelexCode")]
         public string TelexCode{ get; set; }
 
         /// <summary>
-        /// Gender: "Male-M" or "Female-F"
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Gender: "M" (male) or "F" (female)
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: 01-01-2001
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
         /// </summary>
         [JsonProperty("Permanent")]
         public string Permanent{ get; set; }
 
         /// <summary>
-        /// ID card number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
-        /// Example: C000000(E)
+        /// Identity number
         /// </summary>
         [JsonProperty("IdNum")]
         public string IdNum{ get; set; }
 
         /// <summary>
-        /// Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Document symbol, the symbol below the date of birth, for example, "***AZ"
         /// </summary>
         [JsonProperty("Symbol")]
         public string Symbol{ get; set; }
 
         /// <summary>
-        /// The first date of issue
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of first issue
         /// </summary>
         [JsonProperty("FirstIssueDate")]
         public string FirstIssueDate{ get; set; }
 
         /// <summary>
-        /// The current date of issue
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Most recent date of issue
         /// </summary>
         [JsonProperty("CurrentIssueDate")]
         public string CurrentIssueDate{ get; set; }

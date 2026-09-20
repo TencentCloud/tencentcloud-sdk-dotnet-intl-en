@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// NFCToken
+        /// NFCToken (valid for 10 minutes)
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }

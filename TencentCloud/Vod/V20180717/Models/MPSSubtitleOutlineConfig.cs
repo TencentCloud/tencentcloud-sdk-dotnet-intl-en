@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
         /// </summary>
         [JsonProperty("SubtitleOutlineConfigSwitch")]
         public long? SubtitleOutlineConfigSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
         /// </summary>
         [JsonProperty("OutlineWidth")]
         public float? OutlineWidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
         /// </summary>
         [JsonProperty("OutlineWidthUnit")]
         public long? OutlineWidthUnit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
         /// </summary>
         [JsonProperty("OutlineColor")]
         public string OutlineColor{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
         /// </summary>
         [JsonProperty("OutlineAlpha")]
         public float? OutlineAlpha{ get; set; }

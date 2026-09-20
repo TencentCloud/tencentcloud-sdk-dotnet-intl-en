@@ -25,13 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Traceability watermark task switch. Required. Available values:
+        /// <li>ON: enable traceability watermark;</li>
+        /// <li>OFF: disable traceability watermark.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deprecated. Do not use.
         /// </summary>
         [JsonProperty("Definition")]
         [System.Obsolete]

@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
         /// </summary>
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
         /// </summary>
         [JsonProperty("MPSModifyTemplateParams")]
         public string MPSModifyTemplateParams{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
         /// </summary>
         [JsonProperty("AIAnalysisTemplate")]
         public MPSAIAnalysisTemplateForUpdate AIAnalysisTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
         /// </summary>
         [JsonProperty("SmartSubtitleTemplate")]
         public MPSSmartSubtitleTemplateForUpdate SmartSubtitleTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
         /// </summary>
         [JsonProperty("SmartEraseTemplate")]
         public MPSSmartEraseTemplateForUpdate SmartEraseTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
         /// </summary>
         [JsonProperty("EmbedSubtitleTemplate")]
         public MPSEmbedSubtitleTemplateForUpdate EmbedSubtitleTemplate{ get; set; }

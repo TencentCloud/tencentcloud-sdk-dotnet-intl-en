@@ -25,55 +25,62 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Subapplication ID.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subapplication name.
         /// </summary>
         [JsonProperty("SubAppIdName")]
         public string SubAppIdName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sub-application description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subapplication creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subapplication status. Valid values:
+        /// <li>On: enabled;</li>
+        /// <li>Off: disabled</li>
+        /// <li>Destroying: Being destroyed.</li>
+        /// <li>Destroyed: completion of destruction.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Application mode. Valid values:
+        /// - fileid: FileID mode only
+        /// - - fileid+path: FileID & Path mode
+        /// Leave empty to select the FileID-only mode by default.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage region where the sub-application is enabled.
         /// </summary>
         [JsonProperty("StorageRegions")]
         public string[] StorageRegions{ get; set; }
 
         /// <summary>
-        /// 
+        /// tag bound to the sub-application.
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }

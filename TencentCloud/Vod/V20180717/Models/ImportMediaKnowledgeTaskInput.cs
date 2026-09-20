@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Large Model Understanding Template</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseIds")]
         public string[] KnowledgeBaseIds{ get; set; }

@@ -25,61 +25,70 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. Valid values:
+        /// WAITING: waiting.
+        /// PROCESSING: Processing;
+        /// FINISH: completed.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code.
+        /// <li>0: success;</li>
+        /// <li>Other value: unsuccessful.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video file ID for publishing.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Template ID for publishing on WeChat.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoding template ID of the published video. 0 represents the original video.
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// WeChat publishing status. Valid values:
+        /// <li>FAIL: Failed;</li>
+        /// <li>SUCCESS: successful;</li>
+        /// <li>AUDITNOTPASS: failed to pass moderation;</li>
+        /// <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
         /// </summary>
         [JsonProperty("WechatStatus")]
         public string WechatStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// WeChat Vid.
         /// </summary>
         [JsonProperty("WechatVid")]
         public string WechatVid{ get; set; }
 
         /// <summary>
-        /// 
+        /// WeChat address.
         /// </summary>
         [JsonProperty("WechatUrl")]
         public string WechatUrl{ get; set; }

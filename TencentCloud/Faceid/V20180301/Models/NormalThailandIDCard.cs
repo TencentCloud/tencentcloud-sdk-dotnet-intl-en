@@ -25,92 +25,79 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// LicenseNumber
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Identity number
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Thailand name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Thai name
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// English name
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// English name
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// English birth date
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }
 
         /// <summary>
         /// Expiration date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// Issued date
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// English birth date
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }
 
         /// <summary>
-        /// Registration number 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Serial number
         /// </summary>
         [JsonProperty("RegistrationNumber")]
         public string RegistrationNumber{ get; set; }
 
         /// <summary>
-        /// Religion
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Religious belief
         /// </summary>
         [JsonProperty("Religion")]
         public string Religion{ get; set; }
 
         /// <summary>
-        /// Birthday in Thai
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth in Thai
         /// </summary>
         [JsonProperty("ThaiBirthday")]
         public string ThaiBirthday{ get; set; }
 
         /// <summary>
         /// Expiration date in Thai
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ThaiExpirationDate")]
         public string ThaiExpirationDate{ get; set; }
 
         /// <summary>
-        /// Issued date in Thai
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of issue in Thai
         /// </summary>
         [JsonProperty("ThaiIssueDate")]
         public string ThaiIssueDate{ get; set; }

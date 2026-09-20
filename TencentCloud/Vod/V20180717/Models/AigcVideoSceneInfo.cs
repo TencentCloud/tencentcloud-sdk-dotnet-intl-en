@@ -25,13 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// AI video generation scenario type. Optional values:
+        /// - product_showcase: 360-degree product showcase.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Product display parameters
         /// </summary>
         [JsonProperty("ProductShowcaseConfig")]
         public ProductShowcaseConfig ProductShowcaseConfig{ get; set; }

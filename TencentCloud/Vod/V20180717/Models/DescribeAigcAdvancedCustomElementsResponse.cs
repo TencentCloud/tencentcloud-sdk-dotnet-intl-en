@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>AIGC advanced custom entity information.</p>
         /// </summary>
         [JsonProperty("ElementSet")]
         public AigcAdvancedCustomElementInfo[] ElementSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Total number of records.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

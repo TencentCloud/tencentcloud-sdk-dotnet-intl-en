@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task summary list.</p>
         /// </summary>
         [JsonProperty("TaskSet")]
         public TaskSimpleInfo[] TaskSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }

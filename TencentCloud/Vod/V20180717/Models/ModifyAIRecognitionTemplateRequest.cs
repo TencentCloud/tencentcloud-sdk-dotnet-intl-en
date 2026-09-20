@@ -25,85 +25,86 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio and video content recognition template unique identifier.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video content recognition template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Description of the audio/video content recognition template, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameters for video opening and closing recognition.
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfoForUpdate HeadTailConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video split recognition control parameters.
         /// </summary>
         [JsonProperty("SegmentConfigure")]
         public SegmentConfigureInfoForUpdate SegmentConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Control parameters for face recognition.
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfoForUpdate FaceConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text Full-text Recognition Control Parameters.
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfoForUpdate OcrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text keyword recognition control parameters.
         /// </summary>
         [JsonProperty("OcrWordsConfigure")]
         public OcrWordsConfigureInfoForUpdate OcrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Voice full-text recognition control parameters.
+        /// <font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfoForUpdate AsrFullTextConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Voice keyword recognition control parameters.
         /// </summary>
         [JsonProperty("AsrWordsConfigure")]
         public AsrWordsConfigureInfoForUpdate AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Voice translation recognition control parameters.
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfoForUpdate AsrTranslateConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Object recognition control parameter.
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfoForUpdate ObjectConfigure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Frame interception interval in seconds. Minimum value: 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

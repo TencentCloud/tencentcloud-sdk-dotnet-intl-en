@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Referrer blocklist configuration switch. Parameter value:
+        /// Referrer blocklist/allowlist configuration switch. Value:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// referer blocklist/allowlist rule configuration
         /// </summary>
         [JsonProperty("RefererRules")]
         public RefererRule[] RefererRules{ get; set; }

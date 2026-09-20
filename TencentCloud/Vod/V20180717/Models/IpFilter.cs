@@ -35,20 +35,20 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// IP allowlist/blocklist type:
         /// <li>whitelist: allowlist;</li>
-        /// <li>blocklist: blocklist.</li>
+        /// <li>blacklist: blocklist.</li>
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// IP allowlist or blocklist. Supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
+        /// IP allowlist or blocklist. It supports IPs in the X.X.X.X format or network segments in the /8, /16, or /24 format.
         /// Fill up to 50 allowlist entries or 50 blocklist entries.
         /// </summary>
         [JsonProperty("Filters")]
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// 
+        /// IP allowlist/blocklist path-specific configuration.
         /// </summary>
         [JsonProperty("FilterRules")]
         public IpFilterPathRule[] FilterRules{ get; set; }

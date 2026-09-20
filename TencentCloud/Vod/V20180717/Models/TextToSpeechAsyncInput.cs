@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Voice ID.</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Text to convert to speech.</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Text to speech language.</p>
         /// </summary>
         [JsonProperty("LanguageBoost")]
         public string LanguageBoost{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended parameters in the format of a JSON string.</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }

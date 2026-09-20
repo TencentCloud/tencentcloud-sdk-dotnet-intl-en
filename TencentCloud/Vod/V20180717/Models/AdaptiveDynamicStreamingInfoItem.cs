@@ -25,73 +25,73 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Adaptive bitrate streaming specification.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Packaging format. Value range:</p><li>HLS;</li><li>DASH.</li>
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Encryption type.</p>
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Playback address.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media file size, unit: byte.</p><li>For HLS media files, the size is the sum of the m3u8 and ts file sizes;</li><li>For DASH media files, the size is the sum of the mpd and fragment file sizes;</li><li><font color="red">Note</font>: This field is 0 for adaptive bitrate stream files generated before 2022-01-10T16:00:00Z.</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subflow information list.</p>
         /// </summary>
         [JsonProperty("SubStreamSet")]
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Copyright information.</p>
         /// </summary>
         [JsonProperty("CopyRightWatermarkText")]
         public string CopyRightWatermarkText{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Digital watermark template id.</p>
         /// </summary>
         [JsonProperty("BlindWatermarkDefinition")]
         public long? BlindWatermarkDefinition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle information list.</p>
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public MediaSubtitleItem[] SubtitleSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Unique identifier for default subtitle.</p>
         /// </summary>
         [JsonProperty("DefaultSubtitleId")]
         public string DefaultSubtitleId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>DRM encryption method.</p>
         /// </summary>
         [JsonProperty("DrmEncryptType")]
         public string DrmEncryptType{ get; set; }

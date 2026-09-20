@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
         /// </summary>
         [JsonProperty("WatermarkEraseMethod")]
         public string WatermarkEraseMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
         /// </summary>
         [JsonProperty("WatermarkModel")]
         public string WatermarkModel{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
         /// </summary>
         [JsonProperty("AutoAreas")]
         public MPSEraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
         /// </summary>
         [JsonProperty("CustomAreas")]
         public MPSEraseTimeArea[] CustomAreas{ get; set; }

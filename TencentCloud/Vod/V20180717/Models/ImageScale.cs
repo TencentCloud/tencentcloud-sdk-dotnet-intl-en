@@ -25,31 +25,36 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Operation type of image scaling. Optional modes:
+        /// <li>WidthFirst: specify the image width as Width, and the height will be proportionally scaled.</li>
+        /// <li>HeightFirst: assign the image height as Height, and proportionally scale the width.</li>
+        /// <li>LongEdgeFirst: Specify the long side of the image as LongEdge, and proportionally scale the short side.</li>
+        /// <li>ShortEdgeFirst: Specify the short edge of the image as ShortEdge, with long edge proportional scaling.</li>
+        /// <li>Force: ignore the aspect ratio of the original image, specify the image width as Width and height as Height, and forcefully scale the image, which may cause deformation of the target image.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Height of the output image in pixels. This field is valid when Type is HeightFirst or Force.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// 
+        /// Width of the output image. Unit: pixel. This field is valid when Type is WidthFirst or Force.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 
+        /// Long side length of the output image. Unit: pixel. This field is valid when Type is LongEdgeFirst.
         /// </summary>
         [JsonProperty("LongEdge")]
         public ulong? LongEdge{ get; set; }
 
         /// <summary>
-        /// 
+        /// Short side length of the output image in pixels. This field is valid when Type is ShortEdgeFirst.
         /// </summary>
         [JsonProperty("ShortEdge")]
         public ulong? ShortEdge{ get; set; }

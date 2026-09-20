@@ -25,19 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Video intelligent tag list.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisTagItem[] TagSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
         /// </summary>
         [JsonProperty("TagSetFileUrl")]
         public string TagSetFileUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("TagSetFileUrlExpireTime")]
         public string TagSetFileUrlExpireTime{ get; set; }

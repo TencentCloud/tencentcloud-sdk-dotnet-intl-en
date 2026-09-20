@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Path cache configuration.
         /// </summary>
         [JsonProperty("RuleCache")]
         public RuleCache[] RuleCache{ get; set; }

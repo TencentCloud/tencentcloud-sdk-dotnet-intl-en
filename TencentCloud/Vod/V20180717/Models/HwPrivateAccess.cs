@@ -33,19 +33,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Access ID.
         /// </summary>
         [JsonProperty("AccessKey")]
         public string AccessKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Bucket Name.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 7M are recommended; 2. Supported image formats: jpeg, jpg, png, webp.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>The media file ID of the audio file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio file URL, which needs to be external network accessible. This parameter is valid when Type is Url.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

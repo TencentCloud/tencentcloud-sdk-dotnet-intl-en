@@ -25,61 +25,61 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Domain name.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Acceleration region information.</p>
         /// </summary>
         [JsonProperty("AccelerateAreaInfos")]
         public AccelerateAreaInfo[] AccelerateAreaInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
         /// </summary>
         [JsonProperty("DeployStatus")]
         public string DeployStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>HTTPS configuration information.</p>
         /// </summary>
         [JsonProperty("HTTPSConfig")]
         public DomainHTTPSConfig HTTPSConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>The time when the domain name is added to the Tencent Cloud VOD system.<li>Format according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Domain name QUIC configuration information.</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>IP access restriction configuration information.</p>
         /// </summary>
         [JsonProperty("IPFilterPolicy")]
         public IPFilterPolicy IPFilterPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

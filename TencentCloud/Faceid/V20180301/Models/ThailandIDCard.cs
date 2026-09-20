@@ -26,49 +26,42 @@ namespace TencentCloud.Faceid.V20180301.Models
         
         /// <summary>
         /// Last name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
         /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// License number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// No.
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Date of birth
         /// </summary>
         [JsonProperty("DateOfBirth")]
         public string DateOfBirth{ get; set; }
 
         /// <summary>
-        /// Date of expiry
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration date
         /// </summary>
         [JsonProperty("DateOfExpiry")]
         public string DateOfExpiry{ get; set; }
 
         /// <summary>
-        /// Date of issue
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Issue date
         /// </summary>
         [JsonProperty("DateOfIssue")]
         public string DateOfIssue{ get; set; }
 
         /// <summary>
         /// Issuing country
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IssuedCountry")]
         public string IssuedCountry{ get; set; }

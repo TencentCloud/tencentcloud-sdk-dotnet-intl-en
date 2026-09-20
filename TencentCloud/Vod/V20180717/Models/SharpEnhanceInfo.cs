@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Detail enhancement control switch. Valid values:
+        /// <li>ON: enable detail enhancement</li>
+        /// <li>OFF: disable detail enhancement</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+        /// Default: 0.0.
         /// </summary>
         [JsonProperty("Intensity")]
         public float? Intensity{ get; set; }

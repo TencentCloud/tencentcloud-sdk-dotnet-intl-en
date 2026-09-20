@@ -25,91 +25,91 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Model name.</p>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Model version.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Input file information for an AIGC video generation task.</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Fixed subject input information for AIGC tasks.</p>
         /// </summary>
         [JsonProperty("SubjectInfos")]
         public AigcVideoTaskInputSubjectInfo[] SubjectInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media file ID used as the tail frame to generate video. The globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
         /// </summary>
         [JsonProperty("LastFrameFileId")]
         public string LastFrameFileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>URL of the media file used as the last frame to generate video. Description:</p><ol><li>Only models GV, Kling, and Vidu are supported. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must also specify FileInfos as the first frame of the video to be generated. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format values: jpeg, jpg, png, webp.</li></ol></li></ol>
         /// </summary>
         [JsonProperty("LastFrameUrl")]
         public string LastFrameUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Prompt for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
         /// </summary>
         [JsonProperty("EnhancePrompt")]
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
         /// </summary>
         [JsonProperty("GenerationMode")]
         public string GenerationMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output result file for AIGC image generation.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcVideoOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Region information of the input file. If the file url is a foreign address, selectable Oversea. Default: Mainland.</p>
         /// </summary>
         [JsonProperty("InputRegion")]
         public string InputRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control indicates action control;</li><li>Other ModelName values are not currently supported.</li></p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Random seed of the model.</p>
         /// </summary>
         [JsonProperty("Seed")]
         public long? Seed{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Pass-through parameter.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Number of detection results.</p>
         /// </summary>
         [JsonProperty("ResultCount")]
         public long? ResultCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Detection item result list.</p>
         /// </summary>
         [JsonProperty("ResultSet")]
         public QualityInspectLLMDetectionResultItem[] ResultSet{ get; set; }

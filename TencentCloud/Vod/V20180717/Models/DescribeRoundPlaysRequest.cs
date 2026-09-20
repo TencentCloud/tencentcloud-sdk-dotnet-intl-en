@@ -25,50 +25,50 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
         /// </summary>
         [JsonProperty("RoundPlayIds")]
         public string[] RoundPlayIds{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter criteria: Carousel Playlist Creation Time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Filter criteria: carousel playlist update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public TimeRange UpdateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
         /// </summary>
         [JsonProperty("ScrollToken")]
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
         /// </summary>
         [JsonProperty("Offset")]
         [System.Obsolete]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

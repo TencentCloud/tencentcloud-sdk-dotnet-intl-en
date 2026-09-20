@@ -27,7 +27,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// The Base64-encoded value of the image.
         /// Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-        /// Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+        /// Supported image size: The downloaded image after Base64 encoding can be up to 10 MB. The download time of the image cannot exceed 3s.
         /// Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
         /// </summary>
         [JsonProperty("ImageBase64")]
@@ -36,7 +36,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// The URL of the image.
         /// Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-        /// Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
+        /// Supported image size: The downloaded image after Base64 encoding can be up to 10 MB. The download time of the image cannot exceed 3s.
         /// We recommend that you store the image in Tencent Cloud for higher download speed and stability.
         /// The download speed and stability of non-Tencent Cloud URLs may be low.
         /// </summary>

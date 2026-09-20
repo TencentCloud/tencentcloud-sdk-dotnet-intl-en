@@ -25,37 +25,56 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Task type. The specific subtask type in the WorkflowTask structure of MPS. Value:
+        /// <li>MediaProcess.Transcode: audio and video transcoding task.</li>
+        /// <li>AiAnalysis.DeLogo: intelligent erasure task.</li>
+        /// <li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
+        /// <li>AiAnalysis.CoverTask: Intelligent Cover Task.</li>
+        /// <li>AiAnalysis.TagTask: intelligent tag task.</li>
+        /// <li>AiAnalysis.FrameTagTask: intelligent frame-specific tagging task.</li>
+        /// <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
+        /// <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
+        /// <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
+        /// <li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+        /// <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
+        /// <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
+        /// <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
+        /// <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
+        /// <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
+        /// <li>SmartSubtitle.TransTextTask: Translation result.</li>
+        /// <li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+        /// <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
+        /// <li>SmartErase: intelligent erasure task.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status. It can be PROCESSING, SUCCESS, or FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. `0` indicates success. Other values indicate failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of MPS video processing task.
         /// </summary>
         [JsonProperty("Output")]
         public MPSTaskOutput Output{ get; set; }

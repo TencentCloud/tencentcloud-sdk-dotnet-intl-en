@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Template ID for speech keyword recognition.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Prompt input to the model.
         /// </summary>
         [JsonProperty("Prompts")]
         public string[] Prompts{ get; set; }

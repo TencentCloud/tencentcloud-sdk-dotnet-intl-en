@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Knowledge base information list.</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseSet")]
         public KnowledgeBaseInfo[] KnowledgeBaseSet{ get; set; }

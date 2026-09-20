@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// File ID deleted.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Files deleted this time.
         /// </summary>
         [JsonProperty("DeleteParts")]
         public MediaDeleteItem[] DeleteParts{ get; set; }

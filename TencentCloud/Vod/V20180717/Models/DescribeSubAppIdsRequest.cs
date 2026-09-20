@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Application name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag information. Query the application list with a specified tag.
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Starting offset for pagination pull. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

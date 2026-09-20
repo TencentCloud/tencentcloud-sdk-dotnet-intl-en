@@ -25,67 +25,67 @@ namespace TencentCloud.Captcha.V20190722.Models
     {
         
         /// <summary>
-        /// Fill with fixed value: 9.
+        /// <p>Fixed value: 9.</p>
         /// </summary>
         [JsonProperty("CaptchaType")]
         public ulong? CaptchaType{ get; set; }
 
         /// <summary>
-        /// The user verification ticket returned by the frontend callback function.
+        /// <p>User verification ticket returned by the frontend callback function</p>
         /// </summary>
         [JsonProperty("Ticket")]
         public string Ticket{ get; set; }
 
         /// <summary>
-        /// The user public IP obtained from the customer backend server.
+        /// <p>Public network IP of the verification</p>
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// A random string returned by the frontend callback function
+        /// <p>Random string returned by the frontend callback function</p>
         /// </summary>
         [JsonProperty("Randstr")]
         public string Randstr{ get; set; }
 
         /// <summary>
-        /// CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+        /// <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
         /// </summary>
         [JsonProperty("CaptchaAppId")]
         public ulong? CaptchaAppId{ get; set; }
 
         /// <summary>
-        /// CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+        /// <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
         /// </summary>
         [JsonProperty("AppSecretKey")]
         public string AppSecretKey{ get; set; }
 
         /// <summary>
-        /// Reserved field.
+        /// <p>Reserved field</p>
         /// </summary>
         [JsonProperty("BusinessId")]
         public ulong? BusinessId{ get; set; }
 
         /// <summary>
-        /// Reserved field.
+        /// <p>Reserved field</p>
         /// </summary>
         [JsonProperty("SceneId")]
         public ulong? SceneId{ get; set; }
 
         /// <summary>
-        /// MAC address or unique identifier of a device
+        /// <p>mac address or unique device identifier</p>
         /// </summary>
         [JsonProperty("MacAddress")]
         public string MacAddress{ get; set; }
 
         /// <summary>
-        /// Mobile equipment identity number
+        /// <p>Mobile device number</p>
         /// </summary>
         [JsonProperty("Imei")]
         public string Imei{ get; set; }
 
         /// <summary>
-        /// Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+        /// <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
         /// </summary>
         [JsonProperty("NeedGetCaptchaTime")]
         public long? NeedGetCaptchaTime{ get; set; }

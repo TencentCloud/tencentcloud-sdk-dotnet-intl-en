@@ -25,49 +25,59 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Score of offensive information involved in suspected clips.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Result suggestions for identifying violations in suspected clips. Value range:
+        /// <li>review: suspected violation, suggest re-examination;</li>
+        /// <li>block: Confirmed violation. Suggest banning.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag of the most likely rule violation in the suspected segment. Value range:
+        /// <li>Porn: Pornography;</li>
+        /// <li>Terror: violence.</li>
+        /// <li>Polity: inappropriate information;</li>
+        /// <li>Ad: advertisement;</li>
+        /// <li>Illegal: illegal activities;</li>
+        /// <li>Abuse: abusive language.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rule violation subtag.
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Suspected segment violation form. Value range:
+        /// <li>Image: people or icons in the image;</li>
+        /// <li>OCR: text on the screen.</li>
         /// </summary>
         [JsonProperty("Form")]
         public string Form{ get; set; }
 
         /// <summary>
-        /// 
+        /// Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Form is OCR. It indicates the recognized OCR text content.
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }

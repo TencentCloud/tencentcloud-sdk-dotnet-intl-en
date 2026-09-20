@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Switch for the full text recognition task. Available values:
+        /// <li>ON: Turn on the intelligent full text recognition task;</li>
+        /// <li>OFF: disables the intelligent full text recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

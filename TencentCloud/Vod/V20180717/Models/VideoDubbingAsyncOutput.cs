@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Dubbing result Url</p>
         /// </summary>
         [JsonProperty("ResultUrl")]
         public string ResultUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Dubbing result FileId</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

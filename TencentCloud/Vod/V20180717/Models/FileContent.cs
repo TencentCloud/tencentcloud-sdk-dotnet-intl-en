@@ -25,61 +25,69 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Object key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 
+        /// Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
         /// </summary>
         [JsonProperty("LastModified")]
         public string LastModified{ get; set; }
 
         /// <summary>
-        /// 
+        /// Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
         /// </summary>
         [JsonProperty("ETag")]
         public string ETag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Object size in bytes.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// 
+        /// For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unique identifier of the media file corresponding to this file.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 
+        /// File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
         /// </summary>
         [JsonProperty("Category")]
         public string Category{ get; set; }
 
         /// <summary>
-        /// 
+        /// Optional values:
+        /// -OriginalFiles: source file
+        /// - TranscodeFiles: transcoded file
+        /// -AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+        /// - SubtitleFiles: subtitle files.
+        /// - SampleSnapshotFiles: sampled screenshot files.
+        /// - ImageSpriteFiles: image sprite screenshot files
+        /// - SnapshotByTimeOffsetFiles: time point screenshot files.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video template ID. For template definition, see Transcoding Template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle ID.
+        /// Value only when FileType is SubtitleFiles.
         /// </summary>
         [JsonProperty("SubtitleID")]
         public string SubtitleID{ get; set; }

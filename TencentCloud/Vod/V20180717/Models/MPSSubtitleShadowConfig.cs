@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
         /// </summary>
         [JsonProperty("SubtitleShadowConfigSwitch")]
         public long? SubtitleShadowConfigSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
         /// </summary>
         [JsonProperty("ShadowWidth")]
         public float? ShadowWidth{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
         /// </summary>
         [JsonProperty("ShadowWidthUnit")]
         public long? ShadowWidthUnit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
         /// </summary>
         [JsonProperty("ShadowColor")]
         public string ShadowColor{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
         /// </summary>
         [JsonProperty("ShadowAlpha")]
         public float? ShadowAlpha{ get; set; }

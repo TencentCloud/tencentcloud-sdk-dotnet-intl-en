@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Image moderation count statistics, showing overview data of image moderation counts within a specified time range.
         /// </summary>
         [JsonProperty("ImageReviewUsageDataSet")]
         public ImageReviewUsageDataItem[] ImageReviewUsageDataSet{ get; set; }

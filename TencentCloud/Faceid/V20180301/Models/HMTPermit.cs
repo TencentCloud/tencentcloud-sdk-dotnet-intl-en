@@ -37,37 +37,37 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string EnglishName{ get; set; }
 
         /// <summary>
-        /// License number
+        /// ID number
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// Gender
+        /// Sex
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Valid date
+        /// Validity period.
         /// </summary>
         [JsonProperty("ValidDate")]
         public string ValidDate{ get; set; }
 
         /// <summary>
-        /// Issued authority
+        /// Issuing authority
         /// </summary>
         [JsonProperty("IssueAuthority")]
         public string IssueAuthority{ get; set; }
 
         /// <summary>
-        /// Issued address
+        /// Issuing place
         /// </summary>
         [JsonProperty("IssueAddress")]
         public string IssueAddress{ get; set; }
 
         /// <summary>
-        /// Birthday
+        /// Date of birth
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }

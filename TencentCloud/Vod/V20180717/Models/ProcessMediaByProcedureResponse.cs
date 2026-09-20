@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task ID of the task type Procedure. The task is initiated when the task flow template specified by the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task ID of the task type ReviewAudioVideo. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ReviewAudioVideoTask.</p>
         /// </summary>
         [JsonProperty("ReviewAudioVideoTaskId")]
         public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledgeTaskIdSet")]
         public string[] ImportMediaKnowledgeTaskIdSet{ get; set; }

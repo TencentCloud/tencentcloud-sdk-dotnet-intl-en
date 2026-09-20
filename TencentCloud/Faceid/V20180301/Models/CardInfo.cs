@@ -25,148 +25,127 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Hong Kong ID (China) Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Hong Kong identity card
         /// </summary>
         [JsonProperty("HKIDCard")]
         public HKIDCard HKIDCard{ get; set; }
 
         /// <summary>
-        /// Malaysia ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Malaysian identity card
         /// </summary>
         [JsonProperty("MLIDCard")]
         public MLIDCard MLIDCard{ get; set; }
 
         /// <summary>
-        /// Philippines VoteID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Philippines voter card
         /// </summary>
         [JsonProperty("PhilippinesVoteID")]
         public PhilippinesVoteID PhilippinesVoteID{ get; set; }
 
         /// <summary>
-        /// Indonesia ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indonesian Identity Card
         /// </summary>
         [JsonProperty("IndonesiaIDCard")]
         public IndonesiaIDCard IndonesiaIDCard{ get; set; }
 
         /// <summary>
-        /// Philippines Driving License
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Philippines driving license
         /// </summary>
         [JsonProperty("PhilippinesDrivingLicense")]
         public PhilippinesDrivingLicense PhilippinesDrivingLicense{ get; set; }
 
         /// <summary>
-        /// Philippines TinID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// TinID in the Philippines
         /// </summary>
         [JsonProperty("PhilippinesTinID")]
         public PhilippinesTinID PhilippinesTinID{ get; set; }
 
         /// <summary>
         /// Philippines SSSID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhilippinesSSSID")]
         public PhilippinesSSSID PhilippinesSSSID{ get; set; }
 
         /// <summary>
         /// Philippines UMID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PhilippinesUMID")]
         public PhilippinesUMID PhilippinesUMID{ get; set; }
 
         /// <summary>
-        /// ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Hong Kong, Macao, and Taiwan region as well as overseas passport
         /// </summary>
         [JsonProperty("InternationalIDPassport")]
         public InternationalIDPassport InternationalIDPassport{ get; set; }
 
         /// <summary>
-        /// General license information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// General card certificate information
         /// </summary>
         [JsonProperty("GeneralCard")]
         public GeneralCard GeneralCard{ get; set; }
 
         /// <summary>
-        /// Indonesia Driving License
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Indonesian driving license
         /// </summary>
         [JsonProperty("IndonesiaDrivingLicense")]
         public IndonesiaDrivingLicense IndonesiaDrivingLicense{ get; set; }
 
         /// <summary>
-        /// Thailand ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Thai Identity Card
         /// </summary>
         [JsonProperty("ThailandIDCard")]
         public ThailandIDCard ThailandIDCard{ get; set; }
 
         /// <summary>
-        /// Singapore ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Singapore ID card
         /// </summary>
         [JsonProperty("SingaporeIDCard")]
         public SingaporeIDCard SingaporeIDCard{ get; set; }
 
         /// <summary>
-        /// Macao (China) ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Macao (China) identity card
         /// </summary>
         [JsonProperty("MacaoIDCard")]
         public MacaoIDCard MacaoIDCard{ get; set; }
 
         /// <summary>
-        /// TaiWan (China) ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Taiwan (China) ID card
         /// </summary>
         [JsonProperty("TaiWanIDCard")]
         public TaiWanIDCard TaiWanIDCard{ get; set; }
 
         /// <summary>
-        /// Japan ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Japan identity card
         /// </summary>
         [JsonProperty("JapanIDCard")]
         public JapanIDCard JapanIDCard{ get; set; }
 
         /// <summary>
-        /// Bangladesh ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Bangladesh ID card
         /// </summary>
         [JsonProperty("BangladeshIDCard")]
         public BangladeshIDCard BangladeshIDCard{ get; set; }
 
         /// <summary>
-        /// Nigeria ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Nigerian Identity Card
         /// </summary>
         [JsonProperty("NigeriaIDCard")]
         public NigeriaIDCard NigeriaIDCard{ get; set; }
 
         /// <summary>
-        /// Nigeria driving license
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Nigerian driver's license
         /// </summary>
         [JsonProperty("NigeriaDrivingLicense")]
         public NigeriaDrivingLicense NigeriaDrivingLicense{ get; set; }
 
         /// <summary>
-        /// Pakistan ID Card
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pakistan identity card
         /// </summary>
         [JsonProperty("PakistanIDCard")]
         public PakistanIDCard PakistanIDCard{ get; set; }
 
         /// <summary>
-        /// Pakistan driving license
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Pakistan driver's license
         /// </summary>
         [JsonProperty("PakistanDrivingLicense")]
         public PakistanDrivingLicense PakistanDrivingLicense{ get; set; }

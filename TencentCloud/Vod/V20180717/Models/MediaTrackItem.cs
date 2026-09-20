@@ -25,37 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Fragment type. Valid values:
+        /// <li>Video: video clip.</li>
+        /// <li>Audio: audio clip.</li>
+        /// <li>Sticker: texture segment.</li>
+        /// <li>Transition: transition.</li>
+        /// <li>Empty: empty segment.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video clip. Valid when Type is Video.
         /// </summary>
         [JsonProperty("VideoItem")]
         public VideoTrackItem VideoItem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio clip. Valid when Type = Audio.
         /// </summary>
         [JsonProperty("AudioItem")]
         public AudioTrackItem AudioItem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Texture segment. Valid when Type is Sticker.
         /// </summary>
         [JsonProperty("StickerItem")]
         public StickerTrackItem StickerItem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transition. Valid when Type is Transition.
         /// </summary>
         [JsonProperty("TransitionItem")]
         public MediaTransitionItem TransitionItem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+        /// <li>Use EmptyTrackItem as a placeholder to locate an item.</li>
         /// </summary>
         [JsonProperty("EmptyItem")]
         public EmptyTrackItem EmptyItem{ get; set; }

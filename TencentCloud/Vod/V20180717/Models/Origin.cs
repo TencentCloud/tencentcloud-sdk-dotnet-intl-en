@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// Primary origin server type. The input parameter supports the following types:
+        /// Primary origin server type. Input supports the following types:
         /// <li>domain: Domain type;</li>
         /// <li>ip: IP list as the origin server;</li>
         /// <li>third_party: third-party object storage origin.</li>
@@ -41,14 +41,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+        /// Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
         /// When the origin server type is COS, the ServerName field is required.
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }
 
         /// <summary>
-        /// Origin-pull protocol configuration:
+        /// Origin-pull protocol configuration.
         /// <li>http: Force HTTP origin-pull.</li>
         /// <li>follow: follow protocol for origin-pull;</li>
         /// <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -58,7 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Backup origin list.
-        /// When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+        /// When modifying the backup origin server, fill in the corresponding OriginType at the same time.
         /// </summary>
         [JsonProperty("BackupOrigins")]
         public string[] BackupOrigins{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BackupOriginType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
         /// </summary>
         [JsonProperty("BackupServerName")]
         public string BackupServerName{ get; set; }
 
         /// <summary>
-        /// Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+        /// Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
         /// <li>aws_s3:AWS S3;</li>
         /// <li>ali_oss: Alibaba Cloud OSS;</li>
         /// <li>hw_obs: Huawei OBS;</li>

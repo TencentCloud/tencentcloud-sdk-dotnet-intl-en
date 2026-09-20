@@ -34,20 +34,20 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Access forced redirect type:
-        /// <li>http: Force HTTP redirect</li>
+        /// <li>http: Force HTTP redirection</li>
         /// <li>https: Force HTTPS redirection</li>
         /// </summary>
         [JsonProperty("RedirectType")]
         public string RedirectType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Status code returned for forced redirection. Supports 301 and 302.
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public ulong? RedirectStatusCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to return the added header during forced redirection.
         /// </summary>
         [JsonProperty("CarryHeaders")]
         public string CarryHeaders{ get; set; }

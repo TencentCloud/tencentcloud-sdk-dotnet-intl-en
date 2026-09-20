@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Principal ID. You need to record the returned principal ID.
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }

@@ -25,37 +25,45 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>Keyword application scenario filtering conditions. Available values:</b>
+        /// 1. Recognition.Ocr: Performs content recognition using OCR.
+        /// 2. Recognition.Asr: Perform content recognition through audio recognition technology.
+        /// 3. Review.Ocr: Perform inappropriate content recognition through OCR.
+        /// 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+        /// <b>Can be abbreviated as:</b>
+        /// 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+        /// 6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+        /// Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
         /// </summary>
         [JsonProperty("Usages")]
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// 
+        /// Keyword filtering conditions. Array length limit: 100 words.
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 
+        /// Tag filtering condition. Array length limit: 20 words.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pagination offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of returned entries. Default value: 100. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

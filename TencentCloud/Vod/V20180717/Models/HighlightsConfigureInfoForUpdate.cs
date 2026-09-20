@@ -25,7 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Intelligent highlight task switch. Available values:
+        /// <li>ON: enable the intelligent highlight task;</li>
+        /// <li>OFF: Disable the intelligent highlight task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

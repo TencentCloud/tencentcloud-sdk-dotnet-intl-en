@@ -25,49 +25,53 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Carousel list.
+        /// <li>Array length limit: 100.</li>
         /// </summary>
         [JsonProperty("RoundPlaylist")]
         public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }
 
         /// <summary>
-        /// 
+        /// <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Carousel playbill name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Carousel playlist description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback mode. Optional values:
+        /// <li>Loop: loop playback playlist;</li>
+        /// <li>Linear: single play, stop playback after playlist finishes.</li>
+        /// Default value: Loop.
         /// </summary>
         [JsonProperty("PlayBackMode")]
         public string PlayBackMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Unique playlist ID. Length limit: 64 characters. Only allow a combination of uppercase and lowercase letters (a-zA-Z), digits (0-9), and hyphens (-). If a playlist with the same RoundPlayId exists, return the InvalidParameterValue.RoundPlayAlreadyExists error. Default value: empty, which means it is assigned by the system.
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration. Default value: 9999-12-31T23:59:59+08:00.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

@@ -25,13 +25,17 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Low-light enhancement control switch. Available values:
+        /// <li>ON: enable low-light enhancement;</li>
+        /// <li>OFF: low-light enhancement disabled.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+        /// <li>normal: Normal low-light enhancement;</li>
+        /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
         /// </summary>
         [JsonProperty("SubtitleLayoutConfigSwitch")]
         public long? SubtitleLayoutConfigSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
         /// </summary>
         [JsonProperty("LineSpacing")]
         public long? LineSpacing{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
         /// </summary>
         [JsonProperty("LineSpacingUnit")]
         public long? LineSpacingUnit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
         /// </summary>
         [JsonProperty("Alignment")]
         public string Alignment{ get; set; }

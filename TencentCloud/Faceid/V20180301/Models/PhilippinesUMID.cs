@@ -25,50 +25,43 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// Surname
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Last name
         /// </summary>
         [JsonProperty("Surname")]
         public string Surname{ get; set; }
 
         /// <summary>
-        /// Middle Name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Middle name
         /// </summary>
         [JsonProperty("MiddleName")]
         public string MiddleName{ get; set; }
 
         /// <summary>
-        /// First name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Name
         /// </summary>
         [JsonProperty("GivenName")]
         public string GivenName{ get; set; }
 
         /// <summary>
-        /// Gender
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
         /// Birthday
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Address
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Address.
         /// </summary>
         [JsonProperty("Address")]
         public string Address{ get; set; }
 
         /// <summary>
-        /// CRN code
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// crn code
         /// </summary>
         [JsonProperty("CRN")]
         public string CRN{ get; set; }

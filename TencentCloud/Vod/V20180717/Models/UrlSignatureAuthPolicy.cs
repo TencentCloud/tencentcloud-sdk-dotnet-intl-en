@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) setting status. Available values:
+        /// <li>Enabled: enabled.</li>
+        /// <li>Disabled: disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Key used for generating signature in [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1).
+        /// The length of the EncryptedKey string is 8–40 bytes. It cannot contain invisible characters.
         /// </summary>
         [JsonProperty("EncryptedKey")]
         public string EncryptedKey{ get; set; }

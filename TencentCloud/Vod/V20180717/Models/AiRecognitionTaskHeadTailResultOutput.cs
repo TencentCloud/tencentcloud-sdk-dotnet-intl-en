@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Recognition confidence of the opening scene. Value range: 0-100.
         /// </summary>
         [JsonProperty("HeadConfidence")]
         public float? HeadConfidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time point of the video intro, in seconds.
         /// </summary>
         [JsonProperty("HeadTimeOffset")]
         public float? HeadTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recognition confidence of the ending scene. Value range: 0-100.
         /// </summary>
         [JsonProperty("TailConfidence")]
         public float? TailConfidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Start time point of the video ending, in seconds.
         /// </summary>
         [JsonProperty("TailTimeOffset")]
         public float? TailTimeOffset{ get; set; }

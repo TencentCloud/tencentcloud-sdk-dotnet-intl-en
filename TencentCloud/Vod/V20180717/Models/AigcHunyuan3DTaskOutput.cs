@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcHunyuan3DTaskOutputFileInfo[] FileInfos{ get; set; }

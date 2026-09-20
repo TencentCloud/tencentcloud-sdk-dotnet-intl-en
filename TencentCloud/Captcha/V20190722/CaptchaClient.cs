@@ -28,7 +28,7 @@ namespace TencentCloud.Captcha.V20190722
 
        private const string endpoint = "captcha.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1391";
+       private const string sdkVersion = "SDK_NET_3.0.1397";
 
         /// <summary>
         /// Client constructor.
@@ -138,7 +138,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the result of CAPTCHA ticket verification (web and app).
+        /// This API is used to check the ticket results of verification codes for Web and APP.
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// This API is used to query the result of CAPTCHA ticket verification (web and app).
+        /// This API is used to check the ticket results of verification codes for Web and APP.
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>

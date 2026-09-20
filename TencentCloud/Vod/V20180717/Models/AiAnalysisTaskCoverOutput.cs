@@ -25,19 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// List of smart covers.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
         /// </summary>
         [JsonProperty("CoverSet")]
         public MediaAiAnalysisCoverItem[] CoverSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
         /// </summary>
         [JsonProperty("CoverSetFileUrl")]
         public string CoverSetFileUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CoverSetFileUrlExpireTime")]
         public string CoverSetFileUrlExpireTime{ get; set; }

@@ -25,37 +25,54 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique identifier of the subtitle.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle language. Common values are as follows:
+        /// <li>zh: Chinese;</li>
+        /// <li>en: English;</li>
+        /// <li>ja: Japanese;</li>
+        /// <li>ko: Korean;</li>
+        /// <li>vi: Vietnamese;</li>
+        /// <li>ms: Malay;</li>
+        /// <li>th: Thai;</li>
+        /// <li>pt: Portuguese;</li>
+        /// <li>tr: Turkish;</li>
+        /// <li>ar: Arabic;</li>
+        /// <li>es: Spanish;</li>
+        /// <li>hi: Hindi;</li>
+        /// <li>fr: French.</li>
+        /// For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646).
         /// </summary>
         [JsonProperty("Language")]
         public string Language{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle format. Valid values:
+        /// <li>vtt</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle URL.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle source. Value range:
+        /// <li>UserUploaded: user upload;</li>
+        /// <li>AIRecognition: AI recognition through speech recognition or speech translation generation.</li>
         /// </summary>
         [JsonProperty("Source")]
         public string Source{ get; set; }

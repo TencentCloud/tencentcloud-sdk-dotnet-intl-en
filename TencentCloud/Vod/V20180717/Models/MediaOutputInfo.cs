@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Region of the output file Bucket, for example, ap-guangzhou.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output file Bucket.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output file directory. The directory name must end with "/".
         /// </summary>
         [JsonProperty("Dir")]
         public string Dir{ get; set; }

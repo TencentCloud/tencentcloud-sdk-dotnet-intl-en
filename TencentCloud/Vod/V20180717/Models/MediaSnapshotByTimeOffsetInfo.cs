@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetSet")]
         public MediaSnapshotByTimeOffsetItem[] SnapshotByTimeOffsetSet{ get; set; }

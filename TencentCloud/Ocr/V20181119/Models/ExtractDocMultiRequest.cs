@@ -114,6 +114,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("OutputLanguage")]
         public string OutputLanguage{ get; set; }
 
+        /// <summary>
+        /// Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+        /// </summary>
+        [JsonProperty("NewItemNames")]
+        public ItemNames[] NewItemNames{ get; set; }
+
+        /// <summary>
+        /// The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+        /// </summary>
+        [JsonProperty("MultiModelVersion")]
+        public string MultiModelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +143,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "OutputParentKey", this.OutputParentKey);
             this.SetParamObj(map, prefix + "ConfigAdvanced.", this.ConfigAdvanced);
             this.SetParamSimple(map, prefix + "OutputLanguage", this.OutputLanguage);
+            this.SetParamArrayObj(map, prefix + "NewItemNames.", this.NewItemNames);
+            this.SetParamSimple(map, prefix + "MultiModelVersion", this.MultiModelVersion);
         }
     }
 }

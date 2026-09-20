@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Audio and video quality regeneration task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

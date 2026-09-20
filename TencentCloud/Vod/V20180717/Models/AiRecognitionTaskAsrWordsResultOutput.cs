@@ -25,19 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Result set of speech keyword recognition.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskAsrWordsResultItem[] ResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
         /// </summary>
         [JsonProperty("ResultSetFileUrl")]
         public string ResultSetFileUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ResultSetFileUrlExpireTime")]
         public string ResultSetFileUrlExpireTime{ get; set; }

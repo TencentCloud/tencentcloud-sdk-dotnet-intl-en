@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Timbre name.</p>
         /// </summary>
         [JsonProperty("VoiceName")]
         public string VoiceName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Link to obtain the timbre data file.</p>
         /// </summary>
         [JsonProperty("VoiceUrl")]
         public string VoiceUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Historic works ID, which can provide audio material by referring to historic works.</p>
         /// </summary>
         [JsonProperty("VideoId")]
         public string VideoId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Token of the API
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }

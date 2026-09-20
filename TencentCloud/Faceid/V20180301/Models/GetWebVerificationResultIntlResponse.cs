@@ -25,49 +25,43 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The final result of this verification. `0` indicates that the person is the same as that in the photo.
-        /// For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// The description of the final verification result.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Final result description of this process.</p>
         /// </summary>
         [JsonProperty("ErrorMsg")]
         public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
         /// </summary>
         [JsonProperty("VerificationDetailList")]
         public VerificationDetail[] VerificationDetailList{ get; set; }
 
         /// <summary>
-        /// The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
         /// </summary>
         [JsonProperty("VideoBase64")]
         public string VideoBase64{ get; set; }
 
         /// <summary>
-        /// The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
         /// </summary>
         [JsonProperty("BestFrameBase64")]
         public string BestFrameBase64{ get; set; }
 
         /// <summary>
-        /// Card recognize result
+        /// <p>License recognition result</p>
         /// </summary>
         [JsonProperty("OCRResult")]
         public OCRResult[] OCRResult{ get; set; }
 
         /// <summary>
-        /// The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+        /// <p>Service pass-through parameter.</p>
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }

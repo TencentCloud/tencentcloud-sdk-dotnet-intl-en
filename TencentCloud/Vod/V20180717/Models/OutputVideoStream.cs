@@ -25,13 +25,16 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 
+        /// Encoding format for video streams. Optional values:
+        /// <li>libx264: H.264 encoding.</li>
+        /// Default value: libx264.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video frame rate. Value range: [0, 60]. Unit: Hz.
+        /// Default value: 0, which means the frame rate is the same as that of the first video clip in the first video track.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
