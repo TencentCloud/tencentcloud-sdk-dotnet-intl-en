@@ -25,14 +25,13 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// End user's unique identifier in the customer system, up to 256 characters.
+        /// <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
         /// </summary>
         [JsonProperty("UniqueCustomerID")]
         public string UniqueCustomerID{ get; set; }
 
         /// <summary>
-        /// Whether continuous monitoring screening is enabled. 
-        /// Default value: false.
+        /// <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
         /// </summary>
         [JsonProperty("EnableOngoingScreening")]
         public bool? EnableOngoingScreening{ get; set; }

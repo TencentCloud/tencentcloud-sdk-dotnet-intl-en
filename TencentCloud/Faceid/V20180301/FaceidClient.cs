@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1397";
+       private const string sdkVersion = "SDK_NET_3.0.1398";
 
         /// <summary>
         /// Client constructor.
@@ -794,7 +794,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// Changes the status of continuous name list screening.
+        /// Continuous name list screening status change
         /// </summary>
         /// <param name="req"><see cref="UpdateAMLOngoingScreeningStatusRequest"/></param>
         /// <returns><see cref="UpdateAMLOngoingScreeningStatusResponse"/></returns>
@@ -804,7 +804,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// Changes the status of continuous name list screening.
+        /// Continuous name list screening status change
         /// </summary>
         /// <param name="req"><see cref="UpdateAMLOngoingScreeningStatusRequest"/></param>
         /// <returns><see cref="UpdateAMLOngoingScreeningStatusResponse"/></returns>
