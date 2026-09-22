@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task stream status. Valid values:
+        /// Task flow status. Valid values:
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
@@ -53,7 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Media file ID.
+        /// Media file ID
         /// <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
         /// <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
         /// </summary>
@@ -62,16 +62,16 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Media file name
-        /// <li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+        /// <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
         /// <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Media file address.
+        /// Media file address
         /// <li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
-        /// <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+        /// <li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Url of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
@@ -89,7 +89,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
-        /// Execution status and results of an audio/video moderation task.
+        /// Execution status and results of a video moderation task.
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Task flow status change notification mode.
         /// <li>Finish: Initiate an event notification only when all task flows are completed;</li>
-        /// <li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+        /// <li>Change: As long as the state of each subtask in the task flow changes, an event notification will be sent;</li>
         /// <li>None: non-acceptance of the task flow callback.</li>
         /// </summary>
         [JsonProperty("TasksNotifyMode")]
@@ -134,7 +134,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Operator. Valid values:
+        /// Operator. Value range:
         /// <li>System: indicates a system trigger.</li>
         /// </summary>
         [JsonProperty("Operator")]

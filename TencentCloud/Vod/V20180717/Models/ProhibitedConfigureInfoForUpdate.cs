@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Voice prohibition control parameters.
+        /// Voice prohibition control parameter.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public ProhibitedAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }

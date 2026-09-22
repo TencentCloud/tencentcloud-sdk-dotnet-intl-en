@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcUsageDataItem[] AigcUsageDataSet{ get; set; }
 
         /// <summary>
-        /// <p>Text generation detailed log</p>
+        /// <p>Detailed log for text generation</p>
         /// </summary>
         [JsonProperty("AigcTextDetails")]
         public AigcTextDetail AigcTextDetails{ get; set; }

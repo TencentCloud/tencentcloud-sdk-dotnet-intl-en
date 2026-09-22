@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Volume equalization control switch. Available values:
-        /// <li>ON: enable volume equalization</li>
-        /// <li>OFF: Disable volume equalization.</li>
+        /// <li>ON: enable volume equalization;</li>
+        /// <li>OFF: disables volume equalization</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Word{ get; set; }
 
         /// <summary>
-        /// List of segments where the speech keyword appears.
+        /// List of time segments where speech keywords appear.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrWordsSegmentItem[] SegmentSet{ get; set; }

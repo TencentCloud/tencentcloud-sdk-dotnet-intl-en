@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? TimeOffset{ get; set; }
 
         /// <summary>
-        /// Timestamp content string, limited to 1–128 characters.
+        /// Content string for marking points. Limited to 1-128 characters.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

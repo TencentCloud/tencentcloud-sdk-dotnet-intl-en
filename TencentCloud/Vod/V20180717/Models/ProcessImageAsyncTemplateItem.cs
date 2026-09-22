@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of the image asynchronous processing template.
+        /// Template unique identifier for asynchronous image processing.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description information of the async image processing template.
+        /// Description information of the image async processing template.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

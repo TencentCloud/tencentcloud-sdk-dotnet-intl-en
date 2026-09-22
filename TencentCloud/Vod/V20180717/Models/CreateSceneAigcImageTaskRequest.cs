@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// **VOD app ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).**
+        /// **VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.**
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -37,28 +37,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcImageSceneInfo SceneInfo{ get; set; }
 
         /// <summary>
-        /// Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data.
+        /// Input image list. Supported image formats: jpg, jpeg, png, webp. Different scenarios require different input data:
         /// 
-        /// - AI outfit change scenario: Input Only 1 **model** image.
+        /// - AI outfit changing scenario: Input Only 1 **model** image.
         /// - AI product image generation scenario: manually input 1–10 images of the same product from different angles.
         /// </summary>
         [JsonProperty("FileInfos")]
         public SceneAigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// Output media file configuration for scenario-based image generation tasks.
+        /// Configuration of the output media file for a scenario-based image generation task.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SceneAigcImageOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// An identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Source context, used to pass through user request information. The audio and video quality revival complete callback will return the value of this field. Max length: 1000 characters.
+        /// Source context. This is used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. The maximum length is 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

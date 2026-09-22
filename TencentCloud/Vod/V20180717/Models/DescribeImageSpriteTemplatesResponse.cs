@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Sprite template details list.
+        /// Sprite sheet template details list.
         /// </summary>
         [JsonProperty("ImageSpriteTemplateSet")]
         public ImageSpriteTemplate[] ImageSpriteTemplateSet{ get; set; }

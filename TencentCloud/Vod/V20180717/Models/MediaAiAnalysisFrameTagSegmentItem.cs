@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+        /// <p>Time offset of frame tagging start.</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }

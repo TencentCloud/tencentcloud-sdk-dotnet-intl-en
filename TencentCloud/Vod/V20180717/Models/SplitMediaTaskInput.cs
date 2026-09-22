@@ -32,9 +32,9 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Start time offset of video splitting, in seconds.
-        /// <li>Leave this parameter empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
+        /// <li>Leave it empty or set it to 0, indicating that the transcoded video starts from the start position of the original video;</li>
         /// <li>When the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li>
-        /// <li>When the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+        /// <li>When the value is less than 0 (assuming -n), the transcoded video starts n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// End time offset of video splitting, in seconds.
         /// <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-        /// <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then stops;</li>
+        /// <li>When the value is greater than 0 (assuming n), the transcoded video lasts until the nth second of the original video.</li>
         /// <li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ProcedureName{ get; set; }
 
         /// <summary>
-        /// Video splitting output information.
+        /// Output information of video splitting.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SplitMediaOutputConfig OutputConfig{ get; set; }

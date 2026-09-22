@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// Transcoding specification ID. See [Transcoding Parameter Template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
+        /// Transcoding specification ID. See [transcoding parameter template](https://www.tencentcloud.com/document/product/266/33476?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum value of the video stream width in px.
+        /// Maximum video stream width in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }

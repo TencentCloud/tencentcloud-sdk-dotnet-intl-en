@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Value{ get; set; }
 
         /// <summary>
-        /// <p>Extra resource path.</p>
+        /// <p>Attach a resource path.</p>
         /// </summary>
         [JsonProperty("ResourcePath")]
         public string ResourcePath{ get; set; }

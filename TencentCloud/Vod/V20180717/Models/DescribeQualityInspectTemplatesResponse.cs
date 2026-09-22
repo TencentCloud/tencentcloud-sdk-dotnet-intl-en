@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Audio and video quality detection template detail list.
+        /// Audio and video quality detection template details list.
         /// </summary>
         [JsonProperty("QualityInspectTemplateSet")]
         public QualityInspectTemplateItem[] QualityInspectTemplateSet{ get; set; }

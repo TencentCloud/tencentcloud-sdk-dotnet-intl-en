@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Video picture black edge, white edge, black screen, and white screen detection switch. Available values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled.</li>
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

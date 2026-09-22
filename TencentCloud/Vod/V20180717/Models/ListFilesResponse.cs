@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public bool? IsTruncated{ get; set; }
 
         /// <summary>
-        /// The node will be returned only when response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. To continue requesting follow-up entries, import the value of this node as the marker parameter for the next request.
+        /// This node will be returned only when the response entries are truncated (IsTruncated is true). The value of this node is the last object key in the current response entries. When you need to continue requesting subsequent entries, use the value of this node as the marker parameter for the next request.
         /// </summary>
         [JsonProperty("NextMarker")]
         public string NextMarker{ get; set; }
 
         /// <summary>
-        /// The part between the prefix or from the beginning (if prefix is not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
+        /// The same part from the prefix or from the beginning (if not specified) to the first delimiter is defined as a Common prefix. This node may return only when the delimiter parameter is specified in the request.
         /// </summary>
         [JsonProperty("CommonPrefixes")]
         public string[] CommonPrefixes{ get; set; }

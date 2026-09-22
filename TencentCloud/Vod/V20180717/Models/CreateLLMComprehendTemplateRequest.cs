@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Level{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
+        /// <p><b>ID of the on-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a>. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled to parse normally.</p>
+        /// <p>Segment summary parsing configuration<br>Note: In the current version, segment summary must be enabled for normal parsing</p>
         /// </summary>
         [JsonProperty("Summary")]
         public LLMComprehendSummary Summary{ get; set; }
 
         /// <summary>
-        /// <p>Text transcribing and parsing configuration</p>
+        /// <p>Text transcription parsing configuration</p>
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsr Asr{ get; set; }

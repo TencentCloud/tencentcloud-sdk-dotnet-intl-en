@@ -40,13 +40,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+        /// Valid when AudioVideoType is Transcode. It indicates the transcoding template ID for media operation.
         /// </summary>
         [JsonProperty("TranscodeDefinition")]
         public long? TranscodeDefinition{ get; set; }
 
         /// <summary>
-        /// Media editing start offset time in seconds.
+        /// Media editing start offset time, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }

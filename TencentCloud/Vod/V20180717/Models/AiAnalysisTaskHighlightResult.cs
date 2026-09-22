@@ -55,25 +55,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskHighlightInput Input{ get; set; }
 
         /// <summary>
-        /// Task output of intelligent highlight.
+        /// Task output of the intelligent highlight.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHighlightOutput Output{ get; set; }
 
         /// <summary>
-        /// Progress of the intelligent highlight task. Value range: 0-100.
+        /// Intelligent highlight task progress. Value range: [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Intelligent highlight task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Intelligent highlight task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Intelligent highlight task completion time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Intelligent highlight task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Large model parsing template detail list.</p>
+        /// <p>Large model parsing template details list.</p>
         /// </summary>
         [JsonProperty("LLMComprehendTemplateSet")]
         public LLMComprehendTemplateItem[] LLMComprehendTemplateSet{ get; set; }

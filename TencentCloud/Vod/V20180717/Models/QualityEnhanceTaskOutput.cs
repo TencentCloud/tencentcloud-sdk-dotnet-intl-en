@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File type, for example, mp4, flv.
+        /// File type, for example, mp4 or flv.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -56,7 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

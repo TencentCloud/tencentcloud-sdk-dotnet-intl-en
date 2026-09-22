@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// List of log topic IDs. If left empty, it means query all log topics.
+        /// List of log topic IDs. If left empty, it means to query all log topics.
         /// </summary>
         [JsonProperty("TopicIds")]
         public string[] TopicIds{ get; set; }

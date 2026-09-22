@@ -51,7 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Array of image processing operations. Operations are performed in array order.
+        /// Image processing operation array. Operations are performed in array order.
         /// <li>Length limit: 3.</li>
         /// </summary>
         [JsonProperty("Operations")]

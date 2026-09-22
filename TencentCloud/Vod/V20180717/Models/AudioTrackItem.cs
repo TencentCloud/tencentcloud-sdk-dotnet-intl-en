@@ -25,36 +25,36 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Media material source of the audio clip, which can be:
+        /// Media material source of the audio recording clip, which can be:
         /// <li>Media file ID for VOD;</li>
         /// <li>Download URL of other media files.</li>
-        /// Note: When using the download URL of another media file as the material source and access control (such as anti-leech) is enabled, the URL needs to carry access control parameters (such as an anti-leech signature).
+        /// Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// The start time of the audio clip in the material file, in seconds. 0 means to capture from the start position of the material. Default value: 0.
+        /// Start time of the audio clip in the material file, in seconds. 0 means capturing from the start position of the material. Default value: 0.
         /// </summary>
         [JsonProperty("SourceMediaStartTime")]
         public float? SourceMediaStartTime{ get; set; }
 
         /// <summary>
-        /// Duration of the audio clip in seconds. Defaults to the length of the material itself, which means the entire material is captured.
+        /// Duration of the audio clip in seconds. Default: same as the material length, which means the entire material is captured.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Target duration of the audio clip in seconds.
+        /// Target duration of the audio clip, in seconds.
         /// <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-        /// <li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
+        /// <li>When TargetDuration is set to a value more than 0, the audio clip will be fast-forwarded or slowed down to make the output segment duration equal to TargetDuration.</li>
         /// </summary>
         [JsonProperty("TargetDuration")]
         public float? TargetDuration{ get; set; }
 
         /// <summary>
-        /// Operation performed on the audio clip, such as volume adjustment.
+        /// Operation performed on the audio clip, for example, audio volume adjustment.
         /// </summary>
         [JsonProperty("AudioOperations")]
         public AudioTransform[] AudioOperations{ get; set; }

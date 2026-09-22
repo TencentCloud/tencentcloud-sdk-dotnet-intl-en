@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+        /// <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Turn on the task for image recognition involving unsafe information.</li><li>OFF: Turn off the task for image recognition involving unsafe information.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+        /// <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: terrorism flags;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: terrorist figures;</li><li>scenario: terrorism scenes.</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+        /// <p>Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0-100.</p>
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
+        /// <p>Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. Value range: 0–100.</p>
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

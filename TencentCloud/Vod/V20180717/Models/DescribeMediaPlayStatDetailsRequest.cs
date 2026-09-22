@@ -31,28 +31,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Start time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Start time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// End time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// Statistical time granularity. Valid values:
-        /// <li>Hour: in hours.</li>
+        /// <li>Hour: Hourly.</li>
         /// <li>Day: By day.</li>
-        /// The granularity is determined by default based on the duration: less than 1 day uses hour granularity, and 1 day or more uses day granularity.
+        /// The granularity is determined by the time span by default. If the time span is less than 1 day, the granularity is hour. If the time span is equal to or greater than 1 day, the granularity is day.
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

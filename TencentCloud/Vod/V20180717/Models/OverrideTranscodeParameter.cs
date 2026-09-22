@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// <p>TSC transcoding configuration parameters.</p>
+        /// <p>Top Speed Codec transcoding configuration parameters.</p>
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Template ID for authentication involving inappropriate information.
+        /// Template ID for authenticating content that involves inappropriate information.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

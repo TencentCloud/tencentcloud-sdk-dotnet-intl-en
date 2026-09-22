@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// List of template IDs used for watermarking if the screenshot is watermarked.
+        /// List of template IDs if the screenshot is watermarked.
         /// </summary>
         [JsonProperty("WaterMarkDefinition")]
         public long?[] WaterMarkDefinition{ get; set; }

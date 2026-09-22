@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Input media track list, including multiple track information composed of materials such as video, audio, and images.
+        /// Input media track list, including multiple track information composed of materials such as video, audio, and image.
         /// </summary>
         [JsonProperty("Tracks")]
         public MediaTrack[] Tracks{ get; set; }

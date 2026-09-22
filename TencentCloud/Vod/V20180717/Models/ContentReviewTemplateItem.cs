@@ -43,19 +43,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Authentication involves control parameters for offensive information.
+        /// Control parameters for authentication involving offensive information.
         /// </summary>
         [JsonProperty("PornConfigure")]
         public PornConfigureInfo PornConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for authentication involving unsafe information.
+        /// Authentication involves control parameters for unsafe information.
         /// </summary>
         [JsonProperty("TerrorismConfigure")]
         public TerrorismConfigureInfo TerrorismConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for identifying inappropriate information.
+        /// Control parameters for authentication involving inappropriate information.
         /// </summary>
         [JsonProperty("PoliticalConfigure")]
         public PoliticalConfigureInfo PoliticalConfigure{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// User-customized control parameters for audio/video moderation.
+        /// Control parameters of custom audio/video moderation.
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
         /// <li>ON: Yes;</li>
-        /// <li>OFF: No.</li>
+        /// <li>OFF: no</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }
@@ -89,7 +89,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? ScreenshotInterval{ get; set; }
 
         /// <summary>
-        /// Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

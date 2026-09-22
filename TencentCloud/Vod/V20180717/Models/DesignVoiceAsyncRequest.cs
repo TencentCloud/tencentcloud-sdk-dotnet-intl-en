@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+        /// <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExtParam{ get; set; }
 
         /// <summary>
-        /// <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback will return the value of this field. The maximum length is 1000 characters.</p>
+        /// <p>Identifies source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+        /// <p>Identification Code for Task Deduplication. If a request with the same identification code within the past 3 days, an error will be returned for the current request. The longest is 50 characters. With empty string or not specified indicate no deduplication.</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

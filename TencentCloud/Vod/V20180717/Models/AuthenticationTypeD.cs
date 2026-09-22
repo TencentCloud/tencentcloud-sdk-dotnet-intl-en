@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Key used for signature calculation.
-        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+        /// Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
@@ -40,28 +40,28 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// List of filename extensions for authentication/no authentication settings;
-        /// If it contains the character *, it means all files.
+        /// If it contains the character *, it indicates all files.
         /// </summary>
         [JsonProperty("FileExtensions")]
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-        /// blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+        /// whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+        /// blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
-        /// Signature parameter name setting;
-        /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+        /// Signature parameter name settings;
+        /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
         /// </summary>
         [JsonProperty("SignParam")]
         public string SignParam{ get; set; }
 
         /// <summary>
         /// Timestamp parameter name settings;
-        /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+        /// Only allow upper- and lower-case letters, digits, or underscores, with a length of 1–100 characters. It cannot start with a digit.
         /// </summary>
         [JsonProperty("TimeParam")]
         public string TimeParam{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Secondary key for signature calculation.
-        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+        /// Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

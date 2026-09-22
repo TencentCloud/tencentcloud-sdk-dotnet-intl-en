@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Recognition confidence of the opening scene. Value range: 0-100.
+        /// Confidence of opening scene recognition. Value range: 0-100.
         /// </summary>
         [JsonProperty("HeadConfidence")]
         public float? HeadConfidence{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? TailConfidence{ get; set; }
 
         /// <summary>
-        /// Start time point of the video ending, in seconds.
+        /// Start time point of the video ending scene. Unit: seconds.
         /// </summary>
         [JsonProperty("TailTimeOffset")]
         public float? TailTimeOffset{ get; set; }

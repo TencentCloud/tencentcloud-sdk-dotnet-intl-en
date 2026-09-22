@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Distribute the configured domain name (abandoned).</p>
+        /// <p>Distribution configured domain name (abandoned).</p>
         /// </summary>
         [JsonProperty("DomainName")]
         [System.Obsolete]
@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+        /// <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 and 20 characters.</p>
         /// </summary>
         [JsonProperty("PlayKey")]
         public string PlayKey{ get; set; }

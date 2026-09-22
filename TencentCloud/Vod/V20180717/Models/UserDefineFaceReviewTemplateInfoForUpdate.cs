@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch for the user-defined character audio/video moderation task. Available values:
-        /// <li>ON: enable the customized figure audio/video moderation task;</li>
-        /// <li>OFF: Turn off the customized figure audio/video moderation task.</li>
+        /// Switch for user-defined character audio/video moderation tasks. Available values:
+        /// <li>ON: Turn on customized figure audio/video moderation tasks;</li>
+        /// <li>OFF: disables the customized figure audio/video moderation task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -40,13 +40,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining suspected violations. When the audio/video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+        /// Threshold score for determining suspected violations. When the video moderation score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is deemed necessary. Value range: 0–100.
+        /// Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

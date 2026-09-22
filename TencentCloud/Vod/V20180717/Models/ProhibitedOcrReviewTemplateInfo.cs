@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Text prohibition task switch. Available values:
-        /// <li>ON: enable text prohibition task;</li>
-        /// <li>OFF: Disable the text prohibition task.</li>
+        /// <li>ON: enable the text prohibition task;</li>
+        /// <li>OFF: disables the text prohibition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Default value: 75. Value range: 0–100.
+        /// Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, it defaults to 75 points. Value range: 0–100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

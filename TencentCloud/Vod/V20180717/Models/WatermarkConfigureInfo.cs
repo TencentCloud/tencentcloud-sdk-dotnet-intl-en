@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+        /// Base64-encoded string of the watermark image. Supports jpeg and png formats.
         /// </summary>
         [JsonProperty("ImageContent")]
         public string ImageContent{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string XPos{ get; set; }
 
         /// <summary>
-        /// Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, the watermark YPos is the specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
+        /// Vertical position of the watermark origin relative to the origin of coordinates of the video image. When the string ends with %, it means the watermark YPos is a specified percentage of the video height. For example, 10% means YPos is 10% of the video height.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }

@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task switch for ASR-based recognition involving offensive content. Available values:
-        /// <li>ON: enable the task involving ASR-based recognition of offensive content;</li>
-        /// <li>OFF: Disable the task involving offensive content in ASR-based recognition.</li>
+        /// <li>ON: enable the ASR-based recognition task involving offensive content;</li>
+        /// <li>OFF: disables the task involving offensive content in ASR-based recognition.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining suspected violations. When the review score reaches this threshold or above, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0–100.
+        /// Threshold score for suspected violations. If the review score reaches or exceeds this value, the content is deemed as suspected violation. Default value: 100. Value range: 0–100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }

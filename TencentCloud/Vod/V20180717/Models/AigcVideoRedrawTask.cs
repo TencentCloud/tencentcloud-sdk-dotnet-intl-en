@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+        /// <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extension error code.</p>
+        /// <p>Expansion error code.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Task progress. Value ranges from 0 to 100.</p>
+        /// <p>Task progress. Value range: [0-100].</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// <p>Input information of the AIGC video redrawing task.</p>
+        /// <p>Input information of the AIGC video conversion task.</p>
         /// </summary>
         [JsonProperty("Input")]
         public AigcVideoRedrawTaskInput Input{ get; set; }

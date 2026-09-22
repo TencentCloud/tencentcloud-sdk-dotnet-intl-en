@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
+        /// <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
         /// </summary>
         [JsonProperty("VodSessionKey")]
         public string VodSessionKey{ get; set; }
 
         /// <summary>
-        /// <p>Media storage path, the object Key for storing media uploaded through the API.</p>
+        /// <p>Media storage path, the object Key for uploading and storing media through the API.</p>
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }

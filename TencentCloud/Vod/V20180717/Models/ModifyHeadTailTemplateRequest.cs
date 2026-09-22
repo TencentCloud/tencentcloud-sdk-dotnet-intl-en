@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the application ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Template name. Length limited to 64 characters. If not passed, it represents no modification.
+        /// Template name. Length limited to 64 characters. If not passed, no modification is made.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,22 +49,22 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Opening candidate list. Fill in the FileId of the video. During transcoding, the opening scene with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are identical, the candidate positioned towards the front takes precedence. A maximum of 5 candidate opening scenes is supported. If not passed, no modification is made. An empty array clears the list.
+        /// Opening candidate list. Fill in the FileId of the video. During transcoding, the opening closest to the aspect ratio of the main content is automatically selected. If the aspect ratios are identical, the candidate positioned towards the front takes precedence. A maximum of 5 title candidates is supported. Not passing this parameter means no modification, while passing an empty array means clearing.
         /// </summary>
         [JsonProperty("HeadCandidateSet")]
         public string[] HeadCandidateSet{ get; set; }
 
         /// <summary>
-        /// Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to that of the main content is automatically selected. If the aspect ratios are the same, candidates positioned towards the front take precedence. A maximum of 5 title candidates is supported. If not passed, no modification is made. An empty array clears the list.
+        /// Ending candidate list. Fill in the FileId of the video. During transcoding, the ending with the aspect ratio closest to the main content is automatically selected. If the aspect ratios are identical, candidates positioned towards the front take precedence. A maximum of 5 title candidates is supported. Not passing this parameter means no modification. Passing an empty array means clearing.
         /// </summary>
         [JsonProperty("TailCandidateSet")]
         public string[] TailCandidateSet{ get; set; }
 
         /// <summary>
-        /// Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling methods:
-        /// <li> stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-        /// <li> gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part;</li>
-        /// <li> white: Leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
+        /// Filling method. When the aspect ratio of the video stream configuration width and height parameters is inconsistent with that of the original video, the processing method for transcoding is "padding". Optional filling methods:
+        /// <li> stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+        /// <li> gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part;</li>
+        /// <li> white: leave blank, maintain video aspect ratio, and fill the remaining edges with white;</li>
         /// <li> black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
         /// The default value is no modification.
         /// </summary>

@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Key used for signature calculation.
-        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+        /// Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Signature expiration time settings;
-        /// In seconds. Maximum settable value: 630720000.
+        /// Signature expiration time setting;
+        /// In seconds. The maximum settable value is 630720000.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
@@ -46,15 +46,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] FileExtensions{ get; set; }
 
         /// <summary>
-        /// whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-        /// blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+        /// whitelist: allowlist, means to authenticate all types except those in the FileExtensions list;
+        /// blacklist: blocklist, means authentication is only applicable to the types in FileExtensions.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
         /// <summary>
         /// Secondary key for signature calculation.
-        /// Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
+        /// Only allow upper- and lower-case letters and digits, with a length of 6–32 characters.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }

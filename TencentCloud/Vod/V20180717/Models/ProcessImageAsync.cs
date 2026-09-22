@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A non-zero error code will be returned for a source error. If 0 is returned, use the ErrCode of each specific task.
+        /// Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task progress, value range: [0-100].
+        /// Task progress. Value range: [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input information of async image processing tasks.
+        /// Input information of the image asynchronous processing task.
         /// </summary>
         [JsonProperty("Input")]
         public ProcessImageAsyncInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of the image asynchronous processing task.
+        /// Output information of the image asynchronous task processing.
         /// </summary>
         [JsonProperty("Output")]
         public ProcessImageAsyncOutput Output{ get; set; }

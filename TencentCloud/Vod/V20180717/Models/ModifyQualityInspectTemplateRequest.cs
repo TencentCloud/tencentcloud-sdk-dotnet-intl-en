@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public JitterConfigureInfoForUpdate JitterConfigure{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended. Use Configs instead.) Control parameters for video frame blur detection.</p>
+        /// <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
         /// </summary>
         [JsonProperty("BlurConfigure")]
         public BlurConfigureInfoForUpdate BlurConfigure{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CrashScreenConfigureInfoForUpdate CrashScreenConfigure{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended. Use Configs as an alternative) Control parameters for video picture black edge, white edge, black screen, and white screen detection.</p>
+        /// <p>(Not recommended. Use Configs as an alternative) Control parameters for detecting black edges, white edges, black screen, and white screen in video pictures.</p>
         /// </summary>
         [JsonProperty("BlackWhiteEdgeConfigure")]
         public BlackWhiteEdgeConfigureInfoForUpdate BlackWhiteEdgeConfigure{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public NoiseConfigureInfoForUpdate NoiseConfigure{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended. Use Configs instead) Control parameters for video frame mosaic detection.</p>
+        /// <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
         /// </summary>
         [JsonProperty("MosaicConfigure")]
         public MosaicConfigureInfoForUpdate MosaicConfigure{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public QRCodeConfigureInfoForUpdate QRCodeConfigure{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended. Use Configs instead.) Control parameters for audio (mute, bass, pop) detection.</p>
+        /// <p>(Not recommended. Use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
         /// </summary>
         [JsonProperty("VoiceConfigure")]
         public VoiceConfigureInfoForUpdate VoiceConfigure{ get; set; }

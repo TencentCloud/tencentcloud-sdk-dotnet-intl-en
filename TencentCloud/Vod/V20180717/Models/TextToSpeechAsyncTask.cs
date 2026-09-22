@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+        /// <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check the input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Error code. An empty string indicates success, while other values indicate failure. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
+        /// <p>Error code. An empty string indicates success, and other values indicate failure. For values, see <a href="https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">video processing error codes</a>.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// <p>Pull upload progress, value range: [0-100].</p>
+        /// <p>Pull the upload progress, with a value range of [0-100].</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

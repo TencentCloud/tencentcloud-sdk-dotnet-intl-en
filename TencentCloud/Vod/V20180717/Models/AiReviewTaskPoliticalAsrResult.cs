@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task input for Asr text involving inappropriate information in audio/video moderation.
+        /// Task input for inappropriate information involving Asr text in audio/video moderation.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalAsrTaskInput Input{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPoliticalAsrTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Task progress of audio/video moderation Asr text involving inappropriate information, in the range of [0,100].
+        /// Task progress of Asr text involving inappropriate information in audio/video moderation. Value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

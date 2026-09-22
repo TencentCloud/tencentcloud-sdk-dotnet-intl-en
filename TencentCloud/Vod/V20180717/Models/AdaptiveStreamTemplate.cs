@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTemplateInfo Audio{ get; set; }
 
         /// <summary>
-        /// <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+        /// <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }

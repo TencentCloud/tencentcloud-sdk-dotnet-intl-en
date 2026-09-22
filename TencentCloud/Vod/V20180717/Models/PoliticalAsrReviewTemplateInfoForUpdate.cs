@@ -26,20 +26,20 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task switch for ASR-based recognition involving inappropriate information. Available values:
-        /// <li>ON: enable the task of ASR-based recognition involving inappropriate information;</li>
-        /// <li>OFF: disables the task involving inappropriate information in ASR-based recognition.</li>
+        /// <li>ON: enable the task involving ASR-based recognition of inappropriate information;</li>
+        /// <li>OFF: disables the task involving inappropriate content in ASR-based recognition.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining suspected violations. When the video moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.
+        /// Threshold score for suspected violations. If the audio/video moderation score reaches or exceeds this value, the content is deemed as suspected violation. Value range: 0–100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining whether manual review is required for violations. When the video moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.
+        /// Threshold score for determining whether manual review is required for violations. When the audio/video moderation score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

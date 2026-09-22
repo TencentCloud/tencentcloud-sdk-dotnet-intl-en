@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Authentication configuration switch for origin-pull from other vendors. Valid values:
+        /// Switch for origin-pull authentication configuration of other vendor object storage. Valid values:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>

@@ -26,13 +26,13 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Intelligent object recognition result set.
-        /// <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskObjectResultItem[] ResultSet{ get; set; }
 
         /// <summary>
-        /// URL of the intelligent object recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime is reached.)
+        /// Intelligent object recognition result set file URL. The content of the file is in JSON format, and the data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("ResultSetFileUrl")]
         public string ResultSetFileUrl{ get; set; }

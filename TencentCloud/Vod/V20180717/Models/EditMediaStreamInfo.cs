@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Start time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Start time of stream clipping in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time of stream clipping in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// End time of stream clipping, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

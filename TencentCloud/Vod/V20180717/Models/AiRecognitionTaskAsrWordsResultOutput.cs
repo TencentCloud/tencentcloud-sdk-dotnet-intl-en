@@ -32,13 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrWordsResultItem[] ResultSet{ get; set; }
 
         /// <summary>
-        /// URL of the speech keyword recognition result set file. The file content is in JSON format, and its data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after the ResultSetFileUrlExpireTime time point is reached.)
+        /// URL of the speech keyword recognition result set file. The content of the file is in JSON format, and its data structure is consistent with the fields of ResultSet. (The file is not retained permanently. It will be deleted after reaching ResultSetFileUrlExpireTime.)
         /// </summary>
         [JsonProperty("ResultSetFileUrl")]
         public string ResultSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the speech keyword recognition result set file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the speech keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ResultSetFileUrlExpireTime")]
         public string ResultSetFileUrlExpireTime{ get; set; }

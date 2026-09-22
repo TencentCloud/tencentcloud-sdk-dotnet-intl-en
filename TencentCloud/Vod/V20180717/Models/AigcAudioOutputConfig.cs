@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
+        /// <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
         /// </summary>
         [JsonProperty("StorageMode")]
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
+        /// <p>Output filename. It can contain up to 64 characters. By default, the system specifies the filename.</p>
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">create category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+        /// <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

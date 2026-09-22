@@ -49,14 +49,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Carousel playlist description, with a length limit of 256 characters.
+        /// Carousel playlist description. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
         /// Playback status. Available values:
-        /// <li>Enabled: running state;</li>
+        /// <li>Enabled: startup status;</li>
         /// <li>Disabled: stopped.</li>
         /// Default value: Enabled.
         /// </summary>
@@ -85,13 +85,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time, format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+        /// Update time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist will stop after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
+        /// Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback of the playlist stops after expiry. "9999-12-31T23:59:59+08:00" means it never expires.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

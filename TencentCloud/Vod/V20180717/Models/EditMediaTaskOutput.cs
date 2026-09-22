@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Output filename. It can contain up to 64 characters. By default, the system assigns a filename for file generation.
+        /// Output filename, up to 64 characters. By default, the system generates a filename.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }

@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskCoverOutput Output{ get; set; }
 
         /// <summary>
-        /// Progress of the intelligent cover task. Value range: 0-100.
+        /// Intelligent Cover Task progress, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Intelligent Cover Task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Start execution time of the Intelligent Cover Task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }

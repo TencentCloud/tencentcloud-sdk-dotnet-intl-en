@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Principal ID. Record the returned principal ID.
+        /// Principal ID. Note the returned principal ID.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

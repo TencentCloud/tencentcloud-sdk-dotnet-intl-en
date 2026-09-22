@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SubtitleFormatsOperation SubtitleFormatsOperation{ get; set; }
 
         /// <summary>
-        /// Generated subtitle file format. <font color='red'>Leave it as an empty string</font> to indicate no subtitle file generation. Available values:
+        /// Generated subtitle file format. <font color='red'>Leaving it as an empty string</font> means no subtitle file will be generated. Valid value:
         /// <li>vtt: Generate a WebVTT subtitle file;</li>
         /// <li>srt: Generate SRT subtitle file.</li>
         /// <font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
@@ -59,7 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+        /// Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Filename, which contains up to 64 characters.
+        /// Filename, up to 64 characters.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// Description. Up to 128 characters.
+        /// Description. The maximum length is 128 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Indicates whether to remove video data. Available values:
-        /// <li>0: retention</li>
+        /// <li>`0`: reserved</li>
         /// <li>1: Remove</li>
         /// Default value: 0.
         /// </summary>
@@ -78,7 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Indicates whether to remove audio data. Available values:
-        /// <li>0: retention</li>
+        /// <li>`0`: reserved</li>
         /// <li>1: Remove</li>
         /// Default value: 0.
         /// </summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of Asr text involving offensive content. Value range: 0–100.
+        /// Score of offensive content in the Asr text. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -41,19 +41,19 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// List of video segments whose Asr text is suspected of involving offensive content.
-        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+        /// <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the video segment list file where the Asr text is suspected of involving offensive content. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+        /// URL of the segment list file for videos where the Asr text is suspected of containing offensive content. The content of the file is in JSON format, and the data structure is consistent with the fields in SegmentSet. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the Segment List File URL for videos whose Asr text may involve offensive content, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the URL of the segment list file for videos suspected of involving offensive content in Asr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

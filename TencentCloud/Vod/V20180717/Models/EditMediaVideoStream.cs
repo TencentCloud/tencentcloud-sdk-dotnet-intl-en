@@ -36,7 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.
-        /// When the value is 0 or not specified, it means VOD automatically sets the bitrate.
+        /// When the value is 0 or not specified, VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Resolution adaptation. Available values:
         /// <li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-        /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+        /// <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
         /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
         /// <li>If both Width and Height are 0, the base resolution is used.</li>
-        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be scaled based on the benchmark resolution ratio.</li>
         /// <li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
         /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// Default value: 0.
@@ -64,7 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Maximum height (or short side) of the video stream. Value range: 0 and [128, 4096]. Unit: px.
         /// <li>If both Width and Height are 0, the base resolution is used.</li>
-        /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled based on the base resolution.</li>
+        /// <li>If Width is 0 but Height is not 0, the width will be scaled based on the benchmark resolution ratio.</li>
         /// <li>If Width is not 0 but Height is 0, the height will be scaled based on the benchmark resolution ratio.</li>
         /// <li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
         /// Default value: 0.
@@ -75,7 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Video frame rate. Value range: [0, 100]. Unit: Hz.
         /// When the value is 0, the frame rate is automatically set for the video.
-        /// The default value is 0.
+        /// Default value: 0.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

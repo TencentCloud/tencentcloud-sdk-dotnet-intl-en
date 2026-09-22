@@ -41,7 +41,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Error code.
         /// <li>0: success;</li>
-        /// <li>Other value: Failed.</li>
+        /// <li>Other value: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -53,7 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Progress of the media file creation task, with a value range of [0-100].
+        /// Progress of the media file creation task, in the range of [0,100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -71,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Meta information of the output video.
+        /// Metadata of the output video.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch for Aws S3 origin-pull authentication configuration. Valid values:
+        /// Toggle for Aws S3 origin-pull authentication. Valid values:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>

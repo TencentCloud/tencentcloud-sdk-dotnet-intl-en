@@ -34,7 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Content for review. Available values:
         /// <li>Media: original audio/video;</li>
         /// <li>Cover: cover.</li>
-        /// If this parameter is not specified or is set to an empty array, Media will be reviewed by default.
+        /// If this parameter is not specified or is set to an empty array, Media is reviewed by default.
         /// </summary>
         [JsonProperty("ReviewContents")]
         public string[] ReviewContents{ get; set; }

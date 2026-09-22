@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
+        /// <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+        /// <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
         /// </summary>
         [JsonProperty("QuotaLimit")]
         public ulong? QuotaLimit{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+        /// <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }

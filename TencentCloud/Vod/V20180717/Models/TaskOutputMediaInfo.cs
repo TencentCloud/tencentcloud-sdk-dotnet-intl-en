@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Basic information of the generated media file after pull conversion is completed.
+        /// Basic information of the media file generated after pull conversion.
         /// </summary>
         [JsonProperty("MediaBasicInfo")]
         public MediaBasicInfo MediaBasicInfo{ get; set; }

@@ -49,19 +49,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for Ocr text moderation tasks in audio/video moderation.
+        /// Input for prohibited task of Ocr text in audio/video moderation.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewProhibitedOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of Ocr text moderation for prohibited tasks in audio/video moderation.
+        /// Output of the Ocr text moderation prohibited task in audio/video moderation.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedOcrTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Progress of the Ocr text moderation task for prohibited content in audio/video moderation. Value range: 0-100.
+        /// Progress of the Ocr text prohibited task moderation for audio/video. Value range: 0-100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Content intelligent identification trigger count.
+        /// Content intelligent identification initiation count.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalDuration{ get; set; }
 
         /// <summary>
-        /// Duration stats of content intelligent identification, one data point per day.
+        /// Duration statistics of content intelligent identification. One data point per day.
         /// </summary>
         [JsonProperty("Data")]
         public StatDataItem[] Data{ get; set; }

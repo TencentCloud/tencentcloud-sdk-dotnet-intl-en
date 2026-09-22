@@ -39,13 +39,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Audio and video quality rebirth template name.
+        /// Audio-visual quality rebirth template name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of the Audio and Video Quality Rebirth Template.
+        /// Audio and video quality rebirth template description.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -99,13 +99,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? RemoveAudio{ get; set; }
 
         /// <summary>
-        /// Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template creation time, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

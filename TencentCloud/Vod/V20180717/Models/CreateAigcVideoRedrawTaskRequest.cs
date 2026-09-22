@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Input video file information for an AIGC video conversion task. The input video duration must be less than 90 seconds and the size within 2 GB.</p>
+        /// <p>File information of the input video for the AIGC video conversion task. The input video duration must be less than 90 seconds, and the size must be within 2 GB.</p>
         /// </summary>
         [JsonProperty("FileInfo")]
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
-        /// <p>Task parameter information for AIGC video conversion.</p>
+        /// <p>AIGC video redrawing task parameter information.</p>
         /// </summary>
         [JsonProperty("TaskInfo")]
         public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }
 
         /// <summary>
-        /// <p>Output media file configuration for an AIGC video conversion task.</p>
+        /// <p>Configuration of the output media file for an AIGC video conversion task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcVideoRedrawOutputConfig OutputConfig{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// <p>Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+        /// <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field, used for special purposes.</p>
+        /// <p>Reserved field, used for special purpose.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

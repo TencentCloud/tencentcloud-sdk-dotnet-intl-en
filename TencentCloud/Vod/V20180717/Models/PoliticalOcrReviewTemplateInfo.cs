@@ -33,13 +33,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Threshold score for suspected violations. If the review score reaches or exceeds this value, it is considered a suspected violation. Default value: 100. Value range: 0–100.
+        /// Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. If not specified, it defaults to 100 points. Value range: 0-100.
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for violations that determines whether manual review is required. If the review score reaches or exceeds this value, manual review is required. Default value: 75. Value range: 0–100.
+        /// Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is deemed necessary. If not specified, the default is 75. Value range: 0–100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

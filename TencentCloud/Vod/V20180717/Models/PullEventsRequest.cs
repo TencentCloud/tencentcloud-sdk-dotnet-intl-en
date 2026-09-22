@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Reserved field, used for special purposes.
+        /// Reserved field, used for special purpose.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

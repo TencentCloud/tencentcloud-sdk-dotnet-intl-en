@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+        /// Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812) API. Valid when StorageMode is Permanent.
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// File type, such as mp4 and flv.
+        /// File type, for example, mp4, flv.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Meta information of the output video. Valid only when StorageMode is Permanent.
+        /// Meta information of the output video. Valid when StorageMode is Permanent.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

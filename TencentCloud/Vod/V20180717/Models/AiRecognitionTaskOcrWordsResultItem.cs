@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Word{ get; set; }
 
         /// <summary>
-        /// List of segments where the text key appears.
+        /// List of segments where the key text appears.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskOcrWordsSegmentItem[] SegmentSet{ get; set; }

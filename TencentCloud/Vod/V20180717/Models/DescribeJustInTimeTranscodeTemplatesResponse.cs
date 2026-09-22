@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Template detail list.
+        /// Template details list.
         /// </summary>
         [JsonProperty("JustInTimeTranscodeTemplateSet")]
         public JustInTimeTranscodeTemplate[] JustInTimeTranscodeTemplateSet{ get; set; }

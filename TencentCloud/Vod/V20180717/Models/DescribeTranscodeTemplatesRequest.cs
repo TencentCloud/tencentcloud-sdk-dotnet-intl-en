@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Muxing format filter criteria. Available values:
         /// <li>Video: Video format. A container format that can contain both video and audio streams.</li>
-        /// <li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
+        /// <li>PureAudio: Pure audio format, a container format that can only contain audio streams.</li>
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
@@ -84,7 +84,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EnhanceType{ get; set; }
 
         /// <summary>
-        /// Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
+        /// Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, basic optimization parameters suitable for various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve the overall video resolution and enhance image clarity.</li> <li>short_play: enhance face and subtitle details, highlight facial expression details and subtitle clarity to improve the viewing experience.</li> <li>short_video: optimize complex and diverse image quality issues, optimize video quality for complex short video scenarios and address multiple visual issues.</li> <li>game: repair motion blur and enhance details, focusing on improving the clarity of game details, restoring motion blur areas, and making game screen content clearer and richer.</li> <li>HD_movie_series: obtain ultra-high-definition smooth effects, generate 4K 60fps HDR ultra-high-definition standard videos for UHD video demands in broadcasting and OTT. Support broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by older shooting conditions.</li> <li>lecture: beautify and enhance face effects, specially optimized for face region, noise reduction, and burr processing in scenarios where people explain content, such as live shows, e-commerce, conferences, and lectures.</li>
         /// </summary>
         [JsonProperty("EnhanceScenarioType")]
         public string EnhanceScenarioType{ get; set; }

@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Speech keyword recognition task switch. Available values:
-        /// <li>ON: enable the speech keyword recognition task;</li>
+        /// <li>ON: turn on the speech keyword recognition task;</li>
         /// <li>OFF: disables the speech keyword recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Tag for keyword-based filtering. Specify the tag of the keyword to return. If this parameter is not specified or is empty, all results are returned.
+        /// Keyword filtering tag. Specify the tag of keywords to return. If this parameter is left empty or is an empty string, all results are returned.
         /// The number of tags can be up to 10, and each tag can contain up to 16 characters.
         /// </summary>
         [JsonProperty("LabelSet")]

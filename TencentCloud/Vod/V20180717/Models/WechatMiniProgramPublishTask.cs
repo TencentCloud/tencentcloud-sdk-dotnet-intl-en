@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Task status. Valid values:
-        /// WAITING: waiting.
+        /// WAITING
         /// PROCESSING: Processing;
         /// FINISH: completed.
         /// </summary>
@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Error code.
         /// <li>0: success;</li>
-        /// <li>Other value: Failed.</li>
+        /// <li>Other value: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -54,13 +54,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Video file ID for publishing.
+        /// Publish the video file ID.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Transcoding template ID for the published video. 0 represents the original video.
+        /// Transcoding template ID of the published video. 0 represents the original video.
         /// </summary>
         [JsonProperty("SourceDefinition")]
         public ulong? SourceDefinition{ get; set; }

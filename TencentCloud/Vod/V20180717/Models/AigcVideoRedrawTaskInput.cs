@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcVideoRedrawTaskInputFileInfo FileInfo{ get; set; }
 
         /// <summary>
-        /// <p>AIGC video conversion task parameter information.</p>
+        /// <p>AIGC video redrawing task parameter information.</p>
         /// </summary>
         [JsonProperty("TaskInfo")]
         public AigcVideoRedrawTaskInfo TaskInfo{ get; set; }

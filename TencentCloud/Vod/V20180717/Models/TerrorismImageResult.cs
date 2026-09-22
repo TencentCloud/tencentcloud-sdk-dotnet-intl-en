@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Result tag for authentication involving unsafe information. Value range:
+        /// Tag of the authentication result involving unsafe information. Value range:
         /// <li>guns: weapons and firearms;</li>
         /// <li>crowd: crowd gathering;</li>
         /// <li>police: police force;</li>

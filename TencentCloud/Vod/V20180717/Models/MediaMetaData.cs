@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Container{ get; set; }
 
         /// <summary>
-        /// Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+        /// Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Video duration, unit: seconds.
+        /// Video duration, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// Video duration, unit: seconds.
+        /// Video duration, in seconds.
         /// </summary>
         [JsonProperty("VideoDuration")]
         public float? VideoDuration{ get; set; }

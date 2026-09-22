@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extended error code.</p><p>Parameter format: extended error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: The call exceeds the concurrency limit.</li><li>InvalidParameterValue: Parameter error.</li><li>InternalError: Internal error.</li><li>FailedOperation: Operation failed.</li></ul>
+        /// <p>Expansion error code.</p><p>Parameter format: expansion error code.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameterValue: parameter error.</li><li>InternalError: internal error.</li><li>FailedOperation: operation failed.</li></ul>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Task progress. Value range: 0-100.</p>
+        /// <p>Task progress, value ranges from 0 to 100.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

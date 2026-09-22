@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task input of the time point screenshot task for videos.
+        /// Task input of screenshot taking at specified time points in a video.
         /// </summary>
         [JsonProperty("Input")]
         public SnapshotByTimeOffsetTaskInput Input{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }
 
         /// <summary>
-        /// Task progress of screenshot taking at specified time points for video, in the range of [0,100].
+        /// Progress of the screenshot taking task at specified time points, in the range of [0,100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Start execution time of the time point screencapturing task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Time point screenshot task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task completion time of time point screencapturing in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Time point screenshot task completion time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

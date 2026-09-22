@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string InputType{ get; set; }
 
         /// <summary>
-        /// <b>ID of the VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaStreamInfo[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// Edit template ID. Valid values: 10, 20. If not specified, template 10 is used.
+        /// Edit template ID. Valid values: 10 and 20. Default value: 10.
         /// <li>10: During splicing, use the input with the highest resolution as the base;</li>
         /// <li>20: During splicing, use the input with the highest bitrate as the base.</li>
         /// </summary>
@@ -69,19 +69,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// Identify the source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
+        /// Identify source context, used to pass through user request information. This field value will be returned in the EditMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+        /// Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+        /// Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

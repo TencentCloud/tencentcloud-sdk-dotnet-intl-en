@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Media URL to be pulled. Temporary not support pull in Dash format (support HLS).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can access.</p>
+        /// <p>Media URL to be pulled. Pulling Dash format is not currently supported (HLS is supported).<br>For supported extensions, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>. Please ensure the media URL can be accessed.</p>
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
-        /// <p>Media type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
+        /// <p>Media file type (extension). For supported types, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B">Media Type</a>.<br>If MediaType is not specified or is an empty string, the file type is automatically obtained based on MediaUrl.</p>
         /// </summary>
         [JsonProperty("MediaType")]
         public string MediaType{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
-        /// <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+        /// <p>Media file expiry time. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Designated upload park, applicable only to users with special requirements for upload region:</p><li>If not specified, upload to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If a designated upload park is specified, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
+        /// <p>Specify an upload park. This is applicable only to users with special requirements for upload regions:</p><li>If left empty, files are uploaded to your [default region](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4) by default.</li><li>If you specify an upload park, please confirm that the corresponding storage regions have been enabled in [upload storage settings](https://www.tencentcloud.com/document/product/266/14059?from=11329?from_cn_redirect=1#.E5.AD.98.E5.82.A8.E5.9C.B0.E5.9F.9F.E6.AD.A5.E9.AA.A4).</li>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p>
+        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to obtain the category ID.</p>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// <p>Source context. This is used to pass user request information. When a Procedure task is specified, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+        /// <p>Source context. This is used to pass user request information. When specifying a Procedure task, the task flow status change callback returns the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field, used for special purposes.</p>
+        /// <p>Reserved field, used for special purpose.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
         /// <summary>
-        /// <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+        /// <p>Source context. This is used to pass user request information. The <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }

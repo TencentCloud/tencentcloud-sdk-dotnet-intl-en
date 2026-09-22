@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Input the image list of <strong>clothing</strong> to be replaced. Maximum number of clothing items supported for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
+        /// <p>Input the image list of <strong>clothing</strong> that need to be replaced. Maximum supported clothing quantity for each type:</p><ul><li>change_clothes: 4 images;</li><li>change_clothes_under: 1 image;</li><li>change_clothes_full_wear: 1 image;</li><li>change_clothes_top_wear: 1 image;</li><li>change_clothes_bottom_wear: 1 image;</li></ul>
         /// </summary>
         [JsonProperty("ClothesFileInfos")]
         public SceneAigcImageTaskInputFileInfo[] ClothesFileInfos{ get; set; }

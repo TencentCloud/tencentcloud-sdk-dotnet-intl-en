@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AccelerateAreaInfo[] AccelerateAreaInfos{ get; set; }
 
         /// <summary>
-        /// <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, you cannot perform deployment changes on that domain name.</li>
+        /// <p>Deployment state. Valid values:</p><li>Online: online;</li><li>Deploying: deploying;</li><li>Locked: locked. In this state, deployment changes cannot be made to that domain name.</li>
         /// </summary>
         [JsonProperty("DeployStatus")]
         public string DeployStatus{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Domain name QUIC configuration information.</p>
+        /// <p>Domain name QUIC configuration message.</p>
         /// </summary>
         [JsonProperty("QUICConfig")]
         public DomainQUICConfig QUICConfig{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public IPFilterPolicy IPFilterPolicy{ get; set; }
 
         /// <summary>
-        /// <p>Domain name type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
+        /// <p>Domain type. Valid values: <li>VOD: domain name distributed using the VOD product;</li> <li>EdgeOne: domain name distributed using the EdgeOne product.</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

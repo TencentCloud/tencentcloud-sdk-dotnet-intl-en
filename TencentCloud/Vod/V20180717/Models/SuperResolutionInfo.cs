@@ -33,9 +33,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Super resolution type. Valid only when the super resolution control switch is ON. Available values:
+        /// Super resolution type. It is valid only when the super resolution control switch is ON. Available values:
         /// <li>lq: super resolution for low-resolution videos with considerable noise;</li>
-        /// <li>hq: For high resolution video super-resolution.</li>
+        /// <li>hq: for high resolution video super-resolution.</li>
         /// Default value: lq.
         /// </summary>
         [JsonProperty("Type")]

@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ImageScale Scale{ get; set; }
 
         /// <summary>
-        /// Image cropping. Valid only when Type is CenterCut.
+        /// Image crop processing. Valid only when Type is CenterCut.
         /// </summary>
         [JsonProperty("CenterCut")]
         public ImageCenterCut CenterCut{ get; set; }

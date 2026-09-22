@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch for detecting low-light and overexposed video images. Available values:
-        /// <li>ON: enabled;</li>
-        /// <li>OFF: disabled.</li>
+        /// Low-light and overexposure detection switch for video images. Available values:
+        /// <li>ON: enabled</li>
+        /// <li>OFF: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

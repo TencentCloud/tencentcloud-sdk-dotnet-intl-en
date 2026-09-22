@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Prompt for image generation background. If this field is default, inspiration is generated automatically.
+        /// Prompt for generating the image background. If this field is default, inspiration is generated automatically.
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Prompt content used to prevent the model from generating images.
+        /// Prompt used to prevent the model from image generation.
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }

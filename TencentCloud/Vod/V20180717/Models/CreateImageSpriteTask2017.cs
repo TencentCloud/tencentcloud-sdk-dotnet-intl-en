@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Screenshot sprite task ID.</p>
+        /// <p>Screenshot image sprite task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Capture the CSS sprite file ID.</p>
+        /// <p>Capture the file ID of CSS sprites.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+        /// <p>Image sprite specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Addresses for capturing CSS sprites output.</p>
+        /// <p>Capture the domain names or IP addresses output by CSS sprites.</p>
         /// </summary>
         [JsonProperty("ImageSpriteUrlSet")]
         public string[] ImageSpriteUrlSet{ get; set; }

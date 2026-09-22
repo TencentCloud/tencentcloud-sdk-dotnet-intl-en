@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// <p>Mosaic list. Up to 10 mosaics are supported.</p>
+        /// <p>Mosaic list. Up to 10 images are supported.</p>
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }

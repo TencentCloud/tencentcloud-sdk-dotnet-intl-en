@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Tag for keyword-based filtering. Specify the tag of keywords to return. If not specified or empty, all results are returned.
+        /// Keyword filtering tag. Specify the tag of the keyword to return. If this parameter is left empty, all results are returned.
         /// The number of tags can be up to 10, and each tag can contain up to 16 characters.
         /// </summary>
         [JsonProperty("LabelSet")]

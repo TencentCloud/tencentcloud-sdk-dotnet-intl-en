@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide either FileId or MediaStoragePath.</p>
+        /// <p>Media file ID, the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>Either FileId or MediaStoragePath must be provided.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaStoragePath{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">Audio/Video Moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">Image Moderation (ReviewImage)</a>.</p>
+        /// <p>Audio and video content review type task parameters *.<br><font color="red">* Not recommended for use</font>. Recommended for use: <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">audio and video moderation (ReviewAudioVideo)</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">image moderation (ReviewImage)</a>.</p>
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field, used for special purposes.</p>
+        /// <p>Reserved field, used for special purpose.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>The media processing transcoding result is output as standalone media assets. Enabling this option will output the product as standalone media assets and generate a brand new FileID. Currently, only TranscodeTask transcoding task output is supported as standalone media assets.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets will incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermarks, and other features in transcoding tasks.</p>
+        /// <p>The media processing transcoding result is output as a standalone media asset. Enabling this option will output the product as a standalone media asset and generate a brand new FileID. Currently, only TranscodeTask transcoding tasks support output as a standalone media asset.</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p><p>Note: New media assets incur storage fees. This option does not currently support enabling for video opening/closing credits, traceable watermark, and other features in transcoding tasks.</p>
         /// </summary>
         [JsonProperty("OutputAsIndependentMedia")]
         public string OutputAsIndependentMedia{ get; set; }

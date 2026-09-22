@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Audio and video content analysis template name. Length limit: 64 characters.
+        /// Audio and video content analysis template name, with a length limit of 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Description of the audio and video content analysis template, with a length limit of 256 characters.
+        /// Audio and video content analysis template description, with a length limit of 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of the intelligent frame-specific tagging task.
+        /// Control parameter for intelligent frame-specific tagging task.
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }

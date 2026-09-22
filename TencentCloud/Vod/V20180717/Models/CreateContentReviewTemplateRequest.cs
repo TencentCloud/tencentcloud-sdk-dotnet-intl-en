@@ -25,21 +25,21 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Whether audio/video moderation results enter the audio/video moderation wall (for manual review of recognition results).
-        /// <li>ON: yes</li>
+        /// Whether the audio/video moderation result enters the audio/video moderation wall for manual review of the recognition result.
+        /// <li>ON: yes;</li>
         /// <li>OFF: No.</li>
         /// </summary>
         [JsonProperty("ReviewWallSwitch")]
         public string ReviewWallSwitch{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Content review template name. Length limit: 64 characters.
+        /// Content review template name, with a length limit of 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -83,7 +83,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }
 
         /// <summary>
-        /// Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+        /// Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

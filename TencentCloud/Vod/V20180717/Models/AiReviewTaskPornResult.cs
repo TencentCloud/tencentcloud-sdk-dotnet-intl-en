@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task input of offensive content involved in audio/video moderation.
+        /// Task input for offensive content involved in audio/video moderation.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornTaskInput Input{ get; set; }

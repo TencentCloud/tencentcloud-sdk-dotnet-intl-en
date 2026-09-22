@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Start time of the time interval where the data is located, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+        /// Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
         /// <li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
-        /// <li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+        /// <li>When representing day-level data, 2019-08-22T00:00:00+08:00 refers to the stats for 2019-08-22.</li>
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Bandwidth statistics in bit/s.</li>
         /// <li>Live stream editing data, in seconds.</li>
         /// <li>Loop banner data, in seconds.</li>
-        /// <li>Number of sub-applications. The unit is count.</li>
+        /// <li>Number of sub-applications data. The unit is count.</li>
         /// <li>Log service usage data, in counts.</li>
         /// </summary>
         [JsonProperty("Value")]

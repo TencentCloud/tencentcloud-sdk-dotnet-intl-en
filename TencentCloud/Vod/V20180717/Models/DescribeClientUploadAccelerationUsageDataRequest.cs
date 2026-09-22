@@ -37,15 +37,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// Client upload acceleration type. Valid values:
-        /// <li> AccelerationWithHTTP: Upload acceleration over HTTP transmission method.</li>
-        /// <li> AccelerationWithQUIC: upload acceleration over QUIC transmission mode.</li>
+        /// <li> AccelerationWithHTTP: upload acceleration over HTTP transmission method.</li>
+        /// <li> AccelerationWithQUIC: Upload acceleration over QUIC transmission mode.</li>
         /// Default query for the amount of all acceleration types.
         /// </summary>
         [JsonProperty("Type")]

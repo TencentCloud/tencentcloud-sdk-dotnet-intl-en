@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p>
+        /// <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned.</p><p>Value range: [0, 100]</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// <p>Default character filter tag, specify the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
+        /// <p>Default character filter tag, specifying the tag of the default character to return. If not filled or empty, all default character results are returned.</p><p>Enumeration values:</p><ul><li>entertainment: entertainment star</li><li>sport: sports celebrity</li><li>politician: political figure</li></ul>
         /// </summary>
         [JsonProperty("DefaultLibraryLabelSet")]
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not filled or empty, all customized figure results will be returned. </p><p>Input parameter limit: up to 100 tags, each tag can contain up to 16 characters.</p>
+        /// <p>User-defined character filter tag, specify the tag of the user-defined character to return. If not specified or empty, all customized figure results are returned. </p><p>Input limitation: up to 100 tags, each tag up to 16 characters in length.</p>
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }

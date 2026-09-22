@@ -27,16 +27,16 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Comprehensive enhancement control switch. Valid values:
         /// <li>ON: enable comprehensive enhancement;</li>
-        /// <li>OFF: Disable comprehensive enhancement.</li>
+        /// <li>OFF: disables comprehensive enhancement.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+        /// Comprehensive enhancement type. Valid only when the comprehensive enhancement control switch is ON. Available values:
         /// <li>weak: light comprehensive enhancement;</li>
-        /// <li>normal: normal comprehensive enhancement;</li>
-        /// <li>strong: strong comprehensive enhancement.</li>
+        /// <li>normal: Normal comprehensive enhancement;</li>
+        /// <li>strong: Strong comprehensive enhancement.</li>
         /// Default value: weak.
         /// </summary>
         [JsonProperty("Type")]

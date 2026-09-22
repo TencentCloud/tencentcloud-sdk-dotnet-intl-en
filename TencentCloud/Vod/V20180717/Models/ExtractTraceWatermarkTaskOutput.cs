@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Player's ID in hexadecimal, 6 digits.
+        /// Player's ID, represented in hexadecimal, 6 digits in total.
         /// </summary>
         [JsonProperty("Uv")]
         public string Uv{ get; set; }

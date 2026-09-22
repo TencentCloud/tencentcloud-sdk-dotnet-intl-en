@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+        /// Authentication involves scoring inappropriate information, with a score from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result suggestions for authentication involving inappropriate information. Value range:
+        /// Result suggestions for authentication involving inappropriate information, value ranges from...to...
         /// <li>pass;</li>
         /// <li>review;</li>
         /// <li>block.</li>
@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+        /// Coordinates of the area where inappropriate information or violation icons appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

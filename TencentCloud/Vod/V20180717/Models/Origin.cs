@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Origins{ get; set; }
 
         /// <summary>
-        /// Primary origin server type. Input supports the following types:
+        /// Primary origin server type. The input parameter supports the following types:
         /// <li>domain: Domain type;</li>
         /// <li>ip: IP list as the origin server;</li>
         /// <li>third_party: third-party object storage origin.</li>
@@ -41,7 +41,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
+        /// Host header when accessing the primary origin server. If not filled, the acceleration domain name is used by default.
         /// When the origin server type is COS, the ServerName field is required.
         /// </summary>
         [JsonProperty("ServerName")]
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BackupOriginType{ get; set; }
 
         /// <summary>
-        /// Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+        /// Host header when accessing the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
         /// </summary>
         [JsonProperty("BackupServerName")]
         public string BackupServerName{ get; set; }

@@ -35,14 +35,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>AiAnalysis.HighlightTask: intelligent highlight task.</li>
         /// <li>AiAnalysis.SegmentTask: intelligent video splitting task.</li>
         /// <li>AiAnalysis.HeadTailTask: intelligent opening and closing credits task.</li>
-        /// <li>AiAnalysis.DescriptionTask: intelligent summary task.</li>
+        /// <li>AiAnalysis.DescriptionTask: intelligent summarization task.</li>
         /// <li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
         /// <li>AiAnalysis.DubbingTask: intelligent dubbing task.</li>
         /// <li>AiAnalysis.VideoRemakeTask: intelligent deduplication task.</li>
         /// <li>AiAnalysis.VideoComprehensionTask: video understanding task.</li>
         /// <li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task.</li>
         /// <li>SmartSubtitle.TransTextTask: Translation result.</li>
-        /// <li>SmartSubtitle.PureSubtitleTransTask: return the translation result of a pure subtitle file.</li>
+        /// <li>SmartSubtitle.PureSubtitleTransTask: returns the translation result of a pure subtitle file.</li>
         /// <li>SmartSubtitle.OcrFullTextTask: intelligent text extraction subtitle task.</li>
         /// <li>SmartErase: intelligent erasure task.</li>
         /// </summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task status. It can be PROCESSING, SUCCESS, or FAIL.
+        /// Task status. It has three values: PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -68,13 +68,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// MPS video processing task input. This field corresponds to the Input result in the MPS task response, returned in JSON format.
+        /// Input of the MPS video processing task. This field corresponds to the Input result returned by the MPS task, returned in JSON format.
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// Output of MPS video processing task.
+        /// Output of the MPS video processing task.
         /// </summary>
         [JsonProperty("Output")]
         public MPSTaskOutput Output{ get; set; }

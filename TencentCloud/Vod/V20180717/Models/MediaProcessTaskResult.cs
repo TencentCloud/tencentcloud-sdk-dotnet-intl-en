@@ -30,7 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>AnimatedGraphics: animated image</li>
         /// <li>SnapshotByTimeOffset: time point screenshot.</li>
         /// <li>SampleSnapshot: sampled screenshot.</li>
-        /// <li>ImageSprites: sprite sheets</li>
+        /// <li>ImageSprites: sprite sheet</li>
         /// <li>CoverBySnapshot: screencapturing for cover image</li>
         /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
         /// </summary>
@@ -38,13 +38,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of the video transcoding task. Valid when the task type is `Transcode`.
+        /// Query result of a video transcoding task. Valid when the task type is Transcode.
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// Query result of the video-to-animated-image task. Valid when the task type is `AnimatedGraphics`.
+        /// Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// Query result of an image sprite task. Valid when the task type is `ImageSprite`.
+        /// Query result of the image sprite task for a video. Valid when the task type is `ImageSprite`.
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskCoverBySnapshotResult CoverBySnapshotTask{ get; set; }
 
         /// <summary>
-        /// Query result of the video to adaptive streaming task. Valid when the task type is `AdaptiveDynamicStreaming`.
+        /// Query result of the video to adaptive streaming task. Valid when the task type is AdaptiveDynamicStreaming.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }

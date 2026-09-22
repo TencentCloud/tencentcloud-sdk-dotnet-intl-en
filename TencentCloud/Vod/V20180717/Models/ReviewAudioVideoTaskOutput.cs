@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Result suggestion for audio/video content moderation. Value range:
-        /// <li>pass: It is recommended to pass;</li>
+        /// <li>pass: It is recommended to pass.</li>
         /// <li>review: suggest re-examination;</li>
         /// <li>block: suggest banning.</li>
         /// </summary>
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Terror: violence.</li>
         /// <li>Polity: inappropriate information;</li>
         /// <li>Ad: advertisement;</li>
-        /// <li>Illegal: illegal activities;</li>
+        /// <li>Illegal: illegal;</li>
         /// <li>Abuse: abusive language;</li>
         /// <li>Moan: panting.</li>
         /// </summary>
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Valid when Suggestion is review or block. It indicates the most likely prohibited forms of audio and video. Value range:
         /// <li>Image: people or icons in the image;</li>
-        /// <li>OCR: text on the screen;</li>
+        /// <li>OCR: text in the frame;</li>
         /// <li>ASR: text in speech.</li>
         /// <li>Voice: sound.</li>
         /// </summary>
@@ -64,13 +64,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ReviewAudioVideoSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the video clip list file involved in suspicion of violation information. The content of the file is JSON, and the data structure is consistent with the SegmentSet fields. The file is not retained permanently and will be deleted after the SegmentSetFileUrlExpireTime time point is reached.
+        /// URL of video clip list file involved in suspicion of violation information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// URL expiry time of the list of video clips suspected of involving violation information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the URL of the list of video clips suspected of involving violation information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

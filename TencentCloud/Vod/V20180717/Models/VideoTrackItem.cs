@@ -26,9 +26,9 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Media material source of the video clip, which can be:
-        /// <li>Media file ID for VOD;</li>
+        /// <li>Media file ID of on-demand video;</li>
         /// <li>Download URL of other media files.</li>
-        /// Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+        /// Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? SourceMediaStartTime{ get; set; }
 
         /// <summary>
-        /// Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+        /// Video segment duration in seconds. The default value is the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Target duration of the video clip, in seconds.
         /// <li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
-        /// <li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+        /// <li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down so that the duration of the output segment equals TargetDuration.</li>
         /// </summary>
         [JsonProperty("TargetDuration")]
         public float? TargetDuration{ get; set; }
@@ -62,8 +62,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
-        /// <li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+        /// Horizontal position of the origin point of a video clip relative to the origin of the canvas. Supports two formats: % and px.
+        /// <li>When the string ends with %, it means the video clip XPos is at a position of the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
         /// <li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
         /// Default value: 0px.
         /// </summary>
@@ -71,8 +71,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string XPos{ get; set; }
 
         /// <summary>
-        /// Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
-        /// <li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+        /// Vertical position of the origin point of a video clip relative to the origin of the canvas. Supports % and px.
+        /// <li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is at 10% of the canvas height.</li>
         /// <li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
         /// Default value: 0px.
         /// </summary>
@@ -108,7 +108,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTransform[] AudioOperations{ get; set; }
 
         /// <summary>
-        /// Operation performed on the image, for example, image rotation.
+        /// Operation performed on the image, such as image rotation.
         /// </summary>
         [JsonProperty("ImageOperations")]
         public ImageTransform[] ImageOperations{ get; set; }

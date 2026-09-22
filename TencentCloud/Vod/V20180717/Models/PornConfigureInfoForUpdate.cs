@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public PornImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameters for ASR-based recognition involving offensive information.
+        /// Control parameters for offensive information involved in ASR-based recognition.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PornAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameters for text recognition involving offensive information.
+        /// Control parameters for text recognition involving offensive content.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PornOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

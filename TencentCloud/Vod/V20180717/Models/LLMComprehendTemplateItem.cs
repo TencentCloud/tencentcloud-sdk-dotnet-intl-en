@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public LLMComprehendSummary Summary{ get; set; }
 
         /// <summary>
-        /// <p>Text transcribing and parsing configuration</p>
+        /// <p>Text transcription parsing configuration</p>
         /// </summary>
         [JsonProperty("Asr")]
         public LLMComprehendAsr Asr{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Template last modified time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

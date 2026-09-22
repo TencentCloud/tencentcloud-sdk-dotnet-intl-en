@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Timestamp{ get; set; }
 
         /// <summary>
-        /// <p>Gateway layer request ID</p>
+        /// <p>Gateway layer request ID.</p>
         /// </summary>
         [JsonProperty("ReqId")]
         public string ReqId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ChatId{ get; set; }
 
         /// <summary>
-        /// <p>HTTP status code returned to client</p>
+        /// <p>HTTP status code returned to the client</p>
         /// </summary>
         [JsonProperty("StatusCode")]
         public ulong? StatusCode{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? OutputTokens{ get; set; }
 
         /// <summary>
-        /// <p>Number of tokens that hit the prompt cache</p>
+        /// <p>Number of tokens for cache hits in prompt cache</p>
         /// </summary>
         [JsonProperty("CacheInputTokens")]
         public long? CacheInputTokens{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalTokens{ get; set; }
 
         /// <summary>
-        /// <p>tokens/second in the generation stage</p>
+        /// <p>tokens per second in the generation stage</p>
         /// </summary>
         [JsonProperty("TPS")]
         public float? TPS{ get; set; }
 
         /// <summary>
-        /// <p>Time To First Token</p><p>Unit: seconds</p>
+        /// <p>Time To First Token</p><p>Unit: second</p>
         /// </summary>
         [JsonProperty("TTFT")]
         public float? TTFT{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of an MPS task template. This template is independent of templates created directly in Media Processing Service (MPS).</p>
+        /// <p>Unique identifier of the MPS task template. This template is independent of templates created directly in Media Processing Service (MPS).</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

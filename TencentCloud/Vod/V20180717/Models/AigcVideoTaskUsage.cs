@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Number of input tokens.</p><p>Valid only when using the omni version of GV.</p>
+        /// <p>Input the number of tokens.</p><p>Valid only when using the omni version of GV.</p>
         /// </summary>
         [JsonProperty("InputTokens")]
         public long? InputTokens{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ThoughtTokens{ get; set; }
 
         /// <summary>
-        /// <p>Number of input images.</p><p>Valid only when the H3 version of Hailuo is used.</p>
+        /// <p>Number of input images.</p><p>Valid only when using the H3 version of Hailuo.</p>
         /// </summary>
         [JsonProperty("InputImageCount")]
         public long? InputImageCount{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? OutputSeconds{ get; set; }
 
         /// <summary>
-        /// <p>Total input/output duration.</p><p>Default value: seconds.</p><p>Valid only when using the H3 version of Hailuo.</p>
+        /// <p>Total input and output duration.</p><p>Default value: seconds.</p><p>Valid only when using Hailuo H3 version.</p>
         /// </summary>
         [JsonProperty("TotalSeconds")]
         public long? TotalSeconds{ get; set; }

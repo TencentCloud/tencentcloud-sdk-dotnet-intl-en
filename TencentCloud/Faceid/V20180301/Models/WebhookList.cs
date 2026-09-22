@@ -31,7 +31,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? WebhookId{ get; set; }
 
         /// <summary>
-        /// <p>Callback URL name</p>
+        /// <p>Callback address name</p>
         /// </summary>
         [JsonProperty("WebhookName")]
         public string WebhookName{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ModTime{ get; set; }
 
         /// <summary>
-        /// <p>Callback request key</p>
+        /// <p>Callback signature key, up to 128 characters.</p>
         /// </summary>
         [JsonProperty("SignatureKey")]
         public string SignatureKey{ get; set; }
 
         /// <summary>
-        /// <p>Existence of callback API key</p>
+        /// <p>Existence of callback signature key</p>
         /// </summary>
         [JsonProperty("HasSignatureKey")]
         public bool? HasSignatureKey{ get; set; }

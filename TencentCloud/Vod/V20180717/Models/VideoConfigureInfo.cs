@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Resolution adaptation. Available values:
-        /// <li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
         /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
         /// 
         /// Default value: open.
@@ -59,8 +59,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-        /// When the value is 0, VOD automatically sets the bitrate.
+        /// Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+        /// When the value is 0, VOD sets the bitrate automatically.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

@@ -75,7 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Video splitting task progress, in the range of [0,100].
+        /// Video splitting task progress, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

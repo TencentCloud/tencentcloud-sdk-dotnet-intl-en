@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and no longer updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+        /// <p>AI image generation scenario type. Available values:</p><ul><li><code>ai_try_on</code>: AI try-on.</li><li><code>product_image</code>: AI product image generation.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> values are abandoned and will no longer be updated:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Required when Type is ai_try_on. Indicates the AI dressing config.</p>
+        /// <p>Required when Type is ai_try_on, indicating the AI dressing configuration parameters.</p>
         /// </summary>
         [JsonProperty("AiTryOnConfig")]
         public AiTryOnConfig AiTryOnConfig{ get; set; }
 
         /// <summary>
-        /// <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and refers to the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+        /// <p><strong>Abandoned. Please use AiTryOnConfig.</strong>When Type is one of the following types, this item is required and represents the AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
         /// </summary>
         [JsonProperty("ChangeClothesConfig")]
         public ChangeClothesConfig ChangeClothesConfig{ get; set; }
 
         /// <summary>
-        /// <p>Required when Type is product_image. It represents the AI-generated product image configuration parameters.</p>
+        /// <p>Required when Type is product_image, indicating the AI-generated product image configuration parameters.</p>
         /// </summary>
         [JsonProperty("ProductImageConfig")]
         public ProductImageConfig ProductImageConfig{ get; set; }

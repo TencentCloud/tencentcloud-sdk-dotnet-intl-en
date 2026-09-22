@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+        /// Object key prefix matching, limited to object keys with the specified prefix in response.
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }

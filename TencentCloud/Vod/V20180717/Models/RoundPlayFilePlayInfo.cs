@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Playlist program ID assigned by the system.
+        /// Playlist item ID, assigned by the system.
         /// </summary>
         [JsonProperty("ItemId")]
         public string ItemId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StartPlayTime{ get; set; }
 
         /// <summary>
-        /// Playback duration, in seconds.
+        /// Playback duration in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }

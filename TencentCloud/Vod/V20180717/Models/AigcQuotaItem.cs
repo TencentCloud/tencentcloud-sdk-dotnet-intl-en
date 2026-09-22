@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+        /// <p>Valid only when QuotaLimit is Text. It is used to select the ApiToken that needs a quota limit.</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
 
         /// <summary>
-        /// <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+        /// <p>Number of task quotas</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
         /// </summary>
         [JsonProperty("QuotaLimit")]
         public ulong? QuotaLimit{ get; set; }

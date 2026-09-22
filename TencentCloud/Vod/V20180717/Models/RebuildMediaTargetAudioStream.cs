@@ -34,7 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>libfdk_aac;</li>
         /// <li>libmp3lame;</li>
         /// <li>ac3.</li>
-        /// When the outer parameter Container is mp4 or flv, optional values:
+        /// When the outer parameter Container is mp4 or flv, valid values are:
         /// <li>libfdk_aac: more suitable for mp4;</li>
         /// <li>libmp3lame: more suitable for flv;</li>
         /// <li>mp2.</li>
@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
-        /// When the value is 0, it means VOD automatically sets the bitrate.
+        /// When the value is 0, VOD sets the bitrate automatically.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
@@ -65,8 +65,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Audio channel mode. Valid values:
         /// <li>1: single channel.</li>
-        /// <li>2: dual channel.</li>
-        /// <li>6: Stereo</li>
+        /// <li>2: Dual-channel</li>
+        /// <li>6: Stereo.</li>
         /// 
         /// When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
         /// Default value: 2.

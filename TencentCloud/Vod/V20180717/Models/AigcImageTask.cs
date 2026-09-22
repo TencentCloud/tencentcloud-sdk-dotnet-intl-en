@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extended error code. An empty string indicates success, and other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate the model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
+        /// <p>Extended error code. An empty string indicates success, while other values indicate failure.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: Model invocation exceeded the concurrency limit.</li><li>InvalidParameter.VoilationContent: The input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks are accumulating.</li><li>InternalError: Internal error.</li><li>InvalidParameter: Invalid parameter.</li><li>InvalidParameter.MediaFormat: Invalid media format.</li><li>ContentModerationFailed: Failed to pass content moderation.</li><li>ResourceInsufficient: Insufficient resources.</li><li>ModelGenerateFailed: Failed to generate model.</li><li>ResourceNotFound: Resource not found.</li><li>OperationCanceled: Operation canceled.</li><li>TaskTimeout: Task timeout.</li></ul>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Task progress, in the range of [0,100].</p>
+        /// <p>Task progress, value ranges from 0 to 100.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

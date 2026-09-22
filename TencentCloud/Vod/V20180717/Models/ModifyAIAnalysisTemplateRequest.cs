@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ClassificationConfigureInfoForUpdate ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent tag task control parameter.
+        /// Control parameter of an intelligent tag task.
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfoForUpdate TagConfigure{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public CoverConfigureInfoForUpdate CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for the intelligent frame-specific tagging task.
+        /// Task control parameter for intelligent frame tagging.
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfoForUpdate FrameTagConfigure{ get; set; }
 
         /// <summary>
-        /// Intelligent Highlights Compilation Task Control Parameters.
+        /// Control parameters for the intelligent highlights compilation task.
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public HighlightsConfigureInfoForUpdate HighlightConfigure{ get; set; }

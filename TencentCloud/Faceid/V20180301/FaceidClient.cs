@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1398";
+       private const string sdkVersion = "SDK_NET_3.0.1399";
 
         /// <summary>
         /// Client constructor.
@@ -815,7 +815,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API updates the Webhook configuration.
+        /// This API is used to update Webhook configurations.
         /// </summary>
         /// <param name="req"><see cref="UpdateEKYCWebhookRequest"/></param>
         /// <returns><see cref="UpdateEKYCWebhookResponse"/></returns>
@@ -825,7 +825,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API updates the Webhook configuration.
+        /// This API is used to update Webhook configurations.
         /// </summary>
         /// <param name="req"><see cref="UpdateEKYCWebhookRequest"/></param>
         /// <returns><see cref="UpdateEKYCWebhookResponse"/></returns>

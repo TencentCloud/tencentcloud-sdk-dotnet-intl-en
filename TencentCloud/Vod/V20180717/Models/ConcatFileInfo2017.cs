@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Domain names or IP addresses of source files for video splicing.
+        /// Addresses of the source files for video stitching.
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }

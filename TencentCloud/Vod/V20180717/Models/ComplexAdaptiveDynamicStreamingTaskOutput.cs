@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Adaptive bitrate stream packaging format. Available values:
+        /// Adaptive bitrate packaging format. Available values:
         /// <li>HLS;</li>
         /// <li>MPEG-DASH.</li>
         /// </summary>

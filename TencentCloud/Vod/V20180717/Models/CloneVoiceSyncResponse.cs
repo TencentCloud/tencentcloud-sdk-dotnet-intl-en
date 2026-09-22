@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Cloned timbre</p>
+        /// <p>Cloned voice type</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

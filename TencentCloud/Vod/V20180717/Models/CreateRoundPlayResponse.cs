@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique identifier of the carousel playlist.
+        /// Carousel playlist unique identifier.
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }

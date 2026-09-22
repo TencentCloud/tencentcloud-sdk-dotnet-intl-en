@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// User-customized control parameters for voice audio and video moderation.
+        /// User-customized voice audio and video review control parameter.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// User-defined custom text, audio, and video moderation control parameters.
+        /// User-customized control parameters for text, audio, and video moderation.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

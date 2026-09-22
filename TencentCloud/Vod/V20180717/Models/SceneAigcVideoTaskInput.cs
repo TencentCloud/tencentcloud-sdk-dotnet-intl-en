@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SceneAigcVideoTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// Configuration of the output media file for the scenario-based image generation task.
+        /// Output media file configuration for scenario-based image generation tasks.
         /// </summary>
         [JsonProperty("OutputConfig")]
         public SceneAigcVideoOutputConfig OutputConfig{ get; set; }

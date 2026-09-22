@@ -32,13 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaAiAnalysisHighlightItem[] HighlightSet{ get; set; }
 
         /// <summary>
-        /// URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+        /// URL of the video intelligent highlight segment list file. The file content is in JSON format, and its data structure is consistent with the HighlightSet field. (The file will not be retained permanently and will be deleted after reaching the HighlightSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("HighlightSetFileUrl")]
         public string HighlightSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the video intelligent striking segment list file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("HighlightSetFileUrlExpireTime")]
         public string HighlightSetFileUrlExpireTime{ get; set; }

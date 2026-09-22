@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RebuildMediaOutputConfig OutputConfig{ get; set; }
 
         /// <summary>
-        /// Identification code for deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+        /// Task Priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }

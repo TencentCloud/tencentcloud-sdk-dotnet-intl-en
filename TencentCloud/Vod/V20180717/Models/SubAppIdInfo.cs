@@ -59,7 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Subapplication name (this field is not recommended. Use the new subapplication name field SubAppIdName instead).
+        /// Subapplication name (this field is not recommended; use the new subapplication name field SubAppIdName instead).
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -68,7 +68,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Application mode. Valid values:
         /// - fileid: FileID mode only
         /// - - fileid+path: FileID & Path mode
-        /// Leave empty to select the FileID-only mode by default.
+        /// Leave empty to select FileID-only mode by default.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

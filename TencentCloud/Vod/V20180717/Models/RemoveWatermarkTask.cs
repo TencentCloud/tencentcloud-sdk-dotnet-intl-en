@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task stream status. Valid values:
+        /// Task flow status. Valid values:
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+        /// Error code. An empty string indicates success, and additional values indicate failure. For values, see [video processing error code](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) list.
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Error code. 0 indicates success, and other values indicate failure:
         /// <li>40000: invalid parameters. Check the input parameters;</li>
-        /// <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
+        /// <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
         /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
@@ -60,7 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the intelligent watermark removal task.
+        /// Input for the intelligent watermark removal task.
         /// </summary>
         [JsonProperty("Input")]
         public RemoveWaterMarkTaskInput Input{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RemoveWaterMarkTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

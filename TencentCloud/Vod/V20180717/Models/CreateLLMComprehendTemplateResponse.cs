@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the Large Model Understanding Template</p>
+        /// <p>Unique identifier of the large model understanding template</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

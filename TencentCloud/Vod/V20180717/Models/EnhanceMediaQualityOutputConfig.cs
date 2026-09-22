@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Output filename, up to 64 characters. By default, the system specifies the generated filename.
+        /// Output filename, up to 64 characters. By default, the system assigns a generated filename.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812) API.
+        /// Category ID, used to categorize and manage media. You can call the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to create a category and obtain the category ID.
         /// <li>Default value: 0, indicate other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiry date of the output file. The file will be deleted after this time. Default value: permanent, no expiration. Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

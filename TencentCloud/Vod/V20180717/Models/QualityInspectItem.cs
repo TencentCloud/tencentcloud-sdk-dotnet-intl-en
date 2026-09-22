@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+        /// Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
         /// <font color=red>Note:</font> This field is valid only when Type is one of the following values:
         /// <li>BlackWhiteEdge: black and white edges;</li>
         /// <li>Mosaic: mosaic;</li>

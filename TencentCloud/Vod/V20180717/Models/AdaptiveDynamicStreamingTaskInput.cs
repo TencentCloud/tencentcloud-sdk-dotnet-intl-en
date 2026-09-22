@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+        /// <p>External subtitle file. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
         /// </summary>
         [JsonProperty("SubtitleSet")]
         public string[] SubtitleSet{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }
 
         /// <summary>
-        /// <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+        /// <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM info via task flow.</p>
         /// </summary>
         [JsonProperty("DrmInfo")]
         public ThirdPartyDrmInfo DrmInfo{ get; set; }

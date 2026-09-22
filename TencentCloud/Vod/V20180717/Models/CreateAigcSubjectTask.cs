@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
+        /// <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }

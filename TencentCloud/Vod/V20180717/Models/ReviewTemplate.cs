@@ -51,7 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// List of violation labels that need to return.
+        /// List of violation labels to return.
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }

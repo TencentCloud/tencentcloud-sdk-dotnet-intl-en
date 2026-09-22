@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Score of the Ocr text identification result. The score ranges from 0 to 100.</p>
+        /// <p>Score of Ocr text identification result. Value range: 0-100.</p>
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] KeywordSet{ get; set; }
 
         /// <summary>
-        /// <p>Area coordinates (pixel-level) where suspected text appears in Ocr text identification, [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.</p>
+        /// <p>Area coordinates (pixel level) where the suspected text appears in Ocr text identification, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.</p>
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

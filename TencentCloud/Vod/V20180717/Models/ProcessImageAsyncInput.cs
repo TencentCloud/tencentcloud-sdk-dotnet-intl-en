@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessImageAsyncTaskInput ImageTaskInput{ get; set; }
 
         /// <summary>
-        /// <p>Output media file configuration for image processing tasks.</p>
+        /// <p>Configuration of the output media file for an image processing task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public ProcessImageAsyncOutputConfig OutputConfig{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Path cache no cache configuration toggle, Value:
+        /// Path cache no cache configuration configuration switch. Value:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Always validate against the origin server. Value:
+        /// Always validate with the origin server. Value:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>

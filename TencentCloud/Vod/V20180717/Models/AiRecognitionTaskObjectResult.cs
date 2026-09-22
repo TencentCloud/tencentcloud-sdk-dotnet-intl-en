@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskObjectResultOutput Output{ get; set; }
 
         /// <summary>
-        /// Object recognition task progress. Value range: [0-100].
+        /// Object recognition task progress, in the range of [0,100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Object recognition task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Object identification task start execution time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }

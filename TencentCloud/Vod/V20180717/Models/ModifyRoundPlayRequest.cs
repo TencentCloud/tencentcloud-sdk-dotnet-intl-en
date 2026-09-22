@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Playback start time, formatted according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+        /// Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RoundPlayListItemInfo[] RoundPlaylist{ get; set; }
 
         /// <summary>
-        /// Carousel playbill name. Length limit: 64 characters.
+        /// Carousel playbill name, length limited to 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string PlayBackMode{ get; set; }
 
         /// <summary>
-        /// Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means never expire.
+        /// Expiration time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). Playback stops after expiry. "9999-12-31T23:59:59+08:00" means no expiration.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

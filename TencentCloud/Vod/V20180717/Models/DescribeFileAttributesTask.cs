@@ -37,8 +37,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates success. Other values indicate failure:
-        /// <li>40000: invalid parameters. Check the input parameters;</li>
+        /// Error code. 0 indicates success. Additional values indicate failure:
+        /// <li>40000: Invalid input parameters. Check the input parameters;</li>
         /// <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
         /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>

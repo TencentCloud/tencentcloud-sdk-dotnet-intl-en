@@ -28,13 +28,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Media material source of the texture segment, which can be:
         /// <li>Media file ID for VOD;</li>
         /// <li>Download URL of other media files.</li>
-        /// Note: When using the download URL of another media file as the material source and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+        /// Note: When using the download URL of another media file as the material source, and access control (such as anti-hotlinking) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
         /// </summary>
         [JsonProperty("SourceMedia")]
         public string SourceMedia{ get; set; }
 
         /// <summary>
-        /// Duration of the sticker in seconds.
+        /// Duration of the sticker, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Origin position. Valid values:
-        /// <li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+        /// <li>Center: The coordinate origin is the central position, such as the center of canvas.</li>
         /// Default: Center.
         /// </summary>
         [JsonProperty("CoordinateOrigin")]
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Horizontal position of the texture origin relative to the canvas origin, supporting two formats: % and px.
-        /// <li>If a string ends with %, the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, the texture XPos unit is pixel. For example, 100px means the XPos is 100 pixels.</li>
+        /// <li>If a string ends with %, it indicates that the texture XPos is at a specified percentage of the canvas width. For example, 10% means the XPos is at 10% of the canvas width.</li><li>If a string ends with px, it indicates that the texture XPos is in pixels. For example, 100px means the XPos is 100 pixels.</li>
         /// Default value: 0px.
         /// </summary>
         [JsonProperty("XPos")]
@@ -63,7 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Vertical position of the texture origin from the canvas origin. Supports two formats: % and px.
-        /// <li>When the string ends with %, it means the sticker YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is at 10% of the canvas height.</li>
+        /// <li>When a string ends with %, it means the texture YPos is at the specified percentage of the canvas height. For example, 10% means the YPos is 10% of the canvas height.</li>
         /// <li>If a string ends with px, it means the texture YPos unit is pixel. For example, 100px means YPos is 100 pixels.</li>
         /// Default value: 0px.
         /// </summary>
@@ -93,7 +93,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// Operation performed on the sticker, such as image rotation.
+        /// Operation performed on the texture, such as image rotation.
         /// </summary>
         [JsonProperty("ImageOperations")]
         public ImageTransform[] ImageOperations{ get; set; }

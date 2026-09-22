@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? SubtitleBoardConfigSwitch{ get; set; }
 
         /// <summary>
-        /// <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is located at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. See the following diagram: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
+        /// <p>The X-coordinate position of the subtitle background base plate. Supports pixel and percentage formats: - Pixel: Npx, where N ranges from [-4096, 4096]. - Percentage: N%, where N ranges from [-100, 100]; for example, 10% means the X-coordinate of the subtitle background base plate equals 10% of the source video width. Default value: 0px. Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></p>
         /// </summary>
         [JsonProperty("BoardX")]
         public long? BoardX{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? BoardY{ get; set; }
 
         /// <summary>
-        /// <p>BoardY measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+        /// <p>BoardY unit, 0 pixel, 1 percentage, default is 0, pixel</p>
         /// </summary>
         [JsonProperty("BoardYUnit")]
         public long? BoardYUnit{ get; set; }
 
         /// <summary>
-        /// <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
+        /// <p>Width of the base plate, a positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</p>
         /// </summary>
         [JsonProperty("BoardWidth")]
         public long? BoardWidth{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? BoardWidthUnit{ get; set; }
 
         /// <summary>
-        /// <p>Height of the base plate, a positive integer. - When representing pixels, the value ranges from 0 to 4096. - When representing a percentage, the value ranges from 0 to 100. If base plate is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
+        /// <p>Height of the base plate, positive integer. - When representing pixels, value ranges from 0 to 4096. - When representing a percentage, value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</p>
         /// </summary>
         [JsonProperty("BoardHeight")]
         public long? BoardHeight{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BoardColor{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle background transparency. Value range: [0, 1] <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
+        /// <p>Subtitle background transparency. Value range: [0, 1]. <li>0: completely transparent</li> <li>1: completely opaque</li> Default value: 0.8.</p>
         /// </summary>
         [JsonProperty("BoardAlpha")]
         public float? BoardAlpha{ get; set; }

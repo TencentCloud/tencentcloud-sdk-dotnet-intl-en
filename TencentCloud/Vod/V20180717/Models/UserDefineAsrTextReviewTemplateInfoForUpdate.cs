@@ -25,15 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// User custom speech audit task switch. Available values:
-        /// <li>ON: Enable the custom voice moderation task;</li>
-        /// <li>OFF: disables the custom voice moderation task.</li>
+        /// User-defined speech audit task switch. Available values:
+        /// <li>ON: enable custom voice moderation task;</li>
+        /// <li>OFF: Disable the custom voice moderation task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+        /// User-customized voice filter tags. The review results including the selected tags are returned. If the filter tag is empty, all review results will be returned. To use the tag filtering feature, add the corresponding tag when adding custom voice keyword material.
         /// The number of tags can be up to 10, and each tag can contain up to 16 characters.
         /// </summary>
         [JsonProperty("LabelSet")]
@@ -46,7 +46,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+        /// Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is required. Value range: 0–100.
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

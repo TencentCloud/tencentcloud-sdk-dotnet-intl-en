@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the image sprite task for videos.
+        /// Input of the image sprite task for a video.
         /// </summary>
         [JsonProperty("Input")]
         public ImageSpriteTaskInput Input{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaImageSpriteItem Output{ get; set; }
 
         /// <summary>
-        /// Video image sprite task progress, in the range of [0,100].
+        /// Progress of the image sprite task for videos. Value range: 0-100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task completion time of the sprite sheet capture task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Task completion time of sprite sheet capture in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File type, for example, mp4, flv.
+        /// File type, for example, mp4 and flv.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Output filename, up to 64 characters. By default, the system assigns the generated filename.
+        /// Output filename, up to 64 characters. By default, the system assigns a generated filename.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }

@@ -36,6 +36,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("WebhookURL")]
         public string WebhookURL{ get; set; }
 
+        /// <summary>
+        /// <p>Business scenario. Default if not passed: AML_SCREENING_RESULT_CHANGE. For parameter values, see the enumeration below.</p><p>Enumeration values:</p><ul><li>AML_SCREENING_RESULT_CHANGE: AML anti-money laundering screening result change notification (default value)    </li><li>NONDOC_VERIFICATION_RESULT: Non-document (NonDoc) verification result notification</li></ul>
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
+
+        /// <summary>
+        /// <p>Callback signature key, up to 128 characters. Used for HMAC-SHA256 signature verification of subsequent callback messages. If not passed, signature is not enabled. We recommend using OpenSSL random bytes to generate the key. Recommended command: openssl rand -base64 32</p><blockquote><p>Our side uses your configured <code>SignatureKey</code> to calculate an HMAC-SHA256 signature over "timestamp (<code>X-Webhook-Timestamp</code>) + <code>.</code> + request body", and puts the hexadecimal result in the request header <code>X-Webhook-Signature</code>. The message itself is unencrypted and transmitted over HTTPS. Use the same key to recalculate and compare the signature by the same rule to confirm that the notification source is trustworthy and the content has not been tampered with.</p></blockquote>
+        /// </summary>
+        [JsonProperty("SignatureKey")]
+        public string SignatureKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "WebhookName", this.WebhookName);
             this.SetParamSimple(map, prefix + "WebhookURL", this.WebhookURL);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "SignatureKey", this.SignatureKey);
         }
     }
 }

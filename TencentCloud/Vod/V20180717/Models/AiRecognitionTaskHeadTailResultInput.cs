@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video start and end recognition template ID.
+        /// Opening and closing segments recognition template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

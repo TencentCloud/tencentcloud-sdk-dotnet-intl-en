@@ -31,8 +31,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Classification list by frame tag name. CategorySet.N indicates the (N+1)-level category.
-        /// For example, if Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", with "scenario" as the level-1 category and "building" as the level-2 category.
+        /// Classification list by frame tag name. CategorySet.N indicates the (N+1)-th level category.
+        /// For example, if Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", indicating the frame tag is "tower", with "scenario" as the level-1 category and "building" as the level-2 category.
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }

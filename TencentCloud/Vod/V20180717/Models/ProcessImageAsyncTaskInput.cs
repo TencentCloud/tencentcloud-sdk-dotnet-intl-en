@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Extended parameters for async image processing.
+        /// Extended parameters for asynchronous image processing.
         /// </summary>
         [JsonProperty("ExtendedParameter")]
         public ProcessImageAsyncInputExtendedParameter ExtendedParameter{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Media asset file ID to be extracted
+        /// Media asset file ID to extract
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }

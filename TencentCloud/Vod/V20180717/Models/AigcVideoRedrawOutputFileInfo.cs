@@ -31,25 +31,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// <p>Output filename, up to 64 characters. By default, the system generates the filename. Valid when StorageMode is Permanent.</p>
+        /// <p>Output filename, up to 64 characters. By default, the system specifies the generated filename. Valid when StorageMode is Permanent.</p>
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can call the <a href="/document/product/266/7812">create category</a> API to create a category and obtain the category ID. Valid when StorageMode is Permanent.</p>
+        /// <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API. Valid when StorageMode is Permanent.</p>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+        /// <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>File type, such as mp4 or flv.</p>
+        /// <p>File type, for example, mp4 and flv.</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

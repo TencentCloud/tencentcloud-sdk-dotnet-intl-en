@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Material name. Length limit: 20 characters.
+        /// Material name. Length limited to 20 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -40,19 +40,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Usages{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Material description. Length limit: 1024 characters.
+        /// Material description, with a length limit of 1024 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Material image encoded as a Base64 (https://tools.ietf.org/html/rfc4648) string. Only jpeg and png image formats are supported. Array length limit: 5 images.
+        /// String encoded from the material image in [Base64](https://tools.ietf.org/html/rfc4648). Only jpeg and png image formats are supported. Array length limit: 5 images.
         /// Note: The image must be a single portrait with clear facial features, with pixels not less than 200×200.
         /// </summary>
         [JsonProperty("FaceContents")]
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Material tag
         /// <li>Array length limit: 20 tags;</li>
-        /// <li>Single tag length limited to 128 characters.</li>
+        /// <li>Single tag length limit: 128 characters.</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

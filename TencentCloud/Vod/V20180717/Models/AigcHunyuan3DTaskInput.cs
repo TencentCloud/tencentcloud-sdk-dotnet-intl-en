@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcHunyuan3DReferenceImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
-        /// <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+        /// <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8 and must contain the front perspective.</p>
         /// </summary>
         [JsonProperty("MultiViewImageInfos")]
         public AigcHunyuan3DMultiViewImageInfo[] MultiViewImageInfos{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcHunyuan3DMeshInfo[] MeshInfos{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+        /// <p>Whether to enable output PBR material.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
         /// </summary>
         [JsonProperty("EnablePBR")]
         public string EnablePBR{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? FaceCount{ get; set; }
 
         /// <summary>
-        /// <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+        /// <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
         /// </summary>
         [JsonProperty("KeepUV")]
         public string KeepUV{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Seed{ get; set; }
 
         /// <summary>
-        /// <p>Style control words.</p>
+        /// <p>Style control word.</p>
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }

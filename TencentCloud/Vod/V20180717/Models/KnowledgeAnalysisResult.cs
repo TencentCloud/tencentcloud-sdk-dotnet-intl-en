@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+        /// <p>Processing task type</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

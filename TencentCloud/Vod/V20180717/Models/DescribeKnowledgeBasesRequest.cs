@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+        /// <p>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+        /// <p>Filter by exact matching of the knowledge base name. If not specified, return all knowledge bases.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

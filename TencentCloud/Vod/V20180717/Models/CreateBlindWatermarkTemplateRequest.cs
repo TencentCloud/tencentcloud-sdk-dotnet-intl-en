@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TextContent{ get; set; }
 
         /// <summary>
-        /// VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).
+        /// VOD application ID. For customers who activate on-demand services after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

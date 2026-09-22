@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// <p>Digital watermark type. Available values:</p><li>Trace: traceability watermark processed;</li><li>CopyRight: copyright watermark processed;</li><li>None: no digital watermark processed.</li>
+        /// <p>Digital watermark type. Available values:</p><li>Trace means processed with traceable watermark;</li><li>CopyRight means processed with copyright watermark;</li><li>None means no digital watermark processing.</li>
         /// </summary>
         [JsonProperty("DigitalWatermarkType")]
         public string DigitalWatermarkType{ get; set; }
 
         /// <summary>
-        /// <p>Subflow information list.</p>
+        /// <p>List of substream info.</p>
         /// </summary>
         [JsonProperty("SubStreamSet")]
         public MediaSubStreamInfoItem[] SubStreamSet{ get; set; }

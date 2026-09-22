@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AdaptiveDynamicStreamingTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output of the video to adaptive streaming task.
+        /// Output of a video to adaptive streaming task.
         /// </summary>
         [JsonProperty("Output")]
         public AdaptiveDynamicStreamingInfoItem Output{ get; set; }

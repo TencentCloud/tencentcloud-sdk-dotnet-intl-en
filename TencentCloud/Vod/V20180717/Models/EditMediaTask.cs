@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task stream status. Valid values:
+        /// Task flow status. Valid values:
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
@@ -40,15 +40,15 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Error code. 0 indicates success. Other values indicate failure:
-        /// <li>40000: invalid input parameters. Check the input parameters;</li>
-        /// <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+        /// <li>40000: invalid parameters. Check the input parameters;</li>
+        /// <li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal;</li>
         /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Error code. An empty string indicates success, and other values indicate failure. For values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+        /// Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Video Processing Error Codes](https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -66,7 +66,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of a video editing task.
+        /// Input for a video editing task.
         /// </summary>
         [JsonProperty("Input")]
         public EditMediaTaskInput Input{ get; set; }
@@ -78,25 +78,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Meta information of the output video.
+        /// Metadata of the output video.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+        /// Task ID of the task type Procedure. If a task flow template (ProcedureName) is specified when initiating a video editing (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1) task, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, and AiRecognitionTask.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
-        /// Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), and the task flow template specifies `ReviewAudioVideoTask`, the task is initiated.
+        /// Task ID of the `ReviewAudioVideo` task type. If a task flow template (`ProcedureName`) is specified when initiating a video editing task (https://www.tencentcloud.com/document/api/266/34783?from_cn_redirect=1), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTaskId")]
         public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
-        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

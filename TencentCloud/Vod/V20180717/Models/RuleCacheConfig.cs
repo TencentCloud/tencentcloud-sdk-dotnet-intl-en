@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CacheConfigNoCache NoCache{ get; set; }
 
         /// <summary>
-        /// Follow the origin server configuration.
+        /// Follow the origin site configuration.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public CacheConfigFollowOrigin FollowOrigin{ get; set; }

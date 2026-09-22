@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// User ID assigned by Huaxida, which contains up to 128 characters.
+        /// User ID assigned by SDMC, which contains up to 128 characters.
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
         /// <summary>
-        /// User secret key ID assigned by SDMC, which contains up to 128 characters.
+        /// User secret ID assigned by Huaxida, which contains up to 128 characters.
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// FairPlay certificate address assigned by SDMC. This address must use HTTPS and can contain up to 1,024 characters.
+        /// FairPlay certificate address assigned by SDMC. This address uses the HTTPS protocol and has a maximum length of 1024 characters.
         /// </summary>
         [JsonProperty("FairPlayCertificateUrl")]
         public string FairPlayCertificateUrl{ get; set; }

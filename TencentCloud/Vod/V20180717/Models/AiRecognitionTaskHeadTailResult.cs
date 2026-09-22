@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input information for the video start and end recognition task.
+        /// Input information of the video opening and closing credits recognition task.
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskHeadTailResultInput Input{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskHeadTailResultOutput Output{ get; set; }
 
         /// <summary>
-        /// Video start and end recognition task progress, in the range of [0,100].
+        /// Video opening and closing credits recognition task progress, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Completion time of the video opening and closing credits recognition task in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// The time when the video opening and closing credits recognition task is completed, in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

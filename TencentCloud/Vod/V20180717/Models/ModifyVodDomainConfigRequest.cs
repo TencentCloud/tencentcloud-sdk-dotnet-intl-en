@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p><a href="/document/product/266/14046">Referer hotlink protection</a> rule.</p>
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> rule.</p>
         /// </summary>
         [JsonProperty("RefererAuthPolicy")]
         public RefererAuthPolicy RefererAuthPolicy{ get; set; }
 
         /// <summary>
-        /// <p><a href="/document/product/266/14047">Key hotlink protection</a> rule.</p>
+        /// <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> rule.</p>
         /// </summary>
         [JsonProperty("UrlSignatureAuthPolicy")]
         public UrlSignatureAuthPolicy UrlSignatureAuthPolicy{ get; set; }

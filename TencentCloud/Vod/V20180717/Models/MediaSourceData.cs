@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Media file source category:
-        /// <li>Record: comes from recording, for example, live streaming recording and live streaming time shift recording.</li>
+        /// <li>Record: comes from recording, for example, live recording and live streaming time shift recording.</li>
         /// <li>Upload: comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
         /// <li>VideoProcessing: comes from video processing, such as video splicing and video editing.</li>
         /// <li>TrtcRecord: comes from TRTC simultaneous recording.</li>
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// Field passed through when a user creates a file.
+        /// Field passed through when the user creates a file.
         /// </summary>
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }

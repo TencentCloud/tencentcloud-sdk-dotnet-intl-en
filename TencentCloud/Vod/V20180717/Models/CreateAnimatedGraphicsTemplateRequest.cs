@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -48,7 +48,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Maximum value of the animated gif height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+        /// Maximum value of the animated image height (or short side). Value range: 0 and [128, 4096]. Unit: px.
         /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
         /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
         /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -68,13 +68,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// Animated image file format. Valid values: gif and webp. Default value: gif.
+        /// Animated image file format. Valid values: `gif` and `webp`. Default value: `gif`.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// Image quality. Value range: [1, 100]. Default value: 75.
+        /// Image quality. Valid range: [1, 100]. Default value: 75.
         /// </summary>
         [JsonProperty("Quality")]
         public float? Quality{ get; set; }

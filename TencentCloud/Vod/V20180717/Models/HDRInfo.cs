@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// High dynamic range type control switch. Available values:
-        /// <li>ON: enable high dynamic range type switch;</li>
-        /// <li>OFF: disables high dynamic range type conversion.</li>
+        /// HDR type control switch. Available values:
+        /// <li>ON: enable high dynamic range type conversion;</li>
+        /// <li>OFF: Disable high dynamic range type switch.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

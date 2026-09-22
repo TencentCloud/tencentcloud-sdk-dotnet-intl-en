@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Output file information for an image asynchronous processing task.
+        /// Output file information for an asynchronous image processing task.
         /// </summary>
         [JsonProperty("FileInfo")]
         public ProcessImageAsyncOutputFileInfo FileInfo{ get; set; }

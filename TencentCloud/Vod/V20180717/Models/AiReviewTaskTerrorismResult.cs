@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTerrorismTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Task output involving unsafe information in audio/video moderation.
+        /// Task output of audio and video moderation involving unsafe information.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismTaskOutput Output{ get; set; }

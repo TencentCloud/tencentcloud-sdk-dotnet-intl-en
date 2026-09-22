@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+        /// Start offset time, in seconds. If not filled, it indicates cutting from the beginning of the video.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }

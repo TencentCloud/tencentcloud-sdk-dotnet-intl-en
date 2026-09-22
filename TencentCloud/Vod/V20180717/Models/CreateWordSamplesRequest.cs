@@ -26,13 +26,13 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// <b>Keyword application scenario. Available values:</b>
-        /// 1. Recognition.Ocr: Perform content recognition through OCR.
+        /// 1. Recognition.Ocr: Recognize content through OCR.
         /// 2. Recognition.Asr: Perform content recognition through audio recognition technology.
         /// 3. Review.Ocr: Perform inappropriate content recognition through OCR.
-        /// 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+        /// 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
         /// <b>Can be abbreviated as:</b>
         /// 5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
-        /// 6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+        /// 6. Review: Use OCR and audio recognition technology to perform inappropriate content recognition, equivalent to 3+4.
         /// 7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
         /// </summary>
         [JsonProperty("Usages")]
@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiSampleWordInfo[] Words{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

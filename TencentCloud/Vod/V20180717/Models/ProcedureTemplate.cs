@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// <p>AI moderation type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+        /// <p>AI intelligent review type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the AI content detect-type task.</p>
+        /// <p>Parameters for the AI content recognition task.</p>
         /// </summary>
         [JsonProperty("AiRecognitionTaskSet")]
         public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
@@ -86,19 +86,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for importing the Intelligent Media Assets knowledge base.</p>
+        /// <p>Parameters for importing the Intelligent Media Assets knowledge base task.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledgeTaskSet")]
         public ImportMediaKnowledgeTaskInput[] ImportMediaKnowledgeTaskSet{ get; set; }
 
         /// <summary>
-        /// <p>Template creation time, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// <p>Template last modified time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

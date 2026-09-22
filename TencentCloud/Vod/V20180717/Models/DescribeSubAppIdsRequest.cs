@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag information. Query the application list with a specified tag.
+        /// Tag information. Query the application list of a specified tag.
         /// </summary>
         [JsonProperty("Tags")]
         public ResourceTag[] Tags{ get; set; }

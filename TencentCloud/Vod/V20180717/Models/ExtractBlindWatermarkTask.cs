@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. `0` indicates success. Other values indicate failure.
+        /// Error code. `0`: Success. Other values: Failure.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -52,19 +52,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input information of the file for digital watermark extraction.
+        /// File input information for digital watermark extraction.
         /// </summary>
         [JsonProperty("InputInfo")]
         public ExtractBlindWatermarkInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+        /// Digital watermark type. Available values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+        /// Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not be returned.
         /// </summary>
         [JsonProperty("IsDetected")]
         public bool? IsDetected{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Result{ get; set; }
 
         /// <summary>
-        /// Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+        /// Player's ID extracted from the traceability watermark, represented in hexadecimal, 6 digits in total.
         /// </summary>
         [JsonProperty("ResultUV")]
         public string ResultUV{ get; set; }

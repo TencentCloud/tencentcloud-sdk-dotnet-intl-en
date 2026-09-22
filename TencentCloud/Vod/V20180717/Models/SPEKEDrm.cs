@@ -31,31 +31,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <p>DRM manufacturer access address. The field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits it to no more than 5 substreams, while DRMtoday supports a maximum of 9 substreams for encryption.</p>
+        /// <p>DRM manufacturer access address. This field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, and DRMtoday supports stream encryption for a maximum of 9 substreams.</p>
         /// </summary>
         [JsonProperty("KeyServerUrl")]
         public string KeyServerUrl{ get; set; }
 
         /// <summary>
-        /// <p>Encryption initialization vector (32-byte hexadecimal string). The field content is user-customized.</p>
+        /// <p>Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.</p>
         /// </summary>
         [JsonProperty("Vector")]
         public string Vector{ get; set; }
 
         /// <summary>
-        /// <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
+        /// <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
         /// </summary>
         [JsonProperty("EncryptionMethod")]
         public string EncryptionMethod{ get; set; }
 
         /// <summary>
-        /// <p>Substream encryption rule. Default value: preset0.<br>preset0: All substreams use the same key for encryption.<br>preset1: Each substream uses a different key for encryption.</p>
+        /// <p>Substream encryption rule. Default: preset 0<br>preset 0: use the same key to encrypt all substreams;<br>preset 1: use different keys to encrypt each substream;</p>
         /// </summary>
         [JsonProperty("EncryptionPreset")]
         public string EncryptionPreset{ get; set; }
 
         /// <summary>
-        /// <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
+        /// <p>DRM manufacturer request method.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
         /// </summary>
         [JsonProperty("KeyAcquireMode")]
         public string KeyAcquireMode{ get; set; }

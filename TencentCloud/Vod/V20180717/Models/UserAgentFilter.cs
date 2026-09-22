@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// List of effective rules for the UserAgent blocklist and allowlist.
+        /// List of effective UserAgent blocklist/allowlist rules.
         /// </summary>
         [JsonProperty("FilterRules")]
         public UserAgentFilterRule[] FilterRules{ get; set; }

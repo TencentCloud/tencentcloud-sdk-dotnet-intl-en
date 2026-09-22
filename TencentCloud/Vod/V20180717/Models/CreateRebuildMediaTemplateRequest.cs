@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Output file container format. Available values: mp4, flv, hls.
+        /// Output file container format. Available values: mp4, flv, and hls.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Audio and video quality rebirth template name.
+        /// Audio-visual quality rebirth template name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RebuildVideoInfo RebuildVideoInfo{ get; set; }
 
         /// <summary>
-        /// Audio-visual quality revival audio control control information.
+        /// Audio-visual quality revival audio control information.
         /// </summary>
         [JsonProperty("RebuildAudioInfo")]
         public RebuildAudioInfo RebuildAudioInfo{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Indicates whether to remove video data. Available values:
-        /// <li>`0`: reserved</li>
+        /// <li>`0`: retention</li>
         /// <li>1: Remove</li>
         /// Default value: 0.
         /// </summary>
@@ -83,7 +83,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Indicates whether to remove audio data. Available values:
-        /// <li>`0`: reserved</li>
+        /// <li>`0`: retention</li>
         /// <li>1: Remove</li>
         /// Default value: 0.
         /// </summary>

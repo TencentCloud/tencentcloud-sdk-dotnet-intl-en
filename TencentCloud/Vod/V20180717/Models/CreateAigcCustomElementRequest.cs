@@ -33,14 +33,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Subject description.
         /// 
-        /// Up to 100 characters.
+        /// Cannot exceed 100 characters.
         /// </summary>
         [JsonProperty("ElementDescription")]
         public string ElementDescription{ get; set; }
 
         /// <summary>
         /// Front reference image of the subject.
-        /// Supports passing an image URL (ensure it is accessible).
+        /// Support input image URL (underwrite accessibility)
         /// Image format: .jpg, .jpeg, and .png are supported.
         /// The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
         /// </summary>

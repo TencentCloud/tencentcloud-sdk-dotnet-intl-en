@@ -39,9 +39,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates success. Other values indicate failure:
-        /// <li>40000: Invalid input parameters. Check the input parameters;</li>
-        /// <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
+        /// Error code. 0 indicates success, and other values indicate failure:
+        /// <li>40000: Invalid input parameter. Check the input parameter;</li>
+        /// <li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li>
         /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
@@ -72,7 +72,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ExtractTraceWatermarkTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

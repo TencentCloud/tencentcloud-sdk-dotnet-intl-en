@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// <p>Segment start time offset.</p><p>Unit: seconds</p>
+        /// <p>Start time offset of a segment.</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }

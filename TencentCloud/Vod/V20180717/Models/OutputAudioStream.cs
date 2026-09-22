@@ -47,14 +47,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Number of audio channels. Available values:
         /// <li>1: mono.</li>
-        /// <li>2: stereo.</li>
+        /// <li>2: stereo</li>
         /// Default value: 2.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
         /// <summary>
-        /// Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+        /// Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
         /// When the value is 0, the audio bitrate is set automatically.
         /// </summary>
         [JsonProperty("Bitrate")]

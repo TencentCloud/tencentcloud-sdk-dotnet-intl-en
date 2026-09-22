@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] DrmTypes{ get; set; }
 
         /// <summary>
-        /// <p>External DRM vendor information.</p>
+        /// <p>Third-party DRM vendor information.</p>
         /// </summary>
         [JsonProperty("SPEKEDrm")]
         public SPEKEDrm SPEKEDrm{ get; set; }

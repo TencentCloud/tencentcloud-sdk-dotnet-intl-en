@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, to access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+        /// <p>File ID collection, match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
@@ -43,25 +43,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+        /// <p>Filename prefix, which is used to prefix match media file names.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("NamePrefixes")]
         public string[] NamePrefixes{ get; set; }
 
         /// <summary>
-        /// <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+        /// <p>File description set for fuzzy matching media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("Descriptions")]
         public string[] Descriptions{ get; set; }
 
         /// <summary>
-        /// <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+        /// <p>Category ID collection, match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("ClassIds")]
         public long?[] ClassIds{ get; set; }
 
         /// <summary>
-        /// <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+        /// <p>Tag set, match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Categories{ get; set; }
 
         /// <summary>
-        /// <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+        /// <p>Media file source collection. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("SourceTypes")]
         public string[] SourceTypes{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+        /// <p>Media file storage region, for example, ap-chongqing. See <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">region list</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
         /// </summary>
         [JsonProperty("StorageRegions")]
         public string[] StorageRegions{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
-        /// <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+        /// <p>Media file packaging format collection, match any element in the collection.</p><li>Array length limit: 10.</li>
         /// </summary>
         [JsonProperty("MediaTypes")]
         public string[] MediaTypes{ get; set; }
 
         /// <summary>
-        /// <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+        /// <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: Platform Ban;</li><li> Forbidden: proactive ban.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
@@ -145,13 +145,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Filters{ get; set; }
 
         /// <summary>
-        /// <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+        /// <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results will be sorted by relevance.</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+        /// <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value range: Offset + Limit no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -163,13 +163,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+        /// <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limited to 64 characters.</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+        /// <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source value reference, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -181,13 +181,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+        /// <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+        /// <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Vid{ get; set; }
 
         /// <summary>
-        /// <p>Live push Domain, valid when the media asset source is live recording.</p>
+        /// <p>Live push Domain, valid when the media asset source is live stream recording.</p>
         /// </summary>
         [JsonProperty("StreamDomains")]
         public string[] StreamDomains{ get; set; }

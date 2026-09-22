@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><strong>VOD application ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the app ID.</strong></p>
+        /// <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaType is Text. Used to select the ApiToken for quota limit</p>
+        /// <p>Valid only when QuotaType=Text. Use to select the ApiToken that needs to quota limit</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
 
         /// <summary>
-        /// <p>Number of records returned in pages, from the Offset-th to the (Offset+Limit-1)-th record.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
+        /// <p>Number of records returned in pages, from Offset to Offset+Limit-1.</p><p>Value range: [1, 100]</p><p>Default value: 10</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Starting offset amount for pagination return. Default value: 0. It returns records from Offset to Offset + Limit - 1.</p><p>Default value: 0</p>
+        /// <p>Starting offset amount for pagination return. Default value: 0. It will return records from Offset to Offset+Limit-1.</p><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

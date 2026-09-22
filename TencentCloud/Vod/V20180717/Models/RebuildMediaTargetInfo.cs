@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Output filename, up to 64 characters. By default, the system specifies the generated file name.
+        /// Output filename, up to 64 characters. By default, the system assigns the generated filename.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
@@ -44,13 +44,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Output file container format. Available values: mp4, flv, hls. Default: mp4.
+        /// Output file container format. Available values: mp4, flv, hls. Default value: mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
@@ -62,14 +62,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public RebuildMediaTargetVideoStream VideoStream{ get; set; }
 
         /// <summary>
-        /// Output audio information.
+        /// Output audio content.
         /// </summary>
         [JsonProperty("AudioStream")]
         public RebuildMediaTargetAudioStream AudioStream{ get; set; }
 
         /// <summary>
-        /// Indicates whether to remove video data. Valid values:
-        /// <li>0: retention</li>
+        /// Indicates whether to remove video data. Available values:
+        /// <li>`0`: reserved</li>
         /// <li>1: Remove</li>
         /// 
         /// Default value: 0.
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Indicates whether to remove audio data. Available values:
-        /// <li>0: retention</li>
+        /// <li>0: Reserved</li>
         /// <li>1: Remove</li>
         /// 
         /// Default value: 0.

@@ -25,26 +25,26 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Voice full-text recognition task switch. Available values:</p><li>ON: Enable the intelligent voice full-text recognition task;</li><li>OFF: Disable the intelligent voice full-text recognition task.</li>
+        /// <p>Voice full-text recognition task switch. Available values:</p><li>ON: enable intelligent voice full-text recognition task;</li><li>OFF: disable intelligent voice full-text recognition task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>List of generated subtitle file formats. Leave empty or pass an empty array to indicate no subtitle file generation. Available values:</p><li>vtt: generate WebVTT subtitle file;</li><li>srt: generate SRT subtitle file.</li><font color="red">Note:</font>VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
+        /// <p>List of generated subtitle file formats. Leave empty or pass an empty array to indicate no subtitle file generation. Available values:</p><li>vtt: generate WebVTT subtitle file;</li><li>srt: generate SRT subtitle file.</li><font color="red">Note:</font> VOD media asset information only supports adding vtt subtitles. Therefore, when and only when SubtitleFormats includes vtt, VOD will add the generated subtitles to media assets.
         /// </summary>
         [JsonProperty("SubtitleFormats")]
         public string[] SubtitleFormats{ get; set; }
 
         /// <summary>
-        /// <p>Generated subtitle file format. Leave it empty or as an empty string to not generate subtitle files. Available values:</p><li>vtt: generate a WebVTT subtitle file;</li><li>srt: generate an SRT subtitle file.</li><font color="red">Note: This field is deprecated. We recommend using SubtitleFormats.</font>
+        /// <p>Format of the generated subtitle file. Leave it empty or as an empty string to skip subtitle file generation. Available values:</p><li>vtt: generate a WebVTT subtitle file;</li><li>srt: generate an SRT subtitle file.</li><font color="red">Note: This field is deprecated. We recommend using SubtitleFormats.</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         [System.Obsolete]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>
-        /// <p>Media source language. Value range:</p><li>zh: Mandarin</li><li>en: English</li><li>ja: Japanese</li><li>zh-ca: Cantonese</li><font color="red">Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. It is recommended to fill in the language corresponding to the original media to improve recognition accuracy).
+        /// <p>Media source language. Value range:</p><li>zh: mandarin</li><li>en: English</li><li>ja: Japanese</li><li>zh-ca: Cantonese</li><font color="red">Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. It is recommended to fill in the language corresponding to the original media to improve recognition accuracy).</p>
         /// </summary>
         [JsonProperty("SrcLanguage")]
         public string SrcLanguage{ get; set; }

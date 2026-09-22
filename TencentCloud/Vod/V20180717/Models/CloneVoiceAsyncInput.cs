@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// <p>Input audio fileId</p>
+        /// <p>fileId of the input audio</p>
         /// </summary>
         [JsonProperty("AudioFileId")]
         public string AudioFileId{ get; set; }

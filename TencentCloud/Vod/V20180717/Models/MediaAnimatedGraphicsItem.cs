@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Width of the animated image in px.
+        /// Width of the animated image. Unit: px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Animated image bitrate. Measurement unit: bps.
+        /// Animated image bitrate in bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the GIF in the video, in seconds.
+        /// End time offset of an animated image in the video, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

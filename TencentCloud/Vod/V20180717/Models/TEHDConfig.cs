@@ -31,8 +31,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum video bitrate. Valid when Type is set to top speed Codec.
-        /// Leave this parameter empty or set it to 0, and VOD automatically sets the bitrate cap.
+        /// Maximum video bitrate. Valid when Type is specified as top speed Codec.
+        /// If not specified or set to 0, VOD automatically sets the bitrate cap.
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

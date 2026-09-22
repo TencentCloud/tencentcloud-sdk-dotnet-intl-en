@@ -27,14 +27,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// IP access restriction status. Available values:
         /// <li>Enabled: enabled;</li>
-        /// <li>Disabled: Disable.</li>
+        /// <li>Disabled: Disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// IP access restriction type: <li>Black: blocklist verification. Only IP requests from the IPList will be intercepted.</li>
-        /// <li>White: whitelist method validation. Only requests from IPs in the IPList are allowed.</li>When Status is Enabled, FilterType must be assigned a value.
+        /// IP access restriction type: <li>Black: blocklist validation. Only IP requests from the IPList are intercepted.</li>
+        /// <li>White: whitelist method verification. Only IP requests from the IPList will be allowed.</li>When Status is Enabled, FilterType must be assigned a value.
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }

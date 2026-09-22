@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+        /// Face ID in the video. The same face is treated as different IDs if it appears more than 1s apart in the video.
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FaceImage{ get; set; }
 
         /// <summary>
-        /// Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+        /// Start time of the lip-sync interval for this face. It can be used as the best lip-sync start time. Unit: ms.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+        /// End time of the lip-sync interval for the face. Note: This result has a millisecond-level deviation and will be later than the actual interval end. Unit: ms.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

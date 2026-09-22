@@ -33,15 +33,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+        /// Angle to rotate the image around the center point. Value range: 0-360. Valid when Type is Rotate.
         /// </summary>
         [JsonProperty("RotateAngle")]
         public float? RotateAngle{ get; set; }
 
         /// <summary>
         /// Image flipping action. Valid values:
-        /// <li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
-        /// <li>Vertical: Flip vertically, that is, mirror up and down.</li>
+        /// <li>Horizental: Flip horizontally, i.e., left and right mirroring.</li>
+        /// <li>Vertical: Flip vertically, that is, vertically mirrored.</li>
         /// Valid when Type is set to Flip.
         /// </summary>
         [JsonProperty("Flip")]

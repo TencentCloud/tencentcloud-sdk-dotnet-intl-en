@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+        /// Last modification time of the object in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
         /// </summary>
         [JsonProperty("LastModified")]
         public string LastModified{ get; set; }
 
         /// <summary>
-        /// Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+        /// Entity Tag is an information Tag that identifies the object content upon creation. It can be used to check whether the object content has changed.
         /// </summary>
         [JsonProperty("ETag")]
         public string ETag{ get; set; }
@@ -70,9 +70,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Optional values:
         /// -OriginalFiles: source file
         /// - TranscodeFiles: transcoded file
-        /// -AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
-        /// - SubtitleFiles: subtitle files.
-        /// - SampleSnapshotFiles: sampled screenshot files.
+        /// -AdaptiveDynamicStreamingFiles: Transcode to an adaptive bitrate stream file
+        /// - SubtitleFiles: subtitle file.
+        /// - SampleSnapshotFiles: sampled screenshot files
         /// - ImageSpriteFiles: image sprite screenshot files
         /// - SnapshotByTimeOffsetFiles: time point screenshot files.
         /// </summary>

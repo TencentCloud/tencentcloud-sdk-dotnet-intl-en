@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string OcrSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle language, used for OCR recognition. Default value: zh_en.<br>This parameter is valid only when OcrSwitch is set to &quot;ON&quot;. </p><ul><li>zh_en: Chinese and English </li><li>multi: other. The following languages are specifically supported: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+        /// <p>Subtitle language, for OCR recognition. Default value: zh_en.<br>This parameter is valid only when OcrSwitch is set to &quot;ON&quot;. </p><ul><li>zh_en: Chinese and English </li><li>multi: other. The following languages are supported: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
         /// </summary>
         [JsonProperty("SubtitleLang")]
         public string SubtitleLang{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TransSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON". Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+        /// <p>Target language for subtitle translation. Default value: en. This parameter is valid only when TransSwitch is set to "ON". Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
         /// </summary>
         [JsonProperty("TransDstLang")]
         public string TransDstLang{ get; set; }

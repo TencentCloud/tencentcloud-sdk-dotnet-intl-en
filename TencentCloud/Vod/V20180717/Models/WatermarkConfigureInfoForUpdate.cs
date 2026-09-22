@@ -53,7 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// Horizontal position of the distance between the watermark origin and the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
+        /// Horizontal position of the watermark origin relative to the origin of coordinates of the video image. A string ending with % means the watermark XPos is a specified percentage of the video width. For example, 10% means XPos is 10% of the video width.
         /// </summary>
         [JsonProperty("XPos")]
         public string XPos{ get; set; }

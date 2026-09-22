@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Maximum height (or short side) of the video stream. Value range: 0 and [128, 1920]. Unit: px.
+        /// Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
         /// <li>If both Width and Height are 0, the resolution is the same as the source.</li>
         /// <li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
         /// <li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
@@ -50,8 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Resolution adaptation. Available values:
-        /// <li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-        /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+        /// <li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+        /// <li>close: closed. At this point, Width represents the video width, and Height represents the video height.</li>
         /// 
         /// Default value: open.
         /// </summary>
@@ -60,7 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Bitrate of video stream. Value range: 0 and [128, 10000]. Unit: kbps.
-        /// When the value is 0, VOD sets the bitrate automatically.
+        /// When the value is 0, VOD automatically sets the bitrate.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }

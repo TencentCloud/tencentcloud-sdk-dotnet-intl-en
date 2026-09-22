@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in with the app ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// <p>AI intelligent content moderation event type task parameter *.<br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
+        /// <p>Task parameter for AI intelligent content moderation type *. <br><font color="red">*: This parameter is used to initiate legacy review and is not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font></p>
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// <p>Parameters for the AI content recognition task.</p>
+        /// <p>Parameters for the AI content recognition type task.</p>
         /// </summary>
         [JsonProperty("AiRecognitionTaskSet")]
         public AiRecognitionTaskInput[] AiRecognitionTaskSet{ get; set; }
 
         /// <summary>
-        /// <p>This parameter is not recommended. Use AiRecognitionTaskSet instead.</p>
+        /// <p>This parameter is not recommended. We recommend using AiRecognitionTaskSet.</p>
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         [System.Obsolete]

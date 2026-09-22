@@ -25,14 +25,14 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// File type result in the task return result. For example, in intelligent removal, the erased video file will be stored in the media asset, and the FileId will be provided in this field; the Url of the subtitle file extracted from the video will be provided in this field.
+        /// File type result in the task return result. For example, in intelligent removal, the erased video file will be stored in the media asset, and FileId will be provided in this field. The Url of the subtitle file extracted from the video will be provided in this field.
         /// </summary>
         [JsonProperty("OutputFiles")]
         public MPSOutputFile[] OutputFiles{ get; set; }
 
         /// <summary>
         /// Result returned by the task. This field corresponds to the Output result in the MPS task response, returned in JSON format.
-        /// Different MPS task output results have different structures. For specific return content, see MPS task output structure.
+        /// The output result structures of different MPS tasks are different. For the specific return content, see the MPS task output struct.
         /// [Intelligent Categorization Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskClassificationOutput)
         /// [Intelligent Cover Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskCoverOutput)
         /// [Intelligent Tag Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskTagOutput)
@@ -41,11 +41,11 @@ namespace TencentCloud.Vod.V20180717.Models
         /// [Video Splitting Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskSegmentOutput)
         /// [Intelligent opening and ending content result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskHeadTailOutput)
         /// [Intelligent Summary Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskDescriptionOutput)
-        /// [Intelligent Landscape-to-Portrait Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskHorizontalToVerticalOutput)
+        /// [Horizontal-to-Vertical Video Transformation Result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskHorizontalToVerticalOutput)
         /// [Intelligent dubbing result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskDubbingOutput)
         /// [Intelligent video understanding result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#AiAnalysisTaskVideoComprehensionOutput)
         /// [Smart subtitle full speech recognition result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#SmartSubtitleTaskAsrFullTextResultOutput)
-        /// [Translation result of smart subtitling](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#SmartSubtitleTaskTransTextResultOutput)
+        /// [Intelligent caption translation result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#SmartSubtitleTaskTransTextResultOutput)
         /// [Translation result of pure subtitle file in smart subtitling](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#PureSubtitleTransResultOutput)
         /// [Smart subtitle text extraction subtitle result](https://www.tencentcloud.com/document/product/862/37615?from_cn_redirect=1#SmartSubtitleTaskTextResultOutput)
         /// 

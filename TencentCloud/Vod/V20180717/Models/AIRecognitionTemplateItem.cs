@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Unique ID of a video content recognition template.
+        /// Unique ID of the video content recognition template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -44,14 +44,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Template type. Valid values:
-        /// <li>Preset: system preset template;</li>
+        /// <li>Preset: system-preset template;</li>
         /// <li>Custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Head and tail recognition control parameter.
+        /// Head and tail recognition control parameters.
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
@@ -69,7 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public FaceConfigureInfo FaceConfigure{ get; set; }
 
         /// <summary>
-        /// Text Full-text Recognition Control Parameters.
+        /// Text full-text recognition control parameters.
         /// </summary>
         [JsonProperty("OcrFullTextConfigure")]
         public OcrFullTextConfigureInfo OcrFullTextConfigure{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Voice full-text recognition control parameters.
-        /// <font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to initiate speech translation recognition (if DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+        /// <font color=red>Note: This parameter is no longer maintained. We recommend using the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full speech recognition).</font>
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
@@ -94,19 +94,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Voice translation recognition control parameters.
+        /// Speech translation recognition control parameters.
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
 
         /// <summary>
-        /// Object recognition control parameter.
+        /// Object recognition control parameters.
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfo ObjectConfigure{ get; set; }
 
         /// <summary>
-        /// Screenshot interval. Measurement unit: second.
+        /// Screenshot time interval in seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

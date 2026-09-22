@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Capability configuration switch. Valid values:
-        /// <li>ON: enabled;</li>
+        /// <li>ON: enabled</li>
         /// <li>OFF: disabled</li>
         /// Default value: ON.
         /// </summary>
@@ -35,7 +35,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Type. Valid values:
-        /// <li>standard: common overclocking</li>
+        /// <li>standard: common super resolution</li>
         /// <li>super: advanced super-resolution.</li>
         /// Default value: standard.
         /// </summary>
@@ -58,7 +58,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Percent{ get; set; }
 
         /// <summary>
-        /// Target image width. It cannot exceed 4096.
+        /// Target image width. Cannot exceed 4096.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
@@ -70,15 +70,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Target image long edge length. Must not exceed 4096.
-        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+        /// Long side length of the target image. It cannot exceed 4096.
+        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
         /// </summary>
         [JsonProperty("LongSide")]
         public long? LongSide{ get; set; }
 
         /// <summary>
         /// Short side length of the target image. It cannot exceed 4096.
-        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are unconfigured.
+        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
         /// </summary>
         [JsonProperty("ShortSide")]
         public long? ShortSide{ get; set; }

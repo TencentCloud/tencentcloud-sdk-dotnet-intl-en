@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of audio/video content recognition template details.
+        /// Audio/video content recognition template detail list.
         /// </summary>
         [JsonProperty("AIRecognitionTemplateSet")]
         public AIRecognitionTemplateItem[] AIRecognitionTemplateSet{ get; set; }

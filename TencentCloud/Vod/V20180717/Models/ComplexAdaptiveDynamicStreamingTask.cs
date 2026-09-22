@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Adaptive bitrate task execution status and results. Each element corresponds to an adaptive bitrate template.
+        /// Execution status and results of the adaptive bitrate stream task. Each element corresponds to an adaptive bitrate template.
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingTaskResultSet")]
         public ComplexAdaptiveDynamicStreamingTaskResult[] ComplexAdaptiveDynamicStreamingTaskResultSet{ get; set; }

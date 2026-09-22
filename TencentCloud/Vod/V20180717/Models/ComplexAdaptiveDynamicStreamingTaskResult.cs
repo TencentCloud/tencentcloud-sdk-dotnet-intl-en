@@ -27,8 +27,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Task status. Valid values:
         /// <li>PROCESSING: Processing;</li>
-        /// <li>SUCCESS: completed;</li>
-        /// <li>FAIL: Failed.</li>
+        /// <li>SUCCESS: Completed;</li>
+        /// <li>FAIL: failure.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input of an adaptive bitrate streaming task.
+        /// Input of an adaptive bitrate task.
         /// </summary>
         [JsonProperty("Input")]
         public ComplexAdaptiveDynamicStreamingTaskInput Input{ get; set; }

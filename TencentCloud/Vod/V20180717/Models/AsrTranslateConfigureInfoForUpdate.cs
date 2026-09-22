@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Task switch for speech translation recognition. Value range:
-        /// <li>ON: enabled;</li>
-        /// <li>OFF: Disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, enabling voice translation recognition and ASR full text recognition simultaneously is forbidden.
+        /// <li>ON: enabled</li>
+        /// <li>OFF: disabled.</li><font color=red>Note:</font> The voice translation recognition task itself will return the ASR full text recognition result. To avoid duplicate charges, do not enable the voice translation recognition and ASR full text recognition feature items simultaneously.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -53,9 +53,9 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Target language.
-        /// If this parameter is set to an empty string, it means that only full text speech recognition is performed without translation (the billing item is the same as that of AsrFullTextConfigure full text speech recognition);
-        /// Otherwise, the parameter value range is divided into the following cases:
-        /// When SrcLanguage is zh (Chinese), value ranges from...to...
+        /// If this parameter is set to an empty string, it indicates that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+        /// Otherwise, the value range of this parameter is divided into the following cases:
+        /// When SrcLanguage is zh (Chinese), value range:
         /// <li>en: English;</li>
         /// <li>ja: Japanese;</li>
         /// <li>ko: Korean;</li>
@@ -95,10 +95,10 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>zh: Chinese;</li>
         /// <li>en: English;</li>
         /// <li>ja: Japanese.</li>
-        /// When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value range is:
+        /// When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), value range:
         /// <li>zh: Chinese;</li>
         /// <li>en: English.</li>
-        /// When SrcLanguage is pt (Portuguese), value range:
+        /// When SrcLanguage is pt (Portuguese), value ranges from...to...
         /// <li>zh: Chinese;</li>
         /// <li>en: English;</li>
         /// <li>fr: French;</li>
@@ -147,7 +147,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SubtitleFormatsOperation SubtitleFormatsOperation{ get; set; }
 
         /// <summary>
-        /// Specify subtitle name. Length limited to 64 characters. This value will be used for player display.
+        /// Specify subtitle name, length limited to 64 characters. This value will be used for player display.
         /// </summary>
         [JsonProperty("SubtitleName")]
         public string SubtitleName{ get; set; }

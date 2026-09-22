@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the adaptive transcoding template.</p>
+        /// <p>Adaptive Transcoding Template Unique Identifier.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? DisableHigherVideoResolution{ get; set; }
 
         /// <summary>
-        /// <p>Adaptive transcoding input stream parameter information. Up to 10 streams can be input.<br>Note: The frame rate of each stream must remain consistent. If inconsistent, the frame rate of the first stream is used as the output frame rate.</p>
+        /// <p>Adaptive Transcoding Input Stream Parameter Information, up to 10 streams.<br>Note: The frame rate of each stream must remain consistent; if inconsistent, use the frame rate of the first stream as the output frame rate.</p>
         /// </summary>
         [JsonProperty("StreamInfos")]
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Shard type. Available values: <br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The shard format of adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the shard format can only be mp4 or mp4-mp4-segment. For DASH, the shard format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the shard format can only be mp4 or mp4-mp4-segment.</p>
+        /// <p>Segment type. Available values:<br>ts: HLS, internally mapped to ts-segment</p><p>mp4: HLS/DASH, internally mapped to mp4-mp4-segment for HLS and mp4-mp4-byterange for DASH</p><p>ts-segment: HLS+TS segment</p><p>ts-byterange: HLS+TS byte range</p><p>mp4-segment: HLS+MP4 segment</p><p>mp4-byterange: HLS+MP4 byte range</p><p>ts-packed-audio: HLS+TS+Packed Audio segment</p><p>mp4-packed-audio: HLS+MP4+Packed Audio segment</p><p>ts-ts-segment: HLS+TS+TS segment</p><p>ts-ts-byterange: HLS+TS+TS byte range</p><p>mp4-mp4-segment: HLS+MP4+MP4 segment</p><p>mp4-mp4-byterange: HLS/DASH+MP4+MP4 byte range</p><p>ts-packed-audio-byterange: HLS+TS+Packed Audio byte range</p><p>mp4-packed-audio-byterange: HLS+MP4+Packed Audio byte range<br> Default value: ts-segment Note: The segment format for adaptive bitrate is based on this field. For DASH, SegmentType can only be mp4-mp4-byterange.</p><p>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment. Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange. Widevine+FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }

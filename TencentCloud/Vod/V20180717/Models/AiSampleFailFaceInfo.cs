@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Error code. Value:
         /// <li>0: success;</li>
-        /// <li>Other: Failed.</li>
+        /// <li>Other: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

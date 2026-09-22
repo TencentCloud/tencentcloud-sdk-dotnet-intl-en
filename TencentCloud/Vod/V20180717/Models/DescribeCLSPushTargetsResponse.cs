@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Domain name push to CLS target list.
+        /// Domain name push CLS target list.
         /// </summary>
         [JsonProperty("DomainCLSTargets")]
         public DomainCLSTargetInfo[] DomainCLSTargets{ get; set; }

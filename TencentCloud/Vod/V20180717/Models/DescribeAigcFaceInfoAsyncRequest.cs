@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-Demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Input video information that needs to get face information. It can contain up to one file.</p>
+        /// <p>Input video information that needs to get face information, containing up to one file.</p>
         /// </summary>
         [JsonProperty("FileInfos")]
         public AigcFaceInputFileInfo[] FileInfos{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Source context, used to pass through user request information. The audio and video quality revival completion callback will return the value of this field. Maximum length: 1000 characters.</p>
+        /// <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

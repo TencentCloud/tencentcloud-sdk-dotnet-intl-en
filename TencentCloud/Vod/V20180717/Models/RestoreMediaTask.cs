@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string OriginalStorageClass{ get; set; }
 
         /// <summary>
-        /// Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+        /// Target storage type of the file. For temporary retrieval, the target storage class is the same as the original storage class.
         /// </summary>
         [JsonProperty("TargetStorageClass")]
         public string TargetStorageClass{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? StandardStorage{ get; set; }
 
         /// <summary>
-        /// Current infrequent access storage capacity in bytes.
+        /// Current infrequent access storage capacity, in bytes.
         /// </summary>
         [JsonProperty("InfrequentStorage")]
         public ulong? InfrequentStorage{ get; set; }

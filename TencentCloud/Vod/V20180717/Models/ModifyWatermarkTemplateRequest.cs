@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Watermark template name, with a length limit of 64 characters.
+        /// Watermark template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CoordinateOrigin{ get; set; }
 
         /// <summary>
-        /// The horizontal distance between the watermark origin and the origin of coordinates of the video image. Supports two formats: % and px.
+        /// Horizontal position of the watermark origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
         /// <li>If a string ends with px, it means the watermark XPos is specified in pixels. For example, 100px means XPos is 100 pixels.</li>
         /// </summary>

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Video terrorism score. Value range: 0-100.
+        /// Video terrorism score. The score ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -55,20 +55,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// List of video segments with suspected terrorism.
+        /// List of video segments suspected of terrorism.
         /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the Segment List File for suspected terrorism. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+        /// URL of the segment list file for suspected terrorism videos. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// File URL expiration time of the suspected terrorism video segment list in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the Segment List File URL for suspected terrorism videos, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

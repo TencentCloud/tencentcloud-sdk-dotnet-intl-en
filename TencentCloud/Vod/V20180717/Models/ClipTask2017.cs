@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SrcFileId{ get; set; }
 
         /// <summary>
-        /// File information of the video editing output.
+        /// Video editing output file information.
         /// </summary>
         [JsonProperty("FileInfo")]
         public ClipFileInfo2017 FileInfo{ get; set; }

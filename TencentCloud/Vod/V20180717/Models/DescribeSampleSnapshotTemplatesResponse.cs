@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Sampling screenshot template detail list.
+        /// List of sampled screenshot template details.
         /// </summary>
         [JsonProperty("SampleSnapshotTemplateSet")]
         public SampleSnapshotTemplate[] SampleSnapshotTemplateSet{ get; set; }

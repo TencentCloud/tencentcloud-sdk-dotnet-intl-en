@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// Program ID assigned by the system.
+        /// Play program ID, assigned by the system.
         /// </summary>
         [JsonProperty("ItemId")]
         public string ItemId{ get; set; }

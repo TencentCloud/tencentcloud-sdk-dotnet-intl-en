@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of a video involving inappropriate information. Value range: 0–100.
+        /// Score of inappropriate information in the video. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Result tag of videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
+        /// Result tag for videos involving inappropriate information. Mapping between the LabelSet parameter in the screen image authentication task control parameter (https://www.tencentcloud.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) of the audio/video moderation template and the value range of this parameter:
         /// violation_photo:
         /// <li>violation_photo: Violation icon.</li>
         /// Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
@@ -57,13 +57,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaContentReviewPoliticalSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
+        /// URL of the segment list file that may contain inappropriate information. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently. It will be deleted after the SegmentSetFileUrlExpireTime is reached.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the segment list file URL of videos suspected of involving inappropriate information, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the URL of the Segment List File of the video suspected of involving inappropriate information in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

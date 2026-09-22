@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Date for query. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
+        /// Query date, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). This parameter is only valid for the date part.
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// Domain name. Query the playback stats of the Top 100 media files for that domain name. By default, query the playback stats of all domain names.
+        /// Domain name. Query playback stats of the Top 100 media files for that domain name. Query playback stats of all domain names by default.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
@@ -39,14 +39,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Statistical metrics for Top data. Valid values:
         /// <li>Traffic: playback traffic. The data of Top 100 is collected by playback traffic.</li>
-        /// <li>PlayTimes: number of plays, the data of the Top 100 plays by playback times.</li>
+        /// <li>PlayTimes: number of plays, the data of the Top 100 by playback count.</li>
         /// Default value: Traffic.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

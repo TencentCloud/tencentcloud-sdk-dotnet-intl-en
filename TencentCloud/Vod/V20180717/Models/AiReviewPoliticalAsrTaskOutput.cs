@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Asr text involving inappropriate information and rule violation score. Value range: 0-100.
+        /// Asr text involves inappropriate information and rule violation score. The score ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Asr text involving inappropriate information and rule violation result suggestions, with a permissible range of:
+        /// Asr text involves inappropriate information and rule violation result suggestions, with a permissible range of:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,20 +40,20 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of video segments where the Asr text involves inappropriate information or is suspected of rule violations.
+        /// List of video segments where the Asr text involves inappropriate information or suspected rule violations.
         /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the segment list file for videos with Asr text that may involve inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+        /// URL of the Segment List File for videos where the Asr text involves suspected inappropriate information or rule violations. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the file URL of the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the file URL for the video segment list where the Asr text involves inappropriate information or suspected rule violations, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

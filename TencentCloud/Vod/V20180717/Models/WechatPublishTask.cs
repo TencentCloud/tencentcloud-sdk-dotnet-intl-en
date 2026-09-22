@@ -42,7 +42,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Error code.
         /// <li>0: success;</li>
-        /// <li>Other value: unsuccessful.</li>
+        /// <li>Other value: failure.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -54,7 +54,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Video file ID for publishing.
+        /// Video file ID to publish.
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// WeChat publishing status. Valid values:
         /// <li>FAIL: Failed;</li>
-        /// <li>SUCCESS: successful;</li>
+        /// <li>SUCCESS: Succeeded;</li>
         /// <li>AUDITNOTPASS: failed to pass moderation;</li>
         /// <li>NOTTRIGGERED: Publishing on WeChat has not been initiated.</li>
         /// </summary>

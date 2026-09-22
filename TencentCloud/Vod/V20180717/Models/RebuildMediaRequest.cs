@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Start offset time, in seconds. If not filled, the segment is cut from the beginning of the video.
+        /// Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ArtifactRepairInfo ArtifactRepairInfo{ get; set; }
 
         /// <summary>
-        /// Output target parameters for audio-visual quality rebirth.
+        /// Audio-visual quality rebirth output target parameters.
         /// </summary>
         [JsonProperty("TargetInfo")]
         public RebuildMediaTargetInfo TargetInfo{ get; set; }
 
         /// <summary>
-        /// An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.
+        /// Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }

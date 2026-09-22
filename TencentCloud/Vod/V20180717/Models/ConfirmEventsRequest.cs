@@ -32,13 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] EventHandles{ get; set; }
 
         /// <summary>
-        /// Reserved field, used for special purpose.
+        /// Reserved field, used for special purposes.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }

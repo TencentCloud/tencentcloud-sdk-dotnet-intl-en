@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, it has no audio track.</li>
+        /// <p>Whether the media file has no audio track. Value range:</p><li>0: No, it has audio tracks;</li><li>1: Yes, no audio track.</li>
         /// </summary>
         [JsonProperty("NoAudio")]
         public long? NoAudio{ get; set; }
 
         /// <summary>
-        /// <p>Whether the media file has no video track. Value range:</p><li>0: No, it has a video track;</li><li>1: Yes, it has no video track.</li>
+        /// <p>Whether the media file has no video track. Value range:</p><li>0: No, meaning it has a video track;</li><li>1: Yes, meaning it has no video track.</li>
         /// </summary>
         [JsonProperty("NoVideo")]
         public long? NoVideo{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time offset of the start of the suspected segment. Unit: second.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the suspected segment, in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
@@ -51,13 +51,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Label of the most likely rule violation in the suspected segment. Value range:
+        /// Most likely rule violation tag of the suspected segment. Value range:
         /// <li>Porn: Pornography;</li>
         /// <li>Terror: violence.</li>
         /// <li>Polity: inappropriate information;</li>
         /// <li>Ad: advertisement;</li>
-        /// <li>Illegal: illegal;</li>
-        /// <li>Abuse: verbal abuse;</li>
+        /// <li>Illegal: illegal activities;</li>
+        /// <li>Abuse: abusive language;</li>
         /// <li>Moan: panting.</li>
         /// </summary>
         [JsonProperty("Label")]
@@ -71,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Suspected segment violation type. Value range:
-        /// <li>Image: People or icons in the image;</li>
+        /// <li>Image: people or icons on the screen;</li>
         /// <li>OCR: text on the screen;</li>
         /// <li>ASR: text in speech.</li>
         /// <li>Voice: sound.</li>
@@ -80,13 +80,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Form{ get; set; }
 
         /// <summary>
-        /// Valid when `Form` is `Image` or `OCR`. Indicates the area coordinates (pixel-level) where the suspect, icon, or text appears, in the format [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
+        /// Valid when Form is Image or OCR. Indicates the pixel-level coordinates of the area where the suspect, icon, or text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Valid when Form is OCR or ASR. Indicates the recognized OCR or ASR text content.
+        /// Valid when Form is OCR or ASR. It indicates the recognized OCR or ASR text content.
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
@@ -98,14 +98,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] KeywordSet{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (images are not retained permanently and will reach
+        /// Suspected image URL (images are not retained permanently and will be deleted after reaching
         /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

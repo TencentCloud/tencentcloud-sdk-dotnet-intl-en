@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the animated image task.
+        /// Input of the rotating image task.
         /// </summary>
         [JsonProperty("Input")]
         public AnimatedGraphicTaskInput Input{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaAnimatedGraphicsItem Output{ get; set; }
 
         /// <summary>
-        /// Progress of the rotating image task. Value range: 0-100.
+        /// Rotating image task progress, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Rotating image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Rotating image task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }

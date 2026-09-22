@@ -33,14 +33,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Width of a watermark, supporting two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-        /// <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels. Value range: [8, 4096].</li>
+        /// <li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels. Value range: [8, 4096].</li>
         /// Default value: 10%.
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// Height of a watermark, supporting two formats: % and px.
+        /// Height of a watermark. Supports two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
         /// <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels. Value range: 0 or [8, 4096].</li>
         /// Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -51,8 +51,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
         /// <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-        /// <li>repeat_last_frame: After the watermark finishes playing, stay on the last frame;</li>
-        /// <li>repeat: loop watermark playback until the video ends (default value).</li>
+        /// <li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
+        /// <li>repeat: loop the watermark until the video ends (default value).</li>
         /// </summary>
         [JsonProperty("RepeatType")]
         public string RepeatType{ get; set; }

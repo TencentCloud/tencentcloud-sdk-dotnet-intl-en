@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+        /// <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
         /// </summary>
         [JsonProperty("StreamIndex")]
         public long? StreamIndex{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string YPos{ get; set; }
 
         /// <summary>
-        /// <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+        /// <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
         /// </summary>
         [JsonProperty("BoardY")]
         public string BoardY{ get; set; }
 
         /// <summary>
-        /// <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+        /// <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
         /// </summary>
         [JsonProperty("BoardWidth")]
         public string BoardWidth{ get; set; }
 
         /// <summary>
-        /// <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+        /// <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
         /// </summary>
         [JsonProperty("BoardHeight")]
         public string BoardHeight{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? BoardAlpha{ get; set; }
 
         /// <summary>
-        /// <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+        /// <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
         /// </summary>
         [JsonProperty("Alignment")]
         public string Alignment{ get; set; }
 
         /// <summary>
-        /// <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+        /// <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
         /// </summary>
         [JsonProperty("OutlineWidth")]
         public string OutlineWidth{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? ShadowAlpha{ get; set; }
 
         /// <summary>
-        /// <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+        /// <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 1000.</li><li>Percentage: N%, N value ranges from 0 to 100.</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("LineSpacing")]
         public string LineSpacing{ get; set; }

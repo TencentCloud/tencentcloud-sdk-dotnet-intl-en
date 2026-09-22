@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Switch for the intelligent frame-specific tagging task. Available values:
-        /// <li>ON: enable the intelligent frame-specific tagging task;</li>
+        /// <li>ON: enable the intelligent frame tagging task;</li>
         /// <li>OFF: Disable the intelligent frame-specific tagging task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+        /// Frame interception interval in seconds. If not specified, the default frame interval is 1 second. Minimum value: 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

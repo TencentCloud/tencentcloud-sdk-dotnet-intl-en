@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Font type. Currently, two are supported:
+        /// Font type. Currently two are supported:
         /// <li>simkai.ttf: support Chinese and English;</li>
         /// <li>arial.ttf: English only.</li>
         /// </summary>
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FontSize{ get; set; }
 
         /// <summary>
-        /// Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+        /// Text color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }

@@ -39,10 +39,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Width{ get; set; }
 
         /// <summary>
-        /// Height of a watermark, supporting two formats: % and px.
+        /// Height of the watermark. Supports two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
-        /// <li>If a string ends with px, it means the watermark Height is in pixels; for example, 100px means the Height is 100 pixels;</li>
-        /// 0px: Height is scaled proportionally to the video width based on Width.
+        /// <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels;</li>
+        /// 0px: means Height is scaled proportionally to the video width according to Width.
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
         /// <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-        /// <li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
+        /// <li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
         /// <li>repeat: The watermark loops until the video ends.</li>
         /// </summary>
         [JsonProperty("RepeatType")]

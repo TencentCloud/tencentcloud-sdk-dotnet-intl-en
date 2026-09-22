@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// List of video split task information. A maximum of 100 split information entries can be simultaneously supported.
+        /// Video split task information list. It can simultaneously support up to 100 split information entries.
         /// </summary>
         [JsonProperty("Segments")]
         public SplitMediaTaskConfig[] Segments{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Source context. This is used to pass user request information. The SplitMediaComplete callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.
+        /// Identify source context, used to pass through user request information. This field value will be returned in SplitMediaComplete callback and task flow status change callback. Maximum length: 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

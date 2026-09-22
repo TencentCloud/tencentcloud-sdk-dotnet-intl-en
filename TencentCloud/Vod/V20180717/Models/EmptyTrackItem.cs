@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Duration in seconds.
+        /// Duration, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }

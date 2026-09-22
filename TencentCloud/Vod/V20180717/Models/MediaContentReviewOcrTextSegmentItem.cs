@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the suspected segment, in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
@@ -52,19 +52,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// List of suspicious keywords.
+        /// List of suspect keywords.
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }
 
         /// <summary>
-        /// Zone coordinates of the suspected text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+        /// Pixel-level coordinates of the area where the suspected text appears, [x1, y1, x2, y2], which are the coordinates of the top-left corner and the bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (images are not retained permanently and will be deleted upon reaching
+        /// Suspected image URL (images are not retained permanently and will be deleted after reaching
         /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]

@@ -26,19 +26,19 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Voice translation clip list.
-        /// <font color=red>Note</font>: This list can only show up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
+        /// <font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrTranslateSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of Speech Translation Clip List File. The file content is in JSON, and its data structure is consistent with the SegmentSet field. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+        /// URL of Speech Translation Clip List File. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file is not retained permanently. It will be deleted after the time point specified by SegmentSetFileUrlExpireTime is reached.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL of the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the file URL for the speech translation clip list, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

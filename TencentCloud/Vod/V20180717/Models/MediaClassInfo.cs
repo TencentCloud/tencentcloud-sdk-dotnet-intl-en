@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Category level. The level-1 category is 0, and the maximum value is 3, which allows up to 4 classification layers.
+        /// Category level. The first-level category is 0, and the maximum value is 3, which allows up to 4 category levels.
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }

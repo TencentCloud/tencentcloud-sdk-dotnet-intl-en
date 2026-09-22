@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Face recognition filter score. When the recognition result reaches or exceeds this score, the recognition result is returned</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
+        /// <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result is returned.</p><p>Value range: [0, 100]</p><p>Default value: 95</p>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] DefaultLibraryLabelSet{ get; set; }
 
         /// <summary>
-        /// <p>User-defined character filter tag, specifying the tag of the user-defined character to return. If not specified or empty, all customized figure results will be returned. </p><p>Input parameter limitation: up to 100 tags, each tag up to 16 characters in length.</p>
+        /// <p>User-defined character filter tags, specify the tags of user-defined characters to return. If not filled or empty, all customized figure results will be returned. </p><p>Input limits: up to 100 tags, each tag up to 16 characters in length.</p>
         /// </summary>
         [JsonProperty("UserDefineLibraryLabelSet")]
         public string[] UserDefineLibraryLabelSet{ get; set; }

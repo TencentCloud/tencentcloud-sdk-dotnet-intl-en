@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Video analysis template name, with a length limit of 64 characters.</p>
+        /// <p>Video analysis template name. Length limit: 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MPSAIAnalysisConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Control parameter for the intelligent tag task.</p>
+        /// <p>Control parameters for the intelligent tag task.</p>
         /// </summary>
         [JsonProperty("TagConfigure")]
         public MPSAIAnalysisConfigureInfo TagConfigure{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MPSAIAnalysisConfigureInfo SplitConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Control parameter for the intelligent highlights task.</p>
+        /// <p>Control parameters for the intelligent highlights task.</p>
         /// </summary>
         [JsonProperty("HighlightConfigure")]
         public MPSAIAnalysisConfigureInfo HighlightConfigure{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent opening and ending content task control parameters.</p>
+        /// <p>Intelligent opening and closing credits task control parameters.</p>
         /// </summary>
         [JsonProperty("OpeningAndEndingConfigure")]
         public MPSAIAnalysisConfigureInfo OpeningAndEndingConfigure{ get; set; }

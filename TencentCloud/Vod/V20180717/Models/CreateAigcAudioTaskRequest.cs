@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+        /// <p>VOD application ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+        /// <p>Specifies the scenario. Currently supports sfx (sound effect) and music.</p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Video information for reference.</p>
+        /// <p>Reference video information.</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// <p>Output parameter</p>
+        /// <p>Output parameters</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcAudioOutputConfig OutputConfig{ get; set; }

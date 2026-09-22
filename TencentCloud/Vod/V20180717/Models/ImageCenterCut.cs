@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Image cropping type. Selectable values: Circle and Rectangle.
-        /// <li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+        /// <li>Circle: Inscribed circle cropping, with the output image radius as Radius.</li>
         /// <li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
         /// </summary>
         [JsonProperty("Type")]
@@ -39,13 +39,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Height of the output image in pixels. Valid when Type is Rectangle.
+        /// Height of the output image. Unit: pixel. Valid when Type is Rectangle.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Radius of the output image in pixels. Valid when Type is Circle.
+        /// Radius of the output image. Unit: pixel. Valid when Type is Circle.
         /// </summary>
         [JsonProperty("Radius")]
         public long? Radius{ get; set; }

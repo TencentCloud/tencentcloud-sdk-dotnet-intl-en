@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+        /// Player configuration name, length limited to 64 characters. Only [0-9a-zA-Z] and _- are allowed (for example, test_ABC-123). The name is unique for the same user.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
         /// <li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
         /// Default value: OFF.
-        /// This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+        /// This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }
@@ -100,13 +100,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ResolutionNameInfo[] ResolutionNames{ get; set; }
 
         /// <summary>
-        /// Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+        /// Domain name used during playback. If left empty or set to Default, it indicates usage of the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+        /// Scheme used during playback. If left empty or set to Default, it indicates usage of the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
         /// <li>HTTP;</li>
         /// <li>HTTPS.</li>
         /// </summary>

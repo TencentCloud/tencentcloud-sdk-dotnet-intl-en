@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Content of the index file to be parsed.</p>
+        /// <p>Index file content to be parsed.</p>
         /// </summary>
         [JsonProperty("MediaManifestContent")]
         public string MediaManifestContent{ get; set; }

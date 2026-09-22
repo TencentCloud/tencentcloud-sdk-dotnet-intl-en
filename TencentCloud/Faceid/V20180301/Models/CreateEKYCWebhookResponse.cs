@@ -37,13 +37,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? WebhookId{ get; set; }
 
         /// <summary>
-        /// Whether to add a secret key. Default value: false.
+        /// <p>Whether to add a callback signature key</p><p>Default value: false</p>
         /// </summary>
         [JsonProperty("HasSignatureKey")]
         public bool? HasSignatureKey{ get; set; }
 
         /// <summary>
-        /// <p>Callback secret key</p>
+        /// <p>Callback signature key</p>
         /// </summary>
         [JsonProperty("SignatureKey")]
         public string SignatureKey{ get; set; }

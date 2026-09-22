@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+        /// <p>Storage mode. Valid values: <li>Permanent: permanent storage;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
         /// </summary>
         [JsonProperty("StorageMode")]
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+        /// <p>Expiry date of the output file. The file will be deleted after this time. By default, it never expires. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>File type, for example, OBJ, GLB, or FBX.</p>
+        /// <p>File type, such as OBJ, GLB, and FBX.</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

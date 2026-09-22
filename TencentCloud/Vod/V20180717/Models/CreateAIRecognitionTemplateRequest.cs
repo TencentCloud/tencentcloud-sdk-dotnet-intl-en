@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Video content recognition template name. Length limit: 64 characters.
+        /// Audio/Video content recognition template name, with a length limit of 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Control parameters for video opening and closing recognition.
+        /// Video opening and closing recognition control parameter.
         /// </summary>
         [JsonProperty("HeadTailConfigure")]
         public HeadTailConfigureInfo HeadTailConfigure{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public SegmentConfigureInfo SegmentConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for face recognition.
+        /// Face recognition control parameter.
         /// </summary>
         [JsonProperty("FaceConfigure")]
         public FaceConfigureInfo FaceConfigure{ get; set; }
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Voice full-text recognition control parameters.
-        /// <font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not filled in or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
+        /// <font color=red>Note: This parameter is no longer maintained. It is recommended to use the AsrTranslateConfigure parameter to initiate speech translation recognition (when DstLanguage is not specified or is an empty string, no translation is performed, and the billing item is the same as full text speech recognition).</font>
         /// </summary>
         [JsonProperty("AsrFullTextConfigure")]
         public AsrFullTextConfigureInfo AsrFullTextConfigure{ get; set; }
@@ -86,19 +86,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public AsrWordsConfigureInfo AsrWordsConfigure{ get; set; }
 
         /// <summary>
-        /// Speech translation recognition control parameters.
+        /// Voice translation recognition control parameters.
         /// </summary>
         [JsonProperty("AsrTranslateConfigure")]
         public AsrTranslateConfigureInfo AsrTranslateConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameters for object recognition.
+        /// Object recognition control parameter.
         /// </summary>
         [JsonProperty("ObjectConfigure")]
         public ObjectConfigureInfo ObjectConfigure{ get; set; }
 
         /// <summary>
-        /// Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+        /// Frame interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
         /// </summary>
         [JsonProperty("ScreenshotInterval")]
         public float? ScreenshotInterval{ get; set; }

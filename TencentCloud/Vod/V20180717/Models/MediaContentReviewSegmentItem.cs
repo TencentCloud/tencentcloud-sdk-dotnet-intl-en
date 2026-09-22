@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Time offset of the start of the suspected segment. Unit: second.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the suspected segment, in seconds.
+        /// End time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// Result suggestions for identifying suspected segments involving offensive content. Value range:
+        /// Result suggestions for identifying offensive content in suspected segments. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -58,21 +58,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (images are not retained permanently and will be deleted upon reaching
+        /// Suspected image URL (images are not retained permanently and will reach
         /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// This field is deprecated. Please use PicUrlExpireTime.
+        /// Deprecated. Please use PicUrlExpireTime.
         /// </summary>
         [JsonProperty("PicUrlExpireTimeStamp")]
         [System.Obsolete]
         public long? PicUrlExpireTimeStamp{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL of the suspected image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

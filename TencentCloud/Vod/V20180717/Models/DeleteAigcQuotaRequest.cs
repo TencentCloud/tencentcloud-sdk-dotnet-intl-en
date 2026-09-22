@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+        /// <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image generation task</li><li>Video: AIGC video generation task</li><li>Text: AIGC text generation task</li></ul>
         /// </summary>
         [JsonProperty("QuotaType")]
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaType=Text. Used to select the ApiToken for quota limit.</p>
+        /// <p>Valid only when QuotaType=Text. It is used to select the ApiToken that needs to be subject to quota limit.</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }

@@ -53,15 +53,15 @@ namespace TencentCloud.Vod.V20180717.Models
         /// Task types compatible with the 2017 version:
         /// <li>Transcode: video transcoding task;</li>
         /// <li>SnapshotByTimeOffset: video screencapturing task;</li>
-        /// <li>Concat: video splicing task;</li>
+        /// <li>Concat: video splicing job;</li>
         /// <li>Clip: video clipping task;</li>
-        /// <li>ImageSprites: capture image sprite task.</li>
+        /// <li>ImageSprites: capture CSS sprites task.</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Task creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Task creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days.
+        /// Identification code for deduplication, if there has been a request with the same identifier within the past seven days.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

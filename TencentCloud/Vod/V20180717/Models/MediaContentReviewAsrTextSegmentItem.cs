@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Offset time of the start of the suspected segment. Unit: seconds.
+        /// Start time offset of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result suggestion for video moderation of the suspected segment. Value range:
+        /// Result suggestion for moderation of suspected audio and video segments. Permissible range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>

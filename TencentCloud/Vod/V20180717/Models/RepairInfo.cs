@@ -27,7 +27,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Image quality restoration control switch. Available values:
         /// <li>ON: Enable image quality restoration;</li>
-        /// <li>OFF: Disable image quality restoration.</li>
+        /// <li>OFF: disables image quality restoration.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+        /// Image format. Valid values: JPEG, PNG. If it is not specified, the original image format is used. Animations are not supported.
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

@@ -27,13 +27,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Segment summary task switch. Available values:
         /// - ON: Enable the segment summary task.
-        /// -OFF: disables segment summary.
+        /// - OFF: disables segment summary.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Extended parameter. Its value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+        /// Extended parameter. Its value is a serialized json string. For details, see [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
         /// </summary>
         [JsonProperty("ExtendedParameter")]
         public string ExtendedParameter{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Subtitle name. The length cannot exceed 64 characters.
+        /// Subtitle name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// Unique identifier of the subtitle. Length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), or hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
+        /// Unique identifier of the subtitle. The length cannot exceed 16 characters. It can contain upper- and lower-case letters, digits, underscores (_), and hyphens (-). It cannot duplicate the unique identifier of an existing subtitle in the media file.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

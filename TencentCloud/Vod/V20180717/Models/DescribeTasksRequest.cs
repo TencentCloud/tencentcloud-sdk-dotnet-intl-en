@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Filter criteria: file ID.</p>
+        /// <p>Filtering Conditions: file ID.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange FinishTime{ get; set; }
 
         /// <summary>
-        /// <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+        /// <p>Sorting method. Sort.Field options:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }

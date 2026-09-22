@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Output filename, up to 64 characters. By default, the system assigns a generated filename.
+        /// Output filename, up to 64 characters. By default, the system generates the filename.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
@@ -44,7 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// Expiry date of the output file. The file will be deleted permanently after this time. It never expires by default. The format is based on ISO 8601. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

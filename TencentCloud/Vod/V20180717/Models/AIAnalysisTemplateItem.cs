@@ -37,19 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Template description information for intelligent analysis.
+        /// Description of the intelligent analysis template.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Intelligent classification task control parameters.
+        /// Intelligent Classification Task Control Parameters.
         /// </summary>
         [JsonProperty("ClassificationConfigure")]
         public ClassificationConfigureInfo ClassificationConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter of the intelligent tag task.
+        /// Intelligent tag task control parameter.
         /// </summary>
         [JsonProperty("TagConfigure")]
         public TagConfigureInfo TagConfigure{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CoverConfigureInfo CoverConfigure{ get; set; }
 
         /// <summary>
-        /// Control parameter for intelligent frame-specific tagging task.
+        /// Intelligent frame tagging task control parameter.
         /// </summary>
         [JsonProperty("FrameTagConfigure")]
         public FrameTagConfigureInfo FrameTagConfigure{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public HighlightsConfigureInfo HighlightConfigure{ get; set; }
 
         /// <summary>
-        /// Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template creation time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template last modified time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Template last modified time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

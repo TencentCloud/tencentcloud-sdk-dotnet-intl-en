@@ -130,7 +130,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
         /// <summary>
-        /// Authentication configuration for origin-pull from Huawei Cloud Object Storage.
+        /// Huawei Cloud object storage origin-pull authentication configuration.
         /// </summary>
         [JsonProperty("HwPrivateAccess")]
         public HwPrivateAccess HwPrivateAccess{ get; set; }

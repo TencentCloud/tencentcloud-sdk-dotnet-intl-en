@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Task type. Valid values: <li>Procedure: Video processing task</li><li>EditMedia: Video editing task</li><li>SplitMedia: Video splitting task</li><li>ComposeMedia: Media file creation task</li><li>WechatPublish: WeChat publishing task</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task</li><li>PullUpload: Pull and upload media files task</li><li>FastClipMedia: Quick trimming task</li><li>RemoveWatermarkTask: Intelligent watermark removal task</li><li>DescribeFileAttributesTask: File attribute retrieval task</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended)</li><li>ReviewAudioVideo: Audio/video moderation task</li><li>ExtractTraceWatermark: Source watermark extraction task</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task</li><li>QualityInspect: Audio and video quality inspection task</li><li>QualityEnhance: Audio and video quality regeneration task</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task</li><li>ProcessMediaByMPS: MPS video processing task</li><li>AigcImageTask: AIGC image generation task</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task</li><li>AigcVideoTask: AIGC video generation task</li><li>AigcAudioTask: AIGC audio generation task</li><li>ImportMediaKnowledge: Import media knowledge task</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task</li><li>ExtractBlindWatermark: Digital watermark extraction task</li><li>ExtractBlindWatermark: Digital watermark extraction task</li><li>CreateAigcAdvancedCustomElement: Create custom subject task</li><li>CreateAigcCustomVoice: Create custom voice type task</li><li>CreateAigcSubject: Create subject task</li><li>AigcVideoRedrawTask: AIGC video conversion task</li><li>CreateAigcAudioClone: AIGC voice clone task</li><li>DescribeAigcFaceInfoAsync: Asynchronously fetch AIGC face information task</li><li>WandAsrTask: WAND speech recognition</li><li>AigcHunyuan3DTask: AIGC Hunyuan 3D task</li><li>DesignVoiceAsync: Voice type design</li><li>CloneVoiceAsync: Voice type clone</li><li>TextToSpeechAsync: Speech generation</li><li>VideoDubbingAsync: Video translation dubbing</li></p>
+        /// <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>AigcAudioTask: AIGC audio generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li> ExtractBlindWatermark: Digital watermark extraction task.</li><li> ExtractBlindWatermark: Digital watermark extraction task.</li><li> CreateAigcAdvancedCustomElement: Create custom subject task</li><li>CreateAigcCustomVoice: Create custom voice type task</li><li>CreateAigcSubject: Create subject task</li><li>AigcVideoRedrawTask: AIGC video redraw task</li><li>CreateAigcAudioClone: AIGC voice clone task</li><li>DescribeAigcFaceInfoAsync: Asynchronously fetch AIGC face information task</li><li>WandAsrTask: WAND speech recognition</li><li>AigcHunyuan3DTask: AIGC Hunyuan 3D task</li><li>DesignVoiceAsync: Voice type design</li><li>CloneVoiceAsync: Voice type clone</li><li>TextToSpeechAsync: Speech generation</li><li>VideoDubbingAsync: Video translation dubbing</li></p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+        /// <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date and time format</a>.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RebuildMediaTask RebuildMediaTask{ get; set; }
 
         /// <summary>
-        /// <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+        /// <p>Extract traceability watermark task information. This field has a value only when TaskType is ExtractTraceWatermark.</p>
         /// </summary>
         [JsonProperty("ExtractTraceWatermarkTask")]
         public ExtractTraceWatermarkTask ExtractTraceWatermarkTask{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask{ get; set; }
 
         /// <summary>
-        /// <p>Audio/Video moderation task information. This field has a value only when TaskType is ReviewAudioVideo.</p>
+        /// <p>Audio/video moderation task information. This field has a value only when TaskType is ReviewAudioVideo.</p>
         /// </summary>
         [JsonProperty("ReviewAudioVideoTask")]
         public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
@@ -193,19 +193,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessMediaByMPS ProcessMediaByMPSTask{ get; set; }
 
         /// <summary>
-        /// <p>AIGC image task info. This field has a value only when TaskType is AigcImageTask.</p>
+        /// <p>AIGC image generation task information. This field has a value only when TaskType is AigcImageTask.</p>
         /// </summary>
         [JsonProperty("AigcImageTask")]
         public AigcImageTask AigcImageTask{ get; set; }
 
         /// <summary>
-        /// <p>AIGC video generation task information. This field has a value only when TaskType is AigcVideoTask.</p>
+        /// <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
         /// </summary>
         [JsonProperty("AigcVideoTask")]
         public AigcVideoTask AigcVideoTask{ get; set; }
 
         /// <summary>
-        /// <p>Media import knowledge base task information. This field has a value only when TaskType is ImportMediaKnowledge.</p>
+        /// <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledge")]
         public ImportMediaKnowledgeTask ImportMediaKnowledge{ get; set; }
@@ -223,13 +223,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public SceneAigcVideoTask SceneAigcVideoTask{ get; set; }
 
         /// <summary>
-        /// <p>Image asynchronous task processing info. This field has a value only when TaskType is ProcessImageAsync.</p>
+        /// <p>Image asynchronous processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
         /// </summary>
         [JsonProperty("ProcessImageAsyncTask")]
         public ProcessImageAsync ProcessImageAsyncTask{ get; set; }
 
         /// <summary>
-        /// <p>Information about the digital watermark extraction task. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+        /// <p>Extraction task info of digital watermark. This field has a value only when TaskType is ExtractBlindWatermark.</p>
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkTask")]
         public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }
@@ -253,7 +253,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateAigcSubjectTask CreateAigcSubjectTask{ get; set; }
 
         /// <summary>
-        /// <p>AIGC video redraw info. This field has a value only when TaskType is AigcVideoRedrawTask.</p>
+        /// <p>AIGC video redraw information. This field has a value only when TaskType is AigcVideoRedrawTask.</p>
         /// </summary>
         [JsonProperty("AigcVideoRedrawTask")]
         public AigcVideoRedrawTask AigcVideoRedrawTask{ get; set; }
@@ -265,7 +265,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcAudioTask AigcAudioTask{ get; set; }
 
         /// <summary>
-        /// <p>AIGC voice clone info. This field has a value only when TaskType is CreateAigcAudioClone.</p>
+        /// <p>AIGC voice clone information. This field has a value only when TaskType is CreateAigcAudioClone.</p>
         /// </summary>
         [JsonProperty("CreateAigcAudioCloneTask")]
         public CreateAigcAudioCloneTask CreateAigcAudioCloneTask{ get; set; }

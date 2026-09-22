@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Screenshot template name at specified time point. Length limit: 64 characters.</p>
+        /// <p>Screenshot template name at specified time point. Length limited to 64 characters.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+        /// <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: maintain video aspect ratio, with the remaining edge part filled with black.</li><li>white: maintain video aspect ratio, with the edge remainder filled with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
+        /// <p>Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged and fill the remaining edge part with white.</li><li>gauss: Keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edge part.</li>Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

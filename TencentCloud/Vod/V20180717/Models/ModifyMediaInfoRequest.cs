@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -55,49 +55,49 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+        /// <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding result, sprites, etc.) will be permanently deleted.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+        /// <p>The Base64-encoded string of the video cover image file (for example, jpeg or png). Only gif, jpeg, and png image formats are supported.</p>
         /// </summary>
         [JsonProperty("CoverData")]
         public string CoverData{ get; set; }
 
         /// <summary>
-        /// <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+        /// <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation is performed. The maximum for a single media file is 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
         /// </summary>
         [JsonProperty("AddKeyFrameDescs")]
         public MediaKeyFrameDescItem[] AddKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+        /// <p>Time offset of the video timestamp information set to be deleted. Unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
         /// </summary>
         [JsonProperty("DeleteKeyFrameDescs")]
         public float?[] DeleteKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+        /// <p>Value 1 indicates clearing video dotting information, and other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
         /// </summary>
         [JsonProperty("ClearKeyFrameDescs")]
         public long? ClearKeyFrameDescs{ get; set; }
 
         /// <summary>
-        /// <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+        /// <p>A newly-added group of tags. Maximum for a single media file: 16 tags. Maximum for a single tag: 32 characters. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
         /// </summary>
         [JsonProperty("AddTags")]
         public string[] AddTags{ get; set; }
 
         /// <summary>
-        /// <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+        /// <p>Set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
         /// </summary>
         [JsonProperty("DeleteTags")]
         public string[] DeleteTags{ get; set; }
 
         /// <summary>
-        /// <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+        /// <p>Value 1 means clear all tags of media files, and other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
         /// </summary>
         [JsonProperty("ClearTags")]
         public long? ClearTags{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSubtitleInput[] AddSubtitles{ get; set; }
 
         /// <summary>
-        /// <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+        /// <p>Unique identifier of subtitle to be deleted. In the same request, the specified subtitle id in AddSubtitles must be different from all DeleteSubtitleIds.</p>
         /// </summary>
         [JsonProperty("DeleteSubtitleIds")]
         public string[] DeleteSubtitleIds{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] DeleteKnowledgeBases{ get; set; }
 
         /// <summary>
-        /// <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
+        /// <p>Value 1 means remove this media file from all knowledge bases, and other values are meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
         /// </summary>
         [JsonProperty("ClearKnowledgeBases")]
         public long? ClearKnowledgeBases{ get; set; }

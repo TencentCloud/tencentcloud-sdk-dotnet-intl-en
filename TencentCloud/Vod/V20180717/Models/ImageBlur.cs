@@ -32,13 +32,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Blur radius. Value range: 1–50. This field is valid when Type is Gaussian.
+        /// Blur radius. Value range: 1-50. This field is valid when Type is Gaussian.
         /// </summary>
         [JsonProperty("Radius")]
         public long? Radius{ get; set; }
 
         /// <summary>
-        /// Standard deviation of the normal distribution. Must be greater than 0. This field is valid when Type is Gaussian.
+        /// Standard deviation of the normal distribution. Must be greater than 0. This field is valid when the value of Type is Gaussian.
         /// </summary>
         [JsonProperty("Sigma")]
         public long? Sigma{ get; set; }

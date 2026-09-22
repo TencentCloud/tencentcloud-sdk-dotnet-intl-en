@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TaskOutputMediaInfo Output{ get; set; }
 
         /// <summary>
-        /// Task ID of the `Procedure` task type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+        /// Task ID of the task type `Procedure`. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), initiate the task when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
-        /// Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a [video splitting](https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1) task, the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
+        /// Task ID of the `ReviewAudioVideo` type. If a task flow template (`ProcedureName`) is specified in the video split task information list when initiating a video splitting task (https://www.tencentcloud.com/document/api/266/51098?from_cn_redirect=1), the task is triggered when `ReviewAudioVideoTask` is specified in the task flow template.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTaskId")]
         public string ReviewAudioVideoTaskId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CertExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Certificate ID in the Tencent Cloud SSL product.</p>
+        /// <p>Certificate ID in Tencent Cloud SSL product.</p>
         /// </summary>
         [JsonProperty("CloudCertId")]
         public string CloudCertId{ get; set; }

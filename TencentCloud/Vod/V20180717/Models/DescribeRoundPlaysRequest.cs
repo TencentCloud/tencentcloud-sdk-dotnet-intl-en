@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+        /// <p>Filter criteria: carousel playlist identifier. The array can contain up to 100 identifiers.</p>
         /// </summary>
         [JsonProperty("RoundPlayIds")]
         public string[] RoundPlayIds{ get; set; }
 
         /// <summary>
-        /// <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+        /// <p>Filter criteria. Carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped status.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

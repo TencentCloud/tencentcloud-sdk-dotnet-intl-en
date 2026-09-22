@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EventHandle{ get; set; }
 
         /// <summary>
-        /// <p><b>Supported event types:</b></p><li>NewFileUpload: video upload completed;</li><li>ProcedureStateChanged: task flow status change;</li><li>FileDeleted: video deletion completed;</li><li>RestoreMediaComplete: video retrieval completion;</li><li>PullComplete: video pull completion;</li><li>EditMediaComplete: video editing completed;</li><li>SplitMediaComplete: video splitting completed;</li><li>ComposeMediaComplete: media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: intelligent watermark removal completion.</li><li>RebuildMediaComplete: audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: file attribute acquisition completion;</li><li>QualityInspectComplete: audio and video quality detection completed;</li><li>QualityEnhanceComplete: audio and video quality rebirth task completion;</li><li>PersistenceComplete: edit persistence completion;</li><li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>AigcHunyuan3DTaskComplete: AIGC Hunyuan 3D task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: asynchronously fetch AIGC face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: video transcoding completion;</li><li>ConcatComplete: video splicing completion;</li><li>ClipComplete: video editing completed;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: video screenshot by time point.</li>
+        /// <p><b>Supported event types:</b></p><li>NewFileUpload: video upload completed;</li><li>ProcedureStateChanged: task flow status change;</li><li>FileDeleted: video deletion completed;</li><li>RestoreMediaComplete: video retrieval completion;</li><li>PullComplete: video pull completion;</li><li>EditMediaComplete: video editing completed;</li><li>SplitMediaComplete: video splitting completed;</li><li>ComposeMediaComplete: media file creation completion;</li><li>WechatMiniProgramPublishComplete: WeChat Mini Program Publishing Completed.</li><li>RemoveWatermark: intelligent watermark removal completion.</li><li>RebuildMediaComplete: audio and video quality rebirth completion event (not recommended).</li><li>ReviewAudioVideoComplete: audio/video moderation completed;</li><li>ExtractTraceWatermarkComplete: Traceability watermark extraction completed;</li><li>ExtractCopyRightWatermarkComplete: Extracting copyright watermark completion;</li><li>DescribeFileAttributesComplete: file attribute acquisition completion;</li><li>QualityInspectComplete: audio and video quality inspection completed;</li><li>QualityEnhanceComplete: audio and video quality rebirth task completion;</li><li>PersistenceComplete: edit persistence completion;</li><li>ComplexAdaptiveDynamicStreamingComplete: complex adaptive bitstream task completion.</li><li>ProcessMediaByMPSComplete: MPS video processing completed.</li><li>AigcImageTaskComplete: AIGC image generation task completed.</li><li>AigcVideoTaskComplete: AIGC video generation task completed.</li><li>AigcHunyuan3DTaskComplete: AIGC Hunyuan 3D task completed.</li><li>DescribeAigcFaceInfoAsyncComplete: asynchronously fetch AIGC face information task completed.</li><b>Event types compatible with the 2017 version:</b><li>TranscodeComplete: video transcoding completion;</li><li>ConcatComplete: video splicing completion;</li><li>ClipComplete: video editing completion;</li><li>CreateImageSpriteComplete: Video thumbnail capture completion;</li><li>CreateSnapshotByTimeOffsetComplete: video screenshot by time point.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent{ get; set; }
 
         /// <summary>
-        /// <p>Audio/Video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
+        /// <p>Audio/video moderation completed event. Valid when the event type is ReviewAudioVideoComplete.</p>
         /// </summary>
         [JsonProperty("ReviewAudioVideoCompleteEvent")]
         public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public PersistenceCompleteTask PersistenceCompleteEvent{ get; set; }
 
         /// <summary>
-        /// <p>Adaptive bitrate task information. It is valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
+        /// <p>Adaptive bitrate task information. Valid only when EventType is ComplexAdaptiveDynamicStreamingComplete.</p>
         /// </summary>
         [JsonProperty("ComplexAdaptiveDynamicStreamingCompleteEvent")]
         public ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessMediaByMPS ProcessMediaByMPSCompleteEvent{ get; set; }
 
         /// <summary>
-        /// <p>AIGC image generation task info, valid only when EventType is AigcImageTaskComplete.</p>
+        /// <p>AIGC image generation task information. Valid only when EventType is AigcImageTaskComplete.</p>
         /// </summary>
         [JsonProperty("AigcImageCompleteEvent")]
         public AigcImageTask AigcImageCompleteEvent{ get; set; }
@@ -235,7 +235,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessImageAsyncTask ProcessImageAsyncCompleteEvent{ get; set; }
 
         /// <summary>
-        /// <p>AIGC custom entity information, this field has a value only when EventType is CreateAigcAdvancedCustomElementCompleteEvent.</p>
+        /// <p>AIGC custom entity information. This field has a value only when EventType is CreateAigcAdvancedCustomElementCompleteEvent.</p>
         /// </summary>
         [JsonProperty("CreateAigcAdvancedCustomElementCompleteEvent")]
         public CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementCompleteEvent{ get; set; }
@@ -253,7 +253,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public DescribeAigcFaceInfoAsyncTask DescribeAigcFaceInfoAsyncCompleteEvent{ get; set; }
 
         /// <summary>
-        /// <p>AIGC Hunyuan 3D task info, this field has a value only when EventType is AigcHunyuan3DTaskComplete.</p>
+        /// <p>AIGC Hunyuan 3D task information. This field has a value only when EventType is AigcHunyuan3DTaskComplete.</p>
         /// </summary>
         [JsonProperty("AigcHunyuan3DCompleteEvent")]
         public AigcHunyuan3DTask AigcHunyuan3DCompleteEvent{ get; set; }

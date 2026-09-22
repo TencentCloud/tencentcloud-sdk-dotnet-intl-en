@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string VoiceUrl{ get; set; }
 
         /// <summary>
-        /// <p>Historic works ID, which can provide audio material by referring to historic works.</p>
+        /// <p>Historic work ID, which can provide audio material by referring to historic works.</p>
         /// </summary>
         [JsonProperty("VideoId")]
         public string VideoId{ get; set; }

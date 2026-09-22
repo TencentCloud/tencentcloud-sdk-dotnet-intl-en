@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control switch for frame interpolation frame rate configuration. Available values:
-        /// <li>ON: enabled;</li>
-        /// <li>OFF: disabled.</li>
+        /// Frame interpolation frame rate configuration control switch. Available values:
+        /// <li>ON: enabled</li>
+        /// <li>OFF: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

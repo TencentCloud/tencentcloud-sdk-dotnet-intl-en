@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams, if any, will be ignored.</p>
+        /// <p>Media ID of the audio source. The first audio stream in the media source file is always used, while video streams and other audio streams (if any) will be ignored.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Language{ get; set; }
 
         /// <summary>
-        /// <p>Whether to set as the default audio for adaptive bitrate. Value:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
+        /// <p>Whether to set as the default audio for adaptive bitrate. Parameter values:</p><li>YES: set as default audio;</li><li>NO: not set as default audio (default value).</li>
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
 
         /// <summary>
-        /// <p>Audio track serial number, indicating which audio track in the audio source to select, counting from 0. The default value is 0, indicating the frontmost audio track is selected.</p>
+        /// <p>Audio track serial number, indicating which audio track in the audio source to select. Counting begins from 0. The default value is 0, which means selecting the audio track positioned towards the front.</p>
         /// </summary>
         [JsonProperty("AudioTrackIdx")]
         public ulong? AudioTrackIdx{ get; set; }

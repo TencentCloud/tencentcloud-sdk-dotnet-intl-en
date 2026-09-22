@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SrcLanguage{ get; set; }
 
         /// <summary>
-        /// <p>Target language of the video. Default: en.</p>
+        /// <p>Target language of the video. Default: en</p>
         /// </summary>
         [JsonProperty("DstLanguage")]
         public string DstLanguage{ get; set; }

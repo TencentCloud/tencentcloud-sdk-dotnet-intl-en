@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Intelligent categorization task switch. Available values:
+        /// Intelligent classification task switch. Valid values:
         /// <li>ON: enable the intelligent classification task;</li>
-        /// <li>OFF: disables the intelligent categorization task.</li>
+        /// <li>OFF: Disable the intelligent categorization task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Source context identifier, used to pass through user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
+        /// Identify source context, used to pass through user request information. This field value will be returned in ExtractCopyRightWatermarkComplete callback and task flow status change callback. Maximum length: 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+        /// Identification Code for Task Deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// Reserved field, used for special purpose.
+        /// Reserved field, used for special purposes.
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

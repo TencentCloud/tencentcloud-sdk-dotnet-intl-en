@@ -25,8 +25,8 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Switch for the intelligent frame-by-frame tagging task. Available values:
-        /// <li>ON: enable the intelligent frame-specific tagging task;</li>
+        /// Switch for the intelligent frame-specific tagging task. Available values:
+        /// <li>ON: enable intelligent frame-specific tagging task;</li>
         /// <li>OFF: Disable the intelligent frame-specific tagging task.</li>
         /// </summary>
         [JsonProperty("Switch")]

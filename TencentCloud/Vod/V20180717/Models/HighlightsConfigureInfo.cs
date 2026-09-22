@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Intelligent highlight task switch. Available values:
+        /// Task switch for intelligent highlight. Available values:
         /// <li>ON: enable the intelligent highlight task;</li>
         /// <li>OFF: disables the intelligent highlight task.</li>
         /// </summary>

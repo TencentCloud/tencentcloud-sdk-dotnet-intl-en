@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: Invalid input parameters. Check the input parameters.</li><li>60000: Source file error (for example, video data corruption). Confirm whether the source file is normal.</li><li>70000: Internal service error. Retry is recommended.</li>
+        /// <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
-        /// <p>Meta-information of the output video.</p>
+        /// <p>Meta information of the output video.</p>
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Pull the upload progress, with a value range of [0-100].</p>
+        /// <p>Pull upload progress, in the range of [0,100].</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

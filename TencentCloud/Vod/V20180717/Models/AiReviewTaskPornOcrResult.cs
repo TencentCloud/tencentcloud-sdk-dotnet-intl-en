@@ -61,7 +61,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewPornOcrTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0,100].
+        /// Task progress of Ocr text, audio, and video moderation involving offensive content, in the range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

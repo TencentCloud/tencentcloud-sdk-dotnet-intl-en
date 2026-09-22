@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FaceId{ get; set; }
 
         /// <summary>
-        /// Human face image address.
+        /// Face image address.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Array of image processing operations. Operations are performed in sequential order in the array.
+        /// Image processing operation array. Operations are performed in their sequential order in the array.
         /// <li>Length limit: 10.</li>
         /// </summary>
         [JsonProperty("Operations")]
         public ImageOperation[] Operations{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Image processing template name. Length limit: 64 characters.
+        /// Image processing template name. The length cannot exceed 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

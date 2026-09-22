@@ -33,7 +33,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// Screenshot time, in milliseconds.
+        /// Screenshot time, in ms.
         /// </summary>
         [JsonProperty("TimeOffset")]
         public ulong? TimeOffset{ get; set; }

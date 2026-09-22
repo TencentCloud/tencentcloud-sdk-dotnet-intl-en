@@ -37,31 +37,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ModelVersion{ get; set; }
 
         /// <summary>
-        /// <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+        /// <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Not currently supported for other ModelName.</li></p>
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }
 
         /// <summary>
-        /// <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+        /// <p>Prompt content for video generation. Supports up to 1,000 characters. This parameter is required when FileInfos is empty.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+        /// <p>Prompt content to prevent the model from generating video. Supports up to 1000 characters.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }
 
         /// <summary>
-        /// <p>Audio content for reference.</p>
+        /// <p>Reference audio content</p>
         /// </summary>
         [JsonProperty("AudioInfos")]
         public AigcAudioReferenceAudioInfo[] AudioInfos{ get; set; }
 
         /// <summary>
-        /// <p>Reference video info.</p>
+        /// <p>Reference video info</p>
         /// </summary>
         [JsonProperty("VideoInfos")]
         public AigcAudioReferenceVideoInfo[] VideoInfos{ get; set; }

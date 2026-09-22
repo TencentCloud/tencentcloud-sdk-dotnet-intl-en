@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameters for image recognition involving inappropriate information.
+        /// Image recognition involves control parameters for inappropriate information.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameters for ASR-based recognition involving inappropriate information.
+        /// Control parameters for inappropriate information involved in ASR-based recognition.
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }

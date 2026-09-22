@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Task ID of video splitting, which can be used to query the status of the splitting task (task type: SplitMedia).
+        /// Video splitting task ID, which can be used to query the state of the splitting task (task type: SplitMedia).
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

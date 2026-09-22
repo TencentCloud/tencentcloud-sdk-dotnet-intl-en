@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming template ID with SimpleAES protection type.
+        /// Adaptive bitstreaming template ID with SimpleAES protection type.
         /// </summary>
         [JsonProperty("SimpleAesDefinition")]
         public ulong? SimpleAesDefinition{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? WidevineDefinition{ get; set; }
 
         /// <summary>
-        /// Adaptive bitstreaming template ID with FairPlay protection.
+        /// Adaptive bitrate streaming template ID with FairPlay protection type.
         /// </summary>
         [JsonProperty("FairPlayDefinition")]
         public ulong? FairPlayDefinition{ get; set; }

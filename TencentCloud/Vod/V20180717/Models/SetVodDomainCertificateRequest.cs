@@ -31,19 +31,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <p>Operation type of this API call. Available values:</p><li>Set: set the certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+        /// <p>Operation type of this API call. Available values:</p><li>Set: certificate required for setting domain HTTPS;</li><li>Clear: clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill in this field with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>ID of the certificate uploaded to <a href="/document/product/400/7572">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
+        /// <p>ID of the certificate uploaded to <a href="https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1">Tencent Cloud SSL</a>. This field is not required when clearing domain HTTPS configuration.</p>
         /// </summary>
         [JsonProperty("CertID")]
         public string CertID{ get; set; }

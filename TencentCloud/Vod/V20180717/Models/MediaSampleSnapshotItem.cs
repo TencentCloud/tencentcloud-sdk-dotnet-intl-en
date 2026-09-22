@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+        /// Sampling screenshot specification ID. See [Sampling Screenshot Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -40,8 +40,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Sampling interval
-        /// <li>When SampleType is Percent, this value indicates how many percentage one image.</li>
-        /// <li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+        /// <li>When SampleType is Percent, this value indicates the percentage of images.</li>
+        /// <li>When SampleType is Time, this value indicates how many time intervals between images, in seconds. The first image is always the first video frame.</li>
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

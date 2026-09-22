@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Template type. Valid values:
-        /// <li>Preset: system preset template;</li>
+        /// <li>Preset: system-preset template;</li>
         /// <li>Custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Resolution adaptation. Available values:
-        /// <li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
+        /// <li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
         /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
         /// Default value: open.
         /// </summary>

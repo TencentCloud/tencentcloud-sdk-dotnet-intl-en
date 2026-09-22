@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string PrivacyModel{ get; set; }
 
         /// <summary>
-        /// <p>Privacy protection objective (no need to input an array when in use on API Explorer; only need to add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+        /// <p>Privacy protection objective (during use in API Explorer, no need to import an array; just add the corresponding item and fill in the value).</p><p>Enumeration values:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
         /// </summary>
         [JsonProperty("PrivacyTargets")]
         public string[] PrivacyTargets{ get; set; }

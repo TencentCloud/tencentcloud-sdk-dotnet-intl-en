@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -56,8 +56,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Resolution adaptation. Available values:
-        /// <li>open: enabled. At this point, Width represents the long side of the video, and Height represents the short side of the video;</li>
-        /// <li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+        /// <li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+        /// <li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
         /// Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
@@ -74,7 +74,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Sampling interval.
         /// <li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
-        /// <li>When SampleType is Time, specify the time of the sampling interval in seconds.</li>
+        /// <li>When SampleType is Time, specify the sampling interval in seconds.</li>
         /// </summary>
         [JsonProperty("SampleInterval")]
         public ulong? SampleInterval{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ColumnCount{ get; set; }
 
         /// <summary>
-        /// Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged and fill the remaining edges with black.</li><li>white: keep the video aspect ratio unchanged and fill the remaining edges with white.</li><li>gauss: keep the video aspect ratio unchanged and apply Gaussian blur to the remaining edges.</li>Default value: black.
+        /// Filling mode. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: keep black edges, maintain video aspect ratio, and fill the remaining edge part with black.</li><li>white: keep white edges, maintain video aspect ratio, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur, maintain video aspect ratio, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
@@ -104,7 +104,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Image format. Valid values:
+        /// Image format. Value:
         /// <li> jpg: jpg format;</li>
         /// <li> png: PNG format;</li>
         /// <li> webp: webp format.</li>

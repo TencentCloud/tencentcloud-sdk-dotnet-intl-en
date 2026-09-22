@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Expansion error code. A null string indicates success, while other values indicate failure.</p>
+        /// <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// <p>Task progress. Value range: 0–100.</p>
+        /// <p>Task progress, value ranges from 0 to 100.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// <p>Input information for creating an AIGC custom voice type.</p>
+        /// <p>Create AIGC custom voice type input information.</p>
         /// </summary>
         [JsonProperty("Input")]
         public CreateAigcCustomVoiceInput Input{ get; set; }

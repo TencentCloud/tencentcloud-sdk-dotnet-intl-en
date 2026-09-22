@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. 0 indicates success, and other values indicate failure:</p><li>40000: invalid input parameters. Check input parameters;</li><li>60000: source file error (for example, video data corruption). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
+        /// <p>Error code. 0 indicates success, and additional values indicate failure:</p><li>40000: invalid parameters. Check input parameters;</li><li>60000: source file error (for example, video data damage). Confirm whether the source file is normal;</li><li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// <p>Input information for a video dubbing task.</p>
+        /// <p>Video dubbing task input information.</p>
         /// </summary>
         [JsonProperty("Input")]
         public VideoDubbingAsyncInput Input{ get; set; }

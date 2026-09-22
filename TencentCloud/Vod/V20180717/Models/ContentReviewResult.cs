@@ -26,12 +26,12 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Result type. Valid values:
-        /// <li>Porn.Image: authentication result of offensive content in the image;</li>
+        /// <li>Porn.Image: Authentication result for offensive content in the image;</li>
         /// <li>Terrorism.Image: authentication result of unsafe information in the image;</li>
-        /// <li>Political.Image: authentication result of inappropriate information in the image;</li>
-        /// <li>Porn.Ocr: authentication result of offensive content in image OCR text;</li>
+        /// <li>Political.Image: authentication of inappropriate information results in images;</li>
+        /// <li>Porn.Ocr: Authentication result for offensive content in image OCR text;</li>
         /// <li>Terrorism.Ocr: Authentication result of unsafe information in image OCR text;</li>
-        /// <li>Political.Ocr: The authentication result of inappropriate information in the image OCR text.</li>
+        /// <li>Political.Ocr: Authentication result of inappropriate information in image OCR text.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public PornImageResult PornImageResult{ get; set; }
 
         /// <summary>
-        /// Authentication result for unsafe information in the image. Valid when Type is Terrorism.Image.
+        /// Authentication result of unsafe information in the image. Valid when Type is Terrorism.Image.
         /// </summary>
         [JsonProperty("TerrorismImageResult")]
         public TerrorismImageResult TerrorismImageResult{ get; set; }
 
         /// <summary>
-        /// Authentication of inappropriate information results in the image. Valid when Type is Political.Image.
+        /// Authentication result for inappropriate information in the image. Valid when Type is Political.Image.
         /// </summary>
         [JsonProperty("PoliticalImageResult")]
         public PoliticalImageResult PoliticalImageResult{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ContentReviewOcrResult TerrorismOcrResult{ get; set; }
 
         /// <summary>
-        /// The authentication result of inappropriate information in the image OCR text. Valid when Type is Political.Ocr.
+        /// Authentication result of inappropriate information in image OCR text. Valid when Type is Political.Ocr.
         /// </summary>
         [JsonProperty("PoliticalOcrResult")]
         public ContentReviewOcrResult PoliticalOcrResult{ get; set; }

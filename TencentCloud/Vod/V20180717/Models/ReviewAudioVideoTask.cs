@@ -69,7 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// Source context. This is used to pass user request information. The audio/video moderation completed callback returns the value of this field. The maximum length is 1000 characters.
+        /// Source context, used to pass through user request information. The audio/video moderation completed callback will return the value of this field. Maximum length: 1000 characters.
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

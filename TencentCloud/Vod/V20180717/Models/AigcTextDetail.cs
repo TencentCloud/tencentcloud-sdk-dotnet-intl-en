@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ScrollToken{ get; set; }
 
         /// <summary>
-        /// <p>Text generation details</p>
+        /// <p>Detailed data for text generation</p>
         /// </summary>
         [JsonProperty("Data")]
         public AigcTextDetailData[] Data{ get; set; }

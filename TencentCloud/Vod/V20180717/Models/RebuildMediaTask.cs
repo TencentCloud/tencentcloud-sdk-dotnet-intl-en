@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task stream status. Valid values:
+        /// Task flow status. Valid values:
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
@@ -39,8 +39,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. 0 indicates success. Other values indicate failure:
-        /// <li>40000: invalid parameters. Check the input parameters;</li>
+        /// Error code. 0 indicates success, and additional values indicate failure:
+        /// <li>40000: Invalid input parameter. Check the input parameter;</li>
         /// <li>60000: Source file error (for example, video data damage). Confirm whether the source file is normal;</li>
         /// <li>70000: internal service error. Retry is recommended.</li>
         /// </summary>
@@ -60,7 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// Progress of the audio and video quality regeneration task. Value range: [0-100].
+        /// Progress of the audio and video quality regeneration task, in the range of [0,100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
@@ -78,7 +78,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public RebuildMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Meta information of the output video after audio and video quality revival.
+        /// Meta-information of the output video after audio and video quality revival.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

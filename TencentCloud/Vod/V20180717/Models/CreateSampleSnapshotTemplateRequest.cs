@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Sampling screenshot type. Value:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
+        /// <p>Sampling screenshot type. Valid values:</p><li>Percent: By percent.</li><li>Time: By time interval.</li>
         /// </summary>
         [JsonProperty("SampleType")]
         public string SampleType{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SampleInterval{ get; set; }
 
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services on or after December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be set to the app ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether default applications or newly created applications), this field must be filled with the app ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
+        /// <p>The maximum value of the screenshot height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.</p>
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+        /// <p>Resolution adaptation. Available values:</p><li>open: Turn on. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: Turn off. At this point, Width represents the width of the video, and Height represents the height of the video.</li>Default value: open.
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, and fill the remaining edge part with black.</li><li>white: Keep the video aspect ratio unchanged, and fill the remaining edge part with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, and apply Gaussian blur to the remaining edge part.</li>Default value: black.
+        /// <p>Filling mode. The processing method for transcoding when the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video is "padding". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Keep the video aspect ratio unchanged, with the remaining edge part filled with black.</li><li>white: Keep the video aspect ratio unchanged, with the edge remainder filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the remaining edge part filled with Gaussian blur.</li>Default value: black.
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

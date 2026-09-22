@@ -31,25 +31,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Basic information of the generated media file after upload completion.
+        /// Basic information of the media file generated after upload completion.
         /// </summary>
         [JsonProperty("MediaBasicInfo")]
         public MediaBasicInfo MediaBasicInfo{ get; set; }
 
         /// <summary>
-        /// Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+        /// Task ID for the task type `Procedure`. If A task (Procedure) is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, or `AiRecognitionTask`.
         /// </summary>
         [JsonProperty("ProcedureTaskId")]
         public string ProcedureTaskId{ get; set; }
 
         /// <summary>
-        /// Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+        /// Task ID of the ReviewAudioVideo task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies ReviewAudioVideoTask.
         /// </summary>
         [JsonProperty("ReviewAudioVideoTaskId")]
         public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
-        /// Meta information, including size, duration, video stream information, and audio stream information.
+        /// Metadata, including size, duration, video stream information, and audio stream information.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

@@ -33,39 +33,39 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Result suggestions for identifying violations in suspected clips. Value range:
         /// <li>review: suspected violation, suggest re-examination;</li>
-        /// <li>block: Confirmed violation. Suggest banning.</li>
+        /// <li>block: confirmed violation, suggest banning.</li>
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Tag of the most likely rule violation in the suspected segment. Value range:
+        /// Tag of the most likely rule violation for the suspected segment. Value range:
         /// <li>Porn: Pornography;</li>
         /// <li>Terror: violence.</li>
         /// <li>Polity: inappropriate information;</li>
         /// <li>Ad: advertisement;</li>
-        /// <li>Illegal: illegal activities;</li>
+        /// <li>Illegal: illegal;</li>
         /// <li>Abuse: abusive language.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Rule violation subtag.
+        /// Rule-violating subtag.
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// Suspected segment violation form. Value range:
-        /// <li>Image: people or icons in the image;</li>
-        /// <li>OCR: text on the screen.</li>
+        /// Suspected segment violation type. Value range:
+        /// <li>Image: people or icons on the screen;</li>
+        /// <li>OCR: text in the image.</li>
         /// </summary>
         [JsonProperty("Form")]
         public string Form{ get; set; }
 
         /// <summary>
-        /// Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+        /// Coordinates of the area where the suspected object, icon, or text appears (pixel-level), [x1, y1, x2, y2], which are the coordinates of the top-left corner and bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

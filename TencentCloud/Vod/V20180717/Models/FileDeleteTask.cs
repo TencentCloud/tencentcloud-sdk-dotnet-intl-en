@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>List of IDs of files to delete.</p>
+        /// <p>List of file IDs to delete.</p>
         /// </summary>
         [JsonProperty("FileIdSet")]
         public string[] FileIdSet{ get; set; }

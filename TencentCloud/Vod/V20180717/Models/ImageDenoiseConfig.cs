@@ -27,7 +27,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Capability configuration switch. Valid values:
         /// <li>ON: enabled;</li>
-        /// <li>OFF: disabled</li>
+        /// <li>OFF: disabled.</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]

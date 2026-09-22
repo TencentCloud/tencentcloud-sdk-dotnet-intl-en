@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Control parameters for offensive information involved in image recognition.
+        /// Image recognition involves control parameters for offensive information.
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PornImgReviewTemplateInfo ImgReviewInfo{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public PornAsrReviewTemplateInfo AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// Control parameters for offensive information involved in text recognition.
+        /// Control parameters for text recognition involving offensive information.
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PornOcrReviewTemplateInfo OcrReviewInfo{ get; set; }

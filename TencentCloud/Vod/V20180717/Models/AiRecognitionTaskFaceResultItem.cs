@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Library type of the figure, which indicates which figure library the recognized figure comes from:
+        /// Library type, which indicates the figure library that the recognized figure comes from:
         /// <li>Default: default figure library;</li>
         /// <li>UserDefine: user-defined character library.</li>
         /// </summary>

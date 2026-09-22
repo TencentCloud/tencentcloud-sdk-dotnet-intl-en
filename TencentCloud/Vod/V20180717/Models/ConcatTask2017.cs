@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Video splicing source file information.
+        /// Source file information for video splicing.
         /// </summary>
         [JsonProperty("FileInfoSet")]
         public ConcatFileInfo2017[] FileInfoSet{ get; set; }

@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// Media filename.
+        /// Media file name.
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
@@ -76,7 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Task flow status change notification mode.
-        /// <li>Finish: An event notification is initiated only when all task flows are completed.</li>
+        /// <li>Finish: Initiate an event notification only when all task flows are completed;</li>
         /// <li>None: non-acceptance of the task flow callback.</li>
         /// </summary>
         [JsonProperty("TasksNotifyMode")]

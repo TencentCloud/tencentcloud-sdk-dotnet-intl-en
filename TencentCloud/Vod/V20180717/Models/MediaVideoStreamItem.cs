@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Bitrate of video stream, unit: bps.
+        /// Bitrate of the video stream. Unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Video stream height. Unit: px.
+        /// Height of the video stream. Unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Video stream encoding format, for example, h264.
+        /// Video stream encoding format, for example h264.
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -55,14 +55,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// Encoding tag. It is valid only when Codec is hevc.
+        /// Encoding tag, valid only when Codec is hevc.
         /// </summary>
         [JsonProperty("CodecTag")]
         public string CodecTag{ get; set; }
 
         /// <summary>
         /// Dynamic range information of the frame.
-        /// <li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+        /// <li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
         /// </summary>
         [JsonProperty("DynamicRangeInfo")]
         public DynamicRangeInfo DynamicRangeInfo{ get; set; }

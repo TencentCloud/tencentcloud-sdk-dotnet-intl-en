@@ -25,31 +25,31 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+        /// <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
         /// </summary>
         [JsonProperty("StorageMode")]
         public string StorageMode{ get; set; }
 
         /// <summary>
-        /// <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+        /// <p>Output filename, up to 64 characters. By default, the system specifies the generated filename.</p>
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+        /// <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
 
         /// <summary>
-        /// <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+        /// <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+        /// <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion scenario. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>When only AspectRatio is specified, it adaptively adjusts based on the original image.</li><li>When AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>When AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? ImageWidth{ get; set; }
 
         /// <summary>
-        /// <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+        /// <p>Output image height. <strong>Only valid in AI image expansion scenarios</strong>.</p>
         /// </summary>
         [JsonProperty("ImageHeight")]
         public ulong? ImageHeight{ get; set; }

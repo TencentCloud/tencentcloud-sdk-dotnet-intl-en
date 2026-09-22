@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// File type, for example, mp4 or mp3.
+        /// File type, such as mp4 and mp3.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// Filename, which contains up to 64 characters.
+        /// Filename. It can contain up to 64 characters.
         /// </summary>
         [JsonProperty("MediaName")]
         public string MediaName{ get; set; }

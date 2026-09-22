@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Media file creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Media file creation time. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Latest update time of media file (operations such as modifying video properties and initiating video processing will trigger update of media file information) in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Latest update time of the media file (operations such as modifying video attributes and initiating video processing will trigger updates to the media file information), in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ClassName{ get; set; }
 
         /// <summary>
-        /// Category path of the media file. Categories are separated by "-", for example "New first-level category - New secondary category".
+        /// Category path of the media file. Categories are separated by "-", for example "new first-level category - new sub-category".
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// Muxing format of the media file, such as mp4 and flv.
+        /// Muxing format of the media file, for example, mp4 and flv.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaSourceData SourceInfo{ get; set; }
 
         /// <summary>
-        /// Storage region of media files, for example, ap-chongqing. See region list.
+        /// Media file storage region, such as ap-chongqing. See region list (https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StoragePath{ get; set; }
 
         /// <summary>
-        /// Tag information of a media file.
+        /// Tag information of the media file.
         /// </summary>
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
@@ -140,7 +140,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> STANDARD: standard storage.</li>
         /// <li> STANDARD_IA: Infrequent storage.</li>
         /// <li> ARCHIVE: Archive storage.</li>
-        /// <li> DEEP_ARCHIVE: Deep archive storage.</li>
+        /// <li> DEEP_ARCHIVE: deep archive storage.</li>
         /// </summary>
         [JsonProperty("StorageClass")]
         public string StorageClass{ get; set; }

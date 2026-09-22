@@ -43,25 +43,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string OcrSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported languages for recognition are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali, Gujarati, Kannada, Malayalam, Tamil, Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
+        /// <p>Subtitle language, used to guide OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>zh_en: Chinese and English</li><li>multi: other<br>Other supported recognition languages are as follows:<br>Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, India-Bengali, India-Gujarati, India-Kannada, India-Malayalam, India-Tamil, India-Telugu, Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik</li></ul>
         /// </summary>
         [JsonProperty("SubtitleLang")]
         public string SubtitleLang{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled, it can take an empty string, which means no subtitle file is output.</li></ul>
+        /// <p>Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>srt: SRT format</li><li>vtt: WebVTT format</li><li>When SubtitleEmbedId is filled in, you can set this parameter to an empty string, which means no subtitle file will be output.</li></ul>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable caption translation. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+        /// <p>Whether caption translation is enabled. Default value: OFF. This parameter is valid only when OcrSwitch is set to "ON".</p><ul><li>ON: enable</li><li>OFF: disable</li></ul>
         /// </summary>
         [JsonProperty("TransSwitch")]
         public string TransSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
+        /// <p>Subtitle translation target language, default value: en. This parameter is valid only when TransSwitch is set to "ON".<br>Currently supported languages:<br>zh: Simplified Chinese<br>en: English<br>ja: Japanese<br>ko: Korean<br>fr: French<br>es: Spanish<br>it: Italian<br>de: German<br>tr: Turkish<br>ru: Russian<br>pt: Portuguese<br>vi: Vietnamese<br>id: Indonesian<br>ms: Malay<br>th: Thai<br>ar: Arabic<br>hi: Hindi</p>
         /// </summary>
         [JsonProperty("TransDstLang")]
         public string TransDstLang{ get; set; }

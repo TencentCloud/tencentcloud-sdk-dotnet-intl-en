@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Referrer blocklist/allowlist configuration switch. Value:
+        /// Referrer blocklist configuration switch. Value:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>

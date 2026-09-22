@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// MPS task template detail content.
+        /// Details of the MPS task template.
         /// </summary>
         [JsonProperty("MPSTemplateInfo")]
         public string MPSTemplateInfo{ get; set; }

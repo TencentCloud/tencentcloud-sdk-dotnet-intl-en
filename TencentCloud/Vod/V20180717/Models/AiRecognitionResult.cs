@@ -39,15 +39,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Video start and end recognition result. When Type is
-        /// Valid for HeadTailRecognition.
+        /// Video start and end recognition result when Type is
+        /// Valid when HeadTailRecognition is used.
         /// </summary>
         [JsonProperty("HeadTailTask")]
         public AiRecognitionTaskHeadTailResult HeadTailTask{ get; set; }
 
         /// <summary>
         /// Video splitting recognition result, which is valid when Type is
-        /// Valid for SegmentRecognition.
+        /// Valid when set to SegmentRecognition.
         /// </summary>
         [JsonProperty("SegmentTask")]
         public AiRecognitionTaskSegmentResult SegmentTask{ get; set; }
@@ -61,14 +61,14 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Speech keyword recognition result. When Type is
-        /// Valid for AsrWordsRecognition.
+        /// Valid when set to AsrWordsRecognition.
         /// </summary>
         [JsonProperty("AsrWordsTask")]
         public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
         /// Full speech recognition result. When Type is
-        /// Valid when AsrFullTextRecognition is used.
+        /// Valid when set to AsrFullTextRecognition.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
@@ -81,21 +81,21 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Text keyword recognition result. When Type is
-        /// Valid for OcrWordsRecognition.
+        /// Valid when set to OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsTask")]
         public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
         /// Full text recognition result. When Type is
-        /// Valid when OcrFullTextRecognition is used.
+        /// Valid when set to OcrFullTextRecognition.
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
         /// Object recognition result, which is valid when Type is
-        /// Valid for ObjectRecognition.
+        /// Valid when set to ObjectRecognition.
         /// </summary>
         [JsonProperty("ObjectTask")]
         public AiRecognitionTaskObjectResult ObjectTask{ get; set; }

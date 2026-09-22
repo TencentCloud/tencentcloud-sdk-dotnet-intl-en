@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReviewAudioVideoTaskId{ get; set; }
 
         /// <summary>
-        /// <p>Task ID of the task type ImportMediaKnowledge. When the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet, initiate the task.</p>
+        /// <p>Task ID of the ImportMediaKnowledge task type. This task is initiated when the task flow template specified by the input parameter ProcedureName includes ImportMediaKnowledgeTaskSet.</p>
         /// </summary>
         [JsonProperty("ImportMediaKnowledgeTaskIdSet")]
         public string[] ImportMediaKnowledgeTaskIdSet{ get; set; }

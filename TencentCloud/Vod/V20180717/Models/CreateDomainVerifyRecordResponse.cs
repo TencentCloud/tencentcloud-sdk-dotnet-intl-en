@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public DNSVerifyInfo DNSVerifyInfo{ get; set; }
 
         /// <summary>
-        /// File validation information
+        /// File verification information
         /// </summary>
         [JsonProperty("FileVerifyInfo")]
         public FileVerifyInfo FileVerifyInfo{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. 0 indicates success, and other values indicate failure.</p>
+        /// <p>Error code. 0 indicates success, and other values indicate failure</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

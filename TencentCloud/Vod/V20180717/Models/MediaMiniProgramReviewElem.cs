@@ -27,8 +27,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Audio and video moderation type. 
         /// <li>Porn: The visual involves offensive content,</li>
-        /// <li>Porn.Ocr: text involves offensive content,</li>
-        /// <li>Porn.Asr: The sound involves offensive content,</li>
+        /// <li>Porn.Ocr: The text involves offensive content,</li>
+        /// <li>Porn.Asr: Sound involves offensive content,</li>
         /// <li>Terrorism: The visual involves unsafe information,</li>
         /// <li>Political: The visual involves inappropriate information,</li>
         /// <li>Political.Ocr: The text involves inappropriate information,</li>
@@ -38,7 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Audio and video review comments.
+        /// Audio/video moderation feedback.
         /// <li>pass: confirm normal,</li>
         /// <li>block: confirmed violation,</li>
         /// <li>review: suspected violation.</li>

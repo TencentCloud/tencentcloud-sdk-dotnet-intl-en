@@ -55,13 +55,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Format{ get; set; }
 
         /// <summary>
-        /// <p>DRM type. Value range: </p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
+        /// <p>DRM type. Value range:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it means no DRM protection is applied to the video.
         /// </summary>
         [JsonProperty("DrmType")]
         public string DrmType{ get; set; }
 
         /// <summary>
-        /// <p>Key provider for DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
+        /// <p>Key provider of DRM. Value range:</p><li>SDMC: SDMC;</li><li>VOD: VOD.</li>Default value: VOD.<p>The SDMC service will gradually phase out subsequently. Please use the VOD DRM encryption service.</p>
         /// </summary>
         [JsonProperty("DrmKeyProvider")]
         public string DrmKeyProvider{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AdaptiveStreamTemplate[] StreamInfos{ get; set; }
 
         /// <summary>
-        /// <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range: </p><li>0: No, </li><li>1: Yes.</li>
+        /// <p>Whether to prohibit video low bitrate to high bitrate conversion. Value range:</p><li>0: No,</li><li>1: Yes.</li>
         /// </summary>
         [JsonProperty("DisableHigherVideoBitrate")]
         public ulong? DisableHigherVideoBitrate{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SegmentType{ get; set; }
 
         /// <summary>
-        /// <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration instead of the HlsTime field.</p>
+        /// <p>Average segmentation duration</p><p>Unit: seconds</p><p>Default value: 6</p><p>Adaptive bitrate streaming uses SegmentDuration to set the segment duration, not the HlsTime field.</p>
         /// </summary>
         [JsonProperty("SegmentDuration")]
         public long? SegmentDuration{ get; set; }

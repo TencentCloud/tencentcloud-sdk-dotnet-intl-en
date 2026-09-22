@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] ExtTimeOffsetSet{ get; set; }
 
         /// <summary>
-        /// <p>List of screenshot time points, in <font color="red">milliseconds</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
+        /// <p>List of screenshot time points, in <font color="red">ms</font>. This parameter is not recommended. We recommend that you use the ExtTimeOffsetSet parameter.</p>
         /// </summary>
         [JsonProperty("TimeOffsetSet")]
         public float?[] TimeOffsetSet{ get; set; }

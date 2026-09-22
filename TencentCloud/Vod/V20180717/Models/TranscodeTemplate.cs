@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Definition{ get; set; }
 
         /// <summary>
-        /// <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+        /// <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// <p>Template type. Valid values:</p><li>Preset: system-preset template.</li><li>Custom: user-defined template.</li>
+        /// <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Indicates whether to remove video data. Parameter value:</p><li>0: Data is reserved;</li><li>1: Data is removed.</li>
+        /// <p>Indicates whether to remove video data. Valid values:</p><li>0: Data is reserved.</li><li>1: Data is removed.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public EnhanceConfig EnhanceConfig{ get; set; }
 
         /// <summary>
-        /// <p>Container format filter criteria. Valid values:</p><li>Video: video format, a container format that can contain both video and audio streams.</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
+        /// <p>Container format filter criteria. Available values:</p><li>Video: video format, a container format that can contain both video and audio streams;</li><li>PureAudio: pure audio format, a container format that can only contain audio streams.</li>
         /// </summary>
         [JsonProperty("ContainerType")]
         public string ContainerType{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// <p>Segment type. Valid only when Container is hls.</p>
+        /// <p>Segment type. It is valid only when Container is hls.</p>
         /// </summary>
         [JsonProperty("SegmentType")]
         public string SegmentType{ get; set; }

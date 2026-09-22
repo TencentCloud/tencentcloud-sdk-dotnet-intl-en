@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file extension;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+        /// <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
         /// </summary>
         [JsonProperty("MaxAgeType")]
         public string MaxAgeType{ get; set; }
 
         /// <summary>
-        /// <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+        /// <p>Matching content for the corresponding type of MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg or txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
         /// </summary>
         [JsonProperty("MaxAgeContents")]
         public string[] MaxAgeContents{ get; set; }
 
         /// <summary>
-        /// <p>MaxAge time setting, in seconds; <br><b>Note: If the time is 0, no cache is used.</b></p>
+        /// <p>MaxAge time setting, in seconds; <br><b>Note: 0 means no cache.</b></p>
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public ulong? MaxAgeTime{ get; set; }

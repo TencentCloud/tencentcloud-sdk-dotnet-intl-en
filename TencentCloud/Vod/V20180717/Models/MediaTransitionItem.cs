@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+        /// Transition duration in seconds. For two media segments with transition processing, the start time of the second segment on the track is automatically adjusted to the end time of the previous segment minus the transition duration.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -38,7 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public TransitionOpertion[] Transitions{ get; set; }
 
         /// <summary>
-        /// Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+        /// Transition operation list. A maximum of one image transition and one audio transition are supported respectively.
         /// </summary>
         [JsonProperty("MediaTransitions")]
         public TransitionOperation[] MediaTransitions{ get; set; }

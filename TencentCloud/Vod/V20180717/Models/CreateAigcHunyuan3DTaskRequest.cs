@@ -25,43 +25,43 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled with the app ID.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Reference image information for generating a 3D model.</p><p>Input parameter limitation: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+        /// <p>Generate reference image information for the 3D model.</p><p>Input parameter limit: The maximum array length is 1.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
         /// </summary>
         [JsonProperty("ImageInfos")]
         public AigcHunyuan3DReferenceImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
-        /// <p>Multi-perspective image information used to generate a 3D model.</p><p>Input limits: The array length must be between 2 and 8, and the front perspective must be included.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
+        /// <p>Multi-perspective image information used to generate 3D models.</p><p>Input limitations: The array length must be between 2 and 8, and it must contain the front perspective.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive with each other. One and only one must be filled in.</p>
         /// </summary>
         [JsonProperty("MultiViewImageInfos")]
         public AigcHunyuan3DMultiViewImageInfo[] MultiViewImageInfos{ get; set; }
 
         /// <summary>
-        /// <p>Prompt for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
+        /// <p>Prompt content for generating a 3D model.</p><p>Input parameter limit: up to 1024 utf-8 characters.</p><p>The three input parameters ImageInfos, MultiViewImageInfos, and Prompt are mutually exclusive. One and only one must be filled in.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only the geometry (no texture, faster output speed);</li><li>Texture: Generate only the texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
+        /// <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul><p>Default value: Normal</p>
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
 
         /// <summary>
-        /// <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be Texture (texture scenario).</p>
+        /// <p>Reference 3D model used to generate a 3D model.</p><p>Input parameter limit: when MeshInfos is filled in, GenerateType must be set to Texture (texture scenario).</p>
         /// </summary>
         [JsonProperty("MeshInfos")]
         public AigcHunyuan3DMeshInfo[] MeshInfos{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable output PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
+        /// <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul><p>Default value: Disabled</p>
         /// </summary>
         [JsonProperty("EnablePBR")]
         public string EnablePBR{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? FaceCount{ get; set; }
 
         /// <summary>
-        /// <p>Whether to retain UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: retained;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
+        /// <p>Whether to reserve UV unfolding.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul><p>Default value: Disabled</p>
         /// </summary>
         [JsonProperty("KeepUV")]
         public string KeepUV{ get; set; }
 
         /// <summary>
-        /// <p>Result format. An extra output format in addition to the default return of obj and glb.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+        /// <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
         /// </summary>
         [JsonProperty("ResultFormat")]
         public string ResultFormat{ get; set; }
@@ -91,13 +91,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Seed{ get; set; }
 
         /// <summary>
-        /// <p>Style control words.</p>
+        /// <p>Style control word.</p>
         /// </summary>
         [JsonProperty("Style")]
         public string Style{ get; set; }
 
         /// <summary>
-        /// <p>Configuration of the output media file of the task.</p>
+        /// <p>Output media file configuration of the task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcHunyuan3DOutputConfig OutputConfig{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Source context, used to pass through user request information. The value of this field will be returned in the audio and video quality revival completion callback. It can contain up to 1000 characters.</p>
+        /// <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }

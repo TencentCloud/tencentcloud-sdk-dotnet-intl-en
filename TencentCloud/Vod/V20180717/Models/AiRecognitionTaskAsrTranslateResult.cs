@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiRecognitionTaskAsrTranslateResultOutput Output{ get; set; }
 
         /// <summary>
-        /// Voice translation task progress, in the range of [0,100].
+        /// Voice translation task progress, value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Voice Translation Task Start Time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Voice translation task start time in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }

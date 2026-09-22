@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+        /// Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task progress, value range: [0-100].
+        /// Task progress, with a value range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Input information of the AIGC video generation task.
+        /// Input information of an AIGC video task.
         /// </summary>
         [JsonProperty("Input")]
         public SceneAigcVideoTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Output information of the AIGC video task.
+        /// Output information of an AIGC video task.
         /// </summary>
         [JsonProperty("Output")]
         public SceneAigcVideoTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+        /// Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? RestoreDay{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// Thawing mode. If the current storage type of the media file is archive storage, valid values:
+        /// Thawing mode. If the current storage type of the media file is archive storage, the following values can be taken:
         /// <li>Speed mode: Expedited. The unfreeze task is completed in 5 minutes.</li>
         /// <li>Standard mode: Standard. The unfreeze task is completed after 5 hours.</li>
         /// <li>Batch mode: Bulk. The unfreeze task is completed after 12 hours.</li>

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li>av1 and H.266 encoding containers currently only support mp4;</li><li>H.266 currently only supports the fixed CRF bitrate control method.</li>
+        /// <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding;</li><li>libx265: H.265 encoding;</li><li>av1: AOMedia Video 1 encoding;</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> av1 and H.266 encoding containers currently only support mp4;</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Available filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched".</li><li>black: Keep the video aspect ratio unchanged and fill the rest of the edges with black.</li><li>white: Keep the video aspect ratio unchanged and fill the rest of the edges with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged and use Gaussian blur filling for the rest of the edges.</li>
+        /// <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes:</p><li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li><li>black: keep the video aspect ratio unchanged, with the rest of the edges filled with black.</li><li>white: keep the video aspect ratio unchanged, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Keep the video aspect ratio unchanged, with the rest of the edges filled using Gaussian blur.</li>
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }
 
         /// <summary>
-        /// <p>Control factor for constant video bitrate. Value range: [1, 51]. 0 indicates that it is disabled.</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+        /// <p>Control factor for constant video bitrate. Value range: [1, 51]. 0 indicates that it is disabled.</p><p><font color="red">Note:</font></p><li>If this parameter is specified, the bitrate control mode for CRF will be used to transcode (video bitrate will no longer take effect);</li><li>When the encoding format of the specified video stream is H.266, this field is required. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
         /// </summary>
         [JsonProperty("Vcrf")]
         public ulong? Vcrf{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string PreserveHDRSwitch{ get; set; }
 
         /// <summary>
-        /// <p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1 refers to the hvc1 tag;</li><li>hev1 refers to the hev1 tag. </li>Default value: hvc1.
+        /// <p>Encoding tag. Valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1 refers to the hvc1 tag;</li><li>hev1 refers to the hev1 tag. </li>Default value: hvc1.
         /// </summary>
         [JsonProperty("CodecTag")]
         public string CodecTag{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public string GopUnit{ get; set; }
 
         /// <summary>
-        /// <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. The output bitrate is adjusted based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It minimizes overall bitrate while maintaining a stable average bitrate of the output video, allowing short-term bitrate fluctuation. It is suitable for scenarios where maintaining a certain quality while minimizing overall bitrate is desired.</li><li>CBR: Constant Bit Rate. The output bitrate remains constant during video encoding, regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor. A quality factor is set to control video quality and achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+        /// <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is needed while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of changes in image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant Rate Factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate adjusts automatically based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// <p>Maximum number of consecutive B-frames. Set to auto by default, and -1 means change to automatic.</p><p>Value range: [-1, 16]</p>
+        /// <p>Maximum number of consecutive B-frames. The default is auto, and -1 means change to automatic.</p><p>Value range: [-1, 16]</p>
         /// </summary>
         [JsonProperty("Bframes")]
         public long? Bframes{ get; set; }
 
         /// <summary>
-        /// <p>Average duration of slices. 0 or left empty means automatic, and an appropriate segment duration will be automatically chosen based on video features such as GOP.</p><p>Value range: [0, 10]</p><p>Unit: seconds</p><p>Supports only transcoding templates, not adaptive bitrate stream templates.</p>
+        /// <p>Average shard duration. 0 or left empty means auto, which will automatically choose an appropriate shard duration based on video features such as GOP.</p><p>Value range: [0, 10]</p><p>Unit: seconds</p><p>Supports only transcoding templates, not adaptive bitrate stream templates.</p>
         /// </summary>
         [JsonProperty("HlsTime")]
         public long? HlsTime{ get; set; }
 
         /// <summary>
-        /// <p>A predefined group of encoding tools or features allowed by the video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: Mainstream Profile, provides I-frames, p-frames, and B-frames, and supports both interlaced and non-interlaced modes. Mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction on top of the main Profile and supports custom quantification. Widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+        /// <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: Mainstream Profile, provides I-frames, p-frames, and B-frames, and supports both interlaced and non-interlaced modes. Mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: Highest encoding level, adds 8X8 prediction on top of the main Profile, and supports custom quantification. Widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
         /// </summary>
         [JsonProperty("VideoProfile")]
         public string VideoProfile{ get; set; }

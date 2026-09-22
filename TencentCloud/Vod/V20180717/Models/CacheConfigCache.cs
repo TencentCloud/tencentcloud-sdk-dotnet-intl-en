@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? CacheTime{ get; set; }
 
         /// <summary>
-        /// Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the minimum value will be used for node cache. Valid values:
+        /// Advanced cache expiration configuration. When enabled, the max-age value returned by the origin server is compared with the cache expiration time set in CacheRules, and the minimum value is used for node caching. Valid values:
         /// <li>`on`: Enable;</li>
         /// <li>`off`: Cache.</li>
         /// </summary>
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string IgnoreCacheControl{ get; set; }
 
         /// <summary>
-        /// Whether to cache the Set-Cookie header and body on the node when the origin server returns the Set-Cookie header.
+        /// Whether to cache the Set-Cookie header and body on the node when the origin server returns the header.
         /// <li>on: Enable. Do not cache the header or body;</li>
         /// <li>`off`: disabled, following user-defined node cache rules.</li>
         /// </summary>

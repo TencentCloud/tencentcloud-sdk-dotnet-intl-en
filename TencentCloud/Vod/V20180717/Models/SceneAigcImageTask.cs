@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+        /// Error code. A non-zero error code is returned for a source error. If 0 is returned, use the ErrCode of each specific task.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }

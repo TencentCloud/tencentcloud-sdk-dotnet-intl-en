@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Intelligent frame interpolation control switch. Valid values:
-        /// <li>ON: enable intelligent frame interpolation;</li>
-        /// <li>OFF: disables intelligent frame interpolation.</li>
+        /// <li>ON: enable intelligent frame interpolation</li>
+        /// <li>OFF: Disable intelligent frame interpolation.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Intelligent frame interpolation frame rate. Frame rate range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: same as the source file frame rate.
+        /// Intelligent frame interpolation frame rate. Value range: (0, 100]. Valid only when the intelligent frame interpolation control switch is ON. Default: match the source file frame rate.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }

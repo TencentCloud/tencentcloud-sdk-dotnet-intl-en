@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+        /// <p>List of knowledge base IDs. Leave empty to use the default knowledge base.</p>
         /// </summary>
         [JsonProperty("KnowledgeBaseIds")]
         public string[] KnowledgeBaseIds{ get; set; }

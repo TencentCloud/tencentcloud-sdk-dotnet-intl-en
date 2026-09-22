@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Base64-encoded string of the watermark image. Supports jpeg and png image formats.
+        /// Base64-encoded string (https://tools.ietf.org/html/rfc4648) of the watermark image. Supports jpeg and png image formats.
         /// </summary>
         [JsonProperty("ImageContent")]
         public string ImageContent{ get; set; }
@@ -48,8 +48,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-        /// <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-        /// <li>repeat_last_frame: After the watermark has finished playing, stay on the last frame;</li>
+        /// <li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+        /// <li>repeat_last_frame: After the watermark finished playing, stay on the last frame;</li>
         /// <li>repeat: The watermark loops until the video ends.</li>
         /// </summary>
         [JsonProperty("RepeatType")]

@@ -25,12 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// List of rule violation tags to return. Optional values:
-        /// <li>Porn: Pornography;</li>
+        /// List of violation labels to return. Available values:
+        /// <li>Porn: pornography;</li>
         /// <li>Terror: violence.</li>
         /// <li>Polity: inappropriate information;</li>
-        /// <li>Illegal: illegal activities;</li>
-        /// <li>Abuse: verbal abuse;</li>
+        /// <li>Illegal: illegal;</li>
+        /// <li>Abuse: abusive language;</li>
         /// <li>Ad: advertisement;</li>
         /// <li>Moan: panting.</li>
         /// </summary>
@@ -38,19 +38,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, if they access resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b>
+        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// Review template name. The length cannot exceed 64 characters.
+        /// Review template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Review template description information, with a length limit of 256 characters.
+        /// Review template description information. Length limit: 256 characters.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

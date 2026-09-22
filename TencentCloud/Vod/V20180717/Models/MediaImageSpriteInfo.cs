@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+        /// Collection of sprite image information for a specific spec. Each element represents a set of sprite images with the same spec.
         /// </summary>
         [JsonProperty("ImageSpriteSet")]
         public MediaImageSpriteItem[] ImageSpriteSet{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Entity ID.</p>
+        /// <p>Principal ID.</p>
         /// </summary>
         [JsonProperty("ElementId")]
         public string ElementId{ get; set; }

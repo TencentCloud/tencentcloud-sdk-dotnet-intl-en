@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? CheckDuration{ get; set; }
 
         /// <summary>
-        /// <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+        /// <p>Detection interval, which indicates the duration after a detection is completed and before the next detection is conducted</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
         /// </summary>
         [JsonProperty("CheckInterval")]
         public long? CheckInterval{ get; set; }

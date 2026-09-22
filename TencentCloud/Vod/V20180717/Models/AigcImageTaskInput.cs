@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public AigcImageTaskInputFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+        /// <p>Prompt content for image generation. When FileInfos is empty, this parameter is required.</p>
         /// </summary>
         [JsonProperty("Prompt")]
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Prompt to prevent the model from image generation.</p>
+        /// <p>Prompt content to prevent the model from generating images.</p>
         /// </summary>
         [JsonProperty("NegativePrompt")]
         public string NegativePrompt{ get; set; }

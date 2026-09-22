@@ -35,9 +35,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Object library selection. Valid values:
         /// <li>Default: use the default object library;</li>
-        /// <li>UserDefine: Use the user-defined object library.</li>
-        /// <li>All: Use both the default object library and the user-defined object library.</li>
-        /// Default value: All. The default object library and user-defined object library are used simultaneously.
+        /// <li>UserDefine: use the user-defined object library.</li>
+        /// <li>All: use both the default object library and the user-defined object library.</li>
+        /// Default value: All. Use both the default object library and the user-defined object library.
         /// </summary>
         [JsonProperty("ObjectLibrary")]
         public string ObjectLibrary{ get; set; }

@@ -27,33 +27,33 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Task type. Valid values:
         /// <li>Porn: whether image recognition involves offensive content</li>
-        /// <li>Terrorism: image recognition of whether unsafe information is involved</li>
+        /// <li>Terrorism: image recognition for unsafe information</li>
         /// <li>Political: Whether image recognition involves inappropriate information</li>
         /// <li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
         /// <li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
-        /// <li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
-        /// <li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+        /// <li>Political.Asr: ASR text (text in audio) authentication whether it involves inappropriate information</li>
+        /// <li>Political.Ocr: whether Ocr text identification involves inappropriate information</li>
         /// <li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
-        /// <li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+        /// <li>Prohibited.Asr: Prohibited information recognition for ASR text (text in audio)</li>
         /// <li>Prohibited.Ocr: OCR text prohibited information recognition</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
+        /// Query result of a video audio/video moderation task (visual contains offensive content). Valid when the task type is Porn.
         /// </summary>
         [JsonProperty("PornTask")]
         public AiReviewTaskPornResult PornTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
+        /// Query result of a video audio/video moderation task (frames involving unsafe information). Valid when the task type is Terrorism.
         /// </summary>
         [JsonProperty("TerrorismTask")]
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
+        /// Query result of the video audio/video moderation task (visuals involving inappropriate information). Valid when the task type is Political.
         /// </summary>
         [JsonProperty("PoliticalTask")]
         public AiReviewTaskPoliticalResult PoliticalTask{ get; set; }
@@ -65,25 +65,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTaskPornAsrResult PornAsrTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
+        /// Query result of a video audio/video moderation task (OCR text contains offensive content). Valid when the task type is Porn.Ocr.
         /// </summary>
         [JsonProperty("PornOcrTask")]
         public AiReviewTaskPornOcrResult PornOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
+        /// Query result of the video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
         /// </summary>
         [JsonProperty("PoliticalAsrTask")]
         public AiReviewTaskPoliticalAsrResult PoliticalAsrTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
+        /// Query result of a video/audio moderation task (OCR text involving inappropriate information). Valid when the task type is Political.Ocr.
         /// </summary>
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
+        /// Query result of a video/audio moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
@@ -95,7 +95,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }
 
         /// <summary>
-        /// Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
+        /// Query result of the ASR text prohibited task in video moderation. Valid when the task type is Prohibited.Asr.
         /// </summary>
         [JsonProperty("ProhibitedAsrTask")]
         public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }

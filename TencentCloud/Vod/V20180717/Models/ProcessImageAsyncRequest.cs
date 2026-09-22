@@ -25,25 +25,25 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in as the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>FileId that needs image processing. It cannot be used with Url.</p>
+        /// <p>FileId that needs to be processed for image processing. Cannot be used with Url.</p>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
 
         /// <summary>
-        /// <p>Url that needs image processing. Cannot be input simultaneously with FileId.</p>
+        /// <p>Url that needs image processing. Cannot be used with FileId simultaneously.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>Base64 of the image to be processed. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
+        /// <p>Base64 for image processing. The image file must be less than 4 MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>. Just provide the Base64 encoded string itself.</p>
         /// </summary>
         [JsonProperty("Base64")]
         public string Base64{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProcessImageAsyncTaskInput ImageTaskInput{ get; set; }
 
         /// <summary>
-        /// <p>Output media file configuration for image processing tasks.</p>
+        /// <p>Configuration of the output media file for an image processing task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public ProcessImageAsyncOutputConfig OutputConfig{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+        /// <p>Priority of the task. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
         /// </summary>
         [JsonProperty("TasksPriority")]
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field, used for special purpose.</p>
+        /// <p>Reserved field, used for special purposes.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

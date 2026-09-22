@@ -27,7 +27,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Intelligent cover task switch. Available values:
         /// <li>ON: enable intelligent thumbnail generation;</li>
-        /// <li>OFF: Disable the intelligent thumbnail generation task.</li>
+        /// <li>OFF: disables the intelligent thumbnail generation task.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

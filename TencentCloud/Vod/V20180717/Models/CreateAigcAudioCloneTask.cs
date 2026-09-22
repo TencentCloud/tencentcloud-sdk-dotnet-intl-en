@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.</p>
+        /// <p>Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, please use the ErrCode of each specific task.</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// <p>Extended error code. An empty string indicates success, while other values indicate failure.</p>
+        /// <p>Extended error code. A null string indicates success, while other values indicate failure.</p>
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public CreateAigcAudioCloneInput Input{ get; set; }
 
         /// <summary>
-        /// <p>Output message of the AIGC audio clone task.</p>
+        /// <p>Output information of the AIGC audio clone task.</p>
         /// </summary>
         [JsonProperty("Output")]
         public CreateAigcAudioCloneOutput Output{ get; set; }

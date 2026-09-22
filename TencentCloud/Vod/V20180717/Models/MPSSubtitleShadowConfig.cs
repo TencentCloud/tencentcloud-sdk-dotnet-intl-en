@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ShadowWidthUnit{ get; set; }
 
         /// <summary>
-        /// <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+        /// <p>Shadow color. 6-digit hexadecimal RGB. Black by default if left blank (when shadow has set)</p>
         /// </summary>
         [JsonProperty("ShadowColor")]
         public string ShadowColor{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -43,31 +43,31 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ElementDescription{ get; set; }
 
         /// <summary>
-        /// <p>Subject reference method. The availability of subjects customized via video and via image is different.</p><p>Enumeration values:</p><ul><li>video_refer: Video role subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
+        /// <p>Subject reference method. The availability of subjects customized via video and via images differs.</p><p>Enumeration values:</p><ul><li>video_refer: Video character subject. At this point, refer to element_video_list to define the subject appearance.</li><li>image_refer: Multi-image subject. At this point, refer to element_image_list to define the subject appearance.</li></ul>
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// <p>Entity voice type, can bind existing timbres in the timbre library.</p><ul><li>When the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
+        /// <p>Entity timbre, bindable to existing timbres in the timbre library.</p><ul><li>If the current parameter is empty, the current entity is not bound to a timbre.</li><li>Only entities customized for video support binding timbres.</li></ul>
         /// </summary>
         [JsonProperty("ElementVoiceId")]
         public string ElementVoiceId{ get; set; }
 
         /// <summary>
-        /// <p>Entity reference video, used to set the entity and its details through video.</p><ul><li>Videos with audio can be uploaded. If the video contains voice, it triggers custom timbre (customize + add to timbre library + bind with entity).</li><li>Required when referencing a video, unavailable when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  &quot;refer_videos&quot;:[    {      &quot;video_url&quot;:&quot;video_url_1&quot;    }  ]}</code></pre>● Only MP4/MOV video formats are supported.<br>● Only 1080P videos with a duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported.<br>● Up to 1 video can be uploaded, with a video size no more than 200MB.<br>● The video_url parameter value cannot be empty.</li></ul>
+        /// <p>Entity reference video, used to set the entity and its details via video.</p><ul><li>videos with audio can be uploaded. If the video contains voice, it triggers timbre customization (customize + add to timbre library + bind with entity).</li><li>The current parameter is required when referencing a video, and invalid when referencing an image.</li><li>Carried in key:value format, as follows:<br><pre><code>{  "refer_videos":[    {      "video_url":"video_url_1"    }  ]}</code></pre>● video format supports only MP4/MOV<br>● Only 1080p videos with duration between 3s and 8s and an aspect ratio of 16:9 or 9:16 are supported<br>● Up to 1 video can be uploaded, with a video size no more than 200MB<br>● The video_url parameter value cannot be empty</li></ul>
         /// </summary>
         [JsonProperty("ElementVideoList")]
         public string ElementVideoList{ get; set; }
 
         /// <summary>
-        /// <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images. Among them:<ul><li>At least 1 front reference image, defined by the frontal_image parameter.</li><li>1–3 other reference images, which must differ from the front reference image, defined by the image_url parameter.</li></ul></li><li>Use key:value to carry them, as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
+        /// <p>Subject reference image. You can set the subject and its details through multiple images.</p><ul><li>Including a front reference image and other angle or close-up reference images, where:<ul><li>At least 1 front reference image is required, defined by the frontal_image parameter.</li><li>1–3 other reference images are required. They must have differences from the front reference image and are defined by the image_url parameter.</li></ul></li><li>Carried in key:value format as follows:<br><pre><code>{  "frontal_image":"image_url_0",  "refer_images":[    {      "image_url":"image_url_1"    },    {      "image_url":"image_url_2"    },    {      "image_url":"image_url_3"    }  ]}</code></pre></li></ul>
         /// </summary>
         [JsonProperty("ElementImageList")]
         public string ElementImageList{ get; set; }
 
         /// <summary>
-        /// <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Among them, details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
+        /// <p>Configure tags for a principal. A principal can be configured with multiple tags.</p><ul><li>Use key:value to carry them. Details are given below:</li></ul><p><pre><code>[  {        &quot;tag_id&quot;: &quot;o_101&quot;  }, {        &quot;tag_id&quot;: &quot;o_102&quot;    }]</code></pre></p>
         /// </summary>
         [JsonProperty("TagList")]
         public string TagList{ get; set; }

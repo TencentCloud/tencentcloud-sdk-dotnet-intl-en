@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? WidevineDefinition{ get; set; }
 
         /// <summary>
-        /// Adaptive bitrate streaming template ID with FairPlay protection type.
+        /// Adaptive bitstreaming template ID with FairPlay protection type.
         /// </summary>
         [JsonProperty("FairPlayDefinition")]
         public ulong? FairPlayDefinition{ get; set; }

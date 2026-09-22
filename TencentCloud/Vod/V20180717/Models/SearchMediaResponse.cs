@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+        /// <p>Total number of records that meet search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

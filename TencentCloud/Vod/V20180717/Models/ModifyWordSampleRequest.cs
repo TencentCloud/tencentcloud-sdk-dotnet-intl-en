@@ -31,14 +31,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created one.</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// <b>Keyword application scenario. Available values:</b>
-        /// 1. Recognition.Ocr: Performs content recognition through OCR.
+        /// 1. Recognition.Ocr: Perform content recognition through OCR.
         /// 2. Recognition.Asr: perform content recognition through audio recognition technology;
         /// 3. Review.Ocr: Perform inappropriate content recognition using OCR.
         /// 4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.

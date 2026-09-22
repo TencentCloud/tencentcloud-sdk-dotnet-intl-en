@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// List of user IDs participating in recording.
+        /// User ID list of the recording participants.
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

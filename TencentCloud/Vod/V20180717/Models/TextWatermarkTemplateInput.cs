@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Font type. Currently, two are supported:
-        /// <li>simkai.ttf: supports Chinese and English;</li>
+        /// <li>simkai.ttf: Supports Chinese and English;</li>
         /// <li>arial.ttf: English only.</li>
         /// </summary>
         [JsonProperty("FontType")]

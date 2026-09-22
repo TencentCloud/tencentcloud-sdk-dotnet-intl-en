@@ -26,8 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Audio noise reduction control switch. Available values:
-        /// <li>ON: enable audio noise reduction;</li>
-        /// <li>OFF: Turn off audio noise reduction.</li>
+        /// <li>ON: turn on audio noise reduction;</li>
+        /// <li>OFF: disable audio noise reduction.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

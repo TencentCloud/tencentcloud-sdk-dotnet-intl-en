@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StrategyType{ get; set; }
 
         /// <summary>
-        /// <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+        /// <p>Spot check policy parameters based on time. Valid when StrategyType is TimeSpotCheck.</p>
         /// </summary>
         [JsonProperty("TimeSpotCheck")]
         public QualityInspectTimeSpotCheck TimeSpotCheck{ get; set; }

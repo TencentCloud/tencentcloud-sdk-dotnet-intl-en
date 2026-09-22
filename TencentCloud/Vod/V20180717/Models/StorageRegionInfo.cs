@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Status. Whether it is enabled. Valid values:
         /// <li>opened: enabled.</li>
-        /// <li>unopened: not activated.</li>
+        /// <li>unopened: Not activated.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

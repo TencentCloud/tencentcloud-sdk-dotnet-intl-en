@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Dress up model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed prioritized.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect prioritized.</li></ul>
+        /// <p>Dressing model.</p><p>Enumeration values:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, speed first.</li><li>WAND-tryon-1.0-flash: Balanced tier, balancing effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, effect first.</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

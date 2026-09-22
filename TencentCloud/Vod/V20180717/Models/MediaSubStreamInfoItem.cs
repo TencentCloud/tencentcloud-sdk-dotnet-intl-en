@@ -39,13 +39,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Substream video screen height in px.
+        /// Video image height when the substream is a video stream. Measurement unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
 
         /// <summary>
-        /// Substream media file size in bytes.
+        /// Substream media file size. Measurement unit: Byte.
         /// <font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
         /// </summary>
         [JsonProperty("Size")]

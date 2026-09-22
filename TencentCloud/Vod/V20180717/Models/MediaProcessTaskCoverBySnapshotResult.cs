@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input of the screencapturing for cover image task for videos.
+        /// Input of the screencapturing for cover image task.
         /// </summary>
         [JsonProperty("Input")]
         public CoverBySnapshotTaskInput Input{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public CoverBySnapshotTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// Task progress of screencapturing for video cover image, in the range of [0,100].
+        /// Task progress of screencapturing for cover image from a video. Value ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Start execution time of the screencapturing for cover image task in [ISO datetime format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Screencapturing for cover image task start execution time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// Task completion time for screencapturing for cover image, in [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Task completion time for screencapturing for cover image, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

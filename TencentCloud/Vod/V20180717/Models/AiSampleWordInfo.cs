@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+        /// <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limited to 128 characters.</li>
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

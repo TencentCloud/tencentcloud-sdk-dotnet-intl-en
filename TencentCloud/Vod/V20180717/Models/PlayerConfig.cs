@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming</li><li>Transcode: transcoding output</li><li>Original: original audio/video</li>
+        /// <p>Played Audio and Video Type. Optional values:</p><li>AdaptiveDynamicStream: AdaptiveBitrateStreaming;</li><li>Transcode: transcoding output;</li><li>Original: original audio/video.</li>
         /// </summary>
         [JsonProperty("AudioVideoType")]
         public string AudioVideoType{ get; set; }
 
         /// <summary>
-        /// <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Enable, indicates only playback of DRM-protected adaptive bitrate output;</li><li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+        /// <p>Switch for playing DRM-protected adaptive bitstream:</p><li>ON: Turn on, indicates only playback of DRM-protected adaptive bitstream output;</li><li>OFF: Turn off, indicates playback of unencrypted adaptive bitstream output.</li>
         /// </summary>
         [JsonProperty("DrmSwitch")]
         public string DrmSwitch{ get; set; }

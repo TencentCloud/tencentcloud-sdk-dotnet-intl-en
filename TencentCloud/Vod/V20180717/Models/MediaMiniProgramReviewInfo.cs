@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Audio and video moderation information list.
+        /// Audio/video moderation information list.
         /// </summary>
         [JsonProperty("MiniProgramReviewList")]
         public MediaMiniProgramReviewInfoItem[] MiniProgramReviewList{ get; set; }

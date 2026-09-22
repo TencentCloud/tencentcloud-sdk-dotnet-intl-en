@@ -35,7 +35,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Access forced redirect type:
         /// <li>http: Force HTTP redirection</li>
-        /// <li>https: Force HTTPS redirection</li>
+        /// <li>`https`: Force HTTPS redirect</li>
         /// </summary>
         [JsonProperty("RedirectType")]
         public string RedirectType{ get; set; }

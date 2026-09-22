@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Score of Ocr text involving unsafe information. The score ranges from 0 to 100.
+        /// Score of unsafe information in Ocr text. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Ocr text contains result suggestions involving unsafe information. Value range:
+        /// Ocr text involves result suggestions for unsafe information. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -47,13 +47,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// URL of the Segment List File for video segments suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet field. (The file is not retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)
+        /// URL of the segment list file for videos suspected of containing unsafe information in Ocr text. The file content is in JSON format, and its data structure is consistent with the SegmentSet fields. (The file will not be retained permanently and will be deleted after reaching the SegmentSetFileUrlExpireTime.)
         /// </summary>
         [JsonProperty("SegmentSetFileUrl")]
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// Expiration time of the URL of the segment list file of videos suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+        /// Expiration time of the URL of the Segment List File for video segments suspected of involving unsafe information in Ocr text, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }

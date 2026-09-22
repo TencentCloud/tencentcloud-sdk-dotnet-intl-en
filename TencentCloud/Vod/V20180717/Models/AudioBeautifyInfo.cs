@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// Audio beautification control switch. Available values:
-        /// <li>ON: enable audio beautification</li>
+        /// <li>ON: enable audio beautification;</li>
         /// <li>OFF: disables audio beautification.</li>
         /// </summary>
         [JsonProperty("Switch")]

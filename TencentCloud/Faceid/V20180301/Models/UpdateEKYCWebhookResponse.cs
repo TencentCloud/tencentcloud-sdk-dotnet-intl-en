@@ -25,13 +25,13 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// <p>ID of the updated Webhook configuration</p>
+        /// <p>ID of the Webhook configuration to be updated</p>
         /// </summary>
         [JsonProperty("WebhookId")]
         public ulong? WebhookId{ get; set; }
 
         /// <summary>
-        /// <p>Modification time after update, format YYYY-MM-DD HH:mm:ss</p>
+        /// <p>Modification time after the update, in the format YYYY-MM-DD HH:mm:ss</p>
         /// </summary>
         [JsonProperty("ModTime")]
         public string ModTime{ get; set; }
