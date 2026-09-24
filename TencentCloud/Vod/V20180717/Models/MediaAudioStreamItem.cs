@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Bitrate of the audio stream. Unit: bps.</p>
+        /// <p>Audio stream bitrate, in bps.</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// <p>Sampling rate of the audio stream. Unit: hz.</p>
+        /// <p>Sampling rate of the audio stream, unit: hz.</p>
         /// </summary>
         [JsonProperty("SamplingRate")]
         public long? SamplingRate{ get; set; }

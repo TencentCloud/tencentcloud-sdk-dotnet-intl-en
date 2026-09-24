@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or transcoded video;</li></p>
+        /// <p>Input file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> <li>Base64: Base64 string of an image or video for transcoding;</li></p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Media file ID of the image file, which is the globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
+        /// <p>Media file ID of the image file, which is the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File.<br>Description:</p><ol><li>Images less than 7M are recommended.</li><li>Image format values: jpeg, jpg, png, webp.</li></ol>
         /// </summary>
         [JsonProperty("FileId")]
         public string FileId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image formats should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
+        /// <p>Accessible file Base64. This parameter is valid when Type is Base64. Details:</p><ol><li>The total size of all files must not exceed 7 MB to avoid exceeding the 10 MB upper limit of message size for cloud APIs after conversion to Base64;</li><li>Image format should be: jpeg, jpg, png, webp;</li><li>Do not include prefixes such as data:image/jpeg;base64,.</li></ol>
         /// </summary>
         [JsonProperty("Base64")]
         public string Base64{ get; set; }

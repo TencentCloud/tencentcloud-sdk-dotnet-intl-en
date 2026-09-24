@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Bucket, used as the bucket_name for uploading API URL.</p>
+        /// <p>Bucket, the bucket_name for uploading API URL.</p>
         /// </summary>
         [JsonProperty("StorageBucket")]
         public string StorageBucket{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// <p>VOD session, used for confirmation of the upload API parameter VodSessionKey.</p>
+        /// <p>VOD session, used for the VodSessionKey parameter of the confirm upload API.</p>
         /// </summary>
         [JsonProperty("VodSessionKey")]
         public string VodSessionKey{ get; set; }
 
         /// <summary>
-        /// <p>Media storage path, the object Key for uploading and storing media through the API.</p>
+        /// <p>Media storage path, the object Key for uploading and storing media via the API.</p>
         /// </summary>
         [JsonProperty("MediaStoragePath")]
         public string MediaStoragePath{ get; set; }

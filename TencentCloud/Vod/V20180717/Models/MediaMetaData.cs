@@ -31,37 +31,37 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Container type, for example, m4a and mp4.
+        /// Container type, such as m4a, mp4.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+        /// Sum of the average video stream bitrate and average audio stream bitrate, in bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum height of the video stream. Unit: px.
+        /// Maximum value of the video stream height in px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum video stream width in px.
+        /// Maximum value of the video stream width in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Video duration, in seconds.
+        /// Video duration, unit: seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Selection angle during video shooting. Measurement unit: degree.
+        /// Selection angle during video shooting. Unit: degree.
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// Video duration, in seconds.
+        /// Video duration, unit: seconds.
         /// </summary>
         [JsonProperty("VideoDuration")]
         public float? VideoDuration{ get; set; }
 
         /// <summary>
-        /// Audio duration in seconds.
+        /// Audio duration, in seconds.
         /// </summary>
         [JsonProperty("AudioDuration")]
         public float? AudioDuration{ get; set; }

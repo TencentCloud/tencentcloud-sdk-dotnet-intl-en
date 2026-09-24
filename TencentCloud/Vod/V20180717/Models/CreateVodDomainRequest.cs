@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+        /// <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -41,13 +41,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
         /// <li>Outside Chinese Mainland: outside the Chinese mainland.</li>
         /// <li>Global: around the world.</li>
-        /// If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the user's regional information in Tencent Cloud Settings. To enable CDN acceleration within the Chinese mainland, the domain must be [ICP filed](https://www.tencentcloud.com/document/product/243/18905?from_cn_redirect=1) first.
+        /// If AccelerateArea is not set, VOD will automatically activate CDN acceleration within or outside the Chinese mainland based on the regional information configured by the user in Tencent Cloud Settings. 
         /// </summary>
         [JsonProperty("AccelerateArea")]
         public string AccelerateArea{ get; set; }
 
         /// <summary>
-        /// Domain type. Valid values: <li>VOD: domain name used to distribute VOD products</li> <li>EdgeOne: domain name used to distribute EdgeOne products</li> If not specified, the default value is VOD.
+        /// Domain type. Valid values: <li>VOD: domain name for distribution using the VOD product.</li> <li>EdgeOne: domain name for distribution using the EdgeOne product.</li> If not specified, the default value is VOD.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

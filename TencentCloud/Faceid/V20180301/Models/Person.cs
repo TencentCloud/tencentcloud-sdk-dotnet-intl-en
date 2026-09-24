@@ -25,25 +25,25 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled.</p>
+        /// <p>Full name (either this or LastName is required). If FullName is filled, FirstName/MiddleName/LastName cannot be filled</p>
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// <p>name (Either this field or FullName is required)</p>
+        /// <p>name (either this or FullName is required)</p>
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// <p>First name (Option)</p>
+        /// <p>First name (optional)</p>
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// <p>Middle name (Option)</p>
+        /// <p>Middle name (optional)</p>
         /// </summary>
         [JsonProperty("MiddleName")]
         public string MiddleName{ get; set; }

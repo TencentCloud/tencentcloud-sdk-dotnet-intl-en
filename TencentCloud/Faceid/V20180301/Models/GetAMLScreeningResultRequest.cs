@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+        /// <p>User's unique identifier in the customer system, up to 256 characters.</p>
         /// </summary>
         [JsonProperty("UniqueCustomerID")]
         public string UniqueCustomerID{ get; set; }

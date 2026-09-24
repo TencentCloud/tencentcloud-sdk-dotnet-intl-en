@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string CompanyCertNumber{ get; set; }
 
         /// <summary>
-        /// <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (optional)</p>
+        /// <p>Enterprise registration country, ISO 3166-1 alpha-2 country code (Option)</p>
         /// </summary>
         [JsonProperty("CompanyCountry")]
         public string CompanyCountry{ get; set; }

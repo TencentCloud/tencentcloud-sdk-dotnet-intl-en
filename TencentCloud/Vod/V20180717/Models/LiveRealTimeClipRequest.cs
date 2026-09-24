@@ -43,19 +43,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be filled in with the application ID.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Whether solidified. 0: non-permanent, 1: solidified. Default: non-permanent.</p>
+        /// <p>Whether solidified. 0: non-permanent, 1: solidified. Default non-permanent.</p>
         /// </summary>
         [JsonProperty("IsPersistence")]
         public long? IsPersistence{ get; set; }
 
         /// <summary>
-        /// <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding results, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, videos solidified by editing never expire.</p>
+        /// <p>Video storage expiry time after editing solidification. Format reference: <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. Enter "9999-12-31T23:59:59Z" to indicate the video never expires. After expiry, the media file and its related resources (transcoding results, sprites, etc.) will be permanently deleted. Valid only when IsPersistence is 1. By default, videos solidified through editing never expire.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can call the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">create category</a> API to create a category and obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
+        /// <p>Category ID, used to categorize and manage media. You can create a category via the <a href="https://www.tencentcloud.com/document/product/266/31772?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>Valid only when IsPersistence is 1.
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? MetaDataRequired{ get; set; }
 
         /// <summary>
-        /// <p>The domain name added in VOD for time shift playback must already be <a href="https://www.tencentcloud.com/document/product/266/52220?from_cn_redirect=1#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E5.85.B3.E8.81.94.E5.BD.95.E5.88.B6.E6.A8.A1.E6.9D.BF.3Ca-id.3D.22step3.22.3E.3C.2Fa.3E">associated with a recording template and enabled for time-shift service</a> in Cloud Streaming Services. <strong>If the first call of this interface is after 2021-01-01T00:00:00Z, this field is required.</strong></p>
+        /// <p>The domain name added in VOD for time shift playback must be <a href="https://www.tencentcloud.com/document/product/266/52220?from_cn_redirect=1#.E6.AD.A5.E9.AA.A43.EF.BC.9A.E5.85.B3.E8.81.94.E5.BD.95.E5.88.B6.E6.A8.A1.E6.9D.BF.3Ca-id.3D.22step3.22.3E.3C.2Fa.3E">bound to a recording template and enabled for time-shift service</a> in cloud streaming. <strong>If the first call of this interface is after 2021-01-01T00:00:00Z, this field is required.</strong></p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

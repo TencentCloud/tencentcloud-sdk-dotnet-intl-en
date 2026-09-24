@@ -31,27 +31,25 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string UniqueCustomerID{ get; set; }
 
         /// <summary>
-        /// Entity type. Enumeration values: PERSON (individual) / COMPANY (company).
+        /// <p>Entity type. Enumeration values: PERSON / COMPANY</p><p>Enumeration values:</p><ul><li>PERSON: individual</li><li>COMPANY: company</li></ul>
         /// </summary>
         [JsonProperty("EntityType")]
         public string EntityType{ get; set; }
 
         /// <summary>
-        /// Personal information, required when EntityType=PERSON. 
-        /// Input restriction: EntityType=PERSON.
+        /// <p>Personal info, required when EntityType=PERSON</p><p>Input limitation: EntityType=PERSON</p>
         /// </summary>
         [JsonProperty("Person")]
         public Person Person{ get; set; }
 
         /// <summary>
-        /// Enterprise information, required when EntityType=COMPANY. 
-        /// Input restriction: EntityType=COMPANY.
+        /// <p>Enterprise info. Required when EntityType=COMPANY</p><p>Input limitation: EntityType=COMPANY</p>
         /// </summary>
         [JsonProperty("Company")]
         public Company Company{ get; set; }
 
         /// <summary>
-        /// Whether continuous monitoring screening is enabled. Default value: false.
+        /// <p>Whether continuous monitoring and screening is enabled. Default value: false</p><p>Default value: false</p>
         /// </summary>
         [JsonProperty("EnableOngoingScreening")]
         public bool? EnableOngoingScreening{ get; set; }

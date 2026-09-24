@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><b>On-demand <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// <p>Model name. Parameter values:</p><li>OG</li><li>GG</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+        /// <p>Model name. Parameter Value:</p><li>OG</li><li>GG</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EnhancePrompt{ get; set; }
 
         /// <summary>
-        /// <p>Configuration of the output media file of the image generation task.</p>
+        /// <p>Output media file configuration for an image generation task.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public AigcImageOutputConfig OutputConfig{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+        /// <p>Source context. This is used to pass user request information. The audio and video quality revival completion callback returns the value of this field. The maximum length is 1000 characters.</p>
         /// </summary>
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? TasksPriority{ get; set; }
 
         /// <summary>
-        /// <p>Reserved field for special usage.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports free resolution width and height settings. Both width and height are within the pixel range of [512, 2048], and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{&quot;AdditionalParameters&quot;: &quot;{\&quot;size\&quot;:\&quot;728x1024\&quot;}&quot;}</code></li></ul></li><li><p>OG</p><ul><li>Supports free resolution width and height settings:<ul><li>The calculated pixel size must be divisible by 16.</li><li>The total pixel count must be at least 655,360 and should not exceed 8,294,400.</li><li>Example: <code>{&quot;AdditionalParameters&quot;: &quot;{\&quot;size\&quot;:\&quot;728x1024\&quot;}&quot;}</code></li></ul></li><li>Supports setting a transparent layer:<ul><li>Example: <code>{&quot;AdditionalParameters&quot;: &quot;{\&quot;background\&quot;:\&quot;transparent\&quot;}&quot;}</code></li></ul></li></ul></li><li><p>Kling</p><ul><li>Supports setting image expansion parameters. Example: <code>{&quot;AdditionalParameters&quot;:&quot;{\&quot;down_expansion_ratio\&quot;:0.2,\&quot;left_expansion_ratio\&quot;:0.3,\&quot;right_expansion_ratio\&quot;:0.4,\&quot;up_expansion_ratio\&quot;:0.1}}</code><ul><li>Common constraints:<ul><li>Value range: [0, 2];</li><li>The overall area of the new image should not exceed 3 times that of the original image;</li><li>Forward prompt content can be imported through the <code>Prompt</code> field.</li><li>Example description:<ul><li>up_expansion_ratio: The upward expansion range, calculated as a multiple of the original image height. If the original image height is 20 and the parameter value is 0.1, the distance from the top edge of the original image to the top edge of the new image is 20 × 0.1 = 2. This region is the expansion range.</li><li>down_expansion_ratio: The downward expansion range, calculated as a multiple of the original image height. If the original image height is 20 and the parameter value is 0.2, the distance from the bottom edge of the original image to the bottom edge of the new image is 20 × 0.2 = 4. This region is the expansion range.</li><li>left_expansion_ratio: The leftward expansion range, calculated as a multiple of the original image width. If the original image width is 30 and the parameter value is 0.3, the distance from the left edge of the original image to the left edge of the new image is 30 × 0.3 = 9. This region is the expansion range.</li><li>right_expansion_ratio: The rightward expansion range, calculated as a multiple of the original image width. If the original image width is 30 and the parameter value is 0.4, the distance from the right edge of the original image to the right edge of the new image is 30 × 0.4 = 12. This region is the expansion range.</li></ul></li></ul></li></ul></li></ul></li></ul>
+        /// <p>Reserved field for special usage.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Support setting resolution width and height freely. Both width and height are in the range of [512, 2048] pixels, and the product of width and height <= 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>OG</p><ul><li>Support setting resolution width and height freely:<ul><li>Calculate the pixel size, which must be divisible by 16</li><li>The total pixels must be at least 655,360 and should not exceed 8,294,400</li><li>Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li>Support setting a transparent layer:<ul><li>Example: <code>{"AdditionalParameters": "{\"background\":\"transparent\"}"}</code></li></ul></li></ul></li><li><p>Kling</p><ul><li>Support setting expansion parameters. Example: <code>{"AdditionalParameters":"{\"down_expansion_ratio\":0.2,\"left_expansion_ratio\":0.3,\"right_expansion_ratio\":0.4,\"up_expansion_ratio\":0.1}}</code><ul><li>Common constraints:<ul><li>Value range: [0, 2];</li><li>The overall area of the new image should not exceed 3 times that of the original image;</li><li>Forward Prompt content can be input through the <code>Prompt</code> field.</li><li>Example description:<ul><li>up_expansion_ratio: expand upward, calculated based on a multiple of the original image height. If the original image height is 20 and the parameter value is 0.1, the distance from the top edge of the original image to the top edge of the new image is 20 x 0.1 = 2. This region is the expansion range.</li><li>down_expansion_ratio: expand downward, calculated based on a multiple of the original image height. If the original image height is 20 and the parameter value is 0.2, the distance from the bottom edge of the original image to the bottom edge of the new image is 20 x 0.2 = 4. This region is the expansion range.</li><li>left_expansion_ratio: expand to the left, calculated based on a multiple of the original image width. If the original image width is 30 and the parameter value is 0.3, the distance from the left edge of the original image to the left edge of the new image is 30 x 0.3 = 9. This region is the expansion range.</li><li>right_expansion_ratio: expand to the right, calculated based on a multiple of the original image width. If the original image width is 30 and the parameter value is 0.4, the distance from the right edge of the original image to the right edge of the new image is 30 x 0.4 = 12. This region is the expansion range.</li></ul></li></ul></li></ul></li></ul></li></ul>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

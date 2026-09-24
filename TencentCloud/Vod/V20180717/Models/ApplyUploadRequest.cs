@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string MediaType{ get; set; }
 
         /// <summary>
-        /// <p><b>Video-on-Demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the application ID when accessing resources in VOD applications, whether the default application or a newly created application.</b></p>
+        /// <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CoverType{ get; set; }
 
         /// <summary>
-        /// <p>Subsequent media task processing operations, i.e., automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and naming the template.</p>
+        /// <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and naming the template.</p>
         /// </summary>
         [JsonProperty("Procedure")]
         public string Procedure{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Specify the upload park. This is applicable only to the user with special requirements for the upload target region.</p>
+        /// <p>Designated upload park, applicable only to users with special requirements for the upload target region.</p>
         /// </summary>
         [JsonProperty("StorageRegion")]
         public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+        /// <p>Category ID, used to categorize and manage media. You can create a category through the <a href="https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }

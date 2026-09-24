@@ -37,13 +37,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Result{ get; set; }
 
         /// <summary>
-        /// <p>Description of results returned</p>
+        /// <p>Return result description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether continuous monitoring screening is enabled
+        /// <p>Whether continuous monitoring and screening is enabled</p>
         /// </summary>
         [JsonProperty("EnableOngoingScreening")]
         public bool? EnableOngoingScreening{ get; set; }

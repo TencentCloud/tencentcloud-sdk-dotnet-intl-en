@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1399";
+       private const string sdkVersion = "SDK_NET_3.0.1400";
 
         /// <summary>
         /// Client constructor.
@@ -396,7 +396,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// Queries the AML name list screening result.
+        /// Status change of continuous name list screening
         /// </summary>
         /// <param name="req"><see cref="GetAMLScreeningResultRequest"/></param>
         /// <returns><see cref="GetAMLScreeningResultResponse"/></returns>
@@ -406,7 +406,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// Queries the AML name list screening result.
+        /// Status change of continuous name list screening
         /// </summary>
         /// <param name="req"><see cref="GetAMLScreeningResultRequest"/></param>
         /// <returns><see cref="GetAMLScreeningResultResponse"/></returns>
@@ -752,7 +752,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// AML name list screening
+        /// AML list screening
         /// </summary>
         /// <param name="req"><see cref="RunAMLNameScreeningRequest"/></param>
         /// <returns><see cref="RunAMLNameScreeningResponse"/></returns>
@@ -762,7 +762,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// AML name list screening
+        /// AML list screening
         /// </summary>
         /// <param name="req"><see cref="RunAMLNameScreeningRequest"/></param>
         /// <returns><see cref="RunAMLNameScreeningResponse"/></returns>
@@ -773,7 +773,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// AML name list screening
+        /// AML list screening
         /// </summary>
         /// <param name="req"><see cref="UpdateAMLCustomerProfileRequest"/></param>
         /// <returns><see cref="UpdateAMLCustomerProfileResponse"/></returns>
@@ -783,7 +783,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// AML name list screening
+        /// AML list screening
         /// </summary>
         /// <param name="req"><see cref="UpdateAMLCustomerProfileRequest"/></param>
         /// <returns><see cref="UpdateAMLCustomerProfileResponse"/></returns>
