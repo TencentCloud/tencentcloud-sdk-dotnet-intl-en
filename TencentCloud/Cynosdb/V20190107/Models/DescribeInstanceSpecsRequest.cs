@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
+        /// <summary>
+        /// <p>AZ.</p>
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

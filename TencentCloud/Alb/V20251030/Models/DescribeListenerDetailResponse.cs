@@ -1,0 +1,176 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Alb.V20251030.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeListenerDetailResponse : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>List of CA certificate IDs bound to the listener.</p>
+        /// </summary>
+        [JsonProperty("CaCertificateIds")]
+        public string[] CaCertificateIds{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable mutual authentication.</p>
+        /// </summary>
+        [JsonProperty("CaEnabled")]
+        public bool? CaEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>List of server certificate IDs.</p>
+        /// </summary>
+        [JsonProperty("CertificateIds")]
+        public string[] CertificateIds{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time of the listener instance. Format: ISO 8601 (for example, 2025-01-01T08:30:00+08:00)</p>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Action list of the rule.</p>
+        /// </summary>
+        [JsonProperty("DefaultActions")]
+        public DefaultAction[] DefaultActions{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable Gzip compression.</p>
+        /// </summary>
+        [JsonProperty("GzipEnabled")]
+        public bool? GzipEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable the HTTP/2 feature.</p>
+        /// </summary>
+        [JsonProperty("Http2Enabled")]
+        public bool? Http2Enabled{ get; set; }
+
+        /// <summary>
+        /// <p>Specify the connection idle timeout period. Unit: seconds.</p>
+        /// </summary>
+        [JsonProperty("IdleTimeout")]
+        public ulong? IdleTimeout{ get; set; }
+
+        /// <summary>
+        /// <p>Listener ID, in the format of lst- followed by 8 alphanumeric characters.</p>
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// <p>Custom listener name.</p>
+        /// </summary>
+        [JsonProperty("ListenerName")]
+        public string ListenerName{ get; set; }
+
+        /// <summary>
+        /// <p>Port used by the load balancing instance frontend.</p>
+        /// </summary>
+        [JsonProperty("ListenerPort")]
+        public ulong? ListenerPort{ get; set; }
+
+        /// <summary>
+        /// <p>Listening protocol.</p>
+        /// </summary>
+        [JsonProperty("ListenerProtocol")]
+        public string ListenerProtocol{ get; set; }
+
+        /// <summary>
+        /// <p>Listener status. Value range:</p><ul><li><strong>Active</strong>: running.</li><li><strong>Provisioning</strong>: under creation.</li><li><strong>Configuring</strong>: changing.</li><li><strong>ProvisionFailed</strong>: creation failed</li></ul>
+        /// </summary>
+        [JsonProperty("ListenerStatus")]
+        public string ListenerStatus{ get; set; }
+
+        /// <summary>
+        /// <p>Cloud Load Balancer instance ID. The format is alb- followed by 8 alphanumeric characters.</p>
+        /// </summary>
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// <p>Last change time of the listener instance. Format: ISO 8601 (for example, 2025-01-01T08:30:00+08:00)</p>
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// <p>Connection request timeout period. Unit: seconds.</p>
+        /// </summary>
+        [JsonProperty("RequestTimeout")]
+        public ulong? RequestTimeout{ get; set; }
+
+        /// <summary>
+        /// <p>Security policy ID, format: tls- followed by 8 alphanumeric characters.</p>
+        /// </summary>
+        [JsonProperty("SecurityPolicyId")]
+        public string SecurityPolicyId{ get; set; }
+
+        /// <summary>
+        /// <p>Tag.</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// <p>XForwardedFor configuration.</p>
+        /// </summary>
+        [JsonProperty("XForwardedForConfig")]
+        public XForwardedForConfig XForwardedForConfig{ get; set; }
+
+        /// <summary>
+        /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "CaCertificateIds.", this.CaCertificateIds);
+            this.SetParamSimple(map, prefix + "CaEnabled", this.CaEnabled);
+            this.SetParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArrayObj(map, prefix + "DefaultActions.", this.DefaultActions);
+            this.SetParamSimple(map, prefix + "GzipEnabled", this.GzipEnabled);
+            this.SetParamSimple(map, prefix + "Http2Enabled", this.Http2Enabled);
+            this.SetParamSimple(map, prefix + "IdleTimeout", this.IdleTimeout);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
+            this.SetParamSimple(map, prefix + "ListenerPort", this.ListenerPort);
+            this.SetParamSimple(map, prefix + "ListenerProtocol", this.ListenerProtocol);
+            this.SetParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "RequestTimeout", this.RequestTimeout);
+            this.SetParamSimple(map, prefix + "SecurityPolicyId", this.SecurityPolicyId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "XForwardedForConfig.", this.XForwardedForConfig);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+        }
+    }
+}
+

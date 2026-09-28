@@ -28,7 +28,7 @@ namespace TencentCloud.Rce.V20260130
 
        private const string endpoint = "rce.intl.tencentcloudapi.com";
        private const string version = "2026-01-30";
-       private const string sdkVersion = "SDK_NET_3.0.1396";
+       private const string sdkVersion = "SDK_NET_3.0.1402";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// Environment Risk Assessment
+        /// Performs risk identification based on the client IP provided as input. Provides environmental risk assessment (including risk level and risk labels), along with IP geolocation and network information.
         /// </summary>
         /// <param name="req"><see cref="AssessEnvironmentRiskRequest"/></param>
         /// <returns><see cref="AssessEnvironmentRiskResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Rce.V20260130
         }
 
         /// <summary>
-        /// Environment Risk Assessment
+        /// Performs risk identification based on the client IP provided as input. Provides environmental risk assessment (including risk level and risk labels), along with IP geolocation and network information.
         /// </summary>
         /// <param name="req"><see cref="AssessEnvironmentRiskRequest"/></param>
         /// <returns><see cref="AssessEnvironmentRiskResponse"/></returns>

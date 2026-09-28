@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// <p>Cluster Id.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Old replica AZ
+        /// <p>Old secondary AZ</p>
         /// </summary>
         [JsonProperty("OldSlaveZone")]
         public string OldSlaveZone{ get; set; }
 
         /// <summary>
-        /// New replica AZ
+        /// <p>New secondary AZ</p>
         /// </summary>
         [JsonProperty("NewSlaveZone")]
         public string NewSlaveZone{ get; set; }
 
         /// <summary>
-        /// Specifies the binlog synchronization mode. the default value is async. valid values are sync, semisync, and async.
+        /// <p>binlog synchronization mode. Default value: async. Available values: sync, semisync, async</p>
         /// </summary>
         [JsonProperty("BinlogSyncWay")]
         public string BinlogSyncWay{ get; set; }
 
         /// <summary>
-        /// Semi-sync timeout in ms. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication. The minimum is set to 1000 ms, supporting up to 4294967295 ms, with a default of 10000 ms.
+        /// <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary AZ cluster exceeds this timeout period while waiting for the standby AZ cluster to confirm a transaction, the replication method degrades to asynchronous replication. The minimum is set to 1000 ms, with support up to 4294967295 ms. Default: 10000 ms.</p>
         /// </summary>
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }

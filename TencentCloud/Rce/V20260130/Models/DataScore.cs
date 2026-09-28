@@ -37,7 +37,7 @@ namespace TencentCloud.Rce.V20260130.Models
         public RiskLabel[] RiskLabels{ get; set; }
 
         /// <summary>
-        /// <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+        /// <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the higher the risk.</p>
         /// </summary>
         [JsonProperty("RiskScore")]
         public long? RiskScore{ get; set; }
