@@ -28,7 +28,7 @@ namespace TencentCloud.Monitor.V20180724
 
        private const string endpoint = "monitor.intl.tencentcloudapi.com";
        private const string version = "2018-07-24";
-       private const string sdkVersion = "SDK_NET_3.0.1392";
+       private const string sdkVersion = "SDK_NET_3.0.1403";
 
         /// <summary>
         /// Client constructor.
@@ -92,27 +92,6 @@ namespace TencentCloud.Monitor.V20180724
         public BindingPolicyObjectResponse BindingPolicyObjectSync(BindingPolicyObjectRequest req)
         {
             return InternalRequestAsync<BindingPolicyObjectResponse>(req, "BindingPolicyObject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to determine whether the user is new to TMP, that is, whether the user has never created a TMP instance in any region.
-        /// </summary>
-        /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>
-        /// <returns><see cref="CheckIsPrometheusNewUserResponse"/></returns>
-        public Task<CheckIsPrometheusNewUserResponse> CheckIsPrometheusNewUser(CheckIsPrometheusNewUserRequest req)
-        {
-            return InternalRequestAsync<CheckIsPrometheusNewUserResponse>(req, "CheckIsPrometheusNewUser");
-        }
-
-        /// <summary>
-        /// This API is used to determine whether the user is new to TMP, that is, whether the user has never created a TMP instance in any region.
-        /// </summary>
-        /// <param name="req"><see cref="CheckIsPrometheusNewUserRequest"/></param>
-        /// <returns><see cref="CheckIsPrometheusNewUserResponse"/></returns>
-        public CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUserSync(CheckIsPrometheusNewUserRequest req)
-        {
-            return InternalRequestAsync<CheckIsPrometheusNewUserResponse>(req, "CheckIsPrometheusNewUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -585,31 +564,6 @@ namespace TencentCloud.Monitor.V20180724
         public CreateSSOAccountResponse CreateSSOAccountSync(CreateSSOAccountRequest req)
         {
             return InternalRequestAsync<CreateSSOAccountResponse>(req, "CreateSSOAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to create a Prometheus scrape configuration in TKE.
-        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-        /// </summary>
-        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
-        public Task<CreateServiceDiscoveryResponse> CreateServiceDiscovery(CreateServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<CreateServiceDiscoveryResponse>(req, "CreateServiceDiscovery");
-        }
-
-        /// <summary>
-        /// This API is used to create a Prometheus scrape configuration in TKE.
-        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-        /// </summary>
-        /// <param name="req"><see cref="CreateServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="CreateServiceDiscoveryResponse"/></returns>
-        public CreateServiceDiscoveryResponse CreateServiceDiscoverySync(CreateServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<CreateServiceDiscoveryResponse>(req, "CreateServiceDiscovery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2012,27 +1966,6 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// This API is used to get the YAML list of Prometheus recording rules.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
-        /// <returns><see cref="DescribePrometheusRecordRuleYamlResponse"/></returns>
-        public Task<DescribePrometheusRecordRuleYamlResponse> DescribePrometheusRecordRuleYaml(DescribePrometheusRecordRuleYamlRequest req)
-        {
-            return InternalRequestAsync<DescribePrometheusRecordRuleYamlResponse>(req, "DescribePrometheusRecordRuleYaml");
-        }
-
-        /// <summary>
-        /// This API is used to get the YAML list of Prometheus recording rules.
-        /// </summary>
-        /// <param name="req"><see cref="DescribePrometheusRecordRuleYamlRequest"/></param>
-        /// <returns><see cref="DescribePrometheusRecordRuleYamlResponse"/></returns>
-        public DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYamlSync(DescribePrometheusRecordRuleYamlRequest req)
-        {
-            return InternalRequestAsync<DescribePrometheusRecordRuleYamlResponse>(req, "DescribePrometheusRecordRuleYaml")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to get the list of recording rules, including those created by CRD resources in the associated cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusRecordRulesRequest"/></param>
@@ -2197,31 +2130,6 @@ namespace TencentCloud.Monitor.V20180724
         public DescribeSSOAccountResponse DescribeSSOAccountSync(DescribeSSOAccountRequest req)
         {
             return InternalRequestAsync<DescribeSSOAccountResponse>(req, "DescribeSSOAccount")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to list Prometheus scrape configurations in TKE.
-        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
-        public Task<DescribeServiceDiscoveryResponse> DescribeServiceDiscovery(DescribeServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<DescribeServiceDiscoveryResponse>(req, "DescribeServiceDiscovery");
-        }
-
-        /// <summary>
-        /// This API is used to list Prometheus scrape configurations in TKE.
-        /// <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
-        /// <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServiceDiscoveryRequest"/></param>
-        /// <returns><see cref="DescribeServiceDiscoveryResponse"/></returns>
-        public DescribeServiceDiscoveryResponse DescribeServiceDiscoverySync(DescribeServiceDiscoveryRequest req)
-        {
-            return InternalRequestAsync<DescribeServiceDiscoveryResponse>(req, "DescribeServiceDiscovery")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2876,27 +2784,6 @@ namespace TencentCloud.Monitor.V20180724
         public RunPrometheusInstanceResponse RunPrometheusInstanceSync(RunPrometheusInstanceRequest req)
         {
             return InternalRequestAsync<RunPrometheusInstanceResponse>(req, "RunPrometheusInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to send a custom alarm notification.
-        /// </summary>
-        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
-        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
-        public Task<SendCustomAlarmMsgResponse> SendCustomAlarmMsg(SendCustomAlarmMsgRequest req)
-        {
-            return InternalRequestAsync<SendCustomAlarmMsgResponse>(req, "SendCustomAlarmMsg");
-        }
-
-        /// <summary>
-        /// This API is used to send a custom alarm notification.
-        /// </summary>
-        /// <param name="req"><see cref="SendCustomAlarmMsgRequest"/></param>
-        /// <returns><see cref="SendCustomAlarmMsgResponse"/></returns>
-        public SendCustomAlarmMsgResponse SendCustomAlarmMsgSync(SendCustomAlarmMsgRequest req)
-        {
-            return InternalRequestAsync<SendCustomAlarmMsgResponse>(req, "SendCustomAlarmMsg")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
