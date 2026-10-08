@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>ID of the reference subject.</p>
+        /// <p>ID of the referenced entity.</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Main voice ID.</p>
+        /// <p>Main voice type ID.</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
