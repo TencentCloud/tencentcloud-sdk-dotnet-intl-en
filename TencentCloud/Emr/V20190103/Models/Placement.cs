@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+        /// AZ of the instance, such as ap-guangzhou-1. This parameter can also be obtained from the Zone field in the return value of [DescribeZones](https://www.tencentcloud.com/document/product/213/15707?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Project ID of the instance. If no ID is passed in, the default project ID is used.
+        /// ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1). If not specified, the default project is used.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }

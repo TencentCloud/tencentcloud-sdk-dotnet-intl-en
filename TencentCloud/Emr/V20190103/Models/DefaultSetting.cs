@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Name: the key for input parameters.
+        /// Name, which is used as the key for request parameters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// Key: display the configuration item in the configuration file.
+        /// Key, which is used to display the configuration items in the configuration file.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

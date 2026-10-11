@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Process traceId.
+        /// Flow trace ID.
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }

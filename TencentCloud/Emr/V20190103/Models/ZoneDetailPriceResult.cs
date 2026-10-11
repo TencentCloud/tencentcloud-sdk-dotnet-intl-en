@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Availability zone ID.
+        /// AZ ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Price details by node
+        /// Price details for different nodes.
         /// </summary>
         [JsonProperty("NodeDetailPrice")]
         public NodeDetailPriceResult[] NodeDetailPrice{ get; set; }

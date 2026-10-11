@@ -25,28 +25,34 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ID of terminated node. This parameter is reserved and does not need to be configured.
+        /// <p>ID of the terminated node. This parameter is reserved and does not need to be configured.</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId is effective. When the type is ComputeResource, ComputeResourceId is used.
+        /// <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR. When the type is EMR, InstanceId takes effect; when the type is ComputeResource, ComputeResourceId is used for identification.</p>
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// Computing resource ID.
+        /// <p>Computing resource ID.</p>
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
+
+        /// <summary>
+        /// <p>Retain the TKE cluster associated with the computing resource.</p>
+        /// </summary>
+        [JsonProperty("RetainTkeCluster")]
+        public bool? RetainTkeCluster{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+            this.SetParamSimple(map, prefix + "RetainTkeCluster", this.RetainTkeCluster);
         }
     }
 }

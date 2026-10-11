@@ -25,10 +25,10 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cloud disk type.
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
-        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-        /// <li>CLOUD_HSSD: Enhanced SSD.</li>
+        /// Cloud disk type. Valid values:
+        /// <li>CLOUD_SSD: Cloud SSD</li>
+        /// <li>CLOUD_PREMIUM: Premium Disk</li>
+        /// <li>CLOUD_HSSD: Enhanced SSD</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

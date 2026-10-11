@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("End")]
         public long? End{ get; set; }
 
         /// <summary>
-        /// Metric name. NODE.CPU: average CPU utilization and core count of the node; NODE.CPU.SLHBASE: average CPU utilization and core count of the Serverless instance; HDFS.NN.CAPACITY: storage utilization and total amount.
+        /// Metric name. Valid values: NODE.CPU (average CPU utilization and number of cores of the node), NODE.CPU.SLHBASE (average CPU utilization and total number of CPU cores of the Serverless instance), and HDFS.NN.CAPACITY (storage capacity utilization and total capacity).
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Downsample{ get; set; }
 
         /// <summary>
-        /// Start time, not required for pie charts
+        /// Start time, which is not required for pie charts.
         /// </summary>
         [JsonProperty("Start")]
         public long? Start{ get; set; }
 
         /// <summary>
-        /// Aggregation method, for future use
+        /// Aggregation method, which is reserved for scale-out purposes. Currently, this parameter does not need to be passed.
         /// </summary>
         [JsonProperty("Aggregator")]
         public string Aggregator{ get; set; }

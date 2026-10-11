@@ -31,11 +31,11 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Alias of the configuration to be reset. The options are as follows:
+        /// Alias of the configuration to be reset. Valid values:
         /// 
-        /// - capacityLabel: Reset the tag management configuration.
-        /// - fair: Reset the fair scheduling configuration.
-        /// - capacity: Reset the capacity scheduling configuration.
+        /// - capacityLabel: resets the tag management configuration.
+        /// - fair: resets the fair scheduling configuration.
+        /// - capacity: resets the capacity scheduling configuration.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }

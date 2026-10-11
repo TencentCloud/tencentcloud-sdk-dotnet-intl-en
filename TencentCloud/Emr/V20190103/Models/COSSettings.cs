@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// COS `SecretId`
+        /// COS SecretId
         /// </summary>
         [JsonProperty("CosSecretId")]
         public string CosSecretId{ get; set; }
 
         /// <summary>
-        /// COS `SecrectKey`
+        /// COS SecrectKey
         /// </summary>
         [JsonProperty("CosSecretKey")]
         public string CosSecretKey{ get; set; }
 
         /// <summary>
-        /// COS path to log
+        /// Log storage path on COS.
         /// </summary>
         [JsonProperty("LogOnCosPath")]
         public string LogOnCosPath{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The specific complete time when the task was executed, in the format of "2020-07-13 00:00:00".
+        /// Exact time when the task was executed. Format: "2020-07-13 00:00:00".
         /// </summary>
         [JsonProperty("ExecuteAt")]
         public string ExecuteAt{ get; set; }

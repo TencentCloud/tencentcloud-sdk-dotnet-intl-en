@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The specified information such as pod spec and source for scale-out with pod resources.
+        /// Pod specifications and source information, which are specified when Pod resources are used for the scale-out.
         /// </summary>
         [JsonProperty("PodSpec")]
         public PodNewSpec PodSpec{ get; set; }
 
         /// <summary>
-        /// The custom pod permission and parameter.
+        /// Pod custom permission and parameter.
         /// </summary>
         [JsonProperty("PodParameter")]
         public PodNewParameter PodParameter{ get; set; }

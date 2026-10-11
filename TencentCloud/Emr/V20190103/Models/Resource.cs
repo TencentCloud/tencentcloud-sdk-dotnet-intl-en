@@ -25,94 +25,106 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node specifications description, such as CVM.SA2.
+        /// <p>Node specification description, such as CVM.SA2.</p>
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Storage type.
-        /// Valid values:
-        /// <li>4: Cloud SSD.</li>
-        /// <li>5: Premium Cloud Disk.</li>
-        /// <li>6: Enhanced SSD.</li>
-        /// <li>11: Throughput HDD.</li>
-        /// <li>12: Tremendous SSD.</li>: this type is invalid upon creation, and automatic judgment will be conducted based on data disk type and node type.
+        /// <p>Valid values:<br>&quot;LOCAL_SSD&quot;   3     // Local SSD<br>&quot;CLOUD_SSD&quot;   4     // Cloud SSD<br>&quot;CLOUD_PREMIUM&quot;  5  // Premium Disk<br>&quot;CLOUD_HSSD&quot;   6    // Enhanced SSD<br>&quot;CLOUD_THROUGHPUT&quot; 11// Throughput-Optimized Cloud Disk<br>&quot;CLOUD_TSSD&quot;  12     // Tremendous SSD<br>&quot;CLOUD_BSSD&quot;    13   // Balanced SSD<br>&quot;CLOUD_BIGDATA&quot; 14   // Big Data Cloud Disk<br>&quot;CLOUD_HIGHIO&quot;  15   // High-IO Cloud Disk </p><p>This field is invalid. The actual system disk type is determined based on the data disk type and node type. If the node supports the selected data disk type, the system disk type is consistent with the data disk. It is recommended to use the CreateCluster API.</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// Disk type.
-        /// Valid values.
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
-        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-        /// <li>CLOUD_BASIC: Cloud Disk.</li>
+        /// <p>Data disk type. Valid values:</p><p>CLOUD_SSD: Cloud SSD</p><p>CLOUD_PREMIUM: Premium Disk</p><p>CLOUD_BASIC: Cloud Basic Disk</p><p>LOCAL_BASIC: Local Basic Disk</p><p>LOCAL_SSD: Local SSD</p><p>CLOUD_HSSD: Enhanced SSD</p><p>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</p><p>CLOUD_TSSD: Tremendous SSD</p><p>CLOUD_BIGDATA: Big Data Cloud Disk</p><p>CLOUD_HIGHIO: High-IO Cloud Disk</p><p>CLOUD_BSSD: Balanced SSD</p><p>REMOTE_SSD: Remote SSD Disk</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Memory capacity, in MB.
+        /// <p>Memory capacity (MB).</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores.
+        /// <p>Number of CPU cores.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Data disk capacity.
+        /// <p>Data disk capacity.</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// System disk capacity.
+        /// <p>System disk capacity.</p>
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
-        /// List of cloud disks. When the data disk is a cloud disk, `DiskType` and `DiskSize` are used directly; `MultiDisks` will be used for the excessive part
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud disk list. When the data disk is a single cloud disk, use the DiskType and DiskSize parameters directly. Use MultiDisks for extra disks.</p>
         /// </summary>
         [JsonProperty("MultiDisks")]
         public MultiDisk[] MultiDisks{ get; set; }
 
         /// <summary>
-        /// List of tags to be bound
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>List of tags to be bound.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Specifications type, such as S2.MEDIUM8.
+        /// <p>Specifications type, such as S2.MEDIUM8.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Number of local disks. This field is deprecated.
+        /// <p>Number of local disks. This field has been deprecated.</p>
         /// </summary>
         [JsonProperty("LocalDiskNum")]
         public ulong? LocalDiskNum{ get; set; }
 
         /// <summary>
-        /// Number of local disks, such as 2.
+        /// <p>Number of local disks, such as 2.</p>
         /// </summary>
         [JsonProperty("DiskNum")]
         public ulong? DiskNum{ get; set; }
 
         /// <summary>
-        /// GPU information.
+        /// <p>GPU information.</p>
         /// </summary>
         [JsonProperty("GpuDesc")]
         public string GpuDesc{ get; set; }
+
+        /// <summary>
+        /// <p>Number of partitions in a placement group.</p>
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public long? PartitionNumber{ get; set; }
+
+        /// <summary>
+        /// <p>High-performance cluster ID.</p>
+        /// </summary>
+        [JsonProperty("HCCHpcClusterId")]
+        public string HCCHpcClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>Custom hostname.</p>
+        /// </summary>
+        [JsonProperty("CustomNodeName")]
+        public string CustomNodeName{ get; set; }
+
+        /// <summary>
+        /// <p>GPU image driver configuration.</p>
+        /// </summary>
+        [JsonProperty("GpuImageDriver")]
+        public GpuImageDriverSpec GpuImageDriver{ get; set; }
 
 
         /// <summary>
@@ -133,6 +145,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
             this.SetParamSimple(map, prefix + "DiskNum", this.DiskNum);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+            this.SetParamSimple(map, prefix + "HCCHpcClusterId", this.HCCHpcClusterId);
+            this.SetParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
+            this.SetParamObj(map, prefix + "GpuImageDriver.", this.GpuImageDriver);
         }
     }
 }

@@ -26,13 +26,12 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Period")]
         public Period Period{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew.
+        /// Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal).
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

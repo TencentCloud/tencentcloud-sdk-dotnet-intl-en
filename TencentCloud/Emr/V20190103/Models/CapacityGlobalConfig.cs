@@ -31,22 +31,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? EnableLabel{ get; set; }
 
         /// <summary>
-        /// Path for tag information storage if label-based scheduling is enabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Path where the label information is stored if label-based scheduling is enabled.
         /// </summary>
         [JsonProperty("LabelDir")]
         public string LabelDir{ get; set; }
 
         /// <summary>
-        /// Whether to overwrite the user-specified queue, wherein true indicates overwrite.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to overwrite the user-specified queue. true indicates overwriting.
         /// </summary>
         [JsonProperty("QueueMappingOverride")]
         public bool? QueueMappingOverride{ get; set; }
 
         /// <summary>
         /// Advanced settings.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DefaultSettings")]
         public DefaultSetting[] DefaultSettings{ get; set; }

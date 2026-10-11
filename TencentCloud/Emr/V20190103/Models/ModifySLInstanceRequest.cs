@@ -25,28 +25,34 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Instance unique identifier (string).
+        /// <p>Instance unique identifier (string).</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Region name to be changed.
+        /// <p>Name of the region to be changed.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Target node count after configuration change in this region. The total number of nodes across all regions should be greater than or equal to 3 and less than or equal to 50.
+        /// <p>Target number of nodes in this region after the configuration change. The total number of nodes in all regions should be greater than or equal to 3 and less than or equal to 50.</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// The unique random identifier with a time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources repeatedly. For example: a9a90aa6-****-****-****-fae360632808.
+        /// <p>Unique random identifier with a time-to-live of 5 minutes, which needs to be specified by the caller to prevent the client from repeatedly creating resources, for example, a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808.</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
+
+        /// <summary>
+        /// <p>Storage space size. It must be a multiple of 100 and cannot be smaller than the current storage space (only scale-out is allowed).</p><p>Unit: GB.</p>
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
         }
     }
 }

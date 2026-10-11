@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// JDBC connection to custom MetaDB instance beginning with `jdbc:mysql://`
+        /// Custom MetaDB JDBC connection, which starts with jdbc:mysql://.
         /// </summary>
         [JsonProperty("MetaDataJdbcUrl")]
         public string MetaDataJdbcUrl{ get; set; }
 
         /// <summary>
-        /// Custom MetaDB instance username
+        /// Custom MetaDB username.
         /// </summary>
         [JsonProperty("MetaDataUser")]
         public string MetaDataUser{ get; set; }
 
         /// <summary>
-        /// Custom MetaDB instance password
+        /// Custom MetaDB password.
         /// </summary>
         [JsonProperty("MetaDataPass")]
         public string MetaDataPass{ get; set; }

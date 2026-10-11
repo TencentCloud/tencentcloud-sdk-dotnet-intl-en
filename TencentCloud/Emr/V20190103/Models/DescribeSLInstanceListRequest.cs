@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Instance filtering policy. Valid values: <li>clusterList: Query the list of instances except for those that have been terminated.</li> <li>monitorManage: Query the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
+        /// Instance filtering policy. Valid values:<li>clusterList: Queries the list of instances except for those that have been terminated.</li><li>monitorManage: Queries the list of instances except for those that have been terminated, are being created, or fail to be created.</li>
         /// </summary>
         [JsonProperty("DisplayStrategy")]
         public string DisplayStrategy{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of records to be returned per page. The default value is 10, and the maximum value is 100.	
+        /// Number of items returned per page. Default value: 10. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: <li>clusterId: Sort by instance ID.</li> <li>addTime: Sort by instance creation time.</li> <li>status: Sort by instance status code.</li>
+        /// Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sorts by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+        /// Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
 
         /// <summary>
-        /// Custom search filters. Examples: <li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li> Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
+        /// Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

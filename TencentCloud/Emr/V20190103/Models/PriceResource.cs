@@ -67,8 +67,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// List of cloud disks.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cloud disk list.
         /// </summary>
         [JsonProperty("MultiDisks")]
         public MultiDisk[] MultiDisks{ get; set; }
@@ -86,8 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Tag
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

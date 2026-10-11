@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The cluster ID.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The start time in seconds.
+        /// Start time (s).
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// The end time in seconds. EndTime-StartTime should not exceed one day's duration, which is 86400 seconds.
+        /// End time (s). The difference between the values of EndTime and StartTime cannot exceed 86,400 seconds (one day).
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Starting offset for pagination. Start value: 0
+        /// Starting offset for pages, starting from 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Page size. Valid range: [1,100]
+        /// Number of entries per page. Value range: [1, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

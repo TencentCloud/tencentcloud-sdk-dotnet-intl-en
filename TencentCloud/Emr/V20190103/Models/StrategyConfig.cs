@@ -25,33 +25,32 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 0: disable rolling restart.
-        /// 1: enable rolling start.
+        /// 0: disables rolling restart.
+        /// 1: enables rolling start.
         /// </summary>
         [JsonProperty("RollingRestartSwitch")]
         public long? RollingRestartSwitch{ get; set; }
 
         /// <summary>
-        /// Rolling restart quantity per batch, which is up to 99999.
+        /// Number of instances to restart per batch for rolling restart. Maximum value: 99999.
         /// </summary>
         [JsonProperty("BatchSize")]
         public long? BatchSize{ get; set; }
 
         /// <summary>
-        /// Stop and wait time for rolling restart per batch, with the maximum interval of 5 minutes and the unit of seconds.
+        /// Stop and wait time for rolling restart per batch. Maximum interval: 5 minutes. Unit: seconds.
         /// </summary>
         [JsonProperty("TimeWait")]
         public long? TimeWait{ get; set; }
 
         /// <summary>
-        /// Operation failure processing policy. 0: Block upon failure, 1: Automatically skipping failure.
+        /// Operation failure processing policy. Valid values: 0 (blocking upon the failure) and 1 (automatically skipping the failure).
         /// </summary>
         [JsonProperty("DealOnFail")]
         public long? DealOnFail{ get; set; }
 
         /// <summary>
         /// Parameters required in the instruction.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Args")]
         public Arg[] Args{ get; set; }

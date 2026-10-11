@@ -25,28 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Total number of queried nodes
+        /// Total number of queried nodes.
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// List of node details
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Node detailed information list.
         /// </summary>
         [JsonProperty("NodeList")]
         public NodeHardwareInfo[] NodeList{ get; set; }
 
         /// <summary>
-        /// List of tag keys owned by user
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of all tag keys for the user.
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// Resource type list
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Resource type list.
         /// </summary>
         [JsonProperty("HardwareResourceTypeList")]
         public string[] HardwareResourceTypeList{ get; set; }

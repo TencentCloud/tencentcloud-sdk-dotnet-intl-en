@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// "master", "standby" or "third-party".
+        /// "master", "standby", and "third-party".
         /// </summary>
         [JsonProperty("ZoneTag")]
         public string ZoneTag{ get; set; }
 
         /// <summary>
-        /// None
+        /// None.
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// None
+        /// None.
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// None
+        /// None.
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NewResourceSpec ResourceSpec{ get; set; }

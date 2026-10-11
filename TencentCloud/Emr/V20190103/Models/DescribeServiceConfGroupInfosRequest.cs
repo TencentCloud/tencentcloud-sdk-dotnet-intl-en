@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// Page size.
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

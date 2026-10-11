@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Rule statistics cycle. Options include 1 min, 3 min, and 5 min.
+        /// Rule statistics cycle. One, three, and five minutes are supported.
         /// </summary>
         [JsonProperty("StatisticPeriod")]
         public long? StatisticPeriod{ get; set; }
 
         /// <summary>
-        /// Trigger count. Scaling begins only after it has been triggered continuously more than TriggerThreshold times.
+        /// Number of triggering times. Scaling begins only after it has been triggered continuously for more than TriggerThreshold times.
         /// </summary>
         [JsonProperty("TriggerThreshold")]
         public long? TriggerThreshold{ get; set; }
@@ -49,8 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? MetricId{ get; set; }
 
         /// <summary>
-        /// Trigger condition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Triggering condition.
         /// </summary>
         [JsonProperty("Conditions")]
         public TriggerCondition[] Conditions{ get; set; }

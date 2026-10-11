@@ -25,34 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Original price.
+        /// <p>Original price (CNY).</p>
         /// </summary>
         [JsonProperty("OriginalCost")]
         public string OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// <p>Discounted price (CNY).</p>
         /// </summary>
         [JsonProperty("DiscountCost")]
         public string DiscountCost{ get; set; }
 
         /// <summary>
-        /// Time unit of scale-out. Valid values.
-        /// <li>s: second.</li>
+        /// <p>Time unit for the scale-out. Valid values:</p><li>s: indicates second.</li><li>m: indicates month.</li>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// Node spec queried for price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Node specifications for price inquiry.</p>
         /// </summary>
         [JsonProperty("PriceSpec")]
         public PriceResource PriceSpec{ get; set; }
 
         /// <summary>
-        /// The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Price inquiry results for multiple specifications in the input parameter MultipleResources. Other output parameters return the inquiry result of the first specifications.</p>
         /// </summary>
         [JsonProperty("MultipleEmrPrice")]
         public EmrPrice[] MultipleEmrPrice{ get; set; }

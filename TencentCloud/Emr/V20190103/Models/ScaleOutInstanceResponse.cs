@@ -25,38 +25,37 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Order number.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Order number.</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Client Token.
+        /// <p>Client token.</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Scale-out process ID.
+        /// <p>Scale-out flow ID.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Large order number.
+        /// <p>Large order number.</p>
         /// </summary>
         [JsonProperty("BillId")]
         public string BillId{ get; set; }
 
         /// <summary>
-        /// TraceId for scale-out.
+        /// <p>TraceId for the scale-out.</p>
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }

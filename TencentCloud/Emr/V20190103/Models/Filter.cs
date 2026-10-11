@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Fields that need to be filtered.
+        /// Fields to be filtered.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

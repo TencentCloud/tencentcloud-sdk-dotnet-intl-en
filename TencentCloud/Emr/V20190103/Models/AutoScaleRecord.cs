@@ -25,94 +25,100 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Name of the scale-in or scale-out rule.
+        /// <p>Scaling rule name.</p>
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// "SCALE_OUT" and "SCALE_IN", representing expansion and reduction respectively.
+        /// <p>&quot;SCALE_OUT&quot; and &quot;SCALE_IN&quot;, indicating scale-out and scale-in, respectively.</p>
         /// </summary>
         [JsonProperty("ScaleAction")]
         public string ScaleAction{ get; set; }
 
         /// <summary>
-        /// The values are "SUCCESS", "FAILED", "PART_SUCCESS", "IN_PROCESS", which indicate success, failure, partial success, and in-progress, respectively.
+        /// <p>The value is &quot;SUCCESS&quot;, &quot;FAILED&quot;, &quot;PART_SUCCESS&quot;, or &quot;IN_PROCESS&quot;, indicating success, failure, partial success, and in-process, respectively.</p>
         /// </summary>
         [JsonProperty("ActionStatus")]
         public string ActionStatus{ get; set; }
 
         /// <summary>
-        /// Process initiation time.
+        /// <p>Flow trigger time.</p>
         /// </summary>
         [JsonProperty("ActionTime")]
         public string ActionTime{ get; set; }
 
         /// <summary>
-        /// Description related to auto-scaling.
+        /// <p>Scaling-related description.</p>
         /// </summary>
         [JsonProperty("ScaleInfo")]
         public string ScaleInfo{ get; set; }
 
         /// <summary>
-        /// Valid only when ScaleAction is SCALE_OUT.
+        /// <p>Valid only when ScaleAction is SCALE_OUT.</p>
         /// </summary>
         [JsonProperty("ExpectScaleNum")]
         public long? ExpectScaleNum{ get; set; }
 
         /// <summary>
-        /// Process termination time.
+        /// <p>Flow end time.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Policy type. Valid values: 1 (load-based scaling), 2 (time-based scaling).
+        /// <p>Policy type. Load-based scaling or time-based scaling. 1 indicates load-based scaling, and 2 indicates time-based scaling.</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public long? StrategyType{ get; set; }
 
         /// <summary>
-        /// Specification information used during scale-out.
+        /// <p>Specifications information used during scale-out.</p>
         /// </summary>
         [JsonProperty("SpecInfo")]
         public string SpecInfo{ get; set; }
 
         /// <summary>
-        /// Compensatory scale-out. 0: disable, 1: enable.
+        /// <p>Compensatory scale-out. Valid values: 0 (disable) and 1 (enable).</p>
         /// </summary>
         [JsonProperty("CompensateFlag")]
         public long? CompensateFlag{ get; set; }
 
         /// <summary>
-        /// Number of compensations.
+        /// <p>Number of compensations.</p>
         /// </summary>
         [JsonProperty("CompensateCount")]
         public long? CompensateCount{ get; set; }
 
         /// <summary>
-        /// Number of retries.
+        /// <p>Number of retries.</p>
         /// </summary>
         [JsonProperty("RetryCount")]
         public ulong? RetryCount{ get; set; }
 
         /// <summary>
-        /// Retry information.
+        /// <p>Retry information.</p>
         /// </summary>
         [JsonProperty("RetryInfo")]
         public string RetryInfo{ get; set; }
 
         /// <summary>
-        /// Retry description in English.
+        /// <p>Retry description in English.</p>
         /// </summary>
         [JsonProperty("RetryEnReason")]
         public string RetryEnReason{ get; set; }
 
         /// <summary>
-        /// Retry description.
+        /// <p>Retry description.</p>
         /// </summary>
         [JsonProperty("RetryReason")]
         public string RetryReason{ get; set; }
+
+        /// <summary>
+        /// <p>Missing category.</p>
+        /// </summary>
+        [JsonProperty("ShortageClass")]
+        public long? ShortageClass{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "RetryInfo", this.RetryInfo);
             this.SetParamSimple(map, prefix + "RetryEnReason", this.RetryEnReason);
             this.SetParamSimple(map, prefix + "RetryReason", this.RetryReason);
+            this.SetParamSimple(map, prefix + "ShortageClass", this.ShortageClass);
         }
     }
 }

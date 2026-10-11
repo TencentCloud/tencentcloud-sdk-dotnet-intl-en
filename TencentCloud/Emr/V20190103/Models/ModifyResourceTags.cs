@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster ID or CVM ID
+        /// Cluster ID or CVM ID.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 6-segment resource expression
+        /// Six-segment resource expression.
         /// </summary>
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
         /// <summary>
-        /// Resource prefix
+        /// Resource prefix.
         /// </summary>
         [JsonProperty("ResourcePrefix")]
         public string ResourcePrefix{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// List of deleted tags
+        /// List of deleted tags.
         /// </summary>
         [JsonProperty("DeleteTags")]
         public Tag[] DeleteTags{ get; set; }
 
         /// <summary>
-        /// List of added tags
+        /// List of added tags.
         /// </summary>
         [JsonProperty("AddTags")]
         public Tag[] AddTags{ get; set; }
 
         /// <summary>
-        /// List of modified tags
+        /// List of modified tags.
         /// </summary>
         [JsonProperty("ModifyTags")]
         public Tag[] ModifyTags{ get; set; }

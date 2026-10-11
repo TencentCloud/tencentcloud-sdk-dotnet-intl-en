@@ -25,28 +25,28 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Shared component type, which can be EMR or CUSTOM
+        /// Shared component type. Valid values: EMR and CUSTOM.
         /// </summary>
         [JsonProperty("ShareType")]
         public string ShareType{ get; set; }
 
         /// <summary>
-        /// Custom parameters
-        /// </summary>
-        [JsonProperty("CustomServiceDefineList")]
-        public CustomServiceDefine[] CustomServiceDefineList{ get; set; }
-
-        /// <summary>
-        /// Shared component name
+        /// Shared component name.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
 
         /// <summary>
-        /// Shared component cluster
+        /// Shared component cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// Custom parameter collection.
+        /// </summary>
+        [JsonProperty("CustomServiceDefineList")]
+        public CustomServiceDefine[] CustomServiceDefineList{ get; set; }
 
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ShareType", this.ShareType);
-            this.SetParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
             this.SetParamSimple(map, prefix + "Service", this.Service);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
         }
     }
 }

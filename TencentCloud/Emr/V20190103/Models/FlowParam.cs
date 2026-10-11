@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Process parameter key.
+        /// Flow parameter key.
         /// TraceId: Query by TraceId.
         /// FlowId: Query by FlowId.
         /// </summary>
@@ -33,7 +33,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string FKey{ get; set; }
 
         /// <summary>
-        /// Parameter value
+        /// Parameter value.
         /// </summary>
         [JsonProperty("FValue")]
         public string FValue{ get; set; }

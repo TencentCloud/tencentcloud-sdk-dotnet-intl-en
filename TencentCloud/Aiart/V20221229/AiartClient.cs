@@ -28,7 +28,7 @@ namespace TencentCloud.Aiart.V20221229
 
        private const string endpoint = "aiart.intl.tencentcloudapi.com";
        private const string version = "2022-12-29";
-       private const string sdkVersion = "SDK_NET_3.0.1314";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -73,29 +73,6 @@ namespace TencentCloud.Aiart.V20221229
         public ChangeClothesResponse ChangeClothesSync(ChangeClothesRequest req)
         {
             return InternalRequestAsync<ChangeClothesResponse>(req, "ChangeClothes")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to transfer the image style based on the image to image technology. Images with small figures, complex gestures or too many figures are not recommended.
-        /// It supports 3 concurrency by default, which means that up to 3 submitted tasks can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
-        /// </summary>
-        /// <param name="req"><see cref="ImageToImageRequest"/></param>
-        /// <returns><see cref="ImageToImageResponse"/></returns>
-        public Task<ImageToImageResponse> ImageToImage(ImageToImageRequest req)
-        {
-            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage");
-        }
-
-        /// <summary>
-        /// This API is used to transfer the image style based on the image to image technology. Images with small figures, complex gestures or too many figures are not recommended.
-        /// It supports 3 concurrency by default, which means that up to 3 submitted tasks can be processed simultaneously. Subsequent tasks can be processed only after ongoing ones are completed.
-        /// </summary>
-        /// <param name="req"><see cref="ImageToImageRequest"/></param>
-        /// <returns><see cref="ImageToImageResponse"/></returns>
-        public ImageToImageResponse ImageToImageSync(ImageToImageRequest req)
-        {
-            return InternalRequestAsync<ImageToImageResponse>(req, "ImageToImage")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

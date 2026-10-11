@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Overview data array
+        /// Overview data array.
         /// </summary>
         [JsonProperty("TableMonitorList")]
         public OverviewRow[] TableMonitorList{ get; set; }
 
         /// <summary>
-        /// Overview data array length
+        /// Overview data array length.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Table schema information
+        /// Table schema information.
         /// </summary>
         [JsonProperty("SchemaList")]
         public TableSchemaItem[] SchemaList{ get; set; }

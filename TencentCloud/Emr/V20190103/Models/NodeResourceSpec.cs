@@ -25,38 +25,46 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// specifications type, such as S2.MEDIUM8.
+        /// <p>Specifications type, such as S2.MEDIUM8.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// The system disk, which can be up to 1 PCS.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>System disk. The number of system disks does not exceed 1.</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public DiskSpecInfo[] SystemDisk{ get; set; }
 
         /// <summary>
-        /// The list of tags to be bound.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>List of tags to be bound.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// The cloud data disk, which can be up to 15 PCS.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud data disk. The total number of cloud data disks does not exceed 15.</p>
         /// </summary>
         [JsonProperty("DataDisk")]
         public DiskSpecInfo[] DataDisk{ get; set; }
 
         /// <summary>
-        /// The local data disk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Local data disk.</p>
         /// </summary>
         [JsonProperty("LocalDataDisk")]
         public DiskSpecInfo[] LocalDataDisk{ get; set; }
+
+        /// <summary>
+        /// <p>Node configuration information. Currently provided only for the Terraform platform to validate parameters.</p>
+        /// </summary>
+        [JsonProperty("SoftwareConfig")]
+        public ServiceDeploy[] SoftwareConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Custom hostname.</p>
+        /// </summary>
+        [JsonProperty("CustomNodeName")]
+        public string CustomNodeName{ get; set; }
 
 
         /// <summary>
@@ -69,6 +77,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
             this.SetParamArrayObj(map, prefix + "LocalDataDisk.", this.LocalDataDisk);
+            this.SetParamArrayObj(map, prefix + "SoftwareConfig.", this.SoftwareConfig);
+            this.SetParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
         }
     }
 }

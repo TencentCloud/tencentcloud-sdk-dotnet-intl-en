@@ -25,28 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The VPC configuration information. This parameter is used to specify the VPC ID, subnet ID and other information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// VPC-related information configuration. This parameter can be used to specify the VPC ID and subnet ID.
         /// </summary>
         [JsonProperty("VirtualPrivateCloud")]
         public VirtualPrivateCloud VirtualPrivateCloud{ get; set; }
 
         /// <summary>
-        /// The instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// The specs of all nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specifications of all node resources.
         /// </summary>
         [JsonProperty("AllNodeResourceSpec")]
         public AllNodeResourceSpec AllNodeResourceSpec{ get; set; }
 
         /// <summary>
-        /// Leave ZoneTag empty in the case of a single availability zone. In the case of a dual-AZ deployment, select master for the first availability zone's ZoneTag and standby for the second. In the case of a three-AZ deployment, select master for the first availability zone's ZoneTag, standby for the second, and third-party for the third. Valid values.
+        /// In single-AZ deployment, ZoneTag can be left empty. In dual-AZ deployment mode, select master for the first AZ's ZoneTag and standby for the second. In three-AZ deployment mode, select master for the first AZ's ZoneTag, standby for the second, and third-party for the third. Valid values:
         ///   <li>master</li>
         ///   <li>standby</li>
         ///   <li>third-party</li>

@@ -25,115 +25,124 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Time unit of instance purchase duration. Valid values:
-        /// <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+        /// <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Purchase duration of instance, which needs to be used together with `TimeUnit`.
-        /// <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-        /// <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+        /// <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Currency.
+        /// <p>Currency type. Valid values:</p><li>CNY: RMB</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values:
-        /// <li>0: pay-as-you-go.</li>
+        /// <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Whether to enable high availability of node. Valid values:
-        /// <li>0: does not enable high availability of node.</li>
-        /// <li>1: enables high availability of node.</li>
+        /// <p>Whether to enable high availability for the node. Valid values:</p><li>0: no</li><li>1: yes</li>
         /// </summary>
         [JsonProperty("SupportHA")]
         public ulong? SupportHA{ get; set; }
 
         /// <summary>
-        /// List of deployed components. Different required components need to be selected for different EMR product IDs (ProductId: For specific meanings, see the ProductId field in the input parameters): <li>When ProductId is 2 (EMR v2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 16 (EMR v2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li> <li>When ProductId is 20 (EMR v2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 30 (EMR v2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 38 (EMR v2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 57 (EMR v2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 7 (EMR v3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li> <li>When ProductId is 25 (EMR v3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 31 (EMR v3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 28 (EMR v3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li> <li>When ProductId is 33 (EMR v3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 34 (EMR v3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li> <li>When ProductId is 37 (EMR v3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 44 (EMR v3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 53 (EMR v3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li> <li>When ProductId is 58 (EMR v3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li> <li>When ProductId is 47 (EMR v4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li>
+        /// <p>List of deployed components. For different EMR product IDs, different required component lists need to be set (ProductId: For details about its meaning, see the ProductId parameter). Valid values: <li>When ProductId is set to 2 (EMR-V2.0.1), the required components include hdfs-2.7.3, yarn-2.7.3, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 16 (EMR-V2.3.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.5.5, and knox-1.2.0.</li><li>When ProductId is set to 20 (EMR-V2.5.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 30 (EMR-V2.6.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 38 (EMR-V2.7.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 57 (EMR-V2.8.0), the required components include hdfs-2.8.5, yarn-2.8.5, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 7 (EMR-V3.0.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.4.9, and knox-1.2.0.</li><li>When ProductId is set to 25 (EMR-V3.1.0), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 31 (EMR-V3.1.1), the required components include hdfs-3.1.2, yarn-3.1.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 28 (EMR-V3.2.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, and knox-1.2.0.</li><li>When ProductId is set to 33 (EMR-V3.2.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 34 (EMR-V3.3.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.1, openldap-2.4.44, and knox-1.2.0.</li><li>When ProductId is set to 37 (EMR-V3.4.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 44 (EMR-V3.5.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 53 (EMR-V3.6.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li><li>When ProductId is set to 58 (EMR-V3.6.1), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.46, and knox-1.6.1.</li><li>When ProductId is set to 47 (EMR-V4.0.0), the required components include hdfs-3.2.2, yarn-3.2.2, zookeeper-3.6.3, openldap-2.4.44, and knox-1.6.1.</li></p>
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// Node specification queried for price.
+        /// <p>Node specifications for price inquiry.</p>
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+        /// <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// Hive-shared metadatabase type. Valid values:
-        /// <li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-        /// <li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-        /// <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+        /// <p>Hive shared metadata database type. Valid values:</p><li>EMR_NEW_META: created by the cluster by default</li><li>EMR_EXIT_METE: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
         /// </summary>
         [JsonProperty("MetaType")]
         public string MetaType{ get; set; }
 
         /// <summary>
-        /// EMR-MetaDB instance
+        /// <p>EMR-MetaDB instance.</p>
         /// </summary>
         [JsonProperty("UnifyMetaInstanceId")]
         public string UnifyMetaInstanceId{ get; set; }
 
         /// <summary>
-        /// Custom MetaDB instance information
+        /// <p>Custom MetaDB information.</p>
         /// </summary>
         [JsonProperty("MetaDBInfo")]
         public CustomMetaInfo MetaDBInfo{ get; set; }
 
         /// <summary>
-        /// Product ID. Different product IDs represent different EMR product versions. Valid values: <li>2: EMR v2.0.1;</li> <li>16: EMR v2.3.0;</li> <li>20: EMR v2.5.0;</li> <li>30: EMR v2.6.0;</li> <li>38: EMR v2.7.0;</li> <li>57: EMR v2.8.0;</li> <li>7: EMR v3.0.0;</li> <li>25: EMR v3.1.0;</li> <li>31: EMR v3.1.1;</li> <li>28: EMR v3.2.0</li> <li>33: EMR v3.2.1</li> <li>34: EMR v3.3.0</li> <li>37: EMR v3.4.0;</li> <li>44: EMR v3.5.0;</li> <li>53: EMR v3.6.0;</li> <li>58: EMR v3.6.1;</li> <li>47: EMR v4.0.0.</li>
+        /// <p>Product ID. Different product IDs indicate different EMR product versions. Valid values: <li>2: EMR-V2.0.1</li><li>16: EMR-V2.3.0</li><li>20: EMR-V2.5.0</li><li>30: EMR-V2.6.0</li><li>38: EMR-V2.7.0</li><li>57: EMR-V2.8.0</li><li>7: EMR-V3.0.0</li><li>25: EMR-V3.1.0</li><li>31: EMR-V3.1.1</li><li>28: EMR-V3.2.0</li><li>33: EMR-V3.2.1</li><li>34: EMR-V3.3.0</li><li>37: EMR-V3.4.0</li><li>44: EMR-V3.5.0</li><li>53: EMR-V3.6.0</li><li>58: EMR-V3.6.1</li><li>47: EMR-V4.0.0</li></p>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// Scenario values: Hadoop-Kudu, Hadoop-ZooKeeper, Hadoop-Presto, and Hadoop-HBase.
+        /// <p>Scenario-based values: Hadoop-Kudu, Hadoop-Zookeeper, Hadoop-Presto, and Hadoop-Hbase.</p>
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
-        /// Shared component information
+        /// <p>Shared component information.</p>
         /// </summary>
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
         /// <summary>
-        /// The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+        /// <p>Default value: 0. It is changed to 1 after the cross-AZ feature is supported.</p>
         /// </summary>
         [JsonProperty("VersionID")]
         public ulong? VersionID{ get; set; }
 
         /// <summary>
-        /// AZ specs
+        /// <p>Specification information of the AZ.</p>
         /// </summary>
         [JsonProperty("MultiZoneSettings")]
         public MultiZoneSetting[] MultiZoneSettings{ get; set; }
+
+        /// <summary>
+        /// <p>Database version.</p>
+        /// </summary>
+        [JsonProperty("DefaultMetaVersion")]
+        public string DefaultMetaVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+        /// </summary>
+        [JsonProperty("NeedCdbAudit")]
+        public long? NeedCdbAudit{ get; set; }
+
+        /// <summary>
+        /// <p>Custom database data.</p>
+        /// </summary>
+        [JsonProperty("MetaDBGroupInfo")]
+        public CustomMetaDBInfo[] MetaDBGroupInfo{ get; set; }
 
 
         /// <summary>
@@ -158,6 +167,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
             this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
             this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+            this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+            this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+            this.SetParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
         }
     }
 }

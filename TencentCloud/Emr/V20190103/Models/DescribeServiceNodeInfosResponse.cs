@@ -32,7 +32,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Process information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceNodeList")]
         public ServiceNodeDetailInfo[] ServiceNodeList{ get; set; }
@@ -44,9 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string AliasInfo{ get; set; }
 
         /// <summary>
-        /// Supported FlagNode list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of supported flag nodes.
         /// </summary>
         [JsonProperty("SupportNodeFlagFilterList")]
         public string[] SupportNodeFlagFilterList{ get; set; }

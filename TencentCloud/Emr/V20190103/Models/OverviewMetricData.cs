@@ -50,14 +50,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Sampling point data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("DataPoints")]
         public string[] DataPoints{ get; set; }
 
         /// <summary>
         /// Metric tags.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public MetricTags Tags{ get; set; }

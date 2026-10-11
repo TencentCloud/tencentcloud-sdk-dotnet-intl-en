@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Whether to enable the resource scheduling feature
+        /// Whether the resource scheduling feature is enabled.
         /// </summary>
         [JsonProperty("OpenSwitch")]
         public bool? OpenSwitch{ get; set; }
 
         /// <summary>
-        /// The resource scheduler in service
+        /// Resource scheduler in use.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Fair Scheduler information
+        /// Information of the fair scheduler.
         /// </summary>
         [JsonProperty("FSInfo")]
         public string FSInfo{ get; set; }
 
         /// <summary>
-        /// Capacity Scheduler information
+        /// Information of the capacity scheduler.
         /// </summary>
         [JsonProperty("CSInfo")]
         public string CSInfo{ get; set; }

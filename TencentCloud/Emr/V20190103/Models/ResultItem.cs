@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? Result{ get; set; }
 
         /// <summary>
-        /// Specify the reason for the failure in the case of creation failure.
+        /// If the creation fails, specify the reason for the failure.
         /// </summary>
         [JsonProperty("Reason")]
         public string Reason{ get; set; }

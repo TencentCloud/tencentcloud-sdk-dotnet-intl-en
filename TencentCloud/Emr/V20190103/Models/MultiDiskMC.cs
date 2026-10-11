@@ -32,18 +32,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Disk type.
-        /// 1: Local Disk.
-        /// 2: Cloud Disk.
-        /// 3: Local SSD.
-        /// 4: Cloud SSD.
-        /// 5: Premium Cloud Disk.
-        /// 6: Enhanced SSD.
-        /// 11: Throughput HDD.
-        /// 12: Tremendous SSD.
-        /// 13: Balanced SSD.
-        /// 14: Big Data Cloud Disk.
-        /// 15: High IO Cloud Disk.
-        /// 16: Remote SSD.
+        /// 1: Local Basic Disk
+        /// 2: Cloud Basic Disk
+        /// 3: Local SSD
+        /// 4: Cloud SSD
+        /// 5: Premium Disk
+        /// 6: Enhanced SSD
+        /// 11: Throughput-Optimized Cloud Disk
+        /// 12: Tremendous SSD
+        /// 13: Balanced SSD
+        /// 14: Big Data Cloud Disk
+        /// 15: High-IO Cloud Disk
+        /// 16: Remote SSD Disk
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

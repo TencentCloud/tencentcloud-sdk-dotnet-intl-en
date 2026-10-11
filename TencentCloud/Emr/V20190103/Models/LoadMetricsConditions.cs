@@ -25,15 +25,14 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Trigger rule condition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule trigger condition.
         /// </summary>
         [JsonProperty("LoadMetrics")]
         public LoadMetricsCondition[] LoadMetrics{ get; set; }
 
         /// <summary>
-        /// 0: all conditions should be met.
-        /// 1: any one of the conditions is met.
+        /// 0: All conditions are met.
+        /// 1: Any one of the conditions is met.
         /// </summary>
         [JsonProperty("Match")]
         public long? Match{ get; set; }

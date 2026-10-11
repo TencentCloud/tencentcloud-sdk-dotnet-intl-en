@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? CPUCost{ get; set; }
 
         /// <summary>
-        /// Default DB.
+        /// Default database.
         /// </summary>
         [JsonProperty("DefaultDB")]
         public string DefaultDB{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? MemCost{ get; set; }
 
         /// <summary>
-        /// CPU usage (ns) at the plan stage.
+        /// CPU consumption in the plan phase (ns).
         /// </summary>
         [JsonProperty("PlanCpuCosts")]
         public long? PlanCpuCosts{ get; set; }
 
         /// <summary>
-        /// Memory usage (bytes) at the plan stage.
+        /// Memory consumption in the plan phase (bytes).
         /// </summary>
         [JsonProperty("PlanMemCosts")]
         public long? PlanMemCosts{ get; set; }
@@ -138,6 +138,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("User")]
         public string User{ get; set; }
 
+        /// <summary>
+        /// Error code.
+        /// </summary>
+        [JsonProperty("ErrorCode")]
+        public string ErrorCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
             this.SetParamSimple(map, prefix + "ExecutionStatement", this.ExecutionStatement);
             this.SetParamSimple(map, prefix + "User", this.User);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         }
     }
 }

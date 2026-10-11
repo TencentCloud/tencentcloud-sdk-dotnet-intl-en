@@ -37,13 +37,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Resized CPU.
+        /// Changed CPU.
         /// </summary>
         [JsonProperty("NewCpu")]
         public long? NewCpu{ get; set; }
 
         /// <summary>
-        /// Resized memory.
+        /// Changed memory.
         /// </summary>
         [JsonProperty("NewMem")]
         public long? NewMem{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Resized machine specifications.
+        /// Changed machine specifications.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Node ID List.
+        /// Node ID list.
         /// </summary>
         [JsonProperty("ResourceIdList")]
         public string[] ResourceIdList{ get; set; }

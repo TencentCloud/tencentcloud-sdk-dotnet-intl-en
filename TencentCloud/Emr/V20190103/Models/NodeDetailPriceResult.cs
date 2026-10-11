@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node type: Master, Core, Task, Common, Router, and MySQL.
+        /// Node type. Valid values: master, core, task, common, router, and mysql.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Price details by node part
+        /// Price details for each component of the node.
         /// </summary>
         [JsonProperty("PartDetailPrice")]
         public PartDetailPriceItem[] PartDetailPrice{ get; set; }

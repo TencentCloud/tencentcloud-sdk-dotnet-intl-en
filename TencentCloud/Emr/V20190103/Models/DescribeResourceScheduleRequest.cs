@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// EMR cluster ID
+        /// English ID of the EMR cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

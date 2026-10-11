@@ -31,13 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Inspection type, FixedTime or RealTime.
+        /// Inspection type. Valid values: FixedTime and RealTime.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Task configurations.
+        /// Task configuration.
         /// </summary>
         [JsonProperty("Settings")]
         public InspectionTaskSettings[] Settings{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string DayOfWeek{ get; set; }
 
         /// <summary>
-        /// Number of the day in a month.
+        /// Day of the month.
         /// </summary>
         [JsonProperty("DayOfMonth")]
         public string DayOfMonth{ get; set; }

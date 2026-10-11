@@ -38,14 +38,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Types array.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Types")]
         public NodeSpecType[] Types{ get; set; }
 
         /// <summary>
-        /// Cloud Managed Node (M Node) model specifications list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of cloud-hosted node instance specifications.
         /// </summary>
         [JsonProperty("CmnTypes")]
         public NodeSpecType[] CmnTypes{ get; set; }

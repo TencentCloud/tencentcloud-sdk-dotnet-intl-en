@@ -25,48 +25,58 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Configuration ID.
+        /// <p>Configuration ID.</p>
         /// </summary>
         [JsonProperty("ResourceConfigId")]
         public ulong? ResourceConfigId{ get; set; }
 
         /// <summary>
-        /// Resource
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Resource</p>
         /// </summary>
         [JsonProperty("Resource")]
         public Resource Resource{ get; set; }
 
         /// <summary>
-        /// Creation time.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time.
+        /// <p>Update time.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Whether default configuration applies, DEFAULT or BACKUP.
+        /// <p>Whether the default configuration applies. Valid values: DEFAULT and BACKUP.</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }
 
         /// <summary>
-        /// Remaining of this type.
+        /// <p>Remaining of this type.</p>
         /// </summary>
         [JsonProperty("MaxResourceNum")]
         public ulong? MaxResourceNum{ get; set; }
 
         /// <summary>
-        /// Supported committed use duration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Supported committed use duration.</p>
         /// </summary>
         [JsonProperty("PrepaidUnderwritePeriods")]
         public long?[] PrepaidUnderwritePeriods{ get; set; }
+
+        /// <summary>
+        /// <p>Number of quotas.</p>
+        /// </summary>
+        [JsonProperty("QuotaNum")]
+        public long? QuotaNum{ get; set; }
+
+        /// <summary>
+        /// <p>Quota unit.</p>
+        /// </summary>
+        [JsonProperty("QuotaUnit")]
+        public string QuotaUnit{ get; set; }
 
 
         /// <summary>
@@ -81,6 +91,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "MaxResourceNum", this.MaxResourceNum);
             this.SetParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
+            this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+            this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
         }
     }
 }

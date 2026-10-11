@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Description key-value pair filter, which is used for conditional filtering queries.
+        /// Description key-value pair filter, which is used for conditional filter queries.
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Order OrderFields{ get; set; }
 
         /// <summary>
-        /// Number of returns.
+        /// Number of returned items.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

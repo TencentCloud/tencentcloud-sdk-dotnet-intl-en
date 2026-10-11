@@ -25,25 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// User information list.
+        /// <p>Cluster string ID.</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// <p>User information list.</p>
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// User primary group. The CVM cluster is a required parameter, while the TKE cluster is optional.
+        /// <p>Primary user group. This parameter is required for CVM clusters and optional for TKE clusters.</p>
         /// </summary>
         [JsonProperty("UserGroup")]
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// User subgroup.
+        /// <p>Secondary user group.</p>
         /// </summary>
         [JsonProperty("Groups")]
         public string[] Groups{ get; set; }
 
         /// <summary>
-        /// Remarks.
+        /// <p>Remarks.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
@@ -54,6 +60,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "Users.", this.Users);
             this.SetParamSimple(map, prefix + "UserGroup", this.UserGroup);
             this.SetParamArraySimple(map, prefix + "Groups.", this.Groups);

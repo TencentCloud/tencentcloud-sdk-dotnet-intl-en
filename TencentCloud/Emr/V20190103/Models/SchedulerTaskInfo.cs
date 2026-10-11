@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Scheduler type
+        /// Scheduler type.
         /// </summary>
         [JsonProperty("SchedulerName")]
         public string SchedulerName{ get; set; }
 
         /// <summary>
-        /// Operation type
+        /// Operation type.
         /// </summary>
         [JsonProperty("OperatorName")]
         public string OperatorName{ get; set; }
@@ -56,7 +56,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Details.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Details")]
         public SchedulerTaskDetail[] Details{ get; set; }

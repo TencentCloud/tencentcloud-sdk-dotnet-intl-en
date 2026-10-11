@@ -37,69 +37,73 @@ namespace TencentCloud.Emr.V20190103.Models
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// Cooling time for a rule to take effect.
+        /// Cooldown time for a rule to take effect.
         /// </summary>
         [JsonProperty("CalmDownTime")]
         public long? CalmDownTime{ get; set; }
 
         /// <summary>
-        /// Scaling action. 1: scale-out, 2: scale-in.
+        /// Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
         /// </summary>
         [JsonProperty("ScaleAction")]
         public long? ScaleAction{ get; set; }
 
         /// <summary>
-        /// Scaling amount each time the rule takes effect.
+        /// Number of scaling items each time the rule takes effect.
         /// </summary>
         [JsonProperty("ScaleNum")]
         public long? ScaleNum{ get; set; }
 
         /// <summary>
-        /// Metric processing method. 1: MAX, 2: MIN, 3: AVG.
+        /// Metric processing method. Valid values: 1 (MAX), 2 (MIN), and 3 (AVG).
         /// </summary>
         [JsonProperty("ProcessMethod")]
         public long? ProcessMethod{ get; set; }
 
         /// <summary>
-        /// Rule priority, which is not applicable during adding. The default is auto-increment.
+        /// Rule priority, which is invalid during addition. By default, the auto-increment rule is used.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Rule status. 1: enabled, 3: disabled.
+        /// Rule status. Valid values: 1 (enabled) and 3 (disabled).
         /// </summary>
         [JsonProperty("StrategyStatus")]
         public long? StrategyStatus{ get; set; }
 
         /// <summary>
-        /// Specified Yarn Node Label for rule scale-out.
+        /// YARN node label specified for the rule-based scale-out.
         /// </summary>
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
         /// <summary>
-        /// Effective time of the rule
+        /// Effective time of the rule.
         /// </summary>
         [JsonProperty("PeriodValid")]
         public string PeriodValid{ get; set; }
 
         /// <summary>
-        /// Graceful scale-in switch
+        /// Graceful scale-in switch.
         /// </summary>
         [JsonProperty("GraceDownFlag")]
         public bool? GraceDownFlag{ get; set; }
 
         /// <summary>
-        /// Graceful scale-in wait time
+        /// Graceful scale-in wait time.
         /// </summary>
         [JsonProperty("GraceDownTime")]
         public long? GraceDownTime{ get; set; }
 
         /// <summary>
-        /// Bound tag list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable task protection.
+        /// </summary>
+        [JsonProperty("GraceDownProtectFlag")]
+        public bool? GraceDownProtectFlag{ get; set; }
+
+        /// <summary>
+        /// Bound tag list.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -111,45 +115,41 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ConfigGroupAssigned{ get; set; }
 
         /// <summary>
-        /// Calculation method of scale-out resources:"DEFAULT","INSTANCE", "CPU", "MEMORYGB".
-        /// "DEFAULT" indicates the default method, which is the same as "INSTANCE".
-        /// "INSTANCE" indicates calculation based on nodes (default mode).
-        /// "CPU" indicates calculation based on the quantity of cores of the machine.
-        /// "MEMORYGB" indicates calculation based on the memory size of the machine.
+        /// Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+        /// "DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+        /// "INSTANCE" indicates the calculation method based on nodes. This is the default method.
+        /// "CPU" indicates the calculation method based on the number of cores of the machine.
+        /// "MEMORYGB" indicates the calculation method based on the memory size of the machine.
         /// </summary>
         [JsonProperty("MeasureMethod")]
         public string MeasureMethod{ get; set; }
 
         /// <summary>
-        /// Node deployment service list, such as ["HDFS-3.1.2","YARN-3.1.2"].
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of node deployment services, for example, ["HDFS-3.1.2","YARN-3.1.2"].
         /// </summary>
         [JsonProperty("SoftDeployDesc")]
         public string[] SoftDeployDesc{ get; set; }
 
         /// <summary>
-        /// Startup process list, such as ["NodeManager"].
+        /// Startup process list, for example, ["NodeManager"].
         /// </summary>
         [JsonProperty("ServiceNodeDesc")]
         public string ServiceNodeDesc{ get; set; }
 
         /// <summary>
         /// Startup process list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public long?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
-        /// Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public long?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// Multi-metric trigger condition.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Multi-metric triggering condition.
         /// </summary>
         [JsonProperty("LoadMetricsConditions")]
         public LoadMetricsConditions LoadMetricsConditions{ get; set; }
@@ -161,10 +161,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Soft (for example, YARN).
+        /// Soft. Example value: yarn.
         /// </summary>
         [JsonProperty("Soft")]
         public string Soft{ get; set; }
+
+        /// <summary>
+        /// Task protection time.
+        /// </summary>
+        [JsonProperty("GraceDownProtectTime")]
+        public long? GraceDownProtectTime{ get; set; }
 
 
         /// <summary>
@@ -184,6 +190,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PeriodValid", this.PeriodValid);
             this.SetParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
             this.SetParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+            this.SetParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
             this.SetParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
@@ -194,6 +201,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Soft", this.Soft);
+            this.SetParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
         }
     }
 }

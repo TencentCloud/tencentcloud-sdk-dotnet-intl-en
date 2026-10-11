@@ -25,26 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Model series.
+        /// Instance type series.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Model series name.
+        /// Instance type series name.
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// Order.
+        /// Sorting order.
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
-        /// InstanceFamily array.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Array of instance families.
         /// </summary>
         [JsonProperty("InstanceFamilies")]
         public NodeSpecFamily[] InstanceFamilies{ get; set; }

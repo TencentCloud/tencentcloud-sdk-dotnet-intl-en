@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The shared component name.
+        /// Shared component name.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// The cluster to which the shared component belongs.
+        /// Shared component cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

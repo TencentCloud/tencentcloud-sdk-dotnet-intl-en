@@ -31,32 +31,33 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Count{ get; set; }
 
         /// <summary>
-        /// Valid values of the system disk type:
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
-        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-        /// <li>CLOUD_BASIC: Cloud Disk.</li>
-        /// <li>LOCAL_BASIC: Local Disk.</li>
-        /// <li>LOCAL_SSD: Local SSD.</li>
+        /// System disk type. Valid values:
+        /// <li>CLOUD_SSD: Cloud SSD</li>
+        /// <li>CLOUD_PREMIUM: Premium Disk</li>
+        /// <li>CLOUD_BASIC: Cloud Basic Disk</li>
+        /// <li>LOCAL_BASIC: Local Basic Disk</li>
+        /// <li>LOCAL_SSD: Local SSD</li>
         /// 
-        /// Valid values of the data disk type.
-        /// <li>CLOUD_SSD: Cloud SSD.</li>
-        /// <li>CLOUD_PREMIUM: Premium Cloud Disk.</li>
-        /// <li>CLOUD_BASIC: Cloud Disk.</li>
-        /// <li>LOCAL_BASIC: Local Disk.</li>
-        /// <li>LOCAL_SSD: Local SSD.</li>
-        /// <li>CLOUD_HSSD: Enhanced SSD.</li>
-        /// <li>CLOUD_THROUGHPUT: Throughput HDD.</li>
-        /// <li>CLOUD_TSSD: Tremendous SSD.</li>
-        /// <li>CLOUD_BIGDATA: Big Data Cloud Disk.</li>
-        /// <li>CLOUD_HIGHIO: High IO Cloud Disk.</li>
-        /// <li>CLOUD_BSSD: Balanced SSD.</li>
-        /// <li>REMOTE_SSD: Remote SSD.</li>
+        /// Data disk type. Valid values:
+        /// <li>CLOUD_SSD: Cloud SSD</li>
+        /// <li>CLOUD_PREMIUM: Premium Disk</li>
+        /// <li>CLOUD_BASIC: Cloud Basic Disk</li>
+        /// <li>LOCAL_BASIC: Local Basic Disk</li>
+        /// <li>LOCAL_SSD: Local SSD</li>
+        /// 
+        /// <li>CLOUD_HSSD: Enhanced SSD</li>
+        /// <li>CLOUD_THROUGHPUT: Throughput-Optimized Cloud Disk</li>
+        /// <li>CLOUD_TSSD: Tremendous SSD</li>
+        /// <li>CLOUD_BIGDATA: Big Data Cloud Disk</li>
+        /// <li>CLOUD_HIGHIO: High-IO Cloud Disk</li>
+        /// <li>CLOUD_BSSD: Balanced SSD</li>
+        /// <li>REMOTE_SSD: Remote SSD Disk</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Data capacity in GB.
+        /// Data capacity (GB).
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }

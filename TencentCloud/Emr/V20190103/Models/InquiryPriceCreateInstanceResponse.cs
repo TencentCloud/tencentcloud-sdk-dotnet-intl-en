@@ -25,33 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Original price.
+        /// <p>Original price (CNY).</p>
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// <p>Discounted price (CNY).</p>
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }
 
         /// <summary>
-        /// Time unit of purchase instances. Valid values.
-        /// <li>s: seconds.</li>
+        /// <p>Time unit for purchasing instances. Valid values:</p><li>s: second</li><li>m: Month</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Instance purchase duration.
+        /// <p>Instance purchase duration.</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// The price list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Price list.</p>
         /// </summary>
         [JsonProperty("PriceList")]
         public ZoneDetailPriceResult[] PriceList{ get; set; }

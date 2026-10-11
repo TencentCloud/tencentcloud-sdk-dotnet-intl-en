@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node type: master, core, task, router.
+        /// Node type. Valid values: master, core, task, and router.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Node tag information: currently used only in the Terraform. It serves as an input parameter to differentiate information of nodes with the same type.
+        /// Node tag information: currently only used for the Terraform platform. It serves as an input parameter to differentiate information of nodes of the same type.
         /// </summary>
         [JsonProperty("NodeNames")]
         public string[] NodeNames{ get; set; }
 
         /// <summary>
-        /// Availability zone name.
+        /// AZ name.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

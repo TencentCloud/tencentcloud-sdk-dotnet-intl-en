@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// Total number of instances that meet the criteria.
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// Cluster instance list.
+        /// Cluster list.
         /// </summary>
         [JsonProperty("InstancesList")]
         public EmrListInstance[] InstancesList{ get; set; }

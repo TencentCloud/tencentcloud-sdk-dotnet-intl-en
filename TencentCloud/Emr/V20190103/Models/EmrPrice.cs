@@ -43,8 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Unit{ get; set; }
 
         /// <summary>
-        /// The queried spec.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price inquiry configuration.
         /// </summary>
         [JsonProperty("PriceSpec")]
         public PriceResource PriceSpec{ get; set; }

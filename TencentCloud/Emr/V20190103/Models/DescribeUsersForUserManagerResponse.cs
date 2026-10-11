@@ -25,14 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Total number
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// User information list
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// User information list.
         /// </summary>
         [JsonProperty("UserManagerUserList")]
         public UserManagerUserBriefInfo[] UserManagerUserList{ get; set; }

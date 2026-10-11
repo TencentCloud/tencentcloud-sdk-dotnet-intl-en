@@ -38,14 +38,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Information of the fair scheduler.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CapacityGlobalConfig")]
         public CapacityGlobalConfig CapacityGlobalConfig{ get; set; }
 
         /// <summary>
         /// Information of the capacity scheduler.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FairGlobalConfig")]
         public FairGlobalConfig FairGlobalConfig{ get; set; }

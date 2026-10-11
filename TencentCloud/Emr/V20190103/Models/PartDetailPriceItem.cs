@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Types, including node: node (denoting node), rootDisk (denoting system disk), dataDisk (denoting cloud data disk), and metaDB.
+        /// Type. Valid values: node (node), rootDisk (system disk), dataDisk (cloud data disk), and metaDB.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

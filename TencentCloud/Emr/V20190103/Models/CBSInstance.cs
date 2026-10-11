@@ -61,7 +61,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? DeleteWithInstance{ get; set; }
 
         /// <summary>
-        /// Cloud disk billing type.
+        /// Cloud disk billing mode.
         /// </summary>
         [JsonProperty("DiskChargeType")]
         public string DiskChargeType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string DeadlineTime{ get; set; }
 
         /// <summary>
-        /// Whether the cloud disk is mounted on the cloud host.
+        /// Whether the cloud disk is mounted on the CVM.
         /// </summary>
         [JsonProperty("Attached")]
         public bool? Attached{ get; set; }
@@ -97,14 +97,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? DifferDaysOfDeadline{ get; set; }
 
         /// <summary>
-        /// InstanceId of the CVM instance to which this cloud disk is currently mounted.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the CVM instance to which this cloud disk is currently mounted.
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// ID of the cloud host to which the Cloud disk is mounted.
+        /// ID of the CVM to which the cloud disk is mounted.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -126,6 +125,18 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("UnderwriteExpiredTime")]
         public string UnderwriteExpiredTime{ get; set; }
+
+        /// <summary>
+        /// Tag.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// Cloud disk additional performance value. Unit: MB/s.
+        /// </summary>
+        [JsonProperty("ThroughputPerformance")]
+        public long? ThroughputPerformance{ get; set; }
 
 
         /// <summary>
@@ -150,6 +161,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "EmrResourceId", this.EmrResourceId);
             this.SetParamSimple(map, prefix + "UnderwriteExpiredTime", this.UnderwriteExpiredTime);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         }
     }
 }

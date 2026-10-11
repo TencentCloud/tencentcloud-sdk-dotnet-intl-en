@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Software information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SoftInfo")]
         public string[] SoftInfo{ get; set; }
@@ -56,39 +55,31 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ComNodeSize{ get; set; }
 
         /// <summary>
-        /// Primary node resources
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Master node resources.
         /// </summary>
         [JsonProperty("MasterResource")]
         public ResourceDetail MasterResource{ get; set; }
 
         /// <summary>
-        /// Core node resources
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Core node resources.
         /// </summary>
         [JsonProperty("CoreResource")]
         public ResourceDetail CoreResource{ get; set; }
 
         /// <summary>
-        /// Task node resources
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task node resources.
         /// </summary>
         [JsonProperty("TaskResource")]
         public ResourceDetail TaskResource{ get; set; }
 
         /// <summary>
-        /// Common node resources
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Common node resources.
         /// </summary>
         [JsonProperty("ComResource")]
         public ResourceDetail ComResource{ get; set; }
 
         /// <summary>
-        /// Whether to use COS.
+        /// Whether COS is used.
         /// </summary>
         [JsonProperty("OnCos")]
         public bool? OnCos{ get; set; }
@@ -124,7 +115,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Whether to enable CBS encryption.
+        /// Whether CBS encryption is enabled.
         /// </summary>
         [JsonProperty("CbsEncrypt")]
         public long? CbsEncrypt{ get; set; }
@@ -137,7 +128,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Security group.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }

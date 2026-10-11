@@ -25,64 +25,55 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifications.
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Specification name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifications name.
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// Disk type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk type.
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }
 
         /// <summary>
-        /// Disk type
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk type.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// System disk size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// System disk size.
         /// </summary>
         [JsonProperty("RootSize")]
         public long? RootSize{ get; set; }
 
         /// <summary>
-        /// Memory size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Memory size.
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of CPUs
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Disk size
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Hard disk size.
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Specification
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Specifications.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

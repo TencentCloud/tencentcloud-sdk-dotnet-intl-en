@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Billing type (1: monthly subscription, 3: committed use).
+        /// Billing mode. Valid values: 1 (monthly subscription) and 3 (committed use).
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Node private network IP.
+        /// Node private network IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discount price.
+        /// Discounted price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }
 
         /// <summary>
-        /// Node component renewal pricing list.
+        /// Node sub-item renewal inquiry details list.
         /// </summary>
         [JsonProperty("RenewPriceDetails")]
         public RenewPriceDetail[] RenewPriceDetails{ get; set; }

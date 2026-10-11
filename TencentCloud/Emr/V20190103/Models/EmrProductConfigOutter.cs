@@ -25,134 +25,115 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Software information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Software information.
         /// </summary>
         [JsonProperty("SoftInfo")]
         public string[] SoftInfo{ get; set; }
 
         /// <summary>
-        /// Number of master nodes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of Master nodes.
         /// </summary>
         [JsonProperty("MasterNodeSize")]
         public long? MasterNodeSize{ get; set; }
 
         /// <summary>
-        /// Number of core nodes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of Core nodes.
         /// </summary>
         [JsonProperty("CoreNodeSize")]
         public long? CoreNodeSize{ get; set; }
 
         /// <summary>
-        /// Number of task nodes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of Task nodes.
         /// </summary>
         [JsonProperty("TaskNodeSize")]
         public long? TaskNodeSize{ get; set; }
 
         /// <summary>
-        /// Number of common nodes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of Common nodes.
         /// </summary>
         [JsonProperty("ComNodeSize")]
         public long? ComNodeSize{ get; set; }
 
         /// <summary>
-        /// Master node resource
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Master node resources.
         /// </summary>
         [JsonProperty("MasterResource")]
         public OutterResource MasterResource{ get; set; }
 
         /// <summary>
-        /// Core node resource
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Core node resources.
         /// </summary>
         [JsonProperty("CoreResource")]
         public OutterResource CoreResource{ get; set; }
 
         /// <summary>
-        /// Task node resource
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Task node resources.
         /// </summary>
         [JsonProperty("TaskResource")]
         public OutterResource TaskResource{ get; set; }
 
         /// <summary>
-        /// Common node resource
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Common node resources.
         /// </summary>
         [JsonProperty("ComResource")]
         public OutterResource ComResource{ get; set; }
 
         /// <summary>
-        /// Whether COS is used
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether COS is used.
         /// </summary>
         [JsonProperty("OnCos")]
         public bool? OnCos{ get; set; }
 
         /// <summary>
-        /// Billing mode
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Charge type.
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// Number of router nodes
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Number of Router nodes.
         /// </summary>
         [JsonProperty("RouterNodeSize")]
         public long? RouterNodeSize{ get; set; }
 
         /// <summary>
-        /// Whether HA is supported
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether HA is supported.
         /// </summary>
         [JsonProperty("SupportHA")]
         public bool? SupportHA{ get; set; }
 
         /// <summary>
-        /// Whether secure mode is supported
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether security mode is supported.
         /// </summary>
         [JsonProperty("SecurityOn")]
         public bool? SecurityOn{ get; set; }
 
         /// <summary>
         /// Initial security group ID of the cluster.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string SecurityGroup{ get; set; }
 
         /// <summary>
-        /// Whether to enable CBS encryption
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether CBS encryption is enabled.
         /// </summary>
         [JsonProperty("CbsEncrypt")]
         public long? CbsEncrypt{ get; set; }
 
         /// <summary>
-        /// Custom application role
-        /// Note: this field may return `null`, indicating that no valid value can be obtained.
+        /// Custom application role.
         /// </summary>
         [JsonProperty("ApplicationRole")]
         public string ApplicationRole{ get; set; }
 
         /// <summary>
         /// Security group ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
         /// <summary>
-        /// SSH key ID
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// SSH key ID.
         /// </summary>
         [JsonProperty("PublicKeyId")]
         public string PublicKeyId{ get; set; }

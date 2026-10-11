@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Valid values of node type:
+        /// Valid values for the scale-out node type:
         ///   <li>MASTER</li>
         ///   <li>TASK</li>
         ///   <li>CORE</li>
@@ -35,7 +35,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeFlag{ get; set; }
 
         /// <summary>
-        /// The number of nodes.
+        /// Number of scale-out nodes.
         /// </summary>
         [JsonProperty("NodeCount")]
         public ulong? NodeCount{ get; set; }

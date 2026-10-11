@@ -37,77 +37,75 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Page size.
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Searching fields.
+        /// Searching field.
         /// </summary>
         [JsonProperty("SearchText")]
         public string SearchText{ get; set; }
 
         /// <summary>
-        /// Configuration status. -2: configuration failed; -1: configuration expired; 1: synchronized; -99: all.
+        /// 'Configuration status. Valid values: -2 (configuration failed), -1 (configuration expired), 1 (synchronized)', and -99 '(all)'.
         /// </summary>
         [JsonProperty("ConfStatus")]
         public long? ConfStatus{ get; set; }
 
         /// <summary>
-        /// Filter criteria: Maintenance status
-        /// 
-        /// 0 indicates all statuses.
-        /// 1 indicates normal.
-        /// 2 indicates the maintenance status.
+        /// Filter criterion, which specifies the maintenance status. Valid values:
+        /// 0: all statuses
+        /// 1: normal mode
+        /// 2: maintenance mode
         /// </summary>
         [JsonProperty("MaintainStateId")]
         public long? MaintainStateId{ get; set; }
 
         /// <summary>
-        /// Filter criteria: Operation status
-        /// 
-        /// 0 indicates all statuses.
-        /// 1 indicates started.
-        /// 2 indicates stopped.
+        /// Filter criterion, which specifies the operation status. Valid values:
+        /// 0: all statuses
+        /// 1: started
+        /// 2: stopped.
         /// </summary>
         [JsonProperty("OperatorStateId")]
         public long? OperatorStateId{ get; set; }
 
         /// <summary>
-        /// Filter criteria: health status.
-        /// 0 indicates unavailable.
-        /// 1 indicates good.
-        /// -2 indicates unknown.
-        /// -99 indicates all.
-        /// -3 indicates potential risks.
-        /// -4 indicates undetected.
+        /// Filter criterion, which specifies the health status. Valid values:
+        /// "0": unavailable
+        /// "1": good
+        /// -2: unknown
+        /// -99: all statuses
+        /// -3: potential risk
+        /// -4: undetected
         /// </summary>
         [JsonProperty("HealthStateId")]
         public string HealthStateId{ get; set; }
 
         /// <summary>
-        /// Service component names (in all caps, for example, YARN).
+        /// Service component name, which must be specified by using uppercase letters (for example, YARN). Select either the service component name or ServiceGroupType in an API call and ensure that the selected item is required.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// Node names: master, core, task, common, and router.
+        /// Node name. Valid values: master, core, task, common, and router.
         /// </summary>
         [JsonProperty("NodeTypeName")]
         public string NodeTypeName{ get; set; }
 
         /// <summary>
-        /// Filter criteria: whether DN is in the maintenance status.
-        /// 0 indicates all statuses.
-        /// 1 indicates the maintenance status.
+        /// Filter criterion, which specifies whether the data node is in maintenance. Valid values:
+        /// 0: all statuses
+        /// 1: maintenance status
         /// </summary>
         [JsonProperty("DataNodeMaintenanceId")]
         public long? DataNodeMaintenanceId{ get; set; }
 
         /// <summary>
-        /// Searchable fields (currently supported SearchType: ipv4).
+        /// Searchable fields (Currently, SearchType: ipv4 is supported).
         /// </summary>
         [JsonProperty("SearchFields")]
         public SearchItem[] SearchFields{ get; set; }

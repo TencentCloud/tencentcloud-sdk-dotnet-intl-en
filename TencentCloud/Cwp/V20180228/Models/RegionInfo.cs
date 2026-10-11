@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Chinese name of a region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
+        /// Chinese name of region, such as South China (Guangzhou), East China (Shanghai Finance), and North China (Beijing)
         /// </summary>
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? RegionId{ get; set; }
 
         /// <summary>
-        /// Region code, such as gz, sh, and bj
+        /// Region code, such as gz, sh, and bj
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID of the EMR cluster instance.
+        /// ID of the EMR cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InnerSearch{ get; set; }
 
         /// <summary>
-        /// Number of items returned per page. The default value is 100, and the maximum value is 100.
+        /// Number of items returned per page. Default value: 100. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -59,6 +59,13 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Scenario value. Valid values:
+        /// ModifyDiskExtraPerformance: adjusts the additional performance of the data disk.
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string Scene{ get; set; }
 
 
         /// <summary>
@@ -72,6 +79,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InnerSearch", this.InnerSearch);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Scene", this.Scene);
         }
     }
 }

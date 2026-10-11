@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Scaling group information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupGlobalConf")]
         public AutoScaleResourceConf GroupGlobalConf{ get; set; }

@@ -25,14 +25,14 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The list of deployed components. The list of component options varies by `ProductVersion` (EMR version). For more information, see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-        /// The instance type, `hive` or `flink`.
+        /// List of deployed components. Different EMR product versions (ProductVersion) have different optional component lists. For details about how to query the optional component lists for different product versions, see [Component Version](https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1).
+        /// Example values: hive and flink.
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// The scenario name, which defaults to `Hadoop-Default`. For more details, see [here](https://intl.cloud.tencent.com/document/product/589/14624?from_cn_redirect=1). Valid values:
+        /// Default Hadoop-Default. For details about the scenario-based values, see [Scenario Query](https://www.tencentcloud.com/document/product/589/14624?from_cn_redirect=1):
         /// Hadoop-Kudu
         /// Hadoop-Zookeeper
         /// Hadoop-Presto

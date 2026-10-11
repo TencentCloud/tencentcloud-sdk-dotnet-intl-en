@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Order field.
+        /// Sorting field.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

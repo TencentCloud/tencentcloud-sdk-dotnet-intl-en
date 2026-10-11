@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The instance ID.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The list of resources to be terminated.
+        /// List of terminated resources.
         /// </summary>
         [JsonProperty("CvmInstanceIds")]
         public string[] CvmInstanceIds{ get; set; }
 
         /// <summary>
-        /// Valid values of node type:
+        /// Valid values of the node type to be terminated:
         ///   <li>MASTER</li>
         ///   <li>TASK</li>
         ///   <li>CORE</li>
@@ -47,15 +47,15 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeFlag{ get; set; }
 
         /// <summary>
-        /// The graceful scale-in feature. Valid values:
-        ///   <li>`true`: Enabled.</li>
-        ///   <li>`false`: Disabled.</li>
+        /// Graceful scale-in switch.
+        ///   <li>true: enable</li>
+        ///   <li>false: disable</li>
         /// </summary>
         [JsonProperty("GraceDownFlag")]
         public bool? GraceDownFlag{ get; set; }
 
         /// <summary>
-        /// The graceful scale-in wait time in seconds. Value range: 60–1800.
+        /// Graceful scale-in waiting time. Value range: 60–1800, in seconds.
         /// </summary>
         [JsonProperty("GraceDownTime")]
         public long? GraceDownTime{ get; set; }

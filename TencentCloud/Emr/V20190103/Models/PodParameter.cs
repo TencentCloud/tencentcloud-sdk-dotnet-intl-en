@@ -25,17 +25,17 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID of TKE or EKS cluster
+        /// TKE or EKS cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Custom permissions
+        /// Custom permission.
         /// Example:
         /// {
         ///   "apiVersion": "v1",
-        ///   "Clusters": [
+        ///   "clusters": [
         ///     {
         ///       "cluster": {
         ///         "certificate-authority-data": "xxxxxx==",
@@ -71,7 +71,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Config{ get; set; }
 
         /// <summary>
-        /// Custom parameters
+        /// Custom parameter.
         /// Example:
         /// {
         ///     "apiVersion": "apps/v1",

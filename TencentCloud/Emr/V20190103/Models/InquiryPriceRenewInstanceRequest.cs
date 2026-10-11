@@ -25,55 +25,57 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
+        /// Duration of instance renewal. It is used together with TimeUnit. 1 indicates renewal for one month.
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Instance billing mode.
+        /// Instance billing mode. Only the value 1 is supported, indicating yearly/monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
+        /// Resource ID list for nodes pending renewal. Resource ID format: emr-vm-xxxxxxxx. You can query valid resource IDs by logging in to the [console](https://console.cloud.tencent.com/emr).
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Unit of time for instance renewal.
+        /// Time unit for instance renewal. Valid values:
+        /// <li>m: indicates month.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Currency.
+        /// Currency type. Valid values:
+        /// <li>CNY: RMB</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// 
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+        /// Whether to convert from pay-as-you-go to yearly/monthly subscription. Valid values: 0 (no) and 1 (yes).
         /// </summary>
         [JsonProperty("ModifyPayMode")]
         public long? ModifyPayMode{ get; set; }
 
         /// <summary>
-        /// Whether the renewal price for every node is required.
+        /// Whether to return the renewal price for each node.
         /// </summary>
         [JsonProperty("NeedDetail")]
         public bool? NeedDetail{ get; set; }
 
         /// <summary>
-        /// Cluster ID. This parameter can be filled to get renewal information for all yearly/monthly subscription nodes in the cluster.
+        /// Cluster ID. Specify this parameter if you need renewal information for all yearly/monthly subscription nodes in the cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

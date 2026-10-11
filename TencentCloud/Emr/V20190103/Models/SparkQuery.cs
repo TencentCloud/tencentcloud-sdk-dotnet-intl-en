@@ -67,14 +67,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? ScanFileNum{ get; set; }
 
         /// <summary>
-        /// Total data volume scanned by query (bytes).
+        /// Total scanned and queried data volume (bytes).
         /// </summary>
         [JsonProperty("ScanTotalData")]
         public long? ScanTotalData{ get; set; }
 
         /// <summary>
         /// Application ID.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string[] ApplicationId{ get; set; }

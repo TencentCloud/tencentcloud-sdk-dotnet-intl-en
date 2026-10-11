@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Corresponds to <p>Program Upper Limit</p> of the page.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Program upper limit</p> on the corresponding page.
         /// </summary>
         [JsonProperty("UserMaxAppsDefault")]
         public long? UserMaxAppsDefault{ get; set; }

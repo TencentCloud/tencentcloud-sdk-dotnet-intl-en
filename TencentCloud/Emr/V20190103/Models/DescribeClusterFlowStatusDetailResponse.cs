@@ -25,16 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Task step details
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Task step details.
         /// </summary>
         [JsonProperty("StageDetails")]
         public StageInfoDetail[] StageDetails{ get; set; }
 
         /// <summary>
         /// Task parameters.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FlowDesc")]
         public FlowParamsDesc[] FlowDesc{ get; set; }
@@ -53,21 +50,20 @@ namespace TencentCloud.Emr.V20190103.Models
         public float? FlowTotalProgress{ get; set; }
 
         /// <summary>
-        /// Overall process status definition.
-        /// 0: initializing.
-        /// 1: running.
-        /// 2: completed.
-        /// 3: completed (with skipped steps).
-        /// -1: failed.
-        /// -3: blocked.
+        /// Overall flow status definition.
+        /// 0: initialized
+        /// 1: running
+        /// 2: completed
+        /// 3: completed (with skipped steps)
+        /// -1: failed
+        /// -3: blocked
         /// </summary>
         [JsonProperty("FlowTotalStatus")]
         public long? FlowTotalStatus{ get; set; }
 
         /// <summary>
-        /// Additional process information.
+        /// Additional flow information.
         /// This parameter is returned when NeedExtraDetail is true.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FlowExtraDetail")]
         public FlowExtraDetail[] FlowExtraDetail{ get; set; }

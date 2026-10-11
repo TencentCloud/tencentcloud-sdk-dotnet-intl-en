@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Custom parameter key
+        /// Custom parameter key.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Custom parameter value
+        /// Custom parameter value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

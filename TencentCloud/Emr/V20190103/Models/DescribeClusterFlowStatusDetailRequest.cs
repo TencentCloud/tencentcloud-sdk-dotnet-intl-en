@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// EMR instance ID
+        /// EMR instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,8 +37,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public FlowParam FlowParam{ get; set; }
 
         /// <summary>
-        /// Whether to return additional task information.
-        /// The default value is false.
+        /// Whether additional task information is returned.
+        /// Default value: false.
         /// </summary>
         [JsonProperty("NeedExtraDetail")]
         public bool? NeedExtraDetail{ get; set; }

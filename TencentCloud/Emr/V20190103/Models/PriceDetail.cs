@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The node ID
+        /// Node ID.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// The price formula
+        /// Price calculation formula.
         /// </summary>
         [JsonProperty("Formula")]
         public string Formula{ get; set; }
 
         /// <summary>
-        /// The original price
+        /// Original price.
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// The discount price
+        /// Discounted price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }

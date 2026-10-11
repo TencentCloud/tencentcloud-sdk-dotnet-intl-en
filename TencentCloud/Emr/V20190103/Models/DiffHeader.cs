@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Name
+        /// Name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// ID, which is used by the front end.
+        /// ID, which is used by the frontend.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

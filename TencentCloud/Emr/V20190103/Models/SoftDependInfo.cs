@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The component name.
+        /// Component name.
         /// </summary>
         [JsonProperty("SoftName")]
         public string SoftName{ get; set; }
 
         /// <summary>
-        /// Whether the component is required.
+        /// Whether it is required.
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }

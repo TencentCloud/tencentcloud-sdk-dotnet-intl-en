@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Tag type. Valid values: Cluster and Node
+        /// Tag type. Valid values: Cluster and Node.
         /// </summary>
         [JsonProperty("ModifyType")]
         public string ModifyType{ get; set; }
 
         /// <summary>
-        /// Tag information
+        /// Tag information.
         /// </summary>
         [JsonProperty("ModifyResourceTagsInfoList")]
         public ModifyResourceTags[] ModifyResourceTagsInfoList{ get; set; }

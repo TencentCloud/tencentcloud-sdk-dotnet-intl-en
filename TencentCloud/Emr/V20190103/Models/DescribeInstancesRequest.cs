@@ -26,50 +26,50 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Cluster filtering policy. Valid values:
-        /// <li>clusterList: queries the list of clusters except terminated ones.</li>
-        /// <li>monitorManage: queries the list of clusters except those that have been terminated, are being created, or failed to be created.</li>
-        /// <li>cloudHardwareManage/componentManage: reserved fields with the same meaning as `monitorManage`.</li>
+        /// <li>clusterList: Queries the list of clusters except for those that have been terminated.</li>
+        /// <li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
         /// </summary>
         [JsonProperty("DisplayStrategy")]
         public string DisplayStrategy{ get; set; }
 
         /// <summary>
-        /// Queries by one or more instance IDs in the format of `emr-xxxxxxxx`. For the format of this parameter, please see the `id.N` section in [API Overview](https://intl.cloud.tencent.com/document/api/213/15688). If no instance ID is entered, the list of all instances under this `APPID` will be returned.
+        /// Query by one or more instance IDs. The instance ID is in the format of emr-xxxxxxxx. (For the specific format of this parameter, see the section Ids.N in the API [Introduction](https://www.tencentcloud.com/document/api/213/15688?from_cn_redirect=1)). If the instance ID is not specified, the list of all the instances for the APPID is returned.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Page number. Default value: 0, indicating the first page.
+        /// 
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned results per page. Default value: 10. Maximum value: 100
+        /// Number of items returned per page. Default value: 100. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If this value is -1, the list of all instances will be returned.
+        /// It is recommended to set this parameter to -1, indicating all clusters under all projects are pulled.
+        /// If not specified, the default value is 0, indicating the clusters under the default project are pulled.
+        /// ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the return value of [DescribeProjects](https://www.tencentcloud.com/document/product/651/78725?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
         /// Sorting field. Valid values:
-        /// <li>clusterId: sorts by cluster ID.</li>
-        /// <li>addTime: sorts by instance creation time.</li>
-        /// <li>status: sorts by instance status code.</li>
+        /// <li>clusterId: sort by instance ID.</li>
+        /// <li>addTime: sort by instance creation time.</li>
+        /// <li>status: sort by instance status code.</li>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sorts according to `OrderField` in ascending or descending order. Valid values:
-        /// <li>0: descending order.</li>
-        /// <li>1: ascending order.</li>Default value: 0.
+        /// Sorts by OrderField in ascending or descending order. Valid values:<li>0: descending order</li>
+        /// <li>1: ascending order</li>The default value is 0.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

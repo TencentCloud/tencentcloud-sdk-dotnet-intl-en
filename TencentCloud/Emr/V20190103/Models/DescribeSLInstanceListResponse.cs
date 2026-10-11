@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Total number of qualified instances	.
+        /// Total number of instances that meet the criteria.	
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }

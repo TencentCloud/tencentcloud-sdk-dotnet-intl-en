@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Catalog{ get; set; }
 
         /// <summary>
-        /// IP address used for submission.
+        /// Submission IP address.
         /// </summary>
         [JsonProperty("ClientIpAddr")]
         public string ClientIpAddr{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? DurationMillis{ get; set; }
 
         /// <summary>
-        /// End time (seconds).
+        /// End time (s).
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? SqlCompileTime{ get; set; }
 
         /// <summary>
-        /// Start time (seconds).
+        /// Start time (s).
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Statement{ get; set; }
 
         /// <summary>
-        /// User who submits requests.
+        /// Submission user.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
@@ -137,6 +137,12 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         [JsonProperty("WrittenBytes")]
         public long? WrittenBytes{ get; set; }
+
+        /// <summary>
+        /// Error log.
+        /// </summary>
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
 
         /// <summary>
@@ -163,6 +169,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Statement", this.Statement);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "WrittenBytes", this.WrittenBytes);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         }
     }
 }

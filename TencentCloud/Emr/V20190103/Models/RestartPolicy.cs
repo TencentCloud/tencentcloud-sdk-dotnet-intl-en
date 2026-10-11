@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Restart policy name
+        /// Restart policy name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Policy display name
+        /// Policy display name.
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// Policy description
+        /// Policy description.
         /// </summary>
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
         /// <summary>
-        /// Optional range for the number of batch restarted nodes
+        /// Optional range for the number of nodes restarted in batches.
         /// </summary>
         [JsonProperty("BatchSizeRange")]
         public long?[] BatchSizeRange{ get; set; }
 
         /// <summary>
-        /// Whether it is the default policy
+        /// Whether it is the default policy.
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }

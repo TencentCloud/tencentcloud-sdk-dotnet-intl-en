@@ -25,29 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// List of resource IDs with successful modification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of successful resource IDs.
         /// </summary>
         [JsonProperty("SuccessList")]
         public string[] SuccessList{ get; set; }
 
         /// <summary>
-        /// List of resource IDs with failed modification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of failed resource IDs.
         /// </summary>
         [JsonProperty("FailList")]
         public string[] FailList{ get; set; }
 
         /// <summary>
-        /// List of resource IDs with partial successful modification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of partially successful resource IDs.
         /// </summary>
         [JsonProperty("PartSuccessList")]
         public string[] PartSuccessList{ get; set; }
 
         /// <summary>
-        /// Mapping list of cluster IDs and process IDs
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Mapping list of cluster IDs and flow IDs.
         /// </summary>
         [JsonProperty("ClusterToFlowIdList")]
         public ClusterIDToFlowID[] ClusterToFlowIdList{ get; set; }

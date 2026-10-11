@@ -25,17 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Load-based scaling rules
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Load-based scaling rule.
         /// </summary>
         [JsonProperty("LoadAutoScaleStrategies")]
         public LoadAutoScaleStrategy[] LoadAutoScaleStrategies{ get; set; }
 
         /// <summary>
-        /// Scaling rules by time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time-based scaling rule.
         /// </summary>
         [JsonProperty("TimeBasedAutoScaleStrategies")]
         public TimeAutoScaleStrategy[] TimeBasedAutoScaleStrategies{ get; set; }

@@ -25,134 +25,166 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Specifications.
+        /// <p>Specifications.</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 4
+        /// <p>4</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 8, in GB.
+        /// <p>8, unit: GB.</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Order, with the smaller coming first.
+        /// <p>Sorting order. Smaller values come first.</p>
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
-        /// Quantity.
+        /// <p>Quantity.</p>
         /// </summary>
         [JsonProperty("Num")]
         public long? Num{ get; set; }
 
         /// <summary>
-        /// Reasons for running out of stock.
+        /// <p>Sold-out reason.</p>
         /// </summary>
         [JsonProperty("SellOutReason")]
         public string SellOutReason{ get; set; }
 
         /// <summary>
-        /// System disk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>System disk.</p>
         /// </summary>
         [JsonProperty("SystemDisk")]
         public NodeSpecDisk[] SystemDisk{ get; set; }
 
         /// <summary>
-        /// Data disk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Data disk.</p>
         /// </summary>
         [JsonProperty("DataDisk")]
         public NodeSpecDisk[] DataDisk{ get; set; }
 
         /// <summary>
-        /// Local data disk.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Local data disk.</p>
         /// </summary>
         [JsonProperty("LocalDataDisk")]
         public NodeSpecDisk[] LocalDataDisk{ get; set; }
 
         /// <summary>
-        /// Reasons for running out of stock.
+        /// <p>Sold-out reason.</p>
         /// </summary>
         [JsonProperty("SoldOutReason")]
         public string SoldOutReason{ get; set; }
 
         /// <summary>
-        /// Model category.
+        /// <p>Instance family.</p>
         /// </summary>
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
         /// <summary>
-        /// Node name.
+        /// <p>Node name.</p>
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Node type.
+        /// <p>Node type.</p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Category.
+        /// <p>Category.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Category name.
+        /// <p>Category name.</p>
         /// </summary>
         [JsonProperty("TypeName")]
         public string TypeName{ get; set; }
 
         /// <summary>
-        /// Category classification.
+        /// <p>Category classification.</p>
         /// </summary>
         [JsonProperty("FamilyName")]
         public string FamilyName{ get; set; }
 
         /// <summary>
-        /// CPU type.
+        /// <p>CPU type.</p>
         /// </summary>
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
         /// <summary>
-        /// RunOut (denoting running out of stock), Less (denoting low inventory), and Enough (denoting sufficient).
+        /// <p>RunOut: sold out; Less: low inventory; Enough: sufficient inventory</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Original price.
+        /// <p>Original price.</p>
         /// </summary>
         [JsonProperty("OriginPrice")]
         public float? OriginPrice{ get; set; }
 
         /// <summary>
-        /// Supported purchase terms for committed use billing models.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Purchase duration supported by instance types using the committed use billing mode.</p>
         /// </summary>
         [JsonProperty("PrepaidUnderwritePeriods")]
         public long?[] PrepaidUnderwritePeriods{ get; set; }
 
         /// <summary>
-        /// GPU information.
+        /// <p>GPU information.</p>
         /// </summary>
         [JsonProperty("GpuDesc")]
         public string GpuDesc{ get; set; }
+
+        /// <summary>
+        /// <p>Number of quotas.</p>
+        /// </summary>
+        [JsonProperty("QuotaNum")]
+        public long? QuotaNum{ get; set; }
+
+        /// <summary>
+        /// <p>Quota unit.</p>
+        /// </summary>
+        [JsonProperty("QuotaUnit")]
+        public string QuotaUnit{ get; set; }
+
+        /// <summary>
+        /// <p>Whether a high-performance computing cluster needs to be provided.</p>
+        /// </summary>
+        [JsonProperty("NeedHpcClusterId")]
+        public bool? NeedHpcClusterId{ get; set; }
+
+        /// <summary>
+        /// <p>Whether it is a GPU instance type.</p>
+        /// </summary>
+        [JsonProperty("IsGpuInstance")]
+        public bool? IsGpuInstance{ get; set; }
+
+        /// <summary>
+        /// <p>GPU resource definition in the Kubernetes scenario.</p>
+        /// </summary>
+        [JsonProperty("GpuResourceKey")]
+        public string GpuResourceKey{ get; set; }
+
+        /// <summary>
+        /// <p>Number of GPU cards.</p>
+        /// </summary>
+        [JsonProperty("GpuNum")]
+        public long? GpuNum{ get; set; }
 
 
         /// <summary>
@@ -181,6 +213,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
             this.SetParamArraySimple(map, prefix + "PrepaidUnderwritePeriods.", this.PrepaidUnderwritePeriods);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+            this.SetParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
+            this.SetParamSimple(map, prefix + "QuotaUnit", this.QuotaUnit);
+            this.SetParamSimple(map, prefix + "NeedHpcClusterId", this.NeedHpcClusterId);
+            this.SetParamSimple(map, prefix + "IsGpuInstance", this.IsGpuInstance);
+            this.SetParamSimple(map, prefix + "GpuResourceKey", this.GpuResourceKey);
+            this.SetParamSimple(map, prefix + "GpuNum", this.GpuNum);
         }
     }
 }

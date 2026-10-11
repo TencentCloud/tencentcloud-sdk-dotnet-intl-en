@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Quantity.
+        /// Number.
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DefaultDiskSize")]
         public long? DefaultDiskSize{ get; set; }
 
+        /// <summary>
+        /// Whether it is a special data disk, for example, a single-replica disk.
+        /// </summary>
+        [JsonProperty("IsSpecialDisk")]
+        public bool? IsSpecialDisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DefaultDiskSize", this.DefaultDiskSize);
+            this.SetParamSimple(map, prefix + "IsSpecialDisk", this.IsSpecialDisk);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// Whether it is editable, "true" or "false".
+        /// Whether it is editable. Valid values: true and false.
         /// </summary>
         [JsonProperty("Editable")]
         public string Editable{ get; set; }

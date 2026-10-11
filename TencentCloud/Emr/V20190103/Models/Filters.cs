@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Field name
+        /// Field name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Filters by the field value
+        /// Filter field value.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

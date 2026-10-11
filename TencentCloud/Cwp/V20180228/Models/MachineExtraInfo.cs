@@ -25,37 +25,37 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Public IP address
+        /// 
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Private IP address
+        /// 
         /// </summary>
         [JsonProperty("PrivateIP")]
         public string PrivateIP{ get; set; }
 
         /// <summary>
-        /// Network Type. 1: VPC network; 2: Basic Network; 3: Non-Tencent Cloud Network
+        /// 
         /// </summary>
         [JsonProperty("NetworkType")]
         public long? NetworkType{ get; set; }
 
         /// <summary>
-        /// Network Name, returns vpc_id in the case of a VPC network
+        /// 
         /// </summary>
         [JsonProperty("NetworkName")]
         public string NetworkName{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// 
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// host name
+        /// 
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }

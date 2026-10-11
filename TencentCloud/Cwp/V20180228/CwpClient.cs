@@ -28,7 +28,7 @@ namespace TencentCloud.Cwp.V20180228
 
        private const string endpoint = "cwp.intl.tencentcloudapi.com";
        private const string version = "2018-02-28";
-       private const string sdkVersion = "SDK_NET_3.0.1359";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Cwp.V20180228
         public AddLoginWhiteListsResponse AddLoginWhiteListsSync(AddLoginWhiteListsRequest req)
         {
             return InternalRequestAsync<AddLoginWhiteListsResponse>(req, "AddLoginWhiteLists")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add vulnerability ignore rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddVulIgnoreRuleRequest"/></param>
+        /// <returns><see cref="AddVulIgnoreRuleResponse"/></returns>
+        public Task<AddVulIgnoreRuleResponse> AddVulIgnoreRule(AddVulIgnoreRuleRequest req)
+        {
+            return InternalRequestAsync<AddVulIgnoreRuleResponse>(req, "AddVulIgnoreRule");
+        }
+
+        /// <summary>
+        /// This API is used to add vulnerability ignore rules.
+        /// </summary>
+        /// <param name="req"><see cref="AddVulIgnoreRuleRequest"/></param>
+        /// <returns><see cref="AddVulIgnoreRuleResponse"/></returns>
+        public AddVulIgnoreRuleResponse AddVulIgnoreRuleSync(AddVulIgnoreRuleRequest req)
+        {
+            return InternalRequestAsync<AddVulIgnoreRuleResponse>(req, "AddVulIgnoreRule")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -459,6 +480,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Adding a Website Protection Server
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectServerRequest"/></param>
+        /// <returns><see cref="CreateProtectServerResponse"/></returns>
+        public Task<CreateProtectServerResponse> CreateProtectServer(CreateProtectServerRequest req)
+        {
+            return InternalRequestAsync<CreateProtectServerResponse>(req, "CreateProtectServer");
+        }
+
+        /// <summary>
+        /// Adding a Website Protection Server
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectServerRequest"/></param>
+        /// <returns><see cref="CreateProtectServerResponse"/></returns>
+        public CreateProtectServerResponse CreateProtectServerSync(CreateProtectServerRequest req)
+        {
+            return InternalRequestAsync<CreateProtectServerResponse>(req, "CreateProtectServer")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create or modify anti-ransomware policies.
         /// </summary>
         /// <param name="req"><see cref="CreateRansomDefenseStrategyRequest"/></param>
@@ -648,6 +690,48 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Delete a baseline rule
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineRuleRequest"/></param>
+        /// <returns><see cref="DeleteBaselineRuleResponse"/></returns>
+        public Task<DeleteBaselineRuleResponse> DeleteBaselineRule(DeleteBaselineRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineRuleResponse>(req, "DeleteBaselineRule");
+        }
+
+        /// <summary>
+        /// Delete a baseline rule
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineRuleRequest"/></param>
+        /// <returns><see cref="DeleteBaselineRuleResponse"/></returns>
+        public DeleteBaselineRuleResponse DeleteBaselineRuleSync(DeleteBaselineRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineRuleResponse>(req, "DeleteBaselineRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete baseline ignore rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineRuleIgnoreRequest"/></param>
+        /// <returns><see cref="DeleteBaselineRuleIgnoreResponse"/></returns>
+        public Task<DeleteBaselineRuleIgnoreResponse> DeleteBaselineRuleIgnore(DeleteBaselineRuleIgnoreRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineRuleIgnoreResponse>(req, "DeleteBaselineRuleIgnore");
+        }
+
+        /// <summary>
+        /// Delete baseline ignore rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineRuleIgnoreRequest"/></param>
+        /// <returns><see cref="DeleteBaselineRuleIgnoreResponse"/></returns>
+        public DeleteBaselineRuleIgnoreResponse DeleteBaselineRuleIgnoreSync(DeleteBaselineRuleIgnoreRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineRuleIgnoreResponse>(req, "DeleteBaselineRuleIgnore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to delete the policy by baseline policy ID.
         /// </summary>
         /// <param name="req"><see cref="DeleteBaselineStrategyRequest"/></param>
@@ -665,6 +749,27 @@ namespace TencentCloud.Cwp.V20180228
         public DeleteBaselineStrategyResponse DeleteBaselineStrategySync(DeleteBaselineStrategyRequest req)
         {
             return InternalRequestAsync<DeleteBaselineStrategyResponse>(req, "DeleteBaselineStrategy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete baseline weak passwords
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineWeakPasswordRequest"/></param>
+        /// <returns><see cref="DeleteBaselineWeakPasswordResponse"/></returns>
+        public Task<DeleteBaselineWeakPasswordResponse> DeleteBaselineWeakPassword(DeleteBaselineWeakPasswordRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineWeakPasswordResponse>(req, "DeleteBaselineWeakPassword");
+        }
+
+        /// <summary>
+        /// Delete baseline weak passwords
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineWeakPasswordRequest"/></param>
+        /// <returns><see cref="DeleteBaselineWeakPasswordResponse"/></returns>
+        public DeleteBaselineWeakPasswordResponse DeleteBaselineWeakPasswordSync(DeleteBaselineWeakPasswordRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineWeakPasswordResponse>(req, "DeleteBaselineWeakPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1089,6 +1194,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Delete a website protection
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectDirRequest"/></param>
+        /// <returns><see cref="DeleteProtectDirResponse"/></returns>
+        public Task<DeleteProtectDirResponse> DeleteProtectDir(DeleteProtectDirRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectDirResponse>(req, "DeleteProtectDir");
+        }
+
+        /// <summary>
+        /// Delete a website protection
+        /// </summary>
+        /// <param name="req"><see cref="DeleteProtectDirRequest"/></param>
+        /// <returns><see cref="DeleteProtectDirResponse"/></returns>
+        public DeleteProtectDirResponse DeleteProtectDirSync(DeleteProtectDirRequest req)
+        {
+            return InternalRequestAsync<DeleteProtectDirResponse>(req, "DeleteProtectDir")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Deleting Entries from the Vulnerability Defense Allowlist
         /// </summary>
         /// <param name="req"><see cref="DeleteRaspRulesRequest"/></param>
@@ -1316,6 +1442,27 @@ namespace TencentCloud.Cwp.V20180228
         public DeleteWebHookRuleResponse DeleteWebHookRuleSync(DeleteWebHookRuleRequest req)
         {
             return InternalRequestAsync<DeleteWebHookRuleResponse>(req, "DeleteWebHookRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete website tamper-proof event records
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebPageEventLogRequest"/></param>
+        /// <returns><see cref="DeleteWebPageEventLogResponse"/></returns>
+        public Task<DeleteWebPageEventLogResponse> DeleteWebPageEventLog(DeleteWebPageEventLogRequest req)
+        {
+            return InternalRequestAsync<DeleteWebPageEventLogResponse>(req, "DeleteWebPageEventLog");
+        }
+
+        /// <summary>
+        /// Delete website tamper-proof event records
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebPageEventLogRequest"/></param>
+        /// <returns><see cref="DeleteWebPageEventLogResponse"/></returns>
+        public DeleteWebPageEventLogResponse DeleteWebPageEventLogSync(DeleteWebPageEventLogRequest req)
+        {
+            return InternalRequestAsync<DeleteWebPageEventLogResponse>(req, "DeleteWebPageEventLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2643,6 +2790,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This example shows you how to query the baseline policy overview statistics based on baseline policy IDs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAnalysisDataResponse"/></returns>
+        public Task<DescribeBaselineAnalysisDataResponse> DescribeBaselineAnalysisData(DescribeBaselineAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAnalysisDataResponse>(req, "DescribeBaselineAnalysisData");
+        }
+
+        /// <summary>
+        /// This example shows you how to query the baseline policy overview statistics based on baseline policy IDs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeBaselineAnalysisDataResponse"/></returns>
+        public DescribeBaselineAnalysisDataResponse DescribeBaselineAnalysisDataSync(DescribeBaselineAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineAnalysisDataResponse>(req, "DescribeBaselineAnalysisData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of baseline basic information.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaselineBasicInfoRequest"/></param>
@@ -2706,6 +2874,69 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Retrieve baseline detection detail records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDetectListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDetectListResponse"/></returns>
+        public Task<DescribeBaselineDetectListResponse> DescribeBaselineDetectList(DescribeBaselineDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDetectListResponse>(req, "DescribeBaselineDetectList");
+        }
+
+        /// <summary>
+        /// Retrieve baseline detection detail records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDetectListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDetectListResponse"/></returns>
+        public DescribeBaselineDetectListResponse DescribeBaselineDetectListSync(DescribeBaselineDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDetectListResponse>(req, "DescribeBaselineDetectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain baseline detection overview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDetectOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDetectOverviewResponse"/></returns>
+        public Task<DescribeBaselineDetectOverviewResponse> DescribeBaselineDetectOverview(DescribeBaselineDetectOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDetectOverviewResponse>(req, "DescribeBaselineDetectOverview");
+        }
+
+        /// <summary>
+        /// Obtain baseline detection overview
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDetectOverviewRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDetectOverviewResponse"/></returns>
+        public DescribeBaselineDetectOverviewResponse DescribeBaselineDetectOverviewSync(DescribeBaselineDetectOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDetectOverviewResponse>(req, "DescribeBaselineDetectOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the baseline download list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDownloadListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDownloadListResponse"/></returns>
+        public Task<DescribeBaselineDownloadListResponse> DescribeBaselineDownloadList(DescribeBaselineDownloadListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDownloadListResponse>(req, "DescribeBaselineDownloadList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the baseline download list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineDownloadListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineDownloadListResponse"/></returns>
+        public DescribeBaselineDownloadListResponse DescribeBaselineDownloadListSync(DescribeBaselineDownloadListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineDownloadListResponse>(req, "DescribeBaselineDownloadList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of hosts affected by a baseline based on baseline ID.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaselineEffectHostListRequest"/></param>
@@ -2727,6 +2958,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Query the baseline fix list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineFixListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineFixListResponse"/></returns>
+        public Task<DescribeBaselineFixListResponse> DescribeBaselineFixList(DescribeBaselineFixListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineFixListResponse>(req, "DescribeBaselineFixList");
+        }
+
+        /// <summary>
+        /// Query the baseline fix list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineFixListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineFixListResponse"/></returns>
+        public DescribeBaselineFixListResponse DescribeBaselineFixListSync(DescribeBaselineFixListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineFixListResponse>(req, "DescribeBaselineFixList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of hosts for baseline detection.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaselineHostDetectListRequest"/></param>
@@ -2744,6 +2996,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeBaselineHostDetectListResponse DescribeBaselineHostDetectListSync(DescribeBaselineHostDetectListRequest req)
         {
             return InternalRequestAsync<DescribeBaselineHostDetectListResponse>(req, "DescribeBaselineHostDetectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Retrieve the host list of ignore rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineHostIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineHostIgnoreListResponse"/></returns>
+        public Task<DescribeBaselineHostIgnoreListResponse> DescribeBaselineHostIgnoreList(DescribeBaselineHostIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineHostIgnoreListResponse>(req, "DescribeBaselineHostIgnoreList");
+        }
+
+        /// <summary>
+        /// Retrieve the host list of ignore rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineHostIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineHostIgnoreListResponse"/></returns>
+        public DescribeBaselineHostIgnoreListResponse DescribeBaselineHostIgnoreListSync(DescribeBaselineHostIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineHostIgnoreListResponse>(req, "DescribeBaselineHostIgnoreList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the TOP 5 server risks in the baseline.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineHostRiskTopRequest"/></param>
+        /// <returns><see cref="DescribeBaselineHostRiskTopResponse"/></returns>
+        public Task<DescribeBaselineHostRiskTopResponse> DescribeBaselineHostRiskTop(DescribeBaselineHostRiskTopRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineHostRiskTopResponse>(req, "DescribeBaselineHostRiskTop");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the TOP 5 server risks in the baseline.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineHostRiskTopRequest"/></param>
+        /// <returns><see cref="DescribeBaselineHostRiskTopResponse"/></returns>
+        public DescribeBaselineHostRiskTopResponse DescribeBaselineHostRiskTopSync(DescribeBaselineHostRiskTopRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineHostRiskTopResponse>(req, "DescribeBaselineHostRiskTop")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2790,6 +3084,48 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to search the ignorable rule item list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemIgnoreListResponse"/></returns>
+        public Task<DescribeBaselineItemIgnoreListResponse> DescribeBaselineItemIgnoreList(DescribeBaselineItemIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemIgnoreListResponse>(req, "DescribeBaselineItemIgnoreList");
+        }
+
+        /// <summary>
+        /// This API is used to search the ignorable rule item list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemIgnoreListResponse"/></returns>
+        public DescribeBaselineItemIgnoreListResponse DescribeBaselineItemIgnoreListSync(DescribeBaselineItemIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemIgnoreListResponse>(req, "DescribeBaselineItemIgnoreList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain Baseline Detection Item Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemInfoRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemInfoResponse"/></returns>
+        public Task<DescribeBaselineItemInfoResponse> DescribeBaselineItemInfo(DescribeBaselineItemInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemInfoResponse>(req, "DescribeBaselineItemInfo");
+        }
+
+        /// <summary>
+        /// Obtain Baseline Detection Item Information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemInfoRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemInfoResponse"/></returns>
+        public DescribeBaselineItemInfoResponse DescribeBaselineItemInfoSync(DescribeBaselineItemInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemInfoResponse>(req, "DescribeBaselineItemInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of check results on baseline check items.
         /// </summary>
         /// <param name="req"><see cref="DescribeBaselineItemListRequest"/></param>
@@ -2807,6 +3143,27 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeBaselineItemListResponse DescribeBaselineItemListSync(DescribeBaselineItemListRequest req)
         {
             return InternalRequestAsync<DescribeBaselineItemListResponse>(req, "DescribeBaselineItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the TOP 5 baseline detection items.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemRiskTopRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemRiskTopResponse"/></returns>
+        public Task<DescribeBaselineItemRiskTopResponse> DescribeBaselineItemRiskTop(DescribeBaselineItemRiskTopRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemRiskTopResponse>(req, "DescribeBaselineItemRiskTop");
+        }
+
+        /// <summary>
+        /// Query the TOP 5 baseline detection items.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineItemRiskTopRequest"/></param>
+        /// <returns><see cref="DescribeBaselineItemRiskTopResponse"/></returns>
+        public DescribeBaselineItemRiskTopResponse DescribeBaselineItemRiskTopSync(DescribeBaselineItemRiskTopRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineItemRiskTopResponse>(req, "DescribeBaselineItemRiskTop")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2870,6 +3227,90 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeBaselineRuleResponse DescribeBaselineRuleSync(DescribeBaselineRuleRequest req)
         {
             return InternalRequestAsync<DescribeBaselineRuleResponse>(req, "DescribeBaselineRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain Baseline Classification List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleCategoryListResponse"/></returns>
+        public Task<DescribeBaselineRuleCategoryListResponse> DescribeBaselineRuleCategoryList(DescribeBaselineRuleCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleCategoryListResponse>(req, "DescribeBaselineRuleCategoryList");
+        }
+
+        /// <summary>
+        /// Obtain Baseline Classification List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleCategoryListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleCategoryListResponse"/></returns>
+        public DescribeBaselineRuleCategoryListResponse DescribeBaselineRuleCategoryListSync(DescribeBaselineRuleCategoryListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleCategoryListResponse>(req, "DescribeBaselineRuleCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the baseline rule detection list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleDetectListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleDetectListResponse"/></returns>
+        public Task<DescribeBaselineRuleDetectListResponse> DescribeBaselineRuleDetectList(DescribeBaselineRuleDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleDetectListResponse>(req, "DescribeBaselineRuleDetectList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the baseline rule detection list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleDetectListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleDetectListResponse"/></returns>
+        public DescribeBaselineRuleDetectListResponse DescribeBaselineRuleDetectListSync(DescribeBaselineRuleDetectListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleDetectListResponse>(req, "DescribeBaselineRuleDetectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get the baseline ignore rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleIgnoreListResponse"/></returns>
+        public Task<DescribeBaselineRuleIgnoreListResponse> DescribeBaselineRuleIgnoreList(DescribeBaselineRuleIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleIgnoreListResponse>(req, "DescribeBaselineRuleIgnoreList");
+        }
+
+        /// <summary>
+        /// Get the baseline ignore rule list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleIgnoreListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleIgnoreListResponse"/></returns>
+        public DescribeBaselineRuleIgnoreListResponse DescribeBaselineRuleIgnoreListSync(DescribeBaselineRuleIgnoreListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleIgnoreListResponse>(req, "DescribeBaselineRuleIgnoreList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Obtain Baseline Rule List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleListResponse"/></returns>
+        public Task<DescribeBaselineRuleListResponse> DescribeBaselineRuleList(DescribeBaselineRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleListResponse>(req, "DescribeBaselineRuleList");
+        }
+
+        /// <summary>
+        /// Obtain Baseline Rule List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineRuleListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineRuleListResponse"/></returns>
+        public DescribeBaselineRuleListResponse DescribeBaselineRuleListSync(DescribeBaselineRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineRuleListResponse>(req, "DescribeBaselineRuleList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3651,6 +4092,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Querying the Machine Information Imported in Batches
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeImportMachineInfoResponse"/></returns>
+        public Task<DescribeImportMachineInfoResponse> DescribeImportMachineInfo(DescribeImportMachineInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeImportMachineInfoResponse>(req, "DescribeImportMachineInfo");
+        }
+
+        /// <summary>
+        /// Querying the Machine Information Imported in Batches
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeImportMachineInfoResponse"/></returns>
+        public DescribeImportMachineInfoResponse DescribeImportMachineInfoSync(DescribeImportMachineInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeImportMachineInfoResponse>(req, "DescribeImportMachineInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query java memory horse and rasp whether inject risk service configuration
         /// </summary>
         /// <param name="req"><see cref="DescribeInjectRiskyServiceSwitchRequest"/></param>
@@ -4302,6 +4764,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to get the regional host list for web tamper protection.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineListRequest"/></param>
+        /// <returns><see cref="DescribeMachineListResponse"/></returns>
+        public Task<DescribeMachineListResponse> DescribeMachineList(DescribeMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineListResponse>(req, "DescribeMachineList");
+        }
+
+        /// <summary>
+        /// This API is used to get the regional host list for web tamper protection.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineListRequest"/></param>
+        /// <returns><see cref="DescribeMachineListResponse"/></returns>
+        public DescribeMachineListResponse DescribeMachineListSync(DescribeMachineListRequest req)
+        {
+            return InternalRequestAsync<DescribeMachineListResponse>(req, "DescribeMachineList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the machine operating system list.
         /// </summary>
         /// <param name="req"><see cref="DescribeMachineOsListRequest"/></param>
@@ -4806,6 +5289,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This example shows you how to obtain the list of local privilege escalation events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivilegeEventsRequest"/></param>
+        /// <returns><see cref="DescribePrivilegeEventsResponse"/></returns>
+        public Task<DescribePrivilegeEventsResponse> DescribePrivilegeEvents(DescribePrivilegeEventsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivilegeEventsResponse>(req, "DescribePrivilegeEvents");
+        }
+
+        /// <summary>
+        /// This example shows you how to obtain the list of local privilege escalation events.
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrivilegeEventsRequest"/></param>
+        /// <returns><see cref="DescribePrivilegeEventsResponse"/></returns>
+        public DescribePrivilegeEventsResponse DescribePrivilegeEventsSync(DescribePrivilegeEventsRequest req)
+        {
+            return InternalRequestAsync<DescribePrivilegeEventsResponse>(req, "DescribePrivilegeEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the list of local privilege escalation rules.
         /// </summary>
         /// <param name="req"><see cref="DescribePrivilegeRulesRequest"/></param>
@@ -4907,6 +5411,48 @@ namespace TencentCloud.Cwp.V20180228
         public DescribeProductStatusResponse DescribeProductStatusSync(DescribeProductStatusRequest req)
         {
             return InternalRequestAsync<DescribeProductStatusResponse>(req, "DescribeProductStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Web tamper-proof protection directory listing
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectDirListRequest"/></param>
+        /// <returns><see cref="DescribeProtectDirListResponse"/></returns>
+        public Task<DescribeProtectDirListResponse> DescribeProtectDirList(DescribeProtectDirListRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectDirListResponse>(req, "DescribeProtectDirList");
+        }
+
+        /// <summary>
+        /// Web tamper-proof protection directory listing
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectDirListRequest"/></param>
+        /// <returns><see cref="DescribeProtectDirListResponse"/></returns>
+        public DescribeProtectDirListResponse DescribeProtectDirListSync(DescribeProtectDirListRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectDirListResponse>(req, "DescribeProtectDirList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the server list information associated with the protection directory.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectDirRelatedServerRequest"/></param>
+        /// <returns><see cref="DescribeProtectDirRelatedServerResponse"/></returns>
+        public Task<DescribeProtectDirRelatedServerResponse> DescribeProtectDirRelatedServer(DescribeProtectDirRelatedServerRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectDirRelatedServerResponse>(req, "DescribeProtectDirRelatedServer");
+        }
+
+        /// <summary>
+        /// Query the server list information associated with the protection directory.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectDirRelatedServerRequest"/></param>
+        /// <returns><see cref="DescribeProtectDirRelatedServerResponse"/></returns>
+        public DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServerSync(DescribeProtectDirRelatedServerRequest req)
+        {
+            return InternalRequestAsync<DescribeProtectDirRelatedServerResponse>(req, "DescribeProtectDirRelatedServer")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -6213,6 +6759,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Querying the Details of a Directory Associated with a Service Zone
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerRelatedDirInfoRequest"/></param>
+        /// <returns><see cref="DescribeServerRelatedDirInfoResponse"/></returns>
+        public Task<DescribeServerRelatedDirInfoResponse> DescribeServerRelatedDirInfo(DescribeServerRelatedDirInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeServerRelatedDirInfoResponse>(req, "DescribeServerRelatedDirInfo");
+        }
+
+        /// <summary>
+        /// Querying the Details of a Directory Associated with a Service Zone
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerRelatedDirInfoRequest"/></param>
+        /// <returns><see cref="DescribeServerRelatedDirInfoResponse"/></returns>
+        public DescribeServerRelatedDirInfoResponse DescribeServerRelatedDirInfoSync(DescribeServerRelatedDirInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeServerRelatedDirInfoResponse>(req, "DescribeServerRelatedDirInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the number of risky files pending to be processed + the number of affected servers + whether to try to detect + last detection time.
         /// </summary>
         /// <param name="req"><see cref="DescribeServersAndRiskAndFirstInfoRequest"/></param>
@@ -7179,6 +7746,90 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Querying the List of Tampering Events
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageEventListRequest"/></param>
+        /// <returns><see cref="DescribeWebPageEventListResponse"/></returns>
+        public Task<DescribeWebPageEventListResponse> DescribeWebPageEventList(DescribeWebPageEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageEventListResponse>(req, "DescribeWebPageEventList");
+        }
+
+        /// <summary>
+        /// Querying the List of Tampering Events
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageEventListRequest"/></param>
+        /// <returns><see cref="DescribeWebPageEventListResponse"/></returns>
+        public DescribeWebPageEventListResponse DescribeWebPageEventListSync(DescribeWebPageEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageEventListResponse>(req, "DescribeWebPageEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query website tamper-proof overview information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageGeneralizeRequest"/></param>
+        /// <returns><see cref="DescribeWebPageGeneralizeResponse"/></returns>
+        public Task<DescribeWebPageGeneralizeResponse> DescribeWebPageGeneralize(DescribeWebPageGeneralizeRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageGeneralizeResponse>(req, "DescribeWebPageGeneralize");
+        }
+
+        /// <summary>
+        /// Query website tamper-proof overview information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageGeneralizeRequest"/></param>
+        /// <returns><see cref="DescribeWebPageGeneralizeResponse"/></returns>
+        public DescribeWebPageGeneralizeResponse DescribeWebPageGeneralizeSync(DescribeWebPageGeneralizeRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageGeneralizeResponse>(req, "DescribeWebPageGeneralize")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Querying real-time protection information for website anti-tampering
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageProtectStatRequest"/></param>
+        /// <returns><see cref="DescribeWebPageProtectStatResponse"/></returns>
+        public Task<DescribeWebPageProtectStatResponse> DescribeWebPageProtectStat(DescribeWebPageProtectStatRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageProtectStatResponse>(req, "DescribeWebPageProtectStat");
+        }
+
+        /// <summary>
+        /// Querying real-time protection information for website anti-tampering
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageProtectStatRequest"/></param>
+        /// <returns><see cref="DescribeWebPageProtectStatResponse"/></returns>
+        public DescribeWebPageProtectStatResponse DescribeWebPageProtectStatSync(DescribeWebPageProtectStatRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageProtectStatResponse>(req, "DescribeWebPageProtectStat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Website Tamper Protection - Query webpage tamper protection server purchase information and server information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageServiceInfoRequest"/></param>
+        /// <returns><see cref="DescribeWebPageServiceInfoResponse"/></returns>
+        public Task<DescribeWebPageServiceInfoResponse> DescribeWebPageServiceInfo(DescribeWebPageServiceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageServiceInfoResponse>(req, "DescribeWebPageServiceInfo");
+        }
+
+        /// <summary>
+        /// Website Tamper Protection - Query webpage tamper protection server purchase information and server information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageServiceInfoRequest"/></param>
+        /// <returns><see cref="DescribeWebPageServiceInfoResponse"/></returns>
+        public DescribeWebPageServiceInfoResponse DescribeWebPageServiceInfoSync(DescribeWebPageServiceInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeWebPageServiceInfoResponse>(req, "DescribeWebPageServiceInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Search patch information list
         /// </summary>
         /// <param name="req"><see cref="DescribeWindowsPatchListRequest"/></param>
@@ -7809,6 +8460,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Export Detection Item Result List
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineItemListRequest"/></param>
+        /// <returns><see cref="ExportBaselineItemListResponse"/></returns>
+        public Task<ExportBaselineItemListResponse> ExportBaselineItemList(ExportBaselineItemListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineItemListResponse>(req, "ExportBaselineItemList");
+        }
+
+        /// <summary>
+        /// Export Detection Item Result List
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineItemListRequest"/></param>
+        /// <returns><see cref="ExportBaselineItemListResponse"/></returns>
+        public ExportBaselineItemListResponse ExportBaselineItemListSync(ExportBaselineItemListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineItemListResponse>(req, "ExportBaselineItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to export the list of baselines.
         /// </summary>
         /// <param name="req"><see cref="ExportBaselineListRequest"/></param>
@@ -7826,6 +8498,48 @@ namespace TencentCloud.Cwp.V20180228
         public ExportBaselineListResponse ExportBaselineListSync(ExportBaselineListRequest req)
         {
             return InternalRequestAsync<ExportBaselineListResponse>(req, "ExportBaselineList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to export baseline detection rules.
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineRuleDetectListRequest"/></param>
+        /// <returns><see cref="ExportBaselineRuleDetectListResponse"/></returns>
+        public Task<ExportBaselineRuleDetectListResponse> ExportBaselineRuleDetectList(ExportBaselineRuleDetectListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineRuleDetectListResponse>(req, "ExportBaselineRuleDetectList");
+        }
+
+        /// <summary>
+        /// This API is used to export baseline detection rules.
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineRuleDetectListRequest"/></param>
+        /// <returns><see cref="ExportBaselineRuleDetectListResponse"/></returns>
+        public ExportBaselineRuleDetectListResponse ExportBaselineRuleDetectListSync(ExportBaselineRuleDetectListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineRuleDetectListResponse>(req, "ExportBaselineRuleDetectList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Export the list of weak password configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineWeakPasswordListRequest"/></param>
+        /// <returns><see cref="ExportBaselineWeakPasswordListResponse"/></returns>
+        public Task<ExportBaselineWeakPasswordListResponse> ExportBaselineWeakPasswordList(ExportBaselineWeakPasswordListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineWeakPasswordListResponse>(req, "ExportBaselineWeakPasswordList");
+        }
+
+        /// <summary>
+        /// Export the list of weak password configurations.
+        /// </summary>
+        /// <param name="req"><see cref="ExportBaselineWeakPasswordListRequest"/></param>
+        /// <returns><see cref="ExportBaselineWeakPasswordListResponse"/></returns>
+        public ExportBaselineWeakPasswordListResponse ExportBaselineWeakPasswordListSync(ExportBaselineWeakPasswordListRequest req)
+        {
+            return InternalRequestAsync<ExportBaselineWeakPasswordListResponse>(req, "ExportBaselineWeakPasswordList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8162,6 +8876,27 @@ namespace TencentCloud.Cwp.V20180228
         public ExportPrivilegeEventsResponse ExportPrivilegeEventsSync(ExportPrivilegeEventsRequest req)
         {
             return InternalRequestAsync<ExportPrivilegeEventsResponse>(req, "ExportPrivilegeEvents")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Export the web tamper-proof protection directory list.
+        /// </summary>
+        /// <param name="req"><see cref="ExportProtectDirListRequest"/></param>
+        /// <returns><see cref="ExportProtectDirListResponse"/></returns>
+        public Task<ExportProtectDirListResponse> ExportProtectDirList(ExportProtectDirListRequest req)
+        {
+            return InternalRequestAsync<ExportProtectDirListResponse>(req, "ExportProtectDirList");
+        }
+
+        /// <summary>
+        /// Export the web tamper-proof protection directory list.
+        /// </summary>
+        /// <param name="req"><see cref="ExportProtectDirListRequest"/></param>
+        /// <returns><see cref="ExportProtectDirListResponse"/></returns>
+        public ExportProtectDirListResponse ExportProtectDirListSync(ExportProtectDirListRequest req)
+        {
+            return InternalRequestAsync<ExportProtectDirListResponse>(req, "ExportProtectDirList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8586,6 +9321,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to export the tamper event list.
+        /// </summary>
+        /// <param name="req"><see cref="ExportWebPageEventListRequest"/></param>
+        /// <returns><see cref="ExportWebPageEventListResponse"/></returns>
+        public Task<ExportWebPageEventListResponse> ExportWebPageEventList(ExportWebPageEventListRequest req)
+        {
+            return InternalRequestAsync<ExportWebPageEventListResponse>(req, "ExportWebPageEventList");
+        }
+
+        /// <summary>
+        /// This API is used to export the tamper event list.
+        /// </summary>
+        /// <param name="req"><see cref="ExportWebPageEventListRequest"/></param>
+        /// <returns><see cref="ExportWebPageEventListResponse"/></returns>
+        public ExportWebPageEventListResponse ExportWebPageEventListSync(ExportWebPageEventListRequest req)
+        {
+            return InternalRequestAsync<ExportWebPageEventListResponse>(req, "ExportWebPageEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Export Windows patch list
         /// </summary>
         /// <param name="req"><see cref="ExportWindowsPatchListRequest"/></param>
@@ -8603,6 +9359,27 @@ namespace TencentCloud.Cwp.V20180228
         public ExportWindowsPatchListResponse ExportWindowsPatchListSync(ExportWindowsPatchListRequest req)
         {
             return InternalRequestAsync<ExportWindowsPatchListResponse>(req, "ExportWindowsPatchList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to fix baseline detection.
+        /// </summary>
+        /// <param name="req"><see cref="FixBaselineDetectRequest"/></param>
+        /// <returns><see cref="FixBaselineDetectResponse"/></returns>
+        public Task<FixBaselineDetectResponse> FixBaselineDetect(FixBaselineDetectRequest req)
+        {
+            return InternalRequestAsync<FixBaselineDetectResponse>(req, "FixBaselineDetect");
+        }
+
+        /// <summary>
+        /// This API is used to fix baseline detection.
+        /// </summary>
+        /// <param name="req"><see cref="FixBaselineDetectRequest"/></param>
+        /// <returns><see cref="FixBaselineDetectResponse"/></returns>
+        public FixBaselineDetectResponse FixBaselineDetectSync(FixBaselineDetectRequest req)
+        {
+            return InternalRequestAsync<FixBaselineDetectResponse>(req, "FixBaselineDetect")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8750,6 +9527,90 @@ namespace TencentCloud.Cwp.V20180228
         public ModifyBaselinePolicyResponse ModifyBaselinePolicySync(ModifyBaselinePolicyRequest req)
         {
             return InternalRequestAsync<ModifyBaselinePolicyResponse>(req, "ModifyBaselinePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to change the baseline policy status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselinePolicyStateRequest"/></param>
+        /// <returns><see cref="ModifyBaselinePolicyStateResponse"/></returns>
+        public Task<ModifyBaselinePolicyStateResponse> ModifyBaselinePolicyState(ModifyBaselinePolicyStateRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselinePolicyStateResponse>(req, "ModifyBaselinePolicyState");
+        }
+
+        /// <summary>
+        /// This API is used to change the baseline policy status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselinePolicyStateRequest"/></param>
+        /// <returns><see cref="ModifyBaselinePolicyStateResponse"/></returns>
+        public ModifyBaselinePolicyStateResponse ModifyBaselinePolicyStateSync(ModifyBaselinePolicyStateRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselinePolicyStateResponse>(req, "ModifyBaselinePolicyState")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Make a change to a baseline detection rule
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineRuleRequest"/></param>
+        /// <returns><see cref="ModifyBaselineRuleResponse"/></returns>
+        public Task<ModifyBaselineRuleResponse> ModifyBaselineRule(ModifyBaselineRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineRuleResponse>(req, "ModifyBaselineRule");
+        }
+
+        /// <summary>
+        /// Make a change to a baseline detection rule
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineRuleRequest"/></param>
+        /// <returns><see cref="ModifyBaselineRuleResponse"/></returns>
+        public ModifyBaselineRuleResponse ModifyBaselineRuleSync(ModifyBaselineRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineRuleResponse>(req, "ModifyBaselineRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Make a change to the baseline ignore rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineRuleIgnoreRequest"/></param>
+        /// <returns><see cref="ModifyBaselineRuleIgnoreResponse"/></returns>
+        public Task<ModifyBaselineRuleIgnoreResponse> ModifyBaselineRuleIgnore(ModifyBaselineRuleIgnoreRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineRuleIgnoreResponse>(req, "ModifyBaselineRuleIgnore");
+        }
+
+        /// <summary>
+        /// Make a change to the baseline ignore rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineRuleIgnoreRequest"/></param>
+        /// <returns><see cref="ModifyBaselineRuleIgnoreResponse"/></returns>
+        public ModifyBaselineRuleIgnoreResponse ModifyBaselineRuleIgnoreSync(ModifyBaselineRuleIgnoreRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineRuleIgnoreResponse>(req, "ModifyBaselineRuleIgnore")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Change or add a weak password
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineWeakPasswordRequest"/></param>
+        /// <returns><see cref="ModifyBaselineWeakPasswordResponse"/></returns>
+        public Task<ModifyBaselineWeakPasswordResponse> ModifyBaselineWeakPassword(ModifyBaselineWeakPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineWeakPasswordResponse>(req, "ModifyBaselineWeakPassword");
+        }
+
+        /// <summary>
+        /// Change or add a weak password
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineWeakPasswordRequest"/></param>
+        /// <returns><see cref="ModifyBaselineWeakPasswordResponse"/></returns>
+        public ModifyBaselineWeakPasswordResponse ModifyBaselineWeakPasswordSync(ModifyBaselineWeakPasswordRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineWeakPasswordResponse>(req, "ModifyBaselineWeakPassword")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8985,6 +9846,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// This API is used to unbind machines from an authorization in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseUnBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseUnBindsResponse"/></returns>
+        public Task<ModifyLicenseUnBindsResponse> ModifyLicenseUnBinds(ModifyLicenseUnBindsRequest req)
+        {
+            return InternalRequestAsync<ModifyLicenseUnBindsResponse>(req, "ModifyLicenseUnBinds");
+        }
+
+        /// <summary>
+        /// This API is used to unbind machines from an authorization in batches.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseUnBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseUnBindsResponse"/></returns>
+        public ModifyLicenseUnBindsResponse ModifyLicenseUnBindsSync(ModifyLicenseUnBindsRequest req)
+        {
+            return InternalRequestAsync<ModifyLicenseUnBindsResponse>(req, "ModifyLicenseUnBinds")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to add or modify the access configuration of logs shipped to Kafka.
         /// </summary>
         /// <param name="req"><see cref="ModifyLogKafkaAccessRequest"/></param>
@@ -9132,6 +10014,27 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Modify Host Remark Information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public Task<ModifyMachineRemarkResponse> ModifyMachineRemark(ModifyMachineRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark");
+        }
+
+        /// <summary>
+        /// Modify Host Remark Information
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMachineRemarkRequest"/></param>
+        /// <returns><see cref="ModifyMachineRemarkResponse"/></returns>
+        public ModifyMachineRemarkResponse ModifyMachineRemarkSync(ModifyMachineRemarkRequest req)
+        {
+            return InternalRequestAsync<ModifyMachineRemarkResponse>(req, "ModifyMachineRemark")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to update the malicious request allowlist.
         /// </summary>
         /// <param name="req"><see cref="ModifyMaliciousRequestWhiteListRequest"/></param>
@@ -9233,6 +10136,27 @@ namespace TencentCloud.Cwp.V20180228
         public ModifyNetAttackWhiteListResponse ModifyNetAttackWhiteListSync(ModifyNetAttackWhiteListRequest req)
         {
             return InternalRequestAsync<ModifyNetAttackWhiteListResponse>(req, "ModifyNetAttackWhiteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Edit order attributes
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrderAttributeRequest"/></param>
+        /// <returns><see cref="ModifyOrderAttributeResponse"/></returns>
+        public Task<ModifyOrderAttributeResponse> ModifyOrderAttribute(ModifyOrderAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyOrderAttributeResponse>(req, "ModifyOrderAttribute");
+        }
+
+        /// <summary>
+        /// Edit order attributes
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrderAttributeRequest"/></param>
+        /// <returns><see cref="ModifyOrderAttributeResponse"/></returns>
+        public ModifyOrderAttributeResponse ModifyOrderAttributeSync(ModifyOrderAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyOrderAttributeResponse>(req, "ModifyOrderAttribute")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9621,6 +10545,48 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// Creating or Modifying a Website Protection Directory
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectDirRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectDirResponse"/></returns>
+        public Task<ModifyWebPageProtectDirResponse> ModifyWebPageProtectDir(ModifyWebPageProtectDirRequest req)
+        {
+            return InternalRequestAsync<ModifyWebPageProtectDirResponse>(req, "ModifyWebPageProtectDir");
+        }
+
+        /// <summary>
+        /// Creating or Modifying a Website Protection Directory
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectDirRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectDirResponse"/></returns>
+        public ModifyWebPageProtectDirResponse ModifyWebPageProtectDirSync(ModifyWebPageProtectDirRequest req)
+        {
+            return InternalRequestAsync<ModifyWebPageProtectDirResponse>(req, "ModifyWebPageProtectDir")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modifying Website Protection Settings
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectSettingRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectSettingResponse"/></returns>
+        public Task<ModifyWebPageProtectSettingResponse> ModifyWebPageProtectSetting(ModifyWebPageProtectSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyWebPageProtectSettingResponse>(req, "ModifyWebPageProtectSetting");
+        }
+
+        /// <summary>
+        /// Modifying Website Protection Settings
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectSettingRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectSettingResponse"/></returns>
+        public ModifyWebPageProtectSettingResponse ModifyWebPageProtectSettingSync(ModifyWebPageProtectSettingRequest req)
+        {
+            return InternalRequestAsync<ModifyWebPageProtectSettingResponse>(req, "ModifyWebPageProtectSetting")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to enable or disable website anti-tampering protection.
         /// </summary>
         /// <param name="req"><see cref="ModifyWebPageProtectSwitchRequest"/></param>
@@ -9785,6 +10751,27 @@ namespace TencentCloud.Cwp.V20180228
         public RetryVulFixResponse RetryVulFixSync(RetryVulFixRequest req)
         {
             return InternalRequestAsync<RetryVulFixResponse>(req, "RetryVulFix")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Initiate asset fingerprinting scan
+        /// </summary>
+        /// <param name="req"><see cref="ScanAssetRequest"/></param>
+        /// <returns><see cref="ScanAssetResponse"/></returns>
+        public Task<ScanAssetResponse> ScanAsset(ScanAssetRequest req)
+        {
+            return InternalRequestAsync<ScanAssetResponse>(req, "ScanAsset");
+        }
+
+        /// <summary>
+        /// Initiate asset fingerprinting scan
+        /// </summary>
+        /// <param name="req"><see cref="ScanAssetRequest"/></param>
+        /// <returns><see cref="ScanAssetResponse"/></returns>
+        public ScanAssetResponse ScanAssetSync(ScanAssetRequest req)
+        {
+            return InternalRequestAsync<ScanAssetResponse>(req, "ScanAsset")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

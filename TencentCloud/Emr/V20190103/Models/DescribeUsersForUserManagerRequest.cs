@@ -25,32 +25,32 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Page number
+        /// Page number.
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// Pagination size.
-        /// All are queried by default. If the PageNo and PageSize settings are inappropriate, all are queried.
+        /// Number of entries per page.
+        /// All records are queried by default. If the PageNo and PageSize settings are inappropriate, all records are queried.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// User list query filter
+        /// User list filter.
         /// </summary>
         [JsonProperty("UserManagerFilter")]
         public UserManagerFilter UserManagerFilter{ get; set; }
 
         /// <summary>
-        /// Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
+        /// Whether keytab file information is needed, only effective for clusters with Kerberos enabled. The default value is false.
         /// </summary>
         [JsonProperty("NeedKeytabInfo")]
         public bool? NeedKeytabInfo{ get; set; }

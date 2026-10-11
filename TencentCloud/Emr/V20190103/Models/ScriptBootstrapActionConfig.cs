@@ -25,28 +25,28 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The COS URL of the script, in the format of `https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh`. For the COS bucket list, see [Bucket List](https://console.cloud.tencent.com/cos/bucket).
+        /// COS address of the script. Format: https://beijing-111111.cos.ap-beijing.myqcloud.com/data/test.sh. To query the COS bucket list, refer to [Bucket List](https://console.cloud.tencent.com/cos/bucket).
         /// </summary>
         [JsonProperty("CosFileURI")]
         public string CosFileURI{ get; set; }
 
         /// <summary>
-        /// The execution time of the bootstrap action script. Valid values:
-        /// <li>`resourceAfter`: After node initialization</li>
-        /// <li>`clusterAfter`: After cluster start</li>
-        /// <li>`clusterBefore`: Before cluster start</li>
+        /// Time range for the bootstrap script execution.
+        /// <li>resourceAfter: after node initialization</li>
+        /// <li>clusterAfter: after cluster startup</li>
+        /// <li>clusterBefore: before cluster startup</li>
         /// </summary>
         [JsonProperty("ExecutionMoment")]
         public string ExecutionMoment{ get; set; }
 
         /// <summary>
-        /// The execution script parameter. The parameter format must comply with standard shell specifications.
+        /// Execution script parameters. For the parameter format, follow standard Shell specifications.
         /// </summary>
         [JsonProperty("Args")]
         public string[] Args{ get; set; }
 
         /// <summary>
-        /// The script file name.
+        /// Script file name.
         /// </summary>
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// Computing resource ID that needs to be modified, and can be used together with ResourceBaseType.
+        /// ID of the computing resource that needs to be modified. Used together with ResourceBaseType.
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }

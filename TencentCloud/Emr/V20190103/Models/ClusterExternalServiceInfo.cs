@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Dependency relationship. 0: being depended on by other clusters, 1: depending on other clusters.
+        /// Dependency relationship. Valid values: 0 (being depended on by other clusters) and 1 (depending on other clusters).
         /// </summary>
         [JsonProperty("DependType")]
         public long? DependType{ get; set; }

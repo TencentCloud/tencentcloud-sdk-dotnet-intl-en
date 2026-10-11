@@ -25,49 +25,49 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Describes master node resource
+        /// Description of Master node resources.
         /// </summary>
         [JsonProperty("MasterResourceSpec")]
         public Resource MasterResourceSpec{ get; set; }
 
         /// <summary>
-        /// Describes core node resource
+        /// Description of Core node resources.
         /// </summary>
         [JsonProperty("CoreResourceSpec")]
         public Resource CoreResourceSpec{ get; set; }
 
         /// <summary>
-        /// Describes task node resource
+        /// Description of Task node resources.
         /// </summary>
         [JsonProperty("TaskResourceSpec")]
         public Resource TaskResourceSpec{ get; set; }
 
         /// <summary>
-        /// Number of master nodes
+        /// Number of Master nodes.
         /// </summary>
         [JsonProperty("MasterCount")]
         public long? MasterCount{ get; set; }
 
         /// <summary>
-        /// Number of core nodes
+        /// Number of Core nodes.
         /// </summary>
         [JsonProperty("CoreCount")]
         public long? CoreCount{ get; set; }
 
         /// <summary>
-        /// Number of task nodes
+        /// Number of Task nodes.
         /// </summary>
         [JsonProperty("TaskCount")]
         public long? TaskCount{ get; set; }
 
         /// <summary>
-        /// Describes common node resource
+        /// Description of Common node resources.
         /// </summary>
         [JsonProperty("CommonResourceSpec")]
         public Resource CommonResourceSpec{ get; set; }
 
         /// <summary>
-        /// Number of common nodes
+        /// Number of Common nodes.
         /// </summary>
         [JsonProperty("CommonCount")]
         public long? CommonCount{ get; set; }

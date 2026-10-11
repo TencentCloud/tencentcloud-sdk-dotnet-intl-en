@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The information of the services to operate on.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Operation scope, with information of the service to be operated.
         /// </summary>
         [JsonProperty("ServiceInfoList")]
         public ServiceBasicRestartInfo[] ServiceInfoList{ get; set; }

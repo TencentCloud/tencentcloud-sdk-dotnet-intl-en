@@ -38,14 +38,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Detailed data to be rendered.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Rows")]
         public DiffDetailItem[] Rows{ get; set; }
 
         /// <summary>
         /// Header information to be rendered.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Header")]
         public DiffHeader[] Header{ get; set; }

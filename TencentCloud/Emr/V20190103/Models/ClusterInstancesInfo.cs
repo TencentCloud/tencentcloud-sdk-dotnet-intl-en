@@ -25,323 +25,300 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID.
+        /// <p>ID.</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// Cluster ID.
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Title
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Title.</p>
         /// </summary>
         [JsonProperty("Ftitle")]
         [System.Obsolete]
         public string Ftitle{ get; set; }
 
         /// <summary>
-        /// Cluster name.
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region ID.
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Region ID.
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// User AppID.
+        /// <p>User APPID.</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// User UIN.
+        /// <p>User UIN.</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Cluster VPCID.
+        /// <p>Cluster VPC ID.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public long? VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID.
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// Instance status code. Valid range:
-        /// <li>2: the cluster is running.</li>
-        /// <li>3: the cluster is being created.</li>
-        /// <li>4: the cluster is being scaled out.</li>
-        /// <li>5: Router nodes are being added to the cluster.</li>
-        /// <li>6: components are being installed in the cluster.</li>
-        /// <li>7: commands are being executed in the cluster.</li>
-        /// <li>8: the service is being restarted.</li>
-        /// <li>9: maintenance is in progress.</li>
-        /// <li>10: the service is being suspended.</li>
-        /// <li>11: the cluster is exiting maintenance.</li>
-        /// <li>12: the cluster is exiting suspension.</li>
-        /// <li>13: the configuration is being distributed.</li>
-        /// <li>14: the cluster is being terminated.</li>
-        /// <li>15: the Core node is being destroyed.</li>
-        /// <li>16: the Task node is being destroyed.</li>
-        /// <li>17: the Router node is being destroyed.</li>
-        /// <li>18: the web proxy password is being changed.</li>
-        /// <li>19: the cluster is being isolated.</li>
-        /// <li>20: the cluster is undergoing a reversal transaction.</li>
-        /// <li>21: the cluster is being recycled.</li>
-        /// <li>22: the instance is waiting for resizing.</li>
-        /// <li>23: the cluster has been isolated.</li>
-        /// <li>24: the number of nodes is being reduced.</li>
-        /// <li>33: the cluster is waiting for a refund.</li>
-        /// <li>34: the cluster has received a refund.</li>
-        /// <li>301: creation failed.</li>
-        /// <li>302: scale-out failed.</li>
+        /// <p>Status code of the instance. Valid values:</p><li>2: The cluster is running.</li><li>3: The cluster is being created.</li><li>4: The cluster is being scaled out.</li><li>5: Router nodes are being added to the cluster.</li><li>6: Components are being installed in the cluster.</li><li>7: The cluster is executing a command.</li><li>8: The service is being restarted.</li><li>9: The cluster is entering maintenance.</li><li>10: The service is being paused.</li><li>11: The cluster is exiting maintenance.</li><li>12: The cluster is exiting the pause status.</li><li>13: The configuration is being delivered.</li><li>14: The cluster is being terminated.</li><li>15: Core nodes are being terminated.</li><li>16: Task nodes are being terminated.</li><li>17: Router nodes are being terminated.</li><li>18: The webproxy password is being changed.</li><li>19: The cluster is being isolated.</li><li>20: The cluster is being reconciled.</li><li>21: The cluster is being reclaimed.</li><li>22: The configuration change is waiting.</li><li>23: The cluster has been isolated.</li><li>24: Nodes are being scaled in.</li><li>33: The cluster is waiting for a refund.</li><li>34: The cluster has been refunded.</li><li>301: Creation failed.</li><li>302: Scale-out failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Adding time.
+        /// <p>Addition time.</p>
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// Runtime.
+        /// <p>Execution duration.</p>
         /// </summary>
         [JsonProperty("RunTime")]
         public string RunTime{ get; set; }
 
         /// <summary>
-        /// Cluster product configuration information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Cluster product configuration information.</p>
         /// </summary>
         [JsonProperty("Config")]
         [System.Obsolete]
         public EmrProductConfigOutter Config{ get; set; }
 
         /// <summary>
-        /// Public network IP address of the primary node.
+        /// <p>Public IP address of the Master node.</p>
         /// </summary>
         [JsonProperty("MasterIp")]
         public string MasterIp{ get; set; }
 
         /// <summary>
-        /// EMR version.
+        /// <p>EMR version.</p>
         /// </summary>
         [JsonProperty("EmrVersion")]
         public string EmrVersion{ get; set; }
 
         /// <summary>
-        /// Charge type.
+        /// <p>Billing mode.</p>
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// Transaction version.
+        /// <p>Transaction version.</p>
         /// </summary>
         [JsonProperty("TradeVersion")]
         public long? TradeVersion{ get; set; }
 
         /// <summary>
-        /// Resource order ID.
+        /// <p>Resource order ID.</p>
         /// </summary>
         [JsonProperty("ResourceOrderId")]
         public long? ResourceOrderId{ get; set; }
 
         /// <summary>
-        /// Whether it is a billing cluster.
+        /// <p>Whether it is a billable cluster.</p>
         /// </summary>
         [JsonProperty("IsTradeCluster")]
         public long? IsTradeCluster{ get; set; }
 
         /// <summary>
-        /// Alarm information of cluster error status.
+        /// <p>Cluster error status alarm information.</p>
         /// </summary>
         [JsonProperty("AlarmInfo")]
         public string AlarmInfo{ get; set; }
 
         /// <summary>
-        /// Whether to adopt new architecture.
+        /// <p>Whether a new architecture is used.</p>
         /// </summary>
         [JsonProperty("IsWoodpeckerCluster")]
         public long? IsWoodpeckerCluster{ get; set; }
 
         /// <summary>
-        /// Metadatabase information.
+        /// <p>Meta database information.</p>
         /// </summary>
         [JsonProperty("MetaDb")]
         public string MetaDb{ get; set; }
 
         /// <summary>
-        /// Tag information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Tag information.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Hive metadata information.
+        /// <p>Hive metadata information.</p>
         /// </summary>
         [JsonProperty("HiveMetaDb")]
         public string HiveMetaDb{ get; set; }
 
         /// <summary>
-        /// Cluster type: EMR,CLICKHOUSE,DRUID.
+        /// <p>Cluster type. Valid values: EMR, CLICKHOUSE, and DRUID.</p>
         /// </summary>
         [JsonProperty("ServiceClass")]
         public string ServiceClass{ get; set; }
 
         /// <summary>
-        /// Alias serialization of all nodes in the cluster.
+        /// <p>Serialization of the aliases of all nodes in the cluster.</p>
         /// </summary>
         [JsonProperty("AliasInfo")]
         public string AliasInfo{ get; set; }
 
         /// <summary>
-        /// Cluster version ID.
+        /// <p>Cluster version ID.</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// Region ID.
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Scenario name.
+        /// <p>Scenario name.</p>
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
-        /// Scenario-based cluster type.
+        /// <p>Scenario-based cluster type.</p>
         /// </summary>
         [JsonProperty("SceneServiceClass")]
         public string SceneServiceClass{ get; set; }
 
         /// <summary>
-        /// Scenario-based EMR version.
+        /// <p>Scenario-based EMR version.</p>
         /// </summary>
         [JsonProperty("SceneEmrVersion")]
         public string SceneEmrVersion{ get; set; }
 
         /// <summary>
-        /// Scenario-based cluster type.
+        /// <p>Scenario-based cluster type.</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// vpc name
+        /// <p>vpc name</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// subnet name
+        /// <p>subnet name</p>
         /// </summary>
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
         /// <summary>
-        /// Cluster dependency
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Cluster dependency.</p>
         /// </summary>
         [JsonProperty("ClusterExternalServiceInfo")]
         public ClusterExternalServiceInfo[] ClusterExternalServiceInfo{ get; set; }
 
         /// <summary>
-        /// Cluster vpcid string type.
+        /// <p>Cluster VPC ID, string type.</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID string type.
+        /// <p>Subnet ID, string type.</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Node information
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>Node information.</p>
         /// </summary>
         [JsonProperty("TopologyInfoList")]
         public TopologyInfo[] TopologyInfoList{ get; set; }
 
         /// <summary>
-        /// Whether it is a cross-AZ cluster.
+        /// <p>Whether it is a cross-AZ cluster.</p>
         /// </summary>
         [JsonProperty("IsMultiZoneCluster")]
         public bool? IsMultiZoneCluster{ get; set; }
 
         /// <summary>
-        /// Whether to enable automatic compensation for abnormal nodes.
+        /// <p>Whether automatic compensation for abnormal nodes is enabled.</p>
         /// </summary>
         [JsonProperty("IsCvmReplace")]
         public bool? IsCvmReplace{ get; set; }
 
         /// <summary>
-        /// Title.
+        /// <p>Title.</p>
         /// </summary>
         [JsonProperty("ClusterTitle")]
         public string ClusterTitle{ get; set; }
 
         /// <summary>
-        /// Cluster product configuration information
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cluster product configuration information.</p>
         /// </summary>
         [JsonProperty("ConfigDetail")]
         public EmrProductConfigDetail ConfigDetail{ get; set; }
 
         /// <summary>
-        /// Number of file systems bound to a cluster.
+        /// <p>Number of file systems bound to the cluster.</p>
         /// </summary>
         [JsonProperty("BindFileSystemNum")]
         public long? BindFileSystemNum{ get; set; }
 
         /// <summary>
-        /// Bound list of the RSS cluster.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Binding list of the RSS cluster.</p>
         /// </summary>
         [JsonProperty("ClusterRelationInfoList")]
         public ClusterRelationMeta[] ClusterRelationInfoList{ get; set; }
 
         /// <summary>
-        /// Redis information.
+        /// <p>Redis information.</p>
         /// </summary>
         [JsonProperty("RedisId")]
         public string RedisId{ get; set; }
+
+        /// <summary>
+        /// <p>Whether IO fault self-healing is enabled.</p>
+        /// </summary>
+        [JsonProperty("IsIOHungSelfRecovery")]
+        public bool? IsIOHungSelfRecovery{ get; set; }
+
+        /// <summary>
+        /// <p>Metadata information.</p>
+        /// </summary>
+        [JsonProperty("MetaDBGroupInfo")]
+        public CustomMetaDBInfo[] MetaDBGroupInfo{ get; set; }
 
 
         /// <summary>
@@ -396,6 +373,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
             this.SetParamArrayObj(map, prefix + "ClusterRelationInfoList.", this.ClusterRelationInfoList);
             this.SetParamSimple(map, prefix + "RedisId", this.RedisId);
+            this.SetParamSimple(map, prefix + "IsIOHungSelfRecovery", this.IsIOHungSelfRecovery);
+            this.SetParamArrayObj(map, prefix + "MetaDBGroupInfo.", this.MetaDBGroupInfo);
         }
     }
 }

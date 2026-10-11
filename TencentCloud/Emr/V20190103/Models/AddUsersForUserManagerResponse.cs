@@ -25,21 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The user list that is successfully added
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of successfully added users.
         /// </summary>
         [JsonProperty("SuccessUserList")]
         public string[] SuccessUserList{ get; set; }
 
         /// <summary>
-        /// The user list that is not successfully added
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// List of users failed to be added.
         /// </summary>
         [JsonProperty("FailedUserList")]
         public string[] FailedUserList{ get; set; }
 
         /// <summary>
-        /// Flow ID. If the flow ID is larger than 0, it means that the flow is launched; if the flow ID is equal to 0, it means that no flow is launched.
+        /// Flow ID. If the value is greater than 0, the flow is started; if the value is 0, no flow is started.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

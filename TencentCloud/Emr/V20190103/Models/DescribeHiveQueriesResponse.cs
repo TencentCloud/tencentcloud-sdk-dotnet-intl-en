@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Total items
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Result list
+        /// Result list.
         /// </summary>
         [JsonProperty("Results")]
         public HiveQuery[] Results{ get; set; }

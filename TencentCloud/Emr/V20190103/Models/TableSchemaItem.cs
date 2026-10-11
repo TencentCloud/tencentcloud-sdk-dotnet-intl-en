@@ -25,27 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Column identifier
+        /// Column identifier.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether it is sortable by this column
+        /// Whether it is sortable by this column.
         /// </summary>
         [JsonProperty("Sortable")]
         public bool? Sortable{ get; set; }
 
         /// <summary>
-        /// Whether it is filterable
+        /// Whether it is filterable.
         /// </summary>
         [JsonProperty("WithFilter")]
         public bool? WithFilter{ get; set; }
 
         /// <summary>
-        /// Filtered candidate set
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Filtered candidate set.
         /// </summary>
         [JsonProperty("Candidates")]
         public string[] Candidates{ get; set; }

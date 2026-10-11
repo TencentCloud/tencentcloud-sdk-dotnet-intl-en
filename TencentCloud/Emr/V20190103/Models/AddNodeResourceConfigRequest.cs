@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Node type: Core, Task, and Router.
+        /// Node type. Valid values: CORE, TASK, and ROUTER.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Whether default configuration applies, DEFAULT or BACKUP. If it is not specified, the default configuration does not apply.
+        /// Whether default configuration applies. Valid values: DEFAULT and BACKUP. If it is not specified, the default configuration does not apply.
         /// </summary>
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Resource[] MultipleResourceConfig{ get; set; }
 
         /// <summary>
-        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+        /// Type. Valid values: ComputeResource and EMR. Default value: EMR.
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }

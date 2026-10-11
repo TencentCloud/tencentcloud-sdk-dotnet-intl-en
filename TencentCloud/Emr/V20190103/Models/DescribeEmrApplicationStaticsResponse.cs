@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Application statistics
+        /// Job statistics information.
         /// </summary>
         [JsonProperty("Statics")]
         public ApplicationStatics[] Statics{ get; set; }
 
         /// <summary>
-        /// Total count
+        /// Total number.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Available queue name
+        /// Available queue names.
         /// </summary>
         [JsonProperty("Queues")]
         public string[] Queues{ get; set; }
 
         /// <summary>
-        /// Available usernames
+        /// Available usernames.
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// Available application type
+        /// Available job types.
         /// </summary>
         [JsonProperty("ApplicationTypes")]
         public string[] ApplicationTypes{ get; set; }

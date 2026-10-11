@@ -25,49 +25,49 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Queue name
+        /// Queue name.
         /// </summary>
         [JsonProperty("Queue")]
         public string Queue{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Username.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Application type
+        /// Job type.
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// `SumMemorySeconds` meaning
+        /// Meaning of SumMemorySeconds.
         /// </summary>
         [JsonProperty("SumMemorySeconds")]
         public long? SumMemorySeconds{ get; set; }
 
         /// <summary>
-        /// Total VCore Seconds
+        /// Meaning of SumVCoreSeconds.
         /// </summary>
         [JsonProperty("SumVCoreSeconds")]
         public long? SumVCoreSeconds{ get; set; }
 
         /// <summary>
-        /// SumHDFSBytesWritten (with unit)
+        /// SumHDFSBytesWritten (with the unit).
         /// </summary>
         [JsonProperty("SumHDFSBytesWritten")]
         public string SumHDFSBytesWritten{ get; set; }
 
         /// <summary>
-        /// SumHDFSBytesRead (with unit)
+        /// SumHDFSBytesRead (with the unit).
         /// </summary>
         [JsonProperty("SumHDFSBytesRead")]
         public string SumHDFSBytesRead{ get; set; }
 
         /// <summary>
-        /// Application count
+        /// Number of jobs.
         /// </summary>
         [JsonProperty("CountApps")]
         public long? CountApps{ get; set; }

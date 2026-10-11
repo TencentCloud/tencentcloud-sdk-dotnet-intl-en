@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Submitter IP address.
+        /// Submission IP address.
         /// </summary>
         [JsonProperty("ClientIP")]
         public string ClientIP{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string StatementID{ get; set; }
 
         /// <summary>
-        /// User who submits requests.
+        /// Submission user.
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }

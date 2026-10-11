@@ -25,14 +25,14 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The TKE or EKS cluster ID.
+        /// TKE or EKS cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Custom permissions
-        /// Examples:
+        /// Custom permission.
+        /// Example:
         /// {
         ///   "apiVersion": "v1",
         ///   "clusters": [
@@ -71,8 +71,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Config{ get; set; }
 
         /// <summary>
-        /// Custom parameters
-        /// Examples:
+        /// Custom parameter.
+        /// Example:
         /// {
         ///     "apiVersion": "apps/v1",
         ///     "kind": "Deployment",

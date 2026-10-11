@@ -25,85 +25,88 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Time unit of scale-out. Valid value:
-        /// <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+        /// <p>Time unit for the scale-out. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Time span of scale-out, which needs to be used together with `TimeUnit`.
-        /// <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+        /// <p>Scale-out duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// ID of the AZ where an instance resides.
+        /// <p>ID of the AZ to which the instance belongs, for example, 100003. This parameter can be obtained from the ZoneId field in the response of <a href="https://www.tencentcloud.com/document/api/213/15707?from_cn_redirect=1">DescribeZones</a>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid value:
-        /// <li>0: Pay-as-you-go.</li>
+        /// <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Instance ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Number of core nodes to be added.
+        /// <p>Number of Core nodes to be scaled out.</p>
         /// </summary>
         [JsonProperty("CoreCount")]
         public ulong? CoreCount{ get; set; }
 
         /// <summary>
-        /// Number of task nodes to be added.
+        /// <p>Number of Task nodes to be scaled out.</p>
         /// </summary>
         [JsonProperty("TaskCount")]
         public ulong? TaskCount{ get; set; }
 
         /// <summary>
-        /// Currency.
+        /// <p>Currency type. Valid values:</p><li>CNY: RMB</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Number of router nodes to be added.
+        /// <p>Number of Router nodes to be scaled out.</p>
         /// </summary>
         [JsonProperty("RouterCount")]
         public ulong? RouterCount{ get; set; }
 
         /// <summary>
-        /// Number of master nodes to be added.
+        /// <p>Number of Master nodes to be scaled out.</p>
         /// </summary>
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
 
         /// <summary>
-        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+        /// <p>The type can be ComputeResource, EMR, or a default value. The default value is EMR.</p>
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }
 
         /// <summary>
-        /// Computing resource ID.
+        /// <p>Computing resource ID.</p>
         /// </summary>
         [JsonProperty("ComputeResourceId")]
         public string ComputeResourceId{ get; set; }
 
         /// <summary>
-        /// Scale-out resource type.
+        /// <p>Scale-out resource type.</p>
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>Node group ID.</p>
+        /// </summary>
+        [JsonProperty("NodeGroupId")]
+        public string NodeGroupId{ get; set; }
 
 
         /// <summary>
@@ -124,6 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
             this.SetParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
         }
     }
 }

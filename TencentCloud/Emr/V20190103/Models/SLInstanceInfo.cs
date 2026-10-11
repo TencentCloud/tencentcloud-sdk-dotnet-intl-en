@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Instance string ID.
+        /// Cluster string ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance numeric ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string HealthStatus{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Region ID.
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// User APP ID.
+        /// User APPID.
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
@@ -85,13 +85,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? VpcId{ get; set; }
 
         /// <summary>
+        /// Primary AZ VPC name.
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
         /// Primary AZ subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public ulong? SubnetId{ get; set; }
 
         /// <summary>
-        /// Status code
+        /// Primary AZ subnet name.
+        /// </summary>
+        [JsonProperty("SubnetName")]
+        public string SubnetName{ get; set; }
+
+        /// <summary>
+        /// Status code.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -103,42 +115,52 @@ namespace TencentCloud.Emr.V20190103.Models
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// Cluster billing type. 0 indicates pay-as-you-go. 1 indicates monthly subscription.
+        /// Cluster billing type. 0 indicates pay-as-you-go. 1 indicates yearly/monthly subscription.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
         /// Multi-AZ information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ZoneSettings")]
         public ZoneSetting[] ZoneSettings{ get; set; }
 
         /// <summary>
         /// Instance tag.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is set to 0.
+        /// Auto-renewal flag. Valid values: 0 (notify before expiration but do not auto-renew), 1 (notify before expiration and auto-renew), and 2 (do not notify before expiration and do not auto-renew). If the business does not support renewal, the value is 0.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+        /// Isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+        /// Expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// Primary/standby deployment role.
+        /// </summary>
+        [JsonProperty("DeployRole")]
+        public string DeployRole{ get; set; }
+
+        /// <summary>
+        /// WebUI address.
+        /// </summary>
+        [JsonProperty("WebUIUrl")]
+        public string WebUIUrl{ get; set; }
 
 
         /// <summary>
@@ -156,7 +178,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AddTime", this.AddTime);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
@@ -165,6 +189,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "DeployRole", this.DeployRole);
+            this.SetParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
         }
     }
 }

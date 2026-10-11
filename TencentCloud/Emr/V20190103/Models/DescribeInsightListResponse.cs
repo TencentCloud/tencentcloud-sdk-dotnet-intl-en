@@ -32,7 +32,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// Insight result array.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ResultList")]
         public InsightResult[] ResultList{ get; set; }

@@ -31,31 +31,31 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Pagination query number offset, starting from 0.	
+        /// Page number. Valid values: 0 (page 1) and 1 (page 2).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+        /// Number of items returned per page. Minimum value: 1. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Table name, supporting fuzzy matching
+        /// Table name, supporting fuzzy matching.
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
-        /// Field for sorting, with a default value
+        /// Sorting field. It has a default value.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// asc: Ascending; desc: Descending (default)
+        /// asc: ascending; desc: descending (default).
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }

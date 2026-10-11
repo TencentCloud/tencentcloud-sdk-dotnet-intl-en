@@ -31,26 +31,21 @@ namespace TencentCloud.Emr.V20190103.Models
         public string DetectAlert{ get; set; }
 
         /// <summary>
-        /// Detection feature description
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection feature description.
         /// </summary>
         [JsonProperty("DetetcFunctionKey")]
         [System.Obsolete]
         public string DetetcFunctionKey{ get; set; }
 
         /// <summary>
-        /// Detection feature result
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection feature result.
         /// </summary>
         [JsonProperty("DetetcFunctionValue")]
         [System.Obsolete]
         public string DetetcFunctionValue{ get; set; }
 
         /// <summary>
-        /// Detection results.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Detection result.
         /// </summary>
         [JsonProperty("DetetcTime")]
         [System.Obsolete]

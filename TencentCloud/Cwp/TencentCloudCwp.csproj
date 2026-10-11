@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1359</VersionPrefix>
+    <VersionPrefix>3.0.1407</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20180228\Models\AccountStatistics.cs" />
     <Compile Include="V20180228\Models\AddLoginWhiteListsRequest.cs" />
     <Compile Include="V20180228\Models\AddLoginWhiteListsResponse.cs" />
+    <Compile Include="V20180228\Models\AddVulIgnoreRuleRequest.cs" />
+    <Compile Include="V20180228\Models\AddVulIgnoreRuleResponse.cs" />
     <Compile Include="V20180228\Models\AlarmInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppBaseInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppProcessInfo.cs" />
@@ -90,11 +92,14 @@
     <Compile Include="V20180228\Models\BanWhiteList.cs" />
     <Compile Include="V20180228\Models\BanWhiteListDetail.cs" />
     <Compile Include="V20180228\Models\BaselineBasicInfo.cs" />
+    <Compile Include="V20180228\Models\BaselineCategory.cs" />
     <Compile Include="V20180228\Models\BaselineCustomRuleIdName.cs" />
     <Compile Include="V20180228\Models\BaselineDetail.cs" />
     <Compile Include="V20180228\Models\BaselineDetectParam.cs" />
+    <Compile Include="V20180228\Models\BaselineDownload.cs" />
     <Compile Include="V20180228\Models\BaselineEffectHost.cs" />
     <Compile Include="V20180228\Models\BaselineEventLevelInfo.cs" />
+    <Compile Include="V20180228\Models\BaselineFix.cs" />
     <Compile Include="V20180228\Models\BaselineHost.cs" />
     <Compile Include="V20180228\Models\BaselineHostDetect.cs" />
     <Compile Include="V20180228\Models\BaselineHostTopList.cs" />
@@ -102,7 +107,12 @@
     <Compile Include="V20180228\Models\BaselineItem.cs" />
     <Compile Include="V20180228\Models\BaselineItemDetect.cs" />
     <Compile Include="V20180228\Models\BaselineItemInfo.cs" />
+    <Compile Include="V20180228\Models\BaselineItemsCategory.cs" />
     <Compile Include="V20180228\Models\BaselinePolicy.cs" />
+    <Compile Include="V20180228\Models\BaselinePolicyDetect.cs" />
+    <Compile Include="V20180228\Models\BaselineRiskItem.cs" />
+    <Compile Include="V20180228\Models\BaselineRule.cs" />
+    <Compile Include="V20180228\Models\BaselineRuleDetect.cs" />
     <Compile Include="V20180228\Models\BaselineRuleInfo.cs" />
     <Compile Include="V20180228\Models\BaselineRuleTopInfo.cs" />
     <Compile Include="V20180228\Models\BaselineWeakPassword.cs" />
@@ -161,6 +171,8 @@
     <Compile Include="V20180228\Models\CreateMalwareWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\CreateNetAttackWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\CreateNetAttackWhiteListResponse.cs" />
+    <Compile Include="V20180228\Models\CreateProtectServerRequest.cs" />
+    <Compile Include="V20180228\Models\CreateProtectServerResponse.cs" />
     <Compile Include="V20180228\Models\CreateRansomDefenseStrategyRequest.cs" />
     <Compile Include="V20180228\Models\CreateRansomDefenseStrategyResponse.cs" />
     <Compile Include="V20180228\Models\CreateScanMalwareSettingRequest.cs" />
@@ -181,8 +193,14 @@
     <Compile Include="V20180228\Models\DeleteBanWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBaselinePolicyRequest.cs" />
     <Compile Include="V20180228\Models\DeleteBaselinePolicyResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineRuleIgnoreRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineRuleIgnoreResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineRuleRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineRuleResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBaselineStrategyRequest.cs" />
     <Compile Include="V20180228\Models\DeleteBaselineStrategyResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineWeakPasswordRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteBaselineWeakPasswordResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBashEventsRequest.cs" />
     <Compile Include="V20180228\Models\DeleteBashEventsResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBashPoliciesRequest.cs" />
@@ -223,6 +241,8 @@
     <Compile Include="V20180228\Models\DeletePrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\DeletePrivilegeRulesRequest.cs" />
     <Compile Include="V20180228\Models\DeletePrivilegeRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteProtectDirRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteProtectDirResponse.cs" />
     <Compile Include="V20180228\Models\DeleteRaspRulesRequest.cs" />
     <Compile Include="V20180228\Models\DeleteRaspRulesResponse.cs" />
     <Compile Include="V20180228\Models\DeleteReverseShellEventsRequest.cs" />
@@ -245,6 +265,8 @@
     <Compile Include="V20180228\Models\DeleteWebHookReceiverResponse.cs" />
     <Compile Include="V20180228\Models\DeleteWebHookRuleRequest.cs" />
     <Compile Include="V20180228\Models\DeleteWebHookRuleResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteWebPageEventLogRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="V20180228\Models\DeliverTypeDetails.cs" />
     <Compile Include="V20180228\Models\DescribeABTestConfigRequest.cs" />
     <Compile Include="V20180228\Models\DescribeABTestConfigResponse.cs" />
@@ -372,26 +394,54 @@
     <Compile Include="V20180228\Models\DescribeBanStatusResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBanWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBanWhiteListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineAnalysisDataRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineAnalysisDataResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineBasicInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineBasicInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineDefaultStrategyListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineDefaultStrategyListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineDetailRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineDetailResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDetectListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDetectOverviewRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDetectOverviewResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDownloadListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineDownloadListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineEffectHostListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineEffectHostListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineFixListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineFixListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostDetectListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostIgnoreListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostIgnoreListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostRiskTopRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineHostRiskTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineItemDetectListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineItemDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemIgnoreListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemIgnoreListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineItemListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineItemListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemRiskTopRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemRiskTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselinePolicyListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselinePolicyListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleCategoryListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleCategoryListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleDetectListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleIgnoreListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleIgnoreListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineRuleListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineRuleRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineRuleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineScanScheduleRequest.cs" />
@@ -468,6 +518,8 @@
     <Compile Include="V20180228\Models\DescribeIgnoreHostAndItemConfigResponse.cs" />
     <Compile Include="V20180228\Models\DescribeIgnoreRuleEffectHostListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeIgnoreRuleEffectHostListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeImportMachineInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeInjectRiskyServiceSwitchRequest.cs" />
     <Compile Include="V20180228\Models\DescribeInjectRiskyServiceSwitchResponse.cs" />
     <Compile Include="V20180228\Models\DescribeJavaMemShellInfoRequest.cs" />
@@ -530,6 +582,8 @@
     <Compile Include="V20180228\Models\DescribeMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineLicenseDetailRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachineLicenseDetailResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineOsListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachineOsListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineRegionListRequest.cs" />
@@ -578,6 +632,8 @@
     <Compile Include="V20180228\Models\DescribePatchInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeEventInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribePrivilegeEventsRequest.cs" />
+    <Compile Include="V20180228\Models\DescribePrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribePrivilegeRulesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeProVersionInfoRequest.cs" />
@@ -588,6 +644,10 @@
     <Compile Include="V20180228\Models\DescribeProcessStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeProductStatusRequest.cs" />
     <Compile Include="V20180228\Models\DescribeProductStatusResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeProtectDirListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeProtectDirListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeProtectDirRelatedServerRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeProtectDirRelatedServerResponse.cs" />
     <Compile Include="V20180228\Models\DescribePublicProxyInstallCommandRequest.cs" />
     <Compile Include="V20180228\Models\DescribePublicProxyInstallCommandResponse.cs" />
     <Compile Include="V20180228\Models\DescribeRansomDefenseBackupListRequest.cs" />
@@ -712,6 +772,8 @@
     <Compile Include="V20180228\Models\DescribeSecurityEventsCntResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityTrendsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityTrendsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeServerRelatedDirInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeServerRelatedDirInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeServersAndRiskAndFirstInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeServersAndRiskAndFirstInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeShellPolicyListRequest.cs" />
@@ -804,6 +866,14 @@
     <Compile Include="V20180228\Models\DescribeWebHookRuleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWebHookRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWebHookRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageEventListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageEventListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageGeneralizeRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageGeneralizeResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageProtectStatRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageProtectStatResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageServiceInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageServiceInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWindowsPatchListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWindowsPatchListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeYDRaspBlackWhiteRequest.cs" />
@@ -819,6 +889,7 @@
     <Compile Include="V20180228\Models\EditReverseShellRulesResponse.cs" />
     <Compile Include="V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="V20180228\Models\EditTagsResponse.cs" />
+    <Compile Include="V20180228\Models\EffectiveMachineInfo.cs" />
     <Compile Include="V20180228\Models\EmergencyVul.cs" />
     <Compile Include="V20180228\Models\EventPatchInfo.cs" />
     <Compile Include="V20180228\Models\EventStat.cs" />
@@ -868,8 +939,14 @@
     <Compile Include="V20180228\Models\ExportBaselineHostDetectListResponse.cs" />
     <Compile Include="V20180228\Models\ExportBaselineItemDetectListRequest.cs" />
     <Compile Include="V20180228\Models\ExportBaselineItemDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineItemListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineItemListResponse.cs" />
     <Compile Include="V20180228\Models\ExportBaselineListRequest.cs" />
     <Compile Include="V20180228\Models\ExportBaselineListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineRuleDetectListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineRuleDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineWeakPasswordListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportBaselineWeakPasswordListResponse.cs" />
     <Compile Include="V20180228\Models\ExportBashEventsNewRequest.cs" />
     <Compile Include="V20180228\Models\ExportBashEventsNewResponse.cs" />
     <Compile Include="V20180228\Models\ExportBashEventsRequest.cs" />
@@ -903,6 +980,8 @@
     <Compile Include="V20180228\Models\ExportPatchEffectHostListResponse.cs" />
     <Compile Include="V20180228\Models\ExportPrivilegeEventsRequest.cs" />
     <Compile Include="V20180228\Models\ExportPrivilegeEventsResponse.cs" />
+    <Compile Include="V20180228\Models\ExportProtectDirListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportProtectDirListResponse.cs" />
     <Compile Include="V20180228\Models\ExportRansomDefenseBackupListRequest.cs" />
     <Compile Include="V20180228\Models\ExportRansomDefenseBackupListResponse.cs" />
     <Compile Include="V20180228\Models\ExportRansomDefenseEventsListRequest.cs" />
@@ -943,6 +1022,8 @@
     <Compile Include="V20180228\Models\ExportVulInfoResponse.cs" />
     <Compile Include="V20180228\Models\ExportVulListRequest.cs" />
     <Compile Include="V20180228\Models\ExportVulListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportWebPageEventListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportWebPageEventListResponse.cs" />
     <Compile Include="V20180228\Models\ExportWindowsPatchListRequest.cs" />
     <Compile Include="V20180228\Models\ExportWindowsPatchListResponse.cs" />
     <Compile Include="V20180228\Models\FieldValueRatioInfo.cs" />
@@ -953,6 +1034,8 @@
     <Compile Include="V20180228\Models\FileTamperRuleInfo.cs" />
     <Compile Include="V20180228\Models\Filter.cs" />
     <Compile Include="V20180228\Models\Filters.cs" />
+    <Compile Include="V20180228\Models\FixBaselineDetectRequest.cs" />
+    <Compile Include="V20180228\Models\FixBaselineDetectResponse.cs" />
     <Compile Include="V20180228\Models\FullTextInfo.cs" />
     <Compile Include="V20180228\Models\GetLocalStorageItemRequest.cs" />
     <Compile Include="V20180228\Models\GetLocalStorageItemResponse.cs" />
@@ -961,11 +1044,13 @@
     <Compile Include="V20180228\Models\HostInfo.cs" />
     <Compile Include="V20180228\Models\HostLoginList.cs" />
     <Compile Include="V20180228\Models\HostLoginWhiteObj.cs" />
+    <Compile Include="V20180228\Models\HostRiskLevelCount.cs" />
     <Compile Include="V20180228\Models\HostTagInfo.cs" />
     <Compile Include="V20180228\Models\IPAnalyse.cs" />
     <Compile Include="V20180228\Models\IgnoreBaselineRule.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
     <Compile Include="V20180228\Models\IncidentVertexInfo.cs" />
+    <Compile Include="V20180228\Models\Item.cs" />
     <Compile Include="V20180228\Models\JavaMemShellDetail.cs" />
     <Compile Include="V20180228\Models\JavaMemShellInfo.cs" />
     <Compile Include="V20180228\Models\JavaMemShellPluginInfo.cs" />
@@ -978,6 +1063,7 @@
     <Compile Include="V20180228\Models\LicenseBindTaskDetail.cs" />
     <Compile Include="V20180228\Models\LicenseDetail.cs" />
     <Compile Include="V20180228\Models\LicenseOrder.cs" />
+    <Compile Include="V20180228\Models\LicenseUnBindRsp.cs" />
     <Compile Include="V20180228\Models\LogHistogram.cs" />
     <Compile Include="V20180228\Models\LogInfo.cs" />
     <Compile Include="V20180228\Models\LogStorageRecord.cs" />
@@ -1009,6 +1095,14 @@
     <Compile Include="V20180228\Models\ModifyBanWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBaselinePolicyRequest.cs" />
     <Compile Include="V20180228\Models\ModifyBaselinePolicyResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselinePolicyStateRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselinePolicyStateResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineRuleIgnoreRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineRuleIgnoreResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineRuleRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineRuleResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineWeakPasswordRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyBaselineWeakPasswordResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBashPolicyRequest.cs" />
     <Compile Include="V20180228\Models\ModifyBashPolicyResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBashPolicyStatusRequest.cs" />
@@ -1031,6 +1125,8 @@
     <Compile Include="V20180228\Models\ModifyLicenseBindsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLicenseOrderRequest.cs" />
     <Compile Include="V20180228\Models\ModifyLicenseOrderResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseUnBindsRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseUnBindsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLogKafkaAccessRequest.cs" />
     <Compile Include="V20180228\Models\ModifyLogKafkaAccessResponse.cs" />
     <Compile Include="V20180228\Models\ModifyLogKafkaDeliverTypeRequest.cs" />
@@ -1045,6 +1141,8 @@
     <Compile Include="V20180228\Models\ModifyLoginWhiteRecordResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMachineAutoClearConfigRequest.cs" />
     <Compile Include="V20180228\Models\ModifyMachineAutoClearConfigResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyMachineRemarkRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyMachineRemarkResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMaliciousRequestWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\ModifyMaliciousRequestWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
@@ -1055,6 +1153,8 @@
     <Compile Include="V20180228\Models\ModifyNetAttackSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyNetAttackWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\ModifyNetAttackWhiteListResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyOrderAttributeRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyOrderAttributeResponse.cs" />
     <Compile Include="V20180228\Models\ModifyRansomDefenseEventsStatusRequest.cs" />
     <Compile Include="V20180228\Models\ModifyRansomDefenseEventsStatusResponse.cs" />
     <Compile Include="V20180228\Models\ModifyRansomDefenseStrategyStatusRequest.cs" />
@@ -1091,6 +1191,10 @@
     <Compile Include="V20180228\Models\ModifyWebHookRuleResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebHookRuleStatusRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWebHookRuleStatusResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectDirRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectDirResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectSettingRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSwitchRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSwitchResponse.cs" />
     <Compile Include="V20180228\Models\NetAttackEvent.cs" />
@@ -1107,10 +1211,18 @@
     <Compile Include="V20180228\Models\PatchInfoDetail.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PolicyRules.cs" />
+    <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
     <Compile Include="V20180228\Models\PrivilegeEventInfo.cs" />
     <Compile Include="V20180228\Models\PrivilegeRule.cs" />
     <Compile Include="V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="V20180228\Models\ProductStatusInfo.cs" />
+    <Compile Include="V20180228\Models\ProtectDirInfo.cs" />
+    <Compile Include="V20180228\Models\ProtectDirRelatedServer.cs" />
+    <Compile Include="V20180228\Models\ProtectEventLists.cs" />
+    <Compile Include="V20180228\Models\ProtectHostConfig.cs" />
+    <Compile Include="V20180228\Models\ProtectMachine.cs" />
+    <Compile Include="V20180228\Models\ProtectMachineInfo.cs" />
+    <Compile Include="V20180228\Models\ProtectStat.cs" />
     <Compile Include="V20180228\Models\RansomDefenseBackup.cs" />
     <Compile Include="V20180228\Models\RansomDefenseEvent.cs" />
     <Compile Include="V20180228\Models\RansomDefenseRollbackRequest.cs" />
@@ -1158,6 +1270,8 @@
     <Compile Include="V20180228\Models\RiskMainClass.cs" />
     <Compile Include="V20180228\Models\RiskProcessEvent.cs" />
     <Compile Include="V20180228\Models\RuleInfo.cs" />
+    <Compile Include="V20180228\Models\ScanAssetRequest.cs" />
+    <Compile Include="V20180228\Models\ScanAssetResponse.cs" />
     <Compile Include="V20180228\Models\ScanBaselineRequest.cs" />
     <Compile Include="V20180228\Models\ScanBaselineResponse.cs" />
     <Compile Include="V20180228\Models\ScanTaskAgainRequest.cs" />
@@ -1255,6 +1369,7 @@
     <Compile Include="V20180228\Models\VulFixStatusInfo.cs" />
     <Compile Include="V20180228\Models\VulFixStatusSnapshotInfo.cs" />
     <Compile Include="V20180228\Models\VulHostTopInfo.cs" />
+    <Compile Include="V20180228\Models\VulIgnoreRule.cs" />
     <Compile Include="V20180228\Models\VulInfoByCveId.cs" />
     <Compile Include="V20180228\Models\VulInfoHostInfo.cs" />
     <Compile Include="V20180228\Models\VulInfoList.cs" />

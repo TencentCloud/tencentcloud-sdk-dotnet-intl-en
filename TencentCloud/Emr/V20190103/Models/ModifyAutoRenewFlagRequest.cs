@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// NOTIFY_AND_MANUAL_RENEW: Notification of impending expiration, without auto-renewal. NOTIFY_AND_AUTO_RENEW: Notification of impending expiration, with auto-renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: No notification of impending expiration, without auto-renewal.
+        /// NOTIFY_AND_MANUAL_RENEW: The system sends notifications of the upcoming expiration but does not trigger auto‑renewal. NOTIFY_AND_AUTO_RENEW: The system sends notifications of the upcoming expiration and triggers auto‑renewal. DISABLE_NOTIFY_AND_MANUAL_RENEW: The system does not notify before expiration and does not trigger auto-renewal.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }

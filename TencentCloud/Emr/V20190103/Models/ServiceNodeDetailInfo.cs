@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Process node IP
+        /// Process node IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
@@ -37,37 +37,37 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? NodeType{ get; set; }
 
         /// <summary>
-        /// Process name
+        /// Process name.
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// Service component status
+        /// Service component status.
         /// </summary>
         [JsonProperty("ServiceStatus")]
         public long? ServiceStatus{ get; set; }
 
         /// <summary>
-        /// Process monitoring status
+        /// Process monitoring status.
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public long? MonitorStatus{ get; set; }
 
         /// <summary>
-        /// Service component status
+        /// Service component status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Process port information
+        /// Process port information.
         /// </summary>
         [JsonProperty("PortsInfo")]
         public string PortsInfo{ get; set; }
 
         /// <summary>
-        /// Last restart time.
+        /// Latest restart time.
         /// </summary>
         [JsonProperty("LastRestartTime")]
         public string LastRestartTime{ get; set; }
@@ -91,15 +91,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ConfGroupName{ get; set; }
 
         /// <summary>
-        /// Whether the node needs to be restarted
+        /// Whether the node needs to be restarted.
         /// </summary>
         [JsonProperty("ConfStatus")]
         public long? ConfStatus{ get; set; }
 
         /// <summary>
-        /// Process detection information
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process detection information.
         /// </summary>
         [JsonProperty("ServiceDetectionInfo")]
         public ServiceProcessFunctionInfo[] ServiceDetectionInfo{ get; set; }
@@ -111,9 +109,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string NodeFlagFilter{ get; set; }
 
         /// <summary>
-        /// Process health status
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Process health status.
         /// </summary>
         [JsonProperty("HealthStatus")]
         public HealthStatus HealthStatus{ get; set; }
@@ -125,15 +121,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? IsSupportRoleMonitor{ get; set; }
 
         /// <summary>
-        /// Suspension policy
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Suspension policy.
         /// </summary>
         [JsonProperty("StopPolicies")]
         public RestartPolicy[] StopPolicies{ get; set; }
 
         /// <summary>
-        /// Strong validation of the API in a test environment. This strong validation doesn't exist on the current network, but it does exist in the data returned by the emrcc interface. If it’s not applied, an error will be reported. Omitting it will result in an error.
+        /// Strong validation of the API in a test environment. This strong validation does not exist on the current network, but it does exist in the data returned by the emrcc API. If it is not applied, an error will be reported.
         /// </summary>
         [JsonProperty("HAState")]
         public string HAState{ get; set; }
@@ -151,7 +145,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? IsFederation{ get; set; }
 
         /// <summary>
-        /// Whether the DataNode is in maintenance status.
+        /// Whether the DataNode is in the maintenance status.
         /// </summary>
         [JsonProperty("DataNodeMaintenanceState")]
         public long? DataNodeMaintenanceState{ get; set; }

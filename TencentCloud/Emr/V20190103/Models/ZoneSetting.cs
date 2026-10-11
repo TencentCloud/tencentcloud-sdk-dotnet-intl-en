@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Availability zone name
+        /// AZ name.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }

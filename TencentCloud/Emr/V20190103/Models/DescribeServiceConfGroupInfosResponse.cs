@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// List size.
+        /// Number of entries in the list.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

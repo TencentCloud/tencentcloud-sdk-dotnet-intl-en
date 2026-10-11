@@ -25,79 +25,79 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// COS path to script, which has been disused
+        /// Script path on COS, which has been deprecated.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Execution script parameter
+        /// Script execution parameter.
         /// </summary>
         [JsonProperty("Args")]
         public string[] Args{ get; set; }
 
         /// <summary>
-        /// COS bucket name, which has been disused
+        /// COS bucket name, which has been deprecated.
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// COS region name, which has been disused
+        /// COS region name, which has been deprecated.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// COS domain data, which has been disused
+        /// COS domain data, which has been deprecated.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Execution sequence
+        /// Execution order.
         /// </summary>
         [JsonProperty("RunOrder")]
         public long? RunOrder{ get; set; }
 
         /// <summary>
-        /// `resourceAfter` or `clusterAfter`
+        /// Whether resourceAfter or clusterAfter is used.
         /// </summary>
         [JsonProperty("WhenRun")]
         public string WhenRun{ get; set; }
 
         /// <summary>
-        /// Script name, which has been disused
+        /// Script file name, which has been deprecated.
         /// </summary>
         [JsonProperty("CosFileName")]
         public string CosFileName{ get; set; }
 
         /// <summary>
-        /// COS address of script
+        /// COS address of the script.
         /// </summary>
         [JsonProperty("CosFileURI")]
         public string CosFileURI{ get; set; }
 
         /// <summary>
-        /// COS `SecretId`
+        /// COS SecretId.
         /// </summary>
         [JsonProperty("CosSecretId")]
         public string CosSecretId{ get; set; }
 
         /// <summary>
-        /// COS `SecretKey`
+        /// COS SecretKey.
         /// </summary>
         [JsonProperty("CosSecretKey")]
         public string CosSecretKey{ get; set; }
 
         /// <summary>
-        /// COS `appid`, which has been disused
+        /// COS APPID, which has been deprecated.
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

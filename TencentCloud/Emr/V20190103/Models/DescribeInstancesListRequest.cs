@@ -25,41 +25,47 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster filtering policy. Valid values: <li>clusterList: Queries the list of clusters excluding terminated ones.</li><li>monitorManage: Queries the list of clusters excluding those terminated, under creation and not successfully created.</li><li>cloudHardwareManage/componentManage: Two reserved values, which have the same implications as those of `monitorManage`.</li>
+        /// Cluster filtering policy. Valid values:<li>clusterList: Queries the list of clusters except for those that have been terminated.</li><li>monitorManage: Queries the list of clusters except for those that have been terminated, are being created, or fail to be created.</li><li>cloudHardwareManage/componentManage: Currently these two values are reserved and temporarily have the same meaning as monitorManage.</li>
         /// </summary>
         [JsonProperty("DisplayStrategy")]
         public string DisplayStrategy{ get; set; }
 
         /// <summary>
-        /// Page number. Default value: `0`, indicating the first page.
+        /// Page number. The default value is 0, indicating the first page.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+        /// Number of items returned per page. Default value: 100. Maximum value: 100.
         /// If both limit and offset are 0, all records will be queried.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: <li>clusterId: Sorting by instance ID. </li><li>addTime: Sorting by instance creation time.</li><li>status: Sorting by instance status code.</li>
+        /// Sorting field. Valid values:<li>clusterId: sort by instance ID.</li><li>addTime: sort by instance creation time.</li><li>status: sort by instance status code.</li>
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Sort by OrderField in ascending or descending order. Valid values: <li>0: ascending order;</li> <li>1: descending order.</li> The default value is 0.
+        /// Sorts by OrderField in ascending or descending order. Valid values:<li>0: ascending order</li><li>1: descending order</li>The default value is 0.
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }
 
         /// <summary>
-        /// Custom search filter. Examples: <li>instance of filtering by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>instance of filtering by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>instance of filtering by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>.
+        /// Custom search filters. Examples:<li>Filter instances by ClusterId: [{"Name":"ClusterId","Values":["emr-xxxxxxxx"]}]</li><li>Filter instances by clusterName: [{"Name": "ClusterName","Values": ["cluster_name"]}]</li><li>Filter instances by ClusterStatus: [{"Name": "ClusterStatus","Values": ["2"]}]</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
+
+        /// <summary>
+        /// Default value 0 for regular clusters and 2 for TKE clusters.
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public long? ClusterType{ get; set; }
 
 
         /// <summary>
@@ -73,6 +79,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

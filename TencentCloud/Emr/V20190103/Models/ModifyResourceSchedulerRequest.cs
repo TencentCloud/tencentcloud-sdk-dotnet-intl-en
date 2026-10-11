@@ -25,19 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// EMR cluster ID
+        /// English ID of the EMR cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The original scheduler: `fair`
+        /// Old scheduler: fair.
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }
 
         /// <summary>
-        /// The new scheduler: `capacity`
+        /// New scheduler: capacity.
         /// </summary>
         [JsonProperty("NewValue")]
         public string NewValue{ get; set; }

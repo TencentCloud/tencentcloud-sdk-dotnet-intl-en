@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Automatic scaling rule type. 1: Scaling by load metrics; 2: Scaling by time
+        /// Automatic scaling rule type. Valid values: 1 (scaling by load metric) and 2 (scaling by time).
         /// </summary>
         [JsonProperty("StrategyType")]
         public long? StrategyType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoadAutoScaleStrategy[] LoadAutoScaleStrategies{ get; set; }
 
         /// <summary>
-        /// Rule for time-based scaling
+        /// Time-based scaling rule.
         /// </summary>
         [JsonProperty("TimeAutoScaleStrategies")]
         public TimeAutoScaleStrategy[] TimeAutoScaleStrategies{ get; set; }

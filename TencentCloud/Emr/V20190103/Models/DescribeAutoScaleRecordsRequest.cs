@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The instance ID.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -33,32 +33,32 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// Record filter parameter, which can only be "StartTime", "EndTime", "StrategyName", "ActionStatus", or "ScaleAction".
         /// Time format. Either 2006-01-02 15:04:05 or 2006/01/02 15:04:05 for StartTime and EndTime.
-        /// ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), 5 (IN_RETRY).
-        /// ScaleAction: 1 (scale out), 2 (scale in).
+        /// ActionStatus: 0 (INITED), 1 (SUCCESS), 2 (FAILED), 3 (LIMITED_SUCCESSED), 4 (IN_PROCESS), and 5 (IN_RETRY).
+        /// ScaleAction: 1 (scale-out) and 2 (scale-in).
         /// </summary>
         [JsonProperty("Filters")]
         public KeyValue[] Filters{ get; set; }
 
         /// <summary>
-        /// Pagination parameters.
+        /// Pagination parameter.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination parameters. Maximum value: 100
+        /// Number of entries per page. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Whether it is automatic scaling (0) or managed scaling (1)
+        /// Whether it is an auto scaling (0) or managed scaling (1) operation.
         /// </summary>
         [JsonProperty("RecordSource")]
         public long? RecordSource{ get; set; }
 
         /// <summary>
-        /// Ascending or not. 1: ascending, 0: descending.
+        /// Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

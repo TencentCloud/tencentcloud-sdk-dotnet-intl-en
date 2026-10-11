@@ -31,8 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ClusterType{ get; set; }
 
         /// <summary>
-        /// Cluster ID list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of cluster IDs.
         /// </summary>
         [JsonProperty("ClusterIdList")]
         public string[] ClusterIdList{ get; set; }

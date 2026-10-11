@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Description of the returned value.
+        /// Return value description.
         /// </summary>
         [JsonProperty("Info")]
         public string Info{ get; set; }

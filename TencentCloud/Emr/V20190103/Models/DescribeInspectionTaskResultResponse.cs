@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Inspection task record, encoded in Base64 format.
+        /// Inspection task record encoded in Base64 format.
         /// </summary>
         [JsonProperty("InspectionResultInfo")]
         public string InspectionResultInfo{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Category information encoded in Base64 format, which includes {"FixedTime": "Fixed time", "RealTime": "Real time"}.
+        /// Category information encoded in Base64 format. Valid values: {"FixedTime": "fixed time" and "RealTime": "real time"}.
         /// </summary>
         [JsonProperty("TypeInfo")]
         public string TypeInfo{ get; set; }

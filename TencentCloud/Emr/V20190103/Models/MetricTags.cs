@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Metric Unit.
+        /// Metric unit.
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

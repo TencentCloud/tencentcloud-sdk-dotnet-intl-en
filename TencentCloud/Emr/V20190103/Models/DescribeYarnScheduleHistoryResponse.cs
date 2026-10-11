@@ -26,8 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Task details.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tasks")]
         public SchedulerTaskInfo[] Tasks{ get; set; }
@@ -39,17 +37,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// Scheduling type filter list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Scheduling type filter list.
         /// </summary>
         [JsonProperty("SchedulerNameList")]
         public string[] SchedulerNameList{ get; set; }
 
         /// <summary>
-        /// Status filter list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status filter list.
         /// </summary>
         [JsonProperty("StateList")]
         public long?[] StateList{ get; set; }

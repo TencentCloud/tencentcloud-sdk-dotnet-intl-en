@@ -31,8 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Query result array.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Array of query results.
         /// </summary>
         [JsonProperty("QueryInfoList")]
         public TrinoQueryInfo[] QueryInfoList{ get; set; }

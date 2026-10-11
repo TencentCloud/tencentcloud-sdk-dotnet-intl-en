@@ -25,8 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Details of change items.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Change item details.
         /// </summary>
         [JsonProperty("Details")]
         public DiffDetail[] Details{ get; set; }

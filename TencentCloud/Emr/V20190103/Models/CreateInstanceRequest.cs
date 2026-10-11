@@ -25,252 +25,250 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Product ID. Different product IDs stand for different EMR product versions. Valid range:
-        /// 51: STARROCKS-V1.4.0
-        /// 54: STARROCKS-V2.0.0
-        /// 27: KAFKA-V1.0.0
-        /// 50: KAFKA-V2.0.0
-        /// 16: EMR-V2.3.0
-        /// 20: EMR-V2.5.0
-        /// 30: EMR-V2.6.0
-        /// 38: EMR-V2.7.0
-        /// 25: EMR-V3.1.0
-        /// 33: EMR-V3.2.1
-        /// 34: EMR-V3.3.0
-        /// 37: EMR-V3.4.0
-        /// 44: EMR-V3.5.0
-        /// 53: EMR-V3.6.0
+        /// <p>Product ID. Different product IDs indicate different EMR product versions. Valid values:<br>51: STARROCKS-V1.4.0<br>54: STARROCKS-V2.0.0<br>27: KAFKA-V1.0.0<br>50: KAFKA-V2.0.0<br>16: EMR-V2.3.0<br>20: EMR-V2.5.0<br>30: EMR-V2.6.0<br>38: EMR-V2.7.0<br>25: EMR-V3.1.0<br>33: EMR-V3.2.1<br>34: EMR-V3.3.0<br>37: EMR-V3.4.0<br>44: EMR-V3.5.0<br>53: EMR-V3.6.0<br>58: EMR-3.6.1<br>59: EMR-serverless-1.0.0<br>60: EMR-TKE-1.1.0<br>61: SR-V2.1.0<br>62: SR-V2.1.0-SharedData<br>63: SR-V2.1.0.tlinux<br>64: unified metadata management project<br>65: EMR-TKE-AI-1.0.0<br>66: RSS-1.0.0<br>67: SR-V2.2.0<br>68: SR-V2.2.0.tlinux<br>69: EMR-AI-1.1.0<br>70: SR-V2.2.1<br>71: EMR-3.7.0<br>72: EMR-serverless-1.0.1<br>73: KAFKA-2.0.1<br>74: SR-V2.2.2<br>75: EMR-TKE-AI-1.1.0<br>76: EMR-V3.7.1<br>77: SERVERLESS-TCBASE-1.0.0<br>78: EMR-V3.6.2<br>79: STARROCKS-V2.2.2<br>80: EMR-AI-V1.1.1</p>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
-        /// Enter an instance value: `hive` or `flink`.
+        /// <p>List of deployed components. Different EMR product IDs correspond to different optional component lists (ProductId: For details about its meaning, see the ProductId request parameter). For details about how to query optional component lists for different product versions, see <a href="https://www.tencentcloud.com/document/product/589/20279?from_cn_redirect=1">Component Version</a>.<br>Example values: hive and flink.</p>
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
 
         /// <summary>
-        /// Whether to enable high node availability. Valid values:
-        /// <li>0: does not enable high availability of node.</li>
-        /// <li>1: enables high availability of node.</li>
+        /// <p>Whether to enable high availability for the node. Valid values:</p><li>0: disables high availability for the node.</li><li>1: enables high availability for the node.</li>
         /// </summary>
         [JsonProperty("SupportHA")]
         public ulong? SupportHA{ get; set; }
 
         /// <summary>
-        /// Instance name.
-        /// <li>Length limit: 6-36 characters.</li>
-        /// <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
+        /// <p>Instance name.</p><li>The value can contain 6 to 36 characters.</li><li>Only Chinese characters, letters, digits, hyphens (-), and underscores (_) are allowed.</li>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. Valid values:
-        /// <li>0: pay-as-you-go.</li>
+        /// <p>Instance billing mode. Valid values:</p><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Purchase duration of instance, which needs to be used together with `TimeUnit`.
-        /// <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
-        /// <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
+        /// <p>Instance purchase duration, which is used together with TimeUnit.</p><li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li><li>When TimeUnit is set to m, the value set for this parameter indicates the subscription duration of the instance. For example, 1 indicates a one-month subscription.</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Time unit of instance purchase duration. Valid values:
-        /// <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
-        /// <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
+        /// <p>Time unit for purchasing instances. Valid values:</p><li>s: indicates seconds. When PayMode is set to 0, TimeUnit can only be set to s.</li><li>m: indicates months. When PayMode is set to 1, TimeUnit can only be set to m.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Instance login settings. This parameter allows you to set the login password or key for your purchased node.
-        /// <li>If the key is set, the password will be only used for login to the native component WebUI.</li>
-        /// <li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+        /// <p>Instance login settings. This parameter is used to set the login method for the purchased node, either the password or key.</p><li>When a key is set, the password is only used to log in to the native WebUI shortcut entry for the component.</li><li>When no key is set, the password is used to log in to the purchased node as well as the native WebUI shortcut entry for the component.</li>
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+        /// <p>VPC-related information configuration. This parameter can be used to specify the VPC ID, subnet ID, and so on.</p>
         /// </summary>
         [JsonProperty("VPCSettings")]
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// Node resource specification.
+        /// <p>Node resource specifications.</p>
         /// </summary>
         [JsonProperty("ResourceSpec")]
         public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
-        /// Parameter required for enabling COS access.
+        /// <p>Specifies the parameters to be set for enabling COS access.</p>
         /// </summary>
         [JsonProperty("COSSettings")]
         public COSSettings COSSettings{ get; set; }
 
         /// <summary>
-        /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// <p>Location of the instance. This parameter can be used to specify attributes such as the AZ and associated project of the instance.</p>
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
+        /// <p>ID of the security group to which the instance belongs, for example, sg-xxxxxxxx. This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
         /// </summary>
         [JsonProperty("SgId")]
         public string SgId{ get; set; }
 
         /// <summary>
-        /// [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+        /// <p><a href="https://www.tencentcloud.com/document/product/589/35656?from_cn_redirect=1">Bootstrap operation</a> script settings.</p>
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
         public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
 
         /// <summary>
-        /// Whether auto-renewal is enabled. Valid values:
-        /// <li>0: auto-renewal not enabled.</li>
-        /// <li>1: auto-renewal enabled.</li>
+        /// <p>Whether a yearly/monthly subscription instance is automatically renewed. Valid values:</p><li>0: no</li><li>1: yes</li>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// Unique random identifier with the time efficiency of 5 minutes, which needs to be specified by the caller to prevent the client from creating resources again, for example, a9a90aa6-****-****-****-fae36063280.
+        /// <p>Unique random identifier, which is valid for five minutes and needs to be specified by the caller. This prevents the client from repeatedly creating resources. Example value: a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280.</p>
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Whether to enable public IP access for master node. Valid values:
-        /// <li>NEED_MASTER_WAN: enables public IP for master node.</li>
-        /// <li>NOT_NEED_MASTER_WAN: does not enable.</li>Public IP is enabled for master node by default.
+        /// <p>Whether to enable public network access for the cluster Master node. Valid values:</p><li>NEED_MASTER_WAN: yes</li><li>NOT_NEED_MASTER_WAN: no</li>By default, public network access is enabled for the cluster Master node.
         /// </summary>
         [JsonProperty("NeedMasterWan")]
         public string NeedMasterWan{ get; set; }
 
         /// <summary>
-        /// Whether to enable remote public network login, i.e., port 22. When `SgId` is not empty, this parameter does not take effect.
+        /// <p>Whether to enable remote public network login, that is, port 22. If SgId is passed, this parameter is invalid.</p>
         /// </summary>
         [JsonProperty("RemoteLoginAtCreate")]
         public long? RemoteLoginAtCreate{ get; set; }
 
         /// <summary>
-        /// Whether to enable secure cluster. 0: no; other values: yes.
+        /// <p>Whether the security cluster is enabled. Valid values: 0 (no) and values other than 0 (yes).</p>
         /// </summary>
         [JsonProperty("CheckSecurity")]
         public long? CheckSecurity{ get; set; }
 
         /// <summary>
-        /// Accesses to external file system.
+        /// <p>Specifies the external file system to be accessed.</p>
         /// </summary>
         [JsonProperty("ExtendFsField")]
         public string ExtendFsField{ get; set; }
 
         /// <summary>
-        /// Tag description list. This parameter is used to bind a tag to a resource instance.
+        /// <p>List of tag descriptions. When this parameter is specified, tags are bound to the corresponding instance.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// List of spread placement group IDs. Only one can be specified currently.
-        /// This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
+        /// <p>List of dispersed placement group IDs. Currently, only one ID can be specified.<br>This parameter can be obtained by calling the SecurityGroupId field in the response result of <a href="https://www.tencentcloud.com/document/product/213/15486?from_cn_redirect=1">DescribeSecurityGroups</a>.</p>
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
 
         /// <summary>
-        /// CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+        /// <p>CBS encryption disk at the cluster level. Valid values: 0 (not encrypted) and 1 (encrypted). Default value: 0.</p>
         /// </summary>
         [JsonProperty("CbsEncrypt")]
         public ulong? CbsEncrypt{ get; set; }
 
         /// <summary>
-        /// Hive-shared metadatabase type. Valid values:
-        /// <li>EMR_DEFAULT_META: the cluster creates one by default.</li>
-        /// <li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
-        /// <li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+        /// <p>Hive shared metadata database type. Valid values:</p><li>EMR_DEFAULT_META: created by the cluster by default</li><li>EMR_EXIST_META: EMR-MetaDB specified by the cluster</li><li>USER_CUSTOM_META: custom MetaDB used by the cluster</li>
         /// </summary>
         [JsonProperty("MetaType")]
         public string MetaType{ get; set; }
 
         /// <summary>
-        /// EMR-MetaDB instance
+        /// <p>EMR-MetaDB instance.</p>
         /// </summary>
         [JsonProperty("UnifyMetaInstanceId")]
         public string UnifyMetaInstanceId{ get; set; }
 
         /// <summary>
-        /// Custom MetaDB instance information
+        /// <p>Custom MetaDB information.</p>
         /// </summary>
         [JsonProperty("MetaDBInfo")]
         public CustomMetaInfo MetaDBInfo{ get; set; }
 
         /// <summary>
-        /// Custom application role.
+        /// <p>Custom application role.</p>
         /// </summary>
         [JsonProperty("ApplicationRole")]
         public string ApplicationRole{ get; set; }
 
         /// <summary>
-        /// Scenario-based values:
-        /// Hadoop-Kudu
-        /// Hadoop-Zookeeper
-        /// Hadoop-Presto
-        /// Hadoop-Hbase
+        /// <p>Scenario-based values:<br>Hadoop-Kudu<br>Hadoop-Zookeeper<br>Hadoop-Presto<br>Hadoop-Hbase</p>
         /// </summary>
         [JsonProperty("SceneName")]
         public string SceneName{ get; set; }
 
         /// <summary>
-        /// Shared component information
+        /// <p>Shared component information.</p>
         /// </summary>
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
         /// <summary>
-        /// If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+        /// <p>If this parameter is set to 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If this parameter is set to 1, ResourceSpec is deprecated and MultiZoneSettings is used.</p>
         /// </summary>
         [JsonProperty("VersionID")]
         public long? VersionID{ get; set; }
 
         /// <summary>
-        /// `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+        /// <p>true: indicates that cross-AZ deployment is enabled. It is only a user parameter for cluster creation and cannot be adjusted subsequently.</p>
         /// </summary>
         [JsonProperty("MultiZone")]
         public bool? MultiZone{ get; set; }
 
         /// <summary>
-        /// Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+        /// <p>Specifications of node resources. Set one for each AZ. The first is the primary AZ, the second is the secondary AZ, and the third is the arbitration AZ. If cross-AZ is disabled, the length only needs to be 1.</p>
         /// </summary>
         [JsonProperty("MultiZoneSettings")]
         public MultiZoneSetting[] MultiZoneSettings{ get; set; }
 
         /// <summary>
-        /// COS bucket path, which is used when you create StarRocks compute-storage separation clusters.
+        /// <p>COS bucket path, which is used when a StarRocks compute-storage separation cluster is created.</p>
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
         /// <summary>
-        /// Node identifier information: currently used only in Terraform.
+        /// <p>Node flag information, which is currently only provided for the Terraform platform.</p>
         /// </summary>
         [JsonProperty("NodeMarks")]
         public NodeMark[] NodeMarks{ get; set; }
 
         /// <summary>
-        /// CLB id
+        /// <p>CLB id</p>
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// <p>Database type. Valid values: mysql8/tdsql8.</p>
+        /// </summary>
+        [JsonProperty("DefaultMetaVersion")]
+        public string DefaultMetaVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable audit. Valid values: 0 (no) and 1 (yes).</p>
+        /// </summary>
+        [JsonProperty("NeedCdbAudit")]
+        public long? NeedCdbAudit{ get; set; }
+
+        /// <summary>
+        /// <p>Source IP address, which is specified in the security group.</p>
+        /// </summary>
+        [JsonProperty("SgIP")]
+        public string SgIP{ get; set; }
+
+        /// <summary>
+        /// <p>Partition of a partition placement group.</p>
+        /// </summary>
+        [JsonProperty("PartitionNumber")]
+        public long? PartitionNumber{ get; set; }
+
+        /// <summary>
+        /// <p>Service UI address.</p><p>Enumeration values:</p><ul><li>0: Service UI address. Only one service UI address is returned.</li><li>1: Service UI address. If the service has multiple UI addresses, all results are returned, such as Impalad, StateStore, and Catalogd of Impala.</li></ul><p>Default value: 0.</p>
+        /// </summary>
+        [JsonProperty("WebUiVersion")]
+        public long? WebUiVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable cluster-level CBS system disk encryption. Valid values: 0 (no) and 1 (yes).</p>
+        /// </summary>
+        [JsonProperty("CbsSysEncrypt")]
+        public long? CbsSysEncrypt{ get; set; }
 
 
         /// <summary>
@@ -313,6 +311,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamArrayObj(map, prefix + "NodeMarks.", this.NodeMarks);
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
+            this.SetParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+            this.SetParamSimple(map, prefix + "SgIP", this.SgIP);
+            this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+            this.SetParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
+            this.SetParamSimple(map, prefix + "CbsSysEncrypt", this.CbsSysEncrypt);
         }
     }
 }

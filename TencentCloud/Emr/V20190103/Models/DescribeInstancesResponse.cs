@@ -25,21 +25,19 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Number of eligible instances.
+        /// 
         /// </summary>
         [JsonProperty("TotalCnt")]
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// List of EMR instance details.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("ClusterList")]
         public ClusterInstancesInfo[] ClusterList{ get; set; }
 
         /// <summary>
-        /// List of tag keys associated to an instance.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }

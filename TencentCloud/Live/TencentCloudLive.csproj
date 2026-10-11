@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1294</VersionPrefix>
+    <VersionPrefix>3.0.1407</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,8 +176,6 @@
     <Compile Include="V20180801\Models\DescribeLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainsRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveDomainsResponse.cs" />
-    <Compile Include="V20180801\Models\DescribeLiveForbidStreamListRequest.cs" />
-    <Compile Include="V20180801\Models\DescribeLiveForbidStreamListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePullStreamTasksRequest.cs" />
@@ -228,6 +226,8 @@
     <Compile Include="V20180801\Models\DescribeLiveWatermarkRulesResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveWatermarksRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveWatermarksResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeOriginWhiteIpListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeOriginWhiteIpListResponse.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeDetailInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribePlayErrorCodeSumInfoListRequest.cs" />
@@ -269,7 +269,6 @@
     <Compile Include="V20180801\Models\ForbidLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\ForbidLiveStreamRequest.cs" />
     <Compile Include="V20180801\Models\ForbidLiveStreamResponse.cs" />
-    <Compile Include="V20180801\Models\ForbidStreamInfo.cs" />
     <Compile Include="V20180801\Models\GroupProIspDataInfo.cs" />
     <Compile Include="V20180801\Models\HlsSpecialParam.cs" />
     <Compile Include="V20180801\Models\HttpCodeInfo.cs" />

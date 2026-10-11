@@ -25,40 +25,39 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Original price.
+        /// Original price (CNY).
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// Discounted price (CNY).
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }
 
         /// <summary>
-        /// Time unit of resizing. Valid values:
-        /// <li>s: second.</li>
+        /// Time unit for the configuration change. Valid values:
+        /// <li>s: indicates second.</li>
+        /// <li>m: indicates month.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Desizing duration.
+        /// 
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Pricing details
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price details.
         /// </summary>
         [JsonProperty("PriceDetail")]
         public PriceDetail[] PriceDetail{ get; set; }
 
         /// <summary>
-        /// New configuration price.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Price of the new configuration.
         /// </summary>
         [JsonProperty("NewConfigPrice")]
         public PriceResult NewConfigPrice{ get; set; }

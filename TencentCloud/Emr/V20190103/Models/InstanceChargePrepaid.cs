@@ -25,16 +25,15 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The period of monthly subscription, which defaults to 1 and is expressed in month.
-        /// Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60.
+        /// Yearly/monthly subscription duration. Default value: 1. Unit: month.Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, and 60.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// Whether to enable auto-renewal. Valid values:
-        /// <li>`true`: Enable</li>
-        /// <li>`false` (default): Disable</li>
+        /// Whether to enable auto-renewal, which defaults to no.
+        /// <li>true: yes</li>
+        /// <li>false: no</li>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public bool? RenewFlag{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Minimum number of CPUs
+        /// Minimum number of required CPU cores.
         /// </summary>
         [JsonProperty("RequestCpu")]
         public float? RequestCpu{ get; set; }
 
         /// <summary>
-        /// Maximum number of CPUs
+        /// Maximum number of required CPU cores.
         /// </summary>
         [JsonProperty("LimitCpu")]
         public float? LimitCpu{ get; set; }
 
         /// <summary>
-        /// Minimum memory in MB
+        /// Minimum required memory capacity (MB).
         /// </summary>
         [JsonProperty("RequestMemory")]
         public float? RequestMemory{ get; set; }
 
         /// <summary>
-        /// Maximum memory in MB
+        /// Maximum required memory capacity (MB).
         /// </summary>
         [JsonProperty("LimitMemory")]
         public float? LimitMemory{ get; set; }

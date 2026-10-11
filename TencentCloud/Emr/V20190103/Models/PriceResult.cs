@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discount price.
+        /// Discounted price.
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }

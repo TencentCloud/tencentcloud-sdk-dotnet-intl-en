@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoadAutoScaleStrategy LoadAutoScaleStrategy{ get; set; }
 
         /// <summary>
-        /// Rule for time-based scaling
+        /// Time-based scaling rule.
         /// </summary>
         [JsonProperty("TimeAutoScaleStrategy")]
         public TimeAutoScaleStrategy TimeAutoScaleStrategy{ get; set; }

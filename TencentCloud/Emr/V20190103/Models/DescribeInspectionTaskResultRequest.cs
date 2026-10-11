@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Page size.
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

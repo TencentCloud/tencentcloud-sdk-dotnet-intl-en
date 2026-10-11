@@ -25,106 +25,118 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Configuration ID.
+        /// <p>Configuration ID.</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// Cluster instance ID.
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public long? ClusterId{ get; set; }
 
         /// <summary>
-        /// Minimum number of instances retained for automatic scaling
+        /// <p>Minimum number of reserved instances for auto scaling.</p>
         /// </summary>
         [JsonProperty("ScaleLowerBound")]
         public long? ScaleLowerBound{ get; set; }
 
         /// <summary>
-        /// Maximum number of instances for auto scaling
+        /// <p>Maximum number of instances for auto scaling.</p>
         /// </summary>
         [JsonProperty("ScaleUpperBound")]
         public long? ScaleUpperBound{ get; set; }
 
         /// <summary>
-        /// Scale-out rule type. 1: load-based scale-out rule, 2: time-based scale-out rule
+        /// <p>Scale-out rule type. Valid values: 1 (scale-out rule by load metrics) and 2 (scale-out rule by time).</p>
         /// </summary>
         [JsonProperty("StrategyType")]
         public long? StrategyType{ get; set; }
 
         /// <summary>
-        /// Next scale-out time.
+        /// <p>Next scale-out time.</p>
         /// </summary>
         [JsonProperty("NextTimeCanScale")]
         public ulong? NextTimeCanScale{ get; set; }
 
         /// <summary>
-        /// Graceful scale-in switch.
+        /// <p>Graceful scale-in switch.</p>
         /// </summary>
         [JsonProperty("GraceDownFlag")]
         public bool? GraceDownFlag{ get; set; }
 
         /// <summary>
-        /// "CVM" indicates that the CVM type is used for all specifications, and "Pod" indicates that the container type is used for specifications. The default value is "CVM".
+        /// <p>&quot;CVM&quot; indicates that all specifications use CVM-related types, and &quot;POD&quot; indicates that specifications use container-related types. The default value is &quot;CVM&quot;.</p>
         /// </summary>
         [JsonProperty("HardwareType")]
         public string HardwareType{ get; set; }
 
         /// <summary>
-        /// "POSTPAY" indicates the sole adoption of pay-as-you-go, and "SPOT_FIRST" indicates spot instance first, which is only supported when HardwareType is "HOST". "Pod" only supports pay-as-you-go.
+        /// <p>&quot;POSTPAY&quot; indicates that only pay-as-you-go billing is used. &quot;SPOT_FIRST&quot; indicates that spot instances are preferred, which is supported only when HardwareType is &quot;HOST&quot;. &quot;POD&quot; only supports pure pay-as-you-go billing.</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// The minimum percentage of pay-as-you-go resources in scenarios with spot instance first. It is an integer.
+        /// <p>Minimum percentage of pay-as-you-go resources in the scenario where spot instances are preferred. It is an integer.</p>
         /// </summary>
         [JsonProperty("PostPayPercentMin")]
         public long? PostPayPercentMin{ get; set; }
 
         /// <summary>
-        /// When resource type is preset to HOST: Supports enabling/disabling "Fallback to pod when resources are insufficient"; Default state: 0 (disabled), Toggle state: 1 (enabled).
+        /// <p>When the preset resource type is HOST, you can select &quot;switch to POD when resources are insufficient&quot; or clear the selection. 0 indicates that it is not selected by default (0), and 1 indicates that it is selected.</p>
         /// </summary>
         [JsonProperty("ChangeToPod")]
         public long? ChangeToPod{ get; set; }
 
         /// <summary>
-        /// Scaling group name.
+        /// <p>Scaling group name.</p>
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Tag.
+        /// <p>Tag.</p>
         /// </summary>
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
         /// <summary>
-        /// Scaling group status.
+        /// <p>Corresponding computing group.</p>
+        /// </summary>
+        [JsonProperty("WarehouseName")]
+        public string WarehouseName{ get; set; }
+
+        /// <summary>
+        /// <p>Scaling group status.</p>
         /// </summary>
         [JsonProperty("GroupStatus")]
         public long? GroupStatus{ get; set; }
 
         /// <summary>
-        /// Parallel scaling. 0: disabled; 1: enabled.
+        /// <p>Parallel scaling. Valid values: 0 (disabled) and 1 (enabled).</p>
         /// </summary>
         [JsonProperty("Parallel")]
         public long? Parallel{ get; set; }
 
         /// <summary>
-        /// Whether MNode is supported.
+        /// <p>Whether MNode is supported.</p>
         /// </summary>
         [JsonProperty("EnableMNode")]
         public long? EnableMNode{ get; set; }
 
         /// <summary>
-        /// More scaling group settings.
+        /// <p>More scaling group settings.</p>
         /// </summary>
         [JsonProperty("ExtraAdvanceAttrs")]
         public AutoScaleGroupAdvanceAttrs ExtraAdvanceAttrs{ get; set; }
+
+        /// <summary>
+        /// <p>Custom hostname.</p>
+        /// </summary>
+        [JsonProperty("CustomNodeName")]
+        public string CustomNodeName{ get; set; }
 
 
         /// <summary>
@@ -145,10 +157,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+            this.SetParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
             this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
             this.SetParamSimple(map, prefix + "Parallel", this.Parallel);
             this.SetParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
             this.SetParamObj(map, prefix + "ExtraAdvanceAttrs.", this.ExtraAdvanceAttrs);
+            this.SetParamSimple(map, prefix + "CustomNodeName", this.CustomNodeName);
         }
     }
 }

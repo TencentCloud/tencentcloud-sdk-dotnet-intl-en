@@ -25,38 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster name.
+        /// <p>Cluster name.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User group name.
+        /// <p>User group name.</p>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// User list.
+        /// <p>User list.</p>
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// User group description.
+        /// <p>User group description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Enumeration class. Valid values: ADD, DELETE, SYNC.
-        /// 
-        /// 
-        /// Enumeration class description.
-        /// - ADD: Batched users to add. Adding the same user multiple times will not trigger an error.
-        /// - DELETE: Batched users to remove from the user group. Deleting non-existing users will not trigger an error.
-        /// - SYNC: Overwrites the entire user group. An empty list clears all existing members.
-        /// Defaults to SYNC.
+        /// <p>Enumeration class. Valid values: ADD, DELETE, and SYNC.</p><p>Enumeration class description:</p><ul><li>ADD: Users added in batches. Adding the same user for multiple times does not trigger an error.</li><li>DELETE: Users deleted from the user group in batches. Deleting a non-existing user does not trigger an error.</li><li>SYNC: Used to synchronize the entire user group. If the list is empty, the entire user group is cleared.<br>Default value: SYNC.</li></ul>
         /// </summary>
         [JsonProperty("OperateAction")]
         public string OperateAction{ get; set; }

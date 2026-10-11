@@ -25,15 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Specific time for repetition task execution, such as 01:02:00.
+        /// Specific time for repetition task execution, for example, 01:02:00.
         /// </summary>
         [JsonProperty("ExecuteAtTimeOfDay")]
         public string ExecuteAtTimeOfDay{ get; set; }
 
         /// <summary>
-        /// Ordinal number description of the day of a week, for example, [1,3,4] indicates Monday, Wednesday, and Thursday.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of the day within a week. For example, [1,3,4] indicates Monday, Wednesday, and Thursday.
         /// </summary>
         [JsonProperty("DaysOfWeek")]
         public ulong?[] DaysOfWeek{ get; set; }

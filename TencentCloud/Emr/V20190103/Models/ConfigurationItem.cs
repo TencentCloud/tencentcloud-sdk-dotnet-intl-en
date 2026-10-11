@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Value{ get; set; }
 
         /// <summary>
-        /// Name of the configuration file where the configuration item is located.
+        /// Name of the configuration file where the configuration items are located.
         /// </summary>
         [JsonProperty("InFile")]
         public string InFile{ get; set; }

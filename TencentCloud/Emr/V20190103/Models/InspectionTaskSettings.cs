@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Unique identifier for inspection tasks.
+        /// Unique identifier for the inspection task.
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public TaskSettings[] TaskSettings{ get; set; }
 
         /// <summary>
-        /// Whether it is selected, with the valid values of "true" and "false".
+        /// Whether it is selected. Valid values: "true" and "false".
         /// </summary>
         [JsonProperty("Selected")]
         public string Selected{ get; set; }

@@ -32,10 +32,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public string StopPolicy{ get; set; }
 
         /// <summary>
-        /// Thread Count
+        /// Number of threads.
         /// </summary>
         [JsonProperty("ThreadCount")]
         public long? ThreadCount{ get; set; }
+
+        /// <summary>
+        /// Graceful stop timeout period (s).
+        /// </summary>
+        [JsonProperty("GraceDownTime")]
+        public long? GraceDownTime{ get; set; }
 
 
         /// <summary>
@@ -45,6 +51,7 @@ namespace TencentCloud.Emr.V20190103.Models
         {
             this.SetParamSimple(map, prefix + "StopPolicy", this.StopPolicy);
             this.SetParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+            this.SetParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
         }
     }
 }

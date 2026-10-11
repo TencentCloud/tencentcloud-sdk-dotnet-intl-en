@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Conditional comparison method. 1: greater than, 2: less than, 3: greater than or equal to, 4: less than or equal to
+        /// Condition comparison method. Valid values: 1 for greater than, 2 for less than, 3 for greater than or equal to, and 4 for less than or equal to.
         /// </summary>
         [JsonProperty("CompareMethod")]
         public long? CompareMethod{ get; set; }
 
         /// <summary>
-        /// Conditional threshold.
+        /// Condition threshold.
         /// </summary>
         [JsonProperty("Threshold")]
         public float? Threshold{ get; set; }

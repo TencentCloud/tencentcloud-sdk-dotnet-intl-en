@@ -25,21 +25,23 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID in the format of emr-xxxxxxxx
+        /// Cluster ID, such as emr-xxxxxxxx.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Node flag. Valid values:
-        /// <li>all: gets the information of nodes in all types except TencentDB information.</li>
-        /// <li>master: gets master node information.</li>
-        /// <li>core: gets core node information.</li>
-        /// <li>task: gets task node information.</li>
-        /// <li>common: gets common node information.</li>
-        /// <li>router: gets router node information.</li>
-        /// <li>db: gets TencentDB information in normal status.</li>
-        /// Note: only the above values are supported for the time being. Entering other values will cause errors.
+        /// Node identifier. Valid values:
+        /// <li>all: indicates retrieving all types of nodes, except CDB information.</li>
+        /// <li>master: indicates retrieving Master node information.</li>
+        /// <li>core: indicates retrieving Core node information.</li>
+        /// <li>task: indicates retrieving Task node information.</li>
+        /// <li>common: indicates retrieving Common node information.</li>
+        /// <li>router: indicates retrieving Router node information.</li>
+        /// <li>db: indicates retrieving CDB information in the normal status.</li>
+        /// <li>recyle: indicates retrieving information of nodes isolated in the recycle bin, including CDB information.</li>
+        /// <li>renew: indicates retrieving information of all nodes pending renewal, including CDB information. Auto-renewed nodes will not be returned.</li>
+        /// Note: Only the values above are supported currently. Entering other values will result in an error.
         /// </summary>
         [JsonProperty("NodeFlag")]
         public string NodeFlag{ get; set; }
@@ -51,38 +53,38 @@ namespace TencentCloud.Emr.V20190103.Models
         public bool? ExportDb{ get; set; }
 
         /// <summary>
-        /// Page number. Default value: 0, indicating the first page.
+        /// Page number. The default value is 0, indicating the first page.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of records to be returned per page. The default value is 100, and the maximum value is 100.
+        /// Number of items returned per page. Default value: 100. Maximum value: 100.
         /// If both offset and limit are not set, or both are set to 0, all data will be returned.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Resource type. Valid values: all, host, pod. Default value: all
+        /// Resource type. Valid values: all (default), host, and pod.
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
         /// <summary>
-        /// Searchable field
+        /// Searchable fields.
         /// </summary>
         [JsonProperty("SearchFields")]
         public SearchItem[] SearchFields{ get; set; }
 
         /// <summary>
-        /// Order field.
+        /// Sorting field.
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// Ascending or not. 1: ascending; 0: descending.
+        /// Whether to sort data in ascending order. Valid values: 1 (yes) and 0 (no).
         /// </summary>
         [JsonProperty("Asc")]
         public long? Asc{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node type: Master/Core/Task/Router/Common.
+        /// Node type. Valid values: Master/Core/Task/Router/Common.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }

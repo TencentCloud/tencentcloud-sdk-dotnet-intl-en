@@ -25,29 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The description of master nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of Master node resources.
         /// </summary>
         [JsonProperty("MasterResourceSpec")]
         public NodeResourceSpec MasterResourceSpec{ get; set; }
 
         /// <summary>
-        /// The description of core nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of Core node resources.
         /// </summary>
         [JsonProperty("CoreResourceSpec")]
         public NodeResourceSpec CoreResourceSpec{ get; set; }
 
         /// <summary>
-        /// The description of task nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of Task node resources.
         /// </summary>
         [JsonProperty("TaskResourceSpec")]
         public NodeResourceSpec TaskResourceSpec{ get; set; }
 
         /// <summary>
-        /// The description of common nodes.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of Common node resources.
         /// </summary>
         [JsonProperty("CommonResourceSpec")]
         public NodeResourceSpec CommonResourceSpec{ get; set; }
@@ -59,19 +55,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? MasterCount{ get; set; }
 
         /// <summary>
-        /// Number of core nodes.
+        /// Number of Core nodes.
         /// </summary>
         [JsonProperty("CoreCount")]
         public long? CoreCount{ get; set; }
 
         /// <summary>
-        /// Number of task nodes.
+        /// Number of Task nodes.
         /// </summary>
         [JsonProperty("TaskCount")]
         public long? TaskCount{ get; set; }
 
         /// <summary>
-        /// Number of common nodes.
+        /// Number of Common nodes.
         /// </summary>
         [JsonProperty("CommonCount")]
         public long? CommonCount{ get; set; }

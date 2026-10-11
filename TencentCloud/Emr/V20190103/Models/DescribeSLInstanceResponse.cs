@@ -37,7 +37,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Instance billing mode. 0 indicates postpaid, i.e., pay-as-you-go; 1 indicates prepaid, i.e., monthly subscription.
+        /// Instance billing mode. Valid values: 0 (postpaid, that is, pay-as-you-go) and 1 (prepaid, that is, yearly/monthly subscription).
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Instance single-node disk capacity, in GB.
+        /// Instance single-node disk capacity (GB).
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
@@ -68,7 +68,6 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// List of tags bound to the instance.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -92,13 +91,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance expiration time. For post-paid instances, the API returns 0000-00-00 00:00:00.
+        /// Instance expiration time. For postpaid instances, 0000-00-00 00:00:00 is returned.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Instance isolation time. For instances that are not isolated, the API returns 0000-00-00 00:00:00.
+        /// Instance isolation time. For instances that are not isolated, 0000-00-00 00:00:00 is returned.
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
@@ -110,13 +109,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Instance status code: -2: "TERMINATED", 2: "RUNNING", 14: "TERMINATING", 19: "ISOLATING", 22: "ADJUSTING", and 201: "ISOLATED".
+        /// Instance status code. Valid values: -2 ("TERMINATED"), 2 ("RUNNING"), 14 ("TERMINATING"), 19 ("ISOLATING"), 22 ("ADJUSTING"), and 201 ("ISOLATED").
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 0: notify before expiration but do not auto-renew; 1: notify before expiration and auto-renew; and 2: do not notify before expiration and do not auto-renew. If the business does not support renewal, the value is 0.
+        /// Auto-renewal flag. Valid values: 0 (notifies before expiration but does not trigger auto-renewal), 1 (notifies before expiration and triggers auto-renewal), and 2 (does not notify before expiration and does not trigger auto-renewal). If the business does not support renewal, the value is 0.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -128,7 +127,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? NodeNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Serverless Instance infomation
         /// </summary>
         [JsonProperty("SLInstance")]
         public SLInstance[] SLInstance{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Parameter key
+        /// Parameter key.
         /// </summary>
         [JsonProperty("PKey")]
         public string PKey{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Attribute{ get; set; }
 
         /// <summary>
-        /// Currently effective.
+        /// Effective item.
         /// </summary>
         [JsonProperty("InEffect")]
         public string InEffect{ get; set; }
 
         /// <summary>
-        /// To be effective.
+        /// Pending effective.
         /// </summary>
         [JsonProperty("PendingEffectiveness")]
         public string PendingEffectiveness{ get; set; }

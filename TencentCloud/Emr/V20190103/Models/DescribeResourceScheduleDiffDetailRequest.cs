@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Scheduler for the queried change details. The available values are fair and capacity. If this parameter is not passed or a null value is passed, the latest scheduler will be used.
+        /// Scheduler for the queried change details. Valid values: fair and capacity. If this parameter is not passed or an empty value is passed, the latest scheduler is used.
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

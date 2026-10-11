@@ -31,8 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// StarRocks information list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// StarRocks query information list.
         /// </summary>
         [JsonProperty("DAGInfoList")]
         public DAGInfo[] DAGInfoList{ get; set; }

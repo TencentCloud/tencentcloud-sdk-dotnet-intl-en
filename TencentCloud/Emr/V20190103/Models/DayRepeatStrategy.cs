@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Specific time for repetition task execution, such as 01:02:00.
+        /// Specific time for repetition task execution, for example, 01:02:00.
         /// </summary>
         [JsonProperty("ExecuteAtTimeOfDay")]
         public string ExecuteAtTimeOfDay{ get; set; }
 
         /// <summary>
-        /// Executing every Step days.
+        /// Execute every Step days.
         /// </summary>
         [JsonProperty("Step")]
         public ulong? Step{ get; set; }

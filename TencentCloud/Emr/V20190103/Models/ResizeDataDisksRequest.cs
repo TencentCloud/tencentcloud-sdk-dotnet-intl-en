@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID of the EMR cluster instance.
+        /// ID of the EMR cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] CvmInstanceIds{ get; set; }
 
         /// <summary>
-        /// ID of the cloud disk to be scaled out.
+        /// ID of the cloud disks to be scaled out.
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

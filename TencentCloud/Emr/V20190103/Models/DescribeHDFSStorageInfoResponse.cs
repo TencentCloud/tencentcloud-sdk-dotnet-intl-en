@@ -31,8 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? SampleTime{ get; set; }
 
         /// <summary>
-        /// Hdfs storage details.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// HDFS storage details.
         /// </summary>
         [JsonProperty("StorageSummaryDistribution")]
         public StorageSummaryDistribution[] StorageSummaryDistribution{ get; set; }

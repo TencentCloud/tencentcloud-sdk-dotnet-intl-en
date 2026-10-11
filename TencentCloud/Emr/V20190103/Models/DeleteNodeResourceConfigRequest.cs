@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? ResourceConfigId{ get; set; }
 
         /// <summary>
-        /// Node type: CORE, TASK, and ROUTER.
+        /// Node type. Valid values: CORE, TASK, and ROUTER.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// The type can be ComputeResource, EMR, or a default value. The default value is EMR.
+        /// Type. Valid values: ComputeResource and EMR. Default value: EMR.
         /// </summary>
         [JsonProperty("ResourceBaseType")]
         public string ResourceBaseType{ get; set; }

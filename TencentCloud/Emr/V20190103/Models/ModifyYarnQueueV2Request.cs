@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Scheduler type. The values are as follows:
+        /// Scheduler type. Valid values:
         /// 
         /// 1. capacity
         /// 2. fair
@@ -40,7 +40,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// Resource pool data
+        /// Resource pool data.
         /// </summary>
         [JsonProperty("ConfigModifyInfoList")]
         public ConfigModifyInfoV2[] ConfigModifyInfoList{ get; set; }

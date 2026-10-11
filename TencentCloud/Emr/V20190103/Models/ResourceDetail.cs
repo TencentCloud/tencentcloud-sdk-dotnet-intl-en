@@ -61,7 +61,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Number of CPUs.
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

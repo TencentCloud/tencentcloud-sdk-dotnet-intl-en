@@ -25,22 +25,28 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// <p>Cluster ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Username
+        /// <p>Username.</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Password
+        /// <p>Password.</p>
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to synchronize the password.</p>
+        /// </summary>
+        [JsonProperty("SyncPwd")]
+        public bool? SyncPwd{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
+            this.SetParamSimple(map, prefix + "SyncPwd", this.SyncPwd);
         }
     }
 }

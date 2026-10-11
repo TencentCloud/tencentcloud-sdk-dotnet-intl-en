@@ -25,31 +25,31 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Table name
+        /// Table name.
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
-        /// Number of read requests
+        /// Number of read requests.
         /// </summary>
         [JsonProperty("ReadRequestCount")]
         public float? ReadRequestCount{ get; set; }
 
         /// <summary>
-        /// Number of write requests
+        /// Number of write requests.
         /// </summary>
         [JsonProperty("WriteRequestCount")]
         public float? WriteRequestCount{ get; set; }
 
         /// <summary>
-        /// Current memstore size
+        /// Size of the current MemStore.
         /// </summary>
         [JsonProperty("MemstoreSize")]
         public float? MemstoreSize{ get; set; }
 
         /// <summary>
-        /// Size of StoreFile in the current region
+        /// Size of the StoreFile in the current region.
         /// </summary>
         [JsonProperty("StoreFileSize")]
         public float? StoreFileSize{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// StoreFile quantity. 
+        /// Number of StoreFiles.
         /// </summary>
         [JsonProperty("StoreFileNum")]
         public float? StoreFileNum{ get; set; }

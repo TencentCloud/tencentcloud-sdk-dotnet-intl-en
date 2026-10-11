@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Total scale-in and scale-out records.
+        /// Total number of scaling records.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

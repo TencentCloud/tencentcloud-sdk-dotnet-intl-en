@@ -25,15 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Specific time for repetition task execution, such as 01:02:00.
+        /// Specific time for repetition task execution, for example, 01:02:00.
         /// </summary>
         [JsonProperty("ExecuteAtTimeOfDay")]
         public string ExecuteAtTimeOfDay{ get; set; }
 
         /// <summary>
-        /// Description of time period in days of the month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Description of the day range within a month. The length must be 2. For example, [2,10] indicates from the 2nd day to the 10th day every month.
         /// </summary>
         [JsonProperty("DaysOfMonthRange")]
         public ulong?[] DaysOfMonthRange{ get; set; }

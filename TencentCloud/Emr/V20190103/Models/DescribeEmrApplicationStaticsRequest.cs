@@ -25,67 +25,67 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time in the format of timestamp. Unit: seconds.
+        /// Start timestamp (s).
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// End time in the format of timestamp. Unit: seconds.
+        /// End timestamp (s).
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Queue name used for filtering
+        /// Filtered queue name.
         /// </summary>
         [JsonProperty("Queues")]
         public string[] Queues{ get; set; }
 
         /// <summary>
-        /// Username used for filtering
+        /// Filtered username.
         /// </summary>
         [JsonProperty("Users")]
         public string[] Users{ get; set; }
 
         /// <summary>
-        /// Application type used for filtering
+        /// Filtered job type.
         /// </summary>
         [JsonProperty("ApplicationTypes")]
         public string[] ApplicationTypes{ get; set; }
 
         /// <summary>
-        /// Group field. Valid values: `queue`, `user`, and `applicationType`.
+        /// Grouping field. Valid values: queue, user, and applicationType.
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: `sumMemorySeconds`, `sumVCoreSeconds`, `sumHDFSBytesWritten`, and `sumHDFSBytesRead`.
+        /// Sorting field. Valid values: sumMemorySeconds, sumVCoreSeconds, sumHDFSBytesWritten, and sumHDFSBytesRead.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Order type. Valid values: `0` (descending) and `1`(ascending).
+        /// Sorting order. Valid values: 0 (descending) and 1 (ascending).
         /// </summary>
         [JsonProperty("IsAsc")]
         public long? IsAsc{ get; set; }
 
         /// <summary>
-        /// Page number
+        /// Page number.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Page capacity in the range of [10,100].
+        /// Number of entries per page. Value range: [10, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

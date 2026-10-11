@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Directory for mounting the host in the pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+        /// Directory for mounting the host in the Pod. As the mount point of the host in the resource, a specified mount point corresponds to the host path and is used as the data storage directory in the Pod.
         /// </summary>
         [JsonProperty("VolumePath")]
         public string VolumePath{ get; set; }

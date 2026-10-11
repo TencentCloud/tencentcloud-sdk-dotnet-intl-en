@@ -31,7 +31,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Time unit, "m" stands for month.
+        /// Time unit. "m" stands for month(s).
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

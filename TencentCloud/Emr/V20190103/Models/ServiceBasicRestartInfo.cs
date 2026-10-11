@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The service name (required), such as HDFS.
+        /// Service name, required. Example: HDFS.
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// If it is left empty, all processes will be operated on.
+        /// If not provided, it indicates all processes.
         /// </summary>
         [JsonProperty("ComponentInfoList")]
         public ComponentBasicRestartInfo[] ComponentInfoList{ get; set; }

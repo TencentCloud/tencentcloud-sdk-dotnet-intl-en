@@ -31,8 +31,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ServiceComponentName{ get; set; }
 
         /// <summary>
-        /// Configuration group name, for example, hdfs-core-defaultGroup. If the ConfGroupName parameter is passed in, the configuration group dimension is used.
-        ///                                                              If the ConfGroupName parameter is not passed in, the cluster dimension is used.
+        /// Configuration group name, such as hdfs-core-defaultGroup. The ConfGroupName parameter is passed in to represent the configuration group dimension.
+        ///                                                              If the ConfGroupName parameter is not passed, the cluster dimension is used.
         /// </summary>
         [JsonProperty("ConfGroupName")]
         public string ConfGroupName{ get; set; }

@@ -31,45 +31,43 @@ namespace TencentCloud.Emr.V20190103.Models
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// Cooling time after policy trigger, during which auto scaling cannot be triggered.
+        /// Cooldown time after the policy is triggered, during which auto scaling cannot be triggered.
         /// </summary>
         [JsonProperty("IntervalTime")]
         public ulong? IntervalTime{ get; set; }
 
         /// <summary>
-        /// Scaling action. 1: scale-out, 2: scale-in.
+        /// Scaling action. Valid values: 1 (scale-out) and 2 (scale-in).
         /// </summary>
         [JsonProperty("ScaleAction")]
         public ulong? ScaleAction{ get; set; }
 
         /// <summary>
-        /// Scaling amount.
+        /// Number of scaling operations.
         /// </summary>
         [JsonProperty("ScaleNum")]
         public ulong? ScaleNum{ get; set; }
 
         /// <summary>
-        /// Rule status. 1: valid; 2: invalid; 3: suspended. This field is required.
+        /// (Required) Rule status. Valid values: 1 (valid), 2 (invalid), and 3 (suspended).
         /// </summary>
         [JsonProperty("StrategyStatus")]
         public ulong? StrategyStatus{ get; set; }
 
         /// <summary>
-        /// Rule priority. The smaller value indicates the higher priority.
+        /// Rule priority. A smaller value indicates a higher priority.
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// When multiple rules are triggered at the same time and some are not really executed, retries will be performed within this time range.
+        /// When multiple rules are triggered at the same time and some are not really executed, retries are performed within this time range.
         /// </summary>
         [JsonProperty("RetryValidTime")]
         public ulong? RetryValidTime{ get; set; }
 
         /// <summary>
-        /// Time scaling repetition policy
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time scaling repetition policy.
         /// </summary>
         [JsonProperty("RepeatStrategy")]
         public RepeatStrategy RepeatStrategy{ get; set; }
@@ -93,9 +91,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? GraceDownTime{ get; set; }
 
         /// <summary>
-        /// Bound tag list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable task protection.
+        /// </summary>
+        [JsonProperty("GraceDownProtectFlag")]
+        public bool? GraceDownProtectFlag{ get; set; }
+
+        /// <summary>
+        /// Bound tag list.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
@@ -107,44 +109,41 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ConfigGroupAssigned{ get; set; }
 
         /// <summary>
-        /// Calculation method of scale-out resources. Valid values: "DEFAULT","INSTANCE", "CPU" and "MEMORYGB".
-        /// "DEFAULT" indicates the default method, which is the same as "INSTANCE".
-        /// "INSTANCE" indicates calculation based on nodes (default mode).
-        /// "CPU" indicates calculation based on the quantity of cores of the machine.
-        /// "MEMORYGB" indicates calculation based on the memory size of the machine.
+        /// Calculation method for scaled‑out resources. Valid values: "DEFAULT", "INSTANCE", "CPU", and "MEMORYGB".
+        /// "DEFAULT" indicates the default calculation method, which is identical to "INSTANCE".
+        /// "INSTANCE" indicates the calculation method based on nodes. This is the default method.
+        /// "CPU" indicates the calculation method based on the number of cores of the machine.
+        /// "MEMORYGB" indicates the calculation method based on the memory size of the machine.
         /// </summary>
         [JsonProperty("MeasureMethod")]
         public string MeasureMethod{ get; set; }
 
         /// <summary>
-        /// Termination policy. "DEFAULT" denotes the default policy, which indicates that scale-in is triggered by scale-in rules. "TIMING" denotes timed destruction.
+        /// Termination policy. "DEFAULT" indicates the default policy with which the scale-in is triggered by using scale-in rules. "TIMING" indicates scheduled termination.
         /// </summary>
         [JsonProperty("TerminatePolicy")]
         public string TerminatePolicy{ get; set; }
 
         /// <summary>
-        /// Maximum use time in seconds. The minimum value is 1 hour, and the maximum is 24 hours.
+        /// Maximum usage time. The minimum value is 1 hour, and the maximum value is 24 hours.
         /// </summary>
         [JsonProperty("MaxUse")]
         public long? MaxUse{ get; set; }
 
         /// <summary>
-        /// Node deployment service list. Fill in only HDFS and YARN. For details, see [Mapping Table for Component Names](https://intl.cloud.tencent.com/document/product/589/98760?from_cn_redirect=1).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of services deployed on the node. Valid values: HDFS and YARN. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SoftDeployInfo")]
         public long?[] SoftDeployInfo{ get; set; }
 
         /// <summary>
-        /// Startup process list
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Startup process list.
         /// </summary>
         [JsonProperty("ServiceNodeInfo")]
         public long?[] ServiceNodeInfo{ get; set; }
 
         /// <summary>
-        /// Compensatory scale-out. 0: disable, 1: enable.
+        /// Compensatory scale-out. Valid values: 0 (disabled) and 1 (enabled).
         /// </summary>
         [JsonProperty("CompensateFlag")]
         public long? CompensateFlag{ get; set; }
@@ -156,10 +155,16 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Graceful scale-in business pod tag. Nodes are scaled in when the pod mentioned above is not found on the node or the graceful scale-in time is passed.
+        /// Pod tag for the graceful scale-in business. Nodes are scaled in when the Pod mentioned above is not found on the node or the graceful scale-in time has elapsed.
         /// </summary>
         [JsonProperty("GraceDownLabel")]
         public TkeLabel[] GraceDownLabel{ get; set; }
+
+        /// <summary>
+        /// Task protection time.
+        /// </summary>
+        [JsonProperty("GraceDownProtectTime")]
+        public long? GraceDownProtectTime{ get; set; }
 
 
         /// <summary>
@@ -178,6 +183,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
             this.SetParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
+            this.SetParamSimple(map, prefix + "GraceDownProtectFlag", this.GraceDownProtectFlag);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "ConfigGroupAssigned", this.ConfigGroupAssigned);
             this.SetParamSimple(map, prefix + "MeasureMethod", this.MeasureMethod);
@@ -188,6 +194,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
+            this.SetParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
         }
     }
 }

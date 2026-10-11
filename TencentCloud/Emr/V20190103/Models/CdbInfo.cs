@@ -55,7 +55,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Volume{ get; set; }
 
         /// <summary>
-        /// Service identifier.
+        /// Service flag.
         /// </summary>
         [JsonProperty("Service")]
         public string Service{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ApplyTime{ get; set; }
 
         /// <summary>
-        /// Billing type.
+        /// Payment type.
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Associated tag ID
+        /// 
         /// </summary>
         [JsonProperty("Rid")]
         public long? Rid{ get; set; }
 
         /// <summary>
-        /// Tag name
+        /// 
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag ID
+        /// 
         /// </summary>
         [JsonProperty("TagId")]
         public ulong? TagId{ get; set; }

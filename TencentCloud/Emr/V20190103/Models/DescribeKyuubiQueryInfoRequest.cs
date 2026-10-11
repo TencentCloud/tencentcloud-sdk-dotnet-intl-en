@@ -31,19 +31,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Query information obtainment start time (seconds).
+        /// Start time for obtaining queried information (s).
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Query information obtainment end time (seconds).
+        /// End time for obtaining queried information (s).
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Page size for pagination query. The minimum value is 1, and the maximum value is 100.
+        /// Number of entries per page for pagination query. Minimum value: 1. Maximum value: 100. 
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Memory capacity in GB
+        /// Memory capacity, in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("CPUCores")]
         public ulong? CPUCores{ get; set; }
 
         /// <summary>
-        /// Machine resource ID (EMR resource identifier)
+        /// Machine resource ID (EMR resource identifier).
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Target machine specification
+        /// Changed machine specifications.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }

@@ -25,74 +25,73 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Identifier of external resource provider, such as "cls-a1cd23fa".
+        /// Identifier of the external resource provider, for example, "cls-a1cd23fa".
         /// </summary>
         [JsonProperty("ResourceProviderIdentifier")]
         public string ResourceProviderIdentifier{ get; set; }
 
         /// <summary>
-        /// Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+        /// Type of the external resource provider, for example, "tke". Currently, only "tke" is supported.
         /// </summary>
         [JsonProperty("ResourceProviderType")]
         public string ResourceProviderType{ get; set; }
 
         /// <summary>
-        /// Purpose of the resource, which means the node type and can only be "TASK".
+        /// Purpose of the resource, that is, the node type. Currently only "TASK" is supported.
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Number of CPUs
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory size in GB.
+        /// Memory size (GB).
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Mount point of resources for the host. A specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+        /// The mount point of the resource to the host. The specified mount point corresponds to the path on the host, and this mount point is used as the data storage directory in the Pod. This parameter has been deprecated.
         /// </summary>
         [JsonProperty("DataVolumes")]
         public string[] DataVolumes{ get; set; }
 
         /// <summary>
-        /// EKS cluster - CPU type. Valid values: `intel` and `amd`.
+        /// CPU type for the EKS cluster, currently supporting intel and amd.
         /// </summary>
         [JsonProperty("CpuType")]
         public string CpuType{ get; set; }
 
         /// <summary>
-        /// Data directory mounting information of the pod node.
+        /// Mounting information of the node data directory on Pod.
         /// </summary>
         [JsonProperty("PodVolumes")]
         public PodVolume[] PodVolumes{ get; set; }
 
         /// <summary>
-        /// Whether floating specification is used. `1`: Yes; `0`: No.
+        /// Whether it is a floating specification. Valid values: 1 (yes) and 0 (no).
         /// </summary>
         [JsonProperty("IsDynamicSpec")]
         public ulong? IsDynamicSpec{ get; set; }
 
         /// <summary>
-        /// Floating specification
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Floating specification.
         /// </summary>
         [JsonProperty("DynamicPodSpec")]
         public DynamicPodSpec DynamicPodSpec{ get; set; }
 
         /// <summary>
-        /// Unique ID of VPC network.
+        /// Unique ID of the VPC.
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Unique ID of a VPC subnet.
+        /// Unique ID of the VPC subnet.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

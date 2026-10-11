@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The VPC ID.
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// The subnet ID.
+        /// Subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

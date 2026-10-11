@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// Password ID
+        /// Password Id
         /// </summary>
         [JsonProperty("PasswordId")]
         public long? PasswordId{ get; set; }
 
         /// <summary>
-        /// Password
+        /// Password.
         /// </summary>
         [JsonProperty("WeakPassword")]
         public string WeakPassword{ get; set; }

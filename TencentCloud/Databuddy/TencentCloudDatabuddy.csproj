@@ -1,0 +1,277 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{9B45246C-1D28-3EEF-A426-BDA0B1AED916}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1407</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Databuddy</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260715\DatabuddyClient.cs" />
+    <Compile Include="V20260715\Models\AddConsoleUsersRequest.cs" />
+    <Compile Include="V20260715\Models\AddConsoleUsersResponse.cs" />
+    <Compile Include="V20260715\Models\AddConsoleUsersRsp.cs" />
+    <Compile Include="V20260715\Models\AddWorkspaceGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\AddWorkspaceGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\AddWorkspaceUsersRequest.cs" />
+    <Compile Include="V20260715\Models\AddWorkspaceUsersResponse.cs" />
+    <Compile Include="V20260715\Models\AdvancedDependencyConfig.cs" />
+    <Compile Include="V20260715\Models\AdvancedParameter.cs" />
+    <Compile Include="V20260715\Models\AlarmBrief.cs" />
+    <Compile Include="V20260715\Models\AlarmGroup.cs" />
+    <Compile Include="V20260715\Models\AsyncActionRsp.cs" />
+    <Compile Include="V20260715\Models\AsyncOperation.cs" />
+    <Compile Include="V20260715\Models\Audit.cs" />
+    <Compile Include="V20260715\Models\Catalog.cs" />
+    <Compile Include="V20260715\Models\CommonFailItem.cs" />
+    <Compile Include="V20260715\Models\CommonTagInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleGroupInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleGroupUserInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleRoleInfo.cs" />
+    <Compile Include="V20260715\Models\ConsoleUserInfo.cs" />
+    <Compile Include="V20260715\Models\CreateCatalogRequest.cs" />
+    <Compile Include="V20260715\Models\CreateCatalogResponse.cs" />
+    <Compile Include="V20260715\Models\CreateCatalogRsp.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupRequest.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupResponse.cs" />
+    <Compile Include="V20260715\Models\CreateConsoleGroupRsp.cs" />
+    <Compile Include="V20260715\Models\CreateFileRequest.cs" />
+    <Compile Include="V20260715\Models\CreateFileResponse.cs" />
+    <Compile Include="V20260715\Models\CreateFolderRequest.cs" />
+    <Compile Include="V20260715\Models\CreateFolderResponse.cs" />
+    <Compile Include="V20260715\Models\CreateFolderRsp.cs" />
+    <Compile Include="V20260715\Models\CreateSchemaRequest.cs" />
+    <Compile Include="V20260715\Models\CreateSchemaResponse.cs" />
+    <Compile Include="V20260715\Models\CreateSchemaRsp.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRoleRequest.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRoleResponse.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRoleResult.cs" />
+    <Compile Include="V20260715\Models\CreateWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteCatalogRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteCatalogResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteCatalogRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteConsoleGroupsRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteFileRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteFileResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteFileResult.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteFolderRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteSchemaRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteSchemaResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteSchemaRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRoleRequest.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRoleResponse.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRoleResult.cs" />
+    <Compile Include="V20260715\Models\DeleteWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\DependOnBrief.cs" />
+    <Compile Include="V20260715\Models\FetchOption.cs" />
+    <Compile Include="V20260715\Models\FileConfig.cs" />
+    <Compile Include="V20260715\Models\FileInfo.cs" />
+    <Compile Include="V20260715\Models\FileMeta.cs" />
+    <Compile Include="V20260715\Models\FileNode.cs" />
+    <Compile Include="V20260715\Models\FileOutputConf.cs" />
+    <Compile Include="V20260715\Models\FileStorage.cs" />
+    <Compile Include="V20260715\Models\FolderLocator.cs" />
+    <Compile Include="V20260715\Models\GetCatalogRequest.cs" />
+    <Compile Include="V20260715\Models\GetCatalogResponse.cs" />
+    <Compile Include="V20260715\Models\GetCatalogRsp.cs" />
+    <Compile Include="V20260715\Models\GetFileRequest.cs" />
+    <Compile Include="V20260715\Models\GetFileResponse.cs" />
+    <Compile Include="V20260715\Models\GetFolderRequest.cs" />
+    <Compile Include="V20260715\Models\GetFolderResponse.cs" />
+    <Compile Include="V20260715\Models\GetFolderRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowRunRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkflowTaskRunRsp.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\GetWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\GitRepoConfig.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskBrief.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRun.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunIteration.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunIterationBrief.cs" />
+    <Compile Include="V20260715\Models\InnerWorkflowTaskRunListOption.cs" />
+    <Compile Include="V20260715\Models\KVPair.cs" />
+    <Compile Include="V20260715\Models\KillWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\KillWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\LabelBrief.cs" />
+    <Compile Include="V20260715\Models\ListCatalogsRequest.cs" />
+    <Compile Include="V20260715\Models\ListCatalogsResponse.cs" />
+    <Compile Include="V20260715\Models\ListCatalogsRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupUsersRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleGroupsRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleRolesRsp.cs" />
+    <Compile Include="V20260715\Models\ListConsoleUsersRequest.cs" />
+    <Compile Include="V20260715\Models\ListConsoleUsersResponse.cs" />
+    <Compile Include="V20260715\Models\ListConsoleUsersRsp.cs" />
+    <Compile Include="V20260715\Models\ListFilesRequest.cs" />
+    <Compile Include="V20260715\Models\ListFilesResponse.cs" />
+    <Compile Include="V20260715\Models\ListFilesRsp.cs" />
+    <Compile Include="V20260715\Models\ListSchemasRequest.cs" />
+    <Compile Include="V20260715\Models\ListSchemasResponse.cs" />
+    <Compile Include="V20260715\Models\ListSchemasRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowRunsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowTaskRunsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkflowsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceGroupsRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceUsersRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceUsersResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkspaceUsersRsp.cs" />
+    <Compile Include="V20260715\Models\ListWorkspacesRequest.cs" />
+    <Compile Include="V20260715\Models\ListWorkspacesResponse.cs" />
+    <Compile Include="V20260715\Models\ListWorkspacesRsp.cs" />
+    <Compile Include="V20260715\Models\MetaOwner.cs" />
+    <Compile Include="V20260715\Models\MonitorMetricBrief.cs" />
+    <Compile Include="V20260715\Models\MonitorMetricItem.cs" />
+    <Compile Include="V20260715\Models\OrderBy.cs" />
+    <Compile Include="V20260715\Models\ParamInfo.cs" />
+    <Compile Include="V20260715\Models\PermissionDetail.cs" />
+    <Compile Include="V20260715\Models\PlatformStatusRsp.cs" />
+    <Compile Include="V20260715\Models\RemoveConsoleUsersRequest.cs" />
+    <Compile Include="V20260715\Models\RemoveConsoleUsersResponse.cs" />
+    <Compile Include="V20260715\Models\RemoveConsoleUsersRsp.cs" />
+    <Compile Include="V20260715\Models\RemoveWorkspaceGroupsRequest.cs" />
+    <Compile Include="V20260715\Models\RemoveWorkspaceGroupsResponse.cs" />
+    <Compile Include="V20260715\Models\RerunWorkflowRunRequest.cs" />
+    <Compile Include="V20260715\Models\RerunWorkflowRunResponse.cs" />
+    <Compile Include="V20260715\Models\ResourceGroupInfo.cs" />
+    <Compile Include="V20260715\Models\RoleBasicInfo.cs" />
+    <Compile Include="V20260715\Models\RoleMetaData.cs" />
+    <Compile Include="V20260715\Models\RolePermission.cs" />
+    <Compile Include="V20260715\Models\RunActionBrief.cs" />
+    <Compile Include="V20260715\Models\RunWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\RunWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\ScheduleBizEnumBrief.cs" />
+    <Compile Include="V20260715\Models\ScheduledTimeConfig.cs" />
+    <Compile Include="V20260715\Models\Schema.cs" />
+    <Compile Include="V20260715\Models\SparseCheckoutConfig.cs" />
+    <Compile Include="V20260715\Models\StandardUserInfo.cs" />
+    <Compile Include="V20260715\Models\StartComputeRequest.cs" />
+    <Compile Include="V20260715\Models\StartComputeResponse.cs" />
+    <Compile Include="V20260715\Models\StartComputeRsp.cs" />
+    <Compile Include="V20260715\Models\StopComputeRequest.cs" />
+    <Compile Include="V20260715\Models\StopComputeResponse.cs" />
+    <Compile Include="V20260715\Models\StopComputeRsp.cs" />
+    <Compile Include="V20260715\Models\TagValueInfo.cs" />
+    <Compile Include="V20260715\Models\TaskRetryStrategy.cs" />
+    <Compile Include="V20260715\Models\TaskRunConditionRule.cs" />
+    <Compile Include="V20260715\Models\TaskSchedulingParameterBrief.cs" />
+    <Compile Include="V20260715\Models\TaskType.cs" />
+    <Compile Include="V20260715\Models\TaskTypeNotebookExt.cs" />
+    <Compile Include="V20260715\Models\TaskTypeProperty.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleRequest.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleResponse.cs" />
+    <Compile Include="V20260715\Models\UnbindWorkflowBundleRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleGroupRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleUsersRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleUsersResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateConsoleUsersRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateFileRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateFileResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateFolderRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkflowRsp.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRoleRequest.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRoleResponse.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRoleResult.cs" />
+    <Compile Include="V20260715\Models\UpdateWorkspaceRsp.cs" />
+    <Compile Include="V20260715\Models\UserInfo.cs" />
+    <Compile Include="V20260715\Models\UserTagInfo.cs" />
+    <Compile Include="V20260715\Models\Workflow.cs" />
+    <Compile Include="V20260715\Models\WorkflowAdvanceConfig.cs" />
+    <Compile Include="V20260715\Models\WorkflowBaseInfo.cs" />
+    <Compile Include="V20260715\Models\WorkflowBaseInfoDetail.cs" />
+    <Compile Include="V20260715\Models\WorkflowBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowRun.cs" />
+    <Compile Include="V20260715\Models\WorkflowRunBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowTask.cs" />
+    <Compile Include="V20260715\Models\WorkflowTaskNodeBrief.cs" />
+    <Compile Include="V20260715\Models\WorkflowTaskRun.cs" />
+    <Compile Include="V20260715\Models\WorkflowTriggerAdvancedConfiguration.cs" />
+    <Compile Include="V20260715\Models\WorkflowTriggerConfiguration.cs" />
+    <Compile Include="V20260715\Models\WorkspaceGroupInfo.cs" />
+    <Compile Include="V20260715\Models\WorkspaceInfo.cs" />
+    <Compile Include="V20260715\Models\WorkspaceUserInfo.cs" />
+  </ItemGroup>
+</Project>

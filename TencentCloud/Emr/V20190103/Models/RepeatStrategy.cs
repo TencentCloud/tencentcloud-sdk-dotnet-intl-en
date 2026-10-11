@@ -31,39 +31,31 @@ namespace TencentCloud.Emr.V20190103.Models
         public string RepeatType{ get; set; }
 
         /// <summary>
-        /// Daily repetition rule, which is effective when RepeatType is set to DAY
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Daily repetition rule, effective when RepeatType is set to DAY.
         /// </summary>
         [JsonProperty("DayRepeat")]
         public DayRepeatStrategy DayRepeat{ get; set; }
 
         /// <summary>
-        /// Weekly repetition rule, effective when RepeatType is DOW
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Weekly repetition rule, effective when RepeatType is set to DOW.
         /// </summary>
         [JsonProperty("WeekRepeat")]
         public WeekRepeatStrategy WeekRepeat{ get; set; }
 
         /// <summary>
-        /// Monthly repetition rule, valid when RepeatType is DOM
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Monthly repetition rule, effective when RepeatType is set to DOM.
         /// </summary>
         [JsonProperty("MonthRepeat")]
         public MonthRepeatStrategy MonthRepeat{ get; set; }
 
         /// <summary>
-        /// One-time execution rule, valid when RepeatType is NONE
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// One-time execution rule, effective when RepeatType is set to NONE.
         /// </summary>
         [JsonProperty("NotRepeat")]
         public NotRepeatStrategy NotRepeat{ get; set; }
 
         /// <summary>
-        /// Rule expiration time. After this time is due, the rule will be automatically set to the status "suspended". The format is "2020-07-23 00:00:00". It is required.
+        /// Rule expiration time. After this time is due, the rule will be automatically set to the suspended status. The format is 2020-07-23 00:00:00. It is required.
         /// </summary>
         [JsonProperty("Expire")]
         public string Expire{ get; set; }

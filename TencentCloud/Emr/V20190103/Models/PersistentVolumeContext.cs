@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Disk size in GB.
+        /// Disk size (GB).
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Disk type, CLOUD_PREMIUM or CLOUD_SSD.
+        /// Disk type. Valid values: CLOUD_PREMIUM and CLOUD_SSD.
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? DiskNum{ get; set; }
 
         /// <summary>
-        /// Additional performance of cloud disks.
+        /// Cloud disk additional performance.
         /// </summary>
         [JsonProperty("ExtraPerformance")]
         public long? ExtraPerformance{ get; set; }

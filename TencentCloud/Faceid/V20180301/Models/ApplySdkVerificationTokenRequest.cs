@@ -193,10 +193,31 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? AllowUploadPhoto{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+        /// <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false
         /// </summary>
         [JsonProperty("EnableBotBgDetection")]
         public bool? EnableBotBgDetection{ get; set; }
+
+        /// <summary>
+        /// OCR Auto Capture Mode Timeout (ms)
+        /// Value Range: [5000, 180000]
+        /// Default Value: 20000
+        /// Values less than 5000 will be clamped to 5000; values greater than 180000 will be clamped to 180000
+        /// </summary>
+        [JsonProperty("OcrAutoDetectTimeout")]
+        public long? OcrAutoDetectTimeout{ get; set; }
+
+        /// <summary>
+        /// OCR Capture Mode
+        /// Enum Values:
+        /// <li>OCR_DETECT_MANUAL: Manual capture mode. Recognition starts after the user taps to take a photo.</li>
+        /// <li>OCR_DETECT_AUTO_MANUAL: Auto recognition mode. The system performs automatic recognition; fallback to manual photo capture is available upon recognition timeout.</li>
+        /// <li>OCR_DETECT_AUTO: Auto-only recognition mode. The system performs automatic recognition; no fallback to manual photo capture upon recognition timeout.</li>
+        /// <li>OCR_DETECT_AUTO_MULTI: Multi-shot auto-only recognition mode. The system automatically captures multiple document images with flash enabled.
+        /// Default Value: OCR_DETECT_AUTO_MANUAL
+        /// </summary>
+        [JsonProperty("OcrModeType")]
+        public string OcrModeType{ get; set; }
 
 
         /// <summary>
@@ -226,6 +247,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "HideProgressBar", this.HideProgressBar);
             this.SetParamSimple(map, prefix + "AllowUploadPhoto", this.AllowUploadPhoto);
             this.SetParamSimple(map, prefix + "EnableBotBgDetection", this.EnableBotBgDetection);
+            this.SetParamSimple(map, prefix + "OcrAutoDetectTimeout", this.OcrAutoDetectTimeout);
+            this.SetParamSimple(map, prefix + "OcrModeType", this.OcrModeType);
         }
     }
 }

@@ -26,7 +26,6 @@ namespace TencentCloud.Emr.V20190103.Models
         
         /// <summary>
         /// Global information of all scaling groups in the cluster.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("GroupGlobalConfs")]
         public GroupGlobalConfs[] GroupGlobalConfs{ get; set; }

@@ -25,14 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Process name which is required, such as NameNode.
+        /// (Required) Process name, for example, NameNode.
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
 
         /// <summary>
-        /// The target IP list.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of operation IP addresses.
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

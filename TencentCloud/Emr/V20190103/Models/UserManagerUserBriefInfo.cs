@@ -25,40 +25,82 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Username
+        /// <p>Username.</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// The group to which the user belongs
+        /// <p>Group to which the user belongs.</p>
         /// </summary>
         [JsonProperty("UserGroup")]
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// `Manager` represents an admin, and `NormalUser` represents a general user.
+        /// <p>Manager indicates an administrator, and NormalUser indicates a regular user.</p>
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// User creation time.
+        /// <p>User creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether the corresponding Keytab file of the user is available for download. This parameter applies only to a Kerberos-enabled cluster.
+        /// <p>Whether to download the keytab file of the corresponding user. This is only meaningful for clusters with Kerberos enabled.</p>
         /// </summary>
         [JsonProperty("SupportDownLoadKeyTab")]
         public bool? SupportDownLoadKeyTab{ get; set; }
 
         /// <summary>
-        /// Download address of the keytab file.
+        /// <p>Download URL of the keytab file.</p>
         /// </summary>
         [JsonProperty("DownLoadKeyTabUrl")]
         public string DownLoadKeyTabUrl{ get; set; }
+
+        /// <summary>
+        /// <p>User group.</p>
+        /// </summary>
+        [JsonProperty("Groups")]
+        public string[] Groups{ get; set; }
+
+        /// <summary>
+        /// <p>Customer UIN.</p>
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// <p>User status.</p>
+        /// </summary>
+        [JsonProperty("State")]
+        public long? State{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to display the password update time.</p>
+        /// </summary>
+        [JsonProperty("DisplayPasswdUpdateTime")]
+        public bool? DisplayPasswdUpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Latest password update time.</p>
+        /// </summary>
+        [JsonProperty("PasswdUpdateTime")]
+        public string PasswdUpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Number of days used.</p><p>Unit: days.</p>
+        /// </summary>
+        [JsonProperty("PasswdUsedDay")]
+        public long? PasswdUsedDay{ get; set; }
+
+        /// <summary>
+        /// <p>Number of hours used.</p><p>Unit: hours.</p>
+        /// </summary>
+        [JsonProperty("PasswdUsedHour")]
+        public long? PasswdUsedHour{ get; set; }
 
 
         /// <summary>
@@ -72,6 +114,13 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SupportDownLoadKeyTab", this.SupportDownLoadKeyTab);
             this.SetParamSimple(map, prefix + "DownLoadKeyTabUrl", this.DownLoadKeyTabUrl);
+            this.SetParamArraySimple(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "DisplayPasswdUpdateTime", this.DisplayPasswdUpdateTime);
+            this.SetParamSimple(map, prefix + "PasswdUpdateTime", this.PasswdUpdateTime);
+            this.SetParamSimple(map, prefix + "PasswdUsedDay", this.PasswdUsedDay);
+            this.SetParamSimple(map, prefix + "PasswdUsedHour", this.PasswdUsedHour);
         }
     }
 }

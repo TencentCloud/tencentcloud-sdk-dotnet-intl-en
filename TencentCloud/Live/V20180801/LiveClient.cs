@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.intl.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1294";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -1348,31 +1348,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// This API is used to get the list of disabled streams.
-        /// 
-        /// Note: this API is used for query only and should not be relied too much upon in important business scenarios.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
-        /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
-        public Task<DescribeLiveForbidStreamListResponse> DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req)
-        {
-            return InternalRequestAsync<DescribeLiveForbidStreamListResponse>(req, "DescribeLiveForbidStreamList");
-        }
-
-        /// <summary>
-        /// This API is used to get the list of disabled streams.
-        /// 
-        /// Note: this API is used for query only and should not be relied too much upon in important business scenarios.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLiveForbidStreamListRequest"/></param>
-        /// <returns><see cref="DescribeLiveForbidStreamListResponse"/></returns>
-        public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamListSync(DescribeLiveForbidStreamListRequest req)
-        {
-            return InternalRequestAsync<DescribeLiveForbidStreamListResponse>(req, "DescribeLiveForbidStreamList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to query the playback authentication key.
         /// </summary>
         /// <param name="req"><see cref="DescribeLivePlayAuthKeyRequest"/></param>
@@ -1938,6 +1913,27 @@ namespace TencentCloud.Live.V20180801
         public DescribeLiveWatermarksResponse DescribeLiveWatermarksSync(DescribeLiveWatermarksRequest req)
         {
             return InternalRequestAsync<DescribeLiveWatermarksResponse>(req, "DescribeLiveWatermarks")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the pull stream IP whitelist list of the origin server.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeOriginWhiteIpListResponse"/></returns>
+        public Task<DescribeOriginWhiteIpListResponse> DescribeOriginWhiteIpList(DescribeOriginWhiteIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginWhiteIpListResponse>(req, "DescribeOriginWhiteIpList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the pull stream IP whitelist list of the origin server.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOriginWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeOriginWhiteIpListResponse"/></returns>
+        public DescribeOriginWhiteIpListResponse DescribeOriginWhiteIpListSync(DescribeOriginWhiteIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeOriginWhiteIpListResponse>(req, "DescribeOriginWhiteIpList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

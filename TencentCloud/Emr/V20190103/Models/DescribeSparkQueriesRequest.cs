@@ -49,13 +49,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Page size. Valid range: [1,100].
+        /// Number of entries per page. Value range: [1, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Execution status: RUNNING,COMPLETED, FAILED.
+        /// Execution status. Valid values: RUNNING, COMPLETED, and FAILED.
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }

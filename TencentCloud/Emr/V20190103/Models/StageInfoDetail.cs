@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Steps.
+        /// Step.
         /// </summary>
         [JsonProperty("Stage")]
         public string Stage{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Indicates whether to display
+        /// Whether it is displayed.
         /// </summary>
         [JsonProperty("IsShow")]
         public bool? IsShow{ get; set; }
 
         /// <summary>
-        /// Whether it is a subprocess
+        /// Whether it is a sub-flow.
         /// </summary>
         [JsonProperty("IsSubFlow")]
         public bool? IsSubFlow{ get; set; }
 
         /// <summary>
-        /// Subprocess tag.
+        /// Sub-flow tag.
         /// </summary>
         [JsonProperty("SubFlowFlag")]
         public string SubFlowFlag{ get; set; }
 
         /// <summary>
-        /// Step execution status. 0: not started, 1: in progress, 2: completed, 3: partially completed, -1: failed
+        /// Step running status. Valid values: 0 (not started), 1 (in progress), 2 (completed), 3 (partially completed), and -1 (failed).
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -73,29 +73,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public float? Progress{ get; set; }
 
         /// <summary>
-        /// Start time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Start time.
         /// </summary>
         [JsonProperty("Starttime")]
         public string Starttime{ get; set; }
 
         /// <summary>
-        /// End time
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// End time.
         /// </summary>
         [JsonProperty("Endtime")]
         public string Endtime{ get; set; }
 
         /// <summary>
-        /// Whether details are included.
+        /// Whether detailed information is included.
         /// </summary>
         [JsonProperty("HadWoodDetail")]
         public bool? HadWoodDetail{ get; set; }
 
         /// <summary>
-        /// Wood subprocess ID.
+        /// Wood sub-flow ID.
         /// </summary>
         [JsonProperty("WoodJobId")]
         public ulong? WoodJobId{ get; set; }
@@ -107,7 +103,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string LanguageKey{ get; set; }
 
         /// <summary>
-        /// Reason for stage failure.
+        /// Reason for the stage failure.
         /// </summary>
         [JsonProperty("FailedReason")]
         public string FailedReason{ get; set; }
@@ -119,7 +115,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string TimeConsuming{ get; set; }
 
         /// <summary>
-        /// id, for frontend
+        /// ID used by the frontend.
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }

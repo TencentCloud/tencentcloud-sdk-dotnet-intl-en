@@ -25,25 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Username
+        /// Username.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// The group to which the user belongs
+        /// Group to which the user belongs.
         /// </summary>
         [JsonProperty("UserGroup")]
         public string UserGroup{ get; set; }
 
         /// <summary>
-        /// Password
+        /// Password.
         /// </summary>
         [JsonProperty("PassWord")]
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("ReMark")]
         public string ReMark{ get; set; }

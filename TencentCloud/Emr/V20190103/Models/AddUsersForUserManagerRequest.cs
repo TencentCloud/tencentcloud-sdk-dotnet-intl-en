@@ -25,13 +25,13 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Cluster string ID
+        /// Cluster string ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// User information list
+        /// User information list.
         /// </summary>
         [JsonProperty("UserManagerUserList")]
         public UserInfoForUserManager[] UserManagerUserList{ get; set; }

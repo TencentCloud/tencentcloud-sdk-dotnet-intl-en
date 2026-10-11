@@ -31,13 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Page size.
+        /// Number of entries per page.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Scheduler type. The values are ALL, Capacity Scheduler, and Fair Scheduler.
+        /// Scheduler type. Valid values: ALL, Capacity Scheduler, and Fair Scheduler.
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
 
         /// <summary>
-        /// Task type. 0: waiting; 1: executing; 2: completed; -1: failed; -99: all.
+        /// Task type. Valid values: 0 (pending execution), 1 (executing), 2 (completed), -1 (failed), and -99 (all).
         /// </summary>
         [JsonProperty("TaskState")]
         public long? TaskState{ get; set; }

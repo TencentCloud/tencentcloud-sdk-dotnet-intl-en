@@ -25,46 +25,50 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Time unit of scaling. Valid values:
-        /// <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
+        /// Time unit for the configuration change. Valid values:
+        /// <li>s: second. When PayMode is set to 0, TimeUnit can only be set to s.</li>
+        /// <li>m: month. When PayMode is set to 1, TimeUnit can only be set to m.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Duration of scaling, which needs to be used together with `TimeUnit`.
-        /// <li>When `PayMode` is 0, `TimeSpan` can only be 3,600.</li>
+        /// Configuration change duration, which is used together with TimeUnit.
+        /// <li>When TimeUnit is set to s, this parameter can only be set to 3600, indicating a pay-as-you-go instance.</li>
+        /// <li>When TimeUnit is set to m, the number entered for this parameter indicates the purchase duration of a yearly/monthly subscription instance. For example, the value 1 indicates one month.</li>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }
 
         /// <summary>
         /// Instance billing mode. Valid values:
-        /// <li>0: pay-as-you-go.</li>
+        /// <li>0: pay-as-you-go</li>
+        /// <li>1: monthly subscription</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// Currency.
-        /// </summary>
-        [JsonProperty("Currency")]
-        public string Currency{ get; set; }
-
-        /// <summary>
-        /// Target node specification.
+        /// 
         /// </summary>
         [JsonProperty("UpdateSpec")]
         public UpdateInstanceSettings UpdateSpec{ get; set; }
 
         /// <summary>
-        /// Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+        /// 
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// The resource ID list for batch configuration change.
+        /// Currency type. Valid values:
+        /// <li>CNY: RMB</li>
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
+        /// <summary>
+        /// ID list of resources modified in batches.
         /// </summary>
         [JsonProperty("ResourceIdList")]
         public string[] ResourceIdList{ get; set; }
@@ -78,9 +82,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
             this.SetParamObj(map, prefix + "Placement.", this.Placement);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
         }
     }

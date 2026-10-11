@@ -25,30 +25,30 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The cluster ID.
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The operation type. Valid values:
-        /// <li>StartService: Start service</li>
-        /// <li>StopService: Stop service</li>
-        /// <li>StartMonitor: Start maintenance</li>
-        /// <li>StopMonitor: Stop maintenance</li>
-        /// <li>RestartService: Restart service. If this type is selected, "StrategyConfig" is required.</li>
+        /// Operation type. Valid values:
+        /// <li>StartService: Start the service.</li>
+        /// <li>StopService: Stop the service.</li>
+        /// <li>StartMonitor: Exit maintenance.</li>
+        /// <li>StopMonitor: Enter maintenance.</li>
+        /// <li>RestartService: Restart the service. If RestartService is selected as the operation type, StrategyConfig (operation policy) is required.</li>
         /// </summary>
         [JsonProperty("OpType")]
         public string OpType{ get; set; }
 
         /// <summary>
-        /// The operation scope.
+        /// Operation scope.
         /// </summary>
         [JsonProperty("OpScope")]
         public OpScope OpScope{ get; set; }
 
         /// <summary>
-        /// The operation policy.
+        /// Operation policy.
         /// </summary>
         [JsonProperty("StrategyConfig")]
         public StrategyConfig StrategyConfig{ get; set; }
@@ -60,7 +60,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public StopParams StopParams{ get; set; }
 
         /// <summary>
-        /// This parameter is available only when OpType is <li>StopMonitor</li>. True indicates that the system enters the maintenance mode but still monitors processes without starting them.
+        /// This parameter is available only when OpType is <li>StopMonitor</li>. true indicates that the system enters the maintenance mode but still monitors processes without starting them.
         /// </summary>
         [JsonProperty("KeepMonitorButNotRecoverProcess")]
         public bool? KeepMonitorButNotRecoverProcess{ get; set; }

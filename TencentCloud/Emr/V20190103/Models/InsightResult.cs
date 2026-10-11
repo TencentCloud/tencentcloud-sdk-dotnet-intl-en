@@ -25,46 +25,45 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// When Type is HIVE, the value is Hive query ID; when Type is MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
+        /// When Type is set to HIVE, the value is the Hive query ID; when Type is set to MAPREDUCE, SPARK or TEZ, the value is YarnAppID.
         /// </summary>
         [JsonProperty("ID")]
         public string ID{ get; set; }
 
         /// <summary>
-        /// Insight application type. Value values: HIVE, SPARK, MAPREDUCE, and TEZ.
+        /// Insight application type. Valid values: HIVE, SPARK, MAPREDUCE, and TEZ.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Insight rule ID.
-        /// HIVE-ScanManyMeta: too much scanned metadata.
-        /// HIVE-ScanManyPartition: large table scanning.
-        /// HIVE-SlowCompile: compilation duration too long.
-        /// HIVE-UnSuitableConfig: improper parameter.
-        /// MAPREDUCE-MapperDataSkew: Map data skew.
-        /// MAPREDUCE-MapperMemWaste: MapMemory resource waste.
-        /// MAPREDUCE-MapperSlowTask: slow map task.
+        /// HIVE-ScanManyMeta: excessively large amount of scanned metadata
+        /// HIVE-ScanManyPartition: large table scan
+        /// HIVE-SlowCompile: excessively long compilation durationHIVE-UnSuitableConfig: improper parameter
+        /// MAPREDUCE-MapperDataSkew: Map data skew
+        /// MAPREDUCE-MapperMemWaste: MapMemory resource waste
+        /// MAPREDUCE-MapperSlowTask: Map slow task
         /// MAPREDUCE-MapperTaskGC:MapperTaskGC
-        /// MAPREDUCE-MemExceeded: peak memory exceeded.
-        /// MAPREDUCE-ReducerDataSkew: Reduce data skew.
-        /// MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste.
-        /// MAPREDUCE-ReducerSlowTask: slow reduce task.
+        /// MAPREDUCE-MemExceeded: peak memory exceeded
+        /// MAPREDUCE-ReducerDataSkew: Reduce data skew
+        /// MAPREDUCE-ReducerMemWaste: ReduceMemory resource waste
+        /// MAPREDUCE-ReducerSlowTask: Reduce slow task
         /// MAPREDUCE-ReducerTaskGC:ReducerTaskGC
-        /// MAPREDUCE-SchedulingDelay: scheduling delay.
-        /// SPARK-CpuWaste: CPU resource waste.
-        /// SPARK-DataSkew: data skew.
+        /// MAPREDUCE-SchedulingDelay: scheduling delay
+        /// SPARK-CpuWaste: CPU resource waste
+        /// SPARK-DataSkew: data skew
         /// SPARK-ExecutorGC:ExecutorGC
-        /// SPARK-MemExceeded: peak memory exceeded.
-        /// SPARK-MemWaste: Memory resource waste.
+        /// SPARK-MemExceeded: peak memory exceeded
+        /// SPARK-MemWaste: Memory resource waste
         /// SPARK-ScheduleOverhead:ScheduleOverhead
-        /// SPARK-ScheduleSkew: scheduling skew.
-        /// SPARK-SlowTask: slow task.
-        /// TEZ-DataSkew: data skew.
-        /// TEZ-MapperDataSkew: Map data skew.
-        /// TEZ-ReducerDataSkew: Reduce data skew.
-        /// TEZ-TezMemWaste: Memory resource waste.
-        /// TEZ-TezSlowTask: slow task.
+        /// SPARK-ScheduleSkew: scheduling skew
+        /// SPARK-SlowTask: slow task
+        /// TEZ-DataSkew: data skew
+        /// TEZ-MapperDataSkew: Map data skew
+        /// TEZ-ReducerDataSkew: Reduce data skew
+        /// TEZ-TezMemWaste: Memory resource waste
+        /// TEZ-TezSlowTask: slow task
         /// TEZ-TezTaskGC:TasksGC
         /// </summary>
         [JsonProperty("RuleID")]
@@ -77,7 +76,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Insight rules interpretation.
+        /// Insight rule interpretation.
         /// </summary>
         [JsonProperty("RuleExplain")]
         public string RuleExplain{ get; set; }
@@ -95,7 +94,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Anomaly metrics measure insight severity. Higher values indicate greater severity within the same insight category. Metrics across different insight types cannot be meaningfully compared.
+        /// Insight anomaly metric value. For insight items of the same type, a larger value indicates higher severity. Insight items of different types are not comparable.
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }
@@ -107,26 +106,25 @@ namespace TencentCloud.Emr.V20190103.Models
         public string ScheduleTaskExecID{ get; set; }
 
         /// <summary>
-        /// Scheduling flow, DAG.
+        /// Scheduling flow (DAG).
         /// </summary>
         [JsonProperty("ScheduleFlowName")]
         public string ScheduleFlowName{ get; set; }
 
         /// <summary>
-        /// A Task node in the scheduling flow.
+        /// Task node in the scheduling flow.
         /// </summary>
         [JsonProperty("ScheduleTaskName")]
         public string ScheduleTaskName{ get; set; }
 
         /// <summary>
-        /// Core configurations for Yarn tasks.
+        /// Some core configurations of the YARN task.
         /// </summary>
         [JsonProperty("JobConf")]
         public string JobConf{ get; set; }
 
         /// <summary>
-        /// Insight structure information.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Insight into structured information.
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

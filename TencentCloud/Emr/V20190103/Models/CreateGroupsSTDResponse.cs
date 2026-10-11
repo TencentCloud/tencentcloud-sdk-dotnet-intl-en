@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Output result of each user group.
+        /// Response result of each user group.
         /// </summary>
         [JsonProperty("Data")]
         public ResultItem[] Data{ get; set; }

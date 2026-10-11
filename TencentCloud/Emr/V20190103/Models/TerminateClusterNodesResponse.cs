@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// The scale-in process ID.
+        /// Scale-in flow ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

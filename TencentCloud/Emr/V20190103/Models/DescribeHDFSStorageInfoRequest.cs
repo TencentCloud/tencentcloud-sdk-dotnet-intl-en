@@ -31,13 +31,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Query information obtainment start time (seconds).
+        /// Start time for obtaining queried information (s).
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// Query information obtainment end time (seconds).
+        /// End time for obtaining queried information (s).
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

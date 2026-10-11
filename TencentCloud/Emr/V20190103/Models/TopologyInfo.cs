@@ -25,27 +25,25 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Availability zone ID.
+        /// AZ ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// Availability information.
+        /// AZ information.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Subnet information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Subnet information.
         /// </summary>
         [JsonProperty("SubnetInfoList")]
         public SubnetInfo[] SubnetInfoList{ get; set; }
 
         /// <summary>
-        /// Node information
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Node information.
         /// </summary>
         [JsonProperty("NodeInfoList")]
         public ShortNodeInfo[] NodeInfoList{ get; set; }

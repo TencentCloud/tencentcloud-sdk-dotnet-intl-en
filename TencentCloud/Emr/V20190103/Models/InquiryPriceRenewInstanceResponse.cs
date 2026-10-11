@@ -25,38 +25,38 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Original price.
+        /// Original price (CNY).
         /// </summary>
         [JsonProperty("OriginalCost")]
         public float? OriginalCost{ get; set; }
 
         /// <summary>
-        /// Discounted price.
+        /// Discounted price (CNY).
         /// </summary>
         [JsonProperty("DiscountCost")]
         public float? DiscountCost{ get; set; }
 
         /// <summary>
-        /// Time unit for instance renewal.
+        /// Time unit for instance renewal. Valid values:
+        /// <li>m: indicates month.</li>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Duration of instance renewal.
+        /// 
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
         /// Price details.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PriceDetail")]
         public PriceDetail[] PriceDetail{ get; set; }
 
         /// <summary>
-        /// Node renewal pricing list.
+        /// Node renewal inquiry details list.
         /// </summary>
         [JsonProperty("NodeRenewPriceDetails")]
         public NodeRenewPriceDetail[] NodeRenewPriceDetails{ get; set; }

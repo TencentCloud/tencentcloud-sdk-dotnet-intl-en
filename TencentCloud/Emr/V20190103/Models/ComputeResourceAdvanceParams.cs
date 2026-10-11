@@ -25,28 +25,40 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// Node label array.
+        /// <p>Node Label array.</p>
         /// </summary>
         [JsonProperty("Labels")]
         public TkeLabel[] Labels{ get; set; }
 
         /// <summary>
-        /// Node taint.
+        /// <p>Node taint.</p>
         /// </summary>
         [JsonProperty("Taints")]
         public Taint[] Taints{ get; set; }
 
         /// <summary>
-        /// Base64-encoded user script: executed before node initializing.
+        /// <p>Base64-encoded user script, which is executed before node initialization.</p>
         /// </summary>
         [JsonProperty("PreStartUserScript")]
         public string PreStartUserScript{ get; set; }
 
         /// <summary>
-        /// Base64-encoded user script. This script executes after Kubernetes components initialize. Users should ensure script reentrancy and implement retry logic. Both the script and its generated log files are accessible at the node path: /data/ccs_userscript/.
+        /// <p>Base64-encoded user script, which is executed after the Kubernetes component starts. You need to guarantee the script reentrancy and retry logic. The script and generated log files can be viewed in the /data/ccs_userscript/ directory on the node.</p>
         /// </summary>
         [JsonProperty("UserScript")]
         public string UserScript{ get; set; }
+
+        /// <summary>
+        /// <p>Node group ID.</p>
+        /// </summary>
+        [JsonProperty("TkeClusterNodePool")]
+        public string TkeClusterNodePool{ get; set; }
+
+        /// <summary>
+        /// <p>Mode of joining a node pool.</p><p>Enumeration values:</p><ul><li>Inherit: inherits the configuration from the node pool.</li><li>OnlyJoin: joins the node pool only without inheriting the configuration.</li></ul><p>Default value: Inherit.</p>
+        /// </summary>
+        [JsonProperty("NodePoolJoinMode")]
+        public string NodePoolJoinMode{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
             this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
+            this.SetParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
+            this.SetParamSimple(map, prefix + "NodePoolJoinMode", this.NodePoolJoinMode);
         }
     }
 }

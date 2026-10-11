@@ -25,27 +25,27 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// ID of the EMR cluster instance.
+        /// ID of the EMR cluster.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Cloud disk ID required for mounting.
+        /// ID of the cloud disk to be mounted.
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// Mount mode. Valid values.
-        /// AUTO_RENEW: auto-renewal.
-        /// ALIGN_DEADLINE: automatic alignment with the deadline.
+        /// Mounting mode. Valid values:
+        /// AUTO_RENEW: auto-renewal
+        /// ALIGN_DEADLINE: automatic alignment with the expiration time
         /// </summary>
         [JsonProperty("AlignType")]
         public string AlignType{ get; set; }
 
         /// <summary>
-        /// List of CVM node IDs requiring mounting.
+        /// ID list of the CVM instances to which disks are to be mounted.
         /// </summary>
         [JsonProperty("CvmInstanceIds")]
         public string[] CvmInstanceIds{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public NodeSpecDiskV2 DiskSpec{ get; set; }
 
         /// <summary>
-        /// Optional parameter. Only mount operation is performed if this parameter is not passed. When True is passed, the CBS will be set to termination with the cloud host upon successful mounting. This is only applicable to pay-as-you-go cloud disk.
+        /// Optional parameter. If this parameter is not passed, only the mounting operation is performed. If True is passed, the cloud disk is set to be terminated with the CVM upon successful mounting. This parameter is applicable only to pay-as-you-go cloud disks.
         /// </summary>
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
@@ -75,13 +75,13 @@ namespace TencentCloud.Emr.V20190103.Models
         public string[] SelectiveConfServices{ get; set; }
 
         /// <summary>
-        /// Disk billing type (1: monthly subscription, 3: committed use).
+        /// Disk billing type. Valid values: 1 (monthly subscription) and 3 (committed use).
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }
 
         /// <summary>
-        /// Disk committed use and purchase duration (only supports 12, 24, 36, 48, and 60).
+        /// Disk committed use and purchase duration. Valid values: 12, 24, 36, 48, and 60.
         /// </summary>
         [JsonProperty("UnderWriteDuration")]
         public long? UnderWriteDuration{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.intl.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1316";
+       private const string sdkVersion = "SDK_NET_3.0.1407";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to add scaling rules by load and time.
+        /// This API is used to add an automatic scaling rule by load and time.
         /// </summary>
         /// <param name="req"><see cref="AddMetricScaleStrategyRequest"/></param>
         /// <returns><see cref="AddMetricScaleStrategyResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to add scaling rules by load and time.
+        /// This API is used to add an automatic scaling rule by load and time.
         /// </summary>
         /// <param name="req"><see cref="AddMetricScaleStrategyRequest"/></param>
         /// <returns><see cref="AddMetricScaleStrategyResponse"/></returns>
@@ -75,7 +75,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to add node specifications of the current cluster.
+        /// This API is used to add node specifications for the current cluster.
         /// </summary>
         /// <param name="req"><see cref="AddNodeResourceConfigRequest"/></param>
         /// <returns><see cref="AddNodeResourceConfigResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to add node specifications of the current cluster.
+        /// This API is used to add node specifications for the current cluster.
         /// </summary>
         /// <param name="req"><see cref="AddNodeResourceConfigRequest"/></param>
         /// <returns><see cref="AddNodeResourceConfigResponse"/></returns>
@@ -96,8 +96,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is available for clusters with OpenLDAP components configured.
-        /// This API is used to add user lists (user management).
+        /// This API is used for clusters with the OpenLDAP component installed.
+        /// This API is used to add a user list (user management).
         /// </summary>
         /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
         /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
@@ -107,8 +107,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is available for clusters with OpenLDAP components configured.
-        /// This API is used to add user lists (user management).
+        /// This API is used for clusters with the OpenLDAP component installed.
+        /// This API is used to add a user list (user management).
         /// </summary>
         /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
         /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
@@ -119,7 +119,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to mount cloud disks.
+        /// This API is used to mount a cloud disk.
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -129,7 +129,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to mount cloud disks.
+        /// This API is used to mount a cloud disk.
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -140,7 +140,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding cdb).
+        /// This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding CDB).
         /// </summary>
         /// <param name="req"><see cref="ConvertPreToPostClusterRequest"/></param>
         /// <returns><see cref="ConvertPreToPostClusterResponse"/></returns>
@@ -150,7 +150,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding cdb).
+        /// This API is used to convert a monthly subscription cluster to a pay-as-you-go cluster (excluding CDB).
         /// </summary>
         /// <param name="req"><see cref="ConvertPreToPostClusterRequest"/></param>
         /// <returns><see cref="ConvertPreToPostClusterResponse"/></returns>
@@ -161,7 +161,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create an EMR cluster instance.
+        /// This API is used to create an EMR cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
         /// <returns><see cref="CreateClusterResponse"/></returns>
@@ -171,7 +171,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create an EMR cluster instance.
+        /// This API is used to create an EMR cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
         /// <returns><see cref="CreateClusterResponse"/></returns>
@@ -182,7 +182,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create user groups in batches under User Management.
+        /// This API is used to create a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicInstanceRequest"/></param>
+        /// <returns><see cref="CreateDynamicInstanceResponse"/></returns>
+        public Task<CreateDynamicInstanceResponse> CreateDynamicInstance(CreateDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicInstanceResponse>(req, "CreateDynamicInstance");
+        }
+
+        /// <summary>
+        /// This API is used to create a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDynamicInstanceRequest"/></param>
+        /// <returns><see cref="CreateDynamicInstanceResponse"/></returns>
+        public CreateDynamicInstanceResponse CreateDynamicInstanceSync(CreateDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<CreateDynamicInstanceResponse>(req, "CreateDynamicInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create user groups in batches in user management.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupsSTDRequest"/></param>
         /// <returns><see cref="CreateGroupsSTDResponse"/></returns>
@@ -192,7 +213,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create user groups in batches under User Management.
+        /// This API is used to create user groups in batches in user management.
         /// </summary>
         /// <param name="req"><see cref="CreateGroupsSTDRequest"/></param>
         /// <returns><see cref="CreateGroupsSTDResponse"/></returns>
@@ -203,7 +224,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create an EMR cluster instance.
+        /// This API is used to create an EMR cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -213,7 +234,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create an EMR cluster instance.
+        /// This API is used to create an EMR cluster.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -224,7 +245,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// This API is used to create a Serverless instance, for example, HBase, StarRocks, and TCBase instances.- This API is successfully called, and a Serverless instance is created. If the instance creation request succeeds, InstanceId of the instance and RequestID of the request are returned.
+        /// - This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
         /// </summary>
         /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
         /// <returns><see cref="CreateSLInstanceResponse"/></returns>
@@ -234,7 +256,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to create a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the InstanceId of the created instance and the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// This API is used to create a Serverless instance, for example, HBase, StarRocks, and TCBase instances.- This API is successfully called, and a Serverless instance is created. If the instance creation request succeeds, InstanceId of the instance and RequestID of the request are returned.
+        /// - This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
         /// </summary>
         /// <param name="req"><see cref="CreateSLInstanceRequest"/></param>
         /// <returns><see cref="CreateSLInstanceResponse"/></returns>
@@ -245,7 +268,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to delete automatic scaling rules. Nodes scaled based on these rules are destroyed in the background.
+        /// This API is used to delete an automatic scaling rule. Nodes scaled based on this rule are terminated in the backend.
         /// </summary>
         /// <param name="req"><see cref="DeleteAutoScaleStrategyRequest"/></param>
         /// <returns><see cref="DeleteAutoScaleStrategyResponse"/></returns>
@@ -255,7 +278,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to delete automatic scaling rules. Nodes scaled based on these rules are destroyed in the background.
+        /// This API is used to delete an automatic scaling rule. Nodes scaled based on this rule are terminated in the backend.
         /// </summary>
         /// <param name="req"><see cref="DeleteAutoScaleStrategyRequest"/></param>
         /// <returns><see cref="DeleteAutoScaleStrategyResponse"/></returns>
@@ -287,7 +310,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to delete the node specifications of the current cluster.
+        /// This API is used to delete node specifications of the current cluster.
         /// </summary>
         /// <param name="req"><see cref="DeleteNodeResourceConfigRequest"/></param>
         /// <returns><see cref="DeleteNodeResourceConfigResponse"/></returns>
@@ -297,7 +320,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to delete the node specifications of the current cluster.
+        /// This API is used to delete node specifications of the current cluster.
         /// </summary>
         /// <param name="req"><see cref="DeleteNodeResourceConfigRequest"/></param>
         /// <returns><see cref="DeleteNodeResourceConfigResponse"/></returns>
@@ -308,7 +331,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to bring the configuration into effect in YARN resource scheduling after deployment.
+        /// This API is used to bring the deployment into effect in YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DeployYarnConfRequest"/></param>
         /// <returns><see cref="DeployYarnConfResponse"/></returns>
@@ -318,7 +341,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to bring the configuration into effect in YARN resource scheduling after deployment.
+        /// This API is used to bring the deployment into effect in YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DeployYarnConfRequest"/></param>
         /// <returns><see cref="DeployYarnConfResponse"/></returns>
@@ -329,7 +352,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access the global configuration of automatic scaling.
+        /// This API is used to obtain the global configuration of auto scaling.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleGroupGlobalConfRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleGroupGlobalConfResponse"/></returns>
@@ -339,7 +362,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access the global configuration of automatic scaling.
+        /// This API is used to obtain the global configuration of auto scaling.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleGroupGlobalConfRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleGroupGlobalConfResponse"/></returns>
@@ -350,7 +373,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to inquiry detailed records of cluster autoscaling.
+        /// This API is used to obtain the detailed automatic scaling records of a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
@@ -360,7 +383,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to inquiry detailed records of cluster autoscaling.
+        /// This API is used to obtain the detailed automatic scaling records of a cluster.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleRecordsRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleRecordsResponse"/></returns>
@@ -371,7 +394,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access automatic scaling rules.
+        /// This API is used to obtain an automatic scaling rule.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleStrategiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleStrategiesResponse"/></returns>
@@ -381,7 +404,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access automatic scaling rules.
+        /// This API is used to obtain an automatic scaling rule.
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScaleStrategiesRequest"/></param>
         /// <returns><see cref="DescribeAutoScaleStrategiesResponse"/></returns>
@@ -392,7 +415,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the EMR task running details status.
+        /// This API is used to obtain a bootstrap script.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBootScriptRequest"/></param>
+        /// <returns><see cref="DescribeBootScriptResponse"/></returns>
+        public Task<DescribeBootScriptResponse> DescribeBootScript(DescribeBootScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeBootScriptResponse>(req, "DescribeBootScript");
+        }
+
+        /// <summary>
+        /// This API is used to obtain a bootstrap script.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBootScriptRequest"/></param>
+        /// <returns><see cref="DescribeBootScriptResponse"/></returns>
+        public DescribeBootScriptResponse DescribeBootScriptSync(DescribeBootScriptRequest req)
+        {
+            return InternalRequestAsync<DescribeBootScriptResponse>(req, "DescribeBootScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the running status details of an EMR cluster task.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterFlowStatusDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterFlowStatusDetailResponse"/></returns>
@@ -402,7 +446,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the EMR task running details status.
+        /// This API is used to query the running status details of an EMR cluster task.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterFlowStatusDetailRequest"/></param>
         /// <returns><see cref="DescribeClusterFlowStatusDetailResponse"/></returns>
@@ -413,7 +457,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of nodes in a cluster.
+        /// This API is used to query information of a cluster node.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -423,7 +467,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of nodes in a cluster.
+        /// This API is used to query information of a cluster node.
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterNodesRequest"/></param>
         /// <returns><see cref="DescribeClusterNodesResponse"/></returns>
@@ -455,7 +499,70 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the YARN application statistics API.
+        /// This API is used to describe the details of a DynamicInstance in an EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceDetailResponse"/></returns>
+        public Task<DescribeDynamicInstanceDetailResponse> DescribeDynamicInstanceDetail(DescribeDynamicInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceDetailResponse>(req, "DescribeDynamicInstanceDetail");
+        }
+
+        /// <summary>
+        /// This API is used to describe the details of a DynamicInstance in an EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceDetailResponse"/></returns>
+        public DescribeDynamicInstanceDetailResponse DescribeDynamicInstanceDetailSync(DescribeDynamicInstanceDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceDetailResponse>(req, "DescribeDynamicInstanceDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to describe the DynamicInstance list of an EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceListResponse"/></returns>
+        public Task<DescribeDynamicInstanceListResponse> DescribeDynamicInstanceList(DescribeDynamicInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceListResponse>(req, "DescribeDynamicInstanceList");
+        }
+
+        /// <summary>
+        /// This API is used to describe the DynamicInstance list of an EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDynamicInstanceListRequest"/></param>
+        /// <returns><see cref="DescribeDynamicInstanceListResponse"/></returns>
+        public DescribeDynamicInstanceListResponse DescribeDynamicInstanceListSync(DescribeDynamicInstanceListRequest req)
+        {
+            return InternalRequestAsync<DescribeDynamicInstanceListResponse>(req, "DescribeDynamicInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query EMR event monitoring data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEMREventListRequest"/></param>
+        /// <returns><see cref="DescribeEMREventListResponse"/></returns>
+        public Task<DescribeEMREventListResponse> DescribeEMREventList(DescribeEMREventListRequest req)
+        {
+            return InternalRequestAsync<DescribeEMREventListResponse>(req, "DescribeEMREventList");
+        }
+
+        /// <summary>
+        /// This API is used to query EMR event monitoring data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEMREventListRequest"/></param>
+        /// <returns><see cref="DescribeEMREventListResponse"/></returns>
+        public DescribeEMREventListResponse DescribeEMREventListSync(DescribeEMREventListRequest req)
+        {
+            return InternalRequestAsync<DescribeEMREventListResponse>(req, "DescribeEMREventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the YARN task statistics information.
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
         /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>
@@ -465,7 +572,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the YARN application statistics API.
+        /// This API is used to query the YARN task statistics information.
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
         /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>
@@ -476,7 +583,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the metric data on the monitoring overview page.
+        /// This API is used to query metric data on the monitoring overview page.
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrOverviewMetricsRequest"/></param>
         /// <returns><see cref="DescribeEmrOverviewMetricsResponse"/></returns>
@@ -486,7 +593,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the metric data on the monitoring overview page.
+        /// This API is used to query metric data on the monitoring overview page.
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrOverviewMetricsRequest"/></param>
         /// <returns><see cref="DescribeEmrOverviewMetricsResponse"/></returns>
@@ -497,7 +604,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the global configurations of YARN Resource Scheduling.
+        /// This API is used to query the export configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportConfsRequest"/></param>
+        /// <returns><see cref="DescribeExportConfsResponse"/></returns>
+        public Task<DescribeExportConfsResponse> DescribeExportConfs(DescribeExportConfsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportConfsResponse>(req, "DescribeExportConfs");
+        }
+
+        /// <summary>
+        /// This API is used to query the export configuration.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportConfsRequest"/></param>
+        /// <returns><see cref="DescribeExportConfsResponse"/></returns>
+        public DescribeExportConfsResponse DescribeExportConfsSync(DescribeExportConfsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportConfsResponse>(req, "DescribeExportConfs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the global configuration of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalConfigRequest"/></param>
         /// <returns><see cref="DescribeGlobalConfigResponse"/></returns>
@@ -507,7 +635,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the global configurations of YARN Resource Scheduling.
+        /// This API is used to query the global configuration of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeGlobalConfigRequest"/></param>
         /// <returns><see cref="DescribeGlobalConfigResponse"/></returns>
@@ -539,7 +667,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access the overview of HBase table-level monitoring data.
+        /// This API is used to obtain an overview of HBase table-level monitoring data.
         /// </summary>
         /// <param name="req"><see cref="DescribeHBaseTableOverviewRequest"/></param>
         /// <returns><see cref="DescribeHBaseTableOverviewResponse"/></returns>
@@ -549,7 +677,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to access the overview of HBase table-level monitoring data.
+        /// This API is used to obtain an overview of HBase table-level monitoring data.
         /// </summary>
         /// <param name="req"><see cref="DescribeHBaseTableOverviewRequest"/></param>
         /// <returns><see cref="DescribeHBaseTableOverviewResponse"/></returns>
@@ -560,7 +688,49 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query information of file(s) stored in HDFS.
+        /// This API is used to obtain the read/write rate at the HBase table level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableRequestMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableRequestMetricResponse"/></returns>
+        public Task<DescribeHBaseTableRequestMetricResponse> DescribeHBaseTableRequestMetric(DescribeHBaseTableRequestMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableRequestMetricResponse>(req, "DescribeHBaseTableRequestMetric");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the read/write rate at the HBase table level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableRequestMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableRequestMetricResponse"/></returns>
+        public DescribeHBaseTableRequestMetricResponse DescribeHBaseTableRequestMetricSync(DescribeHBaseTableRequestMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableRequestMetricResponse>(req, "DescribeHBaseTableRequestMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the StoreSize monitoring metric data at the HBase table level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableStoreSizeMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableStoreSizeMetricResponse"/></returns>
+        public Task<DescribeHBaseTableStoreSizeMetricResponse> DescribeHBaseTableStoreSizeMetric(DescribeHBaseTableStoreSizeMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableStoreSizeMetricResponse>(req, "DescribeHBaseTableStoreSizeMetric");
+        }
+
+        /// <summary>
+        /// This API is used to query the StoreSize monitoring metric data at the HBase table level.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHBaseTableStoreSizeMetricRequest"/></param>
+        /// <returns><see cref="DescribeHBaseTableStoreSizeMetricResponse"/></returns>
+        public DescribeHBaseTableStoreSizeMetricResponse DescribeHBaseTableStoreSizeMetricSync(DescribeHBaseTableStoreSizeMetricRequest req)
+        {
+            return InternalRequestAsync<DescribeHBaseTableStoreSizeMetricResponse>(req, "DescribeHBaseTableStoreSizeMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query information of files stored in HDFS.
         /// </summary>
         /// <param name="req"><see cref="DescribeHDFSStorageInfoRequest"/></param>
         /// <returns><see cref="DescribeHDFSStorageInfoResponse"/></returns>
@@ -570,7 +740,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query information of file(s) stored in HDFS.
+        /// This API is used to query information of files stored in HDFS.
         /// </summary>
         /// <param name="req"><see cref="DescribeHDFSStorageInfoRequest"/></param>
         /// <returns><see cref="DescribeHDFSStorageInfoResponse"/></returns>
@@ -581,7 +751,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to inquiry Hive query data.
+        /// This API is used to obtain Hive query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
         /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
@@ -591,7 +761,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to inquiry Hive query data.
+        /// This API is used to obtain Hive query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeHiveQueriesRequest"/></param>
         /// <returns><see cref="DescribeHiveQueriesResponse"/></returns>
@@ -644,7 +814,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of instances in a cluster.
+        /// This API is used to obtain the instance operation logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOplogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOplogResponse"/></returns>
+        public Task<DescribeInstanceOplogResponse> DescribeInstanceOplog(DescribeInstanceOplogRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceOplogResponse>(req, "DescribeInstanceOplog");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the instance operation logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceOplogRequest"/></param>
+        /// <returns><see cref="DescribeInstanceOplogResponse"/></returns>
+        public DescribeInstanceOplogResponse DescribeInstanceOplogSync(DescribeInstanceOplogRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceOplogResponse>(req, "DescribeInstanceOplog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query cluster information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -654,7 +845,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the information of instances in a cluster.
+        /// This API is used to query cluster information.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -686,7 +877,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query Kyuubi query information.
+        /// This API is used to obtain Kyuubi query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeKyuubiQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeKyuubiQueryInfoResponse"/></returns>
@@ -696,7 +887,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query Kyuubi query information.
+        /// This API is used to obtain Kyuubi query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeKyuubiQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeKyuubiQueryInfoResponse"/></returns>
@@ -707,7 +898,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query data disk information of nodes.
+        /// This API is used to obtain cluster MetaDB data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetaDBInfoRequest"/></param>
+        /// <returns><see cref="DescribeMetaDBInfoResponse"/></returns>
+        public Task<DescribeMetaDBInfoResponse> DescribeMetaDBInfo(DescribeMetaDBInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMetaDBInfoResponse>(req, "DescribeMetaDBInfo");
+        }
+
+        /// <summary>
+        /// This API is used to obtain cluster MetaDB data.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetaDBInfoRequest"/></param>
+        /// <returns><see cref="DescribeMetaDBInfoResponse"/></returns>
+        public DescribeMetaDBInfoResponse DescribeMetaDBInfoSync(DescribeMetaDBInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeMetaDBInfoResponse>(req, "DescribeMetaDBInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query data disk information of a node.
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeDataDisksRequest"/></param>
         /// <returns><see cref="DescribeNodeDataDisksResponse"/></returns>
@@ -717,7 +929,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query data disk information of nodes.
+        /// This API is used to query data disk information of a node.
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeDataDisksRequest"/></param>
         /// <returns><see cref="DescribeNodeDataDisksResponse"/></returns>
@@ -770,7 +982,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query YARN resource scheduling information. It has been deprecated. You can use the DescribeYarnQueue API to query queue information.
+        /// This API is used to query YARN resource scheduling information. It has been deprecated. Please use `DescribeYarnQueue` to query queue information.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -780,7 +992,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query YARN resource scheduling information. It has been deprecated. You can use the DescribeYarnQueue API to query queue information.
+        /// This API is used to query YARN resource scheduling information. It has been deprecated. Please use `DescribeYarnQueue` to query queue information.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
@@ -791,7 +1003,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query change details in YARN resource scheduling.
+        /// This API is used to query the change details of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleDiffDetailRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleDiffDetailResponse"/></returns>
@@ -801,7 +1013,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query change details in YARN resource scheduling.
+        /// This API is used to query the change details of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceScheduleDiffDetailRequest"/></param>
         /// <returns><see cref="DescribeResourceScheduleDiffDetailResponse"/></returns>
@@ -812,7 +1024,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the basic information of Serverless HBase instances.
+        /// This API is used to query basic information of a Serverless HBase instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
         /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
@@ -822,7 +1034,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the basic information of Serverless HBase instances.
+        /// This API is used to query basic information of a Serverless HBase instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeSLInstanceRequest"/></param>
         /// <returns><see cref="DescribeSLInstanceResponse"/></returns>
@@ -833,7 +1045,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the detailed information of the Serverless HBase instance list.
+        /// This API is used to query detailed information of the Serverless HBase instance list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
         /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
@@ -843,7 +1055,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the detailed information of the Serverless HBase instance list.
+        /// This API is used to query detailed information of the Serverless HBase instance list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSLInstanceListRequest"/></param>
         /// <returns><see cref="DescribeSLInstanceListResponse"/></returns>
@@ -896,7 +1108,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to obtain a Spark application list.
+        /// This API is used to obtain the Spark application list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkApplicationsRequest"/></param>
         /// <returns><see cref="DescribeSparkApplicationsResponse"/></returns>
@@ -906,7 +1118,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to obtain a Spark application list.
+        /// This API is used to obtain the Spark application list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkApplicationsRequest"/></param>
         /// <returns><see cref="DescribeSparkApplicationsResponse"/></returns>
@@ -917,7 +1129,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the Spark query information list.
+        /// This API is used to obtain the Spark query information list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkQueriesRequest"/></param>
         /// <returns><see cref="DescribeSparkQueriesResponse"/></returns>
@@ -927,7 +1139,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the Spark query information list.
+        /// This API is used to obtain the Spark query information list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSparkQueriesRequest"/></param>
         /// <returns><see cref="DescribeSparkQueriesResponse"/></returns>
@@ -938,7 +1150,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query StarRocks information.
+        /// This API is used to obtain StarRocks query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeStarRocksQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeStarRocksQueryInfoResponse"/></returns>
@@ -948,7 +1160,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query StarRocks information.
+        /// This API is used to obtain StarRocks query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeStarRocksQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeStarRocksQueryInfoResponse"/></returns>
@@ -959,7 +1171,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query Trino(PrestoSQL) query information.
+        /// This API is used to obtain Trino (PrestoSQL) query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>
@@ -969,7 +1181,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query Trino(PrestoSQL) query information.
+        /// This API is used to obtain Trino (PrestoSQL) query information.
         /// </summary>
         /// <param name="req"><see cref="DescribeTrinoQueryInfoRequest"/></param>
         /// <returns><see cref="DescribeTrinoQueryInfoResponse"/></returns>
@@ -980,8 +1192,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is available for clusters with OpenLDAP components configured.
-        /// This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
+        /// This API is used for clusters with the OpenLDAP component installed.
+        /// This API is used to export users in batches. For a Kerberos cluster, if the keytab file download link is required, set NeedKeytabInfo to true. Note: If SupportDownLoadKeyTab is set to true but DownLoadKeyTabUrl is an empty string, the keytab file is not ready (being generated).
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
         /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
@@ -991,8 +1203,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is available for clusters with OpenLDAP components configured.
-        /// This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
+        /// This API is used for clusters with the OpenLDAP component installed.
+        /// This API is used to export users in batches. For a Kerberos cluster, if the keytab file download link is required, set NeedKeytabInfo to true. Note: If SupportDownLoadKeyTab is set to true but DownLoadKeyTabUrl is an empty string, the keytab file is not ready (being generated).
         /// </summary>
         /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
         /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
@@ -1024,7 +1236,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to view the YARN resource scheduling history. It has been deprecated. You can use the Process Center to view the history records.
+        /// This API is used to view the YARN resource scheduling history. It has been deprecated. Please use Task Center to view the history records.
         /// </summary>
         /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
         /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
@@ -1034,7 +1246,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to view the YARN resource scheduling history. It has been deprecated. You can use the Process Center to view the history records.
+        /// This API is used to view the YARN resource scheduling history. It has been deprecated. Please use Task Center to view the history records.
         /// </summary>
         /// <param name="req"><see cref="DescribeYarnScheduleHistoryRequest"/></param>
         /// <returns><see cref="DescribeYarnScheduleHistoryResponse"/></returns>
@@ -1045,7 +1257,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of instance creation.
+        /// This API is used to inquire the price for instance creation.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
@@ -1055,7 +1267,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of instance creation.
+        /// This API is used to inquire the price for instance creation.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceCreateInstanceResponse"/></returns>
@@ -1066,7 +1278,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the price for renewal.
+        /// This API is used to inquire the price for renewal.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
@@ -1076,7 +1288,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query the price for renewal.
+        /// This API is used to inquire the price for renewal.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceRenewInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceRenewInstanceResponse"/></returns>
@@ -1087,7 +1299,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of scale-out.
+        /// This API is used to inquire the price for a scale-out.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
@@ -1097,7 +1309,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of scale-out.
+        /// This API is used to inquire the price for a scale-out.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceScaleOutInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceScaleOutInstanceResponse"/></returns>
@@ -1108,7 +1320,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of scaling.
+        /// This API is used to inquire the price for the configuration change.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpdateInstanceResponse"/></returns>
@@ -1118,7 +1330,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to query price of scaling.
+        /// This API is used to inquire the price for the configuration change.
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpdateInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpdateInstanceResponse"/></returns>
@@ -1129,8 +1341,29 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to introduce the prerequisite prepaid clusters.
-        /// This API is used to enable or disable automatic renewal at the resource level.
+        /// This API is used to install a component. For components dependent on the MetaDB, a CDB order may be required. The components that can be installed on the current cluster and the components that might require a CDB order can be viewed via InstallSoftWareInfo.
+        /// </summary>
+        /// <param name="req"><see cref="InstallSoftwareRequest"/></param>
+        /// <returns><see cref="InstallSoftwareResponse"/></returns>
+        public Task<InstallSoftwareResponse> InstallSoftware(InstallSoftwareRequest req)
+        {
+            return InternalRequestAsync<InstallSoftwareResponse>(req, "InstallSoftware");
+        }
+
+        /// <summary>
+        /// This API is used to install a component. For components dependent on the MetaDB, a CDB order may be required. The components that can be installed on the current cluster and the components that might require a CDB order can be viewed via InstallSoftWareInfo.
+        /// </summary>
+        /// <param name="req"><see cref="InstallSoftwareRequest"/></param>
+        /// <returns><see cref="InstallSoftwareResponse"/></returns>
+        public InstallSoftwareResponse InstallSoftwareSync(InstallSoftwareRequest req)
+        {
+            return InternalRequestAsync<InstallSoftwareResponse>(req, "InstallSoftware")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to introduce the prerequisites for a prepaid cluster.
+        /// This API is used to enable or disable auto-renewal at the resource level.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
@@ -1140,8 +1373,8 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to introduce the prerequisite prepaid clusters.
-        /// This API is used to enable or disable automatic renewal at the resource level.
+        /// This API is used to introduce the prerequisites for a prepaid cluster.
+        /// This API is used to enable or disable auto-renewal at the resource level.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyAutoRenewFlagResponse"/></returns>
@@ -1152,7 +1385,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify automatic scaling rules.
+        /// This API is used to modify an automatic scaling rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoScaleStrategyRequest"/></param>
         /// <returns><see cref="ModifyAutoScaleStrategyResponse"/></returns>
@@ -1162,7 +1395,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify automatic scaling rules.
+        /// This API is used to modify an automatic scaling rule.
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoScaleStrategyRequest"/></param>
         /// <returns><see cref="ModifyAutoScaleStrategyResponse"/></returns>
@@ -1173,7 +1406,49 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify the global configuration of YARN Resource Scheduling.
+        /// This API is used to modify a bootstrap script.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBootScriptRequest"/></param>
+        /// <returns><see cref="ModifyBootScriptResponse"/></returns>
+        public Task<ModifyBootScriptResponse> ModifyBootScript(ModifyBootScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyBootScriptResponse>(req, "ModifyBootScript");
+        }
+
+        /// <summary>
+        /// This API is used to modify a bootstrap script.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBootScriptRequest"/></param>
+        /// <returns><see cref="ModifyBootScriptResponse"/></returns>
+        public ModifyBootScriptResponse ModifyBootScriptSync(ModifyBootScriptRequest req)
+        {
+            return InternalRequestAsync<ModifyBootScriptResponse>(req, "ModifyBootScript")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDynamicInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDynamicInstanceResponse"/></returns>
+        public Task<ModifyDynamicInstanceResponse> ModifyDynamicInstance(ModifyDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDynamicInstanceResponse>(req, "ModifyDynamicInstance");
+        }
+
+        /// <summary>
+        /// This API is used to update a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDynamicInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDynamicInstanceResponse"/></returns>
+        public ModifyDynamicInstanceResponse ModifyDynamicInstanceSync(ModifyDynamicInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDynamicInstanceResponse>(req, "ModifyDynamicInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the global configuration of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="ModifyGlobalConfigRequest"/></param>
         /// <returns><see cref="ModifyGlobalConfigResponse"/></returns>
@@ -1183,7 +1458,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify the global configuration of YARN Resource Scheduling.
+        /// This API is used to modify the global configuration of YARN resource scheduling.
         /// </summary>
         /// <param name="req"><see cref="ModifyGlobalConfigRequest"/></param>
         /// <returns><see cref="ModifyGlobalConfigResponse"/></returns>
@@ -1194,7 +1469,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to set inspection task configurations.
+        /// This API is used to set the inspection task configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyInspectionSettingsRequest"/></param>
         /// <returns><see cref="ModifyInspectionSettingsResponse"/></returns>
@@ -1204,7 +1479,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to set inspection task configurations.
+        /// This API is used to set the inspection task configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyInspectionSettingsRequest"/></param>
         /// <returns><see cref="ModifyInspectionSettingsResponse"/></returns>
@@ -1215,7 +1490,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify a cluster name.
+        /// This API is used to modify the cluster name.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBasicRequest"/></param>
         /// <returns><see cref="ModifyInstanceBasicResponse"/></returns>
@@ -1225,7 +1500,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify a cluster name.
+        /// This API is used to modify the cluster name.
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceBasicRequest"/></param>
         /// <returns><see cref="ModifyInstanceBasicResponse"/></returns>
@@ -1236,7 +1511,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to resize an instance.
+        /// This API is used to change the instance configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceRequest"/></param>
         /// <returns><see cref="ModifyResourceResponse"/></returns>
@@ -1246,7 +1521,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to resize an instance.
+        /// This API is used to change the instance configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceRequest"/></param>
         /// <returns><see cref="ModifyResourceResponse"/></returns>
@@ -1282,7 +1557,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify a YARN resource scheduler. After the modification, you can click Deploy to bring it into effect.
+        /// This API is used to modify a YARN resource scheduler. After the modification, click Deploy to make the modification take effect.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
         /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
@@ -1292,7 +1567,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify a YARN resource scheduler. After the modification, you can click Deploy to bring it into effect.
+        /// This API is used to modify a YARN resource scheduler. After the modification, click Deploy to make the modification take effect.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
         /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
@@ -1303,7 +1578,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to forcibly modify tags.
+        /// This API is used to forcibly modify a tag.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
         /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
@@ -1313,7 +1588,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to forcibly modify tags.
+        /// This API is used to forcibly modify a tag.
         /// </summary>
         /// <param name="req"><see cref="ModifyResourcesTagsRequest"/></param>
         /// <returns><see cref="ModifyResourcesTagsResponse"/></returns>
@@ -1324,7 +1599,9 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// This API is used to change the configuration of a Serverless HBase instance.
+        /// - This API is successfully called, and a Serverless HBase instance is created. If the instance creation request succeeds, RequestID of the request is returned.
+        /// - This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
         /// </summary>
         /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
         /// <returns><see cref="ModifySLInstanceResponse"/></returns>
@@ -1334,7 +1611,9 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to resize a Serverless HBase instance.- If the API call is successful, a Serverless HBase instance will be created. If the instance creation request is successful, the RequestID of the request will be returned.- This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling DescribeInstancesList to view the StatusDesc status of the current instance.
+        /// This API is used to change the configuration of a Serverless HBase instance.
+        /// - This API is successfully called, and a Serverless HBase instance is created. If the instance creation request succeeds, RequestID of the request is returned.
+        /// - This is an asynchronous API. The operation is not completed immediately when the API call returns. The instance operation result can be viewed by calling the DescribeInstancesList API, and the StatusDesc field for the current instance can be returned.
         /// </summary>
         /// <param name="req"><see cref="ModifySLInstanceRequest"/></param>
         /// <returns><see cref="ModifySLInstanceResponse"/></returns>
@@ -1345,7 +1624,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify the Serverless HBase instance name.
+        /// This API is used to modify the Serverless HBase instance name.
         /// </summary>
         /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
         /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
@@ -1355,7 +1634,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify the Serverless HBase instance name.
+        /// This API is used to modify the Serverless HBase instance name.
         /// </summary>
         /// <param name="req"><see cref="ModifySLInstanceBasicRequest"/></param>
         /// <returns><see cref="ModifySLInstanceBasicResponse"/></returns>
@@ -1366,7 +1645,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify user groups under User Management.
+        /// Configuration import and delivery
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceParamsByExportConfsRequest"/></param>
+        /// <returns><see cref="ModifyServiceParamsByExportConfsResponse"/></returns>
+        public Task<ModifyServiceParamsByExportConfsResponse> ModifyServiceParamsByExportConfs(ModifyServiceParamsByExportConfsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceParamsByExportConfsResponse>(req, "ModifyServiceParamsByExportConfs");
+        }
+
+        /// <summary>
+        /// Configuration import and delivery
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceParamsByExportConfsRequest"/></param>
+        /// <returns><see cref="ModifyServiceParamsByExportConfsResponse"/></returns>
+        public ModifyServiceParamsByExportConfsResponse ModifyServiceParamsByExportConfsSync(ModifyServiceParamsByExportConfsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceParamsByExportConfsResponse>(req, "ModifyServiceParamsByExportConfs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a user group in user management.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
         /// <returns><see cref="ModifyUserGroupResponse"/></returns>
@@ -1376,7 +1676,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to modify user groups under User Management.
+        /// This API is used to modify a user group in user management.
         /// </summary>
         /// <param name="req"><see cref="ModifyUserGroupRequest"/></param>
         /// <returns><see cref="ModifyUserGroupResponse"/></returns>
@@ -1387,7 +1687,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to change user password (user management).
+        /// This API is used to modify a user password (user management).
         /// </summary>
         /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
         /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
@@ -1397,7 +1697,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to change user password (user management).
+        /// This API is used to modify a user password (user management).
         /// </summary>
         /// <param name="req"><see cref="ModifyUserManagerPwdRequest"/></param>
         /// <returns><see cref="ModifyUserManagerPwdResponse"/></returns>
@@ -1408,7 +1708,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to change the user information of user groups.
+        /// This API is used to change user information in a user group.
         /// </summary>
         /// <param name="req"><see cref="ModifyUsersOfGroupSTDRequest"/></param>
         /// <returns><see cref="ModifyUsersOfGroupSTDResponse"/></returns>
@@ -1418,7 +1718,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to change the user information of user groups.
+        /// This API is used to change user information in a user group.
         /// </summary>
         /// <param name="req"><see cref="ModifyUsersOfGroupSTDRequest"/></param>
         /// <returns><see cref="ModifyUsersOfGroupSTDResponse"/></returns>
@@ -1496,7 +1796,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out the cloud data disk.
+        /// This API is used to scale out cloud data disks.
         /// </summary>
         /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
         /// <returns><see cref="ResizeDataDisksResponse"/></returns>
@@ -1506,7 +1806,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out the cloud data disk.
+        /// This API is used to scale out cloud data disks.
         /// </summary>
         /// <param name="req"><see cref="ResizeDataDisksRequest"/></param>
         /// <returns><see cref="ResizeDataDisksResponse"/></returns>
@@ -1517,7 +1817,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out a cluster.
+        /// This API is used to scale out cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
         /// <returns><see cref="ScaleOutClusterResponse"/></returns>
@@ -1527,7 +1827,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out a cluster.
+        /// This API is used to scale out cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutClusterRequest"/></param>
         /// <returns><see cref="ScaleOutClusterResponse"/></returns>
@@ -1538,7 +1838,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out instances.
+        /// This API is used to scale out nodes.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
         /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
@@ -1548,7 +1848,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to scale out instances.
+        /// This API is used to scale out nodes.
         /// </summary>
         /// <param name="req"><see cref="ScaleOutInstanceRequest"/></param>
         /// <returns><see cref="ScaleOutInstanceResponse"/></returns>
@@ -1559,7 +1859,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to set specifications for a node in the current cluster to default or not.
+        /// This API is used to set specifications of a node in the current cluster as the default or cancel the default setting.
         /// </summary>
         /// <param name="req"><see cref="SetNodeResourceConfigDefaultRequest"/></param>
         /// <returns><see cref="SetNodeResourceConfigDefaultResponse"/></returns>
@@ -1569,7 +1869,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to set specifications for a node in the current cluster to default or not.
+        /// This API is used to set specifications of a node in the current cluster as the default or cancel the default setting.
         /// </summary>
         /// <param name="req"><see cref="SetNodeResourceConfigDefaultRequest"/></param>
         /// <returns><see cref="SetNodeResourceConfigDefaultResponse"/></returns>
@@ -1580,7 +1880,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to start, stop, or restart services.
+        /// This API is used to execute operations such as starting, stopping, and restarting a service.
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
@@ -1590,7 +1890,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to start, stop, or restart services.
+        /// This API is used to execute operations such as starting, stopping, and restarting a service.
         /// </summary>
         /// <param name="req"><see cref="StartStopServiceOrMonitorRequest"/></param>
         /// <returns><see cref="StartStopServiceOrMonitorResponse"/></returns>
@@ -1601,7 +1901,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate cluster nodes.
+        /// This API is used to terminate a cluster node.
         /// </summary>
         /// <param name="req"><see cref="TerminateClusterNodesRequest"/></param>
         /// <returns><see cref="TerminateClusterNodesResponse"/></returns>
@@ -1611,7 +1911,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate cluster nodes.
+        /// This API is used to terminate a cluster node.
         /// </summary>
         /// <param name="req"><see cref="TerminateClusterNodesRequest"/></param>
         /// <returns><see cref="TerminateClusterNodesResponse"/></returns>
@@ -1622,7 +1922,28 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+        /// This API is used to terminate a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDynamicInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDynamicInstancesResponse"/></returns>
+        public Task<TerminateDynamicInstancesResponse> TerminateDynamicInstances(TerminateDynamicInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDynamicInstancesResponse>(req, "TerminateDynamicInstances");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a DynamicInstance in a containerized EMR on TKE cluster.
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDynamicInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDynamicInstancesResponse"/></returns>
+        public TerminateDynamicInstancesResponse TerminateDynamicInstancesSync(TerminateDynamicInstancesRequest req)
+        {
+            return InternalRequestAsync<TerminateDynamicInstancesResponse>(req, "TerminateDynamicInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate an EMR instance. It is supported only for the officially billed version of EMR.
         /// </summary>
         /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
         /// <returns><see cref="TerminateInstanceResponse"/></returns>
@@ -1632,7 +1953,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+        /// This API is used to terminate an EMR instance. It is supported only for the officially billed version of EMR.
         /// </summary>
         /// <param name="req"><see cref="TerminateInstanceRequest"/></param>
         /// <returns><see cref="TerminateInstanceResponse"/></returns>
@@ -1643,7 +1964,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate a Serverless HBase instance.
+        /// This API is used to terminate a Serverless HBase instance.
         /// </summary>
         /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
         /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
@@ -1653,7 +1974,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate a Serverless HBase instance.
+        /// This API is used to terminate a Serverless HBase instance.
         /// </summary>
         /// <param name="req"><see cref="TerminateSLInstanceRequest"/></param>
         /// <returns><see cref="TerminateSLInstanceResponse"/></returns>
@@ -1664,7 +1985,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate a task node.
+        /// This API is used to scale in Task nodes.
         /// </summary>
         /// <param name="req"><see cref="TerminateTasksRequest"/></param>
         /// <returns><see cref="TerminateTasksResponse"/></returns>
@@ -1674,7 +1995,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// This API is used to terminate a task node.
+        /// This API is used to scale in Task nodes.
         /// </summary>
         /// <param name="req"><see cref="TerminateTasksRequest"/></param>
         /// <returns><see cref="TerminateTasksResponse"/></returns>
