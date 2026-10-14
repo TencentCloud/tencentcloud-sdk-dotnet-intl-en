@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// List of HLS pull addresses.
         /// </summary>
         [JsonProperty("ServerUrls")]
         public DescribeOutputHLSPullServerUrl[] ServerUrls{ get; set; }

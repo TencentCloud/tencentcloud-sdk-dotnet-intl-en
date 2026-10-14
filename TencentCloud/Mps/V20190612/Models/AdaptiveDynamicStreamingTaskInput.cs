@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Digital watermark parameter.</p>
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
         /// </summary>
         [JsonProperty("AddOnSubtitles")]
         public AddOnSubtitle[] AddOnSubtitles{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Drm information.</p>
         /// </summary>
         [JsonProperty("DrmInfo")]
         public DrmInfo DrmInfo{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string DefinitionType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
         /// </summary>
         [JsonProperty("SubtitleTemplate")]
         public SubtitleTemplate SubtitleTemplate{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string StdExtInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (a relative deviation of &lt;=1ms is allowed). When gop and segment duration are specified simultaneously, they will work together. Note that RawPts needs to be enabled, keep the frame rate following the source, and ensure the passed-in pts time has a corresponding frame in the source.</p>
         /// </summary>
         [JsonProperty("KeyPTSList")]
         public long?[] KeyPTSList{ get; set; }

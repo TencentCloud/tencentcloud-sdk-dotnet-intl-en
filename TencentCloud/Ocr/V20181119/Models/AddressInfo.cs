@@ -25,85 +25,73 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Country.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Country</p>
         /// </summary>
         [JsonProperty("Country")]
         public string Country{ get; set; }
 
         /// <summary>
-        /// Postal code.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Postal code</p>
         /// </summary>
         [JsonProperty("PostalCode")]
         public string PostalCode{ get; set; }
 
         /// <summary>
-        /// Sub-region or state/province.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Sub-region</p>
         /// </summary>
         [JsonProperty("Subdivision")]
         public string Subdivision{ get; set; }
 
         /// <summary>
-        /// District or county.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>District</p>
         /// </summary>
         [JsonProperty("District")]
         public string District{ get; set; }
 
         /// <summary>
-        /// City name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>City</p>
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// Subdistrict or township.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Sub-district office</p>
         /// </summary>
         [JsonProperty("Subdistrict")]
         public string Subdistrict{ get; set; }
 
         /// <summary>
-        /// Formatted complete address.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Complete address</p>
         /// </summary>
         [JsonProperty("FormattedAddress")]
         public string FormattedAddress{ get; set; }
 
         /// <summary>
-        /// First line of the address bar.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>First line of the address bar</p>
         /// </summary>
         [JsonProperty("LineOne")]
         public string LineOne{ get; set; }
 
         /// <summary>
-        /// Second line of the address bar.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Second line of the address bar</p>
         /// </summary>
         [JsonProperty("LineTwo")]
         public string LineTwo{ get; set; }
 
         /// <summary>
-        /// Specifies the third line of the address bar.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Third line of the address bar</p>
         /// </summary>
         [JsonProperty("LineThree")]
         public string LineThree{ get; set; }
 
         /// <summary>
-        /// Specifies the fourth line of the address bar.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Fourth line of the address bar</p>
         /// </summary>
         [JsonProperty("LineFour")]
         public string LineFour{ get; set; }
 
         /// <summary>
-        /// Specifies the fifth line of the address bar.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Fifth line of the address bar</p>
         /// </summary>
         [JsonProperty("LineFive")]
         public string LineFive{ get; set; }

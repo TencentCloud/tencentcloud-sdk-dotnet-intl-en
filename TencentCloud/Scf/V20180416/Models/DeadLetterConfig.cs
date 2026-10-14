@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Tag form of a dead letter queue topic mode
+        /// Tag format of the DLQ topic model
         /// </summary>
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }

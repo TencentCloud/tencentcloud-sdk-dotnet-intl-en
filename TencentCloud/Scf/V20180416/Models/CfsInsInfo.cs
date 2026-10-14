@@ -31,52 +31,52 @@ namespace TencentCloud.Scf.V20180416.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// User group ID
+        /// User group id.
         /// </summary>
         [JsonProperty("UserGroupId")]
         public string UserGroupId{ get; set; }
 
         /// <summary>
-        /// CFS instance ID
+        /// File system instance id
         /// </summary>
         [JsonProperty("CfsId")]
         public string CfsId{ get; set; }
 
         /// <summary>
-        /// File system mount target ID
+        /// File system mount point id
         /// </summary>
         [JsonProperty("MountInsId")]
         public string MountInsId{ get; set; }
 
         /// <summary>
-        /// Local mount target
+        /// Local mount point
         /// </summary>
         [JsonProperty("LocalMountDir")]
         public string LocalMountDir{ get; set; }
 
         /// <summary>
-        /// Remote mount target
+        /// Remote mount point.
         /// </summary>
         [JsonProperty("RemoteMountDir")]
         public string RemoteMountDir{ get; set; }
 
         /// <summary>
-        /// File system IP, which is not required when you configure CFS.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// File system ip. No need to specify when configuring cfs.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IpAddress")]
         public string IpAddress{ get; set; }
 
         /// <summary>
-        /// VPC ID of file system, which is not required when you configure CFS.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// VPC id where the file system is located. Not required when configuring cfs.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MountVpcId")]
         public string MountVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID of file system, which is not required when you configure CFS.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Subnet id of the private network where the file system resides. Not required when configuring cfs.
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("MountSubnetId")]
         public string MountSubnetId{ get; set; }

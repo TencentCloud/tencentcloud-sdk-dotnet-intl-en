@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The video frame rate.
+        /// Video frame rate.
         /// </summary>
         [JsonProperty("VideoFPS")]
         public long? VideoFPS{ get; set; }
 
         /// <summary>
-        /// The audio frame rate.
+        /// Audio frame rate.
         /// </summary>
         [JsonProperty("AudioFPS")]
         public long? AudioFPS{ get; set; }

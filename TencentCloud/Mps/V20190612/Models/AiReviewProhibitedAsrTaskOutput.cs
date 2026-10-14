@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+        /// Asr text violation score. Value range: 0-100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Asr text prohibited result suggestion, value ranges from...to...
+        /// Asr text violation result suggestion. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video segment list with Asr text suspected of prohibition violations.
+        /// List of video segments where the Asr text is suspected of prohibition violations.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }

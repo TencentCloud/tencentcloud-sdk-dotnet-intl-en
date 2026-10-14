@@ -25,98 +25,99 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The ID of the output to modify.
+        /// Id of the Output to be modified.
         /// </summary>
         [JsonProperty("OutputId")]
         public string OutputId{ get; set; }
 
         /// <summary>
-        /// The output name.
+        /// Output name.
         /// </summary>
         [JsonProperty("OutputName")]
         public string OutputName{ get; set; }
 
         /// <summary>
-        /// The description of the output.
+        /// Output description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// The output protocol. Valid values: SRT, RTP, RTMP.
+        /// Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Output Type: Internet/Tencent CSS/StreamLive
+        /// Output type: Internet/TencentCSS/StreamLive
         /// </summary>
         [JsonProperty("OutputType")]
         public string OutputType{ get; set; }
 
         /// <summary>
-        /// Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+        /// Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple outputs, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed in one zone.
         /// </summary>
         [JsonProperty("OutputKind")]
         public string OutputKind{ get; set; }
 
         /// <summary>
-        /// The SRT relay configuration.
+        /// Configuration of the relayed SRT.
         /// </summary>
         [JsonProperty("SRTSettings")]
         public CreateOutputSrtSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// The RTP relay configuration.
+        /// Configuration of the relayed RTP.
         /// </summary>
         [JsonProperty("RTPSettings")]
         public CreateOutputInfoRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// The RTMP relay configuration.
+        /// Configuration for relaying RTMP.
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public CreateOutputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+        /// IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+        /// Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent stream pulls is 4, and the default value is 4.
+        /// Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
 
         /// <summary>
-        /// The bound security group IDs.
+        /// ID of the bound security group. Only one security group can be associated.	
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Availability Zone
+        /// AZ.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// Transfer the configuration of RIST.
+        /// Relay RIST configuration.
         /// </summary>
         [JsonProperty("RISTSettings")]
         public CreateOutputRistSettings RISTSettings{ get; set; }
 
         /// <summary>
-        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// For streams with multiple audio/video tracks, you can specify the track to be used.
         /// </summary>
         [JsonProperty("PidSelector")]
         [System.Obsolete]
         public PidSelector PidSelector{ get; set; }
 
         /// <summary>
-        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// For streams with multiple audio/video tracks, you can specify the track to be used.
         /// </summary>
         [JsonProperty("StreamSelector")]
         public StreamSelector StreamSelector{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+        /// Size of the uploaded media file (for HLS videos, the size is the sum of the m3u8 and ts file sizes), unit: byte.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum height of a video stream. Unit: px.
+        /// Maximum height of the video stream. Measurement unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Selection angle during video shooting. Unit: degree.
+        /// Selection angle during video shooting. Measurement unit: degree.
         /// </summary>
         [JsonProperty("Rotate")]
         public long? Rotate{ get; set; }

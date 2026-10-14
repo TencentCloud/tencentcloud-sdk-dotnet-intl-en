@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskVideoComprehensionInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output file for video (audio) recognition.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskVideoComprehensionOutput Output{ get; set; }

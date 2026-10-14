@@ -25,31 +25,31 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Serial number of the issue</p>
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Content of the issue</p>
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Problem type</p>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Required or optional</p>
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Options for the question</p>
         /// </summary>
         [JsonProperty("Options")]
         public QuestionOption[] Options{ get; set; }

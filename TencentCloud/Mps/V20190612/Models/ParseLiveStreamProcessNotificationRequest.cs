@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Event notification content for live streams obtained from CMQ.
+        /// Content of the live stream event notification obtained from CMQ.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

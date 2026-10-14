@@ -25,58 +25,67 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The relay destination address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+        /// Target address for push. Required when Mode is CALLER. Only 1 group can be filled in.
         /// </summary>
         [JsonProperty("Destinations")]
         public CreateOutputSrtSettingsDestinations[] Destinations{ get; set; }
 
         /// <summary>
-        /// The stream ID for relay, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+        /// SRT mode. Valid values: `LISTENER` and `CALLER`. Default value: `CALLER`.
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// Stream Id for SRT retransmission. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// The total latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
+        /// Total delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000]. This parameter simultaneously sets the sender and recipient delays (recvlatency and peerlatency) to the same value. Recommended configuration: at least 3 times the RTT to ensure effective handling of packet retransmission and confirmation during network congestion.
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// The receive latency (ms) of SRT relay. Value range: [0, 3000]. Default: 120.
+        /// Receive latency for SRT relay. Default value: 120. Unit: ms. Range: [0, 3000].
+        /// This parameter indicates the time length for the recipient to cache data packets.
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// The peer-to-peer latency (ms) of SRT relay. Value range: [0, 3000]. Default: 0.
+        /// Peer delay for SRT retransmission. Default value: 0. Unit: ms. Range: [0, 3000].
+        /// This parameter is set by the sender to inform the recipient of the expected buffer time for delay.
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// The timeout period (ms) for the SRT relay peer. Value range: [1000, 10000]. Default: 5000.
+        /// Idle timeout for SRT relay. Default value: 5000 ms. Range: [1000, 10000].
+        /// If there is no activity on a connection within the set timeout period, it will be closed.
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
 
         /// <summary>
-        /// The encryption key for SRT relay, which is empty by default, indicating not to encrypt. Only ASCII codes are allowed. Length: [10, 79].
+        /// Encryption key for SRT retweet. It is empty by default, indicating not encrypted. Only ascii characters are allowed, with a length of [10, 79].
         /// </summary>
         [JsonProperty("Passphrase")]
         public string Passphrase{ get; set; }
 
         /// <summary>
-        /// The key length for SRT relay. Valid values: 0 (default), 16, 24, 32.
+        /// Key length for SRT retransmission. Default value: 0. Options: [0|16|24|32].
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// The SRT mode. Valid values: LISTENER, CALLER (default).
+        /// SRT FEC settings
         /// </summary>
-        [JsonProperty("Mode")]
-        public string Mode{ get; set; }
+        [JsonProperty("FEC")]
+        public SRTFECFullOptions FEC{ get; set; }
 
 
         /// <summary>
@@ -85,6 +94,7 @@ namespace TencentCloud.Mdc.V20200828.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Destinations.", this.Destinations);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);
             this.SetParamSimple(map, prefix + "Latency", this.Latency);
             this.SetParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -92,7 +102,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
-            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

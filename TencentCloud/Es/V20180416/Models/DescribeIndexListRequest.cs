@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Index type. `auto`: Automated; `normal`: General.
+        /// Index type. auto: autonomous index; normal: general index
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
@@ -37,49 +37,49 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Index name. `null` indicates that all indexes are requested.
+        /// Index name. If this parameter is left empty, all indexes are obtained.
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// Username for cluster access
+        /// Cluster access username.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password for cluster access
+        /// Cluster access password
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// The starting position of paging
+        /// Paging start position
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The number of results per page
+        /// Number of items displayed per page
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting condition field, which can be `IndexName`, `IndexStorage`, or `IndexCreateTime`.
+        /// Sorting fields, which support the following index names: IndexName, IndexStorage, and IndexCreateTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Filtering by index status
+        /// Filter by index status
         /// </summary>
         [JsonProperty("IndexStatusList")]
         public string[] IndexStatusList{ get; set; }
 
         /// <summary>
-        /// Sorting mode, which can be `asc` and `desc`.
+        /// Sort order. Supports asc and desc. Defaults to desc. Data format: "asc", "desc"
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

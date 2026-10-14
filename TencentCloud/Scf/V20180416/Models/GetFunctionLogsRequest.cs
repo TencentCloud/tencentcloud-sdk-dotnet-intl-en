@@ -26,44 +26,44 @@ namespace TencentCloud.Scf.V20180416.Models
         
         /// <summary>
         /// Function name.
-        /// - To ensure the compatibility of the [`GetFunctionLogs`](https://intl.cloud.tencent.com/document/product/583/18583) API, the input parameter `FunctionName` is optional, but we recommend you enter it; otherwise, log acquisition may fail.
-        /// - After the function is connected to CLS, we recommend you use the [related CLS API](https://intl.cloud.tencent.com/document/product/614/16875) to get the best log retrieval experience.
+        /// -To ensure compatibility of the [retrieve function execution log](https://www.tencentcloud.com/document/product/583/18583?from_cn_redirect=1) API `GetFunctionLogs`, the input parameter `FunctionName` remains an optional field, but it is recommended to fill in this parameter. Otherwise, log acquisition failure may occur.
+        /// - After associating a function with CLS, it is recommended to use the relevant CLS APIs (https://www.tencentcloud.com/document/product/614/16875?from_cn_redirect=1) to get the best log retrieval experience.
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Data offset. The addition of `Offset` and `Limit` cannot exceed 10,000.
+        /// Offset of the data. Offset + Limit cannot be greater than 10000.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Length of the return data. The addition of `Offset` and `Limit` cannot exceed 10,000.
+        /// Length of the returned data. Offset + Limit cannot be greater than 10000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// It specifies whether to sort the logs in an ascending or descending order. The value is `desc` or `asc`.
+        /// Whether to sort logs in descending or ascending order. Available values: `desc` and `asc`.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// It specifies the sorting order of the logs based on a specified field, such as `function_name`, `duration`, `mem_usage`, and `start_time`.
+        /// Sort logs by a certain field. The following fields are supported: function_name, duration, mem_usage, start_time
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Log filter used to identify whether to return logs of successful or failed requests. `filter.RetCode=not0` indicates that only the logs of failed requests will be returned. `filter.RetCode=is0` indicates that only the logs of successful requests will be returned. If this parameter is left blank, all logs will be returned. 
+        /// Log filter criteria. It can be used to distinguish correct and error logs. filter.RetCode=not0 means only return error logs, filter.RetCode=is0 means only return correct logs. If not passed, all logs are returned.
         /// </summary>
         [JsonProperty("Filter")]
         public LogFilter Filter{ get; set; }
 
         /// <summary>
-        /// Function namespace
+        /// Namespace of the function
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -75,25 +75,25 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// RequestId corresponding to the executed function
+        /// Request ID for executing the function
         /// </summary>
         [JsonProperty("FunctionRequestId")]
         public string FunctionRequestId{ get; set; }
 
         /// <summary>
-        /// Query date, for example, 2017-05-16 20:00:00. The date must be within one day of the end time.
+        /// Specific date of the query, for example: 2017-05-16 20:00:00. It must differ from endtime by no more than one day.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Query date, for example, 2017-05-16 20:59:59. The date must be within one day of the start time.
+        /// Specific date of the query, for example: 2017-05-16 20:59:59. It must differ from startTime by no more than one day.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// This field is disused.
+        /// This field is offline.
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task flow status. Valid values:
+        /// Task stream status. Valid values:
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
         /// </summary>
@@ -51,19 +51,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Information about the target file for media processing.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Metadata of the original video.
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the orchestration task.
         /// </summary>
         [JsonProperty("ActivityResultSet")]
         public ActivityResult[] ActivityResultSet{ get; set; }

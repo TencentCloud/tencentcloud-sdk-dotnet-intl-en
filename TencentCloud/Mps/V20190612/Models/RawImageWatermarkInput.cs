@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input content of the watermark image. jpeg and png image formats are supported.
+        /// Input content of the watermark image. Supports jpeg and png image formats.
         /// </summary>
         [JsonProperty("ImageContent")]
         public MediaInputInfo ImageContent{ get; set; }
@@ -33,14 +33,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Width of a watermark, supporting two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Width` of a watermark is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
-        /// <li>If a string ends with px, it means the watermark Width is in pixels. For example, 100px means the Width is 100 pixels.</li>
+        /// <li>If a string ends with px, Width is in pixels. For example, 100px means Width is 100 pixels.</li>
         /// Default value: 10%.
         /// </summary>
         [JsonProperty("Width")]
         public string Width{ get; set; }
 
         /// <summary>
-        /// Height of a watermark. Supports two formats: % and px.
+        /// Height of a watermark, supporting two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Height` of a watermark is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
         /// <li>If a string ends with px, it means the watermark Height is in pixels. For example, 100px means the Height is 100 pixels.</li>
         /// Default value: 0px, which means Height is scaled according to the aspect ratio of the raw watermark image.
@@ -49,10 +49,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// Watermark repeat type. Usage scenario: the watermark is a dynamic image. Value range:
-        /// <li>once: The dynamic watermark will no longer appear after it has finished playing;</li>
-        /// <li>repeat_last_frame: Stay on the last frame after the watermark finished playing;</li>
-        /// <li>repeat: Watermark loops until the video ends (default value).</li>
+        /// Watermark repeat type. Usage scenario: The watermark is a dynamic image. Value range:
+        /// <li>once: The dynamic watermark no longer appears after it is finished playing;</li>
+        /// <li>repeat_last_frame: after the watermark finishes playing, stay on the last frame;</li>
+        /// <li>repeat: watermark loops until the video ends (default value).</li>
         /// </summary>
         [JsonProperty("RepeatType")]
         public string RepeatType{ get; set; }

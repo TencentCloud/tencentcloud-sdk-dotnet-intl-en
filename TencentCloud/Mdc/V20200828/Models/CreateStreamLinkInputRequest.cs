@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// StreamLink stream ID.
+        /// <p>Media transmission stream ID.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The input group of the Flow.
+        /// <p>Input group of a stream.</p>
         /// </summary>
         [JsonProperty("InputGroup")]
         public CreateInput[] InputGroup{ get; set; }

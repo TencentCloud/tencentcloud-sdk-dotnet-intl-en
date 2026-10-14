@@ -25,35 +25,35 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Review result type. Valid values:
-        /// <li>ImagePorn: image porn detection.</li>
-        /// <li>ImageTerrorism: image terrorism.</li>
-        /// <li>ImagePolitical: image political sensitivity.</li>
-        /// <li>VoicePorn: sound rule violation.</li>
+        /// Type of the review result. Valid values:
+        /// <li>ImagePorn: image moderation.</li>
+        /// <li>ImageTerrorism: image involving sensitive content.</li>
+        /// <li>ImagePolitical: politically sensitive image.</li>
+        /// <li>VoicePorn: sound violation.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Image porn detection result, valid when Type is ImagePorn.
+        /// Result of porn detection on the image. Valid when Type is ImagePorn.
         /// </summary>
         [JsonProperty("ImagePornResultSet")]
         public LiveStreamAiReviewImagePornResult[] ImagePornResultSet{ get; set; }
 
         /// <summary>
-        /// Result of image terrorism detection, valid when Type is ImageTerrorism.
+        /// Image moderation result. Valid when Type is ImageTerrorism.
         /// </summary>
         [JsonProperty("ImageTerrorismResultSet")]
         public LiveStreamAiReviewImageTerrorismResult[] ImageTerrorismResultSet{ get; set; }
 
         /// <summary>
-        /// The result of image sensitivity, valid when Type is ImagePolitical.
+        /// Image moderation result. Valid when Type is ImagePolitical.
         /// </summary>
         [JsonProperty("ImagePoliticalResultSet")]
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }
 
         /// <summary>
-        /// Result of sound rule violation, valid when Type is VoicePorn.
+        /// Result of sound rule violation. Valid when `Type` is `VoicePorn`.
         /// </summary>
         [JsonProperty("VoicePornResultSet")]
         public LiveStreamAiReviewVoicePornResult[] VoicePornResultSet{ get; set; }

@@ -34,13 +34,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Split result. When `Type` is
+        /// Valid for SegmentRecognition.
         /// </summary>
         [JsonProperty("SegmentResultSet")]
         public SegmentRecognitionItem[] SegmentResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Highlight result. This field is valid when Type is set to Highlight.
         /// </summary>
         [JsonProperty("HighlightResultSet")]
         public MediaAiAnalysisHighlightItem[] HighlightResultSet{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The relay destination addresses. One or two addresses are allowed.
+        /// Target address for repost. You can enter 1 to 2 addresses.
         /// </summary>
         [JsonProperty("Destinations")]
         public CreateOutputRtmpSettingsDestinations[] Destinations{ get; set; }
 
         /// <summary>
-        /// The RTMP chunk size. Value range: [4096, 40960].
+        /// Chunk size of RTMP, ranging from 4096 to 40960.
         /// </summary>
         [JsonProperty("ChunkSize")]
         public long? ChunkSize{ get; set; }

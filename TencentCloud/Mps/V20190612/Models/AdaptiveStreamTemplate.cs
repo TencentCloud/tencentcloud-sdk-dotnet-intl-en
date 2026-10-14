@@ -39,7 +39,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Whether to remove the audio stream. Value range:
         /// <li>`0`: no,</li>
-        /// <li>1: yes.</li>
+        /// <li>1: Yes.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public ulong? RemoveAudio{ get; set; }
@@ -47,13 +47,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// Whether to remove the video stream. Value range:
         /// <li>`0`: no,</li>
-        /// <li>1: yes.</li>
+        /// <li>1: Yes.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio parameter information list.
+        /// Note: This parameter is used only when audio tracks are merged in self-adaptive transcoding. The maximum length of the parameter array is 64.
         /// </summary>
         [JsonProperty("AudioList")]
         public AudioTemplateInfo[] AudioList{ get; set; }

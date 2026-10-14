@@ -28,7 +28,7 @@ namespace TencentCloud.Es.V20180416
 
        private const string endpoint = "es.intl.tencentcloudapi.com";
        private const string version = "2018-04-16";
-       private const string sdkVersion = "SDK_NET_3.0.1396";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -75,7 +75,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to create indices.
+        /// Create an index
         /// </summary>
         /// <param name="req"><see cref="CreateIndexRequest"/></param>
         /// <returns><see cref="CreateIndexResponse"/></returns>
@@ -85,7 +85,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to create indices.
+        /// Create an index
         /// </summary>
         /// <param name="req"><see cref="CreateIndexRequest"/></param>
         /// <returns><see cref="CreateIndexResponse"/></returns>
@@ -96,7 +96,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to create an ES cluster instance with the specified specification.
+        /// Create an ES cluster instance with the specified specification.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to create an ES cluster instance with the specified specification.
+        /// Create an ES cluster instance with the specified specification.
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -138,7 +138,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to delete indices.
+        /// Delete an index
         /// </summary>
         /// <param name="req"><see cref="DeleteIndexRequest"/></param>
         /// <returns><see cref="DeleteIndexResponse"/></returns>
@@ -148,7 +148,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to delete indices.
+        /// Delete an index
         /// </summary>
         /// <param name="req"><see cref="DeleteIndexRequest"/></param>
         /// <returns><see cref="DeleteIndexResponse"/></returns>
@@ -159,7 +159,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to terminate a cluster instance. 
+        /// Terminate cluster instances
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -169,7 +169,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to terminate a cluster instance. 
+        /// Terminate cluster instances
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
         /// <returns><see cref="DeleteInstanceResponse"/></returns>
@@ -222,7 +222,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to obtain index metadata.
+        /// This API is used to retrieve index metadata.
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexMetaRequest"/></param>
         /// <returns><see cref="DescribeIndexMetaResponse"/></returns>
@@ -232,7 +232,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to obtain index metadata.
+        /// This API is used to retrieve index metadata.
         /// </summary>
         /// <param name="req"><see cref="DescribeIndexMetaRequest"/></param>
         /// <returns><see cref="DescribeIndexMetaResponse"/></returns>
@@ -243,7 +243,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query the eligible ES cluster logs in the current region.
+        /// Query the logs of eligible ES clusters in that region for the user.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query the eligible ES cluster logs in the current region.
+        /// Query the logs of eligible ES clusters in that region for the user.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
@@ -264,7 +264,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query the operation history of an instance by specified criteria.
+        /// Query the operation records of an instance under specified conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceOperationsRequest"/></param>
         /// <returns><see cref="DescribeInstanceOperationsResponse"/></returns>
@@ -274,7 +274,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query the operation history of an instance by specified criteria.
+        /// Query the operation records of an instance under specified conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceOperationsRequest"/></param>
         /// <returns><see cref="DescribeInstanceOperationsResponse"/></returns>
@@ -285,7 +285,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query all eligible instances in the current region under the current account.
+        /// Query all instances meeting conditions for the user in that region
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -295,7 +295,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query all eligible instances in the current region under the current account.
+        /// Query all instances meeting conditions for the user in that region
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
         /// <returns><see cref="DescribeInstancesResponse"/></returns>
@@ -306,7 +306,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query view data from three dimensions: cluster, node, and Kibana.
+        /// Query view data of a cluster, including cluster-level, node, and Kibana dimensions.
         /// </summary>
         /// <param name="req"><see cref="DescribeViewsRequest"/></param>
         /// <returns><see cref="DescribeViewsResponse"/></returns>
@@ -316,7 +316,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to query view data from three dimensions: cluster, node, and Kibana.
+        /// Query view data of a cluster, including cluster-level, node, and Kibana dimensions.
         /// </summary>
         /// <param name="req"><see cref="DescribeViewsRequest"/></param>
         /// <returns><see cref="DescribeViewsResponse"/></returns>
@@ -327,7 +327,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to get the node types used to receive client requests.
+        /// Get the node type that receives client requests.
         /// </summary>
         /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
         /// <returns><see cref="GetRequestTargetNodeTypesResponse"/></returns>
@@ -337,7 +337,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to get the node types used to receive client requests.
+        /// Get the node type that receives client requests.
         /// </summary>
         /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
         /// <returns><see cref="GetRequestTargetNodeTypesResponse"/></returns>
@@ -390,7 +390,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart an ES cluster instance (for operations such as system update). 
+        /// Restart ES cluster instances for system version update.
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -400,7 +400,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart an ES cluster instance (for operations such as system update). 
+        /// Restart ES cluster instances for system version update.
         /// </summary>
         /// <param name="req"><see cref="RestartInstanceRequest"/></param>
         /// <returns><see cref="RestartInstanceResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart Kibana. 
+        /// Restart Kibana
         /// </summary>
         /// <param name="req"><see cref="RestartKibanaRequest"/></param>
         /// <returns><see cref="RestartKibanaResponse"/></returns>
@@ -421,7 +421,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart Kibana. 
+        /// Restart Kibana
         /// </summary>
         /// <param name="req"><see cref="RestartKibanaRequest"/></param>
         /// <returns><see cref="RestartKibanaResponse"/></returns>
@@ -432,7 +432,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart cluster nodes.
+        /// Used to restart cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
         /// <returns><see cref="RestartNodesResponse"/></returns>
@@ -442,7 +442,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to restart cluster nodes.
+        /// Used to restart cluster nodes.
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
         /// <returns><see cref="RestartNodesResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update ES cluster dictionaries.
+        /// Update the ES cluster dictionary
         /// </summary>
         /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
         /// <returns><see cref="UpdateDictionariesResponse"/></returns>
@@ -463,7 +463,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update ES cluster dictionaries.
+        /// Update the ES cluster dictionary
         /// </summary>
         /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
         /// <returns><see cref="UpdateDictionariesResponse"/></returns>
@@ -474,7 +474,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update indices.
+        /// Updates an index
         /// </summary>
         /// <param name="req"><see cref="UpdateIndexRequest"/></param>
         /// <returns><see cref="UpdateIndexResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update indices.
+        /// Updates an index
         /// </summary>
         /// <param name="req"><see cref="UpdateIndexRequest"/></param>
         /// <returns><see cref="UpdateIndexResponse"/></returns>
@@ -495,14 +495,14 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
-        /// - InstanceName: renames an instance (only for instance identification)
-        /// - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)
-        /// - EsConfig: modifies cluster configuration
-        /// - Password: changes the password of the default user "elastic"
-        /// - EsAcl: modifies the ACL
-        /// - CosBackUp: sets auto-backup to COS for a cluster
-        /// Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
+        /// Perform operations on the cluster, such as node specification change, instance name modification, configuration modification, password resetting, and Kibana blocklist/allowlist addition. InstanceId is a required parameter, while ForceRestart is optional. The remaining parameter combinations and their meanings are as follows:
+        /// - InstanceName: Modify the instance name (only used to identify the instance)
+        /// -NodeInfoList: Modify node configuration (horizontally scale nodes, vertically scale nodes, add primary nodes, add cold nodes, etc.)
+        /// -EsConfig: modify cluster configuration
+        /// -Password: Modify the password of the default user elastic
+        /// -EsAcl: Modify an ACL
+        /// -CosBackUp: Set cluster COS auto backup information
+        /// Only one of the above parameters can be passed. Passing more or fewer will cause request failure.
         /// </summary>
         /// <param name="req"><see cref="UpdateInstanceRequest"/></param>
         /// <returns><see cref="UpdateInstanceResponse"/></returns>
@@ -512,14 +512,14 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
-        /// - InstanceName: renames an instance (only for instance identification)
-        /// - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)
-        /// - EsConfig: modifies cluster configuration
-        /// - Password: changes the password of the default user "elastic"
-        /// - EsAcl: modifies the ACL
-        /// - CosBackUp: sets auto-backup to COS for a cluster
-        /// Only one of the parameters or parameter combinations above can be passed in at a time, while passing fewer or more ones will cause the request to fail.
+        /// Perform operations on the cluster, such as node specification change, instance name modification, configuration modification, password resetting, and Kibana blocklist/allowlist addition. InstanceId is a required parameter, while ForceRestart is optional. The remaining parameter combinations and their meanings are as follows:
+        /// - InstanceName: Modify the instance name (only used to identify the instance)
+        /// -NodeInfoList: Modify node configuration (horizontally scale nodes, vertically scale nodes, add primary nodes, add cold nodes, etc.)
+        /// -EsConfig: modify cluster configuration
+        /// -Password: Modify the password of the default user elastic
+        /// -EsAcl: Modify an ACL
+        /// -CosBackUp: Set cluster COS auto backup information
+        /// Only one of the above parameters can be passed. Passing more or fewer will cause request failure.
         /// </summary>
         /// <param name="req"><see cref="UpdateInstanceRequest"/></param>
         /// <returns><see cref="UpdateInstanceResponse"/></returns>
@@ -530,7 +530,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to change the list of plugins.
+        /// Update the plug-in list
         /// </summary>
         /// <param name="req"><see cref="UpdatePluginsRequest"/></param>
         /// <returns><see cref="UpdatePluginsResponse"/></returns>
@@ -540,7 +540,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to change the list of plugins.
+        /// Update the plug-in list
         /// </summary>
         /// <param name="req"><see cref="UpdatePluginsRequest"/></param>
         /// <returns><see cref="UpdatePluginsResponse"/></returns>
@@ -551,7 +551,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update the node types used to receive client requests.
+        /// This API is used to update the node type that receives client requests.
         /// </summary>
         /// <param name="req"><see cref="UpdateRequestTargetNodeTypesRequest"/></param>
         /// <returns><see cref="UpdateRequestTargetNodeTypesResponse"/></returns>
@@ -561,7 +561,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to update the node types used to receive client requests.
+        /// This API is used to update the node type that receives client requests.
         /// </summary>
         /// <param name="req"><see cref="UpdateRequestTargetNodeTypesRequest"/></param>
         /// <returns><see cref="UpdateRequestTargetNodeTypesResponse"/></returns>
@@ -572,7 +572,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to upgrade ES cluster version
+        /// Upgrades the edition of an ES cluster
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -582,7 +582,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to upgrade ES cluster version
+        /// Upgrades the edition of an ES cluster
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>
         /// <returns><see cref="UpgradeInstanceResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to upgrade ES X-Pack.
+        /// Upgrade ES commercial features
         /// </summary>
         /// <param name="req"><see cref="UpgradeLicenseRequest"/></param>
         /// <returns><see cref="UpgradeLicenseResponse"/></returns>
@@ -603,7 +603,7 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
-        /// This API is used to upgrade ES X-Pack.
+        /// Upgrade ES commercial features
         /// </summary>
         /// <param name="req"><see cref="UpgradeLicenseRequest"/></param>
         /// <returns><see cref="UpgradeLicenseResponse"/></returns>

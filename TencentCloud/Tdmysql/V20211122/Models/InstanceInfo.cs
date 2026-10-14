@@ -38,13 +38,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Create an instance version</p>
         /// </summary>
         [JsonProperty("CreateVersion")]
         public string CreateVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Initialize instance parameters</p>
         /// </summary>
         [JsonProperty("InitParams")]
         public InstanceParam[] InitParams{ get; set; }
@@ -68,13 +68,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? StorageNodeNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance tag information.</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance name</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -142,54 +142,54 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CPU cores of the control node</p>
         /// </summary>
         [JsonProperty("MCCpu")]
         [System.Obsolete]
         public long? MCCpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CPU size of the control node</p>
         /// </summary>
         [JsonProperty("MCMem")]
         [System.Obsolete]
         public long? MCMem{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CPU cores of the computing node</p>
         /// </summary>
         [JsonProperty("ComputerNodeCpu")]
         [System.Obsolete]
         public long? ComputerNodeCpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Compute node memory size</p>
         /// </summary>
         [JsonProperty("ComputerNodeMem")]
         [System.Obsolete]
         public long? ComputerNodeMem{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>CPU cores of the storage node</p>
         /// </summary>
         [JsonProperty("StorageNodeCpu")]
         public long? StorageNodeCpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Storage node memory size</p>
         /// </summary>
         [JsonProperty("StorageNodeMem")]
         public long? StorageNodeMem{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of control nodes</p>
         /// </summary>
         [JsonProperty("MCNum")]
         [System.Obsolete]
         public long? MCNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Renewal flag</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -201,19 +201,19 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>User tag, inner: internal user; external: external user</p>
         /// </summary>
         [JsonProperty("AccountTag")]
         public string AccountTag{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -255,31 +255,31 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? FullReplications{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Account information</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Account information</p>
         /// </summary>
         [JsonProperty("SubAccountUin")]
         public string SubAccountUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Account information</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>AZ information</p>
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance node</p>
         /// </summary>
         [JsonProperty("Nodes")]
         public InstanceNode[] Nodes{ get; set; }
@@ -312,19 +312,19 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? CdcNodeNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>az mode. 1: Single az 2: Multi-az non-primary az mode 3: Multi-az primary az mode</p>
         /// </summary>
         [JsonProperty("AZMode")]
         public long? AZMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
         /// </summary>
         [JsonProperty("StandbyFlag")]
         public long? StandbyFlag{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
         /// </summary>
         [JsonProperty("StandbySecondaryNum")]
         public long? StandbySecondaryNum{ get; set; }
@@ -415,7 +415,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public AnalysisInstanceInfo AnalysisInstanceInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Multiple automatic configuration adjustment configurations of the instance, including ccu and nodecount values</p>
         /// </summary>
         [JsonProperty("AutoScaleConfigs")]
         public AutoScalingConfig[] AutoScaleConfigs{ get; set; }

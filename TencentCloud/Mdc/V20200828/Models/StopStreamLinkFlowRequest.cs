@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Flow ID
+        /// <p>Stream Id.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskCutoutInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the video matting task.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskCutoutOutput Output{ get; set; }

@@ -25,37 +25,37 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Node IP information</p>
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Node types, such as sqlengine, tdstore, mc</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Unique identifier of the node</p>
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Node port information</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Availability zone of the node</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Machine ip of the node</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

@@ -25,19 +25,22 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Switch for segment duration at startup. Optional values:
+        /// on: enable
+        /// off: Turn off the switch
+        /// Default value: off
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Segment duration at startup. Unit: second
         /// </summary>
         [JsonProperty("FragmentTime")]
         public long? FragmentTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
         /// </summary>
         [JsonProperty("FragmentEndNum")]
         public long? FragmentEndNum{ get; set; }

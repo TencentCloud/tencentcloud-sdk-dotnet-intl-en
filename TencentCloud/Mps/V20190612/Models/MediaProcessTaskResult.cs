@@ -26,49 +26,49 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Transcode: Transcode</li>
-        /// <li>AnimatedGraphics: Animated image</li>
+        /// <li>Transcode: transcode</li>
+        /// <li>AnimatedGraphics: animated image</li>
         /// <li>SnapshotByTimeOffset: time point screenshot.</li>
         /// <li>SampleSnapshot: sampled screenshot.</li>
-        /// <li>ImageSprites: sprite sheet</li>
-        /// <li>CoverBySnapshot: screencapturing for cover image.</li>
-        /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming.</li>
+        /// <li>ImageSprites: sprite sheets.</li>
+        /// <li>CoverBySnapshot: screencapturing for cover image</li>
+        /// <li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of video transcoding tasks. Valid when the task type is `Transcode`.
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of a video-to-GIF task. Valid when the task type is AnimatedGraphics.
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of a time point screencapturing task for a video. Valid when the task type is `SnapshotByTimeOffset`.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the video sampling screenshot task. Valid when the task type is `SampleSnapshot`.
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the image sprite task for video. Valid when the task type is ImageSprite.
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of adaptive bitrate streaming tasks. Valid when the task type is AdaptiveDynamicStreaming.
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }

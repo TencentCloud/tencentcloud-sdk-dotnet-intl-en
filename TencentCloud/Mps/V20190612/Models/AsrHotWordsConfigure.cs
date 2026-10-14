@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Hotword switch.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Hotword lexicon ID
         /// </summary>
         [JsonProperty("LibraryId")]
         public string LibraryId{ get; set; }

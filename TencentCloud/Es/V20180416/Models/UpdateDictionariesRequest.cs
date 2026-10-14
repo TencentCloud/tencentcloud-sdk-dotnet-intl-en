@@ -25,43 +25,43 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES instance ID
+        /// ES instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// COS address of the main dictionary for the IK analyzer
+        /// Address of the COS main dictionary for IK word segmentation entered during installation, and the dictionary name such as test.dic entered during deletion.
         /// </summary>
         [JsonProperty("IkMainDicts")]
         public string[] IkMainDicts{ get; set; }
 
         /// <summary>
-        /// COS address of the stopword dictionary for the IK analyzer
+        /// Address of the COS stopword dictionary for IK word segmentation during installation. When deleting, enter the dictionary name, for example, test.dic.
         /// </summary>
         [JsonProperty("IkStopwords")]
         public string[] IkStopwords{ get; set; }
 
         /// <summary>
-        /// COS address of the synonym dictionary
+        /// Address of the synonym dictionary COS during installation, and the dictionary name such as test.dic when deleting.
         /// </summary>
         [JsonProperty("Synonym")]
         public string[] Synonym{ get; set; }
 
         /// <summary>
-        /// COS address of the QQ dictionary
+        /// Address of the COS QQ tokenizer dictionary during installation, and the dictionary name such as test.dic during deletion.
         /// </summary>
         [JsonProperty("QQDict")]
         public string[] QQDict{ get; set; }
 
         /// <summary>
-        /// `0` (default): Install, `1`: Delete
+        /// 0: installation; 1: deletion. Default value: 0
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
 
         /// <summary>
-        /// Whether to force restart the cluster. The default value is `false`.
+        /// Whether to force restart the cluster. Default value: false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }

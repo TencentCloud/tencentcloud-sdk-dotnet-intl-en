@@ -25,82 +25,100 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Input name, which can contain 1 to 32 letters, digits, and underscores.
+        /// Enter a name. It can contain uppercase letters, lowercase letters, digits, and underscores. Length: [1, 32].
         /// </summary>
         [JsonProperty("InputName")]
         public string InputName{ get; set; }
 
         /// <summary>
-        /// Input protocol. Valid values: `SRT`, `RTP`, `RTMP`, `RTMP_PULL`, `RTSP_PULL `, `HLS_PULL`.
+        /// Input protocol. Selectable: [SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST].
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Input description. Length: [0, 255].
+        /// Enter description. Length: [0, 255].
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Allowlist of input IPs in CIDR format.
+        /// Input IP allowlist in CIDR format.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// SRT configuration information of input.
+        /// SRT configuration information of the input.
         /// </summary>
         [JsonProperty("SRTSettings")]
         public CreateInputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// RTP configuration information of input.
+        /// Input RTP configuration message.
         /// </summary>
         [JsonProperty("RTPSettings")]
         public CreateInputRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// Input failover. Valid values: `OPEN`, `CLOSE` (default)
+        /// Primary/replica switch input. Selectable values: `OPEN` and `CLOSE`. Default value: `CLOSE`.
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// Input RTMP_PULL configuration information.
+        /// Input RTMP_PULL configuration message.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public CreateInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// Input RTSP_PULL configuration information.
+        /// Input RTSP_PULL configuration message.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// Input HLS_PULL configuration information.
+        /// Input HLS_PULL configuration message.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// Delayed broadcast smooth streaming configuration information.
+        /// Configuration message for smooth streaming during delayed broadcasting.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
 
         /// <summary>
-        /// The bound security group IDs.
+        /// Bound input security group ID.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Availability zone, optional. If disaster recovery is enabled, you must enter two different availability zones. Otherwise, you can only enter one availability zone at most.
+        /// Availability zone. This parameter is optional. If disaster recovery is enabled, two different availability zones must be input. Otherwise, only one availability zone can be input.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Input RIST configuration message.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateInputRISTSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// Region of the input node
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
+        /// <summary>
+        /// Hot/cold backup
+        /// </summary>
+        [JsonProperty("FailOverOption")]
+        public FailOverOption FailOverOption{ get; set; }
 
 
         /// <summary>
@@ -121,6 +139,9 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
         }
     }
 }

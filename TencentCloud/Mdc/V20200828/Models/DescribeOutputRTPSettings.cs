@@ -25,22 +25,19 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Destination address information list of RTP push.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of target address information for RTP repush.
         /// </summary>
         [JsonProperty("Destinations")]
         public RTPAddressDestination[] Destinations{ get; set; }
 
         /// <summary>
-        /// Whether it is FEC.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable FEC.
         /// </summary>
         [JsonProperty("FEC")]
         public string FEC{ get; set; }
 
         /// <summary>
         /// Idle timeout period.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public long? IdleTimeout{ get; set; }

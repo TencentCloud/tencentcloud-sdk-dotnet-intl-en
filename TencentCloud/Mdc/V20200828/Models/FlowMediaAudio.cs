@@ -25,25 +25,25 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The frame rate.
+        /// Frame rate.
         /// </summary>
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// The bitrate (bps).
+        /// Bitrate in bps.
         /// </summary>
         [JsonProperty("Rate")]
         public long? Rate{ get; set; }
 
         /// <summary>
-        /// The audio PID.
+        /// Audio Pid.
         /// </summary>
         [JsonProperty("Pid")]
         public long? Pid{ get; set; }
 
         /// <summary>
-        /// The ID of a push session.
+        /// Flag of the same push.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

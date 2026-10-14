@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video sensitive content score, ranging from 0 to 100.
+        /// Sensitive score of the video. The score ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result Suggestions for sensitive content, value ranges from...to...
+        /// Sensitive result suggestion. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,16 +40,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video sensitive content detection result tag, permissible range:
+        /// Video moderation result tag. Value range:
         /// <li>guns: weapons and firearms.</li>
         /// <li>crowd: crowd gathering.</li>
         /// <li>police: police force.</li>
         /// <li>bloody: graphic violence.</li>
         /// <li>banners: sensitive flags.</li>
-        /// <li>militant: militant.</li>
+        /// <li>militant: militants.</li>
         /// <li>explosion: explosions and fires.</li>
         /// <li>terrorists: sensitive persons.</li>
-        /// <li>scenario: Sensitive content.</li>
+        /// <li>scenario: sensitive content.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

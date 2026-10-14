@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Task type</p>
+        /// <p>Task type</p><p>Enumeration values:</p><ul><li>RedrawVideo: Video redraw</li><li>AIDrama: AI drama</li><li>DocGenVideo: Document to video</li><li>FissionVideo: Video fission</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -54,6 +54,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Ratio")]
         public string Ratio{ get; set; }
 
+        /// <summary>
+        /// <p>Task execution mode</p><p>Enumeration values:</p><ul><li>auto: Direct generation</li><li>phased: Generate after confirmation</li></ul>
+        /// </summary>
+        [JsonProperty("ExecuteMode")]
+        public string ExecuteMode{ get; set; }
+
+        /// <summary>
+        /// <p>Fission task video type filter: ugc, talk, display, unboxing, reaction</p><p>Enumeration values:</p><ul><li>ugc: UGC recommendation</li><li>talk: Product talk-over</li><li>display: Product display</li><li>unboxing: Unboxing sharing</li><li>reaction: Reaction display</li></ul>
+        /// </summary>
+        [JsonProperty("VideoType")]
+        public string VideoType{ get; set; }
+
+        /// <summary>
+        /// <p>Model type</p><p>Enumeration values:</p><ul><li>standard: standard version</li><li>flagship: advanced edition</li></ul>
+        /// </summary>
+        [JsonProperty("ModelTier")]
+        public string ModelTier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
+            this.SetParamSimple(map, prefix + "ExecuteMode", this.ExecuteMode);
+            this.SetParamSimple(map, prefix + "VideoType", this.VideoType);
+            this.SetParamSimple(map, prefix + "ModelTier", this.ModelTier);
         }
     }
 }

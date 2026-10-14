@@ -25,51 +25,49 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The flow ID.
+        /// <p>Transport stream Id.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-        /// It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+        /// <p>Start time for statistics, defaults to the last hour, supports querying up to the last 7 days.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-        /// It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+        /// <p>End time for statistics, defaulting to one hour after StartTime, with support for querying up to 24 hours of data.<br>UTC time, for example, '2020-01-01T12:00:00Z'.</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Whether to query the inputs or outputs. Valid values: input, output.
+        /// <p>Input or output type. Valid values: `input`, `output`.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string[] Type{ get; set; }
 
         /// <summary>
-        /// Whether to query the primary or backup pipeline. Valid values: 0, 1.
+        /// <p>Primary or backup channel. Option [0|1].</p>
         /// </summary>
         [JsonProperty("Pipeline")]
         public string[] Pipeline{ get; set; }
 
         /// <summary>
-        /// The page size. Value range: [1, 1000]. Default: 100.
+        /// <p>Size per page. Default value: 100. Value range: [1, 1000].</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// Whether to sort the records by timestamp in descending or ascending order. Valid values: desc (default), asc.
+        /// <p>Sort by Timestamp in ascending or descending order. The default is descending order. Options: [desc|asc].</p>
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// The page number. Value range: [1, 1000]. Default: 1.
+        /// <p>Page number. Default value: 1. Value range: [1, 1000].</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }

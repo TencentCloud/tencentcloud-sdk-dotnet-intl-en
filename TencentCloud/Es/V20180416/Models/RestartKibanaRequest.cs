@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES instance ID
+        /// ES instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

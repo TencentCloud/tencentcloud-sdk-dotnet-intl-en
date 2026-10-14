@@ -25,8 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Parameters of WebSockets protocol
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Supported parameters of the WebSockets protocol
         /// </summary>
         [JsonProperty("WSParams")]
         public WSParams WSParams{ get; set; }

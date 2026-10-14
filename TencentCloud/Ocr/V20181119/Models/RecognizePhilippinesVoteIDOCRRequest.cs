@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// Whether to return the identity photo.
+        /// Whether to return the portrait photo.
         /// </summary>
         [JsonProperty("ReturnHeadImage")]
         public bool? ReturnHeadImage{ get; set; }

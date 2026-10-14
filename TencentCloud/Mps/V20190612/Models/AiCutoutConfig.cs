@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+        /// <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Target type: "foreground" (default) / "pattern"</p>
+        /// <p>Matting target type: "foreground" (default) / "pattern"</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Pattern matting configuration. This parameter is valid only when Type is pattern.</p>
+        /// <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
         /// </summary>
         [JsonProperty("PatternConfig")]
         public PatternConfig PatternConfig{ get; set; }
 
         /// <summary>
-        /// <p>Cutout model selection, optional.</p><p>Enumeration value:</p><ul><li>auto: Automatically choose appropriate model</li><li>WAND-cutout-1.0-lite: Standard version, fastest speed</li><li>WAND-cutout-2.0-lite: Enhanced, fastest speed</li><li>WAND-cutout-2.0-flash: Enhanced, quality-speed balance</li></ul>
+        /// <p>Matting model selection.</p><p>Enumeration values:</p><ul><li>cutout-1.0-lite: basic version, fastest speed</li><li>cutout-1.0-flash: standard version, quality-speed balance</li></ul>
         /// </summary>
         [JsonProperty("Model")]
         public string Model{ get; set; }

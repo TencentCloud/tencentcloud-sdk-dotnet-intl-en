@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Node ID
+        /// Node ID.
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
@@ -43,49 +43,49 @@ namespace TencentCloud.Es.V20180416.Models
         public float? Visible{ get; set; }
 
         /// <summary>
-        /// Whether the node encounters circuit breaking
+        /// Whether to fuse
         /// </summary>
         [JsonProperty("Break")]
         public float? Break{ get; set; }
 
         /// <summary>
-        /// Node disk size
+        /// Total node disk size
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Disk usage
+        /// Disk utilization rate
         /// </summary>
         [JsonProperty("DiskUsage")]
         public float? DiskUsage{ get; set; }
 
         /// <summary>
-        /// Node memory size (in GB)
+        /// Node memory size (unit: GB)
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Memory usage
+        /// Memory usage rate
         /// </summary>
         [JsonProperty("MemUsage")]
         public float? MemUsage{ get; set; }
 
         /// <summary>
-        /// Number of node CPUs
+        /// Number of CPUs on the node
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// CPU usage
+        /// CPU utilization
         /// </summary>
         [JsonProperty("CpuUsage")]
         public float? CpuUsage{ get; set; }
 
         /// <summary>
-        /// Availability zone
+        /// AZ.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -103,28 +103,52 @@ namespace TencentCloud.Es.V20180416.Models
         public string NodeHttpIp{ get; set; }
 
         /// <summary>
-        /// JVM memory usage
+        /// JVM memory usage rate
         /// </summary>
         [JsonProperty("JvmMemUsage")]
         public float? JvmMemUsage{ get; set; }
 
         /// <summary>
-        /// Number of node shards
+        /// Number of shards per node
         /// </summary>
         [JsonProperty("ShardNum")]
         public long? ShardNum{ get; set; }
 
         /// <summary>
-        /// ID list of node disks
+        /// Disk ID list on node
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// Whether a hidden availability zone
+        /// Whether it is a hidden AZ
         /// </summary>
         [JsonProperty("Hidden")]
         public bool? Hidden{ get; set; }
+
+        /// <summary>
+        /// Whether to act as the coordination node role
+        /// </summary>
+        [JsonProperty("IsCoordinationNode")]
+        public bool? IsCoordinationNode{ get; set; }
+
+        /// <summary>
+        /// CVM running state
+        /// </summary>
+        [JsonProperty("CVMStatus")]
+        public string CVMStatus{ get; set; }
+
+        /// <summary>
+        /// id of the placement group bound to the cvm
+        /// </summary>
+        [JsonProperty("CVMDisasterRecoverGroupId")]
+        public string CVMDisasterRecoverGroupId{ get; set; }
+
+        /// <summary>
+        /// Status of the placement group bound to the cvm. 2: Bound; 1: Binding; 0: Not enabled
+        /// </summary>
+        [JsonProperty("CVMDisasterRecoverGroupStatus")]
+        public long? CVMDisasterRecoverGroupStatus{ get; set; }
 
 
         /// <summary>
@@ -149,6 +173,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
+            this.SetParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
+            this.SetParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+            this.SetParamSimple(map, prefix + "CVMDisasterRecoverGroupId", this.CVMDisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "CVMDisasterRecoverGroupStatus", this.CVMDisasterRecoverGroupStatus);
         }
     }
 }

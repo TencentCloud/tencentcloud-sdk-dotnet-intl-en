@@ -25,52 +25,64 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Kibana node IP
+        /// <p>Kibana node IP</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Node disk size
+        /// <p>Total node disk size</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// Disk usage
+        /// <p>Disk utilization rate</p>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public float? DiskUsage{ get; set; }
 
         /// <summary>
-        /// Node memory size
+        /// <p>Node memory size</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// Memory usage
+        /// <p>Memory usage rate</p>
         /// </summary>
         [JsonProperty("MemUsage")]
         public float? MemUsage{ get; set; }
 
         /// <summary>
-        /// Number of node CPUs
+        /// <p>Number of CPUs on the node</p>
         /// </summary>
         [JsonProperty("CpuNum")]
         public long? CpuNum{ get; set; }
 
         /// <summary>
-        /// CPU usage
+        /// <p>cpu utilization</p>
         /// </summary>
         [JsonProperty("CpuUsage")]
         public float? CpuUsage{ get; set; }
 
         /// <summary>
-        /// Availability zone
+        /// <p>AZ.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
+
+        /// <summary>
+        /// <p>ts-0noqayxu-az6-hot-03222010-0</p>
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
+
+        /// <summary>
+        /// <p>Client-side Ip info</p>
+        /// </summary>
+        [JsonProperty("UserIp")]
+        public string UserIp{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
         }
     }
 }

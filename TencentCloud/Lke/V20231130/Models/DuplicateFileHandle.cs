@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Document repetition judgment method. 1: Judge whether to repeat by document content, that is, the cos_hash field.
         /// </summary>
         [JsonProperty("CheckType")]
         public ulong? CheckType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Duplicate document processing method. 1: return an error. 2: skip and return the business ID of the duplicate document.
         /// </summary>
         [JsonProperty("HandleType")]
         public ulong? HandleType{ get; set; }

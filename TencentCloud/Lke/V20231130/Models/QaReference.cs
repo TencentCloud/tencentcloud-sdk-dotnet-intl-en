@@ -25,25 +25,25 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>QA business ID</p>
         /// </summary>
         [JsonProperty("QaBizId")]
-        public ulong? QaBizId{ get; set; }
+        public string QaBizId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Document fragment reference ID</p>
         /// </summary>
         [JsonProperty("ReferBizId")]
-        public ulong? ReferBizId{ get; set; }
+        public string ReferBizId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Business ID of the knowledge base where the QA resides</p>
         /// </summary>
         [JsonProperty("KnowledgeBizId")]
-        public ulong? KnowledgeBizId{ get; set; }
+        public string KnowledgeBizId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Name of the knowledge base where the QA resides</p>
         /// </summary>
         [JsonProperty("KnowledgeName")]
         public string KnowledgeName{ get; set; }

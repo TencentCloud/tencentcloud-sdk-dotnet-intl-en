@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task input for screenshot taking at specified time points.
+        /// Input of the time point screenshot task for videos.
         /// </summary>
         [JsonProperty("Input")]
         public SnapshotByTimeOffsetTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the time point screenshot task for videos.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSnapshotByTimeOffsetItem Output{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// HLS origin server address. Only one is allowed.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public HLSPullSourceAddress[] SourceAddresses{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// SQS queue area.
         /// </summary>
         [JsonProperty("SQSRegion")]
         public string SQSRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// SQS queue name.
         /// </summary>
         [JsonProperty("SQSQueueName")]
         public string SQSQueueName{ get; set; }
 
         /// <summary>
-        /// 
+        /// id for read-write access to SQS.
         /// </summary>
         [JsonProperty("S3SecretId")]
         public string S3SecretId{ get; set; }
 
         /// <summary>
-        /// 
+        /// key for read-write access to SQS.
         /// </summary>
         [JsonProperty("S3SecretKey")]
         public string S3SecretKey{ get; set; }

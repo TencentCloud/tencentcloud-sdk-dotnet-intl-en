@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video frames.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provide the URL of the original/translated subtitles.</li></ul>
+        /// <p>Subtitle source.</p><p>Enumeration values:</p><ul><li>OCR: OCR text recognition, recognizes text in video footage.</li><li>ASR: ASR speech recognition, recognizes voice dialogue in videos.</li><li>External: External subtitle file, provided by original/translated subtitle URL.</li></ul>
         /// </summary>
         [JsonProperty("SubtitleSource")]
         public string SubtitleSource{ get; set; }
 
         /// <summary>
-        /// <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable the use of ASR to assist OCR.</li><li>OFF: Disable the use of ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource=OCR</p>
+        /// <p>Use ASR to assist OCR.</p><p>Enumeration values:</p><ul><li>ON: Enable ASR to assist OCR.</li><li>OFF: Disable ASR to assist OCR.</li></ul><p>Default value: OFF</p><p>Can be set to ON only when SubtitleSource is OCR</p>
         /// </summary>
         [JsonProperty("AsrAssistOcr")]
         public string AsrAssistOcr{ get; set; }
 
         /// <summary>
-        /// <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Retain the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
+        /// <p>Erase the original subtitle.</p><p>Enumeration values:</p><ul><li>ON: Erase the original subtitle.</li><li>OFF: Keep the original subtitle.</li></ul><p>Default value: OFF</p><p>Cannot be set to ON when SubtitleSource=External</p>
         /// </summary>
         [JsonProperty("EraseOriginalSubtitle")]
         public string EraseOriginalSubtitle{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle location information.</p>
+        /// <p>Subtitle position information.</p>
         /// </summary>
         [JsonProperty("SelectingSubtitleAreasConfig")]
         public SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskTagInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent tag task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskTagOutput Output{ get; set; }

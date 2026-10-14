@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Questionnaire title</p>
         /// </summary>
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Question list of the questionnaire</p>
         /// </summary>
         [JsonProperty("Questions")]
         public QuestionnaireQuestion[] Questions{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>List of answers to the questionnaire</p>
         /// </summary>
         [JsonProperty("Answers")]
         public QuestionnaireQuestionAnswer[] Answers{ get; set; }

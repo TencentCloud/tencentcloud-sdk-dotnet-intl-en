@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskOcrFullTextResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information on the full text recognition task.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskOcrFullTextResultOutput Output{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Mdc.V20200828
 
        private const string endpoint = "mdc.intl.tencentcloudapi.com";
        private const string version = "2020-08-28";
-       private const string sdkVersion = "SDK_NET_3.0.1383";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -113,6 +113,27 @@ namespace TencentCloud.Mdc.V20200828
         public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfoSync(CreateStreamLinkOutputInfoRequest req)
         {
             return InternalRequestAsync<CreateStreamLinkOutputInfoResponse>(req, "CreateStreamLinkOutputInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create security group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkSecurityGroupResponse"/></returns>
+        public Task<CreateStreamLinkSecurityGroupResponse> CreateStreamLinkSecurityGroup(CreateStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkSecurityGroupResponse>(req, "CreateStreamLinkSecurityGroup");
+        }
+
+        /// <summary>
+        /// Create security group.
+        /// </summary>
+        /// <param name="req"><see cref="CreateStreamLinkSecurityGroupRequest"/></param>
+        /// <returns><see cref="CreateStreamLinkSecurityGroupResponse"/></returns>
+        public CreateStreamLinkSecurityGroupResponse CreateStreamLinkSecurityGroupSync(CreateStreamLinkSecurityGroupRequest req)
+        {
+            return InternalRequestAsync<CreateStreamLinkSecurityGroupResponse>(req, "CreateStreamLinkSecurityGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

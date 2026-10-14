@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Total{ get; set; }
 
         /// <summary>
-        /// <p>Query page started</p>
+        /// <p>Start query page</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>Task detail data</p>
+        /// <p>Task detail data.</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public AigcTaskListItem[] Tasks{ get; set; }

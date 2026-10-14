@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Destination URL of RTMP push in the format of 'rtmp://domain/live'.
+        /// Destination Url for RTMP repush, in the format of 'RTMP://domain/live'.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Destination `StreamKey` of RTMP push in the format of 'streamid?key=value'.
+        /// Target StreamKey for RTMP republishing, in the format of 'steamid?key=value'.
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }

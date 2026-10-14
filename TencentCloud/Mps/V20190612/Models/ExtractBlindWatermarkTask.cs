@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// Task flow status. Valid values:
+        /// Task stream status. Valid values:
         /// <li>WAITING: waiting.</li>
         /// <li>PROCESSING: Processing;</li>
         /// <li>FINISH: completed</li>
@@ -52,7 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Target file info of Media Processing Service.
+        /// Information of the media processing target file.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
@@ -64,19 +64,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Tag whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return it.
+        /// Whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
         /// </summary>
         [JsonProperty("IsDetected")]
         public bool? IsDetected{ get; set; }
 
         /// <summary>
-        /// Watermark content fetched. Field will not be returned if no digital watermark is detected.
+        /// Fetched digital watermark content. This field will not be returned if no watermark is detected.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// Extract digital watermark configuration.
+        /// Configuration of digital watermark extraction.
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkConfig")]
         public ExtractBlindWatermarkTaskConfig ExtractBlindWatermarkConfig{ get; set; }

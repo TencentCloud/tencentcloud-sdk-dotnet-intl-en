@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Task input for deduplication
+        /// Input of the deduplication task.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskVideoRemakeInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the deduplication task.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskVideoRemakeOutput Output{ get; set; }

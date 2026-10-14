@@ -37,37 +37,37 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Path{ get; set; }
 
         /// <summary>
-        /// Rotating image template ID. Please refer to the [Rotating Image Template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
+        /// ID of the rotating image template. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/862/77168?from_cn_redirect=1#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove)).
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Animated image file format, for example gif.
+        /// Animated image file format, for example, gif.
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// Height of the animated image, measurement unit: px.
+        /// Height of the animated image. Measurement unit: px.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Width of the animated image, measurement unit: px.
+        /// Width of the animated image in px.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Animated image bitrate. Measurement unit: bps.
+        /// Animated image bitrate. Unit: bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Animated image size, unit: byte.
+        /// Animation size. Unit: byte.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

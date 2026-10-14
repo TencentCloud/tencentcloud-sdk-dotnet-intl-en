@@ -26,12 +26,12 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// <li>Porn: porn detection.</li>
-        /// <li>Terrorism: sensitive image.</li>
-        /// <li>Political: sensitive image.</li>
-        /// <li>Porn.Asr: Pornography detection in ASR text</li>
-        /// <li>Porn.Ocr: Pornography detection in OCR text</li>
-        /// <li>Political.Asr: ASR text sensitivity</li>
+        /// <li>Porn: image porn detection.</li>
+        /// <li>Terrorism: sensitive image</li>
+        /// <li>Political: sensitive image</li>
+        /// <li>Porn.Asr: ASR text-based porn detection</li>
+        /// <li>Porn.Ocr: OCR text-based porn detection</li>
+        /// <li>Political.Asr: ASR text sensitive</li>
         /// <li>Political.Ocr: OCR text sensitivity</li>
         /// <li>Terrorism.Ocr: OCR text sensitivity</li>
         /// <li>Prohibited.Asr: ASR text prohibited information recognition</li>
@@ -41,73 +41,73 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Sampling frequency, i.e., the number of frames captured per second for video review.
+        /// Sampling frequency, i.e., the number of frames captured per second from the video for review.
         /// </summary>
         [JsonProperty("SampleRate")]
         public float? SampleRate{ get; set; }
 
         /// <summary>
-        /// Video duration for review, in seconds.
+        /// Video duration reviewed, in seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the intelligent porn detection in image task for video content review. Valid when the task type is Porn.
         /// </summary>
         [JsonProperty("PornTask")]
         public AiReviewTaskPornResult PornTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is `Terrorism`.
         /// </summary>
         [JsonProperty("TerrorismTask")]
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of sensitive tasks for intelligent screen in video content review. Valid when the task type is Political.
         /// </summary>
         [JsonProperty("PoliticalTask")]
         public AiReviewTaskPoliticalResult PoliticalTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the ASR text pornography detection task for video content review. Valid when TaskType is Porn.Asr.
         /// </summary>
         [JsonProperty("PornAsrTask")]
         public AiReviewTaskPornAsrResult PornAsrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the OCR text pornography detection task for video content review. Valid when the task type is Porn.Ocr.
         /// </summary>
         [JsonProperty("PornOcrTask")]
         public AiReviewTaskPornOcrResult PornOcrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the sensitive task for ASR text in video content review. Valid when the task type is Political.Asr.
         /// </summary>
         [JsonProperty("PoliticalAsrTask")]
         public AiReviewTaskPoliticalAsrResult PoliticalAsrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of sensitive tasks for OCR text in video content review. Valid when the task type is Political.Ocr.
         /// </summary>
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the OCR text sensitive task for video content review. Valid when the task type is Terrorism.Ocr.
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the ASR text prohibited content detection task for video content review. Valid when TaskType is Prohibited.Asr.
         /// </summary>
         [JsonProperty("ProhibitedAsrTask")]
         public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Query result of the OCR text prohibited content detection task for video content review. Valid when the task type is Prohibited.Ocr.
         /// </summary>
         [JsonProperty("ProhibitedOcrTask")]
         public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }

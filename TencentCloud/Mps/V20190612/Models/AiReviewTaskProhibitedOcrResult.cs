@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Content review Ocr text prohibited task input.
+        /// Input of the prohibited Ocr text task in content review.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewProhibitedOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content review Ocr text prohibited information recognition task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewProhibitedOcrTaskOutput Output{ get; set; }

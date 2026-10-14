@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Instance name
+        /// Instance name.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Image name
+        /// Image name.
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageTag{ get; set; }
 
         /// <summary>
-        /// Forced scan
+        /// Force scan
         /// </summary>
         [JsonProperty("Force")]
         public string Force{ get; set; }
 
         /// <summary>
-        /// Image ID
+        /// Image id
         /// </summary>
         [JsonProperty("ImageDigest")]
         public string ImageDigest{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageRepoAddress{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

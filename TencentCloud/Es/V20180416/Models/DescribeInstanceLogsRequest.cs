@@ -25,58 +25,88 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Cluster instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log type. Default value: 1
-        /// <li>1: primary log</li>
-        /// <li>2: search slow log</li>
-        /// <li>3: index slow log</li>
-        /// <li>4: GC log</li>
+        /// Log type. Default value: 1.
+        /// <li>1, master log</li>
+        /// <li>2. Search slow logs</li>
+        /// <li>3. Index slow log</li>
+        /// <li>4. GC log</li>
         /// </summary>
         [JsonProperty("LogType")]
         public ulong? LogType{ get; set; }
 
         /// <summary>
-        /// Search keyword, which supports LUCENE syntax, such as `level:WARN`, `ip:1.1.1.1`, and `message:test-index`
+        /// Search term. LUCENE grammar is supported, for example, level:WARN, ip:1.1.1.1, message:test-index
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Log start time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+        /// Log start time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Log end time in the format of YYYY-MM-DD HH:MM:SS, such as 2019-01-22 20:15:53
+        /// Log end time in the format of YYYY-MM-DD HH:MM:SS, for example, 2019-01-22 20:15:53
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Pagination start value. Default value: 0
+        /// Pagination starting value. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: 100. Maximum value: 100
+        /// Pagination size. Default value: 100. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Time sorting order. Default value: 0
-        /// <li>0: descending</li>
-        /// <li>1: ascending</li>
+        /// Time sort method. Default value: 0.
+        /// <li>0: descending order</li>
+        /// <li>1, ascending</li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
+
+        /// <summary>
+        /// Log level
+        /// </summary>
+        [JsonProperty("LogLevels")]
+        public string[] LogLevels{ get; set; }
+
+        /// <summary>
+        /// Node ID.
+        /// </summary>
+        [JsonProperty("NodeIds")]
+        public string[] NodeIds{ get; set; }
+
+        /// <summary>
+        /// Slow log index name
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
+        /// Slow log index shards
+        /// </summary>
+        [JsonProperty("ShardId")]
+        public string ShardId{ get; set; }
+
+        /// <summary>
+        /// Slow log query time
+        /// </summary>
+        [JsonProperty("QueryCost")]
+        public ulong? QueryCost{ get; set; }
 
 
         /// <summary>
@@ -92,6 +122,11 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamArraySimple(map, prefix + "LogLevels.", this.LogLevels);
+            this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "QueryCost", this.QueryCost);
         }
     }
 }

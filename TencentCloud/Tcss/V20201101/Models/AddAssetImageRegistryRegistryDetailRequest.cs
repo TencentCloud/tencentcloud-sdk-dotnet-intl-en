@@ -25,25 +25,25 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Repository name
+        /// Repository Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Username.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password
+        /// Password.
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Repository URL
+        /// Warehouse url
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string RegistryType{ get; set; }
 
         /// <summary>
-        /// Network type, which can be `public` (public network).
+        /// Network type. List: public
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// Repository version
+        /// Warehouse version
         /// </summary>
         [JsonProperty("RegistryVersion")]
         public string RegistryVersion{ get; set; }
 
         /// <summary>
-        /// Region. Default value: `default`.
+        /// Region, list: default.
         /// </summary>
         [JsonProperty("RegistryRegion")]
         public string RegistryRegion{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? SpeedLimit{ get; set; }
 
         /// <summary>
-        /// Valid values: `0` (secure mode with certificate verification, which is the default value); `1` (unsecure mode that skips certificate verification).
+        /// 0: Secure Mode (Certificate Verification) (Default); 1: Insecure Mode (Skip Certificate Verification)
         /// </summary>
         [JsonProperty("Insecure")]
         public ulong? Insecure{ get; set; }
 
         /// <summary>
-        /// 
+        /// Record ID of Connectivity Check
         /// </summary>
         [JsonProperty("ConnDetectConfig")]
         public ConnDetectConfig[] ConnDetectConfig{ get; set; }

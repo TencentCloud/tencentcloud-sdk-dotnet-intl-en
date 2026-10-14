@@ -25,50 +25,43 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Whether to enable the warm phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the warm phase is enabled
         /// </summary>
         [JsonProperty("WarmEnable")]
         public string WarmEnable{ get; set; }
 
         /// <summary>
-        /// Min age before data transitions to the warm phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Transfer time to the warm phase
         /// </summary>
         [JsonProperty("WarmMinAge")]
         public string WarmMinAge{ get; set; }
 
         /// <summary>
-        /// Whether to enable the cold phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the cold phase is enabled
         /// </summary>
         [JsonProperty("ColdEnable")]
         public string ColdEnable{ get; set; }
 
         /// <summary>
-        /// Min age before data transitions to the cold phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Transfer time to the cold phase
         /// </summary>
         [JsonProperty("ColdMinAge")]
         public string ColdMinAge{ get; set; }
 
         /// <summary>
-        /// Whether to enable the frozen phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Whether the frozen phase is enabled
         /// </summary>
         [JsonProperty("FrozenEnable")]
         public string FrozenEnable{ get; set; }
 
         /// <summary>
-        /// Min age before data transitions to the frozen phase
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Time of transfer to the frozen stage
         /// </summary>
         [JsonProperty("FrozenMinAge")]
         public string FrozenMinAge{ get; set; }
 
         /// <summary>
         /// /
-        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("ColdAction")]
         public string ColdAction{ get; set; }

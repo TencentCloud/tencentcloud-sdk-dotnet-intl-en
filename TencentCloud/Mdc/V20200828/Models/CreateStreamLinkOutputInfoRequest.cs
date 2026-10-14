@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The flow ID.
+        /// Transport stream Id.
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The output configuration of the flow.
+        /// Output configuration of the transport stream.
         /// </summary>
         [JsonProperty("Output")]
         public CreateOutputInfo Output{ get; set; }

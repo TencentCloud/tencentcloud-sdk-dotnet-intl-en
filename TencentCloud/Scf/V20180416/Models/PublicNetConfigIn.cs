@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Whether to enable public network access. Valid values: ['DISABLE', 'ENABLE']
+        /// Whether to enable public network access. Valid values: DISABLE, ENABLE.
         /// </summary>
         [JsonProperty("PublicNetStatus")]
         public string PublicNetStatus{ get; set; }
 
         /// <summary>
-        /// EIP configuration
+        /// Eip configuration
         /// </summary>
         [JsonProperty("EipConfig")]
         public EipConfigIn EipConfig{ get; set; }

@@ -25,38 +25,37 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The SRT mode.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// SRT mode.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Stream ID.
+        /// Stream Id.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Latency.
+        /// Delay.
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receive latency.
+        /// Receive delay.
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// Peer latency.
+        /// Peer delay.
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// Peer idle timeout period.
+        /// Idle timeout period of the peer.
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
@@ -74,11 +73,16 @@ namespace TencentCloud.Mdc.V20200828.Models
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// The SRT peer address.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// SRT peer address.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public SRTSourceAddressResp[] SourceAddresses{ get; set; }
+
+        /// <summary>
+        /// FEC settings
+        /// </summary>
+        [JsonProperty("FEC")]
+        public SRTFECSimpleOptions FEC{ get; set; }
 
 
         /// <summary>
@@ -95,6 +99,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
             this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

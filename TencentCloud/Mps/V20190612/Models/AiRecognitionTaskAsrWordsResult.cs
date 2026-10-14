@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for the speech keyword recognition task.
+        /// Input information on the speech keyword recognition task.
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskAsrWordsResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information on the speech keyword recognition task.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrWordsResultOutput Output{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// List of StreamLink regions
+        /// List of region information for media direct transmission.
         /// </summary>
         [JsonProperty("Regions")]
         public RegionInfo[] Regions{ get; set; }

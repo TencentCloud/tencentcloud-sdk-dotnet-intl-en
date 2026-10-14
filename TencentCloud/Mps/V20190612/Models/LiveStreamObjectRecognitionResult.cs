@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Screenshot link.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

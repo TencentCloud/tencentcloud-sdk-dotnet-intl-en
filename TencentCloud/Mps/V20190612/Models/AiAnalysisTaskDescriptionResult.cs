@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskDescriptionInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent description task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDescriptionOutput Output{ get; set; }

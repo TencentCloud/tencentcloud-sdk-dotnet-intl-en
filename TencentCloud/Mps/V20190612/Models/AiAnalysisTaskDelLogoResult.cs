@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskDelLogoInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of intelligent erasure task.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDelLogoOutput Output{ get; set; }

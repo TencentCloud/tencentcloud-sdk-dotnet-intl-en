@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1397";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Ocr.V20181119
         public ApplyCardVerificationExternalResponse ApplyCardVerificationExternalSync(ApplyCardVerificationExternalRequest req)
         {
             return InternalRequestAsync<ApplyCardVerificationExternalResponse>(req, "ApplyCardVerificationExternal")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API retrieves a token before each call to the OCR SDK verification service. Save the token to initiate the verification process and retrieve the verification result after the process completes.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyOcrTokenRequest"/></param>
+        /// <returns><see cref="ApplyOcrTokenResponse"/></returns>
+        public Task<ApplyOcrTokenResponse> ApplyOcrToken(ApplyOcrTokenRequest req)
+        {
+            return InternalRequestAsync<ApplyOcrTokenResponse>(req, "ApplyOcrToken");
+        }
+
+        /// <summary>
+        /// This API retrieves a token before each call to the OCR SDK verification service. Save the token to initiate the verification process and retrieve the verification result after the process completes.
+        /// </summary>
+        /// <param name="req"><see cref="ApplyOcrTokenRequest"/></param>
+        /// <returns><see cref="ApplyOcrTokenResponse"/></returns>
+        public ApplyOcrTokenResponse ApplyOcrTokenSync(ApplyOcrTokenRequest req)
+        {
+            return InternalRequestAsync<ApplyOcrTokenResponse>(req, "ApplyOcrToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -185,6 +206,27 @@ namespace TencentCloud.Ocr.V20181119
         public GetCardVerificationExternalResultResponse GetCardVerificationExternalResultSync(GetCardVerificationExternalResultRequest req)
         {
             return InternalRequestAsync<GetCardVerificationExternalResultResponse>(req, "GetCardVerificationExternalResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API retrieves the SDK verification result.
+        /// </summary>
+        /// <param name="req"><see cref="GetOcrVerificationResultRequest"/></param>
+        /// <returns><see cref="GetOcrVerificationResultResponse"/></returns>
+        public Task<GetOcrVerificationResultResponse> GetOcrVerificationResult(GetOcrVerificationResultRequest req)
+        {
+            return InternalRequestAsync<GetOcrVerificationResultResponse>(req, "GetOcrVerificationResult");
+        }
+
+        /// <summary>
+        /// This API retrieves the SDK verification result.
+        /// </summary>
+        /// <param name="req"><see cref="GetOcrVerificationResultRequest"/></param>
+        /// <returns><see cref="GetOcrVerificationResultResponse"/></returns>
+        public GetOcrVerificationResultResponse GetOcrVerificationResultSync(GetOcrVerificationResultRequest req)
+        {
+            return InternalRequestAsync<GetOcrVerificationResultResponse>(req, "GetOcrVerificationResult")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -708,6 +750,8 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// Domain name for API request: ocr.intl.tencentcloudapi.com.
+        /// 
         /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
         /// 
         /// A maximum of 10 requests can be initiated per second for this API.
@@ -720,6 +764,8 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// Domain name for API request: ocr.intl.tencentcloudapi.com.
+        /// 
         /// This API is used to recognize the fields on a Thai identity card, including name in Thai, name in English, address, date of birth, identification number, date of issue, and date of expiry.
         /// 
         /// A maximum of 10 requests can be initiated per second for this API.

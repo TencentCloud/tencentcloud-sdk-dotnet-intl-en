@@ -25,67 +25,67 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task ID.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output url</p>
         /// </summary>
         [JsonProperty("OutputUrl")]
         public string OutputUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task scheduling time</p>
         /// </summary>
         [JsonProperty("ScheduledTime")]
         public string ScheduledTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task completion time</p>
         /// </summary>
         [JsonProperty("FinishedTime")]
         public string FinishedTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task error code</p>
         /// </summary>
         [JsonProperty("TaskResultCode")]
         public long? TaskResultCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task returned error message</p>
         /// </summary>
         [JsonProperty("TaskResultMsg")]
         public string TaskResultMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Request structure</p>
         /// </summary>
         [JsonProperty("RequestBody")]
         public string RequestBody{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task type</p>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// <p>Other job information</p>
+        /// <p>Other task information</p>
         /// </summary>
         [JsonProperty("TaskInfo")]
         public string TaskInfo{ get; set; }

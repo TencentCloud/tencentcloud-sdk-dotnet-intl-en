@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 
+        /// Resource pool based on a TKE cluster
         /// </summary>
         [JsonProperty("TKE")]
         public NamespaceResourceEnvTKE TKE{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace of the near-offline computing type
         /// </summary>
         [JsonProperty("OFFLINE")]
         public bool? OFFLINE{ get; set; }

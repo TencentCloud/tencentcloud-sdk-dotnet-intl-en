@@ -49,25 +49,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 
+        /// Recognition start UTC time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// UTC time when recognition is completed.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Steady-state tag.
         /// </summary>
         [JsonProperty("SteadyState")]
         public bool? SteadyState{ get; set; }
 
         /// <summary>
-        /// 
+        /// UserId of the websocket and trtc recognition result
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

@@ -25,82 +25,88 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
         /// </summary>
         [JsonProperty("FrameRate")]
         public FrameRateConfig FrameRate{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
         /// </summary>
         [JsonProperty("SuperResolution")]
         public SuperResolutionConfig SuperResolution{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>HDR configuration.</p>
         /// </summary>
         [JsonProperty("Hdr")]
         public HdrConfig Hdr{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
         /// </summary>
         [JsonProperty("Denoise")]
         public VideoDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Comprehensive enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.</p>
         /// </summary>
         [JsonProperty("ImageQualityEnhance")]
         public ImageQualityEnhanceConfig ImageQualityEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Color enhancement configuration.</p>
         /// </summary>
         [JsonProperty("ColorEnhance")]
         public ColorEnhanceConfig ColorEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Low-light enhancement configuration.</p>
         /// </summary>
         [JsonProperty("LowLightEnhance")]
         public LowLightEnhanceConfig LowLightEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Scratch removal configuration.</p>
         /// </summary>
         [JsonProperty("ScratchRepair")]
         public ScratchRepairConfig ScratchRepair{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Artifacts removal configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured.</p>
         /// </summary>
         [JsonProperty("ArtifactRepair")]
         public ArtifactRepairConfig ArtifactRepair{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Enhancement scenario configuration. Available values:</p><li>common: general enhancement parameters, basic optimization parameters suitable for various video types, improving overall video quality.</li><li>AIGC: overall resolution enhancement, using AI technology to improve the overall video resolution and enhance image clarity.</li><li>short_play (mini-drama & AI virtual human drama): enhances face and subtitle details, highlights facial expression details and subtitle clarity, improving the viewing experience.</li><li>AI_comic (AI comic drama): enhances comic-style image details.</li><li>short_video: optimizes complex and diverse video quality issues, optimizes video quality for complex short video scenarios, and resolves various visual issues.</li><li>game (game video): repairs motion blur and enhances details, focusing on enhancing the clarity of game details, restoring motion blur areas, and making the game screen content clearer and richer.</li><li>HD_movie_series (UHD TV shows and movies): obtains UHD smooth effects, generates 4K 60fps HDR UHD standard videos for broadcasting/OTT UHD video demands. Supports broadcasting scenario format standards.</li><li>LQ_material (low-quality material/classic film restoration): overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature due to their age.</li><li>lecture (live show/e-commerce/conference/lecture): beautifies and enhances face effects, specially optimized for face region, noise reduction, and burr processing in scenarios where people explain, such as live shows/e-commerce/conferences/lectures.</li><li>An empty string indicates non-use of enhancement scenarios.</li>
         /// </summary>
         [JsonProperty("EnhanceSceneType")]
         public string EnhanceSceneType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Large model enhancement configuration. Note that only one of the three items, large model, comprehensive enhancement, and artifacts removal, can be configured. It cannot be enabled simultaneously with super resolution and noise reduction.</p>
         /// </summary>
         [JsonProperty("DiffusionEnhance")]
         public DiffusionEnhanceConfig DiffusionEnhance{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>New frame interpolation frame rate configuration, supporting fractions. Note that you can only choose one between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
         /// </summary>
         [JsonProperty("FrameRateWithDen")]
         public FrameRateWithDenConfig FrameRateWithDen{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Large model repair configuration. Note that at most one of large model, comprehensive enhancement, and jitter removal can be configured. It cannot be enabled simultaneously with super resolution or noise reduction.</p>
         /// </summary>
         [JsonProperty("AiRestoration")]
         public AiRestorationConfig AiRestoration{ get; set; }
+
+        /// <summary>
+        /// <p>Configuration of the large model enhancement pro edition. Note that at most one of the large model, comprehensive enhancement, and artifacts removal can be configured. It cannot intersect with super resolution and noise reduction.</p>
+        /// </summary>
+        [JsonProperty("DiffusionEnhanceV2")]
+        public DiffusionEnhanceV2Config DiffusionEnhanceV2{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "DiffusionEnhance.", this.DiffusionEnhance);
             this.SetParamObj(map, prefix + "FrameRateWithDen.", this.FrameRateWithDen);
             this.SetParamObj(map, prefix + "AiRestoration.", this.AiRestoration);
+            this.SetParamObj(map, prefix + "DiffusionEnhanceV2.", this.DiffusionEnhanceV2);
         }
     }
 }

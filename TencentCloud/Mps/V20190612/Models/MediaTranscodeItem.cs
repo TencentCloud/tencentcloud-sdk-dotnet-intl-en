@@ -25,82 +25,88 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Target storage of the transcoded file.
+        /// <p>Target storage for the transcoded file.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// Video file path after transcoding.
+        /// <p>Transcoded video file path.</p>
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+        /// <p>Transcoding specification ID. Please refer to <a href="https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1">transcoding parameter template</a>.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+        /// <p>Sum of the mean video stream bitrate and the mean audio stream bitrate. Unit: bps.</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// Maximum value of video stream height, measurement unit: px.
+        /// <p>Maximum height of the video stream. Unit: px.</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// Maximum value of the video stream width in px.
+        /// <p>Maximum video stream width. Unit: px.</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+        /// <p>Total size of media files (for HLS videos, the size is the sum of m3u8 and ts file sizes), unit: byte.</p>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
         /// <summary>
-        /// Video duration, in seconds.
+        /// <p>Video duration, in seconds.</p>
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Container type, such as m4a and mp4.
+        /// <p>Container type, for example, m4a, mp4.</p>
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
         /// <summary>
-        /// md5 value of the video.
+        /// <p>md5 value of the video.</p>
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// Audio stream information.
+        /// <p>Audio stream information.</p>
         /// </summary>
         [JsonProperty("AudioStreamSet")]
         public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
         /// <summary>
-        /// Video stream information.
+        /// <p>Video stream information.</p>
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Video transcoding enhancement item descriptions and explanations</p><li>hdr: HDR configuration</li><li>wd_fps: Frame interpolation frame rate configuration</li><li>video_super_resolution: Super-resolution configuration</li><li>repair: Comprehensive enhancement configuration</li><li>denoise: Video noise reduction configuration</li><li>color_enhance: Color enhancement configuration</li><li>scratch: Scratches removal configuration</li><li>artifact: Artifacts removal (burrs) configuration</li><li>sharp: Detail enhancement configuration</li><li>low_light: Low-light enhancement configuration</li><li>face_enhance: Face enhancement configuration</li>
         /// </summary>
         [JsonProperty("CallBackExtInfo")]
         public string CallBackExtInfo{ get; set; }
+
+        /// <summary>
+        /// <p>MediaTranscodeItem</p>
+        /// </summary>
+        [JsonProperty("Usage")]
+        public MediaUsageItem Usage{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
             this.SetParamSimple(map, prefix + "CallBackExtInfo", this.CallBackExtInfo);
+            this.SetParamObj(map, prefix + "Usage.", this.Usage);
         }
     }
 }

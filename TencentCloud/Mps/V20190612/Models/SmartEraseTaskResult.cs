@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent removal input.
         /// </summary>
         [JsonProperty("Input")]
         public SmartEraseTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the intelligent erasure task.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDelLogoOutput Output{ get; set; }

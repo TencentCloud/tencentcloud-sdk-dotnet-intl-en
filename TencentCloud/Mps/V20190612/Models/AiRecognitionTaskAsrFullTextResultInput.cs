@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Full speech identification template ID.
+        /// Full speech recognition template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Asr text porn score, ranging from 0 to 100.
+        /// Porn score of the Asr text. The score ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Asr text pornographic result suggestion, value ranges from...to...
+        /// Asr text porn detection result suggestion. Value ranges from pass to review to block.
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video segment list with suspect Asr text pornographic information.
+        /// List of video segments whose Asr text is suspected of involving pornography.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }

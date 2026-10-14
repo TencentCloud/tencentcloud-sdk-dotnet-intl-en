@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Query page started</p>
+        /// <p>Start query page</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// <p>How many data to get on the current page</p>
+        /// <p>How many data entries to retrieve on the current page</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// <p>Query filter criteria</p>
+        /// <p>Query filter conditions.</p>
         /// </summary>
         [JsonProperty("QueryTaskFilter")]
         public QueryTaskFilter QueryTaskFilter{ get; set; }

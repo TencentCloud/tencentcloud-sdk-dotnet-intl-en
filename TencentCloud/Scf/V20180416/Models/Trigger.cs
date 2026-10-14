@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Latest modification time of the trigger
+        /// Last modification time of the trigger
         /// </summary>
         [JsonProperty("ModTime")]
         public string ModTime{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Detailed trigger configuration
+        /// Trigger detailed configuration
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }
 
         /// <summary>
-        /// Trigger name
+        /// Trigger name.
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// Creation time of the trigger
+        /// Trigger creation time
         /// </summary>
         [JsonProperty("AddTime")]
         public string AddTime{ get; set; }
 
         /// <summary>
-        /// Enabling switch
+        /// Enable switch
         /// </summary>
         [JsonProperty("Enable")]
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// Custom parameter
+        /// Customer custom parameter
         /// </summary>
         [JsonProperty("CustomArgument")]
         public string CustomArgument{ get; set; }
@@ -73,34 +73,34 @@ namespace TencentCloud.Scf.V20180416.Models
         public string AvailableStatus{ get; set; }
 
         /// <summary>
-        /// Minimum resource ID of trigger
+        /// Minimum resource ID of the trigger
         /// </summary>
         [JsonProperty("ResourceId")]
         [System.Obsolete]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Trigger-Function binding status
+        /// Binding status of the trigger and SCF
         /// </summary>
         [JsonProperty("BindStatus")]
         [System.Obsolete]
         public string BindStatus{ get; set; }
 
         /// <summary>
-        /// Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+        /// Trigger type. Two-way means both the left and right consoles can operate. One-way means only the SCF console can create.
         /// </summary>
         [JsonProperty("TriggerAttribute")]
         [System.Obsolete]
         public string TriggerAttribute{ get; set; }
 
         /// <summary>
-        /// The alias or version bound with the trigger
+        /// Alias name or version bound to the trigger
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// Trigger description
+        /// Trigger description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

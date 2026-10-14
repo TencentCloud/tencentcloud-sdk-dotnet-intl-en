@@ -40,35 +40,35 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Face recognition result, which is valid when Type is
-        /// FaceRecognition is valid at that time.
+        /// Valid for FaceRecognition.
         /// </summary>
         [JsonProperty("FaceRecognitionResultSet")]
         public LiveStreamFaceRecognitionResult[] FaceRecognitionResultSet{ get; set; }
 
         /// <summary>
         /// Speech keyword recognition result. When Type is
-        /// AsrWordsRecognition.
+        /// Valid when AsrWordsRecognition is used.
         /// </summary>
         [JsonProperty("AsrWordsRecognitionResultSet")]
         public LiveStreamAsrWordsRecognitionResult[] AsrWordsRecognitionResultSet{ get; set; }
 
         /// <summary>
         /// Text keyword recognition result. When Type is
-        /// OcrWordsRecognition.
+        /// Valid for OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsRecognitionResultSet")]
         public LiveStreamOcrWordsRecognitionResult[] OcrWordsRecognitionResultSet{ get; set; }
 
         /// <summary>
         /// Full speech recognition result. When Type is
-        /// AsrFullTextRecognition.
+        /// Valid when AsrFullTextRecognition is used.
         /// </summary>
         [JsonProperty("AsrFullTextRecognitionResultSet")]
         public LiveStreamAsrFullTextRecognitionResult[] AsrFullTextRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// Full text recognition result, when Type is
-        /// OcrFullTextRecognition.
+        /// Full text recognition result. This parameter is returned only when `Type` is set to
+        /// Valid for OcrFullTextRecognition.
         /// </summary>
         [JsonProperty("OcrFullTextRecognitionResultSet")]
         public LiveStreamOcrFullTextRecognitionResult[] OcrFullTextRecognitionResultSet{ get; set; }
@@ -86,7 +86,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamObjectRecognitionResult[] ObjectRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Marking point result. Valid when Type is TagRecognition.
         /// </summary>
         [JsonProperty("TagRecognitionResultSet")]
         public LiveStreamTagRecognitionResult[] TagRecognitionResultSet{ get; set; }

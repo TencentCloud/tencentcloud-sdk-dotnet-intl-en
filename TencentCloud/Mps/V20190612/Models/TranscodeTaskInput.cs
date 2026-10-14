@@ -38,7 +38,9 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawTranscodeParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+        /// When some transcoding parameters in this structure are filled in, the filled parameters will be used to override the parameters in the transcoding template.
+        /// This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideTranscodeParameter OverrideParameter{ get; set; }
@@ -50,22 +52,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Digital watermark parameter.
         /// </summary>
         [JsonProperty("BlindWatermark")]
         public BlindWatermarkInput BlindWatermark{ get; set; }
 
         /// <summary>
-        /// Mosaic list. A maximum of 10 images is supported.
+        /// Mosaic list. Up to 10 images supported.
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
         /// Start time offset of the transcoded video, in seconds.
-        /// <li>If this parameter is not specified or is set to 0, the transcoded video starts from the start position of the original video;</li>
+        /// <li>Leave this parameter empty or set it to 0: transcoding starts from the start of the original video;</li>
         /// <li>When the value is greater than 0 (assuming n), it means the transcoded video starts from the nth second of the original video;</li>
-        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video starts n seconds before the end of the original video.</li>
+        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video starts from the position n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -73,14 +75,14 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// End time offset of the transcoded video, in seconds.
         /// <li>If not set or set to 0, the transcoded video will last until the end of the original video.</li>
-        /// <li>When the value is greater than 0 (assuming n), it means the transcoded video ends at the nth second of the original video.</li>
-        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the end of the original video.</li>
+        /// <li>When the value is greater than 0 (assuming n), it means the transcoded video lasts until the nth second of the original video and then ends;</li>
+        /// <li>When the value is less than 0 (assuming -n), it means the transcoded video lasts until n seconds before the original video ends.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target storage for transcoded files. If left blank, it inherits the upper-level OutputStorage value.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -89,29 +91,29 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Output path of the main file after transcoding, which can be a relative or absolute path.
         /// To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
         /// Relative path example:
-        /// <li>Filename_{Variable name}.{format}</li>
+        /// <li>Filename_{Variable name}.{format}.</li>
         /// <li>Filename.{format}.</li>
         /// Absolute path example:
         /// <li>/Custom path/Filename_{Variable name}.{format}</li>
-        /// If left empty, the default relative path is `{inputName}_transcode_{definition}.{format}`.
+        /// If not filled in, default relative path: `{inputName}_transcode_{definition}.{format}`.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to `{inputName}_transcode_{definition}_{number}.{format}`.
+        /// Output path for segment files after transcoding (the path of TS files when transcoding to HLS), which can only be a relative path. If left empty, it defaults to: `{inputName}_transcode_{definition}_{number}.{format}`.
         /// </summary>
         [JsonProperty("SegmentObjectName")]
         public string SegmentObjectName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rule of the `{number}` variable in the output path after transcoding.
         /// </summary>
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }
 
         /// <summary>
-        /// 
+        /// Opening and ending content parameters.
         /// </summary>
         [JsonProperty("HeadTailParameter")]
         public HeadTailParameter HeadTailParameter{ get; set; }

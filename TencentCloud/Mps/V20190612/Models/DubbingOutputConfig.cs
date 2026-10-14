@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translation audio + translation subtitle</li><li>Custom: customization</li></ul><p>Default value: FinalVideoOnly</p><p>No translation audio and subtitle are returned when using external subtitles</p>
+        /// <p>Output method</p><p>Enumeration values:</p><ul><li>FinalVideoOnly: default, final video only</li><li>AudioAndSubtitle: translated audio + translated subtitles</li><li>Custom: custom</li></ul><p>Default value: FinalVideoOnly</p><p>No translated audio + subtitles are returned when external subtitles are used</p>
         /// </summary>
         [JsonProperty("OutputMode")]
         public string OutputMode{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputFinalVideo{ get; set; }
 
         /// <summary>
-        /// <p>Switch to output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: enable</li><li>OFF: disable</li></ul><p>Default value: OFF</p>
+        /// <p>Switch for output subtitle files (contains both original voice subtitles and target language subtitles)</p><p>Enumeration values:</p><ul><li>ON: turn on</li><li>OFF: turn off</li></ul><p>Default value: OFF</p>
         /// </summary>
         [JsonProperty("OutputSubtitle")]
         public string OutputSubtitle{ get; set; }
 
         /// <summary>
-        /// <p>Audio switch for output translation dubbing</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
+        /// <p>Output translation dubbing audio switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p><p>Only takes effect in Custom mode</p>
         /// </summary>
         [JsonProperty("OutputDstAudio")]
         public string OutputDstAudio{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle suppression configuration message.</p>
+        /// <p>Suppression subtitle configuration message.</p>
         /// </summary>
         [JsonProperty("EmbedSubtitleConfig")]
         public DubbingEmbedSubtitleConfig EmbedSubtitleConfig{ get; set; }

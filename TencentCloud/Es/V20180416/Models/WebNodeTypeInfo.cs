@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Number of visual nodes. The value is always `1`.
+        /// Number of nodes to visualize, fixed as 1
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Visual node specification
+        /// Visualize node specifications
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }

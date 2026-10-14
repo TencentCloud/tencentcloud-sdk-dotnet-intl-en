@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Number of returned logs
+        /// Number of returned log entries
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Log details list
+        /// List of log details
         /// </summary>
         [JsonProperty("InstanceLogList")]
         public InstanceLog[] InstanceLogList{ get; set; }

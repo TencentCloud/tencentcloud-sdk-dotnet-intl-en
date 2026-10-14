@@ -25,25 +25,25 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Digital human asset key
         /// </summary>
         [JsonProperty("AssetKey")]
         public string AssetKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Digital human name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// image
         /// </summary>
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 
+        /// Preview image
         /// </summary>
         [JsonProperty("PreviewUrl")]
         public string PreviewUrl{ get; set; }

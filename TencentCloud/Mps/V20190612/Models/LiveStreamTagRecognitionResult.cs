@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Timestamp events.
+        /// Timestamp event.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

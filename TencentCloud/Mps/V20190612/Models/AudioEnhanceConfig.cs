@@ -25,28 +25,34 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Audio noise reduction configuration.</p>
         /// </summary>
         [JsonProperty("Denoise")]
         public AudioDenoiseConfig Denoise{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio separation configuration.</p>
         /// </summary>
         [JsonProperty("Separate")]
         public AudioSeparateConfig Separate{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Volume equalization configuration.</p>
         /// </summary>
         [JsonProperty("VolumeBalance")]
         public VolumeBalanceConfig VolumeBalance{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audio beautification configurations.</p>
         /// </summary>
         [JsonProperty("Beautify")]
         public AudioBeautifyConfig Beautify{ get; set; }
+
+        /// <summary>
+        /// <p>Audio enhancement edit.</p>
+        /// </summary>
+        [JsonProperty("AudioEnhanceEdit")]
+        public AudioEnhanceEditConfig AudioEnhanceEdit{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "Separate.", this.Separate);
             this.SetParamObj(map, prefix + "VolumeBalance.", this.VolumeBalance);
             this.SetParamObj(map, prefix + "Beautify.", this.Beautify);
+            this.SetParamObj(map, prefix + "AudioEnhanceEdit.", this.AudioEnhanceEdit);
         }
     }
 }

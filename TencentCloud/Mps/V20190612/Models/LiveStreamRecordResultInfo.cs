@@ -25,13 +25,15 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether recording ends.
+        /// 0: Recording does not end, returning a single file.
+        /// 1: Recording ends, returning all recording files.
         /// </summary>
         [JsonProperty("RecordOver")]
         public ulong? RecordOver{ get; set; }
 
         /// <summary>
-        /// 
+        /// File list.
         /// </summary>
         [JsonProperty("FileResults")]
         public LiveRecordFile[] FileResults{ get; set; }

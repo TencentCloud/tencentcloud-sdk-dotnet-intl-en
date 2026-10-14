@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Number of the current page. Default value: `1`
+        /// Current page number. Default value: 1.
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: `10`
+        /// Size per page. Default value: 10.
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }

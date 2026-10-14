@@ -37,19 +37,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// Scheduled scan time
+        /// The time for scheduled scan
         /// </summary>
         [JsonProperty("ScanTime")]
         public string ScanTime{ get; set; }
 
         /// <summary>
-        /// Array of the scanned trojan types
+        /// Array of Trojan horse types to scan
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }
 
         /// <summary>
-        /// Scanned image
+        /// Scan image
         /// </summary>
         [JsonProperty("Images")]
         public ImageInfo[] Images{ get; set; }
@@ -62,46 +62,52 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? All{ get; set; }
 
         /// <summary>
-        /// ID of the image to be scanned
+        /// Scan Image ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
 
         /// <summary>
-        /// Whether to scan for the latest version
+        /// Whether to Scan the Latest Version
         /// </summary>
         [JsonProperty("Latest")]
         public bool? Latest{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether There Are Running Containers
         /// </summary>
         [JsonProperty("ContainerRunning")]
         public bool? ContainerRunning{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scan end time
         /// </summary>
         [JsonProperty("ScanEndTime")]
         public string ScanEndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
         /// </summary>
         [JsonProperty("ScanScope")]
         public ulong? ScanScope{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository Type: tcr, ccr, harbor
         /// </summary>
         [JsonProperty("RegistryType")]
         public string[] RegistryType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string[] Namespace{ get; set; }
+
+        /// <summary>
+        /// IDs of excluded image assets.
+        /// </summary>
+        [JsonProperty("ExcludeImageAssetIds")]
+        public ulong?[] ExcludeImageAssetIds{ get; set; }
 
 
         /// <summary>
@@ -122,6 +128,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanScope", this.ScanScope);
             this.SetParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
             this.SetParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+            this.SetParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
         }
     }
 }

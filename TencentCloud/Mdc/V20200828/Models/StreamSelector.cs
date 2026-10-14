@@ -25,19 +25,19 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Selection type: PID | TRACK
         /// </summary>
         [JsonProperty("SelectorType")]
         public string SelectorType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Based on the PID configuration selector
         /// </summary>
         [JsonProperty("PidSelector")]
         public PidSelector PidSelector{ get; set; }
 
         /// <summary>
-        /// 
+        /// Select a selector based on the Track configuration
         /// </summary>
         [JsonProperty("TrackSelector")]
         public TrackSelector TrackSelector{ get; set; }

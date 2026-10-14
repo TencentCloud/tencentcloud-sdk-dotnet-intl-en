@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// RTMP origin server address information.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public DescribeRTMPPullSourceAddress[] SourceAddresses{ get; set; }

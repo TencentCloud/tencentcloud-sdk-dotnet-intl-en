@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters are not supported for screenshot watermarking.</p>
+        /// <p>Watermark custom parameter, valid when Definition is set to 0.<br>This parameter is used for highly custom scenarios. We recommend you prioritize using Definition to specify watermark parameters.<br>Watermark custom parameters do not support watermarking screenshots.</p>
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawWatermarkParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// <p>Text content, length not exceeding 100 characters. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
+        /// <p>Text content, not exceeding 100 characters in length. Fill in only when the watermark type is text watermark.<br>Text watermark does not support screenshot watermarking.</p>
         /// </summary>
         [JsonProperty("TextContent")]
         public string TextContent{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SvgContent{ get; set; }
 
         /// <summary>
-        /// <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), the watermark appears at second n after the video starts;</li><li>If the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
+        /// <p>Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.</p><li>If not set or set to 0, a watermark starts appearing when a video starts;</li><li>If the value is greater than 0 (assuming n), a watermark appears at second n after a video starts;</li><li>If the value is less than 0 (assuming -n), a watermark appears n seconds before the end of a video.</li>Note: This parameter only applies to video scenes. Screenshots do not support it.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// <p>End time offset of a watermark, in seconds.</p><li>Leave empty or set to 0: the watermark lasts until the end of the video.</li><li>Value greater than 0 (assuming n): the watermark disappears at second n.</li><li>Value smaller than 0 (assuming -n): the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshot is not supported.
+        /// <p>End time offset of a watermark. Unit: second.</p><li>If not specified or set to 0, the watermark lasts until the end of the video.</li><li>If the value is greater than 0 (assuming n), the watermark disappears at second n.</li><li>If the value is less than 0 (assuming -n), the watermark disappears n seconds before the end of the video.</li>Note: Only used for video scenes. Screenshots do not support it.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Review result suggestion for suspected segment, value ranges from...to...
+        /// Suggested review result for the suspected segment. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -52,7 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Suspicious keyword list.
+        /// List of suspicious keywords.
         /// </summary>
         [JsonProperty("KeywordSet")]
         public string[] KeywordSet{ get; set; }

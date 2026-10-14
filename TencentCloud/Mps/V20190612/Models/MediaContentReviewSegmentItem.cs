@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Suspected segment porn score.
+        /// Porn score of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// Pornographic result suggestion for suspected segment, value ranges from...to...
+        /// Porn detection result suggestion for the suspected segment. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -58,14 +58,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (Images are not retained permanently upon arrival)
-        /// The image will be deleted after the PicUrlExpireTime time point.
+        /// Suspected image URL (images are not retained permanently and will reach
+        /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// Expiration time of the suspected image URL, in [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

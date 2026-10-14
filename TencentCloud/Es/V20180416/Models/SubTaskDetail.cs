@@ -49,13 +49,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Subtask status. 0: processing, 1: succeeded, -1: failed
+        /// Subtask status. 0: processing, 1: success, -1: failure
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Name of the index for which the check for upgrade failed
+        /// Index name that failed the upgrade check
         /// </summary>
         [JsonProperty("FailedIndices")]
         public string[] FailedIndices{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Subtask level. 1: warning, 2: failed
+        /// Subtask level. 1: warning; 2: failure
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }

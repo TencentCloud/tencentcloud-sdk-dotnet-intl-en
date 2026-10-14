@@ -25,31 +25,31 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// A list of the logs.
+        /// <p>Log information list.</p>
         /// </summary>
         [JsonProperty("Infos")]
         public FlowLogInfo[] Infos{ get; set; }
 
         /// <summary>
-        /// The current page number.
+        /// <p>Current page.</p>
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// The number of records per page.
+        /// <p>Size per page.</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// The total number of records.
+        /// <p>Total quantity.</p>
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }
 
         /// <summary>
-        /// The total number of pages.
+        /// <p>Total number of pages.</p>
         /// </summary>
         [JsonProperty("TotalPage")]
         public long? TotalPage{ get; set; }

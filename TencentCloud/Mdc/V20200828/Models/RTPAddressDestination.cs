@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Push destination address IP.
+        /// IP of the destination address for repush.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Push destination address port.
+        /// Port of the destination address for push.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

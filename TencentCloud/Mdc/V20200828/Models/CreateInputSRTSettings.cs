@@ -25,58 +25,64 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The SRT mode. Valid values: LISTENER (default), CALLER.
+        /// SRT mode. Options: [LISTENER|CALLER]. Default value: LISTENER.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+        /// Stream Id. It can contain upper- and lower-case letters, digits, and special characters (.#!:&,=_-), with a length of 0 to 512. For the specific format, see: https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys.	
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Latency in ms. Default value: 0. Value range: [0, 3000].
+        /// Delay. Default value: 0. Unit: ms. Range: [0, 3000].
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receive latency in ms. Default value: 120. Value range: [0, 3000].
+        /// Receive latency. Default value: 120. Unit: ms. Range: [0, 3000].
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// Peer latency in ms. Default value: 0. Value range: [0, 3000].
+        /// Peer delay. Default value: 0. Unit: ms. Range: [0, 3000].
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+        /// Peer timeout. Default value: 5000 ms. Range: [1000, 10000].
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
 
         /// <summary>
-        /// Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
+        /// Decryption key. Empty by default, which means not encrypted. Only ascii characters are supported. Length range: [10, 79].
         /// </summary>
         [JsonProperty("Passphrase")]
         public string Passphrase{ get; set; }
 
         /// <summary>
-        /// Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+        /// Key length. Default value: 0. Options: [0|16|24|32].
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+        /// SRT peer address. Required when Mode is CALLER, and can only contain 1 group.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public SRTSourceAddressReq[] SourceAddresses{ get; set; }
+
+        /// <summary>
+        /// SRT FEC settings
+        /// </summary>
+        [JsonProperty("FEC")]
+        public SRTFECSimpleOptions FEC{ get; set; }
 
 
         /// <summary>
@@ -93,6 +99,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "Passphrase", this.Passphrase);
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
             this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

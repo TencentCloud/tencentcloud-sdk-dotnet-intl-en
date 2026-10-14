@@ -43,37 +43,37 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// AI narration and video re-creation task input.
+        /// Task input for AI narration and video re-creation.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskReelInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task output for AI narration and video re-creation.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskReelOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. A null string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of Media Processing Service (MPS) error codes.
         /// </summary>
         [JsonProperty("ErrCodeExt")]
         public string ErrCodeExt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task progress.
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
         /// <summary>
-        /// 
+        /// Starting time of task execution, in ISO date and time format.
         /// </summary>
         [JsonProperty("BeginProcessTime")]
         public string BeginProcessTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task completion time, in ISO date and time format.
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }

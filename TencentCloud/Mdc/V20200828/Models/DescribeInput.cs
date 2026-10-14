@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Input ID.
+        /// Input Id.
         /// </summary>
         [JsonProperty("InputId")]
         public string InputId{ get; set; }
@@ -38,7 +38,6 @@ namespace TencentCloud.Mdc.V20200828.Models
 
         /// <summary>
         /// Input description.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -50,27 +49,25 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Input address list.
+        /// Input the address list.
         /// </summary>
         [JsonProperty("InputAddressList")]
         public InputAddress[] InputAddressList{ get; set; }
 
         /// <summary>
-        /// Input IP allowlist.
+        /// Input the IP whitelist list.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// SRT configuration information of input.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// SRT configuration information of the input.
         /// </summary>
         [JsonProperty("SRTSettings")]
         public DescribeInputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// RTP configuration information of input.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Input RTP configuration message.
         /// </summary>
         [JsonProperty("RTPSettings")]
         public DescribeInputRTPSettings RTPSettings{ get; set; }
@@ -82,68 +79,67 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string InputRegion{ get; set; }
 
         /// <summary>
-        /// RTMP configuration information of an input
+        /// Input RTMP configuration message.
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public DescribeInputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// Input failover
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// Primary/replica switch input.
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// Available Zone Configuration: Under disaster recovery conditions, up to two are supported, corresponding to pipeline 0 and 1 in order. Otherwise, only one available zone is allowed.
+        /// Availability zone configuration. In the current situation with disaster recovery enabled, there can be up to two, corresponding to pipeline 0 and 1 in sequence. Otherwise, there is only one availability zone.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// The input RTMP_PULL configuration information.
+        /// Input RTMP_PULL configuration message.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// The RTSP_PULL configuration information entered.
+        /// Input RTSP_PULL configuration message.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// The input HLS-PULL configuration information.
+        /// Input HLS_PULL configuration message.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// Extended smooth streaming configuration information.
+        /// Configuration message for smooth streaming during delayed broadcasting.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
 
         /// <summary>
-        /// The bound security group ID.
+        /// Bound input security group ID.	
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// The input RIST configuration information.
+        /// Input RIST configuration message.
         /// </summary>
         [JsonProperty("RISTSettings")]
         public DescribeInputRISTSettings RISTSettings{ get; set; }
 
         /// <summary>
-        /// Enter URL information related to module configuration, including the provided streaming address or the configured third-party source address
+        /// Input URL information related to module settings, including the provided streaming address or the configured third-party source stream URL.
         /// </summary>
         [JsonProperty("StreamUrls")]
         public StreamUrlDetail[] StreamUrls{ get; set; }
 
         /// <summary>
-        /// Disaster recovery configuration items
+        /// Disaster recovery configuration item
         /// </summary>
         [JsonProperty("FailOverOption")]
         public FailOverOption FailOverOption{ get; set; }

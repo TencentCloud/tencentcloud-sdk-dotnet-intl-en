@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The input information after modification.
+        /// Input information after modification.
         /// </summary>
         [JsonProperty("Info")]
         public DescribeInput Info{ get; set; }

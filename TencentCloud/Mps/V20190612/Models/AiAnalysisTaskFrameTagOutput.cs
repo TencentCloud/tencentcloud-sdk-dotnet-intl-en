@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video frame tagging list.
+        /// Frame-specific tag list of the video.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaAiAnalysisFrameTagSegmentItem[] SegmentSet{ get; set; }

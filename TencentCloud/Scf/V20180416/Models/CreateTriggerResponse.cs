@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Trigger information
+        /// Trigger information.
         /// </summary>
         [JsonProperty("TriggerInfo")]
         public Trigger TriggerInfo{ get; set; }

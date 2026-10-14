@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// URL address of the sandbox
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// URL address for opening the sandbox through a browser
         /// </summary>
         [JsonProperty("DisplayUrl")]
         public string DisplayUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// Sandbox output content
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

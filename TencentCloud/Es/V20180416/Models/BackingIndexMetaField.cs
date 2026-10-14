@@ -25,39 +25,40 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Backing index name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Backing index name</p>
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// Backing index status
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Backup index status</p>
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
-        /// Backing index size
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Backup index storage size</p>
         /// </summary>
         [JsonProperty("IndexStorage")]
         public long? IndexStorage{ get; set; }
 
         /// <summary>
-        /// Current lifecycle phase of backing index
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Backup index current lifecycle</p>
         /// </summary>
         [JsonProperty("IndexPhrase")]
         public string IndexPhrase{ get; set; }
 
         /// <summary>
-        /// Backing index creation time
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Backup index creation time</p>
         /// </summary>
         [JsonProperty("IndexCreateTime")]
         public string IndexCreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Index Uuid</p>
+        /// </summary>
+        [JsonProperty("IndexUuid")]
+        public string IndexUuid{ get; set; }
 
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
             this.SetParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
             this.SetParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);
+            this.SetParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
         }
     }
 }

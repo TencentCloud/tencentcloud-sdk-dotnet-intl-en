@@ -37,7 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Level{ get; set; }
 
         /// <summary>
-        /// Cluster node IP
+        /// Cluster node IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
@@ -47,6 +47,30 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
+
+        /// <summary>
+        /// Cluster node ID.
+        /// </summary>
+        [JsonProperty("NodeID")]
+        public string NodeID{ get; set; }
+
+        /// <summary>
+        /// Slow log index name
+        /// </summary>
+        [JsonProperty("IndexName")]
+        public string IndexName{ get; set; }
+
+        /// <summary>
+        /// Slow log index shards
+        /// </summary>
+        [JsonProperty("Shard")]
+        public string Shard{ get; set; }
+
+        /// <summary>
+        /// Slow log index query time
+        /// </summary>
+        [JsonProperty("QueryCost")]
+        public string QueryCost{ get; set; }
 
 
         /// <summary>
@@ -58,6 +82,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "NodeID", this.NodeID);
+            this.SetParamSimple(map, prefix + "IndexName", this.IndexName);
+            this.SetParamSimple(map, prefix + "Shard", this.Shard);
+            this.SetParamSimple(map, prefix + "QueryCost", this.QueryCost);
         }
     }
 }

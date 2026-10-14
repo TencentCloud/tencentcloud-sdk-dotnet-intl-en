@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Hot backup
         /// </summary>
         [JsonProperty("FailOverType")]
         public string FailOverType{ get; set; }

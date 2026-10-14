@@ -25,31 +25,31 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Maintenance period, which can be one or more days from Monday to Sunday. Valid values: [0, 6].
+        /// Maintenance period, which refers to Monday to Sunday. Valid values: [0, 6].
         /// </summary>
         [JsonProperty("Periods")]
         public ulong?[] Periods{ get; set; }
 
         /// <summary>
-        /// The maintenance start time
+        /// Maintenance start time
         /// </summary>
         [JsonProperty("TimeStart")]
         public string TimeStart{ get; set; }
 
         /// <summary>
-        /// The maintenance end time
+        /// Maintenance end time.
         /// </summary>
         [JsonProperty("TimeEnd")]
         public string TimeEnd{ get; set; }
 
         /// <summary>
-        /// The time zone expressed in UTC.
+        /// Time zone in UTC format
         /// </summary>
         [JsonProperty("TimeZone")]
         public string TimeZone{ get; set; }
 
         /// <summary>
-        /// The array of ES cluster IDs
+        /// ES cluster ID array
         /// </summary>
         [JsonProperty("MoreInstances")]
         public string[] MoreInstances{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Content review sensitive task input.
+        /// Sensitive task input for content review.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewTerrorismTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of sensitive tasks in content review.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismTaskOutput Output{ get; set; }

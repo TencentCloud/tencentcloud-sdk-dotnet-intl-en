@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start PTS time of a suspected segment, in seconds.
+        /// Starting PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result suggestion for suspected segment porn detection, permissible range:
+        /// Pornographic result advice for the suspected segment. Value range:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,7 +52,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video sensitive result tag, value ranges from...to...
+        /// Video sensitive result tag. Value range:
         /// <li>politician: sensitive person.</li>
         /// <li>violation_photo: violation icon.</li>
         /// </summary>
@@ -60,26 +60,26 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// Sensitive person, violative icon name.
+        /// Sensitive person and violative icon name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Area coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
+        /// Zone coordinates (pixel-level) where sensitive persons or violation icons appear. Format: [x1, y1, x2, y2], which indicates the coordinates of the top-left corner and the bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (Images are not retained permanently upon arrival)
-        /// The image will be deleted after the PicUrlExpireTime time point.
+        /// Suspected image URL (images are not retained permanently and will reach
+        /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

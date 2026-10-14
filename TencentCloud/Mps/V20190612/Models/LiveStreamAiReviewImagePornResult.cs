@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Suspected segment porn score.
+        /// Pornography score of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Pornographic result suggestion for suspected segment, value ranges from...to...
+        /// Porn detection result suggestion for the suspected segment. Pass in the range of [min,max].
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,24 +52,24 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Pornographic result tag for video, value ranges from...to...
+        /// Pornographic result tag of the video. Value range:
         /// <li>porn: pornography.</li>
         /// <li>sexy: sexy.</li>
-        /// <li>vulgar: vulgarity.</li>
+        /// <li>vulgar: vulgar.</li>
         /// <li>intimacy: intimate behavior.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (Images are not retained permanently upon arrival)
-        /// The image will be deleted after the PicUrlExpireTime time point.
+        /// Suspected image URL (images are not retained permanently and will be deleted upon reaching
+        /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

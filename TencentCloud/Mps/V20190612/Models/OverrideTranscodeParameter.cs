@@ -32,7 +32,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Indicates whether to remove video data. Parameter value:
-        /// <li>`0`: retention;</li>
+        /// <li>0: retention</li>
         /// <li>1: Remove.</li>
         /// </summary>
         [JsonProperty("RemoveVideo")]
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Indicates whether to remove audio data. Parameter value:
-        /// <li>`0`: retention;</li>
+        /// <li>0: retention</li>
         /// <li>1: Remove.</li>
         /// </summary>
         [JsonProperty("RemoveAudio")]
@@ -59,7 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// 
+        /// Top Speed Codec transcoding parameters.
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }

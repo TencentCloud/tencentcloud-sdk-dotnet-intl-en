@@ -25,143 +25,143 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Output ID.
+        /// <p>Output Id.</p>
         /// </summary>
         [JsonProperty("OutputId")]
         public string OutputId{ get; set; }
 
         /// <summary>
-        /// Output name.
+        /// <p>Output name.</p>
         /// </summary>
         [JsonProperty("OutputName")]
         public string OutputName{ get; set; }
 
         /// <summary>
-        /// Output type.
+        /// <p>Output type.</p>
         /// </summary>
         [JsonProperty("OutputType")]
         public string OutputType{ get; set; }
 
         /// <summary>
-        /// Output description.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Output description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Output protocol.
+        /// <p>Output protocol.</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Output destination address information list.
+        /// <p>List of output egress address information.</p>
         /// </summary>
         [JsonProperty("OutputAddressList")]
         public OutputAddress[] OutputAddressList{ get; set; }
 
         /// <summary>
-        /// Output region.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Output region.</p>
         /// </summary>
         [JsonProperty("OutputRegion")]
         public string OutputRegion{ get; set; }
 
         /// <summary>
-        /// SRT configuration information of output.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>SRT configuration information of the output.</p>
         /// </summary>
         [JsonProperty("SRTSettings")]
         public DescribeOutputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// RTP configuration information of output.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Output RTP configuration message.</p>
         /// </summary>
         [JsonProperty("RTPSettings")]
         public DescribeOutputRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// RTMP configuration information of output.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Output RTMP configuration message.</p>
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public DescribeOutputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// RTMP pull configuration of the output
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Output RTMP pull configuration message.</p>
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public DescribeOutputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+        /// <p>CIDR allowlist.<br>Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.</p>
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// The output RTSP streaming configuration information.
+        /// <p>Output RTSP pull stream configuration message.</p>
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public DescribeOutputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// Output the HLS streaming configuration information.
+        /// <p>Output HLS pull configuration message.</p>
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public DescribeOutputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent streams is 4, with a default of 4.
+        /// <p>Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.</p>
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
 
         /// <summary>
-        /// The bound security group IDs.
+        /// <p>ID of the bound security group.</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// The available zone currently only supports a maximum of one output.
+        /// <p>Availability zone. output currently supports a maximum of one.</p>
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// Output RIST configuration information.
+        /// <p>Output RIST configuration message.</p>
         /// </summary>
         [JsonProperty("RISTSettings")]
         public DescribeOutputRISTSettings RISTSettings{ get; set; }
 
         /// <summary>
-        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
         /// </summary>
         [JsonProperty("PidSelector")]
         [System.Obsolete]
         public PidSelector PidSelector{ get; set; }
 
         /// <summary>
-        /// Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+        /// <p>Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For one Flow, only one MultiMesh output is allowed in one zone.</p>
         /// </summary>
         [JsonProperty("OutputKind")]
         public string OutputKind{ get; set; }
 
         /// <summary>
-        /// Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+        /// <p>Output module configuration, related URLs, including the provided pull stream address or the configured relay address for output to a third party</p>
         /// </summary>
         [JsonProperty("StreamUrls")]
         public StreamUrlDetail[] StreamUrls{ get; set; }
 
         /// <summary>
-        /// For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+        /// <p>For streams with multiple audio/video tracks, you can specify the track to be used</p>
         /// </summary>
         [JsonProperty("StreamSelector")]
         public StreamSelector StreamSelector{ get; set; }
+
+        /// <summary>
+        /// <p>Output status.</p><p>Enumeration values:</p><ul><li>DISABLED</li><li>ENABLED</li></ul>
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
 
 
         /// <summary>
@@ -191,6 +191,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
             this.SetParamArrayObj(map, prefix + "StreamUrls.", this.StreamUrls);
             this.SetParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
+            this.SetParamSimple(map, prefix + "State", this.State);
         }
     }
 }

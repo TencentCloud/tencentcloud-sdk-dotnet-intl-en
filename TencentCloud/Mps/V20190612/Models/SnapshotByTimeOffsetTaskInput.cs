@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public WatermarkInput[] WatermarkSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
         /// </summary>
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }

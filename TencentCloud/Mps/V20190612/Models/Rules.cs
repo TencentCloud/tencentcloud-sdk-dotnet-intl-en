@@ -25,25 +25,28 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Judgment condition id
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 
+        /// Judgment condition configuration
         /// </summary>
         [JsonProperty("Conditions")]
         public RuleConditionItem[] Conditions{ get; set; }
 
         /// <summary>
+        /// Logical operator for the list of conditions. Valid values:
         /// 
+        /// - &&: logical AND
+        /// - ||: logical OR
         /// </summary>
         [JsonProperty("Linker")]
         public string Linker{ get; set; }
 
         /// <summary>
-        /// 
+        /// Indexes of the nodes to execute if the judgment conditions are met.
         /// </summary>
         [JsonProperty("RearDriveIndexs")]
         public long?[] RearDriveIndexs{ get; set; }

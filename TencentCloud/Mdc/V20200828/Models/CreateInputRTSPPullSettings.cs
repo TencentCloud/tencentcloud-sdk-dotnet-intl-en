@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Origin server address of the RTSP origin server. Only one is allowed.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public RTSPPullSourceAddress[] SourceAddresses{ get; set; }

@@ -25,22 +25,19 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Cluster view
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Cluster dimension view
         /// </summary>
         [JsonProperty("ClusterView")]
         public ClusterView ClusterView{ get; set; }
 
         /// <summary>
-        /// Node view
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Node dimension view
         /// </summary>
         [JsonProperty("NodesView")]
         public NodeView[] NodesView{ get; set; }
 
         /// <summary>
-        /// Kibana view
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// Kibana dimensional view
         /// </summary>
         [JsonProperty("KibanasView")]
         public KibanaView[] KibanasView{ get; set; }

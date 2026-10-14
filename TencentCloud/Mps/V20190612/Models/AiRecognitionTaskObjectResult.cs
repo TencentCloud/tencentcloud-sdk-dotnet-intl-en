@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskObjectResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Object recognition task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskObjectResultOutput Output{ get; set; }

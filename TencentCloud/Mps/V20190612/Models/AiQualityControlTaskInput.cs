@@ -25,13 +25,18 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Media quality inspection template ID.
+        /// You can directly use a preset template or customize a template in the console. The preset templates are as follows:
+        /// - 10: Enable all quality inspection items.
+        /// - 20: Only enable quality inspection items corresponding to format diagnosis.
+        /// - 30: Only enable quality inspection items corresponding to no-reference scoring.
+        /// - 40: Only enable quality inspection items corresponding to screen quality.
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Channel expansion parameter, json serialized string.
         /// </summary>
         [JsonProperty("ChannelExtPara")]
         public string ChannelExtPara{ get; set; }

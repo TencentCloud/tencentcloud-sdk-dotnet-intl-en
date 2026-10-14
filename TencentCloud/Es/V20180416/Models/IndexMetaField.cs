@@ -26,104 +26,96 @@ namespace TencentCloud.Es.V20180416.Models
         
         /// <summary>
         /// Index type
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
         /// Index name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// 
+        /// JSON-formatted index metadata
         /// </summary>
         [JsonProperty("IndexMetaJson")]
         public string IndexMetaJson{ get; set; }
 
         /// <summary>
         /// Index status
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IndexStatus")]
         public string IndexStatus{ get; set; }
 
         /// <summary>
-        /// Index size (in byte)
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index storage size in bytes
         /// </summary>
         [JsonProperty("IndexStorage")]
         public long? IndexStorage{ get; set; }
 
         /// <summary>
         /// Index creation time
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IndexCreateTime")]
         public string IndexCreateTime{ get; set; }
 
         /// <summary>
-        /// Backing index
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Backup index
         /// </summary>
         [JsonProperty("BackingIndices")]
         public BackingIndexMetaField[] BackingIndices{ get; set; }
 
         /// <summary>
-        /// Cluster ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Cluster ID of the index
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster name
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Cluster name of the index
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Cluster version
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Version number of the cluster to which the index belongs
         /// </summary>
         [JsonProperty("ClusterVersion")]
         public string ClusterVersion{ get; set; }
 
         /// <summary>
-        /// Index lifecycle policy field
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index lifecycle field
         /// </summary>
         [JsonProperty("IndexPolicyField")]
         public IndexPolicyField IndexPolicyField{ get; set; }
 
         /// <summary>
-        /// Index automation field
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index autonomous field
         /// </summary>
         [JsonProperty("IndexOptionsField")]
         public IndexOptionsField IndexOptionsField{ get; set; }
 
         /// <summary>
-        /// Index setting field
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index configuration field
         /// </summary>
         [JsonProperty("IndexSettingsField")]
         public IndexSettingsField IndexSettingsField{ get; set; }
 
         /// <summary>
-        /// Cluster APP ID
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index alias field
+        /// </summary>
+        [JsonProperty("IndexAliasesField")]
+        public string[] IndexAliasesField{ get; set; }
+
+        /// <summary>
+        /// APP ID of the cluster to which the index belongs
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// The number of index docs.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of indexed documents
         /// </summary>
         [JsonProperty("IndexDocs")]
         public ulong? IndexDocs{ get; set; }
@@ -147,6 +139,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "IndexPolicyField.", this.IndexPolicyField);
             this.SetParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
             this.SetParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
+            this.SetParamArraySimple(map, prefix + "IndexAliasesField.", this.IndexAliasesField);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
         }

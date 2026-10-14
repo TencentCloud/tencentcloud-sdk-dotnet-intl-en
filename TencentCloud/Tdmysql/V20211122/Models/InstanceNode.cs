@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 
+        /// Primary key
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -43,139 +43,139 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Ip
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance EniIp
         /// </summary>
         [JsonProperty("EniIp")]
         public string EniIp{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Port
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance SpecCode
         /// </summary>
         [JsonProperty("SpecCode")]
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance NodeName
         /// </summary>
         [JsonProperty("NodeName")]
         public string NodeName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Cpu
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance memory
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Disk
         /// </summary>
         [JsonProperty("Disk")]
         public long? Disk{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance type
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance status
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance version
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance region
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance LocalDNS
         /// </summary>
         [JsonProperty("LocalDNS")]
         public string LocalDNS{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance log disk
         /// </summary>
         [JsonProperty("LogDisk")]
         public long? LogDisk{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance data disk
         /// </summary>
         [JsonProperty("DataDisk")]
         public long? DataDisk{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Zone ID
         /// </summary>
         [JsonProperty("ZoneID")]
         public string ZoneID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance SpecName
         /// </summary>
         [JsonProperty("SpecName")]
         public string SpecName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Replicas
         /// </summary>
         [JsonProperty("Replicas")]
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance Shards
         /// </summary>
         [JsonProperty("Shards")]
         public long? Shards{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance data replica
         /// </summary>
         [JsonProperty("DataReplicas")]
         public long? DataReplicas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance initialization parameter
         /// </summary>
         [JsonProperty("Params")]
         public string Params{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

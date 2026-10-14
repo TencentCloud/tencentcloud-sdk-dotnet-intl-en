@@ -25,70 +25,102 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The output name.
+        /// Output name.
         /// </summary>
         [JsonProperty("OutputName")]
         public string OutputName{ get; set; }
 
         /// <summary>
-        /// Description of the output.
+        /// Output description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// The output protocol. Valid values: SRT, RTP, RTMP, RTMP_PULL.
+        /// Output relay protocol. Supports SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, and RIST.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The output region.
+        /// Output region.
         /// </summary>
         [JsonProperty("OutputRegion")]
         public string OutputRegion{ get; set; }
 
         /// <summary>
-        /// The SRT configuration.
+        /// Configuration of the output SRT.
         /// </summary>
         [JsonProperty("SRTSettings")]
         public CreateOutputSrtSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// The RTMP configuration.
+        /// Configuration of the output RTMP.
         /// </summary>
         [JsonProperty("RTMPSettings")]
         public CreateOutputRTMPSettings RTMPSettings{ get; set; }
 
         /// <summary>
-        /// The RTP configuration.
+        /// Configuration of the output RTP.
         /// </summary>
         [JsonProperty("RTPSettings")]
         public CreateOutputInfoRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// IP whitelist, in CIDR format, such as 0.0.0.0/0. This is valid when Protocol is RTMP_PULL, and empty means no restriction on client IP.
+        /// IP whitelist list in CIDR format, for example, 0.0.0.0/0.
+        /// Valid when Protocol is RTMP_PULL. If empty, it represents no limit on client IP.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// The maximum number of concurrent stream pulls is 4, and the default value is 4.
+        /// Maximum number of concurrent stream pulls. Maximum value: 4. Default value: 4.
         /// </summary>
         [JsonProperty("MaxConcurrent")]
         public ulong? MaxConcurrent{ get; set; }
 
         /// <summary>
-        /// The bound security group IDs.
+        /// ID of the bound input security group.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Availability zone: output supports at most one availability zone as input.
+        /// Availability zone. output supports a maximum of one user-submitted input availability zone.
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Output type: Internet/TencentCSS/StreamLive
+        /// </summary>
+        [JsonProperty("OutputType")]
+        public string OutputType{ get; set; }
+
+        /// <summary>
+        /// Output RIST configuration.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateOutputRistSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// For streams with multiple audio/video tracks, you can specify the track to be used
+        /// </summary>
+        [JsonProperty("PidSelector")]
+        [System.Obsolete]
+        public PidSelector PidSelector{ get; set; }
+
+        /// <summary>
+        /// Output module type, including Pinpoint (single-point output, supports up to four concurrent outputs); MultiMesh (multiple streams output, supports more than four concurrent outputs, currently up to 200). The default type is Pinpoint output. For a single Flow, only one MultiMesh output is allowed per zone.
+        /// </summary>
+        [JsonProperty("OutputKind")]
+        public string OutputKind{ get; set; }
+
+        /// <summary>
+        /// For streams with multiple audio/video tracks, you can specify the track to be used
+        /// </summary>
+        [JsonProperty("StreamSelector")]
+        public StreamSelector StreamSelector{ get; set; }
 
 
         /// <summary>
@@ -107,6 +139,11 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamObj(map, prefix + "PidSelector.", this.PidSelector);
+            this.SetParamSimple(map, prefix + "OutputKind", this.OutputKind);
+            this.SetParamObj(map, prefix + "StreamSelector.", this.StreamSelector);
         }
     }
 }

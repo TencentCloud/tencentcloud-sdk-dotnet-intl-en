@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Describes carrier information and other details.
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -37,7 +37,8 @@ namespace TencentCloud.Mdc.V20200828.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 
+        /// Playback: stream playback address;
+        /// RelayDestination: relay destination address; SourceCaptureUrl: source pull stream address; IngestEndpoint: streaming address
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

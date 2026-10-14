@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// The Base64-encoded identity photo.
+        /// Base64 encoded result of portrait photo.
         /// </summary>
         [JsonProperty("HeadPortrait")]
         public TextDetectionResult HeadPortrait{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public TextDetectionResult FirstName{ get; set; }
 
         /// <summary>
-        /// 
+        /// The middle name.
         /// </summary>
         [JsonProperty("MiddleName")]
         public TextDetectionResult MiddleName{ get; set; }

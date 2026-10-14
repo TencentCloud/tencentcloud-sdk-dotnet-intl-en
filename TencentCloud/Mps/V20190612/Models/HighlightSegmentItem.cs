@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the recording clip.
+        /// End time offset of a recording clip.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Segment tag.
         /// </summary>
         [JsonProperty("SegmentTags")]
         public string[] SegmentTags{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Whether it is FEC.
+        /// Whether to enable FEC.
         /// </summary>
         [JsonProperty("FEC")]
         public string FEC{ get; set; }

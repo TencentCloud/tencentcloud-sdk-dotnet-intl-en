@@ -25,22 +25,19 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Number of primary shards
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Number of index primary shards
         /// </summary>
         [JsonProperty("NumberOfShards")]
         public string NumberOfShards{ get; set; }
 
         /// <summary>
-        /// Number of replica shards
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Replica shard count of an index
         /// </summary>
         [JsonProperty("NumberOfReplicas")]
         public string NumberOfReplicas{ get; set; }
 
         /// <summary>
-        /// Index refresh interval
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Index refresh frequency
         /// </summary>
         [JsonProperty("RefreshInterval")]
         public string RefreshInterval{ get; set; }

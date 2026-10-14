@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ImageSpriteTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the image sprite task for videos.
         /// </summary>
         [JsonProperty("Output")]
         public MediaImageSpriteItem Output{ get; set; }

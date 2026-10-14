@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Capability configuration switch. Available values:
+        /// Capability configuration switch. Valid values:
         /// <li>ON: enabled;</li>
         /// <li>OFF: disabled</li>
         /// Default value: ON.
@@ -34,13 +34,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scenario type. Valid values:
+        /// <li>normal: voice and background audio scenario</li>
+        /// <li>music: singing accompaniment scenario</li>
+        /// Default value: normal.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output audio track. Available values:
+        /// <li>vocal: output voice.</li>
+        /// <li>background: output background sound when the scenario is normal, and output accompaniment when the scenario is music</li>
+        /// Default value: vocal.
         /// </summary>
         [JsonProperty("Track")]
         public string Track{ get; set; }

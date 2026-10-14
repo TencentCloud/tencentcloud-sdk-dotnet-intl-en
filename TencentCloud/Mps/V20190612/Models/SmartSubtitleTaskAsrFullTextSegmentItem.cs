@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Word timestamp information.</p>
         /// </summary>
         [JsonProperty("Wordlist")]
         public WordResult[] Wordlist{ get; set; }

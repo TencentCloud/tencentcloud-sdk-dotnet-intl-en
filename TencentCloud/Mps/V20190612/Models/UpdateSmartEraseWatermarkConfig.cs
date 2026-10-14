@@ -25,25 +25,40 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
+        /// Watermark erasing method.
+        /// **Automatic erasing: ** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+        /// When automatic erasing is used, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+        /// **Specified area erasure:** For static watermarks with fixed positions, we recommend you directly specify the erasure area.
+        /// If you choose specified area erasure, input at least one specified region.
         /// 
+        /// - auto: automatic erasing.
+        /// - custom: specified area erasing.
         /// </summary>
         [JsonProperty("WatermarkEraseMethod")]
         public string WatermarkEraseMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Watermark erasing model.
+        /// Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds.
+        /// Advanced Edition: provide better effects. It applies to reality-style videos, such as short dramas.
+        /// - basic: Basic Edition.
+        /// - advanced: Advanced Edition.
         /// </summary>
         [JsonProperty("WatermarkModel")]
         public string WatermarkModel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom area for automatic erasing.
+        /// For the specified area, AI models are used to automatically detect and erase the target objects.
+        /// Note: When the erasing method is set to custom, this parameter is invalid. Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("AutoAreas")]
         public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify a custom region for erasure.
+        /// For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+        /// Note: Input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("CustomAreas")]
         public EraseTimeArea[] CustomAreas{ get; set; }

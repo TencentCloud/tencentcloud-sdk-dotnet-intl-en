@@ -25,91 +25,106 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The input ID.
+        /// Input Id.
         /// </summary>
         [JsonProperty("InputId")]
         public string InputId{ get; set; }
 
         /// <summary>
-        /// The input name.
+        /// Enter a name.
         /// </summary>
         [JsonProperty("InputName")]
         public string InputName{ get; set; }
 
         /// <summary>
-        /// The description of the input.
+        /// Input description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// The IP addresses (CIDR) allowed to push streams.
+        /// IPs allowed for push, in CIDR format.
         /// </summary>
         [JsonProperty("AllowIpList")]
         public string[] AllowIpList{ get; set; }
 
         /// <summary>
-        /// The SRT configuration information.
+        /// Configuration of SRT.
         /// </summary>
         [JsonProperty("SRTSettings")]
         public CreateInputSRTSettings SRTSettings{ get; set; }
 
         /// <summary>
-        /// The RTP configuration information.
+        /// Configuration message of RTP.
         /// </summary>
         [JsonProperty("RTPSettings")]
         public CreateInputRTPSettings RTPSettings{ get; set; }
 
         /// <summary>
-        /// The input protocol. Valid values: SRT, RTP, RTMP.
-        /// If there is an RTP input, the output must be RTP.
-        /// If there is an RTMP input, the output must be SRT or RTMP.
-        /// If there is an SRT input, the output must be SRT.
+        /// Input protocol. Options: SRT, RTP, RTMP, RTMP_PULL, RTSP_PULL, RIST.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Whether to enable input failover. Valid values: OPEN, CLOSE.
+        /// Input primary/replica switch. Option: [OPEN|CLOSE].
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// Configuration information for RTMP_PULL.
+        /// Configuration message of RTMP_PULL.
         /// </summary>
         [JsonProperty("RTMPPullSettings")]
         public CreateInputRTMPPullSettings RTMPPullSettings{ get; set; }
 
         /// <summary>
-        /// Configuration information of RTSP_PULL.
+        /// Configuration message of RTSP_PULL.
         /// </summary>
         [JsonProperty("RTSPPullSettings")]
         public CreateInputRTSPPullSettings RTSPPullSettings{ get; set; }
 
         /// <summary>
-        /// HLS_PULL configuration information.
+        /// Configuration message of HLS_PULL.
         /// </summary>
         [JsonProperty("HLSPullSettings")]
         public CreateInputHLSPullSettings HLSPullSettings{ get; set; }
 
         /// <summary>
-        /// Delayed broadcast smooth streaming configuration information.
+        /// Configuration message for smooth stream output during delayed playback.
         /// </summary>
         [JsonProperty("ResilientStream")]
         public ResilientStreamConf ResilientStream{ get; set; }
 
         /// <summary>
-        /// The ID of the input security group to bind. Only one security group can be associated.
+        /// ID of the bound input security group. Only one security group can be associated.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Availability zone, optional, supports up to two availability zones. For interfaces that need to be changed, the second availability zone will participate in resource allocation. This is effective if disaster recovery is enabled for input or RTSP_PULL protocol switching is involved (addresses will be reallocated).
+        /// Availability zone. Optional. input limit: two availability zones. For this API, only the second availability zone participates in resource allocation. It is valid if disaster recovery is enabled or the RTSP_PULL protocol is involved during switching. The address will be reallocated.	
         /// </summary>
         [JsonProperty("Zones")]
         public string[] Zones{ get; set; }
+
+        /// <summary>
+        /// Configuration information of RIST.
+        /// </summary>
+        [JsonProperty("RISTSettings")]
+        public CreateInputRISTSettings RISTSettings{ get; set; }
+
+        /// <summary>
+        /// Region of the input node.
+        /// </summary>
+        [JsonProperty("InputRegion")]
+        public string InputRegion{ get; set; }
+
+        /// <summary>
+        /// Hot/cold backup related
+        /// </summary>
+        [JsonProperty("FailOverOption")]
+        public FailOverOption FailOverOption{ get; set; }
 
 
         /// <summary>
@@ -131,6 +146,9 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
+            this.SetParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+            this.SetParamSimple(map, prefix + "InputRegion", this.InputRegion);
+            this.SetParamObj(map, prefix + "FailOverOption.", this.FailOverOption);
         }
     }
 }

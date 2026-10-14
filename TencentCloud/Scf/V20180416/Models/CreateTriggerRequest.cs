@@ -25,57 +25,55 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the function bound to the new trigger
+        /// Function name bound to the created trigger
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Name of a new trigger. For a timer trigger, the name can contain up to 100 letters, digits, dashes, and underscores; for a COS trigger, it should be an access domain name of the corresponding COS bucket applicable to the XML API (e.g., 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com); for other triggers, please see the descriptions of parameters bound to the specific trigger.
+        /// Name of the trigger to create. If it is a scheduled trigger, the name supports English letters, digits, hyphens, and underscores, up to 100 characters. If it is a COS trigger, it must be the access domain of the corresponding COS storage bucket suitable for the XML API (for example, 5401-5ff414-12345.cos.ap-shanghai.myqcloud.com). For other triggers, see the parameter description of the specific trigger binding.
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka`, `http`. 
-        /// To create Function URL please refer to [Creating a Function URL](https://www.tencentcloud.com/document/product/583/69492?lang=en&pg=)
-        /// To create a CLS trigger, please refer to [Create Deliver CloudFunction (SCF)](https://www.tencentcloud.com/zh/document/product/614/59903).
+        /// Trigger type. Currently supports cos, cls, timer, ckafka, and http types. To create a function URL, please use the http type. See [Creating a Function URL](https://www.tencentcloud.com/document/product/583/100227?from_cn_redirect=1#33bbbda4-9131-48a6-ac37-ac62ffe01424). To create a cls trigger, see CLS Creating Delivery SCF Task.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+        /// Parameters corresponding to the trigger. For details, see [Trigger Description](https://www.tencentcloud.com/document/product/583/39901?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }
 
         /// <summary>
-        /// Function namespace
+        /// Namespace of the function
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Function version. It defaults to `$LATEST`. It's recommended to use [$DEFAULT](https://www.tencentcloud.com/document/product/583/37458?lang=en&pg=) for canary release.
+        /// Version or alias that the trigger takes effect on. It is recommended to fill in $DEFAULT for future grayscale release. Default value: $LATEST.
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// Initial enabling status of the trigger. `OPEN` indicates enabled, and `CLOSE` indicates disabled.
+        /// Initial status of the trigger. OPEN means enabling, and CLOSE means disabling.
         /// </summary>
         [JsonProperty("Enable")]
         public string Enable{ get; set; }
 
         /// <summary>
-        /// Custom argument, supporting only the timer trigger.
+        /// User-defined parameter. Only timer triggers are supported.
         /// </summary>
         [JsonProperty("CustomArgument")]
         public string CustomArgument{ get; set; }
 
         /// <summary>
-        /// Trigger description
+        /// Trigger description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

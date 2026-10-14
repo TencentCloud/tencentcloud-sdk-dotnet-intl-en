@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ExecRulesTask Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the conditional judgment task.
         /// </summary>
         [JsonProperty("Output")]
         public ExecRuleTaskData Output{ get; set; }

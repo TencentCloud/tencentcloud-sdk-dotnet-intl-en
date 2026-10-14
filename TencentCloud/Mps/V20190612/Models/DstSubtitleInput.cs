@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>External translation subtitle information.</p>
+        /// <p>External translated subtitle info.</p>
         /// </summary>
         [JsonProperty("DstSubtitleInfo")]
         public MediaInputInfo DstSubtitleInfo{ get; set; }

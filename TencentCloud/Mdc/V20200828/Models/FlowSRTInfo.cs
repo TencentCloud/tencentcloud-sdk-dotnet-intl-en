@@ -25,148 +25,160 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The timestamp (seconds).
+        /// <p>Timestamp in seconds.</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// The packet loss rate for sending.
+        /// <p>Packet loss rate on transmitting.</p>
         /// </summary>
         [JsonProperty("SendPacketLossRate")]
         public long? SendPacketLossRate{ get; set; }
 
         /// <summary>
-        /// The retry rate for sending.
+        /// <p>Retransmission rate.</p>
         /// </summary>
         [JsonProperty("SendRetransmissionRate")]
         public long? SendRetransmissionRate{ get; set; }
 
         /// <summary>
-        /// The packet loss rate for receiving.
+        /// <p>Packet loss rate on receiving.</p>
         /// </summary>
         [JsonProperty("RecvPacketLossRate")]
         public long? RecvPacketLossRate{ get; set; }
 
         /// <summary>
-        /// The retry rate for receiving.
+        /// <p>Receiving retransmission rate.</p>
         /// </summary>
         [JsonProperty("RecvRetransmissionRate")]
         public long? RecvRetransmissionRate{ get; set; }
 
         /// <summary>
-        /// The peer RTT.
+        /// <p>RTT latency to the peer.</p>
         /// </summary>
         [JsonProperty("RTT")]
         public long? RTT{ get; set; }
 
         /// <summary>
-        /// The ID of a push session.
+        /// <p>Flag the same streaming session.</p>
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The number of dropped packets for sending.
+        /// <p>Number of discarded packets on sending.</p>
         /// </summary>
         [JsonProperty("SendPacketDropNumber")]
         public long? SendPacketDropNumber{ get; set; }
 
         /// <summary>
-        /// The number of dropped packets for receiving.
+        /// <p>Number of received dropped packets.</p>
         /// </summary>
         [JsonProperty("RecvPacketDropNumber")]
         public long? RecvPacketDropNumber{ get; set; }
 
         /// <summary>
-        /// Bandwidth
+        /// <p>Bandwidth.</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public float? Bandwidth{ get; set; }
 
         /// <summary>
-        /// transmit bandwidth
+        /// <p>Transmit bandwidth</p>
         /// </summary>
         [JsonProperty("SendBandwidth")]
         public float? SendBandwidth{ get; set; }
 
         /// <summary>
-        /// Receiving bandwidth
+        /// <p>Receiving bandwidth</p>
         /// </summary>
         [JsonProperty("RecvBandwidth")]
         public float? RecvBandwidth{ get; set; }
 
         /// <summary>
-        /// Sent packet count
+        /// <p>Sent packet count</p>
         /// </summary>
         [JsonProperty("SendPackets")]
         public long? SendPackets{ get; set; }
 
         /// <summary>
-        /// Received packets
+        /// <p>Number of received packets</p>
         /// </summary>
         [JsonProperty("RecvPackets")]
         public long? RecvPackets{ get; set; }
 
         /// <summary>
-        /// Sent lost packets
+        /// <p>Sending lost packets</p>
         /// </summary>
         [JsonProperty("SendLostPackets")]
         public long? SendLostPackets{ get; set; }
 
         /// <summary>
-        /// accept lost packets
+        /// <p>Accept lost packets</p>
         /// </summary>
         [JsonProperty("RecvLostPackets")]
         public long? RecvLostPackets{ get; set; }
 
         /// <summary>
-        /// Retransmitted packet count
+        /// <p>Sent retransmission packet count</p>
         /// </summary>
         [JsonProperty("SendRetransmitPackets")]
         public long? SendRetransmitPackets{ get; set; }
 
         /// <summary>
-        /// Retransmitted packets received
+        /// <p>Number of received retransmission packets</p>
         /// </summary>
         [JsonProperty("RecvRetransmitPackets")]
         public long? RecvRetransmitPackets{ get; set; }
 
         /// <summary>
-        /// Window size
+        /// <p>Flight window size</p>
         /// </summary>
         [JsonProperty("FlightSize")]
         public long? FlightSize{ get; set; }
 
         /// <summary>
-        /// Congestion window
+        /// <p>Congestion window.</p>
         /// </summary>
         [JsonProperty("CongestionWindow")]
         public long? CongestionWindow{ get; set; }
 
         /// <summary>
-        /// Sending buffer (ms)
+        /// <p>Sending buffer (ms)</p>
         /// </summary>
         [JsonProperty("SendBuffer")]
         public long? SendBuffer{ get; set; }
 
         /// <summary>
-        /// Receive buffer (ms)
+        /// <p>Receive buffer (ms)</p>
         /// </summary>
         [JsonProperty("RecvBuffer")]
         public long? RecvBuffer{ get; set; }
 
         /// <summary>
-        /// Send delay
+        /// <p>Sending delay</p>
         /// </summary>
         [JsonProperty("SendLatency")]
         public long? SendLatency{ get; set; }
 
         /// <summary>
-        /// receive latency
+        /// <p>Receive latency</p>
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
+
+        /// <summary>
+        /// <p>Sent NAK packet count</p>
+        /// </summary>
+        [JsonProperty("SendNAKPackets")]
+        public long? SendNAKPackets{ get; set; }
+
+        /// <summary>
+        /// <p>Number of received NAK packets</p>
+        /// </summary>
+        [JsonProperty("RecvNAKPackets")]
+        public long? RecvNAKPackets{ get; set; }
 
 
         /// <summary>
@@ -198,6 +210,8 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "RecvBuffer", this.RecvBuffer);
             this.SetParamSimple(map, prefix + "SendLatency", this.SendLatency);
             this.SetParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
+            this.SetParamSimple(map, prefix + "SendNAKPackets", this.SendNAKPackets);
+            this.SetParamSimple(map, prefix + "RecvNAKPackets", this.RecvNAKPackets);
         }
     }
 }

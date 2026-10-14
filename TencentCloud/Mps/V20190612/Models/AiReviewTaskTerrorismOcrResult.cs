@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Content review Ocr text sensitivity task input.
+        /// Content review Ocr text sensitive task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewTerrorismOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content review Ocr text sensitive task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewTerrorismOcrTaskOutput Output{ get; set; }

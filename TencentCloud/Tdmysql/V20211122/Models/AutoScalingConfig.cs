@@ -25,22 +25,46 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Minimum value</p>
         /// </summary>
         [JsonProperty("RangeMin")]
         public float? RangeMin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Maximum value</p>
         /// </summary>
         [JsonProperty("RangeMax")]
         public float? RangeMax{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Resource type corresponding to the returned range parameter</p><p>Enumeration values:</p><ul><li>cpu: Returns the CPU adjustment return limit. When no mem limit exists, it represents ccu.</li><li>nodecount: Returns the limit range of the number of nodes for horizontal scaling.</li><li>datadisk: Returns the capacity limit range for disk scale-out.</li></ul>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// <p>Whether upgrade is allowed</p>
+        /// </summary>
+        [JsonProperty("ScaleUpEnabled")]
+        public bool? ScaleUpEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to allow downgrade</p>
+        /// </summary>
+        [JsonProperty("ScaleDownEnabled")]
+        public bool? ScaleDownEnabled{ get; set; }
+
+        /// <summary>
+        /// <p>Trigger threshold (%)</p>
+        /// </summary>
+        [JsonProperty("ThresholdPercent")]
+        public long? ThresholdPercent{ get; set; }
+
+        /// <summary>
+        /// <p>Configuration change step length</p>
+        /// </summary>
+        [JsonProperty("Step")]
+        public float? Step{ get; set; }
 
 
         /// <summary>
@@ -51,6 +75,10 @@ namespace TencentCloud.Tdmysql.V20211122.Models
             this.SetParamSimple(map, prefix + "RangeMin", this.RangeMin);
             this.SetParamSimple(map, prefix + "RangeMax", this.RangeMax);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ScaleUpEnabled", this.ScaleUpEnabled);
+            this.SetParamSimple(map, prefix + "ScaleDownEnabled", this.ScaleDownEnabled);
+            this.SetParamSimple(map, prefix + "ThresholdPercent", this.ThresholdPercent);
+            this.SetParamSimple(map, prefix + "Step", this.Step);
         }
     }
 }

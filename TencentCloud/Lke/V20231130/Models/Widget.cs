@@ -25,43 +25,43 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Widget configuration ID
         /// </summary>
         [JsonProperty("WidgetId")]
         public string WidgetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget instance ID
         /// </summary>
         [JsonProperty("WidgetRunId")]
         public string WidgetRunId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget display data
         /// </summary>
         [JsonProperty("View")]
         public string View{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget status information
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget position
         /// </summary>
         [JsonProperty("Position")]
         public long? Position{ get; set; }
 
         /// <summary>
-        /// 
+        /// Base64-encoded Widget information.
         /// </summary>
         [JsonProperty("EncodedWidget")]
         public string EncodedWidget{ get; set; }
 
         /// <summary>
-        /// 
+        /// payload of the user's last submission
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }

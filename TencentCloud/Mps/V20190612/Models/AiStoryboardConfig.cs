@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+        /// <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Specify the serial number of the storyboard to extract. Counting begins from 0. If not specified, return all storyboards.</p>
+        /// <p>Specify the serial number of the storyboard image to extract. Counting begins from 0. If not specified, return all storyboard images.</p>
         /// </summary>
         [JsonProperty("ProcessIndex")]
         public long? ProcessIndex{ get; set; }

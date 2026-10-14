@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>AI Dubbing template id.</p>
+        /// <p>AI dubbing template id.</p>
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public RawAIDubbingParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// <p>AI Dubbing custom parameters. Valid when Definition is not filled with 0. When some dubbing parameters in this structure are filled in, the filled parameters will be used to override the parameters in the AI Dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
+        /// <p>Custom parameters for AI dubbing. Valid when Definition is not 0. If you fill in some dubbing parameters in this structure, the filled parameters will be used to override the parameters in the AI dubbing template. This parameter is used for highly customized scenarios. We recommend you use only Definition to specify dubbing parameters.</p>
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideAIDubbingParameter OverrideParameter{ get; set; }
 
         /// <summary>
-        /// <p>Target storage for the file. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
+        /// <p>Target storage for the file. If not specified, it inherits the upper-level OutputStorage value.</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaInputInfo SrcSubtitleInfo{ get; set; }
 
         /// <summary>
-        /// <p>External subtitle file information, translated subtitles.</p>
+        /// <p>External subtitle file info, translated subtitles.</p>
         /// </summary>
         [JsonProperty("DstSubtitleInfos")]
         public DstSubtitleInput[] DstSubtitleInfos{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
-        /// <p>Additional parameters for AI Dubbing, serialized json string.</p>
+        /// <p>AI dubbing extension parameter, serialized json string.</p>
         /// </summary>
         [JsonProperty("ExtendedParameter")]
         public string ExtendedParameter{ get; set; }
 
         /// <summary>
-        /// <p>ID of the associated drama series.<br>Note: This value takes effect when dubbing mode is intelligent dubbing by role.</p>
+        /// <p>Associated drama series ID.<br>Note: This value takes effect when the dubbing mode is intelligent dubbing by role.</p>
         /// </summary>
         [JsonProperty("DramaId")]
         public string DramaId{ get; set; }

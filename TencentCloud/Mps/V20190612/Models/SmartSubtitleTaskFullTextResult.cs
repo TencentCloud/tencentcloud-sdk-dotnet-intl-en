@@ -49,19 +49,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Input information for smart subtitle tasks.
         /// </summary>
         [JsonProperty("Input")]
         public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Smart subtitle task output information.
         /// </summary>
         [JsonProperty("Output")]
         public SmartSubtitleTaskTextResultOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task progress.
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }

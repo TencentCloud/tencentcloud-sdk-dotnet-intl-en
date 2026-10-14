@@ -25,64 +25,61 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Whether it is an input or output. Valid values: Input, Output.
+        /// Type. Valid values: `Input`, `Output`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The input ID, which is not empty if `Type` is `Input`.
+        /// Input Id. If Type is Input, this field is not empty.
         /// </summary>
         [JsonProperty("InputId")]
         public string InputId{ get; set; }
 
         /// <summary>
-        /// The output ID, which is not empty if `Type` is `Output`.
+        /// Output Id. If Type is Output, this field is not empty.
         /// </summary>
         [JsonProperty("OutputId")]
         public string OutputId{ get; set; }
 
         /// <summary>
-        /// The flow ID.
+        /// Stream Id.
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The protocol used. Valid values: SRT, RTP, RTMP.
+        /// Protocol. SRT | RTMP.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The common status information.
+        /// Common status information.
         /// </summary>
         [JsonProperty("CommonStatus")]
         public FlowRealtimeStatusCommon CommonStatus{ get; set; }
 
         /// <summary>
-        /// This parameter is returned if `Protocol` is `SRT`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// If it is the SRT Protocol, this field will be present.
         /// </summary>
         [JsonProperty("SRTStatus")]
         public FlowRealtimeStatusSRT SRTStatus{ get; set; }
 
         /// <summary>
-        /// This parameter is returned if `Protocol` is `RTMP`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// If it is the RTMP protocol, this field exists.
         /// </summary>
         [JsonProperty("RTMPStatus")]
         public FlowRealtimeStatusRTMP RTMPStatus{ get; set; }
 
         /// <summary>
-        /// The server IP.
+        /// Server IP address.
         /// </summary>
         [JsonProperty("ConnectServerIP")]
         public string ConnectServerIP{ get; set; }
 
         /// <summary>
-        /// This parameter is returned if the RTP protocol is used.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// If it is the RTP protocol, this field exists.
         /// </summary>
         [JsonProperty("RTPStatus")]
         public FlowRealtimeStatusRTP RTPStatus{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Start time in milliseconds.
         /// </summary>
         [JsonProperty("BeginMs")]
         public ulong? BeginMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time in ms.
         /// </summary>
         [JsonProperty("EndMs")]
         public ulong? EndMs{ get; set; }
 
         /// <summary>
-        /// 
+        /// List of regions removed within the period
         /// </summary>
         [JsonProperty("Areas")]
         public EraseArea[] Areas{ get; set; }

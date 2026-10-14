@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Capability configuration switch, available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+        /// <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Target ratio, for example "16:9"</p>
+        /// <p>Target ratio, for example, "16:9"</p>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// <p>Target width (pixel)</p><p>Value ranges from 0 to 2048.</p>
+        /// <p>Target width (pixel)</p><p>Value range: [0, 2048]</p>
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// <p>Target height (pixel)</p><p>Value ranges from 0 to 2048.</p>
+        /// <p>Target height (pixel)</p><p>Value range: [0, 2048]</p>
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

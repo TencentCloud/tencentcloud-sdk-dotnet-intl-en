@@ -199,19 +199,19 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string SQLMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>ccu configuration change of the SVLS instance</p><p>Input limit: This parameter no longer takes effect when AutoScaleConfigs is also input</p>
         /// </summary>
         [JsonProperty("AutoScaleConfig")]
         public AutoScalingConfig AutoScaleConfig{ get; set; }
 
         /// <summary>
-        /// <p>Security group binding list</p>
+        /// <p>List of bound security groups</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+        /// <p>root userName. The current version defaults to dbaadmin, and the passed value will reset to dbaadmin.</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -223,13 +223,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+        /// <p>Whether to enable transparent encryption. 0: disable, 1: enable</p>
         /// </summary>
         [JsonProperty("EncryptionEnable")]
         public long? EncryptionEnable{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Relevant restrictions on automatic configuration adjustment for SVLS instances</p><p>Input parameter restriction: The AutoScaleConfig parameter will no longer take effect when passed in</p>
         /// </summary>
         [JsonProperty("AutoScaleConfigs")]
         public AutoScalingConfig[] AutoScaleConfigs{ get; set; }

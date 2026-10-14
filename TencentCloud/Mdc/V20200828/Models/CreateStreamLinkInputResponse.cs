@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Created Flow information.
+        /// <p>Information of the created Flow.</p>
         /// </summary>
         [JsonProperty("Info")]
         public DescribeFlow Info{ get; set; }

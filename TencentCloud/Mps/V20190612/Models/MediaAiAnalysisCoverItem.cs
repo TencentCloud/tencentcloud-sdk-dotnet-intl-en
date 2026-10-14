@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string CoverPath{ get; set; }
 
         /// <summary>
-        /// Reliability of the intelligent cover, with a value range from 0 to -100.
+        /// Confidence of the intelligent cover, with a value range from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

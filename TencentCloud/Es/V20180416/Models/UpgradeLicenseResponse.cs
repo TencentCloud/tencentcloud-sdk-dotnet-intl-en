@@ -26,7 +26,6 @@ namespace TencentCloud.Es.V20180416.Models
         
         /// <summary>
         /// Order ID
-        /// Note: This field may return `null`, indicating that no valid value was found.
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Billing item
+        /// Billing item.
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// Total Capacity
+        /// Total capacity
         /// </summary>
         [JsonProperty("Capcity")]
         public ulong? Capcity{ get; set; }
@@ -49,15 +49,15 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// Billing status
-        /// Pending purchase
-        /// Normal: Normal.
+        /// Pending: To be purchased
+        /// Normal: normal.
         /// Isolate
         /// </summary>
         [JsonProperty("PurchaseStatus")]

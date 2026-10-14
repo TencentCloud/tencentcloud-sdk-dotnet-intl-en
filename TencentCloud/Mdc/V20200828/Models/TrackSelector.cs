@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Video track serial number. It starts from 1. Maximum value: 32.
         /// </summary>
         [JsonProperty("VideoIndex")]
         public long?[] VideoIndex{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video track serial number. Starts from 1. Maximum value: 32.
         /// </summary>
         [JsonProperty("AudioIndex")]
         public long?[] AudioIndex{ get; set; }

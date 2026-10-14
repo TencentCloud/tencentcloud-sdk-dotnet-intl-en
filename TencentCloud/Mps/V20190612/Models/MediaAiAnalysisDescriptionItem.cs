@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 
+        /// Segmentation result.
         /// </summary>
         [JsonProperty("Paragraphs")]
         public AiParagraphInfo[] Paragraphs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Address of the mind map of a summary task.
         /// </summary>
         [JsonProperty("MindMapUrl")]
         public string MindMapUrl{ get; set; }

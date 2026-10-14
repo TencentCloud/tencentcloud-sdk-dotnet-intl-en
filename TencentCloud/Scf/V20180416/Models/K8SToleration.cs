@@ -25,31 +25,31 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 
+        /// Matched taint name
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 
+        /// Match mode. Default value: Equal.
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 
+        /// Execution policy
         /// </summary>
         [JsonProperty("Effect")]
         public string Effect{ get; set; }
 
         /// <summary>
-        /// 
+        /// Taint value to match. Required when Operator is Equal.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 
+        /// How long a Pod can still run on a node when the taint is not tolerated
         /// </summary>
         [JsonProperty("TolerationSeconds")]
         public ulong? TolerationSeconds{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Tag name by frame.
+        /// Frame-specific tag name.
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
-        /// For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+        /// Classification list by frame tag name. CategorySet.N refers to the (N+1)-level category.
+        /// For example, when Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame tag is "tower", the level-1 category is "scenario", and the level-2 category is "building".
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }
 
         /// <summary>
-        /// Reliability of frame tagging, with a value range from 0 to -100.
+        /// Confidence of frame tagging, with a value range from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

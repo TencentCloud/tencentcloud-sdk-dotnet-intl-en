@@ -55,13 +55,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskAsrFullTextResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information on the full speech recognition task.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskAsrFullTextResultOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task progress.
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }

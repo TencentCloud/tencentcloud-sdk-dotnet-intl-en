@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Asr text sensitivity scoring, with a score ranging from 0 to -100.
+        /// Sensitive score of the Asr text. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Asr text sensitive result recommendation, value ranges from...to...
+        /// Sensitive result suggestions for Asr text. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video segment list with Asr text suspected of sensitivity.
+        /// List of video segments with sensitive Asr text.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }

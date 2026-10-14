@@ -181,25 +181,25 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Expiration time.</p>
         /// </summary>
         [JsonProperty("ExpireAt")]
         public string ExpireAt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Isolation time</p>
         /// </summary>
         [JsonProperty("IsolatedAt")]
         public string IsolatedAt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
@@ -211,7 +211,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string[] Zones{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Disk usage of the largest node</p>
         /// </summary>
         [JsonProperty("DiskUsage")]
         public long? DiskUsage{ get; set; }
@@ -385,13 +385,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public long? EncryptionEnable{ get; set; }
 
         /// <summary>
-        /// <p>Real use kms region for subsequent call to kms service</p>
+        /// <p>Real use kms region for subsequent calls to the kms service</p>
         /// </summary>
         [JsonProperty("EncryptionKmsRegion")]
         public string EncryptionKmsRegion{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>serverless automatic configuration adjustment configuration</p>
         /// </summary>
         [JsonProperty("AutoScaleConfigs")]
         public AutoScalingConfig[] AutoScaleConfigs{ get; set; }

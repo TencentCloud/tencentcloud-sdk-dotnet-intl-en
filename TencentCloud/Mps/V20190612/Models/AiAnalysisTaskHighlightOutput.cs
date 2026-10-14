@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaAiAnalysisHighlightItem[] HighlightSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage location of highlights.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

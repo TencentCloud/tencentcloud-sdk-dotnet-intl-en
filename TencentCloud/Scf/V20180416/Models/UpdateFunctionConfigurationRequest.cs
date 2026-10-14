@@ -25,97 +25,98 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the function to be modified
+        /// The function name to be modified
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
+        /// Function description. Supports up to 1,000 English letters, digits, spaces, commas, and periods. Chinese is supported.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+        /// Memory size of the function runtime. Default value: 128 MB. Selectable range: 64 MB, or 128 MB to 3072 MB in 128 MB increments.
         /// </summary>
         [JsonProperty("MemorySize")]
         public long? MemorySize{ get; set; }
 
         /// <summary>
-        /// Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+        /// Maximum execution time of the function, in seconds. Value range: 1-900 seconds. Default value: 3 seconds.
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+        /// Runtime environment. It is specified upon creation and currently does not support modification.
         /// </summary>
         [JsonProperty("Runtime")]
         public string Runtime{ get; set; }
 
         /// <summary>
-        /// Function environment variable
+        /// Environment variable of the function
         /// </summary>
         [JsonProperty("Environment")]
         public Environment Environment{ get; set; }
 
         /// <summary>
-        /// Function namespace
+        /// Namespace of the function
+        /// Default value: default
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Function VPC configuration
+        /// VPC configuration of the function
         /// </summary>
         [JsonProperty("VpcConfig")]
         public VpcConfig VpcConfig{ get; set; }
 
         /// <summary>
-        /// Role bound to the function
+        /// Role bound to a function
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+        /// [Install dependency online](https://www.tencentcloud.com/document/product/583/37920?from_cn_redirect=1). TRUE indicates installation. Default value: FALSE. Only supported for Node.js functions.
         /// </summary>
         [JsonProperty("InstallDependency")]
         public string InstallDependency{ get; set; }
 
         /// <summary>
-        /// CLS logset ID to which logs are shipped
+        /// ID of the cls Log Set for log delivery
         /// </summary>
         [JsonProperty("ClsLogsetId")]
         public string ClsLogsetId{ get; set; }
 
         /// <summary>
-        /// CLS Topic ID to which logs are shipped
+        /// cls Topic ID for log delivery
         /// </summary>
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
         /// <summary>
-        /// It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+        /// Whether to release a new version synchronously when updating. Default value: FALSE, which means no new version is released.
         /// </summary>
         [JsonProperty("Publish")]
         public string Publish{ get; set; }
 
         /// <summary>
-        /// Whether to enable L5 access. TRUE: enable; FALSE: not enable
+        /// Whether L5 access capability is enabled. TRUE to enable, FALSE to shutdown.
         /// </summary>
         [JsonProperty("L5Enable")]
         public string L5Enable{ get; set; }
 
         /// <summary>
-        /// List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+        /// List of layer versions to associate with the function. The layer versions overwrite each other sequentially in the order in the list.
         /// </summary>
         [JsonProperty("Layers")]
         public LayerVersionSimple[] Layers{ get; set; }
 
         /// <summary>
-        /// Information of a dead letter queue associated with a function
+        /// Dead letter queue information associated with the function
         /// </summary>
         [JsonProperty("DeadLetterConfig")]
         public DeadLetterConfig DeadLetterConfig{ get; set; }
@@ -127,22 +128,46 @@ namespace TencentCloud.Scf.V20180416.Models
         public PublicNetConfigIn PublicNetConfig{ get; set; }
 
         /// <summary>
-        /// File system configuration input parameter, which is used for the function to bind the CFS file system
+        /// File system configuration parameters for binding a CFS file system in SCF
         /// </summary>
         [JsonProperty("CfsConfig")]
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
-        /// The function initialization timeout period
+        /// Function initialization timeout period
         /// </summary>
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
 
         /// <summary>
-        /// Parameters of the specified protocol
+        /// Configure ProtocolType access protocol for an HTTP function. Parameters configurable for the current protocol.
         /// </summary>
         [JsonProperty("ProtocolParams")]
         public ProtocolParams ProtocolParams{ get; set; }
+
+        /// <summary>
+        /// Single-instance multi-concurrency configuration. Supports only Web functions.
+        /// </summary>
+        [JsonProperty("InstanceConcurrencyConfig")]
+        public InstanceConcurrencyConfig InstanceConcurrencyConfig{ get; set; }
+
+        /// <summary>
+        /// Whether the Dns caching capability is enabled. Supports only the EVENT function. Defaults to FALSE. TRUE to enable, FALSE to shutdown.
+        /// </summary>
+        [JsonProperty("DnsCache")]
+        public string DnsCache{ get; set; }
+
+        /// <summary>
+        /// Private network access configuration
+        /// </summary>
+        [JsonProperty("IntranetConfig")]
+        public IntranetConfigIn IntranetConfig{ get; set; }
+
+        /// <summary>
+        /// Ignorable system log reporting
+        /// </summary>
+        [JsonProperty("IgnoreSysLog")]
+        public bool? IgnoreSysLog{ get; set; }
 
 
         /// <summary>
@@ -170,6 +195,10 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+            this.SetParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
+            this.SetParamSimple(map, prefix + "DnsCache", this.DnsCache);
+            this.SetParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
+            this.SetParamSimple(map, prefix + "IgnoreSysLog", this.IgnoreSysLog);
         }
     }
 }

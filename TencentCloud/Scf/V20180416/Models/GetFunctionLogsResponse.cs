@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public FunctionLog[] Data{ get; set; }
 
         /// <summary>
-        /// This field is disused.
+        /// This field is offline.
         /// </summary>
         [JsonProperty("SearchContext")]
         public LogSearchContext SearchContext{ get; set; }

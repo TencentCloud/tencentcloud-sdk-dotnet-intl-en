@@ -55,13 +55,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiRecognitionTaskTransTextResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Translation task output information.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskTransTextResultOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task progress.
         /// </summary>
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }

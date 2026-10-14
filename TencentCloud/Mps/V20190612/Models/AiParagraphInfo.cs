@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Segment summary.
         /// </summary>
         [JsonProperty("Summary")]
         public string Summary{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 
+        /// Starting time point of the segment, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// End time point of the segment, in seconds.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

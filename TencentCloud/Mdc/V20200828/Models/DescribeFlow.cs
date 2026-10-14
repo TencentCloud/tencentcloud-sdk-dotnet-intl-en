@@ -25,25 +25,25 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Flow ID.
+        /// Stream Id.
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// Flow name.
+        /// Stream name.
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// Flow status. Valid values: `IDLE`, `RUNNING`
+        /// Stream status. Valid values: IDLE, RUNNING.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth value.
+        /// Maximum bandwidth.
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }
@@ -56,16 +56,33 @@ namespace TencentCloud.Mdc.V20200828.Models
 
         /// <summary>
         /// Output group.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("OutputGroup")]
         public DescribeOutput[] OutputGroup{ get; set; }
 
         /// <summary>
-        /// EventId of the StreamLink event associated with this Flow.
+        /// EventId of the media transmission event associated with this Flow.
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
+
+        /// <summary>
+        /// Creation time of the Flow in UTC format.
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// Input protocols that can be created for this Flow.
+        /// </summary>
+        [JsonProperty("AllowedInputProtocols")]
+        public string[] AllowedInputProtocols{ get; set; }
+
+        /// <summary>
+        /// Output protocols allowed to be created by this Flow
+        /// </summary>
+        [JsonProperty("AllowedOutputProtocols")]
+        public string[] AllowedOutputProtocols{ get; set; }
 
 
         /// <summary>
@@ -80,6 +97,9 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
             this.SetParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamArraySimple(map, prefix + "AllowedInputProtocols.", this.AllowedInputProtocols);
+            this.SetParamArraySimple(map, prefix + "AllowedOutputProtocols.", this.AllowedOutputProtocols);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskSegmentInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Splitting task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskSegmentOutput Output{ get; set; }

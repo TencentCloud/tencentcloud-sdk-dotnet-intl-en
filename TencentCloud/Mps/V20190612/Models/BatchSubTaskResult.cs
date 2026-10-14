@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Input information for a batch task.
         /// </summary>
         [JsonProperty("InputInfos")]
         public MediaInputInfo[] InputInfos{ get; set; }
 
         /// <summary>
-        /// 
+        /// Metadata of the original video.
         /// </summary>
         [JsonProperty("Metadatas")]
         public MediaMetaData[] Metadatas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Execution result of the smart subtitle task.
         /// </summary>
         [JsonProperty("SmartSubtitlesTaskResult")]
         public BatchSmartSubtitlesResult SmartSubtitlesTaskResult{ get; set; }

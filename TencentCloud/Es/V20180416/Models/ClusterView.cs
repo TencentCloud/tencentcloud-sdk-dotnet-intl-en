@@ -37,37 +37,37 @@ namespace TencentCloud.Es.V20180416.Models
         public float? Visible{ get; set; }
 
         /// <summary>
-        /// Whether the cluster encounters circuit breaking
+        /// Whether to fuse the cluster
         /// </summary>
         [JsonProperty("Break")]
         public float? Break{ get; set; }
 
         /// <summary>
-        /// Average disk usage
+        /// Average Disk Usage
         /// </summary>
         [JsonProperty("AvgDiskUsage")]
         public float? AvgDiskUsage{ get; set; }
 
         /// <summary>
-        /// Average memory usage
+        /// Average memory utilization
         /// </summary>
         [JsonProperty("AvgMemUsage")]
         public float? AvgMemUsage{ get; set; }
 
         /// <summary>
-        /// Average CPU usage
+        /// Average CPU Usage
         /// </summary>
         [JsonProperty("AvgCpuUsage")]
         public float? AvgCpuUsage{ get; set; }
 
         /// <summary>
-        /// Total disk size of the cluster
+        /// Total storage size of a cluster.
         /// </summary>
         [JsonProperty("TotalDiskSize")]
         public ulong? TotalDiskSize{ get; set; }
 
         /// <summary>
-        /// Types of nodes to receive client requests
+        /// Client request node
         /// </summary>
         [JsonProperty("TargetNodeTypes")]
         public string[] TargetNodeTypes{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Es.V20180416.Models
         public long? TotalNodeNum{ get; set; }
 
         /// <summary>
-        /// Number of data nodes
+        /// Number of Data Nodes
         /// </summary>
         [JsonProperty("DataNodeNum")]
         public long? DataNodeNum{ get; set; }
 
         /// <summary>
-        /// Number of indices
+        /// Index count
         /// </summary>
         [JsonProperty("IndexNum")]
         public long? IndexNum{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Es.V20180416.Models
         public long? DocNum{ get; set; }
 
         /// <summary>
-        /// Used disk size (in bytes)
+        /// Used bytes of the disk
         /// </summary>
         [JsonProperty("DiskUsedInBytes")]
         public long? DiskUsedInBytes{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Es.V20180416.Models
         public long? PrimaryShardNum{ get; set; }
 
         /// <summary>
-        /// Number of relocating shards
+        /// Number of migrating shards
         /// </summary>
         [JsonProperty("RelocatingShardNum")]
         public long? RelocatingShardNum{ get; set; }
 
         /// <summary>
-        /// Number of initializing shards
+        /// Number of initializing shards.
         /// </summary>
         [JsonProperty("InitializingShardNum")]
         public long? InitializingShardNum{ get; set; }
@@ -139,21 +139,19 @@ namespace TencentCloud.Es.V20180416.Models
         public long? UnassignedShardNum{ get; set; }
 
         /// <summary>
-        /// Total COS storage of an enterprise cluster, in GB
+        /// Enterprise Edition COS storage capacity size in GB
         /// </summary>
         [JsonProperty("TotalCosStorage")]
         public long? TotalCosStorage{ get; set; }
 
         /// <summary>
-        /// Name of the COS bucket that stores searchable snapshots of an enterprise cluster
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// bucket name for storing cos searchable snapshots in the Enterprise Edition cluster
         /// </summary>
         [JsonProperty("SearchableSnapshotCosBucket")]
         public string SearchableSnapshotCosBucket{ get; set; }
 
         /// <summary>
-        /// COS app ID of the searchable snapshots of an enterprise cluster
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// App ID of the cos bucket for searchable snapshots in the Enterprise Edition cluster
         /// </summary>
         [JsonProperty("SearchableSnapshotCosAppId")]
         public string SearchableSnapshotCosAppId{ get; set; }

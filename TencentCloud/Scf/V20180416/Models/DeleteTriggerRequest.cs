@@ -31,31 +31,31 @@ namespace TencentCloud.Scf.V20180416.Models
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Name of the trigger to be deleted
+        /// Trigger name to delete
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }
 
         /// <summary>
-        /// Type of the trigger to be deleted. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+        /// Trigger type to delete. Currently only `timer`, `ckafka`, `apigw`, `cls`, `cos`, `cmq`, and `http` are supported.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Function namespace
+        /// Namespace of the function
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// This field is required if a COS trigger is to be deleted. It stores the data {"event":"cos:ObjectCreated:*"} in the JSON format. The data content of this field is in the same format as that of SetTrigger. This field is optional if a scheduled trigger or CMQ trigger is to be deleted.
+        /// If the trigger type to delete is COS trigger, this field must be specified, storing data in JSON format {"event":"cos:ObjectCreated:*"}. The data content is in the same format as this field in the SetTrigger API. If the trigger type to delete is scheduled trigger or CMQ trigger, this field can be unspecified.
         /// </summary>
         [JsonProperty("TriggerDesc")]
         public string TriggerDesc{ get; set; }
 
         /// <summary>
-        /// Function version. It defaults to `$LATEST`. It's recommended to use `[$DEFAULT](https://www.tencentcloud.com/document/product/583/37458#glossary)` for canary release.
+        /// The version or alias that the trigger to be deleted actually points to. Default value: $LATEST.
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

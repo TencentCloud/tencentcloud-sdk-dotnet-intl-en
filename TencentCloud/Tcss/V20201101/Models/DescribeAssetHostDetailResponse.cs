@@ -25,37 +25,37 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// TCSS UUID
+        /// Container Security UUID
         /// </summary>
         [JsonProperty("UUID")]
         public string UUID{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Server name
+        /// Host name
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// Server group
+        /// Host grouping
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// Server IP
+        /// Host IP address
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
 
         /// <summary>
-        /// OS
+        /// Operating system.
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
@@ -73,37 +73,37 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// Docker version
+        /// docker version
         /// </summary>
         [JsonProperty("DockerVersion")]
         public string DockerVersion{ get; set; }
 
         /// <summary>
-        /// Docker API version
+        /// docker api version
         /// </summary>
         [JsonProperty("DockerAPIVersion")]
         public string DockerAPIVersion{ get; set; }
 
         /// <summary>
-        /// Docker version for Go
+        /// docker go version
         /// </summary>
         [JsonProperty("DockerGoVersion")]
         public string DockerGoVersion{ get; set; }
 
         /// <summary>
-        /// Docker file system type
+        /// docker file system type
         /// </summary>
         [JsonProperty("DockerFileSystemDriver")]
         public string DockerFileSystemDriver{ get; set; }
 
         /// <summary>
-        /// Docker root directory
+        /// docker root directory
         /// </summary>
         [JsonProperty("DockerRootDir")]
         public string DockerRootDir{ get; set; }
 
         /// <summary>
-        /// Number of images
+        /// Image count
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// K8s IP
+        /// k8s IP
         /// </summary>
         [JsonProperty("K8sMasterIP")]
         public string K8sMasterIP{ get; set; }
 
         /// <summary>
-        /// K8s version
+        /// k8s version
         /// </summary>
         [JsonProperty("K8sVersion")]
         public string K8sVersion{ get; set; }
@@ -133,67 +133,67 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string KubeProxyVersion{ get; set; }
 
         /// <summary>
-        /// Valid values: `UNINSTALL` (not installed); `OFFLINE` (offline); `ONLINE` (defended).
+        /// "UNINSTALL": Not Installed; "OFFLINE": Offline; "ONLINE": Protected
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Whether it is Containerd
+        /// Is Containerd
         /// </summary>
         [JsonProperty("IsContainerd")]
         public bool? IsContainerd{ get; set; }
 
         /// <summary>
-        /// Server source. Valid values: `TENCENTCLOUD` (Tencent Cloud instance); `OTHERCLOUD` (non-Tencent Cloud instance).
+        /// Host Source. "TENCENTCLOUD": "Tencent Cloud Servers"; "OTHERCLOUD": "Non-Tencent Cloud Servers"
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// Public IP
+        /// Public IP address
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// Server instance ID
+        /// Host instance ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// Region ID.
         /// </summary>
         [JsonProperty("RegionID")]
         public long? RegionID{ get; set; }
 
         /// <summary>
-        /// Project
+        /// Associated project
         /// </summary>
         [JsonProperty("Project")]
         public ProjectInfo Project{ get; set; }
 
         /// <summary>
-        /// Tags
+        /// Tag.
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster name.
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster Access Status
         /// </summary>
         [JsonProperty("ClusterAccessedStatus")]
         public string ClusterAccessedStatus{ get; set; }

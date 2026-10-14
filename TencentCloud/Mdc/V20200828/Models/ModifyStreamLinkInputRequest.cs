@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The flow ID.
+        /// Stream Id.
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The input information to modify.
+        /// Input information that needs to be modified.
         /// </summary>
         [JsonProperty("Input")]
         public ModifyInput Input{ get; set; }

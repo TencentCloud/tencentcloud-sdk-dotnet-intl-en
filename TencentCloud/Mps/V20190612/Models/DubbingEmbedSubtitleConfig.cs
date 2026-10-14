@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>id of the suppressed subtitles.</p>
+        /// <p>Subtitle suppression id.</p>
         /// </summary>
         [JsonProperty("SubtitleEmbedId")]
         public long? SubtitleEmbedId{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The flow ID.
+        /// <p>Stream ID.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// The IDs of the inputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+        /// <p>Input an id array. If both the input and output arrays are empty, it signifies a full query.</p>
         /// </summary>
         [JsonProperty("InputIds")]
         public string[] InputIds{ get; set; }
 
         /// <summary>
-        /// The IDs of the outputs to query. If this parameter and `OutputIds` are both empty, all inputs and outputs are queried.
+        /// <p>Output id array. If both input and output arrays are empty, it signifies a full query.</p>
         /// </summary>
         [JsonProperty("OutputIds")]
         public string[] OutputIds{ get; set; }

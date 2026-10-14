@@ -25,131 +25,136 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Valid values: `0` (available for trial and purchase); `1` (available for purchase only after failed trial review or trial expiration); `2` (trial effective); `3` (Pro Edition effective); `4` (Pro Edition expired).
+        /// <p>0: available for trial application and purchase; 1: purchase only (including failed trial review and expired trial); 2: trial active; 3: Pro Edition active; 4: Pro Edition expired</p>
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Total resource cores = total protected cores + unprotected cores</p>
         /// </summary>
         [JsonProperty("AllCoresCnt")]
         public ulong? AllCoresCnt{ get; set; }
 
         /// <summary>
-        /// Total number of protected cores. It is the sum of the number of purchased cores, the number of free trial cores, and the number of elastic billing cores.
+        /// <p>Total protected cores = purchased cores + trial granted cores + elastic billing cores</p>
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Unprotected cores (number of resource cores with protection not enabled)</p>
         /// </summary>
         [JsonProperty("UndefendCoresCnt")]
         public ulong? UndefendCoresCnt{ get; set; }
 
         /// <summary>
-        /// Number of purchased cores
+        /// <p>Number of purchased cores</p>
         /// </summary>
         [JsonProperty("AuthorizedCoresCnt")]
         public ulong? AuthorizedCoresCnt{ get; set; }
 
         /// <summary>
-        /// Number of free trial cores for Pro Edition.
+        /// <p>Trial giveaway of Pro Edition cores</p>
         /// </summary>
         [JsonProperty("GivenAuthorizedCoresCnt")]
         public long? GivenAuthorizedCoresCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Current number of elastic billing cores</p>
         /// </summary>
         [JsonProperty("CurrentFlexibleCoresCnt")]
         public ulong? CurrentFlexibleCoresCnt{ get; set; }
 
         /// <summary>
-        /// Image count
+        /// <p>Number of images.</p>
         /// </summary>
         [JsonProperty("ImageCnt")]
         public ulong? ImageCnt{ get; set; }
 
         /// <summary>
-        /// Number of licensed images
+        /// <p>Number of licensed images</p>
         /// </summary>
         [JsonProperty("AuthorizedImageCnt")]
         public ulong? AuthorizedImageCnt{ get; set; }
 
         /// <summary>
-        /// Expiration time
+        /// <p>Expiration time.</p>
         /// </summary>
         [JsonProperty("ExpirationTime")]
         public string ExpirationTime{ get; set; }
 
         /// <summary>
-        /// Number of purchased image licenses
+        /// <p>Number of purchased image licenses</p>
         /// </summary>
         [JsonProperty("PurchasedAuthorizedCnt")]
         public ulong? PurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 0 indicates the default status (it has not been set by the user, namely the initial status); 1 indicates automatic renewal; 2 indicates explicit non-automatic renewal (it has been set by the user).
+        /// <p>0 indicates the default state (not set by the user, i.e., the initial state), 1 indicates auto-renewal, and 2 indicates explicitly no auto-renewal (set by the user).</p>
         /// </summary>
         [JsonProperty("AutomaticRenewal")]
         public long? AutomaticRenewal{ get; set; }
 
         /// <summary>
-        /// Complimentary image licenses during the trial period may expire.
+        /// <p>Complimentary image licenses during the trial period may expire.</p>
         /// </summary>
         [JsonProperty("GivenAuthorizedCnt")]
         public ulong? GivenAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// Start time.
+        /// <p>Start time</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// Substatus (specific meaning depending on the State field)
-        /// Valid values when State is 4: ISOLATE, TERMINATED.
+        /// <p>Sub-status (specific meaning depending on the State field)<br>When State is 4, valid values: ISOLATE (isolated) DESTROED (terminated)</p>
         /// </summary>
         [JsonProperty("SubState")]
         public string SubState{ get; set; }
 
         /// <summary>
-        /// Billing key.
+        /// <p>Billing key</p>
         /// </summary>
         [JsonProperty("InquireKey")]
         public string InquireKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Protection policy</p>
         /// </summary>
         [JsonProperty("DefendPolicy")]
         public string DefendPolicy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Upper limit of elastic billing cores</p>
         /// </summary>
         [JsonProperty("FlexibleCoresLimit")]
         public ulong? FlexibleCoresLimit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Number of cores in the protected cluster</p>
         /// </summary>
         [JsonProperty("DefendClusterCoresCnt")]
         public ulong? DefendClusterCoresCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Protected host cores</p>
         /// </summary>
         [JsonProperty("DefendHostCoresCnt")]
         public ulong? DefendHostCoresCnt{ get; set; }
 
         /// <summary>
-        /// Number of trial cores for Pro Edition.
+        /// <p>Number of cores of the Pro Edition for trial use</p>
         /// </summary>
         [JsonProperty("TrialCoresCnt")]
         public ulong? TrialCoresCnt{ get; set; }
+
+        /// <summary>
+        /// <p>Number of machines with zero protection containers.</p>
+        /// </summary>
+        [JsonProperty("NoContainerCoresCnt")]
+        public ulong? NoContainerCoresCnt{ get; set; }
 
         /// <summary>
         /// The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -184,6 +189,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
             this.SetParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
             this.SetParamSimple(map, prefix + "TrialCoresCnt", this.TrialCoresCnt);
+            this.SetParamSimple(map, prefix + "NoContainerCoresCnt", this.NoContainerCoresCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

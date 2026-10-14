@@ -25,25 +25,25 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Widget configuration ID
         /// </summary>
         [JsonProperty("WidgetId")]
         public string WidgetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget instance ID
         /// </summary>
         [JsonProperty("WidgetRunId")]
         public string WidgetRunId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Widget action
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data submitted by the Widget action
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }

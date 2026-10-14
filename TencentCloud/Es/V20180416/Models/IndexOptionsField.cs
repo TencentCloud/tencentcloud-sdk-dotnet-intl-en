@@ -25,53 +25,64 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Max age for expiry purpose
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Expiration time.</p>
         /// </summary>
         [JsonProperty("ExpireMaxAge")]
         public string ExpireMaxAge{ get; set; }
 
         /// <summary>
-        /// Max size for expiry purpose
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Expiration size</p>
         /// </summary>
         [JsonProperty("ExpireMaxSize")]
         public string ExpireMaxSize{ get; set; }
 
         /// <summary>
-        /// Rollover cycle
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Rollover period</p>
         /// </summary>
         [JsonProperty("RolloverMaxAge")]
         public string RolloverMaxAge{ get; set; }
 
         /// <summary>
-        /// Whether to enable the dynamic rollover
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Whether to enable dynamic scrolling</p>
         /// </summary>
         [JsonProperty("RolloverDynamic")]
         public string RolloverDynamic{ get; set; }
 
         /// <summary>
-        /// Whether to enable dynamic sharding
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Whether to enable dynamic sharding</p>
         /// </summary>
         [JsonProperty("ShardNumDynamic")]
         public string ShardNumDynamic{ get; set; }
 
         /// <summary>
-        /// Timestamp field
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Time partition field</p>
         /// </summary>
         [JsonProperty("TimestampField")]
         public string TimestampField{ get; set; }
 
         /// <summary>
-        /// Write mode
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// <p>Write mode</p>
         /// </summary>
         [JsonProperty("WriteMode")]
         public string WriteMode{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable complete uninstallation</p><p>Enumeration values:</p><ul><li>true: enable complete uninstallation</li><li>false: disable complete uninstallation</li></ul>
+        /// </summary>
+        [JsonProperty("FullOffloadedEnable")]
+        public string FullOffloadedEnable{ get; set; }
+
+        /// <summary>
+        /// <p>Full uninstall lifecycle</p>
+        /// </summary>
+        [JsonProperty("FullOffloadedMaxAge")]
+        public string FullOffloadedMaxAge{ get; set; }
+
+        /// <summary>
+        /// <p>Completely uninstall the lifecycle after backup index retrieval</p>
+        /// </summary>
+        [JsonProperty("FullOffloadedRetrieveMaxAge")]
+        public string FullOffloadedRetrieveMaxAge{ get; set; }
 
 
         /// <summary>
@@ -86,6 +97,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ShardNumDynamic", this.ShardNumDynamic);
             this.SetParamSimple(map, prefix + "TimestampField", this.TimestampField);
             this.SetParamSimple(map, prefix + "WriteMode", this.WriteMode);
+            this.SetParamSimple(map, prefix + "FullOffloadedEnable", this.FullOffloadedEnable);
+            this.SetParamSimple(map, prefix + "FullOffloadedMaxAge", this.FullOffloadedMaxAge);
+            this.SetParamSimple(map, prefix + "FullOffloadedRetrieveMaxAge", this.FullOffloadedRetrieveMaxAge);
         }
     }
 }

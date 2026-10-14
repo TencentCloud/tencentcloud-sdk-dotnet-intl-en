@@ -31,31 +31,31 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// List of names of the plugins to be installed
+        /// Name list of plug-ins that needs to be installed
         /// </summary>
         [JsonProperty("InstallPluginList")]
         public string[] InstallPluginList{ get; set; }
 
         /// <summary>
-        /// List of names of the plugins to be uninstalled
+        /// List of plug-in names to uninstall
         /// </summary>
         [JsonProperty("RemovePluginList")]
         public string[] RemovePluginList{ get; set; }
 
         /// <summary>
-        /// Whether to force restart the cluster. The default value is `false`.
+        /// Whether to force restart. Default value: false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// Whether to reinstall the cluster. The default value is `false`.
+        /// Whether to reinstall. Default value: false
         /// </summary>
         [JsonProperty("ForceUpdate")]
         public bool? ForceUpdate{ get; set; }
 
         /// <summary>
-        /// 0: system plugin
+        /// 0: System plugin
         /// </summary>
         [JsonProperty("PluginType")]
         public ulong? PluginType{ get; set; }

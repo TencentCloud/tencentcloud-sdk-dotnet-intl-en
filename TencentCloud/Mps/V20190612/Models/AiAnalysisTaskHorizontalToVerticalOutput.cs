@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Intelligent landscape-to-portrait video list.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// 
+        /// Storage location of intelligent landscape-to-portrait videos.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Confidence degree.	
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

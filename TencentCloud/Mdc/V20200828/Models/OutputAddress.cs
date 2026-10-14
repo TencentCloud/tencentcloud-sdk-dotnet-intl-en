@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Output destination IP.
+        /// Outbound IP address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

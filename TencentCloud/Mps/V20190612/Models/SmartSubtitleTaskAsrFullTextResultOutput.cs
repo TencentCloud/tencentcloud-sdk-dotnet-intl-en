@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>List of segments for full speech recognition.</p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }

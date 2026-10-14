@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// A list of the media data.
+        /// List of media data in the transport stream.
         /// </summary>
         [JsonProperty("Infos")]
         public FlowMediaInfo[] Infos{ get; set; }

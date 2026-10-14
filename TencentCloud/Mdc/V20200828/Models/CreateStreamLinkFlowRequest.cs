@@ -25,31 +25,31 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Flow name
+        /// Stream name.
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+        /// Maximum bandwidth in bps. Options: [10000000, 20000000].
         /// </summary>
         [JsonProperty("MaxBandwidth")]
         public long? MaxBandwidth{ get; set; }
 
         /// <summary>
-        /// Flow input group
+        /// Input group of a stream.
         /// </summary>
         [JsonProperty("InputGroup")]
         public CreateInput[] InputGroup{ get; set; }
 
         /// <summary>
-        /// The media transmission event ID associated with the Flow. Each flow can only be associated with one event.
+        /// Media transmission Event ID associated with the Flow. Each Flow can only be associated with one Event.
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// Flow output group.
+        /// Output group of the stream.
         /// </summary>
         [JsonProperty("OutputGroup")]
         public CreateOutputInfo[] OutputGroup{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique identification ID of a figure.
+        /// Unique identification ID of a person.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Figure name.
+        /// Character name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Figure library type, which indicates which figure library the recognized figure comes from.
-        /// <li>Default: Default figure library;</li><li>UserDefine: User-defined character library.</li>
+        /// Library type of the figure, indicating which figure library the recognized figure comes from:
+        /// <li>Default: default figure library;</li><li>UserDefine: user-defined character library.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// A list of the SRT streaming performance data.
+        /// List of SRT quality data in the transport stream.
         /// </summary>
         [JsonProperty("Infos")]
         public FlowSRTInfo[] Infos{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Default value: none. Valid values: ['none'].
+        /// Default value: "none". Available value: ['none'].
         /// </summary>
         [JsonProperty("FEC")]
         public string FEC{ get; set; }
 
         /// <summary>
-        /// Idle timeout period in ms. Default value: 5000. Value range: [1000, 10000].
+        /// Idle timeout. Default value: 5000 ms. Range: [1000, 10000].
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public long? IdleTimeout{ get; set; }

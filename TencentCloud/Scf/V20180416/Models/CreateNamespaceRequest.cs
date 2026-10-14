@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 
+        /// Resource pool configuration
         /// </summary>
         [JsonProperty("ResourceEnv")]
         public NamespaceResourceEnv ResourceEnv{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>base64-encoded synthetic audio in wav format.</p>
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Id of the cloned voice type.</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }

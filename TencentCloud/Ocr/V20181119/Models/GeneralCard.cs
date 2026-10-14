@@ -25,267 +25,227 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// ID number.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>ID number</p>
         /// </summary>
         [JsonProperty("LicenseNumber")]
         public string LicenseNumber{ get; set; }
 
         /// <summary>
-        /// Personal number. 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Personal number, returned when the identity document type is passport</p>
         /// </summary>
         [JsonProperty("PersonalNumber")]
         public string PersonalNumber{ get; set; }
 
         /// <summary>
-        /// Full name on the document.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Name</p>
         /// </summary>
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
         /// <summary>
-        /// Full name in local language.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Localized name</p>
         /// </summary>
         [JsonProperty("FullNameLocal")]
         public string FullNameLocal{ get; set; }
 
         /// <summary>
-        /// First name or given name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Name</p>
         /// </summary>
         [JsonProperty("FirstName")]
         public string FirstName{ get; set; }
 
         /// <summary>
-        /// First name in local language.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Localized name</p>
         /// </summary>
         [JsonProperty("FirstNameLocal")]
         public string FirstNameLocal{ get; set; }
 
         /// <summary>
-        /// Middle name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Middle name</p>
         /// </summary>
         [JsonProperty("MiddleName")]
         public string MiddleName{ get; set; }
 
         /// <summary>
-        /// Middle name in local language.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Localized middle name</p>
         /// </summary>
         [JsonProperty("MiddleNameLocal")]
         public string MiddleNameLocal{ get; set; }
 
         /// <summary>
-        /// Last name or surname.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Last name</p>
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
 
         /// <summary>
-        /// Last name in local language.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Localized last name</p>
         /// </summary>
         [JsonProperty("LastNameLocal")]
         public string LastNameLocal{ get; set; }
 
         /// <summary>
-        /// Gender on the document.
-        /// - M: man.
-        /// - F: woman.
-        /// - X: other gender identity.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
 
         /// <summary>
-        /// Date of birth.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Date of birth</p>
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Birth place.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Birth place</p>
         /// </summary>
         [JsonProperty("BirthPlace")]
         public string BirthPlace{ get; set; }
 
         /// <summary>
-        /// Issue date.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Issue date, in YYYY-MM-DD format</p>
         /// </summary>
         [JsonProperty("IssuedDate")]
         public string IssuedDate{ get; set; }
 
         /// <summary>
-        /// Issuing authority.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Issuing authority</p>
         /// </summary>
         [JsonProperty("IssuedAuthority")]
         public string IssuedAuthority{ get; set; }
 
         /// <summary>
-        /// Place of issue.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Place where the specified file is issued</p>
         /// </summary>
         [JsonProperty("IssuedPlace")]
         public string IssuedPlace{ get; set; }
 
         /// <summary>
-        /// Issuing country.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Issuing country</p>
         /// </summary>
         [JsonProperty("IssuedCountry")]
         public string IssuedCountry{ get; set; }
 
         /// <summary>
-        /// Country code of issue, ISO Alpha-3 format.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Country code of the country that issued the file, ISO ALPHA-3 country/region code</p>
         /// </summary>
         [JsonProperty("IssuedCountryCode")]
         public string IssuedCountryCode{ get; set; }
 
         /// <summary>
-        /// Expiry date.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Expiration date, in YYYY-MM-DD format</p>
         /// </summary>
         [JsonProperty("ExpirationDate")]
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// First line of the Machine Readable Zone (MRZ).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
         /// </summary>
         [JsonProperty("MRZLine1")]
         public string MRZLine1{ get; set; }
 
         /// <summary>
-        /// Second line of the Machine Readable Zone (MRZ).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
         /// </summary>
         [JsonProperty("MRZLine2")]
         public string MRZLine2{ get; set; }
 
         /// <summary>
-        /// Document nationality, following ISO 3166 country coding specification.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Document nationality, returned following the ISO 3166 country coding specification</p>
         /// </summary>
         [JsonProperty("Nationality")]
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// Address information on the document.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Address information on the document</p>
         /// </summary>
         [JsonProperty("Address")]
         public AddressInfo Address{ get; set; }
 
         /// <summary>
-        /// Religion (if displayed on the document).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Religious belief</p>
         /// </summary>
         [JsonProperty("Religion")]
         public string Religion{ get; set; }
 
         /// <summary>
-        /// Type of document.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Document type</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Blood type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Blood type</p>
         /// </summary>
         [JsonProperty("BloodType")]
         public string BloodType{ get; set; }
 
         /// <summary>
-        /// Height.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Height</p>
         /// </summary>
         [JsonProperty("Height")]
         public string Height{ get; set; }
 
         /// <summary>
-        /// Weight.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Weight</p>
         /// </summary>
         [JsonProperty("Weight")]
         public string Weight{ get; set; }
 
         /// <summary>
-        /// Vehicle class authorized on the driver license (e.g., A, B, C).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Driver's license vehicle type (for example, A/B/C)</p>
         /// </summary>
         [JsonProperty("VehicleClass")]
         public string VehicleClass{ get; set; }
 
         /// <summary>
-        /// Restrictions on the driver license.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Driver's license restriction condition</p>
         /// </summary>
         [JsonProperty("Restrictions")]
         public string Restrictions{ get; set; }
 
         /// <summary>
-        /// Endorsements or additional records on the driver license.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Driver's license extra records</p>
         /// </summary>
         [JsonProperty("Endorsement")]
         public string Endorsement{ get; set; }
 
         /// <summary>
-        /// Supplementary fields (varies by document type).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Additional field</p>
         /// </summary>
         [JsonProperty("Others")]
         public string Others{ get; set; }
 
         /// <summary>
-        /// First line of the passport MRZ (Machine Readable Zone).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>MRZ line 1 of the passport</p>
         /// </summary>
         [JsonProperty("PassportCodeFirst")]
         [System.Obsolete]
         public string PassportCodeFirst{ get; set; }
 
         /// <summary>
-        /// Second line of the passport MRZ (Machine Readable Zone).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>MRZ line 2 of the passport</p>
         /// </summary>
         [JsonProperty("PassportCodeSecond")]
         [System.Obsolete]
         public string PassportCodeSecond{ get; set; }
 
         /// <summary>
-        /// Expiry date.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Validity date, in YYYY-MM-DD format</p>
         /// </summary>
         [JsonProperty("DueDate")]
         [System.Obsolete]
         public string DueDate{ get; set; }
 
         /// <summary>
-        /// Age. 0 means no valid info.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Age. 0 means no valid info is obtained</p>
         /// </summary>
         [JsonProperty("Age")]
         [System.Obsolete]
         public string Age{ get; set; }
 
         /// <summary>
-        /// Registration number.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Registration number</p>
         /// </summary>
         [JsonProperty("RegistrationNumber")]
         [System.Obsolete]

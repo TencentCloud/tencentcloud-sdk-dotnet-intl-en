@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The output configuration after modification.
+        /// Output configuration after modification.
         /// </summary>
         [JsonProperty("Info")]
         public DescribeOutput Info{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Cluster instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Start time, such as "2019-03-07 16:30:39"
+        /// Start time, e.g., "2019-03-07 16:30:39"
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time, such as "2019-03-30 20:18:03"
+        /// End time, e.g., "2019-03-30 20:18:03"
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Pagination start value
+        /// Paging Starting Value
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page
+        /// Pagination size.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

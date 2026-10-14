@@ -25,37 +25,37 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The timestamp (seconds).
+        /// Timestamp in seconds.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// The total bandwidth.
+        /// Total bandwidth.
         /// </summary>
         [JsonProperty("Network")]
         public long? Network{ get; set; }
 
         /// <summary>
-        /// The video data of the flow.
+        /// Video data of the transport stream.
         /// </summary>
         [JsonProperty("Video")]
         public FlowMediaVideo[] Video{ get; set; }
 
         /// <summary>
-        /// The audio data of the flow.
+        /// Audio data of the transport stream.
         /// </summary>
         [JsonProperty("Audio")]
         public FlowMediaAudio[] Audio{ get; set; }
 
         /// <summary>
-        /// The ID of a push session.
+        /// Flag of the same push.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The client IP.
+        /// Client IP.
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }

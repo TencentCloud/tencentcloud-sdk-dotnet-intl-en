@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 
+        /// Name of the label
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 
+        /// Value of the label
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// VPC ID
+        /// Id of the private network
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// Subnet Id
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }

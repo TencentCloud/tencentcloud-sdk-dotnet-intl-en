@@ -25,40 +25,46 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES cluster ID
+        /// <p>ES cluster ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type of the index to delete. `auto`: Automated; `normal`: General.
+        /// <p>Deleted index type. auto: autonomous index; normal: general index</p>
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// Name of the index to delete
+        /// <p>Name of the deleted index</p>
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// Username for cluster access
+        /// <p>Cluster access username.</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password for cluster access
+        /// <p>Cluster access password</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Backing index name
+        /// <p>Backing index name</p>
         /// </summary>
         [JsonProperty("BackingIndexName")]
         public string BackingIndexName{ get; set; }
+
+        /// <summary>
+        /// <p>Index life cycle</p>
+        /// </summary>
+        [JsonProperty("IndexPhrase")]
+        public string IndexPhrase{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
+            this.SetParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
         }
     }
 }

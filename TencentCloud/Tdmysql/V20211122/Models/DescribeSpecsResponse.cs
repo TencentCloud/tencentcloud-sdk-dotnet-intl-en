@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Purchasable specification list of peer nodes</p>
         /// </summary>
         [JsonProperty("HybridNodeSpecs")]
         public StorageNodeSpec[] HybridNodeSpecs{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public ServerlessCcu[] ServerlessCcuSpec{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>serverless node quantity configuration</p>
         /// </summary>
         [JsonProperty("ServerlessNodeNumSpec")]
         public ServerlessNodeNumSpec ServerlessNodeNumSpec{ get; set; }

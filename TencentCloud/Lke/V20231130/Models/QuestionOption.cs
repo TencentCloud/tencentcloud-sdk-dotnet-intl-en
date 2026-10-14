@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Tag of the option</p>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Description of the option.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

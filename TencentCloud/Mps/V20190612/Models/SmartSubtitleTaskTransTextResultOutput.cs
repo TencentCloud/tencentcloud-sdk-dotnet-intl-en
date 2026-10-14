@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>List of segments for translation.</p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskTransTextSegmentItem[] SegmentSet{ get; set; }

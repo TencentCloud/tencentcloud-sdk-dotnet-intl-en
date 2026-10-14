@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Web search result, a string in json format
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

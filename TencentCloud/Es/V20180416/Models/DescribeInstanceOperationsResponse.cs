@@ -31,7 +31,7 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Operation history
+        /// Operation record
         /// </summary>
         [JsonProperty("Operations")]
         public Operation[] Operations{ get; set; }

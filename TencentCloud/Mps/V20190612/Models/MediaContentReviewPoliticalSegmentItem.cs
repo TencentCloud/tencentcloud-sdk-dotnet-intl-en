@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Suspected segment sensitivity score.
+        /// Sensitivity score of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suspected segment sensitive result suggestion, value ranges from...to...
+        /// Sensitivity result suggestion for the suspected segment. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -52,23 +52,23 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Sensitive person, violative icon name.
+        /// Sensitive person and violative icon name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
+        /// Suspected segment moderation result tag. Mapping between the LabelSet parameter in the moderation template frame moderation task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the value range of this parameter:
         /// violation_photo:
         /// <li>violation_photo: violation icon.</li>
         /// politician:
-        /// <li>nation_politician: State leaders;</li>
+        /// <li>nation_politician: State leaders.</li>
         /// <li>province_politician: provincial and ministerial leaders;</li>
         /// <li>bureau_politician: bureau-level official;</li>
         /// <li>county_politician: county-level official;</li>
         /// <li>rural_politician: township-level official;</li>
         /// <li>sensitive_politician: sensitive person.</li>
-        /// <li>foreign_politician: state leaders of other countries.</li>
+        /// <li>foreign_politician: State leaders of other countries.</li>
         /// entertainment:
         /// <li>sensitive_entertainment: sensitive entertainment figure.</li>
         /// sport:
@@ -76,7 +76,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// entrepreneur:
         /// <li>sensitive_entrepreneur: sensitive entrepreneur.</li>
         /// scholar:
-        /// <li>sensitive_scholar: Sensitive educational scholars.</li>
+        /// <li>sensitive_scholar: Sensitive educational scholar.</li>
         /// celebrity:
         /// <li>sensitive_celebrity: sensitive celebrity.</li>
         /// <li>historical_celebrity: historical celebrity.</li>
@@ -87,20 +87,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (Images are not retained permanently upon arrival)
-        /// The image will be deleted after the PicUrlExpireTime time point.
+        /// Suspected image URL (images are not retained permanently and will be deleted upon reaching
+        /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+        /// Zone coordinates where sensitive persons and violation icons appear (pixel-level), [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// Expiration time of the suspected image URL in ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

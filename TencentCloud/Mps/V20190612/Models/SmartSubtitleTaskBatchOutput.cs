@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Translation task output information.</p>
         /// </summary>
         [JsonProperty("TransTextTask")]
         public SmartSubtitleTaskTransTextResultOutput TransTextTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Full speech recognition task output information.</p>
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// For streams containing multiple audio tracks, specify the audio track to use by entering a PID. The PID can be a positive integer between 1 and 8191.
         /// </summary>
         [JsonProperty("AudioPID")]
         public long?[] AudioPID{ get; set; }
 
         /// <summary>
-        /// 
+        /// For streams containing multiple video tracks, specify the video track to be used by entering a PID. You can enter a positive integer between 1 and 8191 for the PID.
         /// </summary>
         [JsonProperty("VideoPID")]
         public long?[] VideoPID{ get; set; }

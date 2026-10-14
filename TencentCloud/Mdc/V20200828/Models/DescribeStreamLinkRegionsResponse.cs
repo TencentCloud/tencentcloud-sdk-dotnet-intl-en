@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// StreamLink region information
+        /// Media transmission region information.
         /// </summary>
         [JsonProperty("Info")]
         public StreamLinkRegionInfo Info{ get; set; }

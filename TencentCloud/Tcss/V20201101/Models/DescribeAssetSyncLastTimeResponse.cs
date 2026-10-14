@@ -25,19 +25,22 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Last asset sync time
+        /// Last Synchronization Time of Assets
         /// </summary>
         [JsonProperty("AssetSyncLastTime")]
         public string AssetSyncLastTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task status.
+        /// PENDING: pending.
+        /// PROCESSING: Processing
+        /// PROCESSED: Completed
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task Progress (Percentage)
         /// </summary>
         [JsonProperty("TaskProcess")]
         public long? TaskProcess{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Destination address IP.
+        /// IP of the target address.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Destination address port.
+        /// The port of the destination address.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

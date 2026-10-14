@@ -26,21 +26,18 @@ namespace TencentCloud.Mdc.V20200828.Models
         
         /// <summary>
         /// Idle timeout period.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public long? IdleTimeout{ get; set; }
 
         /// <summary>
         /// Chunk size.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ChunkSize")]
         public long? ChunkSize{ get; set; }
 
         /// <summary>
-        /// Destination address information list of RTMP push.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of target address information for RTMP repush.
         /// </summary>
         [JsonProperty("Destinations")]
         public RTMPAddressDestination[] Destinations{ get; set; }

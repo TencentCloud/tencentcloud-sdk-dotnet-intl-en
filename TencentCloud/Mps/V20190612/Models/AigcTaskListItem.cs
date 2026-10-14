@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Task type</p><p>Enumeration value:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
+        /// <p>Task type</p><p>Enumeration values:</p><ul><li>VideoRedraw: Video redraw task</li><li>AIDrama: AI drama task</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// <p>Task status</p><p>Enumeration values:</p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+        /// <p>Task status</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskResultMsg{ get; set; }
 
         /// <summary>
-        /// <p>Output video resolution</p>
+        /// <p>Resolution of the output video</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
@@ -91,10 +91,22 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Ratio{ get; set; }
 
         /// <summary>
-        /// <p>Task request package</p>
+        /// <p>Task request packet</p>
         /// </summary>
         [JsonProperty("RequestBody")]
         public string RequestBody{ get; set; }
+
+        /// <summary>
+        /// <p>Other task information.</p>
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public string TaskInfo{ get; set; }
+
+        /// <summary>
+        /// <p>Task sub-status.</p>
+        /// </summary>
+        [JsonProperty("Stage")]
+        public string Stage{ get; set; }
 
 
         /// <summary>
@@ -114,6 +126,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
             this.SetParamSimple(map, prefix + "RequestBody", this.RequestBody);
+            this.SetParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+            this.SetParamSimple(map, prefix + "Stage", this.Stage);
         }
     }
 }

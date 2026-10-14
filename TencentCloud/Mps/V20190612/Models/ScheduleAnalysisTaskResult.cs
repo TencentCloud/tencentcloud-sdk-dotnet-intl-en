@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Analyze the input of the task.
+        /// Input of the analysis task.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskInput Input{ get; set; }

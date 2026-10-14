@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Server ID
+        /// Host ID
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }

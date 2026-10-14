@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Input information of the tool and large model, json
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information of tools and large models, in json format
         /// </summary>
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Model name.
         /// </summary>
         [JsonProperty("ModelName")]
         public string ModelName{ get; set; }

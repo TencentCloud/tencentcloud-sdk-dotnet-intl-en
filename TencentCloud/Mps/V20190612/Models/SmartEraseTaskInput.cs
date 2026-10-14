@@ -25,31 +25,39 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Smart erasing template id.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom parameter for smart erasing. Valid when Definition is set to 0. This parameter is used for highly customized scenarios. We recommend you prioritize using Definition to specify smart erasing parameters.
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawSmartEraseParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
         /// </summary>
         [JsonProperty("OverrideParameter")]
         public OverrideEraseParameter OverrideParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target storage for files. If left blank, it inherits the upper-level OutputStorage value.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
+        /// Output path of the file, which can be a relative or absolute path.
+        /// To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+        /// Relative path example:
+        /// <li>Filename_{Variable name}.{format}.</li>
+        /// <li>Filename.{format}.</li>
+        /// Absolute path example:
+        /// <li>/Custom path/Filename_{Variable name}.{format}</li>
         /// 
+        /// **Note**: The `BatchProcessMedia` API is currently not supported.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

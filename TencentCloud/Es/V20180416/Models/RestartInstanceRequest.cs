@@ -25,22 +25,28 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+        /// <p>Whether to force restart<li>true: force restart</li><li>false: do not force restart</li>Default value: false</p>
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// Restart mode. `0`: rolling restart; `1`: full restart
+        /// <p>Restart mode: 0 rolling restart; 1 full restart</p>
         /// </summary>
         [JsonProperty("RestartMode")]
         public long? RestartMode{ get; set; }
+
+        /// <summary>
+        /// <p>Select whether to upgrade the kernel patch version upon restart</p>
+        /// </summary>
+        [JsonProperty("UpgradeKernel")]
+        public bool? UpgradeKernel{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
+            this.SetParamSimple(map, prefix + "UpgradeKernel", this.UpgradeKernel);
         }
     }
 }

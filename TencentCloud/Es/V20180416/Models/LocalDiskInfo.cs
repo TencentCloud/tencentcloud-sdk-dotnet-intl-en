@@ -25,19 +25,19 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Local disk type <li>LOCAL_SATA: big data </li><li>NVME_SSD: high IO</li>
+        /// Local disk type<li>LOCAL_SATA: big data type</li><li>NVME_SSD: high IO type</li>
         /// </summary>
         [JsonProperty("LocalDiskType")]
         public string LocalDiskType{ get; set; }
 
         /// <summary>
-        /// Size of a single local disk
+        /// Single local disk size
         /// </summary>
         [JsonProperty("LocalDiskSize")]
         public ulong? LocalDiskSize{ get; set; }
 
         /// <summary>
-        /// Number of local disks
+        /// Number of local disk blocks
         /// </summary>
         [JsonProperty("LocalDiskCount")]
         public ulong? LocalDiskCount{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiQualityControlTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of a media quality inspection task.
         /// </summary>
         [JsonProperty("Output")]
         public QualityControlData Output{ get; set; }

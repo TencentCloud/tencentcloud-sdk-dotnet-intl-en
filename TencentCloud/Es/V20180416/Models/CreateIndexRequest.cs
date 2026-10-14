@@ -31,31 +31,31 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type of the index to create. `auto`: Automated; `normal`: General.
+        /// Index type of the created index. auto: autonomous index; normal: general index
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// Name of the index to create
+        /// Index name of the created index
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// JSON-formatted index metadata to create, such as `mappings` and `settings`
+        /// [Required] JSON-formatted index metadata created, such as mappings and settings
         /// </summary>
         [JsonProperty("IndexMetaJson")]
         public string IndexMetaJson{ get; set; }
 
         /// <summary>
-        /// Username for cluster access
+        /// Cluster access username.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password for cluster access
+        /// Cluster access password
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

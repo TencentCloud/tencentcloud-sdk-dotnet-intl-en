@@ -31,31 +31,31 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// License type <li>oss: Open Source Edition </li><li>basic: Basic Edition </li><li>platinum: Platinum Edition </li>Default value: Platinum
+        /// License type<li>oss: open source edition</li><li>basic: basic version</li><li>platinum: platinum version</li>Default value: platinum
         /// </summary>
         [JsonProperty("LicenseType")]
         public string LicenseType{ get; set; }
 
         /// <summary>
-        /// Whether to automatically use vouchers <li>0: No </li><li>1: Yes </li>Default value: 0
+        /// Indicates whether to use vouchers automatically<li>0: Do not use automatically.</li><li>1: Use automatically.</li>Default value: 0.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// List of voucher IDs (only one voucher can be specified at a time currently)
+        /// Voucher ID list. Only one voucher can be specified.
         /// </summary>
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
         /// <summary>
-        /// Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+        /// Whether xpack security authentication is enabled for basic version 6.8 (and above versions)<li>1: not enabled</li><li>2: enabled</li><li>If no parameter is passed, the original status is maintained by default. When passing a parameter, note that it can only change from not enabled to enabled, and cannot change from enabled to not enabled</li>
         /// </summary>
         [JsonProperty("BasicSecurityType")]
         public ulong? BasicSecurityType{ get; set; }
 
         /// <summary>
-        /// Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+        /// Whether to force restart <li>true: force restart</li><li>false: do not force restart</li> Default value: false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }

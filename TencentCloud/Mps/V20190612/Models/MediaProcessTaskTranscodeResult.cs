@@ -55,7 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public TranscodeTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoding task output.
         /// </summary>
         [JsonProperty("Output")]
         public MediaTranscodeItem Output{ get; set; }

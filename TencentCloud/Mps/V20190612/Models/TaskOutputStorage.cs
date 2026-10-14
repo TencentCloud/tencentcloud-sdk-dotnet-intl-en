@@ -25,28 +25,28 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Type of the media processing output object storage location. Supported values:
+        /// Type of the storage location for MPS output objects. Supported values:
         /// <li>COS: COS storage</li>
-        /// <li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+        /// <li>AWS-S3: AWS storage, only suitable for AWS tasks and requires the same region</li>
         /// <li> VOD: VOD Pro Edition </li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Required when `Type` is `COS`. It refers to the COS output location for media processing.
         /// </summary>
         [JsonProperty("CosOutputStorage")]
         public CosOutputStorage CosOutputStorage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Type is AWS-S3. Required. Indicates the AWS S3 output location for media processing.
         /// </summary>
         [JsonProperty("S3OutputStorage")]
         public S3OutputStorage S3OutputStorage{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Type is VOD. This item is required and indicates the output location of MPS VOD Pro Edition.
         /// </summary>
         [JsonProperty("VODOutputStorage")]
         public VODOutputStorage VODOutputStorage{ get; set; }

@@ -26,8 +26,8 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Task type. Valid values:
-        /// - AsrFullTextRecognition: full speech recognition
-        /// - TransTextRecognition: speech translation
+        /// - AsrFullTextRecognition: full speech recognition.
+        /// - TransTextRecognition: speech translation.
         /// - PureSubtitleTrans: pure subtitle translation.
         /// - OcrFullTextRecognition: text-based subtitle extraction.
         /// </summary>
@@ -35,25 +35,29 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Full speech recognition result. When Type is
+        /// Valid when AsrFullTextRecognition is set.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public SmartSubtitleTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
+        /// Translation result. When Type is
         /// 
+        /// Valid when set to TransTextRecognition.
         /// </summary>
         [JsonProperty("TransTextTask")]
         public SmartSubtitleTaskTransTextResult TransTextTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
         /// </summary>
         [JsonProperty("PureSubtitleTransTask")]
         public PureSubtitleTransResult PureSubtitleTransTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text-based subtitle extraction result. This field is valid when the value of Type is
+        /// Valid when OcrFullTextRecognition is set.
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public SmartSubtitleTaskFullTextResult OcrFullTextTask{ get; set; }

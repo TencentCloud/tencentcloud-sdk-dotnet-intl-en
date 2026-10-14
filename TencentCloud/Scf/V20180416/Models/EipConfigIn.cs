@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Status of the EIP. Values: ['ENABLE','DISABLE']
+        /// Eip status. Valid values: `ENABLE` and `DISABLE`
         /// </summary>
         [JsonProperty("EipStatus")]
         public string EipStatus{ get; set; }

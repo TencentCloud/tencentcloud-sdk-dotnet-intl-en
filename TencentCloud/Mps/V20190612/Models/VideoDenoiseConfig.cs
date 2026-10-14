@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Capability configuration switch. Valid values:
+        /// Capability configuration switch. Available values:
         /// <li>ON: enabled;</li>
         /// <li>OFF: disabled</li>
         /// Default value: ON.
@@ -34,7 +34,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type. Valid values:
+        /// <li>weak</li>
+        /// <li>strong</li>
+        /// Default value: weak.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

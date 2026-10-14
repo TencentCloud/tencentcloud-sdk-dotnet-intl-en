@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// File system information list
+        /// List of file system information
         /// </summary>
         [JsonProperty("CfsInsList")]
         public CfsInsInfo[] CfsInsList{ get; set; }

@@ -25,76 +25,88 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// AZ of the cluster instance. If this is not passed in, all AZs are used by default
+        /// <p>AZ to which the cluster instance belongs. All AZs are selected by default if this parameter is not specified.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// List of cluster instance IDs
+        /// <p>Cluster instance ID list</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// List of cluster instance names
+        /// <p>Cluster instance name list.</p>
         /// </summary>
         [JsonProperty("InstanceNames")]
         public string[] InstanceNames{ get; set; }
 
         /// <summary>
-        /// Pagination start value. Default value: 0
+        /// <p>Pagination starting value. Default value: 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Number of entries per page. Default value: 20
+        /// <p>Page size. Default value: 20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+        /// <p>Sorting field<li>1: Instance ID</li><li>2: Instance name</li><li>3: Availability zone</li><li>4: Creation time</li>If orderByKey is not transmitted, sort by creation time in descending order</p>
         /// </summary>
         [JsonProperty("OrderByKey")]
         public ulong? OrderByKey{ get; set; }
 
         /// <summary>
-        /// Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
+        /// <p>Sorting method<li>0: ascending</li><li>1: descending</li>If orderByKey is passed but orderByType is not, ascending by default</p>
         /// </summary>
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
 
         /// <summary>
-        /// Node tag information list
+        /// <p>Node tag information list</p>
         /// </summary>
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
         /// <summary>
-        /// VPC VIP list
+        /// <p>Private network vip list</p>
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
         /// <summary>
-        /// List of availability zones
+        /// <p>IP list of cluster nodes</p>
+        /// </summary>
+        [JsonProperty("NodeIps")]
+        public string[] NodeIps{ get; set; }
+
+        /// <summary>
+        /// <p>Availability zone list</p>
         /// </summary>
         [JsonProperty("ZoneList")]
         public string[] ZoneList{ get; set; }
 
         /// <summary>
-        /// The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+        /// <p>Health status filter list: 0 represents green, 1 represents yellow, 2 represents red, -1 represents unknown</p>
         /// </summary>
         [JsonProperty("HealthStatus")]
         public long?[] HealthStatus{ get; set; }
 
         /// <summary>
-        /// VPC IDs
+        /// <p>Vpc list filter item</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
+
+        /// <summary>
+        /// <p>cdc cluster id</p>
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
 
 
         /// <summary>
@@ -111,9 +123,11 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamArraySimple(map, prefix + "NodeIps.", this.NodeIps);
             this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
             this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

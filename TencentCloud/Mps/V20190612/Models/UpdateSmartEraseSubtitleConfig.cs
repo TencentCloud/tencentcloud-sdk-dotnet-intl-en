@@ -25,55 +25,99 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Subtitle erasing method.
+        /// **Automatic erasing:** Video subtitles are automatically recognized using an AI model and are erased without traces to generate a new video. However, missed or incorrect erasing may occur due to image interference and special subtitle styles. In this case, you can specify the erasing area.
+        /// When automatic erasing is used, if AutoAreas is not specified, the default area (lower middle part of the image) will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+        /// **Specified area erasing:** If the subtitle position is relatively fixed, you are recommended to specify the erasing area directly to minimize missed erasing.
+        /// When you choose specified area erasing, specify at least one area for CustomAreas.
+        /// - auto: automatic erasing.
+        /// - custom: specified area erasing.
         /// </summary>
         [JsonProperty("SubtitleEraseMethod")]
         public string SubtitleEraseMethod{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle erasing model.
+        /// **Standard edition (recommended):** For standard subtitle styles, you are recommended to select this edition to ensure better traceless effects in the details.
+        /// **Area edition:** If the subtitles have special styles, such as calligraphy, shadow, or motion effects, you are recommended to select this edition to ensure a larger erasing area. However, the erasing effect in the details is not as good as the standard edition.
+        /// - standard: standard edition.
+        /// - area: area edition.
         /// </summary>
         [JsonProperty("SubtitleModel")]
         public string SubtitleModel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable OCR subtitle extraction. The default value is OFF.
+        /// OCR subtitle extraction is supported if and only if SubtitleEraseMethod is set to auto. When enabled, it identifies the text region that appears most persistently and stably within the automatic erasing area as the subtitle area. The text within the subtitle area is extracted and erased.
+        /// - ON: enabled.
+        /// -OFF: disabled.
         /// </summary>
         [JsonProperty("OcrSwitch")]
         public string OcrSwitch{ get; set; }
 
         /// <summary>
+        /// Subtitle language, used for OCR recognition. Default value: zh_en. This parameter is valid only when OcrSwitch is ON.
+        /// - zh_en: Chinese and English.
+        /// - `multi`: others.
+        /// The following are other languages supported for recognition:
+        /// Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi, Arabic, Bengali (India), Gujarati (India), Kannada (India), Malayalam (India), Tamil (India), Telugu (India), Slovenian, Polish, Catalan, Bosnian, Czech, Estonian, Croatian, Punjabi, Marathi, Azerbaijani, Indonesian, Luxembourgish, Lithuanian, Latvian, Maltese, Slovak, Turkish, Kazakh, Greek, Irish, Belarusian, Khmer, Tagalog, Pashto, Persian, Tajik
         /// 
         /// </summary>
         [JsonProperty("SubtitleLang")]
         public string SubtitleLang{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle file format. Default value: vtt. This parameter is valid only when OcrSwitch is set to ON.
+        /// -srt format
+        /// - vtt: WebVTT format.
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether to enable subtitle translation. Default value: OFF. This parameter is valid only when OcrSwitch is ON.
+        /// - ON: enabled.
+        /// -OFF: disabled.
         /// </summary>
         [JsonProperty("TransSwitch")]
         public string TransSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subtitle translation target language. Default value: en. This parameter is valid only when TransSwitch is set to "ON".
+        /// Supported languages:
+        /// zh: Simplified Chinese
+        /// English
+        /// ja: Japanese
+        /// ko: Korean
+        /// fr: French
+        /// es: Spanish
+        /// it: Italian
+        /// de: German
+        /// tr: Turkish
+        /// ru: Russian
+        /// pt: Portuguese
+        /// vi: Vietnamese
+        /// id: Indonesian
+        /// ms: Malay
+        /// th: Thai
+        /// ar: Arabic
+        /// hi: Hindi
         /// </summary>
         [JsonProperty("TransDstLang")]
         public string TransDstLang{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom area for automatic erasing.
+        /// For the specified area, AI models are used to automatically detect and erase the target objects.
+        /// Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("AutoAreas")]
         public EraseArea[] AutoAreas{ get; set; }
 
         /// <summary>
-        /// 
+        /// Specify a custom region for erasure.
+        /// For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+        /// Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
         /// </summary>
         [JsonProperty("CustomAreas")]
         public EraseTimeArea[] CustomAreas{ get; set; }

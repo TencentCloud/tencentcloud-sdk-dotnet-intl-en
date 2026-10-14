@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Conditional judgment information.
         /// </summary>
         [JsonProperty("Rules")]
         public Rules[] Rules{ get; set; }

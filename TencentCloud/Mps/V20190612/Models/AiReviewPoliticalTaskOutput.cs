@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Video sensitive content score, ranging from 0 to 100.
+        /// Sensitive score of the video. The score ranges from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Result Suggestions for sensitive content, value ranges from...to...
+        /// Sensitive result suggestion. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,10 +40,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
+        /// Video sensitive information tag. Mapping between the LabelSet parameter in the frame sensitive information task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) of the content review template and the value range of this parameter:
         /// violation_photo:
         /// <li>violation_photo: violation icon.</li>
-        /// Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+        /// Other (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
         /// <li>politician: sensitive person.</li>
         /// </summary>
         [JsonProperty("Label")]

@@ -31,31 +31,31 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error message. success is returned if the request is successful.</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Voice type id</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Audition audio URL.</p>
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended information.</p>
         /// </summary>
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }

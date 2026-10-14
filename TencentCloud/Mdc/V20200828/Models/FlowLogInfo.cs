@@ -25,61 +25,61 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The timestamp (seconds).
+        /// Timestamp in seconds.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Whether it is an input or output.
+        /// Input/output type. Valid values: `input`, `output`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The input or output ID.
+        /// Input or output Id.
         /// </summary>
         [JsonProperty("InputOutputId")]
         public string InputOutputId{ get; set; }
 
         /// <summary>
-        /// The protocol.
+        /// Protocol.
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// The event code.
+        /// Event code.
         /// </summary>
         [JsonProperty("EventCode")]
         public string EventCode{ get; set; }
 
         /// <summary>
-        /// The event information.
+        /// Event information.
         /// </summary>
         [JsonProperty("EventMessage")]
         public string EventMessage{ get; set; }
 
         /// <summary>
-        /// The peer IP.
+        /// Peer IP.
         /// </summary>
         [JsonProperty("RemoteIp")]
         public string RemoteIp{ get; set; }
 
         /// <summary>
-        /// The peer port.
+        /// Peer port.
         /// </summary>
         [JsonProperty("RemotePort")]
         public string RemotePort{ get; set; }
 
         /// <summary>
-        /// Whether it is a primary or backup pipeline. Valid values: 0 (primary), 1 (backup).
+        /// Primary/secondary tunnel. 0: primary, 1: backup.
         /// </summary>
         [JsonProperty("Pipeline")]
         public string Pipeline{ get; set; }
 
         /// <summary>
-        /// The input or output name.
+        /// Input or output name.
         /// </summary>
         [JsonProperty("InputOutputName")]
         public string InputOutputName{ get; set; }

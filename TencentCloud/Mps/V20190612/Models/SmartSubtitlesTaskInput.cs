@@ -25,31 +25,42 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Smart subtitle template ID.	
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 
+        /// User extension field, which does not need to be filled in for general scenarios.
         /// </summary>
         [JsonProperty("UserExtPara")]
         public string UserExtPara{ get; set; }
 
         /// <summary>
-        /// 
+        /// Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
         /// </summary>
         [JsonProperty("RawParameter")]
         public RawSmartSubtitleParameter RawParameter{ get; set; }
 
         /// <summary>
-        /// 
+        /// Target storage of media processing output files. If not specified, inherits the storage location in InputInfo. 
+        /// **Note**: This parameter is required when InputInfo.Type is set to URL.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
+        /// Output path of the generated subtitle file, which can be a relative or absolute path.
+        /// To define the output path, the path must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
         /// 
+        /// Relative path example:
+        /// - File name_{variable name}.{format}.
+        /// -File name.{format}
+        /// 
+        /// Absolute path example:
+        /// -/Custom path/File name_{variable name}.{format}.
+        /// 
+        /// If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

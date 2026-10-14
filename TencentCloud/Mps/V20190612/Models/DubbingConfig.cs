@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? BackgroundVolume{ get; set; }
 
         /// <summary>
-        /// <p>Secondary fine-tuning switch. Available values: <br>ON: enable secondary fine-tuning; <br>OFF: disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
+        /// <p>Secondary fine-tuning switch. Available values: <br>ON: Enable secondary fine-tuning; <br>OFF: Disable secondary fine-tuning;</p><p>Default value: OFF</p><p>It can be set to ON only for RoleBasedSmartDubbing.</p>
         /// </summary>
         [JsonProperty("SecondaryTuning")]
         public string SecondaryTuning{ get; set; }

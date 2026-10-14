@@ -31,25 +31,25 @@ namespace TencentCloud.Es.V20180416.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Index type. `auto`: Automated; `normal`: General.
+        /// Index type. auto: autonomous index; normal: general index
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// Index name. `null` indicates that all indexes are requested.
+        /// Index name. If this parameter is left empty, all indexes are obtained.
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// Username for cluster access
+        /// Cluster access username.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password for cluster access
+        /// Cluster access password
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Maximum number of files to be uploaded
         /// </summary>
         [JsonProperty("MaxFileCount")]
         public long? MaxFileCount{ get; set; }
 
         /// <summary>
-        /// 
+        /// Supported upload file types
         /// </summary>
         [JsonProperty("SupportedFileTypes")]
         public string[] SupportedFileTypes{ get; set; }

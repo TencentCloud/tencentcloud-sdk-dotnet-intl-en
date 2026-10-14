@@ -25,77 +25,88 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Number of nodes
+        /// <p>Number of nodes.</p>
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
 
         /// <summary>
-        /// Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+        /// <p>Node specification<li>ES.S1.SMALL2: 1-core 2G</li><li>ES.S1.MEDIUM4: 2-core 4G</li><li>ES.S1.MEDIUM8: 2-core 8G</li><li>ES.S1.LARGE16: 4-core 16G</li><li>ES.S1.2XLARGE32: 8-core 32G</li><li>ES.S1.4XLARGE32: 16-core 32G</li><li>ES.S1.4XLARGE64: 16-core 64G</li></p>
         /// </summary>
         [JsonProperty("NodeType")]
         public string NodeType{ get; set; }
 
         /// <summary>
-        /// Node type<li>`hotData`: hot data node</li>
-        /// <li>`warmData`: warm data node</li>
-        /// <li>`dedicatedMaster`: dedicated master node</li>
-        /// Default value: `hotData`
+        /// <p>Node type</p><p>Enumeration values:</p><ul><li>hotData: hot data node</li><li>warmData: cold data node</li><li>dedicatedMaster: dedicated master node</li><li>dedicatedCoordinating: dedicated coordinator node</li><li>dedicatedMl: dedicated Machine Learning node</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+        /// <p>Node disk type<li>CLOUD_SSD: ssd cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud disk</li>Default value: CLOUD_SSD</p>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Node disk size in GB
+        /// <p>Node disk capacity (GB)</p>
         /// </summary>
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// Local disk information
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Node local disk information.</p>
         /// </summary>
         [JsonProperty("LocalDiskInfo")]
         public LocalDiskInfo LocalDiskInfo{ get; set; }
 
         /// <summary>
-        /// Number of node disks
+        /// <p>Number of node disk blocks</p>
         /// </summary>
         [JsonProperty("DiskCount")]
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// Whether to encrypt node disk. 0: no (default); 1: yes.
+        /// <p>Whether the node disk is encrypted. 0: no encryption; 1: encryption; not encrypted by default</p>
         /// </summary>
         [JsonProperty("DiskEncrypt")]
         public ulong? DiskEncrypt{ get; set; }
 
         /// <summary>
-        /// CPU number
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Custom encryption key id</p>
+        /// </summary>
+        [JsonProperty("KmsKeyId")]
+        public string KmsKeyId{ get; set; }
+
+        /// <summary>
+        /// <p>Custom encryption key name</p>
+        /// </summary>
+        [JsonProperty("KmsKeyName")]
+        public string KmsKeyName{ get; set; }
+
+        /// <summary>
+        /// <p>Number of CPUs</p>
         /// </summary>
         [JsonProperty("CpuNum")]
         public ulong? CpuNum{ get; set; }
 
         /// <summary>
-        /// Memory size in GB
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Memory size, in GB.</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// /
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Additional hard disk performance</p>
         /// </summary>
         [JsonProperty("DiskEnhance")]
         public long? DiskEnhance{ get; set; }
+
+        /// <summary>
+        /// <p>Gpu information of the node</p>
+        /// </summary>
+        [JsonProperty("GpuInfo")]
+        public GpuInfo GpuInfo{ get; set; }
 
 
         /// <summary>
@@ -111,9 +122,12 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+            this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+            this.SetParamSimple(map, prefix + "KmsKeyName", this.KmsKeyName);
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+            this.SetParamObj(map, prefix + "GpuInfo.", this.GpuInfo);
         }
     }
 }

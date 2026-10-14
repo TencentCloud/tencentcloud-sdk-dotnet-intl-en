@@ -37,25 +37,25 @@ namespace TencentCloud.Es.V20180416.Models
         public ulong? KibanaNodeNum{ get; set; }
 
         /// <summary>
-        /// Number of Kibana node's CPUs
+        /// Number of CPUs of the Kibana node
         /// </summary>
         [JsonProperty("KibanaNodeCpuNum")]
         public ulong? KibanaNodeCpuNum{ get; set; }
 
         /// <summary>
-        /// Kibana node's memory in GB
+        /// Kibana node memory in GB
         /// </summary>
         [JsonProperty("KibanaNodeMemSize")]
         public ulong? KibanaNodeMemSize{ get; set; }
 
         /// <summary>
-        /// Kibana node's disk type
+        /// Kibana node disk type
         /// </summary>
         [JsonProperty("KibanaNodeDiskType")]
         public string KibanaNodeDiskType{ get; set; }
 
         /// <summary>
-        /// Kibana node's disk size
+        /// Kibana node disk size
         /// </summary>
         [JsonProperty("KibanaNodeDiskSize")]
         public ulong? KibanaNodeDiskSize{ get; set; }

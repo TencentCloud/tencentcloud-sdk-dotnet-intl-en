@@ -26,18 +26,18 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Capability configuration switch. Valid values:
-        /// <li>ON: enabled.</li>
-        /// <li>OFF: disabled.</li>
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Type, available values:
-        /// <li>standard: Common super-resolution</li>
-        /// <li>super: Advanced super-resolution.
-        /// <li>ultra: Advanced super-resolution ultra edition.</li>
+        /// Type. Valid values:
+        /// <li>standard: common super resolution</li>
+        /// <li>super: advanced super-resolution super version.</li>
+        /// <li>ultra: Advanced super resolution ultra version.</li>
         /// Default value: standard.
         /// </summary>
         [JsonProperty("Type")]
@@ -45,44 +45,44 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Image output mode. The default value is percent.
-        /// <li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
+        /// <li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
         /// <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-        /// <li>percent: Super-resolution magnification factor, which can be a decimal.</li>
+        /// <li>percent: magnification factor of super-resolution, which can be a decimal.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Super-resolution multiplication rate, can be a decimal.
-        /// Note: Used when Mode equals percent.
+        /// Super resolution multiplication rate, which can be a decimal.
+        /// Note: Used when Mode is equal to percent.
         /// </summary>
         [JsonProperty("Percent")]
         public float? Percent{ get; set; }
 
         /// <summary>
-        /// Image width must not exceed 4096.
-        /// Note: When Mode equals aspect or fixed, preferentially use this configuration.
+        /// Target image width. Cannot exceed 4096.
+        /// Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// Target image height must not exceed 4096.
-        /// Note: When Mode equals aspect or fixed, preferentially use this configuration.
+        /// Target image height. Must not exceed 4096.
+        /// Note: When Mode is equal to aspect or fixed, preferentially use this configuration.
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// The long side length of the target image must not exceed 4096.
-        /// Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+        /// Long side length of the target image. Must not exceed 4096.
+        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
         /// </summary>
         [JsonProperty("LongSide")]
         public long? LongSide{ get; set; }
 
         /// <summary>
-        /// The short side length of the target image must not exceed 4096.
-        /// Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+        /// Short side length of the target image. Must not exceed 4096.
+        /// Note: This configuration is used when Mode is equal to aspect or fixed, and Width and Height fields are not configured.
         /// </summary>
         [JsonProperty("ShortSide")]
         public long? ShortSide{ get; set; }

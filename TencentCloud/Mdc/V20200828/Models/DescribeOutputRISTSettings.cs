@@ -25,25 +25,25 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// RIST mode. Valid values: `LISTENER`, `CALLER`. Default value: `LISTENER`.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 
+        /// RIST configuration solution. Options: [MAIN|SIMPLE]. Default: MAIN.
         /// </summary>
         [JsonProperty("Profile")]
         public string Profile{ get; set; }
 
         /// <summary>
-        /// 
+        /// RIST buffer size in milliseconds. Minimum value: 50 ms. Maximum value: 5000 ms. Default value: 120.
         /// </summary>
         [JsonProperty("Buffer")]
         public long? Buffer{ get; set; }
 
         /// <summary>
-        /// 
+        /// Server listening address, used when the RIST mode is LISTENER.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public OutputRISTSourceAddressResp[] SourceAddresses{ get; set; }

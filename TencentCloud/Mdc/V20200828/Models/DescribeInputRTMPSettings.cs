@@ -25,15 +25,14 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Path for RTMP stream pushing
-        /// Note: this field may return `null`, indicating that no valid value was found.
+        /// RTMP push path.
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// StreamKey for RTMP stream pushing
-        /// Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+        /// RTMP push StreamKey.
+        /// RTMP push URL splicing rule: rtmp://Ip:1935/AppName/StreamKey
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// Whether to enable smooth delivery during delayed streaming. true: enable; false: disable. Not enabled by default.
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 
+        /// Delay time in seconds, ranging from 10 to 300 for the time being.
         /// </summary>
         [JsonProperty("BufferTime")]
         public ulong? BufferTime{ get; set; }

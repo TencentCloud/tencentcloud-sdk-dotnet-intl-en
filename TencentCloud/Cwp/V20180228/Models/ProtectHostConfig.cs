@@ -25,19 +25,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 
+        /// Unique host ID.
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Protection switch: 0 - off; 1 - on
         /// </summary>
         [JsonProperty("ProtectSwitch")]
         public ulong? ProtectSwitch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Auto recovery switch. 0: disabled. 1: enabled.
         /// </summary>
         [JsonProperty("AutoRecovery")]
         public ulong? AutoRecovery{ get; set; }

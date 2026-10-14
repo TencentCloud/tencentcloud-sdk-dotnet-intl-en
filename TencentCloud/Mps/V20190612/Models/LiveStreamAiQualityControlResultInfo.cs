@@ -25,27 +25,27 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Content quality inspection result list.
         /// </summary>
         [JsonProperty("QualityControlResults")]
         [System.Obsolete]
         public QualityControlResult[] QualityControlResults{ get; set; }
 
         /// <summary>
-        /// 
+        /// Format diagnostic result list.
         /// </summary>
         [JsonProperty("DiagnoseResults")]
         [System.Obsolete]
         public DiagnoseResult[] DiagnoseResults{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content quality inspection result list.
         /// </summary>
         [JsonProperty("QualityControlResultSet")]
         public QualityControlResult[] QualityControlResultSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Format diagnostic result list.
         /// </summary>
         [JsonProperty("DiagnoseResultSet")]
         public DiagnoseResult[] DiagnoseResultSet{ get; set; }

@@ -26,7 +26,7 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Type of the input source object. Supported values:
-        /// <li>COS: COS origin</li>
+        /// <li> COS: COS origin</li>
         /// <li> URL: URL source</li>
         /// <li> AWS-S3: AWS source, currently only support transcoding task </li>
         /// <li> VOD: VOD Pro Edition </li>
@@ -35,25 +35,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Required when `Type` is `COS`. It represents the COS object information for media processing.
+        /// Required when Type is COS. It refers to the COS object information for media processing.
         /// </summary>
         [JsonProperty("CosInputInfo")]
         public CosInputInfo CosInputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Type is URL. This item is required and refers to media processing URL object information.
         /// </summary>
         [JsonProperty("UrlInputInfo")]
         public UrlInputInfo UrlInputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Valid when Type is AWS-S3. This item is required and refers to the AWS S3 object information for media processing.
         /// </summary>
         [JsonProperty("S3InputInfo")]
         public S3InputInfo S3InputInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Required when `Type` is `VOD`. It represents the object information of MPS on-demand pro edition.
         /// </summary>
         [JsonProperty("VODInputInfo")]
         public VODInputInfo VODInputInfo{ get; set; }

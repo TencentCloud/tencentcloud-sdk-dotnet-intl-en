@@ -31,7 +31,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Offset{ get; set; }
 
         /// <summary>
-        /// Log record number
+        /// Number of logs.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// Log type. The value is `Application` (default) or `Platform`.
+        /// Log type. Valid values: `Application`, `Platform`. Default value: `Application`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

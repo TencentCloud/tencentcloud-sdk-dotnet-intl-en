@@ -25,31 +25,31 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The session ID.
+        /// Session ID.
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
         /// <summary>
-        /// The peer IP.
+        /// Peer IP.
         /// </summary>
         [JsonProperty("ClientIp")]
         public string ClientIp{ get; set; }
 
         /// <summary>
-        /// The total bandwidth.
+        /// Total bandwidth.
         /// </summary>
         [JsonProperty("Network")]
         public long? Network{ get; set; }
 
         /// <summary>
-        /// The video data.
+        /// Video data.
         /// </summary>
         [JsonProperty("Video")]
         public FlowVideo[] Video{ get; set; }
 
         /// <summary>
-        /// The audio data.
+        /// Audio data.
         /// </summary>
         [JsonProperty("Audio")]
         public FlowAudio[] Audio{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public ulong? InitialValue{ get; set; }
 
         /// <summary>
-        /// The growth step length of the `{number}` variable, with a default value of 1.
+        /// The increase step length of the `{number}` variable. Default value: 1.
         /// </summary>
         [JsonProperty("Increment")]
         public ulong? Increment{ get; set; }

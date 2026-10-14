@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Speech keyword recognition result set.
+        /// Result set of speech keyword recognition.
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskAsrWordsResultItem[] ResultSet{ get; set; }

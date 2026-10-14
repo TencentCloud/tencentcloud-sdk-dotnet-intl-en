@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Encryption type.
         /// 
         /// - simpleaes
-        /// Can only be used for HLS. Format support: ts and mp4.
+        /// Can only be used for HLS. Format support: ts and mp4
         /// Only slice mode can be used. singlefile mode cannot be used.
         /// 
         /// - fairplay:
@@ -47,18 +47,18 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 
         /// - widevine+fairplay,playready+fairplay,widevine+playready+fairplay:
         /// Can only be used for HLS. The segment format can only be mp4.
-        /// Slice mode or singlefile mode can be used.
+        /// Slice mode or single-file mode can be used.
         /// 
         /// - widevine+playready:
         /// Applicable to HLS and MPEG-DASH. The segment format can only be mp4.
         /// For HLS format, you can use the slicing mode or singlefile mode.
-        /// For MPEG-DASH, only singlefile mode can be used.
+        /// For MPEG-DASH, only can be used in singlefile mode.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// SimpleAes encryption information.
         /// </summary>
         [JsonProperty("SimpleAesDrm")]
         public SimpleAesDrm SimpleAesDrm{ get; set; }

@@ -58,7 +58,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SmartSubtitleTaskResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Translation output result of pure subtitle files.
         /// </summary>
         [JsonProperty("Output")]
         public PureSubtitleTransResultOutput Output{ get; set; }

@@ -25,8 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// List of pull URLs
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// List of pull addresses.
         /// </summary>
         [JsonProperty("ServerUrls")]
         public DescribeOutputRTMPPullServerUrl[] ServerUrls{ get; set; }

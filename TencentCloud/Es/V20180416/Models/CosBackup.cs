@@ -25,112 +25,130 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Whether to enable auto-backup to COS
+        /// <p>Whether to enable cos automatic backup</p>
         /// </summary>
         [JsonProperty("IsAutoBackup")]
         public bool? IsAutoBackup{ get; set; }
 
         /// <summary>
-        /// Auto-backup time (accurate down to the hour), such as "22:00"
+        /// <p>Automatic backup execution time (accurate to the hour), e.g. "22:00"</p>
         /// </summary>
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }
 
         /// <summary>
-        /// Backup snapshot prefix.
+        /// <p>Backup snapshot prefix</p>
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// Valid values: 0 (Tencent Cloud repository) and 1 (customer repository).
+        /// <p>0 (Tencent Cloud repository); 1 (customer repository)</p>
         /// </summary>
         [JsonProperty("EsRepositoryType")]
         public ulong? EsRepositoryType{ get; set; }
 
         /// <summary>
-        /// Managed snapshot repository name.
+        /// <p>Managed snapshot repository name.</p>
         /// </summary>
         [JsonProperty("PaasEsRepository")]
         public string PaasEsRepository{ get; set; }
 
         /// <summary>
-        /// Customer snapshot repository name.
+        /// <p>Customer snapshot repository name</p>
         /// </summary>
         [JsonProperty("UserEsRepository")]
         public string UserEsRepository{ get; set; }
 
         /// <summary>
-        /// COS storage folder directory.
+        /// <p>cos storage folder directory</p>
         /// </summary>
         [JsonProperty("CosBasePath")]
         public string CosBasePath{ get; set; }
 
         /// <summary>
-        /// Snapshot storage cycle in days.
+        /// <p>Snapshot storage cycle in days</p>
         /// </summary>
         [JsonProperty("StorageDuration")]
         public ulong? StorageDuration{ get; set; }
 
         /// <summary>
-        /// Auto backup frequency in hours.
+        /// <p>Auto backup frequency in hours.</p>
         /// </summary>
         [JsonProperty("AutoBackupInterval")]
         public ulong? AutoBackupInterval{ get; set; }
 
         /// <summary>
-        /// Backup lock. Valid values: 0 (not locked) and 1 (locked).
+        /// <p>Backup lock. Valid values: 0 (not locked) and 1 (locked).</p>
         /// </summary>
         [JsonProperty("CosRetention")]
         public ulong? CosRetention{ get; set; }
 
         /// <summary>
-        /// Lock expiration date, such as 2022-12-10T08:34:48.000Z.
+        /// <p>Lock expiration date, such as 2022-12-10T08:34:48.000Z.</p>
         /// </summary>
         [JsonProperty("RetainUntilDate")]
         public string RetainUntilDate{ get; set; }
 
         /// <summary>
-        /// Lock grace period.
+        /// <p>Lock grace period</p>
         /// </summary>
         [JsonProperty("RetentionGraceTime")]
         public ulong? RetentionGraceTime{ get; set; }
 
         /// <summary>
-        /// Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).
+        /// <p>Cross-region backup. Valid values: 0 (disabled) and 1 (enabled).</p>
         /// </summary>
         [JsonProperty("RemoteCos")]
         public ulong? RemoteCos{ get; set; }
 
         /// <summary>
-        /// Region name for cross-region backup, such as ap-guangzhou.
+        /// <p>Region name for cross-regional backup, such as ap-guangzhou.</p>
         /// </summary>
         [JsonProperty("RemoteCosRegion")]
         public string RemoteCosRegion{ get; set; }
 
         /// <summary>
-        /// Policy name.
+        /// <p>Policy name.</p>
         /// </summary>
         [JsonProperty("StrategyName")]
         public string StrategyName{ get; set; }
 
         /// <summary>
-        /// Backup index list. If left empty, it means to back up all indexes.
+        /// <p>Backup index list. If left empty, it means to back up all indexes.</p>
         /// </summary>
         [JsonProperty("Indices")]
         public string Indices{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>cos multi-AZ backup. 0: single AZ; 1: multi-AZ</p>
         /// </summary>
         [JsonProperty("MultiAz")]
         public ulong? MultiAz{ get; set; }
 
         /// <summary>
-        /// Policy creation time.
+        /// <p>Maximum speed of write to the repository per node max_snapshot_bytes_per_sec, default 40m</p>
+        /// </summary>
+        [JsonProperty("MaxSnapshotPerSec")]
+        public string MaxSnapshotPerSec{ get; set; }
+
+        /// <summary>
+        /// <p>Maximum speed of reading the repository per node max_restore_bytes_per_sec. Default is 40m before 710, and default unlimited from 710 onwards</p>
+        /// </summary>
+        [JsonProperty("MaxRestorePerSec")]
+        public string MaxRestorePerSec{ get; set; }
+
+        /// <summary>
+        /// <p>Policy creation time</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// <p>Instance ID.</p>
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -155,7 +173,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "StrategyName", this.StrategyName);
             this.SetParamSimple(map, prefix + "Indices", this.Indices);
             this.SetParamSimple(map, prefix + "MultiAz", this.MultiAz);
+            this.SetParamSimple(map, prefix + "MaxSnapshotPerSec", this.MaxSnapshotPerSec);
+            this.SetParamSimple(map, prefix + "MaxRestorePerSec", this.MaxRestorePerSec);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

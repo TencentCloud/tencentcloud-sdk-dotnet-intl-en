@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The number of packets transmitted.
+        /// Number of transmitted packets
         /// </summary>
         [JsonProperty("Packets")]
         public long? Packets{ get; set; }

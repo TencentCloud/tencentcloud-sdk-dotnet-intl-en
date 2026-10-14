@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Recognition task input.
+        /// Input of the recognition task.
         /// </summary>
         [JsonProperty("Input")]
         public SmartSubtitlesTaskInput Input{ get; set; }
 
         /// <summary>
-        /// Recognition task output.
+        /// Output of the identification task.
         /// </summary>
         [JsonProperty("Output")]
         public SmartSubtitlesResult[] Output{ get; set; }

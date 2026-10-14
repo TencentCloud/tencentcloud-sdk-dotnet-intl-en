@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Face Recognition task input.
+        /// Face recognition task input information.
         /// </summary>
         [JsonProperty("Input")]
         public AiRecognitionTaskFaceResultInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output information of the face recognition task.
         /// </summary>
         [JsonProperty("Output")]
         public AiRecognitionTaskFaceResultOutput Output{ get; set; }

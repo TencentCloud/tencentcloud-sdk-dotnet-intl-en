@@ -25,67 +25,67 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Function name
+        /// Function name.
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// Return value after the function is executed
+        /// Returned value after function execution
         /// </summary>
         [JsonProperty("RetMsg")]
         public string RetMsg{ get; set; }
 
         /// <summary>
-        /// RequestId corresponding to the executed function
+        /// requestId for executing the function
         /// </summary>
         [JsonProperty("RequestId")]
         public string RequestId{ get; set; }
 
         /// <summary>
-        /// Start time of the function execution
+        /// Time point when the function starts execution
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Function execution result. `0` indicates successful execution and other values indicate failure.
+        /// Function execution result. 0 indicates successful execution, 2 indicates the function is running, 3 indicates an execution interrupt, and other values indicate failure.
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }
 
         /// <summary>
-        /// It specifies whether the function invocation is finished. `1` indicates execution completion and other values indicate that exceptions occurred during the invocation.
+        /// Whether the function call ends. If so, 1 means execution ended, and additional values indicate a call exception.
         /// </summary>
         [JsonProperty("InvokeFinished")]
         public long? InvokeFinished{ get; set; }
 
         /// <summary>
-        /// Duration of the function execution. The unit is millisecond (ms).
+        /// Function execution duration in milliseconds.
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// Function billing duration. The unit is millisecond (ms). The value is rounded up to a multiple of 100 ms.
+        /// Billing duration of a function. It is rounded up to the nearest 100 ms based on the duration, in ms.
         /// </summary>
         [JsonProperty("BillDuration")]
         public long? BillDuration{ get; set; }
 
         /// <summary>
-        /// Actual memory size used during the function execution. The unit is byte.
+        /// Memory size actually consumed during function execution, in bytes.
         /// </summary>
         [JsonProperty("MemUsage")]
         public long? MemUsage{ get; set; }
 
         /// <summary>
-        /// Function execution logs
+        /// Log output during function execution
         /// </summary>
         [JsonProperty("Log")]
         public string Log{ get; set; }
 
         /// <summary>
-        /// Log level
+        /// Log level.
         /// </summary>
         [JsonProperty("Level")]
         [System.Obsolete]
@@ -99,7 +99,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Source{ get; set; }
 
         /// <summary>
-        /// Number of retries
+        /// Number of retries.
         /// </summary>
         [JsonProperty("RetryNum")]
         public ulong? RetryNum{ get; set; }

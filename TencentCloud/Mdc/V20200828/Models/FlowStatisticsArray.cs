@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The timestamp.
+        /// Timestamp.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// The statistics of all the sessions.
+        /// Statistics for each session.
         /// </summary>
         [JsonProperty("FlowStatistics")]
         public FlowStatistics[] FlowStatistics{ get; set; }

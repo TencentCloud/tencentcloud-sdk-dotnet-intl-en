@@ -37,43 +37,52 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Face recognition result, which is valid when Type is 
+        /// Valid for FaceRecognition.
         /// </summary>
         [JsonProperty("FaceTask")]
         public AiRecognitionTaskFaceResult FaceTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Speech keyword recognition result, which is valid when Type is
+        /// Valid when set to AsrWordsRecognition.
         /// </summary>
         [JsonProperty("AsrWordsTask")]
         public AiRecognitionTaskAsrWordsResult AsrWordsTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Full speech recognition result. When Type is
+        /// Valid when AsrFullTextRecognition is used.
         /// </summary>
         [JsonProperty("AsrFullTextTask")]
         public AiRecognitionTaskAsrFullTextResult AsrFullTextTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Text keyword recognition result. When Type is
+        /// Valid when set to OcrWordsRecognition.
         /// </summary>
         [JsonProperty("OcrWordsTask")]
         public AiRecognitionTaskOcrWordsResult OcrWordsTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// Full text recognition result. When Type is
+        /// Valid when OcrFullTextRecognition is used.
         /// </summary>
         [JsonProperty("OcrFullTextTask")]
         public AiRecognitionTaskOcrFullTextResult OcrFullTextTask{ get; set; }
 
         /// <summary>
+        /// Translation result. When Type is
         /// 
+        /// Valid when set to TransTextRecognition.
         /// </summary>
         [JsonProperty("TransTextTask")]
         public AiRecognitionTaskTransTextResult TransTextTask{ get; set; }
 
         /// <summary>
+        /// Object recognition result, which is valid when Type is
         /// 
+        /// Valid for ObjectRecognition.
         /// </summary>
         [JsonProperty("ObjectTask")]
         public AiRecognitionTaskObjectResult ObjectTask{ get; set; }

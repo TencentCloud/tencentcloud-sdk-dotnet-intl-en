@@ -25,82 +25,88 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Transcoding task output</p>
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output of rotating image tasks</p>
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Time point screenshot task output</p>
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output of sampling screenshot task</p>
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Image sprite output</p>
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Adaptive bitrate streaming task output</p>
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Identification task output</p>
         /// </summary>
         [JsonProperty("RecognitionTask")]
         public ScheduleRecognitionTaskResult RecognitionTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Review task output</p>
         /// </summary>
         [JsonProperty("ReviewTask")]
         public ScheduleReviewTaskResult ReviewTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Analysis task output</p>
         /// </summary>
         [JsonProperty("AnalysisTask")]
         public ScheduleAnalysisTaskResult AnalysisTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Media quality inspection task output</p>
         /// </summary>
         [JsonProperty("QualityControlTask")]
         public ScheduleQualityControlTaskResult QualityControlTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Conditional judgment task output</p>
         /// </summary>
         [JsonProperty("ExecRuleTask")]
         public ScheduleExecRuleTaskResult ExecRuleTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Smart subtitle task output</p>
         /// </summary>
         [JsonProperty("SmartSubtitlesTask")]
         public ScheduleSmartSubtitleTaskResult SmartSubtitlesTask{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output of the intelligent erasure task</p>
         /// </summary>
         [JsonProperty("SmartEraseTask")]
         public SmartEraseTaskResult SmartEraseTask{ get; set; }
+
+        /// <summary>
+        /// <p>AI dubbing task output.</p>
+        /// </summary>
+        [JsonProperty("AIDubbingTask")]
+        public AIDubbingTaskResult AIDubbingTask{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
             this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+            this.SetParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Configuration set type, such as `LDAP` and `AD`.
+        /// Configuration group type, for example, ldap and ad
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

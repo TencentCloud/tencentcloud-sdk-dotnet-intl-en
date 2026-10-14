@@ -25,13 +25,14 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// 
+        /// TcUrl of the RTMP origin server.
         /// </summary>
         [JsonProperty("TcUrl")]
         public string TcUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// StreamKey of the RTMP origin server.
+        /// RTMP origin server URL splicing rule: $TcUrl/$StreamKey.
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }

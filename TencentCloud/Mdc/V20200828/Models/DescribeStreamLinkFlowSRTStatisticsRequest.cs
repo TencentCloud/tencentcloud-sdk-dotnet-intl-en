@@ -25,51 +25,51 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The flow ID.
+        /// Transport stream ID.
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
         /// <summary>
-        /// Whether to query the inputs or outputs. Valid values: input, output.
+        /// Input or output type. Valid values: `input`, `output`.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The input or output ID.
+        /// Input or output Id.
         /// </summary>
         [JsonProperty("InputOutputId")]
         public string InputOutputId{ get; set; }
 
         /// <summary>
-        /// Whether to query the primary or backup pipeline. Valid values: 0, 1.
+        /// Primary or backup channel. Valid values: 0 and 1.
         /// </summary>
         [JsonProperty("Pipeline")]
         public string Pipeline{ get; set; }
 
         /// <summary>
-        /// The start time for query, which is 1 hour ago by default. You can query statistics in the last 7 days.
-        /// It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+        /// Start time for statistics. Default value: last hour. You can query data from the last 7 days at most.
+        /// UTC time, for example, '2020-01-01T12:00:00Z'.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// The end time for query, which is 1 hour after the start time by default. The longest time range allowed for query is 24 hours.
-        /// It must be in UTC format, such as `2020-01-01T12:00:00Z`.
+        /// End time for statistics. Default value: one hour after `StartTime`. You can query data up to 24 hours.
+        /// UTC time, for example, '2020-01-01T12:00:00Z'.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The query interval. Valid values: 5s, 1min, 5min, 15min.
+        /// Query interval. Options: [5s|1min|5min|15min].
         /// </summary>
         [JsonProperty("Period")]
         public string Period{ get; set; }
 
         /// <summary>
-        /// Peer IP address
+        /// Peer IP address.
         /// </summary>
         [JsonProperty("RemoteIp")]
         public string RemoteIp{ get; set; }

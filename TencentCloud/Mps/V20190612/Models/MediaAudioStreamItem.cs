@@ -43,19 +43,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of audio channels, for example, 2.
         /// </summary>
         [JsonProperty("Channel")]
         public long? Channel{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio Codecs.
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Audio loudness.
         /// </summary>
         [JsonProperty("Loudness")]
         public float? Loudness{ get; set; }

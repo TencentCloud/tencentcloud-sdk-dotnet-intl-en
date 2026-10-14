@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Access blocklist
+        /// Access the blocklist
         /// </summary>
         [JsonProperty("BlackIpList")]
         public string[] BlackIpList{ get; set; }

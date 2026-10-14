@@ -25,43 +25,43 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The latency (ms).
+        /// Delay in ms.
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// RTT (ms).
+        /// RTT in ms.
         /// </summary>
         [JsonProperty("RTT")]
         public long? RTT{ get; set; }
 
         /// <summary>
-        /// The number of packets sent or received.
+        /// Number of packets sent or received in real time.
         /// </summary>
         [JsonProperty("Packets")]
         public long? Packets{ get; set; }
 
         /// <summary>
-        /// The packet loss rate.
+        /// Packet loss rate.
         /// </summary>
         [JsonProperty("PacketLossRate")]
         public float? PacketLossRate{ get; set; }
 
         /// <summary>
-        /// The retransmission rate.
+        /// Retransmission rate.
         /// </summary>
         [JsonProperty("RetransmitRate")]
         public float? RetransmitRate{ get; set; }
 
         /// <summary>
-        /// The number of packets dropped.
+        /// Real-time packet loss count.
         /// </summary>
         [JsonProperty("DroppedPackets")]
         public long? DroppedPackets{ get; set; }
 
         /// <summary>
-        /// Whether to encrypt the stream. Valid values: On, Off.
+        /// Whether to encrypt. On | Off.
         /// </summary>
         [JsonProperty("Encryption")]
         public string Encryption{ get; set; }

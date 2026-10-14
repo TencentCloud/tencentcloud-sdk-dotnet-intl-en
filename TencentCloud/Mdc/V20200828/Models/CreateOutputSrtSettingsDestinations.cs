@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The output IP.
+        /// Output IP or domain.
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// The output port.
+        /// Output port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

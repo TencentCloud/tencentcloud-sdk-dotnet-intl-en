@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Task name
+        /// Task Name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,11 +49,16 @@ namespace TencentCloud.Es.V20180416.Models
         public SubTaskDetail[] SubTasks{ get; set; }
 
         /// <summary>
-        /// The task time.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Time taken by the task
         /// </summary>
         [JsonProperty("ElapsedTime")]
         public long? ElapsedTime{ get; set; }
+
+        /// <summary>
+        /// Task progress details
+        /// </summary>
+        [JsonProperty("ProcessInfo")]
+        public ProcessDetail ProcessInfo{ get; set; }
 
 
         /// <summary>
@@ -66,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
             this.SetParamArrayObj(map, prefix + "SubTasks.", this.SubTasks);
             this.SetParamSimple(map, prefix + "ElapsedTime", this.ElapsedTime);
+            this.SetParamObj(map, prefix + "ProcessInfo.", this.ProcessInfo);
         }
     }
 }

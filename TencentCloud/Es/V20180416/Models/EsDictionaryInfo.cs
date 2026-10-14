@@ -25,34 +25,58 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// List of non-stop words
+        /// List of enabled word dictionaries
         /// </summary>
         [JsonProperty("MainDict")]
         public DictInfo[] MainDict{ get; set; }
 
         /// <summary>
-        /// List of stop words
+        /// List of stopword dictionaries
         /// </summary>
         [JsonProperty("Stopwords")]
         public DictInfo[] Stopwords{ get; set; }
 
         /// <summary>
-        /// QQ dictionary list
+        /// List of QQ word segmentation dictionaries
         /// </summary>
         [JsonProperty("QQDict")]
         public DictInfo[] QQDict{ get; set; }
 
         /// <summary>
-        /// Synonym dictionary list
+        /// List of synonym dictionaries
         /// </summary>
         [JsonProperty("Synonym")]
         public DictInfo[] Synonym{ get; set; }
 
         /// <summary>
-        /// Update dictionary type
+        /// Update the dictionary type
         /// </summary>
         [JsonProperty("UpdateType")]
         public string UpdateType{ get; set; }
+
+        /// <summary>
+        /// List of ansj enabled word dictionaries
+        /// </summary>
+        [JsonProperty("AnsjMain")]
+        public DictInfo[] AnsjMain{ get; set; }
+
+        /// <summary>
+        /// List of ansj stopword dictionaries
+        /// </summary>
+        [JsonProperty("AnsjStop")]
+        public DictInfo[] AnsjStop{ get; set; }
+
+        /// <summary>
+        /// List of ansj ambiguity lexicons
+        /// </summary>
+        [JsonProperty("AnsjAmbiguity")]
+        public DictInfo[] AnsjAmbiguity{ get; set; }
+
+        /// <summary>
+        /// List of ansj synonym dictionaries
+        /// </summary>
+        [JsonProperty("AnsjSynonyms")]
+        public DictInfo[] AnsjSynonyms{ get; set; }
 
 
         /// <summary>
@@ -65,6 +89,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "QQDict.", this.QQDict);
             this.SetParamArrayObj(map, prefix + "Synonym.", this.Synonym);
             this.SetParamSimple(map, prefix + "UpdateType", this.UpdateType);
+            this.SetParamArrayObj(map, prefix + "AnsjMain.", this.AnsjMain);
+            this.SetParamArrayObj(map, prefix + "AnsjStop.", this.AnsjStop);
+            this.SetParamArrayObj(map, prefix + "AnsjAmbiguity.", this.AnsjAmbiguity);
+            this.SetParamArrayObj(map, prefix + "AnsjSynonyms.", this.AnsjSynonyms);
         }
     }
 }

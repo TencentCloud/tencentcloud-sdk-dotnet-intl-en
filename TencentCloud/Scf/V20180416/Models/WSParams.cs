@@ -25,8 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Idle timeout period in seconds. Default: 15; range: 1 to 1800
-        /// Note: this field may return `null`, indicating that no valid values can be obtained.
+        /// Idle timeout in seconds. Default value: 15s. Configurable range: 1-1800s.
         /// </summary>
         [JsonProperty("IdleTimeOut")]
         public ulong? IdleTimeOut{ get; set; }

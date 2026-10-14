@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Original instance configuration information
+        /// Original configuration message of the instance
         /// </summary>
         [JsonProperty("OldInfo")]
         public KeyValue[] OldInfo{ get; set; }
 
         /// <summary>
-        /// Updated instance configuration information
+        /// Configuration message after the instance update
         /// </summary>
         [JsonProperty("NewInfo")]
         public KeyValue[] NewInfo{ get; set; }

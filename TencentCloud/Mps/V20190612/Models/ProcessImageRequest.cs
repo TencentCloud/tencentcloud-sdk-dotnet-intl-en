@@ -44,13 +44,13 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Output path, which can be a relative or absolute path.
-        /// To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+        /// To define the output path, it must end with `.{format}`. For variable names, please refer to [Filename Variable Explanation](https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
         /// Relative path example:
-        /// <li>Filename_{Variable name}.{format}</li>
-        /// <li>Filename.{format}</li>
+        /// <li>Filename_{Variable name}.{format}.</li>
+        /// <li>Filename.{format}.</li>
         /// Absolute path example:
         /// <li>/Custom path/Filename_{Variable name}.{format}</li>
-        /// If not filled in, default relative path: {inputName}.{format}.
+        /// If not filled in, the default relative path is: {inputName}.{format}.
         /// </summary>
         [JsonProperty("OutputPath")]
         public string OutputPath{ get; set; }

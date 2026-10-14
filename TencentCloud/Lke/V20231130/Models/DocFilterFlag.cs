@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Identifier bit
         /// </summary>
         [JsonProperty("Flag")]
         public string Flag{ get; set; }
 
         /// <summary>
-        /// 
+        /// Identifier value
         /// </summary>
         [JsonProperty("Value")]
         public bool? Value{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The timestamp (seconds) of the query.
+        /// <p>Inquiry time. Unit: s.</p>
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// A list of the real-time data.
+        /// <p>Real-time data information list.</p>
         /// </summary>
         [JsonProperty("Datas")]
         public FlowRealtimeStatusItem[] Datas{ get; set; }

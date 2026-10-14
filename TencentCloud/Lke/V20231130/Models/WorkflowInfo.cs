@@ -25,49 +25,49 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Workflow ID</p>
         /// </summary>
         [JsonProperty("WorkflowId")]
         public string WorkflowId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Workflow name.</p>
         /// </summary>
         [JsonProperty("WorkflowName")]
         public string WorkflowName{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Workflow run ID</p>
         /// </summary>
         [JsonProperty("WorkflowRunId")]
         public string WorkflowRunId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Tab</p>
         /// </summary>
         [JsonProperty("OptionCards")]
         public string[] OptionCards{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output result of multiple bubbles</p>
         /// </summary>
         [JsonProperty("Outputs")]
         public string[] Outputs{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Workflow release time, unix timestamp.</p>
         /// </summary>
         [JsonProperty("WorkflowReleaseTime")]
         public string WorkflowReleaseTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Workflow multi-bubble output</p>
         /// </summary>
         [JsonProperty("Contents")]
         public Content[] Contents{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Flag indicating whether the tab is single-selection or dual-selection</p><p>Enumeration values:</p><ul><li>0: single selection</li><li>1: multiple selection</li></ul>
         /// </summary>
         [JsonProperty("OptionMode")]
         public long? OptionMode{ get; set; }

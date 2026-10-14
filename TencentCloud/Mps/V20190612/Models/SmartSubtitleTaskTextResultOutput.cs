@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>List of segments for smart subtitle recognition.</p>
         /// </summary>
         [JsonProperty("SegmentSet")]
         public SmartSubtitleTaskFullTextSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Subtitle recognition result</p>
         /// </summary>
         [JsonProperty("RecognizeSubtitleResult")]
         public SubtitleResult[] RecognizeSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Translated subtitles</p>
         /// </summary>
         [JsonProperty("TransSubtitleResult")]
         public SubtitleResult[] TransSubtitleResult{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Storage location of the subtitle file</p>
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

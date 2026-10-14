@@ -25,13 +25,13 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The relay URL. Format: `rtmp://domain/live`.
+        /// URL for push forwarding, in the format of rtmp://domain/live.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// The `StreamKey` for relay. Format: `stream?key=value`.
+        /// StreamKey for republishing, in the format of: stream?key=value.
         /// </summary>
         [JsonProperty("StreamKey")]
         public string StreamKey{ get; set; }

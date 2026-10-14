@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Start PTS time of a suspected segment, in seconds.
+        /// Starting PTS time of a suspected segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// Suspected segment sensitivity score.
+        /// Sensitivity score of the suspected segment.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Suspected segment sensitive result suggestion, permissible range:
+        /// Suspected segment sensitive result suggestion. Value range:
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,13 +52,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video sensitive content result tag, value ranges from...to...
+        /// Sensitive result tag of the video. Value range:
         /// <li>guns: weapons and firearms.</li>
         /// <li>crowd: crowd gathering.</li>
         /// <li>police: police force.</li>
         /// <li>bloody: graphic violence.</li>
         /// <li>banners: sensitive flags.</li>
-        /// <li>militant: militant.</li>
+        /// <li>militant: militants.</li>
         /// <li>explosion: explosions and fires.</li>
         /// <li>terrorists: sensitive persons.</li>
         /// </summary>
@@ -66,14 +66,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// Suspected image URL (Images are not retained permanently upon arrival)
-        /// The image will be deleted after the PicUrlExpireTime time point.
+        /// Suspected image URL (images are not retained permanently and will be deleted upon reaching
+        /// Images will be deleted after the PicUrlExpireTime time point).
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+        /// Expiration time of the suspected image URL, using the [ISO date format](https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("PicUrlExpireTime")]
         public string PicUrlExpireTime{ get; set; }

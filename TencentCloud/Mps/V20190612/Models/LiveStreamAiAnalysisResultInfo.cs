@@ -25,7 +25,10 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Live stream analysis subtask result. Supports:
+        /// <li>Live streaming video splitting.</li>
+        /// <li>Live streaming highlight.</li>
+        /// <li>Live streaming summary.</li>
         /// </summary>
         [JsonProperty("ResultSet")]
         public LiveStreamAiAnalysisResultItem[] ResultSet{ get; set; }

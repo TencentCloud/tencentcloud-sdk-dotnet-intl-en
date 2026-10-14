@@ -28,7 +28,7 @@ namespace TencentCloud.Tcss.V20201101
 
        private const string endpoint = "tcss.intl.tencentcloudapi.com";
        private const string version = "2020-11-01";
-       private const string sdkVersion = "SDK_NET_3.0.1377";
+       private const string sdkVersion = "SDK_NET_3.0.1408";
 
         /// <summary>
         /// Client constructor.
@@ -104,7 +104,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to add the details of an image repository.
+        /// This example shows you how to add details for an image repository.
         /// </summary>
         /// <param name="req"><see cref="AddAssetImageRegistryRegistryDetailRequest"/></param>
         /// <returns><see cref="AddAssetImageRegistryRegistryDetailResponse"/></returns>
@@ -114,7 +114,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to add the details of an image repository.
+        /// This example shows you how to add details for an image repository.
         /// </summary>
         /// <param name="req"><see cref="AddAssetImageRegistryRegistryDetailRequest"/></param>
         /// <returns><see cref="AddAssetImageRegistryRegistryDetailResponse"/></returns>
@@ -586,7 +586,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a quick image scan task for an image repository.
+        /// Creating a Task to Scan Images in an Image Repository with One Click
         /// </summary>
         /// <param name="req"><see cref="CreateAssetImageRegistryScanTaskOneKeyRequest"/></param>
         /// <returns><see cref="CreateAssetImageRegistryScanTaskOneKeyResponse"/></returns>
@@ -596,7 +596,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to create a quick image scan task for an image repository.
+        /// Creating a Task to Scan Images in an Image Repository with One Click
         /// </summary>
         /// <param name="req"><see cref="CreateAssetImageRegistryScanTaskOneKeyRequest"/></param>
         /// <returns><see cref="CreateAssetImageRegistryScanTaskOneKeyResponse"/></returns>
@@ -2250,7 +2250,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the details of a server.
+        /// This example shows you how to query host details.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetHostDetailRequest"/></param>
         /// <returns><see cref="DescribeAssetHostDetailResponse"/></returns>
@@ -2260,7 +2260,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the details of a server.
+        /// This example shows you how to query host details.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetHostDetailRequest"/></param>
         /// <returns><see cref="DescribeAssetHostDetailResponse"/></returns>
@@ -2565,7 +2565,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the image statistics of an image repository.
+        /// Querying the Image Statistics of an Image Repository
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageRegistrySummaryRequest"/></param>
         /// <returns><see cref="DescribeAssetImageRegistrySummaryResponse"/></returns>
@@ -2575,7 +2575,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the image statistics of an image repository.
+        /// Querying the Image Statistics of an Image Repository
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetImageRegistrySummaryRequest"/></param>
         /// <returns><see cref="DescribeAssetImageRegistrySummaryResponse"/></returns>
@@ -2943,7 +2943,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the last asset sync time.
+        /// Query the latest time for asset synchronization.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSyncLastTimeRequest"/></param>
         /// <returns><see cref="DescribeAssetSyncLastTimeResponse"/></returns>
@@ -2953,7 +2953,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the last asset sync time.
+        /// Query the latest time for asset synchronization.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSyncLastTimeRequest"/></param>
         /// <returns><see cref="DescribeAssetSyncLastTimeResponse"/></returns>
@@ -3594,7 +3594,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the image licensing information.
+        /// This API is used to query image authorization info.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageAuthorizedInfoRequest"/></param>
         /// <returns><see cref="DescribeImageAuthorizedInfoResponse"/></returns>
@@ -3604,7 +3604,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query the image licensing information.
+        /// This API is used to query image authorization info.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageAuthorizedInfoRequest"/></param>
         /// <returns><see cref="DescribeImageAuthorizedInfoResponse"/></returns>
@@ -3636,7 +3636,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query an automatic licensing rule for local images.
+        /// Query local image auto-authorization rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageAutoAuthorizedRuleRequest"/></param>
         /// <returns><see cref="DescribeImageAutoAuthorizedRuleResponse"/></returns>
@@ -3646,7 +3646,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to query an automatic licensing rule for local images.
+        /// Query local image auto-authorization rules.
         /// </summary>
         /// <param name="req"><see cref="DescribeImageAutoAuthorizedRuleRequest"/></param>
         /// <returns><see cref="DescribeImageAutoAuthorizedRuleResponse"/></returns>
@@ -4533,7 +4533,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to check whether TCSS is purchased.
+        /// This API is used to query the purchase information on the container security service.
         /// </summary>
         /// <param name="req"><see cref="DescribePurchaseStateInfoRequest"/></param>
         /// <returns><see cref="DescribePurchaseStateInfoResponse"/></returns>
@@ -4543,7 +4543,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to check whether TCSS is purchased.
+        /// This API is used to query the purchase information on the container security service.
         /// </summary>
         /// <param name="req"><see cref="DescribePurchaseStateInfoRequest"/></param>
         /// <returns><see cref="DescribePurchaseStateInfoResponse"/></returns>
@@ -7418,7 +7418,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to update a scheduled task for an image repository.
+        /// Update scheduled tasks in the mirror repository
         /// </summary>
         /// <param name="req"><see cref="UpdateImageRegistryTimingScanTaskRequest"/></param>
         /// <returns><see cref="UpdateImageRegistryTimingScanTaskResponse"/></returns>
@@ -7428,7 +7428,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// This API is used to update a scheduled task for an image repository.
+        /// Update scheduled tasks in the mirror repository
         /// </summary>
         /// <param name="req"><see cref="UpdateImageRegistryTimingScanTaskRequest"/></param>
         /// <returns><see cref="UpdateImageRegistryTimingScanTaskResponse"/></returns>

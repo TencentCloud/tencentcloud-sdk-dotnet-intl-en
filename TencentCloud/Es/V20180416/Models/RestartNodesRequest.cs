@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Cluster instance ID
+        /// Cluster instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -37,22 +37,58 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] NodeNames{ get; set; }
 
         /// <summary>
-        /// Whether to force restart
+        /// Whether to perform forced reboot.
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// The restart mode. Valid values: `in-place` (default), `blue-green`.
+        /// Optional restart mode. `in-place`: restart; `blue-green`: blue-green restart. Default value: `in-place`.
         /// </summary>
         [JsonProperty("RestartMode")]
         public string RestartMode{ get; set; }
 
         /// <summary>
-        /// The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+        /// Node status, for use in blue-green mode; offline node blue/green at risk
         /// </summary>
         [JsonProperty("IsOffline")]
         public bool? IsOffline{ get; set; }
+
+        /// <summary>
+        /// cvm delay listing time
+        /// </summary>
+        [JsonProperty("CvmDelayOnlineTime")]
+        public ulong? CvmDelayOnlineTime{ get; set; }
+
+        /// <summary>
+        /// Number of concurrent shard migrations
+        /// </summary>
+        [JsonProperty("ShardAllocationConcurrents")]
+        public ulong? ShardAllocationConcurrents{ get; set; }
+
+        /// <summary>
+        /// Shard migration concurrency speed
+        /// </summary>
+        [JsonProperty("ShardAllocationBytes")]
+        public ulong? ShardAllocationBytes{ get; set; }
+
+        /// <summary>
+        /// Whether to enable the placement group asynchronous task
+        /// </summary>
+        [JsonProperty("EnableScheduleRecoverGroup")]
+        public bool? EnableScheduleRecoverGroup{ get; set; }
+
+        /// <summary>
+        /// Time period of the async task for the placement group
+        /// </summary>
+        [JsonProperty("EnableScheduleOperationDuration")]
+        public EnableScheduleOperationDuration EnableScheduleOperationDuration{ get; set; }
+
+        /// <summary>
+        /// Event ID list.
+        /// </summary>
+        [JsonProperty("EventTypeIds")]
+        public string[] EventTypeIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +101,12 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
             this.SetParamSimple(map, prefix + "IsOffline", this.IsOffline);
+            this.SetParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
+            this.SetParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
+            this.SetParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
+            this.SetParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+            this.SetParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+            this.SetParamArraySimple(map, prefix + "EventTypeIds.", this.EventTypeIds);
         }
     }
 }

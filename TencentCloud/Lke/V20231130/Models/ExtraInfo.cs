@@ -25,7 +25,7 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// ECharts information
         /// </summary>
         [JsonProperty("EChartsInfo")]
         public string[] EChartsInfo{ get; set; }

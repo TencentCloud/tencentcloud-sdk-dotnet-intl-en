@@ -25,19 +25,19 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Task serial number</p>
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task content</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Task status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

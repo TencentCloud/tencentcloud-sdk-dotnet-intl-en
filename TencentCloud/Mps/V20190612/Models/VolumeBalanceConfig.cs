@@ -34,7 +34,10 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Type. Valid values:
+        /// <li>loudNorm: loudness normalization</li>
+        /// <li>gainControl: reduce abrupt change</li>
+        /// Default value: loudNorm.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

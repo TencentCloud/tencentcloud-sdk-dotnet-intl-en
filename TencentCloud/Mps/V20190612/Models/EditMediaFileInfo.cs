@@ -25,25 +25,27 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Input video information.
+        /// Video input information.
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// [Edit] task takes effect, video editing start time offset, measurement unit: second.
+        /// [Edit] task takes effect. Start time offset for video editing, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// [Edit] task takes effect, video editing end time offset, measurement unit: second.
+        /// [Edit] task takes effect. End time offset of video editing. Measurement unit: second.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
+        /// [Compose] task required, used for media in track elements to associate source material ID.
         /// 
+        /// Note: It can include letters (case insensitive), digits, -, and _, up to 32 characters.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

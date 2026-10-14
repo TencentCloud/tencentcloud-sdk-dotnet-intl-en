@@ -37,7 +37,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TranslateDstLanguage{ get; set; }
 
         /// <summary>
-        /// <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Turn on intelligent translation simplification.</li><li>OFF: Turn off intelligent translation simplification.</li></ul><p>Default value: OFF</p>
+        /// <p>Intelligent translation simplification.</p><p>Enumeration values: </p><ul><li>ON: Enable intelligent translation simplification.</li><li>OFF: Disable intelligent translation simplification.</li></ul><p>Default value: OFF</p>
         /// </summary>
         [JsonProperty("SimplifyTranslation")]
         public string SimplifyTranslation{ get; set; }

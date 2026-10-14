@@ -25,13 +25,18 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Filter the content.
+        /// For example, you can use "AuditStatus" to filter by review status.
         /// </summary>
         [JsonProperty("FilterKey")]
         public string FilterKey{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filtering criteria.
+        /// For example, for the filter content "AuditStatus", use the following filtering conditions:
+        /// "ContentFailed": "Content review failed"
+        /// "PictureFailed": "Image review failed",
+        /// "ContentAndPictureFailed": "Image and content review failed",
         /// </summary>
         [JsonProperty("FilterValue")]
         public string[] FilterValue{ get; set; }

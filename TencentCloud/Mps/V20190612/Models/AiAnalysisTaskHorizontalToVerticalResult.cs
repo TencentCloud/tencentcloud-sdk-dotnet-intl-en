@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error code. 0: successful; other values: failed.
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent horizontal-to-vertical task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskHorizontalToVerticalInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent horizontal-to-vertical task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHorizontalToVerticalOutput Output{ get; set; }

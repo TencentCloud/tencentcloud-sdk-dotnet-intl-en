@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Confidence, with a value range from 0 to 100.
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
 
         /// <summary>
-        /// Start time of occurrence, in seconds.
+        /// Start timestamp of the occurrence, in seconds.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Area coordinates (px), i.e. coordinates of the top-left corner and coordinate of the bottom-right corner.
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

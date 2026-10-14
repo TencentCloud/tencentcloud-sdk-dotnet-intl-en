@@ -25,16 +25,22 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// AZ
+        /// AZ.
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
+
+        /// <summary>
+        /// Whether it is a hidden AZ
+        /// </summary>
+        [JsonProperty("Hidden")]
+        public bool? Hidden{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
         }
     }
 }

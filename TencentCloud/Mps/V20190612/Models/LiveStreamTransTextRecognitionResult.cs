@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Text{ get; set; }
 
         /// <summary>
-        /// Start PTS time of a translated fragment, in seconds.
+        /// Start PTS time of a translated segment, in seconds.
         /// </summary>
         [JsonProperty("StartPtsTime")]
         public float? StartPtsTime{ get; set; }
@@ -55,25 +55,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Trans{ get; set; }
 
         /// <summary>
-        /// 
+        /// Translation start UTC time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// UTC time when translation is completed.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Steady-state tag.
         /// </summary>
         [JsonProperty("SteadyState")]
         public bool? SteadyState{ get; set; }
 
         /// <summary>
-        /// 
+        /// UserId for real-time translation over websocket and trtc
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

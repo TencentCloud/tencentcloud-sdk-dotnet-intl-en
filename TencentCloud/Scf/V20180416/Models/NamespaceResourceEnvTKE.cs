@@ -25,49 +25,52 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterID")]
         public string ClusterID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetID")]
         public string SubnetID{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data storage address
         /// </summary>
         [JsonProperty("DataPath")]
         public string DataPath{ get; set; }
 
         /// <summary>
-        /// 
+        /// node selector
         /// </summary>
         [JsonProperty("NodeSelector")]
         public K8SLabel[] NodeSelector{ get; set; }
 
         /// <summary>
-        /// 
+        /// Taint and toleration
         /// </summary>
         [JsonProperty("Tolerations")]
         public K8SToleration[] Tolerations{ get; set; }
 
         /// <summary>
-        /// 
+        /// Starting node port number occupied by the scf component
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 
+        /// pod patch content in yaml format, for example
+        /// metadata:
+        ///   labels:
+        ///     key: value
         /// </summary>
         [JsonProperty("PodTemplatePatch")]
         public string PodTemplatePatch{ get; set; }

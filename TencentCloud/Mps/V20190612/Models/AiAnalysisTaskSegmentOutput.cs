@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public SegmentRecognitionItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video summary, used for offline scenarios.
         /// </summary>
         [JsonProperty("Abstract")]
         public string Abstract{ get; set; }

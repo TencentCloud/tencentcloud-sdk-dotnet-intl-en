@@ -25,26 +25,26 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Whether to scan all images
+        /// Scan All Images (Deprecated)
         /// </summary>
         [JsonProperty("All")]
         [System.Obsolete]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// List of scanned images
+        /// Scanned Image List
         /// </summary>
         [JsonProperty("Images")]
         public ImageInfo[] Images{ get; set; }
 
         /// <summary>
-        /// Array of scan types
+        /// Type Array for scanning
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }
 
         /// <summary>
-        /// List of IDs of scanned images
+        /// Scanned Image List ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
@@ -56,37 +56,37 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong?[] ExcludeIDs{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the Latest Image
         /// </summary>
         [JsonProperty("IsLatest")]
         public bool? IsLatest{ get; set; }
 
         /// <summary>
-        /// 
+        /// Scan Scope. 0: All Images; 1: Custom Images; 2: Recommended Scan Images
         /// </summary>
         [JsonProperty("ScanScope")]
         public ulong? ScanScope{ get; set; }
 
         /// <summary>
-        /// 
+        /// Repository type
         /// </summary>
         [JsonProperty("RegistryType")]
         public string[] RegistryType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Namespace
         /// </summary>
         [JsonProperty("Namespace")]
         public string[] Namespace{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether There Are Running Containers
         /// </summary>
         [JsonProperty("ContainerRunning")]
         public bool? ContainerRunning{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task Timeout Duration Unit (s)
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

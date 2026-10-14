@@ -25,53 +25,58 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Type.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Public URL
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public url
         /// </summary>
         [JsonProperty("PublicUrl")]
         public string PublicUrl{ get; set; }
 
         /// <summary>
-        /// Private URL
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Private network url
         /// </summary>
         [JsonProperty("PrivateUrl")]
         public string PrivateUrl{ get; set; }
 
         /// <summary>
-        /// Public network access
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Public access permissions
         /// </summary>
         [JsonProperty("PublicAccess")]
         public string PublicAccess{ get; set; }
 
         /// <summary>
-        /// Private network access
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Private network access permission
         /// </summary>
         [JsonProperty("PrivateAccess")]
         public string PrivateAccess{ get; set; }
 
         /// <summary>
         /// Version
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
+
+        /// <summary>
+        /// Intranet vip of the web service
+        /// </summary>
+        [JsonProperty("PrivateVip")]
+        public string PrivateVip{ get; set; }
+
+        /// <summary>
+        /// Custom url of cerebro on the private network
+        /// </summary>
+        [JsonProperty("CustomPrivateUrl")]
+        public string CustomPrivateUrl{ get; set; }
 
 
         /// <summary>
@@ -86,6 +91,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
             this.SetParamSimple(map, prefix + "PrivateAccess", this.PrivateAccess);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "PrivateVip", this.PrivateVip);
+            this.SetParamSimple(map, prefix + "CustomPrivateUrl", this.CustomPrivateUrl);
         }
     }
 }

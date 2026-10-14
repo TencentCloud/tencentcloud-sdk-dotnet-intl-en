@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Error code. 0 is returned if the request is successful.</p>
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Error message. success is returned if the request is successful.</p>
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>ID of the cloned generated voice type</p>
         /// </summary>
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>base64-encoded synthetic audio</p>
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Synthetic audio Url, valid for 24 hours</p>
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }

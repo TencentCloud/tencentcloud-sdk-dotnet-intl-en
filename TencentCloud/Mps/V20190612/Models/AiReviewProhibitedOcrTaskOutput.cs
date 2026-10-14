@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
+        /// Prohibited content score of the Ocr text. Value range: 0–100.
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Ocr text prohibited content result suggestion, value ranges from...to...
+        /// Ocr text violation result suggestion. Value range:
         /// <li>pass.</li>
         /// <li>review.</li>
         /// <li>block.</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Video segment list with Ocr text suspected of prohibition violations.
+        /// List of video segments with Ocr text suspected of prohibition violations.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

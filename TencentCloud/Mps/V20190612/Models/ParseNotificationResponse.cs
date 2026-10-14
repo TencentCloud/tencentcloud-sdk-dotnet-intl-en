@@ -28,19 +28,19 @@ namespace TencentCloud.Mps.V20190612.Models
         /// Supported event types. Currently, the valid values include:
         /// <li>WorkflowTask: video workflow processing task.</li>
         /// <li>EditMediaTask: video editing task.</li>
-        /// <li>ScheduleTask: Orchestration task.</li>
+        /// <li>ScheduleTask: orchestration task.</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video processing task information. This field has a value only when EventType is WorkflowTask.
         /// </summary>
         [JsonProperty("WorkflowTaskEvent")]
         public WorkflowTask WorkflowTaskEvent{ get; set; }
 
         /// <summary>
-        /// 
+        /// Video editing task information. This field has a value only when EventType is EditMediaTask.
         /// </summary>
         [JsonProperty("EditMediaTaskEvent")]
         public EditMediaTask EditMediaTaskEvent{ get; set; }
@@ -58,15 +58,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// 
+        /// Orchestration task information. This field has a value only when EventType is ScheduleTask.
         /// </summary>
         [JsonProperty("ScheduleTaskEvent")]
         public ScheduleTask ScheduleTaskEvent{ get; set; }
 
         /// <summary>
-        /// -Expiration time, event notification signature expiration UNIX timestamp.
-        /// -The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a message notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks.
-        /// -Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since midnight (UTC/GMT) on January 1, 1970.
+        /// -Expiration time. The event notification signature expires at this UNIX timestamp.
+        /// -The default expiration time for notifications from Media Processing Service (MPS) is 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which can prevent network replay attacks.
+        /// -Timestamp is in decimal UNIX timestamp format, i.e., the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
@@ -78,13 +78,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Sign{ get; set; }
 
         /// <summary>
-        /// 
+        /// Batch operation information. This field has a value only when EventType is BatchTask.
         /// </summary>
         [JsonProperty("BatchTaskEvent")]
         public BatchSubTaskResult BatchTaskEvent{ get; set; }
 
         /// <summary>
-        /// 
+        /// Information about the digital watermark extraction task. This field has a value only when EventType is ExtractBlindWatermark.
         /// </summary>
         [JsonProperty("ExtractBlindWatermarkTask")]
         public ExtractBlindWatermarkTask ExtractBlindWatermarkTask{ get; set; }

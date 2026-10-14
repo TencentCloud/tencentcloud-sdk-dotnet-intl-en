@@ -26,21 +26,21 @@ namespace TencentCloud.Mps.V20190612.Models
         
         /// <summary>
         /// Capability configuration switch. Valid values:
-        /// <li>ON: enabled</li>
-        /// <li>OFF: disabled</li>
+        /// <li>ON: enabled;</li>
+        /// <li>OFF: disabled.</li>
         /// Default value: ON.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 
+        /// Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
         /// </summary>
         [JsonProperty("FpsNum")]
         public long? FpsNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
         /// </summary>
         [JsonProperty("FpsDen")]
         public long? FpsDen{ get; set; }

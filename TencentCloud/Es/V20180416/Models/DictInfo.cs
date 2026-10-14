@@ -25,7 +25,7 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Dictionary key value
+        /// Dictionary key-value
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Es.V20180416.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Dictionary size in B
+        /// Dictionary size. Unit: B.
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }

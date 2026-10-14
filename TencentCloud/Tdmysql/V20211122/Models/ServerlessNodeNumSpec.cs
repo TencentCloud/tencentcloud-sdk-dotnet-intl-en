@@ -25,13 +25,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Minimum number of nodes.</p>
         /// </summary>
         [JsonProperty("MinNodeNum")]
         public long? MinNodeNum{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Maximum number of nodes.</p>
         /// </summary>
         [JsonProperty("MaxNodeNum")]
         public long? MaxNodeNum{ get; set; }

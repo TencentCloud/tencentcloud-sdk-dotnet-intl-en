@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Opening pts.
         /// </summary>
         [JsonProperty("HeadTimeOffset")]
         public float? HeadTimeOffset{ get; set; }
 
         /// <summary>
-        /// 
+        /// Outro pts.
         /// </summary>
         [JsonProperty("TailTimeOffset")]
         public float? TailTimeOffset{ get; set; }

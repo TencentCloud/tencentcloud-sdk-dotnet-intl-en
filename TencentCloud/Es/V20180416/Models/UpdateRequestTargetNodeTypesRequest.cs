@@ -25,13 +25,13 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Instance ID.
+        /// Instance ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// A list of node types used to receive requests.
+        /// List of target node types that receive requests
         /// </summary>
         [JsonProperty("TargetNodeTypes")]
         public string[] TargetNodeTypes{ get; set; }

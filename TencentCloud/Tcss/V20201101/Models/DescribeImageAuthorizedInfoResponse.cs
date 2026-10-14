@@ -25,61 +25,61 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Total number of valid image licenses
+        /// Total number of effective image licenses.
         /// </summary>
         [JsonProperty("TotalAuthorizedCnt")]
         public ulong? TotalAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// Number of used image licenses
+        /// Used image licenses
         /// </summary>
         [JsonProperty("UsedAuthorizedCnt")]
         public ulong? UsedAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// Number of images with scan enabled
+        /// Scan image count enabled
         /// </summary>
         [JsonProperty("ScannedImageCnt")]
         public ulong? ScannedImageCnt{ get; set; }
 
         /// <summary>
-        /// Number of images with scan not enabled
+        /// Scan image count when not enabled
         /// </summary>
         [JsonProperty("NotScannedImageCnt")]
         public ulong? NotScannedImageCnt{ get; set; }
 
         /// <summary>
-        /// Number of local images with scan not enabled
+        /// Number of Local Images with Scans Not Enabled
         /// </summary>
         [JsonProperty("NotScannedLocalImageCnt")]
         public ulong? NotScannedLocalImageCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of licensed trial images.
         /// </summary>
         [JsonProperty("TrialAuthorizedCnt")]
         public ulong? TrialAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of licensed trial images that have been used.
         /// </summary>
         [JsonProperty("UsedTrialAuthorizedCnt")]
         public ulong? UsedTrialAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of purchased image authorizations
         /// </summary>
         [JsonProperty("PurchasedAuthorizedCnt")]
         public ulong? PurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Number of purchased licensed images that have been used.
         /// </summary>
         [JsonProperty("UsedPurchasedAuthorizedCnt")]
         public ulong? UsedPurchasedAuthorizedCnt{ get; set; }
 
         /// <summary>
-        /// 
+        /// Whether the free image licenses can be collected.
         /// </summary>
         [JsonProperty("CanApplyFreeImageAuthorize")]
         public bool? CanApplyFreeImageAuthorize{ get; set; }

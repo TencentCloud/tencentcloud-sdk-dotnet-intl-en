@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public DubbingConfig DubbingConfig{ get; set; }
 
         /// <summary>
-        /// <p>Output configuration information.</p>
+        /// <p>Outputs configuration message.</p>
         /// </summary>
         [JsonProperty("OutputConfig")]
         public DubbingOutputConfig OutputConfig{ get; set; }

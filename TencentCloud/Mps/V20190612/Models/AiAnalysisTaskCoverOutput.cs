@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Intelligent cover list.
+        /// List of smart covers.
         /// </summary>
         [JsonProperty("CoverSet")]
         public MediaAiAnalysisCoverItem[] CoverSet{ get; set; }
 
         /// <summary>
-        /// Intelligent cover storage location.
+        /// Storage location of the intelligent cover.
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }

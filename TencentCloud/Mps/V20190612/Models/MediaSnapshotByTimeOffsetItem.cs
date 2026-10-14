@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Specification for SnapshotByTimeOffset, please refer to the [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+        /// SnapshotByTimeOffset specification. See SnapshotByTimeOffset parameter template.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// A screenshot information set of the same specification, each element represents a screenshot.
+        /// Screenshot information set of the same specification, where each element represents a screenshot.
         /// </summary>
         [JsonProperty("PicInfoSet")]
         public MediaSnapshotByTimePicInfoItem[] PicInfoSet{ get; set; }
 
         /// <summary>
-        /// Storage location of the SnapshotByTimeOffset file.
+        /// Storage location of the time point screenshot file.
         /// </summary>
         [JsonProperty("Storage")]
         public TaskOutputStorage Storage{ get; set; }

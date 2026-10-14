@@ -25,13 +25,13 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Issue.</p>
         /// </summary>
         [JsonProperty("Question")]
         public string Question{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Selected answer tag.</p>
         /// </summary>
         [JsonProperty("SelectedLabels")]
         public string[] SelectedLabels{ get; set; }

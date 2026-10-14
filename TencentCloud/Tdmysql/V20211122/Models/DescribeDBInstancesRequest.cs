@@ -49,13 +49,13 @@ namespace TencentCloud.Tdmysql.V20211122.Models
         public string EngineType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Query By Field, supporting StorageNodeNum/CreateTime/CreateVersion</p>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Sorting order</p><p>Enumeration values:</p><ul><li>ASC: ascending</li><li>DESC: descending</li></ul><p>Default value: DESC</p>
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

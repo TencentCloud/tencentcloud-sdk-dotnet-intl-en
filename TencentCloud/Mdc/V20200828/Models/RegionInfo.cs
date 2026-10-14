@@ -25,7 +25,7 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// Region name
+        /// Zone name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

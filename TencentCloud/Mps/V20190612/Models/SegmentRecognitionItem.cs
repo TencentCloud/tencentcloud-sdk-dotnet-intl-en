@@ -31,25 +31,25 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Start time offset of a recording clip.
+        /// Start time offset of the segment.
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
         /// <summary>
-        /// End time offset of the recording clip.
+        /// Segment end time offset.
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// Split segment URL.
+        /// Segment URL.
         /// </summary>
         [JsonProperty("SegmentUrl")]
         public string SegmentUrl{ get; set; }
 
         /// <summary>
-        /// Segment cover.
+        /// Split clip cover.
         /// </summary>
         [JsonProperty("CovImgUrl")]
         public string CovImgUrl{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Specify the figure ID.
+        /// Specify the person ID.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }

@@ -25,74 +25,70 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Destination address list. Used when the SRT mode is CALLER.
         /// </summary>
         [JsonProperty("Destinations")]
         public SRTAddressDestination[] Destinations{ get; set; }
 
         /// <summary>
-        /// Stream ID.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Stream Id.
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }
 
         /// <summary>
-        /// Latency.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Delay.
         /// </summary>
         [JsonProperty("Latency")]
         public long? Latency{ get; set; }
 
         /// <summary>
-        /// Receive latency.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Receive delay.
         /// </summary>
         [JsonProperty("RecvLatency")]
         public long? RecvLatency{ get; set; }
 
         /// <summary>
-        /// Peer latency.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Peer delay.
         /// </summary>
         [JsonProperty("PeerLatency")]
         public long? PeerLatency{ get; set; }
 
         /// <summary>
-        /// Peer idle timeout period.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Idle timeout period of the peer.
         /// </summary>
         [JsonProperty("PeerIdleTimeout")]
         public long? PeerIdleTimeout{ get; set; }
 
         /// <summary>
         /// Encryption key.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Passphrase")]
         public string Passphrase{ get; set; }
 
         /// <summary>
         /// Encryption key length.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PbKeyLen")]
         public long? PbKeyLen{ get; set; }
 
         /// <summary>
-        /// The SRT mode.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// SRT mode.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The server’s listen address, which is valid if `Mode` is `LISTENER`.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Server listening address, used when the SRT mode is LISTENER.
         /// </summary>
         [JsonProperty("SourceAddresses")]
         public OutputSRTSourceAddressResp[] SourceAddresses{ get; set; }
+
+        /// <summary>
+        /// SRT FEC configuration
+        /// </summary>
+        [JsonProperty("FEC")]
+        public SRTFECFullOptions FEC{ get; set; }
 
 
         /// <summary>
@@ -110,6 +106,7 @@ namespace TencentCloud.Mdc.V20200828.Models
             this.SetParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
+            this.SetParamObj(map, prefix + "FEC.", this.FEC);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Face Recognition template ID.
+        /// Face recognition template ID.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

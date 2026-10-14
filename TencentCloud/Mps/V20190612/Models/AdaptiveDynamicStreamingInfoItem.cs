@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Adaptive bitrate streaming specification.
+        /// Adaptive bitstreaming specification.
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// Packaging format, which may be two kinds: HLS and MPEG-DASH.
+        /// Packaging format. Possible values: HLS and MPEG-DASH.
         /// </summary>
         [JsonProperty("Package")]
         public string Package{ get; set; }

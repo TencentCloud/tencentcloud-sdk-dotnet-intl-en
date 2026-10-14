@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Input for the sampling screenshot task on a video.
+        /// Input of the sampling screenshot task for videos.
         /// </summary>
         [JsonProperty("Input")]
         public SampleSnapshotTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the sampling screenshot task for videos.
         /// </summary>
         [JsonProperty("Output")]
         public MediaSampleSnapshotItem Output{ get; set; }

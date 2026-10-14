@@ -25,31 +25,31 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The connection status. Valid values: Connected, Waiting, Idle.
+        /// Current connection status. Connected | Waiting | Idle.
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// The connection mode. Valid values: Listener, Caller.
+        /// Connection mode. Listener|Caller.
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The connected time.
+        /// Connection duration, unit: ms.
         /// </summary>
         [JsonProperty("ConnectedTime")]
         public long? ConnectedTime{ get; set; }
 
         /// <summary>
-        /// The real-time bitrate (bps).
+        /// Real-time bitrate, unit in bps.
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
-        /// The number of retries.
+        /// Number of retries.
         /// </summary>
         [JsonProperty("Reconnections")]
         public long? Reconnections{ get; set; }

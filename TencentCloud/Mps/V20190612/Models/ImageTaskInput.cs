@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiPosterSuiteConfig AiPosterSuiteConfig{ get; set; }
 
         /// <summary>
-        /// <p>Ai image cutout configuration</p>
+        /// <p>Ai cutout configuration</p>
         /// </summary>
         [JsonProperty("AiCutoutConfig")]
         public AiCutoutConfig AiCutoutConfig{ get; set; }
 
         /// <summary>
-        /// <p>Ai Image Expansion Configuration</p>
+        /// <p>Ai outpainting configuration</p>
         /// </summary>
         [JsonProperty("AiExpansionConfig")]
         public AiExpansionConfig AiExpansionConfig{ get; set; }
@@ -67,10 +67,28 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiStoryboardConfig AiStoryboardConfig{ get; set; }
 
         /// <summary>
-        /// <p>Image understanding configuration.</p>
+        /// <p>Image understanding configuration</p>
         /// </summary>
         [JsonProperty("UnderstandImageConfig")]
         public UnderstandImageConfig UnderstandImageConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Image quality assessment configuration</p>
+        /// </summary>
+        [JsonProperty("ImageQualityConfig")]
+        public ImageQualityConfig ImageQualityConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Layer fusion configuration.</p>
+        /// </summary>
+        [JsonProperty("AiComposeConfig")]
+        public AiComposeConfig AiComposeConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Layer separation configuration.</p>
+        /// </summary>
+        [JsonProperty("AiDecomposeConfig")]
+        public AiDecomposeConfig AiDecomposeConfig{ get; set; }
 
 
         /// <summary>
@@ -86,6 +104,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiExpansionConfig.", this.AiExpansionConfig);
             this.SetParamObj(map, prefix + "AiStoryboardConfig.", this.AiStoryboardConfig);
             this.SetParamObj(map, prefix + "UnderstandImageConfig.", this.UnderstandImageConfig);
+            this.SetParamObj(map, prefix + "ImageQualityConfig.", this.ImageQualityConfig);
+            this.SetParamObj(map, prefix + "AiComposeConfig.", this.AiComposeConfig);
+            this.SetParamObj(map, prefix + "AiDecomposeConfig.", this.AiDecomposeConfig);
         }
     }
 }

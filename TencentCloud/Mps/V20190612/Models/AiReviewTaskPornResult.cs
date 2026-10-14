@@ -49,13 +49,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Content review porn task input.
+        /// Input for the content review pornography detection task.
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Pornography detection task output of content review.
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPornTaskOutput Output{ get; set; }

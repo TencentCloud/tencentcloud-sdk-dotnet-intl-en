@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Whether the rule takes effect. Valid values: `0` (no); `1` (yes).
+        /// Whether the Rule Is Effective. 0: Not Effective; 1: Effective
         /// </summary>
         [JsonProperty("IsEnabled")]
         public long? IsEnabled{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? RuleId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Auto-Scan Switch. 0: Off; 1: On
         /// </summary>
         [JsonProperty("AutoScanEnabled")]
         public long? AutoScanEnabled{ get; set; }
 
         /// <summary>
-        /// 
+        /// Auto-Scan Range
         /// </summary>
         [JsonProperty("ScanType")]
         public string[] ScanType{ get; set; }

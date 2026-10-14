@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// Name of the layer to bind. Leave it blank if you want to unbind layers
+        /// Name of the bound layer. Pass an empty string to unbind the layer.
         /// </summary>
         [JsonProperty("LayerName")]
         public string LayerName{ get; set; }
 
         /// <summary>
-        /// Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+        /// Bind or unbind a layer version. To unbind the last layer version associated with a function version, set LayerVersion to 0.
         /// </summary>
         [JsonProperty("LayerVersion")]
         public long? LayerVersion{ get; set; }

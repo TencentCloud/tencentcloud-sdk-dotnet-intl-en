@@ -25,49 +25,49 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// <p>Clone audio base64 code</p>
         /// </summary>
         [JsonProperty("AudioData")]
         public string AudioData{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cloning audio URL. Valid when AudioData is empty.</p>
         /// </summary>
         [JsonProperty("AudioUrl")]
         public string AudioUrl{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Cloning audio language. The default language is Chinese. Supported languages are the same as those for TextLang in text to speech.</p>
         /// </summary>
         [JsonProperty("AudioLang")]
         public string AudioLang{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Voice attribute. Use timbre for querying and matching.</p>
         /// </summary>
         [JsonProperty("VoiceProfile")]
         public VoiceProfile VoiceProfile{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Trial text</p>
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Language of the trial text. By default, it is automatically detected if left blank. The currently supported languages are the same as those for TTS.</p>
         /// </summary>
         [JsonProperty("TextLang")]
         public string TextLang{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Output parameters. You can specify the output audio format, etc. The default output audio format is base64.</p>
         /// </summary>
         [JsonProperty("Output")]
         public SyncDubbingOutputOption Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Extended parameters in the format of a JSON string.</p>
         /// </summary>
         [JsonProperty("ExtParam")]
         public string ExtParam{ get; set; }

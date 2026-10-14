@@ -25,46 +25,70 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// Unique operation ID
+        /// <p>Unique id of the operation</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// Operation start time
+        /// <p>Operation start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Operation type
+        /// <p>Operation type.</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Operation details
+        /// <p>Operation details.</p>
         /// </summary>
         [JsonProperty("Detail")]
         public OperationDetail Detail{ get; set; }
 
         /// <summary>
-        /// Operation result
+        /// <p>Operation result.</p>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// Workflow task information
+        /// <p>Process task info</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public TaskDetail[] Tasks{ get; set; }
 
         /// <summary>
-        /// Operation progress
+        /// <p>Operation progress.</p>
         /// </summary>
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
+
+        /// <summary>
+        /// <p>Rollback tag. 0: not rolled back, 1: rolling back, 2: rolled back</p>
+        /// </summary>
+        [JsonProperty("RollbackTag")]
+        public long? RollbackTag{ get; set; }
+
+        /// <summary>
+        /// <p>Operator Uin</p>
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
+        /// <summary>
+        /// <p>Auto scaling flag. Valid values: 0 (non-auto) and 1 (auto).</p>
+        /// </summary>
+        [JsonProperty("AutoScaleTag")]
+        public ulong? AutoScaleTag{ get; set; }
+
+        /// <summary>
+        /// <p>Process exception cause</p>
+        /// </summary>
+        [JsonProperty("SuspendedReason")]
+        public string SuspendedReason{ get; set; }
 
 
         /// <summary>
@@ -79,6 +103,10 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+            this.SetParamSimple(map, prefix + "AutoScaleTag", this.AutoScaleTag);
+            this.SetParamSimple(map, prefix + "SuspendedReason", this.SuspendedReason);
         }
     }
 }

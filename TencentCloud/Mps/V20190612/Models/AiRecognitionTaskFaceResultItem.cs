@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Unique identification ID of the figure.
+        /// Unique identification ID of the person.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Figure library type, indicates which figure library the recognized figure comes from.
+        /// Person library type. It indicates the person library that a recognized figure comes from.
         /// <li>Default: default figure library;</li>
         /// <li>UserDefine: user-defined character library.</li>
         /// </summary>
@@ -45,45 +45,45 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Result set of segments that contain people.
+        /// Result set of segments where the person appears.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskFaceSegmentItem[] SegmentSet{ get; set; }
 
         /// <summary>
-        /// Gender
-        /// <li>Male: man</li>
+        /// Person gender:
+        /// <li>Male: man;</li>
         /// <li>Female: woman.</li>
         /// </summary>
         [JsonProperty("Gender")]
         public string Gender{ get; set; }
 
         /// <summary>
-        /// Date of birth of a person.
+        /// Date of birth of the person.
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }
 
         /// <summary>
-        /// Occupation or position.
+        /// Person's occupation or position.
         /// </summary>
         [JsonProperty("Profession")]
         public string Profession{ get; set; }
 
         /// <summary>
-        /// Graduation institution of the person.
+        /// University of the person
         /// </summary>
         [JsonProperty("SchoolOfGraduation")]
         public string SchoolOfGraduation{ get; set; }
 
         /// <summary>
-        /// Figure description.
+        /// Figure introduction.
         /// </summary>
         [JsonProperty("Abstract")]
         public string Abstract{ get; set; }
 
         /// <summary>
-        /// Birthplace or place of origin of a person.
+        /// Birthplace or place of origin of the person.
         /// </summary>
         [JsonProperty("PlaceOfBirth")]
         public string PlaceOfBirth{ get; set; }
@@ -98,14 +98,14 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Sensitivity labeling:
-        /// <li>NORMAL: Normal;</li>
+        /// <li>Normal: The status is normal;</li>
         /// <li>Sensitive: sensitive.</li>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Screenshot link
+        /// Screenshot link.
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

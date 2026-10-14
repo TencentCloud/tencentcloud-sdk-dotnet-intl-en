@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 
+        /// Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ErrMsg{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error message.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoding task output.
         /// </summary>
         [JsonProperty("Output")]
         public ImageProcessTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// 
+        /// Transcoding progress, with a value range of [0-100].
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }

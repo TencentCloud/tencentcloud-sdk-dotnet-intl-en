@@ -25,19 +25,19 @@ namespace TencentCloud.Mdc.V20200828.Models
     {
         
         /// <summary>
-        /// The relay destination addresses. One or two addresses are allowed.
+        /// Destination address. You can enter 1 to 2 addresses.
         /// </summary>
         [JsonProperty("Destinations")]
         public CreateOutputRTPSettingsDestinations[] Destinations{ get; set; }
 
         /// <summary>
-        /// This parameter must be set to `none`.
+        /// Can only be filled in with none.
         /// </summary>
         [JsonProperty("FEC")]
         public string FEC{ get; set; }
 
         /// <summary>
-        /// The timeout period (ms).
+        /// Idle timeout period, in milliseconds.
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public long? IdleTimeout{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Transparency threshold</p><p>Value ranges from 0 to 255.</p><p>Default value: 30</p>
+        /// <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
         /// </summary>
         [JsonProperty("TransparencyThreshold")]
         public long? TransparencyThreshold{ get; set; }
 
         /// <summary>
-        /// <p>Opaque threshold must be greater than TransparencyThreshold.</p><p>Value ranges from 0 to 255.</p><p>Default value: 127.</p>
+        /// <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
         /// </summary>
         [JsonProperty("OpaqueThreshold")]
         public long? OpaqueThreshold{ get; set; }
 
         /// <summary>
-        /// <p>Edge sampling steps, default 5.</p><p>Value ranges from 1 to 10.</p>
+        /// <p>Edge sampling steps. Default value: 5</p><p>Value range: [1, 10]</p>
         /// </summary>
         [JsonProperty("EdgeSamplingStep")]
         public long? EdgeSamplingStep{ get; set; }
 
         /// <summary>
-        /// <p>Edge expansion steps. Default: 5</p>
+        /// <p>Edge expansion steps. Default value: 5</p>
         /// </summary>
         [JsonProperty("EdgeExpansionStep")]
         public long? EdgeExpansionStep{ get; set; }
 
         /// <summary>
-        /// <p>Edge fusion strength, default 0.5</p><p>Value ranges from 0 to 1.0</p>
+        /// <p>Edge fusion strength, default 0.5</p><p>Value range: [0, 1.0]</p>
         /// </summary>
         [JsonProperty("EdgeBlendingIntensity")]
         public float? EdgeBlendingIntensity{ get; set; }

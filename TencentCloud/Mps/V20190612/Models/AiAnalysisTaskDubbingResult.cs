@@ -43,13 +43,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// Intelligent dubbing task input.
+        /// Intelligent captioning task input.
         /// </summary>
         [JsonProperty("Input")]
         public AiAnalysisTaskDubbingInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Intelligent captioning task output.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskDubbingOutput Output{ get; set; }

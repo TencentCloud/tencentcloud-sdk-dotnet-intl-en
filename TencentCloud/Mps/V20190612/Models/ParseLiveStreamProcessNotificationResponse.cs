@@ -38,49 +38,49 @@ namespace TencentCloud.Mps.V20190612.Models
         public string NotificationType{ get; set; }
 
         /// <summary>
-        /// Task ID for video processing.
+        /// Video processing task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Error information of live stream processing. Valid when NotificationType is ProcessEof.
         /// </summary>
         [JsonProperty("ProcessEofInfo")]
         public LiveStreamProcessErrorInfo ProcessEofInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content moderation result. Valid when NotificationType is AiReviewResult.
         /// </summary>
         [JsonProperty("AiReviewResultInfo")]
         public LiveStreamAiReviewResultInfo AiReviewResultInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content recognition result. Valid when NotificationType is AiRecognitionResult.
         /// </summary>
         [JsonProperty("AiRecognitionResultInfo")]
         public LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Content analysis result. Valid when NotificationType is AiAnalysisResult.
         /// </summary>
         [JsonProperty("AiAnalysisResultInfo")]
         public LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Media quality inspection result. Valid when NotificationType is AiQualityControlResult.
         /// </summary>
         [JsonProperty("AiQualityControlResultInfo")]
         public LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Live streaming result is valid when NotificationType is LiveRecordResult.
         /// </summary>
         [JsonProperty("LiveRecordResultInfo")]
         public LiveStreamRecordResultInfo LiveRecordResultInfo{ get; set; }
 
         /// <summary>
-        /// Smart subtitle result, valid when NotificationType is AiSmartSubtitleResult.
+        /// Smart subtitle result. Valid when NotificationType is AiSmartSubtitleResult.
         /// </summary>
         [JsonProperty("AiSmartSubtitleResultInfo")]
         public LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo{ get; set; }
@@ -98,7 +98,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
-        /// -Expiration time, the UNIX timestamp for event notification signature expiration. Notifications from Media Processing Service (MPS) have a default expiration time of 10 minutes. If the time specified by the Timestamp value in a notification has expired, the notification can be deemed invalid, which helps prevent network replay attacks. The Timestamp format is a decimal UNIX timestamp, representing the seconds elapsed since midnight on January 1, 1970 (UTC/GMT).
+        /// - Expiration time: the UNIX Timestamp when the event notification signature expires. - Message notifications from media processing expire after 10 minutes by default. If the time specified by the Timestamp value in a message notification has expired, the notification is deemed invalid, which prevents network replay attacks. - Timestamp is in decimal UNIX Timestamp format, which is the seconds elapsed since January 1, 1970 (UTC/GMT midnight).
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }

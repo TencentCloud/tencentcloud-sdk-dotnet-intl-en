@@ -49,7 +49,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AiAnalysisTaskHeadTailInput Input{ get; set; }
 
         /// <summary>
-        /// 
+        /// Output of the opening and closing credits task.
         /// </summary>
         [JsonProperty("Output")]
         public AiAnalysisTaskHeadTailOutput Output{ get; set; }

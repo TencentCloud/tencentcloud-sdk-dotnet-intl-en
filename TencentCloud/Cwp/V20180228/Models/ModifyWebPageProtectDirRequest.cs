@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ProtectDirAddr{ get; set; }
 
         /// <summary>
-        /// Website protection directory name
+        /// Name of the website protection directory
         /// </summary>
         [JsonProperty("ProtectDirName")]
         public string ProtectDirName{ get; set; }

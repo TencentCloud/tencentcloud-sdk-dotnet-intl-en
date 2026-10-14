@@ -25,37 +25,40 @@ namespace TencentCloud.Lke.V20231130.Models
     {
         
         /// <summary>
-        /// 
+        /// Source index ID
         /// </summary>
         [JsonProperty("Index")]
         public long? Index{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reference source name
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reference source type
+        /// 1: QA
+        /// 2: Document fragment
+        /// 4: Online retrieved content
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Document fragment reference
         /// </summary>
         [JsonProperty("DocRefer")]
         public DocReference DocRefer{ get; set; }
 
         /// <summary>
-        /// 
+        /// QA reference
         /// </summary>
         [JsonProperty("QaRefer")]
         public QaReference QaRefer{ get; set; }
 
         /// <summary>
-        /// 
+        /// Reference information for online retrieval content
         /// </summary>
         [JsonProperty("WebSearchRefer")]
         public WebSearchReference WebSearchRefer{ get; set; }

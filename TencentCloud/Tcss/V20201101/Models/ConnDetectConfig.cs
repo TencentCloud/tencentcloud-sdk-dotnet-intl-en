@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 
+        /// Host QUUID
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// Host UUID
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }

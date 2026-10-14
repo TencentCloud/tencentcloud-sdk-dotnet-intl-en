@@ -26,14 +26,12 @@ namespace TencentCloud.Es.V20180416.Models
         
         /// <summary>
         /// Index metadata field
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("IndexMetaFields")]
         public IndexMetaField[] IndexMetaFields{ get; set; }
 
         /// <summary>
-        /// Total number of results
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Total query count
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

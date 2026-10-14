@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Full speech recognition segment list.
+        /// List of segments for full speech recognition.
         /// </summary>
         [JsonProperty("SegmentSet")]
         public AiRecognitionTaskAsrFullTextSegmentItem[] SegmentSet{ get; set; }

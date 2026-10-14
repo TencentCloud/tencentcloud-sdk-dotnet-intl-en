@@ -26,7 +26,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         
         /// <summary>
         /// The Base64-encoded value of an image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
-        /// Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, `ImageUrl` is used.
+        /// Either ImageUrl or ImageBase64 of the image must be provided. If both are provided, ImageUrl is used.
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
@@ -51,8 +51,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string BackImageUrl{ get; set; }
 
         /// <summary>
-        /// Whether to crop the profile photo. The default value is `false`, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
-        /// When this parameter is set to `true`, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
+        /// Whether to crop the profile photo. The default value is false, meaning not to return the Base64-encoded value of the profile photo on the Thai identity card.
+        /// When this parameter is set to true, the Base64-encoded value of the profile photo on the Thai identity card after rotation correction is returned.
         /// </summary>
         [JsonProperty("CropPortrait")]
         public bool? CropPortrait{ get; set; }

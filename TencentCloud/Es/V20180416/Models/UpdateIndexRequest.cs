@@ -25,61 +25,61 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// ES cluster ID
+        /// <p>ES cluster ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Type of the index to update. `auto`: Automated; `normal`: General.
+        /// <p>Updated index type. auto: autonomous index; normal: general index</p>
         /// </summary>
         [JsonProperty("IndexType")]
         public string IndexType{ get; set; }
 
         /// <summary>
-        /// Name of the index to update
+        /// <p>Updated index name</p>
         /// </summary>
         [JsonProperty("IndexName")]
         public string IndexName{ get; set; }
 
         /// <summary>
-        /// JSON-formatted index metadata to update, such as `mappings` and `settings`.
+        /// <p>Updated JSON-formatted index metadata, such as mappings and settings</p>
         /// </summary>
         [JsonProperty("UpdateMetaJson")]
         public string UpdateMetaJson{ get; set; }
 
         /// <summary>
-        /// Username for cluster access
+        /// <p>Cluster access username.</p>
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
         /// <summary>
-        /// Password for cluster access
+        /// <p>Cluster access password</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Whether to roll over the backup index
+        /// <p>Whether to scroll the backup index</p>
         /// </summary>
         [JsonProperty("RolloverBackingIndex")]
         public bool? RolloverBackingIndex{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether to retrieve the full uninstall index</p>
         /// </summary>
         [JsonProperty("MountIndex")]
         public bool? MountIndex{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Index Uuid</p>
         /// </summary>
         [JsonProperty("IndexUuid")]
         public string IndexUuid{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Backing index name</p>
         /// </summary>
         [JsonProperty("BackingIndexName")]
         public string BackingIndexName{ get; set; }

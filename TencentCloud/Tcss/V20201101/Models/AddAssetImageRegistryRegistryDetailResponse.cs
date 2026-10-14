@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// Connection error message
+        /// Connection error information
         /// </summary>
         [JsonProperty("HealthCheckErr")]
         public string HealthCheckErr{ get; set; }
 
         /// <summary>
-        /// Error message of the name
+        /// Incorrect name message
         /// </summary>
         [JsonProperty("NameRepeatErr")]
         public string NameRepeatErr{ get; set; }
