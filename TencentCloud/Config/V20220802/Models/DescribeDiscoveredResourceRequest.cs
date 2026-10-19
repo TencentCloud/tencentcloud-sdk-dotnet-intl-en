@@ -31,7 +31,7 @@ namespace TencentCloud.Config.V20220802.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Resource type
+        /// Resource type.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

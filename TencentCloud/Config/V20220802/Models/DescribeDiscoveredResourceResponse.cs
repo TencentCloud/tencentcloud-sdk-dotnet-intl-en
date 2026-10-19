@@ -26,70 +26,54 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// Resource ID
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Resource type
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource type.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// Resource Name
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource name
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
         /// Resource region
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// Resource availability zone
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource availability zone.
         /// </summary>
         [JsonProperty("ResourceZone")]
         public string ResourceZone{ get; set; }
 
         /// <summary>
-        /// Resource configuration
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource configuration.
         /// </summary>
         [JsonProperty("Configuration")]
         public string Configuration{ get; set; }
 
         /// <summary>
         /// Resource creation time
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ResourceCreateTime")]
         public string ResourceCreateTime{ get; set; }
 
         /// <summary>
         /// Resource tag
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Resource update time
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

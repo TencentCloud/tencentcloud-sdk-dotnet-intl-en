@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{03830C96-3E28-3E4E-924E-998E4E6827D1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1329</VersionPrefix>
+    <VersionPrefix>3.0.1409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
 
   <ItemGroup>
     <Compile Include="V20210119\MnaClient.cs" />
+    <Compile Include="V20210119\Models\AccessPointInfo.cs" />
     <Compile Include="V20210119\Models\ActivateHardware.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareRequest.cs" />
     <Compile Include="V20210119\Models\ActivateHardwareResponse.cs" />
@@ -73,6 +74,8 @@
     <Compile Include="V20210119\Models\DeleteGroupResponse.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnRequest.cs" />
     <Compile Include="V20210119\Models\DeleteL3ConnResponse.cs" />
+    <Compile Include="V20210119\Models\DescribeAccessPointListRequest.cs" />
+    <Compile Include="V20210119\Models\DescribeAccessPointListResponse.cs" />
     <Compile Include="V20210119\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="V20210119\Models\DescribeAccessRegionsResponse.cs" />
     <Compile Include="V20210119\Models\DestIpInfo.cs" />

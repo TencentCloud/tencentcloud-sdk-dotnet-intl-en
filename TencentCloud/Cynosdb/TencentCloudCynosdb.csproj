@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1402</VersionPrefix>
+    <VersionPrefix>3.0.1409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20190107\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\AuditInstanceFilters.cs" />
     <Compile Include="V20190107\Models\AuditInstanceInfo.cs" />
+    <Compile Include="V20190107\Models\AuditLog.cs" />
+    <Compile Include="V20190107\Models\AuditLogFilter.cs" />
     <Compile Include="V20190107\Models\AuditRuleFilters.cs" />
     <Compile Include="V20190107\Models\AuditRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\AutoCopyConfig.cs" />
@@ -193,6 +195,8 @@
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAuditInstanceListRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAuditInstanceListResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleTemplatesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAuditRuleWithInstanceIdsRequest.cs" />
@@ -383,6 +387,7 @@
     <Compile Include="V20190107\Models\InquirePriceRenewRequest.cs" />
     <Compile Include="V20190107\Models\InquirePriceRenewResponse.cs" />
     <Compile Include="V20190107\Models\InstanceAbility.cs" />
+    <Compile Include="V20190107\Models\InstanceAuditLogFilter.cs" />
     <Compile Include="V20190107\Models\InstanceAuditRule.cs" />
     <Compile Include="V20190107\Models\InstanceAuditStatus.cs" />
     <Compile Include="V20190107\Models\InstanceCLSDeliveryInfo.cs" />
@@ -411,6 +416,7 @@
     <Compile Include="V20190107\Models\LibraDBVersion.cs" />
     <Compile Include="V20190107\Models\LibraInstanceSet.cs" />
     <Compile Include="V20190107\Models\LogFilter.cs" />
+    <Compile Include="V20190107\Models\LogRuleTemplateInfo.cs" />
     <Compile Include="V20190107\Models\LogicBackupConfigInfo.cs" />
     <Compile Include="V20190107\Models\ManualBackupData.cs" />
     <Compile Include="V20190107\Models\MigrateDBItem.cs" />

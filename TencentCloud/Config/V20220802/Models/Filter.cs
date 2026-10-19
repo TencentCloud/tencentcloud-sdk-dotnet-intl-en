@@ -25,13 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Query field name Resource name: resourceName Resource ID: resourceId Resource type: resourceType Resource region: resourceRegion Deletion status: resourceDelete 0 not deleted, 1 deleted resourceregionandzone region/az
+        /// Query field name. Valid values: resourceName (resource name), resourceId (resource ID), resourceType (resource type), resourceRegion (resource region), resourceDelete (deletion status; 0 indicates not deleted and 1 indicates deleted), and resourceRegionAndZone (region and availability zone).
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Value of the field to query
+        /// Queried field values.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

@@ -26,16 +26,12 @@ namespace TencentCloud.Config.V20220802.Models
         
         /// <summary>
         /// Tag key
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
         /// <summary>
         /// Tag value
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("TagValue")]
         public string TagValue{ get; set; }

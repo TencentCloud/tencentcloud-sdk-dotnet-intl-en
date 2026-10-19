@@ -25,47 +25,54 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Page limit
+        /// Number of entries per page.
+        /// Valid values: 1-200
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
         /// Offset.
+        /// Value range: minimum value is 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sort type. Descending: desc, Ascending: asc.
+        /// Sorting type (rule name).
+        /// - desc: descending order.
+        /// asc: ascending order.
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// Risk level
-        /// 
-        /// 1: High risk.
-        /// 2: Medium risk.
+        /// Risk level.
+        /// 1: High-risk
+        /// 2: Medium-risk,
         /// 3: Low risk.
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// Rule status
+        /// Rule Status.
+        /// ACTIVE: enable
+        /// UN_ACTIVE: Disabled
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Evaluation result
+        /// Assessment result.
+        /// COMPLIANT: compliant
+        /// NON_COMPLIANT: non-compliance
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string[] ComplianceResult{ get; set; }
 
         /// <summary>
-        /// Name of the rule
+        /// Rule Name
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }

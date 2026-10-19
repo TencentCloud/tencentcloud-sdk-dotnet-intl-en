@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+        /// <p>Backup type.</p><p>Enumeration values:</p><ul><li>0: User-initiated manual backup</li><li>1: Automatic backup initiated by the system in the wee hours</li><li>2: Backup triggered by configuration changes</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }

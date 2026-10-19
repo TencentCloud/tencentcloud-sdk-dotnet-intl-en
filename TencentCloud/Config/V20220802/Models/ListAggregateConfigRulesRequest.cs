@@ -25,59 +25,55 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Specifies the limit per page.
+        /// <p>Number of items per page.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset.
+        /// <p>Offset.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Account group ID
+        /// <p>Account group ID.</p>
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// Sort type, descending: desc, ascending: asc.
+        /// <p>Sorting type. Valid values: desc (descending) and asc (ascending).</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
 
         /// <summary>
-        /// Risk level
-        /// 
-        /// 1: High risk.
-        /// 2: Medium risk.
-        /// 3: Low risk.
+        /// <p>Risk level. Valid values:<br>1: high-risk<br>2: medium-risk<br>3: low risk</p>
         /// </summary>
         [JsonProperty("RiskLevel")]
         public ulong?[] RiskLevel{ get; set; }
 
         /// <summary>
-        /// Rule status
+        /// <p>Rule status.</p>
         /// </summary>
         [JsonProperty("State")]
         public string State{ get; set; }
 
         /// <summary>
-        /// Evaluation result
+        /// <p>Evaluation results.</p>
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string[] ComplianceResult{ get; set; }
 
         /// <summary>
-        /// Name of the rule
+        /// <p>Rule name.</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule ownership account ID
+        /// <p>ID of the account to which the rule belongs.</p>
         /// </summary>
         [JsonProperty("RuleOwnerId")]
         public ulong? RuleOwnerId{ get; set; }

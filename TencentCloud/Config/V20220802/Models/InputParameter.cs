@@ -37,9 +37,7 @@ namespace TencentCloud.Config.V20220802.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Parameter value
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Parameter value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

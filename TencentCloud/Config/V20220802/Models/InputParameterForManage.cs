@@ -25,38 +25,31 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Value type. Integer: Integer, String: String.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Value type. Valid values: Integer and String.
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Parameter key
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Parameter key.
         /// </summary>
         [JsonProperty("ParameterKey")]
         public string ParameterKey{ get; set; }
 
         /// <summary>
-        /// Parameter type. Required type: Required, Optional type: Optional.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Parameter type. Valid values: Require (required) and Optional (optional).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
         /// Default value
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
         /// Description
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

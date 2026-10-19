@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.intl.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -281,6 +281,27 @@ namespace TencentCloud.Mna.V20210119
         public DeleteL3ConnResponse DeleteL3ConnSync(DeleteL3ConnRequest req)
         {
             return InternalRequestAsync<DeleteL3ConnResponse>(req, "DeleteL3Conn")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the access point list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointListRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointListResponse"/></returns>
+        public Task<DescribeAccessPointListResponse> DescribeAccessPointList(DescribeAccessPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPointListResponse>(req, "DescribeAccessPointList");
+        }
+
+        /// <summary>
+        /// This API is used to query the access point list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessPointListRequest"/></param>
+        /// <returns><see cref="DescribeAccessPointListResponse"/></returns>
+        public DescribeAccessPointListResponse DescribeAccessPointListSync(DescribeAccessPointListRequest req)
+        {
+            return InternalRequestAsync<DescribeAccessPointListResponse>(req, "DescribeAccessPointList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

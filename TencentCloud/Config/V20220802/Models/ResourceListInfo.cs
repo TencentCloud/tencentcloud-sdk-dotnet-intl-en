@@ -25,7 +25,7 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Resource type
+        /// Resource type.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -43,55 +43,43 @@ namespace TencentCloud.Config.V20220802.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// Region
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Region.
         /// </summary>
         [JsonProperty("ResourceRegion")]
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// Resource Status
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource status.
         /// </summary>
         [JsonProperty("ResourceStatus")]
         public string ResourceStatus{ get; set; }
 
         /// <summary>
-        /// 1: Deleted. 2: Not deleted.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Valid values: 1 (deleted) and 2 (not deleted).
         /// </summary>
         [JsonProperty("ResourceDelete")]
         public ulong? ResourceDelete{ get; set; }
 
         /// <summary>
         /// Resource creation time
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ResourceCreateTime")]
         public string ResourceCreateTime{ get; set; }
 
         /// <summary>
-        /// Tag information
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Tag information.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Availability zone
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// AZ.
         /// </summary>
         [JsonProperty("ResourceZone")]
         public string ResourceZone{ get; set; }
 
         /// <summary>
-        /// Compliance status.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Compliance status
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string ComplianceResult{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1387";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -936,6 +936,90 @@ namespace TencentCloud.Csip.V20221121
         public CreateComplianceRiskExportJobResponse CreateComplianceRiskExportJobSync(CreateComplianceRiskExportJobRequest req)
         {
             return InternalRequestAsync<CreateComplianceRiskExportJobResponse>(req, "CreateComplianceRiskExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Creates an asset sync task
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCosAssetSyncTaskResponse"/></returns>
+        public Task<CreateCosAssetSyncTaskResponse> CreateCosAssetSyncTask(CreateCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosAssetSyncTaskResponse>(req, "CreateCosAssetSyncTask");
+        }
+
+        /// <summary>
+        /// Creates an asset sync task
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="CreateCosAssetSyncTaskResponse"/></returns>
+        public CreateCosAssetSyncTaskResponse CreateCosAssetSyncTaskSync(CreateCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosAssetSyncTaskResponse>(req, "CreateCosAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create cos virus scan and sensitive data identification tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosObjectScanTaskResponse"/></returns>
+        public Task<CreateCosObjectScanTaskResponse> CreateCosObjectScanTask(CreateCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosObjectScanTaskResponse>(req, "CreateCosObjectScanTask");
+        }
+
+        /// <summary>
+        /// This API is used to create cos virus scan and sensitive data identification tasks.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosObjectScanTaskResponse"/></returns>
+        public CreateCosObjectScanTaskResponse CreateCosObjectScanTaskSync(CreateCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosObjectScanTaskResponse>(req, "CreateCosObjectScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Add a cos alarm policy
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosPolicyRequest"/></param>
+        /// <returns><see cref="CreateCosPolicyResponse"/></returns>
+        public Task<CreateCosPolicyResponse> CreateCosPolicy(CreateCosPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCosPolicyResponse>(req, "CreateCosPolicy");
+        }
+
+        /// <summary>
+        /// Add a cos alarm policy
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosPolicyRequest"/></param>
+        /// <returns><see cref="CreateCosPolicyResponse"/></returns>
+        public CreateCosPolicyResponse CreateCosPolicySync(CreateCosPolicyRequest req)
+        {
+            return InternalRequestAsync<CreateCosPolicyResponse>(req, "CreateCosPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a risk monitor task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosRiskScanTaskResponse"/></returns>
+        public Task<CreateCosRiskScanTaskResponse> CreateCosRiskScanTask(CreateCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosRiskScanTaskResponse>(req, "CreateCosRiskScanTask");
+        }
+
+        /// <summary>
+        /// This API is used to create a risk monitor task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="CreateCosRiskScanTaskResponse"/></returns>
+        public CreateCosRiskScanTaskResponse CreateCosRiskScanTaskSync(CreateCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<CreateCosRiskScanTaskResponse>(req, "CreateCosRiskScanTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2515,6 +2599,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteClusterResponse DeleteClusterSync(DeleteClusterRequest req)
         {
             return InternalRequestAsync<DeleteClusterResponse>(req, "DeleteCluster")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete deleted cos ak assets.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosAkAssetRequest"/></param>
+        /// <returns><see cref="DeleteCosAkAssetResponse"/></returns>
+        public Task<DeleteCosAkAssetResponse> DeleteCosAkAsset(DeleteCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DeleteCosAkAssetResponse>(req, "DeleteCosAkAsset");
+        }
+
+        /// <summary>
+        /// Delete deleted cos ak assets.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosAkAssetRequest"/></param>
+        /// <returns><see cref="DeleteCosAkAssetResponse"/></returns>
+        public DeleteCosAkAssetResponse DeleteCosAkAssetSync(DeleteCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DeleteCosAkAssetResponse>(req, "DeleteCosAkAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Deleting a Policy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCosPolicyResponse"/></returns>
+        public Task<DeleteCosPolicyResponse> DeleteCosPolicy(DeleteCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteCosPolicyResponse>(req, "DeleteCosPolicy");
+        }
+
+        /// <summary>
+        /// Deleting a Policy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCosPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCosPolicyResponse"/></returns>
+        public DeleteCosPolicyResponse DeleteCosPolicySync(DeleteCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteCosPolicyResponse>(req, "DeleteCosPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4349,6 +4475,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Query whether it is bound to a role
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssumeRoleRequest"/></param>
+        /// <returns><see cref="DescribeAssumeRoleResponse"/></returns>
+        public Task<DescribeAssumeRoleResponse> DescribeAssumeRole(DescribeAssumeRoleRequest req)
+        {
+            return InternalRequestAsync<DescribeAssumeRoleResponse>(req, "DescribeAssumeRole");
+        }
+
+        /// <summary>
+        /// Query whether it is bound to a role
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssumeRoleRequest"/></param>
+        /// <returns><see cref="DescribeAssumeRoleResponse"/></returns>
+        public DescribeAssumeRoleResponse DescribeAssumeRoleSync(DescribeAssumeRoleRequest req)
+        {
+            return InternalRequestAsync<DescribeAssumeRoleResponse>(req, "DescribeAssumeRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the region list of the backend scanning engine.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackendScanEngineRegionListRequest"/></param>
@@ -4807,6 +4954,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeBruteAttackRulesResponse DescribeBruteAttackRulesSync(DescribeBruteAttackRulesRequest req)
         {
             return InternalRequestAsync<DescribeBruteAttackRulesResponse>(req, "DescribeBruteAttackRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to view the bucket call source ip list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeBucketInvokeIpListResponse"/></returns>
+        public Task<DescribeBucketInvokeIpListResponse> DescribeBucketInvokeIpList(DescribeBucketInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeBucketInvokeIpListResponse>(req, "DescribeBucketInvokeIpList");
+        }
+
+        /// <summary>
+        /// This API is used to view the bucket call source ip list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBucketInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeBucketInvokeIpListResponse"/></returns>
+        public DescribeBucketInvokeIpListResponse DescribeBucketInvokeIpListSync(DescribeBucketInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeBucketInvokeIpListResponse>(req, "DescribeBucketInvokeIpList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5962,6 +6130,594 @@ namespace TencentCloud.Csip.V20221121
         public DescribeConfigCheckRulesResponse DescribeConfigCheckRulesSync(DescribeConfigCheckRulesRequest req)
         {
             return InternalRequestAsync<DescribeConfigCheckRulesResponse>(req, "DescribeConfigCheckRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View cos bucket access permission information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionResponse"/></returns>
+        public Task<DescribeCosAccessPermissionResponse> DescribeCosAccessPermission(DescribeCosAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionResponse>(req, "DescribeCosAccessPermission");
+        }
+
+        /// <summary>
+        /// View cos bucket access permission information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionResponse"/></returns>
+        public DescribeCosAccessPermissionResponse DescribeCosAccessPermissionSync(DescribeCosAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionResponse>(req, "DescribeCosAccessPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the access privilege list of object storage
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionsResponse"/></returns>
+        public Task<DescribeCosAccessPermissionsResponse> DescribeCosAccessPermissions(DescribeCosAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionsResponse>(req, "DescribeCosAccessPermissions");
+        }
+
+        /// <summary>
+        /// View the access privilege list of object storage
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosAccessPermissionsResponse"/></returns>
+        public DescribeCosAccessPermissionsResponse DescribeCosAccessPermissionsSync(DescribeCosAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAccessPermissionsResponse>(req, "DescribeCosAccessPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the COS API list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosActionListResponse"/></returns>
+        public Task<DescribeCosActionListResponse> DescribeCosActionList(DescribeCosActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosActionListResponse>(req, "DescribeCosActionList");
+        }
+
+        /// <summary>
+        /// View the COS API list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosActionListResponse"/></returns>
+        public DescribeCosActionListResponse DescribeCosActionListSync(DescribeCosActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosActionListResponse>(req, "DescribeCosActionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the ak asset information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAkAssetResponse"/></returns>
+        public Task<DescribeCosAkAssetResponse> DescribeCosAkAsset(DescribeCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkAssetResponse>(req, "DescribeCosAkAsset");
+        }
+
+        /// <summary>
+        /// View the ak asset information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAkAssetResponse"/></returns>
+        public DescribeCosAkAssetResponse DescribeCosAkAssetSync(DescribeCosAkAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkAssetResponse>(req, "DescribeCosAkAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the source ip list of bucket calls
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeCosAkInvokeIpListResponse"/></returns>
+        public Task<DescribeCosAkInvokeIpListResponse> DescribeCosAkInvokeIpList(DescribeCosAkInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkInvokeIpListResponse>(req, "DescribeCosAkInvokeIpList");
+        }
+
+        /// <summary>
+        /// View the source ip list of bucket calls
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAkInvokeIpListRequest"/></param>
+        /// <returns><see cref="DescribeCosAkInvokeIpListResponse"/></returns>
+        public DescribeCosAkInvokeIpListResponse DescribeCosAkInvokeIpListSync(DescribeCosAkInvokeIpListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAkInvokeIpListResponse>(req, "DescribeCosAkInvokeIpList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View alarm list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmListRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmListResponse"/></returns>
+        public Task<DescribeCosAlarmListResponse> DescribeCosAlarmList(DescribeCosAlarmListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmListResponse>(req, "DescribeCosAlarmList");
+        }
+
+        /// <summary>
+        /// View alarm list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmListRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmListResponse"/></returns>
+        public DescribeCosAlarmListResponse DescribeCosAlarmListSync(DescribeCosAlarmListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmListResponse>(req, "DescribeCosAlarmList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Daily alerts newly added data
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmTrendDataResponse"/></returns>
+        public Task<DescribeCosAlarmTrendDataResponse> DescribeCosAlarmTrendData(DescribeCosAlarmTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmTrendDataResponse>(req, "DescribeCosAlarmTrendData");
+        }
+
+        /// <summary>
+        /// Daily alerts newly added data
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAlarmTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeCosAlarmTrendDataResponse"/></returns>
+        public DescribeCosAlarmTrendDataResponse DescribeCosAlarmTrendDataSync(DescribeCosAlarmTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAlarmTrendDataResponse>(req, "DescribeCosAlarmTrendData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Views the cos asset list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetResponse"/></returns>
+        public Task<DescribeCosAssetResponse> DescribeCosAsset(DescribeCosAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetResponse>(req, "DescribeCosAsset");
+        }
+
+        /// <summary>
+        /// Views the cos asset list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetResponse"/></returns>
+        public DescribeCosAssetResponse DescribeCosAssetSync(DescribeCosAssetRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetResponse>(req, "DescribeCosAsset")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get the taskid currently being scanned for the corresponding appid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetSyncTaskResponse"/></returns>
+        public Task<DescribeCosAssetSyncTaskResponse> DescribeCosAssetSyncTask(DescribeCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetSyncTaskResponse>(req, "DescribeCosAssetSyncTask");
+        }
+
+        /// <summary>
+        /// Get the taskid currently being scanned for the corresponding appid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAssetSyncTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosAssetSyncTaskResponse"/></returns>
+        public DescribeCosAssetSyncTaskResponse DescribeCosAssetSyncTaskSync(DescribeCosAssetSyncTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAssetSyncTaskResponse>(req, "DescribeCosAssetSyncTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the purchased appid collection under this appid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditAppIdListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditAppIdListResponse"/></returns>
+        public Task<DescribeCosAuditAppIdListResponse> DescribeCosAuditAppIdList(DescribeCosAuditAppIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditAppIdListResponse>(req, "DescribeCosAuditAppIdList");
+        }
+
+        /// <summary>
+        /// View the purchased appid collection under this appid.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditAppIdListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditAppIdListResponse"/></returns>
+        public DescribeCosAuditAppIdListResponse DescribeCosAuditAppIdListSync(DescribeCosAuditAppIdListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditAppIdListResponse>(req, "DescribeCosAuditAppIdList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the cos audit dictionary information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditDictionaryListResponse"/></returns>
+        public Task<DescribeCosAuditDictionaryListResponse> DescribeCosAuditDictionaryList(DescribeCosAuditDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditDictionaryListResponse>(req, "DescribeCosAuditDictionaryList");
+        }
+
+        /// <summary>
+        /// Query the cos audit dictionary information list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditDictionaryListRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditDictionaryListResponse"/></returns>
+        public DescribeCosAuditDictionaryListResponse DescribeCosAuditDictionaryListSync(DescribeCosAuditDictionaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditDictionaryListResponse>(req, "DescribeCosAuditDictionaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain audit payment information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditPayInfoResponse"/></returns>
+        public Task<DescribeCosAuditPayInfoResponse> DescribeCosAuditPayInfo(DescribeCosAuditPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditPayInfoResponse>(req, "DescribeCosAuditPayInfo");
+        }
+
+        /// <summary>
+        /// This API is used to obtain audit payment information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosAuditPayInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosAuditPayInfoResponse"/></returns>
+        public DescribeCosAuditPayInfoResponse DescribeCosAuditPayInfoSync(DescribeCosAuditPayInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosAuditPayInfoResponse>(req, "DescribeCosAuditPayInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the billing information of a bucket.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketBillingInfoResponse"/></returns>
+        public Task<DescribeCosBucketBillingInfoResponse> DescribeCosBucketBillingInfo(DescribeCosBucketBillingInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketBillingInfoResponse>(req, "DescribeCosBucketBillingInfo");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the billing information of a bucket.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketBillingInfoRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketBillingInfoResponse"/></returns>
+        public DescribeCosBucketBillingInfoResponse DescribeCosBucketBillingInfoSync(DescribeCosBucketBillingInfoRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketBillingInfoResponse>(req, "DescribeCosBucketBillingInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain bucket information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketListRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketListResponse"/></returns>
+        public Task<DescribeCosBucketListResponse> DescribeCosBucketList(DescribeCosBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketListResponse>(req, "DescribeCosBucketList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain bucket information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketListRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketListResponse"/></returns>
+        public DescribeCosBucketListResponse DescribeCosBucketListSync(DescribeCosBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketListResponse>(req, "DescribeCosBucketList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Views the risk asset perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketRiskRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketRiskResponse"/></returns>
+        public Task<DescribeCosBucketRiskResponse> DescribeCosBucketRisk(DescribeCosBucketRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketRiskResponse>(req, "DescribeCosBucketRisk");
+        }
+
+        /// <summary>
+        /// Views the risk asset perspective
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosBucketRiskRequest"/></param>
+        /// <returns><see cref="DescribeCosBucketRiskResponse"/></returns>
+        public DescribeCosBucketRiskResponse DescribeCosBucketRiskSync(DescribeCosBucketRiskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosBucketRiskResponse>(req, "DescribeCosBucketRisk")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries the list of cos file data identification results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIdentifyFileListRequest"/></param>
+        /// <returns><see cref="DescribeCosIdentifyFileListResponse"/></returns>
+        public Task<DescribeCosIdentifyFileListResponse> DescribeCosIdentifyFileList(DescribeCosIdentifyFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIdentifyFileListResponse>(req, "DescribeCosIdentifyFileList");
+        }
+
+        /// <summary>
+        /// Queries the list of cos file data identification results.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIdentifyFileListRequest"/></param>
+        /// <returns><see cref="DescribeCosIdentifyFileListResponse"/></returns>
+        public DescribeCosIdentifyFileListResponse DescribeCosIdentifyFileListSync(DescribeCosIdentifyFileListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIdentifyFileListResponse>(req, "DescribeCosIdentifyFileList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View file information associated with call records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosInvokeUaRequest"/></param>
+        /// <returns><see cref="DescribeCosInvokeUaResponse"/></returns>
+        public Task<DescribeCosInvokeUaResponse> DescribeCosInvokeUa(DescribeCosInvokeUaRequest req)
+        {
+            return InternalRequestAsync<DescribeCosInvokeUaResponse>(req, "DescribeCosInvokeUa");
+        }
+
+        /// <summary>
+        /// View file information associated with call records
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosInvokeUaRequest"/></param>
+        /// <returns><see cref="DescribeCosInvokeUaResponse"/></returns>
+        public DescribeCosInvokeUaResponse DescribeCosInvokeUaSync(DescribeCosInvokeUaRequest req)
+        {
+            return InternalRequestAsync<DescribeCosInvokeUaResponse>(req, "DescribeCosInvokeUa")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Views the cos call log.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeLogRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeLogResponse"/></returns>
+        public Task<DescribeCosIpInvokeLogResponse> DescribeCosIpInvokeLog(DescribeCosIpInvokeLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeLogResponse>(req, "DescribeCosIpInvokeLog");
+        }
+
+        /// <summary>
+        /// Views the cos call log.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeLogRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeLogResponse"/></returns>
+        public DescribeCosIpInvokeLogResponse DescribeCosIpInvokeLogSync(DescribeCosIpInvokeLogRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeLogResponse>(req, "DescribeCosIpInvokeLog")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View file information associated with the call record
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeRecordFileRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeRecordFileResponse"/></returns>
+        public Task<DescribeCosIpInvokeRecordFileResponse> DescribeCosIpInvokeRecordFile(DescribeCosIpInvokeRecordFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeRecordFileResponse>(req, "DescribeCosIpInvokeRecordFile");
+        }
+
+        /// <summary>
+        /// View file information associated with the call record
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosIpInvokeRecordFileRequest"/></param>
+        /// <returns><see cref="DescribeCosIpInvokeRecordFileResponse"/></returns>
+        public DescribeCosIpInvokeRecordFileResponse DescribeCosIpInvokeRecordFileSync(DescribeCosIpInvokeRecordFileRequest req)
+        {
+            return InternalRequestAsync<DescribeCosIpInvokeRecordFileResponse>(req, "DescribeCosIpInvokeRecordFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query cos risk file scan tasks
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosObjectScanTaskResponse"/></returns>
+        public Task<DescribeCosObjectScanTaskResponse> DescribeCosObjectScanTask(DescribeCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosObjectScanTaskResponse>(req, "DescribeCosObjectScanTask");
+        }
+
+        /// <summary>
+        /// Query cos risk file scan tasks
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosObjectScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosObjectScanTaskResponse"/></returns>
+        public DescribeCosObjectScanTaskResponse DescribeCosObjectScanTaskSync(DescribeCosObjectScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosObjectScanTaskResponse>(req, "DescribeCosObjectScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// cos overview information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCosOverviewResponse"/></returns>
+        public Task<DescribeCosOverviewResponse> DescribeCosOverview(DescribeCosOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCosOverviewResponse>(req, "DescribeCosOverview");
+        }
+
+        /// <summary>
+        /// cos overview information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosOverviewRequest"/></param>
+        /// <returns><see cref="DescribeCosOverviewResponse"/></returns>
+        public DescribeCosOverviewResponse DescribeCosOverviewSync(DescribeCosOverviewRequest req)
+        {
+            return InternalRequestAsync<DescribeCosOverviewResponse>(req, "DescribeCosOverview")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Gets policy list information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCosPolicyResponse"/></returns>
+        public Task<DescribeCosPolicyResponse> DescribeCosPolicy(DescribeCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeCosPolicyResponse>(req, "DescribeCosPolicy");
+        }
+
+        /// <summary>
+        /// Gets policy list information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosPolicyRequest"/></param>
+        /// <returns><see cref="DescribeCosPolicyResponse"/></returns>
+        public DescribeCosPolicyResponse DescribeCosPolicySync(DescribeCosPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeCosPolicyResponse>(req, "DescribeCosPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Risk API information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskActionListResponse"/></returns>
+        public Task<DescribeCosRiskActionListResponse> DescribeCosRiskActionList(DescribeCosRiskActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskActionListResponse>(req, "DescribeCosRiskActionList");
+        }
+
+        /// <summary>
+        /// Risk API information list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskActionListRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskActionListResponse"/></returns>
+        public DescribeCosRiskActionListResponse DescribeCosRiskActionListSync(DescribeCosRiskActionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskActionListResponse>(req, "DescribeCosRiskActionList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View risk evidence and description.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskEvidenceRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskEvidenceResponse"/></returns>
+        public Task<DescribeCosRiskEvidenceResponse> DescribeCosRiskEvidence(DescribeCosRiskEvidenceRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskEvidenceResponse>(req, "DescribeCosRiskEvidence");
+        }
+
+        /// <summary>
+        /// View risk evidence and description.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskEvidenceRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskEvidenceResponse"/></returns>
+        public DescribeCosRiskEvidenceResponse DescribeCosRiskEvidenceSync(DescribeCosRiskEvidenceRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskEvidenceResponse>(req, "DescribeCosRiskEvidence")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View bucket scan task details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskScanTaskResponse"/></returns>
+        public Task<DescribeCosRiskScanTaskResponse> DescribeCosRiskScanTask(DescribeCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskScanTaskResponse>(req, "DescribeCosRiskScanTask");
+        }
+
+        /// <summary>
+        /// View bucket scan task details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRiskScanTaskRequest"/></param>
+        /// <returns><see cref="DescribeCosRiskScanTaskResponse"/></returns>
+        public DescribeCosRiskScanTaskResponse DescribeCosRiskScanTaskSync(DescribeCosRiskScanTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRiskScanTaskResponse>(req, "DescribeCosRiskScanTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Views cos bucket access permission information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionResponse"/></returns>
+        public Task<DescribeCosRoleAccessPermissionResponse> DescribeCosRoleAccessPermission(DescribeCosRoleAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionResponse>(req, "DescribeCosRoleAccessPermission");
+        }
+
+        /// <summary>
+        /// Views cos bucket access permission information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionResponse"/></returns>
+        public DescribeCosRoleAccessPermissionResponse DescribeCosRoleAccessPermissionSync(DescribeCosRoleAccessPermissionRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionResponse>(req, "DescribeCosRoleAccessPermission")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the role permission list of a bucket.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionsResponse"/></returns>
+        public Task<DescribeCosRoleAccessPermissionsResponse> DescribeCosRoleAccessPermissions(DescribeCosRoleAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionsResponse>(req, "DescribeCosRoleAccessPermissions");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the role permission list of a bucket.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosRoleAccessPermissionsRequest"/></param>
+        /// <returns><see cref="DescribeCosRoleAccessPermissionsResponse"/></returns>
+        public DescribeCosRoleAccessPermissionsResponse DescribeCosRoleAccessPermissionsSync(DescribeCosRoleAccessPermissionsRequest req)
+        {
+            return InternalRequestAsync<DescribeCosRoleAccessPermissionsResponse>(req, "DescribeCosRoleAccessPermissions")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Source ip list for calls
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosSourceIpRequest"/></param>
+        /// <returns><see cref="DescribeCosSourceIpResponse"/></returns>
+        public Task<DescribeCosSourceIpResponse> DescribeCosSourceIp(DescribeCosSourceIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCosSourceIpResponse>(req, "DescribeCosSourceIp");
+        }
+
+        /// <summary>
+        /// Source ip list for calls
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCosSourceIpRequest"/></param>
+        /// <returns><see cref="DescribeCosSourceIpResponse"/></returns>
+        public DescribeCosSourceIpResponse DescribeCosSourceIpSync(DescribeCosSourceIpRequest req)
+        {
+            return InternalRequestAsync<DescribeCosSourceIpResponse>(req, "DescribeCosSourceIp")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8717,6 +9473,48 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Object Storage Anomaly Detection call record information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordResponse"/></returns>
+        public Task<DescribeIpInvokeRecordResponse> DescribeIpInvokeRecord(DescribeIpInvokeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordResponse>(req, "DescribeIpInvokeRecord");
+        }
+
+        /// <summary>
+        /// Object Storage Anomaly Detection call record information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordResponse"/></returns>
+        public DescribeIpInvokeRecordResponse DescribeIpInvokeRecordSync(DescribeIpInvokeRecordRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordResponse>(req, "DescribeIpInvokeRecord")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ip access list details information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordDetailResponse"/></returns>
+        public Task<DescribeIpInvokeRecordDetailResponse> DescribeIpInvokeRecordDetail(DescribeIpInvokeRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordDetailResponse>(req, "DescribeIpInvokeRecordDetail");
+        }
+
+        /// <summary>
+        /// ip access list details information
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpInvokeRecordDetailRequest"/></param>
+        /// <returns><see cref="DescribeIpInvokeRecordDetailResponse"/></returns>
+        public DescribeIpInvokeRecordDetailResponse DescribeIpInvokeRecordDetailSync(DescribeIpInvokeRecordDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeIpInvokeRecordDetailResponse>(req, "DescribeIpInvokeRecordDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the details of a single Windows KB patch based on the user's input KB internal ID, and return the basic KB info, release time, whether restart is required, as well as the list of vulnerabilities associated with the KB.
         /// </summary>
         /// <param name="req"><see cref="DescribeKBDetailRequest"/></param>
@@ -9410,6 +10208,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// View policy hit details by date
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyHitDataRequest"/></param>
+        /// <returns><see cref="DescribePolicyHitDataResponse"/></returns>
+        public Task<DescribePolicyHitDataResponse> DescribePolicyHitData(DescribePolicyHitDataRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyHitDataResponse>(req, "DescribePolicyHitData");
+        }
+
+        /// <summary>
+        /// View policy hit details by date
+        /// </summary>
+        /// <param name="req"><see cref="DescribePolicyHitDataRequest"/></param>
+        /// <returns><see cref="DescribePolicyHitDataResponse"/></returns>
+        public DescribePolicyHitDataResponse DescribePolicyHitDataSync(DescribePolicyHitDataRequest req)
+        {
+            return InternalRequestAsync<DescribePolicyHitDataResponse>(req, "DescribePolicyHitData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Port detection list
         /// </summary>
         /// <param name="req"><see cref="DescribePortDetectListRequest"/></param>
@@ -9683,6 +10502,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// View risk-associated bucket info
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskBucketListRequest"/></param>
+        /// <returns><see cref="DescribeRiskBucketListResponse"/></returns>
+        public Task<DescribeRiskBucketListResponse> DescribeRiskBucketList(DescribeRiskBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskBucketListResponse>(req, "DescribeRiskBucketList");
+        }
+
+        /// <summary>
+        /// View risk-associated bucket info
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskBucketListRequest"/></param>
+        /// <returns><see cref="DescribeRiskBucketListResponse"/></returns>
+        public DescribeRiskBucketListResponse DescribeRiskBucketListSync(DescribeRiskBucketListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskBucketListResponse>(req, "DescribeRiskBucketList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to obtain the risk call record list.
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskCallRecordRequest"/></param>
@@ -9935,6 +10775,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Get Risk Item Perspective List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskItemListRequest"/></param>
+        /// <returns><see cref="DescribeRiskItemListResponse"/></returns>
+        public Task<DescribeRiskItemListResponse> DescribeRiskItemList(DescribeRiskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskItemListResponse>(req, "DescribeRiskItemList");
+        }
+
+        /// <summary>
+        /// Get Risk Item Perspective List
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskItemListRequest"/></param>
+        /// <returns><see cref="DescribeRiskItemListResponse"/></returns>
+        public DescribeRiskItemListResponse DescribeRiskItemListSync(DescribeRiskItemListRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskItemListResponse>(req, "DescribeRiskItemList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Sample code for querying risk rule details
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskRuleDetailRequest"/></param>
@@ -9994,6 +10855,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeRiskScanCronConfigResponse DescribeRiskScanCronConfigSync(DescribeRiskScanCronConfigRequest req)
         {
             return InternalRequestAsync<DescribeRiskScanCronConfigResponse>(req, "DescribeRiskScanCronConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// View the risk trend chart.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeRiskTrendDataResponse"/></returns>
+        public Task<DescribeRiskTrendDataResponse> DescribeRiskTrendData(DescribeRiskTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskTrendDataResponse>(req, "DescribeRiskTrendData");
+        }
+
+        /// <summary>
+        /// View the risk trend chart.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRiskTrendDataRequest"/></param>
+        /// <returns><see cref="DescribeRiskTrendDataResponse"/></returns>
+        public DescribeRiskTrendDataResponse DescribeRiskTrendDataSync(DescribeRiskTrendDataRequest req)
+        {
+            return InternalRequestAsync<DescribeRiskTrendDataResponse>(req, "DescribeRiskTrendData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -11828,6 +12710,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Modify or change the handling status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmRiskStatusResponse"/></returns>
+        public Task<ModifyAlarmRiskStatusResponse> ModifyAlarmRiskStatus(ModifyAlarmRiskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus");
+        }
+
+        /// <summary>
+        /// Modify or change the handling status.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAlarmRiskStatusRequest"/></param>
+        /// <returns><see cref="ModifyAlarmRiskStatusResponse"/></returns>
+        public ModifyAlarmRiskStatusResponse ModifyAlarmRiskStatusSync(ModifyAlarmRiskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyAlarmRiskStatusResponse>(req, "ModifyAlarmRiskStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Tag an asset as core or not.
         /// </summary>
         /// <param name="req"><see cref="ModifyAssetCoreAttributeRequest"/></param>
@@ -12223,6 +13126,90 @@ namespace TencentCloud.Csip.V20221121
         public ModifyCosAuditBucketMonitorStatusResponse ModifyCosAuditBucketMonitorStatusSync(ModifyCosAuditBucketMonitorStatusRequest req)
         {
             return InternalRequestAsync<ModifyCosAuditBucketMonitorStatusResponse>(req, "ModifyCosAuditBucketMonitorStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the cos audit monitoring account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditMonitorAccountRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditMonitorAccountResponse"/></returns>
+        public Task<ModifyCosAuditMonitorAccountResponse> ModifyCosAuditMonitorAccount(ModifyCosAuditMonitorAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditMonitorAccountResponse>(req, "ModifyCosAuditMonitorAccount");
+        }
+
+        /// <summary>
+        /// Modify the cos audit monitoring account.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditMonitorAccountRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditMonitorAccountResponse"/></returns>
+        public ModifyCosAuditMonitorAccountResponse ModifyCosAuditMonitorAccountSync(ModifyCosAuditMonitorAccountRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditMonitorAccountResponse>(req, "ModifyCosAuditMonitorAccount")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the object storage recognition switch
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectIdentifyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectIdentifyStatusResponse"/></returns>
+        public Task<ModifyCosAuditObjectIdentifyStatusResponse> ModifyCosAuditObjectIdentifyStatus(ModifyCosAuditObjectIdentifyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectIdentifyStatusResponse>(req, "ModifyCosAuditObjectIdentifyStatus");
+        }
+
+        /// <summary>
+        /// Modify the object storage recognition switch
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectIdentifyStatusRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectIdentifyStatusResponse"/></returns>
+        public ModifyCosAuditObjectIdentifyStatusResponse ModifyCosAuditObjectIdentifyStatusSync(ModifyCosAuditObjectIdentifyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectIdentifyStatusResponse>(req, "ModifyCosAuditObjectIdentifyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Set the sampling rate for object storage scan.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectSampleRateRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectSampleRateResponse"/></returns>
+        public Task<ModifyCosAuditObjectSampleRateResponse> ModifyCosAuditObjectSampleRate(ModifyCosAuditObjectSampleRateRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectSampleRateResponse>(req, "ModifyCosAuditObjectSampleRate");
+        }
+
+        /// <summary>
+        /// Set the sampling rate for object storage scan.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosAuditObjectSampleRateRequest"/></param>
+        /// <returns><see cref="ModifyCosAuditObjectSampleRateResponse"/></returns>
+        public ModifyCosAuditObjectSampleRateResponse ModifyCosAuditObjectSampleRateSync(ModifyCosAuditObjectSampleRateRequest req)
+        {
+            return InternalRequestAsync<ModifyCosAuditObjectSampleRateResponse>(req, "ModifyCosAuditObjectSampleRate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the object storage remark.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosMarkInfoRequest"/></param>
+        /// <returns><see cref="ModifyCosMarkInfoResponse"/></returns>
+        public Task<ModifyCosMarkInfoResponse> ModifyCosMarkInfo(ModifyCosMarkInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCosMarkInfoResponse>(req, "ModifyCosMarkInfo");
+        }
+
+        /// <summary>
+        /// This API is used to modify the object storage remark.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCosMarkInfoRequest"/></param>
+        /// <returns><see cref="ModifyCosMarkInfoResponse"/></returns>
+        public ModifyCosMarkInfoResponse ModifyCosMarkInfoSync(ModifyCosMarkInfoRequest req)
+        {
+            return InternalRequestAsync<ModifyCosMarkInfoResponse>(req, "ModifyCosMarkInfo")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -13589,6 +14576,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Modifies policy status
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyPolicyStatusResponse"/></returns>
+        public Task<ModifyPolicyStatusResponse> ModifyPolicyStatus(ModifyPolicyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyPolicyStatusResponse>(req, "ModifyPolicyStatus");
+        }
+
+        /// <summary>
+        /// Modifies policy status
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPolicyStatusRequest"/></param>
+        /// <returns><see cref="ModifyPolicyStatusResponse"/></returns>
+        public ModifyPolicyStatusResponse ModifyPolicyStatusSync(ModifyPolicyStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyPolicyStatusResponse>(req, "ModifyPolicyStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to configure protection settings for the major event protection package.
         /// </summary>
         /// <param name="req"><see cref="ModifyProtectionSettingRequest"/></param>
@@ -14051,7 +15059,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to modify the vulnerability allowlist configuration.
+        /// Modifies the vulnerability allowlist configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
         /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>
@@ -14061,7 +15069,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to modify the vulnerability allowlist configuration.
+        /// Modifies the vulnerability allowlist configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifyVulWhitelistConfigRequest"/></param>
         /// <returns><see cref="ModifyVulWhitelistConfigResponse"/></returns>

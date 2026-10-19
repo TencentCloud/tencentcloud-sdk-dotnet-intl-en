@@ -25,38 +25,31 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Condition is empty, Compliant: COMPLIANT, Non-compliant: NON_COMPLIANT, Not applicable: NOT_APPLICABLE.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Compliance status when the condition is empty. Valid values: COMPLIANT, NON_COMPLIANT, and NOT_APPLICABLE.
         /// </summary>
         [JsonProperty("EmptyAs")]
         public string EmptyAs{ get; set; }
 
         /// <summary>
         /// Configuration path
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("SelectPath")]
         public string SelectPath{ get; set; }
 
         /// <summary>
-        /// Operators
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Operator.
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// Required or not.
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Whether it is mandatory.
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
 
         /// <summary>
         /// Expected value
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("DesiredValue")]
         public string DesiredValue{ get; set; }

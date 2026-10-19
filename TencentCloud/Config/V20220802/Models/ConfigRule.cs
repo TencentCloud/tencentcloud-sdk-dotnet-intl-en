@@ -25,103 +25,86 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Rule identifier
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Rule ID
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// Name of the rule
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Rule Name
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// Rule parameters
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("InputParameter")]
         public InputParameter[] InputParameter{ get; set; }
 
         /// <summary>
         /// Rule trigger condition.
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("SourceCondition")]
         public SourceConditionForManage[] SourceCondition{ get; set; }
 
         /// <summary>
-        /// Resource types supported by rule. The rule only applies to specified resource types.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Resource types supported by the rule. The rule applies only to resources of the specified resource types.
         /// </summary>
         [JsonProperty("ResourceType")]
         public string[] ResourceType{ get; set; }
 
         /// <summary>
-        /// Rule ownership tag
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Rule tags.
         /// </summary>
         [JsonProperty("Labels")]
         public string[] Labels{ get; set; }
 
         /// <summary>
-        /// Rule risk level
+        /// Rule risk level.
         /// 1: Low risk
-        /// 2: Medium risk
-        /// 3: High risk
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// 2: Medium-risk
+        /// 3: High-risk
         /// </summary>
         [JsonProperty("RiskLevel")]
         public long? RiskLevel{ get; set; }
 
         /// <summary>
-        /// Function corresponding to rule
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Function corresponding to the rule.
         /// </summary>
         [JsonProperty("ServiceFunction")]
         public string ServiceFunction{ get; set; }
 
         /// <summary>
-        /// Creation time
-        /// 
+        /// Creation time.
         /// Format: YYYY-MM-DD h:i:s
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
         /// Rule description
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// ACTIVE: Enabled
+        /// ACTIVE: enable
         /// NO_ACTIVE: Disabled
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Compliance: 'COMPLIANT'
-        /// 'NON_COMPLIANT'
-        /// 'NOT_APPLICABLE'
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Compliant: 'COMPLIANT'
+        /// Non-compliance: 'NON_COMPLIANT'
+        /// Unable to apply rule: 'NOT_APPLICABLE'
         /// </summary>
         [JsonProperty("ComplianceResult")]
         public string ComplianceResult{ get; set; }
 
         /// <summary>
         /// ["",""]
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("Annotation")]
         public Annotation Annotation{ get; set; }
@@ -129,109 +112,89 @@ namespace TencentCloud.Config.V20220802.Models
         /// <summary>
         /// Rule evaluation time
         /// Format: YYYY-MM-DD h:i:s
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ConfigRuleInvokedTime")]
         public string ConfigRuleInvokedTime{ get; set; }
 
         /// <summary>
         /// Rule ID
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ConfigRuleId")]
         public string ConfigRuleId{ get; set; }
 
         /// <summary>
-        /// CUSTOMIZE
-        /// Managed rule
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// CUSTOMIZE: custom rule
+        /// SYSTEM: managed rule
         /// </summary>
         [JsonProperty("IdentifierType")]
         public string IdentifierType{ get; set; }
 
         /// <summary>
-        /// Compliance package ID
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Compliance package ID.
         /// </summary>
         [JsonProperty("CompliancePackId")]
         public string CompliancePackId{ get; set; }
 
         /// <summary>
         /// Trigger Type
-        /// 
-        /// Scheduled trigger
-        /// Triggered by configuration change
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// ScheduledNotification: periodic trigger.
+        /// ConfigurationItemChangeNotification: Triggered by a change
         /// </summary>
         [JsonProperty("TriggerType")]
         public TriggerType[] TriggerType{ get; set; }
 
         /// <summary>
         /// Parameter details
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
         /// </summary>
         [JsonProperty("ManageInputParameter")]
         public InputParameterForManage[] ManageInputParameter{ get; set; }
 
         /// <summary>
-        /// Rule name
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Compliance package name
         /// </summary>
         [JsonProperty("CompliancePackName")]
         public string CompliancePackName{ get; set; }
 
         /// <summary>
-        /// Associated region
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Associated regions.
         /// </summary>
         [JsonProperty("RegionsScope")]
         public string[] RegionsScope{ get; set; }
 
         /// <summary>
-        /// Associate Tag
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Associated tag
         /// </summary>
         [JsonProperty("TagsScope")]
         public Tag[] TagsScope{ get; set; }
 
         /// <summary>
-        ///  The rule is invalid for the specified resource ID, meaning it does not evaluate the resource.
-        /// Note: This field may return null, indicating that no valid value is found.
+        ///  The rule is invalid for the specified resource ID, meaning that evaluation will not be performed on this resource.
         /// </summary>
         [JsonProperty("ExcludeResourceIdsScope")]
         public string[] ExcludeResourceIdsScope{ get; set; }
 
         /// <summary>
-        /// Account group ID
-        /// 
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Account group ID.
         /// </summary>
         [JsonProperty("AccountGroupId")]
         public string AccountGroupId{ get; set; }
 
         /// <summary>
-        /// Account group name
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Account group name.
         /// </summary>
         [JsonProperty("AccountGroupName")]
         public string AccountGroupName{ get; set; }
 
         /// <summary>
-        /// Rule owner user ID
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Rule owner user ID.
         /// </summary>
         [JsonProperty("RuleOwnerId")]
         public ulong? RuleOwnerId{ get; set; }
 
         /// <summary>
-        /// Trigger methods supported by preset rules
-        /// Scheduled trigger
-        /// Triggered by configuration change
+        /// Trigger methods supported by preset rules.
+        /// ScheduledNotification: periodic trigger
+        /// ConfigurationItemChangeNotification: Triggered by a change
         /// </summary>
         [JsonProperty("ManageTriggerType")]
         public string[] ManageTriggerType{ get; set; }

@@ -25,36 +25,36 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Evaluated resource id. It can contain 0 to 256 characters.
+        /// Evaluated resource ID, which is 0 to 256 characters in length.
         /// </summary>
         [JsonProperty("ComplianceResourceId")]
         public string ComplianceResourceId{ get; set; }
 
         /// <summary>
         /// Evaluated resource type.
-        /// Supported:
-        /// QCS::CVM::Instance、 QCS::CBS::Disk、QCS::VPC::Vpc、QCS::VPC::Subnet、QCS::VPC::SecurityGroup、 QCS::CAM::User、QCS::CAM::Group、QCS::CAM::Policy、QCS::CAM::Role、QCS::COS::Bucket
+        /// Support
+        /// QCS::CVM::Instance, QCS::CBS::Disk,QCS::VPC::Vpc,QCS::VPC::Subnet,QCS::VPC::SecurityGroup, QCS::CAM::User,QCS::CAM::Group,QCS::CAM::Policy,QCS::CAM::Role,QCS::COS::Bucket
         /// </summary>
         [JsonProperty("ComplianceResourceType")]
         public string ComplianceResourceType{ get; set; }
 
         /// <summary>
         /// Evaluated resource region.
-        /// It can contain 0 to 32 characters.
+        /// 0 to 32 characters in length.
         /// </summary>
         [JsonProperty("ComplianceRegion")]
         public string ComplianceRegion{ get; set; }
 
         /// <summary>
-        /// Compliance type. Valid values:
-        /// COMPLIANT: Compliant,
-        /// NON_COMPLIANT: Non-compliant
+        /// Compliance type. Value:
+        /// COMPLIANT: compliant
+        /// NON_COMPLIANT: non-compliance
         /// </summary>
         [JsonProperty("ComplianceType")]
         public string ComplianceType{ get; set; }
 
         /// <summary>
-        /// Supplementary information for non-compliant resources.
+        /// Supplementary information of non-compliant resources.
         /// </summary>
         [JsonProperty("Annotation")]
         public Annotation Annotation{ get; set; }

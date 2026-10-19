@@ -25,15 +25,13 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Current actual configuration of the resource. It can contain 0 to 256 characters, which is the non-compliant configuration of the resource.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Current actual resource configuration. A length of 0 to 256 characters indicates non-compliant resource configuration.
         /// </summary>
         [JsonProperty("Configuration")]
         public string Configuration{ get; set; }
 
         /// <summary>
-        /// Desired configuration of the resource. It can contain 0 to 256 characters, which is the compliant configuration of the resource.
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Expected resource configuration. A length of 0 to 256 characters indicates compliant resource configuration.
         /// </summary>
         [JsonProperty("DesiredValue")]
         public string DesiredValue{ get; set; }

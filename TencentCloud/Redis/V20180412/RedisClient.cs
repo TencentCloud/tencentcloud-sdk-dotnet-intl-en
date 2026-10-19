@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.intl.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1375";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -558,6 +558,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to query information related to backup encryption for an instance, including the enabled status and encryption keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptConfigRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptConfigResponse"/></returns>
+        public Task<DescribeBackupEncryptConfigResponse> DescribeBackupEncryptConfig(DescribeBackupEncryptConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupEncryptConfigResponse>(req, "DescribeBackupEncryptConfig");
+        }
+
+        /// <summary>
+        /// This API is used to query information related to backup encryption for an instance, including the enabled status and encryption keys.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupEncryptConfigRequest"/></param>
+        /// <returns><see cref="DescribeBackupEncryptConfigResponse"/></returns>
+        public DescribeBackupEncryptConfigResponse DescribeBackupEncryptConfigSync(DescribeBackupEncryptConfigRequest req)
+        {
+            return InternalRequestAsync<DescribeBackupEncryptConfigResponse>(req, "DescribeBackupEncryptConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the download address of a backup RDB file.
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupUrlRequest"/></param>
@@ -1037,6 +1058,27 @@ namespace TencentCloud.Redis.V20180412
         public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
         {
             return InternalRequestAsync<DescribeInstanceParamsResponse>(req, "DescribeInstanceParams")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the current password complexity configuration of a specified instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordPolicyResponse"/></returns>
+        public Task<DescribeInstancePasswordPolicyResponse> DescribeInstancePasswordPolicy(DescribeInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordPolicyResponse>(req, "DescribeInstancePasswordPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to query the current password complexity configuration of a specified instance.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="DescribeInstancePasswordPolicyResponse"/></returns>
+        public DescribeInstancePasswordPolicyResponse DescribeInstancePasswordPolicySync(DescribeInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<DescribeInstancePasswordPolicyResponse>(req, "DescribeInstancePasswordPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1818,6 +1860,27 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to turn on or disable backup encryption and modify backup key functionality.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptResponse"/></returns>
+        public Task<ModifyBackupEncryptResponse> ModifyBackupEncrypt(ModifyBackupEncryptRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupEncryptResponse>(req, "ModifyBackupEncrypt");
+        }
+
+        /// <summary>
+        /// This API is used to turn on or disable backup encryption and modify backup key functionality.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupEncryptRequest"/></param>
+        /// <returns><see cref="ModifyBackupEncryptResponse"/></returns>
+        public ModifyBackupEncryptResponse ModifyBackupEncryptSync(ModifyBackupEncryptRequest req)
+        {
+            return InternalRequestAsync<ModifyBackupEncryptResponse>(req, "ModifyBackupEncrypt")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to modify the connection configuration of an instance, including the bandwidth and maximum number of connections.
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
@@ -2045,6 +2108,27 @@ namespace TencentCloud.Redis.V20180412
         public ModifyInstancePasswordResponse ModifyInstancePasswordSync(ModifyInstancePasswordRequest req)
         {
             return InternalRequestAsync<ModifyInstancePasswordResponse>(req, "ModifyInstancePassword")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the password complexity of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordPolicyResponse"/></returns>
+        public Task<ModifyInstancePasswordPolicyResponse> ModifyInstancePasswordPolicy(ModifyInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordPolicyResponse>(req, "ModifyInstancePasswordPolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the password complexity of an instance.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordPolicyRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordPolicyResponse"/></returns>
+        public ModifyInstancePasswordPolicyResponse ModifyInstancePasswordPolicySync(ModifyInstancePasswordPolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyInstancePasswordPolicyResponse>(req, "ModifyInstancePasswordPolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2444,6 +2528,27 @@ namespace TencentCloud.Redis.V20180412
         public UpgradeInstanceResponse UpgradeInstanceSync(UpgradeInstanceRequest req)
         {
             return InternalRequestAsync<UpgradeInstanceResponse>(req, "UpgradeInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the instance type from common I to common II.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceProductVersionResponse"/></returns>
+        public Task<UpgradeInstanceProductVersionResponse> UpgradeInstanceProductVersion(UpgradeInstanceProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceProductVersionResponse>(req, "UpgradeInstanceProductVersion");
+        }
+
+        /// <summary>
+        /// This API is used to upgrade the instance type from common I to common II.
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeInstanceProductVersionRequest"/></param>
+        /// <returns><see cref="UpgradeInstanceProductVersionResponse"/></returns>
+        public UpgradeInstanceProductVersionResponse UpgradeInstanceProductVersionSync(UpgradeInstanceProductVersionRequest req)
+        {
+            return InternalRequestAsync<UpgradeInstanceProductVersionResponse>(req, "UpgradeInstanceProductVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

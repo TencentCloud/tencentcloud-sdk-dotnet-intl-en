@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>id list</
+        /// <p>id list</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// <p>Asset scope</p><p>Enumeration value:</p><ul><li>0: All assets</li><li>1: Custom assets</li><li>2: Select all remove asset</li></ul>
+        /// <p>Asset scope</p><p>Enumeration values:</p><ul><li>0: all assets</li><li>1: Custom assets</li><li>2: Select all and remove assets</li></ul>
         /// </summary>
         [JsonProperty("AssetRange")]
         public ulong? AssetRange{ get; set; }

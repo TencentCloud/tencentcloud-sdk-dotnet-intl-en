@@ -28,7 +28,7 @@ namespace TencentCloud.Dbbrain.V20210527
 
        private const string endpoint = "dbbrain.intl.tencentcloudapi.com";
        private const string version = "2021-05-27";
-       private const string sdkVersion = "SDK_NET_3.0.1392";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -365,6 +365,27 @@ namespace TencentCloud.Dbbrain.V20210527
         public DescribeAuditInstanceListResponse DescribeAuditInstanceListSync(DescribeAuditInstanceListRequest req)
         {
             return InternalRequestAsync<DescribeAuditInstanceListResponse>(req, "DescribeAuditInstanceList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries the audit log details of a specified instance within a time window, support by SQL type, execution time, error code, keyword, and other multi-condition filtering. Currently only support dcdb and mariadb products (cdb and cynosdb have been migrated to the central platform). Note that Filter.MultiSql and Filter.ExcludeMultiSql need to be transmitted as a JSON string in the form of a two-dimensional array, for example, [["a","b"]] means (a OR b), and the server will automatically parse it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogsResponse"/></returns>
+        public Task<DescribeDBAuditLogsResponse> DescribeDBAuditLogs(DescribeDBAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogsResponse>(req, "DescribeDBAuditLogs");
+        }
+
+        /// <summary>
+        /// Queries the audit log details of a specified instance within a time window, support by SQL type, execution time, error code, keyword, and other multi-condition filtering. Currently only support dcdb and mariadb products (cdb and cynosdb have been migrated to the central platform). Note that Filter.MultiSql and Filter.ExcludeMultiSql need to be transmitted as a JSON string in the form of a two-dimensional array, for example, [["a","b"]] means (a OR b), and the server will automatically parse it.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBAuditLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBAuditLogsResponse"/></returns>
+        public DescribeDBAuditLogsResponse DescribeDBAuditLogsSync(DescribeDBAuditLogsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBAuditLogsResponse>(req, "DescribeDBAuditLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Cfw.V20190904
 
        private const string endpoint = "cfw.intl.tencentcloudapi.com";
        private const string version = "2019-09-04";
-       private const string sdkVersion = "SDK_NET_3.0.1367";
+       private const string sdkVersion = "SDK_NET_3.0.1409";
 
         /// <summary>
         /// Client constructor.
@@ -51,27 +51,6 @@ namespace TencentCloud.Cfw.V20190904
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// This API is used to add edge firewall rules.
-        /// </summary>
-        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
-        /// <returns><see cref="AddAcRuleResponse"/></returns>
-        public Task<AddAcRuleResponse> AddAcRule(AddAcRuleRequest req)
-        {
-            return InternalRequestAsync<AddAcRuleResponse>(req, "AddAcRule");
-        }
-
-        /// <summary>
-        /// This API is used to add edge firewall rules.
-        /// </summary>
-        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
-        /// <returns><see cref="AddAcRuleResponse"/></returns>
-        public AddAcRuleResponse AddAcRuleSync(AddAcRuleRequest req)
-        {
-            return InternalRequestAsync<AddAcRuleResponse>(req, "AddAcRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -243,27 +222,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// This API is used to delete all rules.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>
-        /// <returns><see cref="DeleteAllAccessControlRuleResponse"/></returns>
-        public Task<DeleteAllAccessControlRuleResponse> DeleteAllAccessControlRule(DeleteAllAccessControlRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteAllAccessControlRuleResponse>(req, "DeleteAllAccessControlRule");
-        }
-
-        /// <summary>
-        /// This API is used to delete all rules.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteAllAccessControlRuleRequest"/></param>
-        /// <returns><see cref="DeleteAllAccessControlRuleResponse"/></returns>
-        public DeleteAllAccessControlRuleResponse DeleteAllAccessControlRuleSync(DeleteAllAccessControlRuleRequest req)
-        {
-            return InternalRequestAsync<DeleteAllAccessControlRuleResponse>(req, "DeleteAllAccessControlRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to delete asset groups in Asset Management.
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceGroupRequest"/></param>
@@ -302,27 +260,6 @@ namespace TencentCloud.Cfw.V20190904
         public DeleteSecurityGroupRuleResponse DeleteSecurityGroupRuleSync(DeleteSecurityGroupRuleRequest req)
         {
             return InternalRequestAsync<DeleteSecurityGroupRuleResponse>(req, "DeleteSecurityGroupRule")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete firewall instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVpcInstanceResponse"/></returns>
-        public Task<DeleteVpcInstanceResponse> DeleteVpcInstance(DeleteVpcInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVpcInstanceResponse>(req, "DeleteVpcInstance");
-        }
-
-        /// <summary>
-        /// This API is used to delete firewall instance.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVpcInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVpcInstanceResponse"/></returns>
-        public DeleteVpcInstanceResponse DeleteVpcInstanceSync(DeleteVpcInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVpcInstanceResponse>(req, "DeleteVpcInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -894,6 +831,27 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// This API is used to query the traffic statistics under VPC firewalls at the single IP granularity.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwIpStatRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwIpStatResponse"/></returns>
+        public Task<DescribeVpcFwIpStatResponse> DescribeVpcFwIpStat(DescribeVpcFwIpStatRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwIpStatResponse>(req, "DescribeVpcFwIpStat");
+        }
+
+        /// <summary>
+        /// This API is used to query the traffic statistics under VPC firewalls at the single IP granularity.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcFwIpStatRequest"/></param>
+        /// <returns><see cref="DescribeVpcFwIpStatResponse"/></returns>
+        public DescribeVpcFwIpStatResponse DescribeVpcFwIpStatSync(DescribeVpcFwIpStatRequest req)
+        {
+            return InternalRequestAsync<DescribeVpcFwIpStatResponse>(req, "DescribeVpcFwIpStat")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to increase the firewall bandwidth.
         /// </summary>
         /// <param name="req"><see cref="ExpandCfwVerticalRequest"/></param>
@@ -974,27 +932,6 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyAllRuleStatusResponse ModifyAllRuleStatusSync(ModifyAllRuleStatusRequest req)
         {
             return InternalRequestAsync<ModifyAllRuleStatusResponse>(req, "ModifyAllRuleStatus")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to enable or disable one or multiple VPC firewalls.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyAllVPCSwitchStatusResponse"/></returns>
-        public Task<ModifyAllVPCSwitchStatusResponse> ModifyAllVPCSwitchStatus(ModifyAllVPCSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyAllVPCSwitchStatusResponse>(req, "ModifyAllVPCSwitchStatus");
-        }
-
-        /// <summary>
-        /// This API is used to enable or disable one or multiple VPC firewalls.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyAllVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyAllVPCSwitchStatusResponse"/></returns>
-        public ModifyAllVPCSwitchStatusResponse ModifyAllVPCSwitchStatusSync(ModifyAllVPCSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyAllVPCSwitchStatusResponse>(req, "ModifyAllVPCSwitchStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1211,27 +1148,6 @@ namespace TencentCloud.Cfw.V20190904
         public ModifyNatSequenceRulesResponse ModifyNatSequenceRulesSync(ModifyNatSequenceRulesRequest req)
         {
             return InternalRequestAsync<ModifyNatSequenceRulesResponse>(req, "ModifyNatSequenceRules")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to enable or disable an edge firewall.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyPublicIPSwitchStatusResponse"/></returns>
-        public Task<ModifyPublicIPSwitchStatusResponse> ModifyPublicIPSwitchStatus(ModifyPublicIPSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicIPSwitchStatusResponse>(req, "ModifyPublicIPSwitchStatus");
-        }
-
-        /// <summary>
-        /// This API is used to enable or disable an edge firewall.
-        /// </summary>
-        /// <param name="req"><see cref="ModifyPublicIPSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyPublicIPSwitchStatusResponse"/></returns>
-        public ModifyPublicIPSwitchStatusResponse ModifyPublicIPSwitchStatusSync(ModifyPublicIPSwitchStatusRequest req)
-        {
-            return InternalRequestAsync<ModifyPublicIPSwitchStatusResponse>(req, "ModifyPublicIPSwitchStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

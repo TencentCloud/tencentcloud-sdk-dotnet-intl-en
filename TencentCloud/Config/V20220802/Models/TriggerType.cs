@@ -31,8 +31,7 @@ namespace TencentCloud.Config.V20220802.Models
         public string MessageType{ get; set; }
 
         /// <summary>
-        /// Trigger time period
-        /// Note: This field may return null, indicating that no valid value is found.
+        /// Triggering time period.
         /// </summary>
         [JsonProperty("MaximumExecutionFrequency")]
         public string MaximumExecutionFrequency{ get; set; }

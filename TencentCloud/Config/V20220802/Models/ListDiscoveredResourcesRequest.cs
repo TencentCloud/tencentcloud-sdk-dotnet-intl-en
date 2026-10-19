@@ -25,31 +25,31 @@ namespace TencentCloud.Config.V20220802.Models
     {
         
         /// <summary>
-        /// Items per Page
+        /// <p>Number of results displayed per page</p>
         /// </summary>
         [JsonProperty("MaxResults")]
         public ulong? MaxResults{ get; set; }
 
         /// <summary>
-        /// resourceName: Resource name resourceId: Resource ID
+        /// <p>resourceName: resource name  resourceId: resource ID</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Tag
+        /// <p>Tag.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Next page token.
+        /// <p>Next page token</p>
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }
 
         /// <summary>
-        /// Sorting method asc, desc
+        /// <p>Sorting method: asc, desc</p>
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }
