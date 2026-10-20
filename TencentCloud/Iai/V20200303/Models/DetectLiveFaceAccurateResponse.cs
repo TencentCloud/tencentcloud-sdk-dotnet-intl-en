@@ -25,16 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Liveness scoring.
-        /// -Value range: [0,100].
-        /// -Determines whether it is a rephotograph based on the liveness score and threshold range.
-        /// -Current threshold can be divided into [5,10,40,70,90]. among them, the recommended threshold is  40.
+        /// <p>Liveness authenticity score.</p><ul><li>Value range: [0,100].</li><li>Determine whether it is a rephotograph based on the threshold range corresponding to the liveness score.</li><li>Currently, the threshold can be divided into [5,10,40,70,90], with a recommended threshold of 40.</li><li>The higher the score, the closer to a real person and the lower the rephotograph risk.</li></ul>
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// Algorithm model version used for face recognition.
+        /// <p>Algorithm model version used for face recognition.</p>
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }
