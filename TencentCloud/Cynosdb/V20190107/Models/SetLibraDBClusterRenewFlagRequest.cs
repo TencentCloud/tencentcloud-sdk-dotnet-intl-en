@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Analysis Cluster ID List
+        /// Analytical cluster ID list
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag 0: Normal renewal 1: Automatic renewal 2: Non-renewal upon expiration
+        /// Auto-renewal flag. 0: normal renewal. 1: automatic renewal. 2: non-renewal upon expiration.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

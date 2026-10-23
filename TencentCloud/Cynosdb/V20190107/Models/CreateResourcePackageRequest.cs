@@ -25,49 +25,50 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance type. currently fixed to cynosdb-serverless.
+        /// Instance type. Currently fixed to cynosdb-serverless.
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Resource package region of use: chineseMainland - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+        /// Region of resource package use. chineseMainland: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+        /// Resource package type. CCU: compute resource package. DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Resource pack edition. Valid values: `base` (basic edition), `common` (general edition), `enterprise` (enterprise edition).
+        /// Resource pack version
+        /// base: basic version, common: general version, enterprise: Enterprise Edition
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// Resource package size. Compute resource unit: unit; storage resource: GB.
+        /// Package size. Compute resource unit: count. Storage resource: GB.
         /// </summary>
         [JsonProperty("PackageSpec")]
         public float? PackageSpec{ get; set; }
 
         /// <summary>
-        /// Validity period of a resource pack in days
+        /// Resource pack validity period. Unit: day.
         /// </summary>
         [JsonProperty("ExpireDay")]
         public long? ExpireDay{ get; set; }
 
         /// <summary>
-        /// Number of the resource packs to be purchased
+        /// Number of resource packages to purchase
         /// </summary>
         [JsonProperty("PackageCount")]
         public long? PackageCount{ get; set; }
 
         /// <summary>
-        /// Resource pack name
+        /// Resource package name.
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }

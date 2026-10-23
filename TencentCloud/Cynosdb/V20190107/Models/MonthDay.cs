@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Month{ get; set; }
 
         /// <summary>
-        /// date info
+        /// Date information
         /// </summary>
         [JsonProperty("Day")]
         public long? Day{ get; set; }

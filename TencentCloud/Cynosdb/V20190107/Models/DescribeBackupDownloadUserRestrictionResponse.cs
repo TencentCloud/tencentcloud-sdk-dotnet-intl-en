@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public BackupLimitClusterRestriction[] BackupLimitClusterRestrictions{ get; set; }
 
         /// <summary>
-        /// Total number of entries
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

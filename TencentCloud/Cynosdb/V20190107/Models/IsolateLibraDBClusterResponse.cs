@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Return order ID
+        /// Return the order number.
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

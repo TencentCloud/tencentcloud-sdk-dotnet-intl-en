@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Configuration update time for cross-regional Binlog.
+        /// Binlog cross-regional configuration update time
         /// </summary>
         [JsonProperty("BinlogCrossRegionsConfigUpdateTime")]
         public string BinlogCrossRegionsConfigUpdateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the Binlog configuration message.
+        /// Binlog configuration message
         /// </summary>
         [JsonProperty("BinlogConfig")]
         public BinlogConfigInfo BinlogConfig{ get; set; }

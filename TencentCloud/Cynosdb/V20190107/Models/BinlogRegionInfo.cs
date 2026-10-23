@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Backup region</p>
+        /// <p>Backup region.</p>
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }

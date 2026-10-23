@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Serial number of the query</p>
+        /// <p>Serial number for querying</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derivative table/subquery in FROM clause), UNION (second and subsequent SELECTs in UNION), UNION RESULT (result set of UNION).</p>
+        /// <p>Query type. Common values: SIMPLE (simple query, excluding subqueries or UNION), PRIMARY (outermost query), SUBQUERY (first SELECT in a subquery), DERIVED (derived table/subquery in the FROM clause), UNION (second or later SELECT in a UNION), UNION RESULT (result set of a UNION).</p>
         /// </summary>
         [JsonProperty("SelectType")]
         public string SelectType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Partitions{ get; set; }
 
         /// <summary>
-        /// <p>Access type (very important, a key metric for measuring query efficiency), ranked from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table). • const: Matches one row through primary key or unique index, commonly seen in WHERE pk = 1. • eq_ref: Uses primary key or unique index when connecting, each index value matches only one row. • ref: Uses non-unique index to search, may match multiple rows. • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN. • index: Full index scan (traversal of the entire index tree). • ALL: Full-table scan (worst, requires optimization).</p>
+        /// <p>Access type (very important, a key metric for query efficiency), arranged from best to worst: system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL. Common value descriptions: • system: The table has only one row (system table) • const: Matches one row through the primary key or unique index, commonly used in WHERE pk = 1 • eq_ref: Uses the primary key or unique index when connecting, and each index value matches only one row • ref: Uses a non-unique index search, which may match multiple rows • range: Index range scan, such as BETWEEN, &gt;, &lt;, IN • index: Full index scan (traverses the entire index tree) • ALL: Full-table scan (worst, needs optimization)</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Indexes that may be used in querying. NULL means no available index.</p>
+        /// <p>Indexes that may be used in querying. NULL means no index is available.</p>
         /// </summary>
         [JsonProperty("PossibleKeys")]
         public string PossibleKeys{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Key{ get; set; }
 
         /// <summary>
-        /// <p>The length of the actual used index (number of bytes). It can be used to determine which columns are actually used in the composite index. A shorter value indicates fewer index columns are used.</p>
+        /// <p>Actual used index length (number of bytes). It can be used to determine which columns in a composite index are actually used. A shorter value indicates fewer index columns used.</p>
         /// </summary>
         [JsonProperty("KeyLen")]
         public string KeyLen{ get; set; }
 
         /// <summary>
-        /// <p>Display which columns or constants are compared with indexes in the key column. Common values: const (constant), certain column name, func (function result).</p>
+        /// <p>Display which columns or constants to compare with the indexes in the key column. Common values: const, a column name, func (function result).</p>
         /// </summary>
         [JsonProperty("Ref")]
         public string Ref{ get; set; }
 
         /// <summary>
-        /// <p>Estimate the number of rows to scan</p>
+        /// <p>Estimated Number of Rows to Scan</p>
         /// </summary>
         [JsonProperty("Rows")]
         public long? Rows{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the estimation of the percentage of rows remaining after table conditional filtering. 100% means no additional filtering. The higher the value, the better.</p>
+        /// <p>Refers to the estimated percentage of rows remaining after table condition filtering. 100% means no additional filtering, and higher values are better.</p>
         /// </summary>
         [JsonProperty("Filtered")]
         public float? Filtered{ get; set; }

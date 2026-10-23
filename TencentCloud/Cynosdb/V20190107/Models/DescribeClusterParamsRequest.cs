@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Whether it is a global parameter.
+        /// Whether it is a global parameter
         /// </summary>
         [JsonProperty("IsGlobal")]
         public string IsGlobal{ get; set; }

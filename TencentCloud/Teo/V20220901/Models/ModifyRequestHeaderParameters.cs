@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of http header setting rules.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// HTTP header setting rule list.
         /// </summary>
         [JsonProperty("HeaderActions")]
         public HeaderAction[] HeaderActions{ get; set; }

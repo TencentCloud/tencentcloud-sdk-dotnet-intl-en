@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Whether support from availability zone is supported</p>
+        /// <p>Whether a secondary AZ is supported</p>
         /// </summary>
         [JsonProperty("IsSupportSlaveZone")]
         public string IsSupportSlaveZone{ get; set; }
 
         /// <summary>
-        /// <p>The causes for no support from availability zone</p>
+        /// <p>The causes for no support from the availability zone</p>
         /// </summary>
         [JsonProperty("NonsupportSlaveZoneReason")]
         public string NonsupportSlaveZoneReason{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IsSupportRo{ get; set; }
 
         /// <summary>
-        /// <p>Reason for unsupported RO instance</p>
+        /// <p>Reasons for no support for RO instances</p>
         /// </summary>
         [JsonProperty("NonsupportRoReason")]
         public string NonsupportRoReason{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IsSupportManualSnapshot{ get; set; }
 
         /// <summary>
-        /// <p>Whether transparent data encryption is supported</p>
+        /// <p>Whether transparent data encryption is supported.</p>
         /// </summary>
         [JsonProperty("IsSupportTransparentDataEncryption")]
         public string IsSupportTransparentDataEncryption{ get; set; }
 
         /// <summary>
-        /// <p>The causes for unsupported transparent data encryption</p>
+        /// <p>Reasons for no support for transparent data encryption</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReason")]
         public string NoSupportTransparentDataEncryptionReason{ get; set; }
 
         /// <summary>
-        /// <p>Whether manual initiation of logical backup is supported</p>
+        /// <p>Whether manual initiation of logical backup is supported.</p>
         /// </summary>
         [JsonProperty("IsSupportManualLogic")]
         public string IsSupportManualLogic{ get; set; }
@@ -79,19 +79,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IsSupportGlobalEncryption{ get; set; }
 
         /// <summary>
-        /// <p>The causes for unsupported global encryption</p>
+        /// <p>The causes for no support for global encryption</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReason")]
         public string NoSupportGlobalEncryptionReason{ get; set; }
 
         /// <summary>
-        /// <p>Status code for unsupported transparent encryption reason</p>
+        /// <p>Status code for reasons of no support for transparent encryption</p>
         /// </summary>
         [JsonProperty("NoSupportTransparentDataEncryptionReasonCode")]
         public string NoSupportTransparentDataEncryptionReasonCode{ get; set; }
 
         /// <summary>
-        /// <p>Status code for unsupported global encryption reason</p>
+        /// <p>Status code for the reason why global encryption is not supported</p>
         /// </summary>
         [JsonProperty("NoSupportGlobalEncryptionReasonCode")]
         public string NoSupportGlobalEncryptionReasonCode{ get; set; }

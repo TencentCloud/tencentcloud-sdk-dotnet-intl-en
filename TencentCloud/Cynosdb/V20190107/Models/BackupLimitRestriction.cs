@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Restriction type.
+        /// Restriction type
         /// </summary>
         [JsonProperty("LimitType")]
         public string LimitType{ get; set; }
 
         /// <summary>
-        /// This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+        /// This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
         /// </summary>
         [JsonProperty("VpcComparisonSymbol")]
         public string VpcComparisonSymbol{ get; set; }
 
         /// <summary>
-        /// Specified ips can download; specified ips are not allowed to download.
+        /// In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
         /// </summary>
         [JsonProperty("IpComparisonSymbol")]
         public string IpComparisonSymbol{ get; set; }

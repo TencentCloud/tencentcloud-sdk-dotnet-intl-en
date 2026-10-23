@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Status. closing-Closing, closed-Closed, opening-Opening, training-Training, trained-Trained, train_failed-Training failed.</p>
+        /// <p>Status. closing: turning off, closed: closed, opening: enabling, training: training, trained: training completed, train_failed: training failed.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Start time.</p>
+        /// <p>Activation time.</p>
         /// </summary>
         [JsonProperty("OpenTime")]
         public string OpenTime{ get; set; }

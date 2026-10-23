@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Start time
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }

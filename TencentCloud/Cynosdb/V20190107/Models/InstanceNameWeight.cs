@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance name. specifies the name defined by InstanceInitInfo.InstanceName in cluster creation.
+        /// Instance name, which is the name specified by InstanceInitInfo.InstanceName during cluster creation
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

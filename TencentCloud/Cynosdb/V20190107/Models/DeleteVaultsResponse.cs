@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Delete task list. Each safe corresponds to a task.
+        /// Task deletion list. Each safe corresponds to a task.
         /// </summary>
         [JsonProperty("VaultTask")]
         public DeleteVaultTask[] VaultTask{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Pagination size
+        /// Pagination size.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Specifies whether to query only user-level download limits. true - yes, false - no.
+        /// Whether to query only user-level download limits. true: yes; false: no
         /// </summary>
         [JsonProperty("OnlyUserRestriction")]
         public bool? OnlyUserRestriction{ get; set; }

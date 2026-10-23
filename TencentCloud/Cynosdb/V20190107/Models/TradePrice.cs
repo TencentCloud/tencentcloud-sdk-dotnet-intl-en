@@ -25,49 +25,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Resource total price under prepaid mode, excluding discounts. unit: microCent. 1 US dollar equals 1e8 microCents.
+        /// Resource total price under prepaid mode, excluding discounts. Unit: cent.
         /// </summary>
         [JsonProperty("TotalPrice")]
         public long? TotalPrice{ get; set; }
 
         /// <summary>
-        /// Total discount. `100` means no discount.
+        /// Total discount. 100 means 100% no discount.
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// Discounted total price under prepaid mode, unit: cent. 1 US dollar equals 1e8 microCents. for example, the user enjoys a Discount = TotalPrice * Discount.
+        /// Discounted total price under prepaid mode, unit: cent. For example, if a user enjoys a discount, it is TotalPrice × Discount.
         /// </summary>
         [JsonProperty("TotalPriceDiscount")]
         public long? TotalPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Unit resource price in postpaid mode, excluding discounts. unit: cent. 1 US dollar equals 1e2 cents
+        /// Unit resource price in postpaid mode, excluding discounts. Unit: cent
         /// </summary>
         [JsonProperty("UnitPrice")]
         public long? UnitPrice{ get; set; }
 
         /// <summary>
-        /// Unit resource price in postpaid mode after Discount, unit: cent. 1 US dollar equals 1e2 cents. for example, the user enjoys a Discount = unitprice * Discount.
+        /// Unit resource price under postpaid mode after Discount, unit: cent. For example, if a user enjoys a Discount, it is UnitPrice × Discount.
         /// </summary>
         [JsonProperty("UnitPriceDiscount")]
         public long? UnitPriceDiscount{ get; set; }
 
         /// <summary>
-        /// Price unit
+        /// Billing price unit
         /// </summary>
         [JsonProperty("ChargeUnit")]
         public string ChargeUnit{ get; set; }
 
         /// <summary>
-        /// Excludes discounted rates under high precision.
+        /// High-precision price excluding discounts
         /// </summary>
         [JsonProperty("UnitPriceHighPrecision")]
         public string UnitPriceHighPrecision{ get; set; }
 
         /// <summary>
-        /// Discounted price under high precision.
+        /// Discounted price at high precision
         /// </summary>
         [JsonProperty("UnitPriceDiscountHighPrecision")]
         public string UnitPriceDiscountHighPrecision{ get; set; }

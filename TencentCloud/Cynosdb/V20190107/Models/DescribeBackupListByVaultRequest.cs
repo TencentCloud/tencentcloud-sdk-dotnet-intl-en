@@ -25,55 +25,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Safe ID, length must be greater than 0
+        /// Safe ID. Its length must be greater than 0.
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// Backup file ID list for filtering specific backups
+        /// List of the backup file IDs for filtering specific backups.
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }
 
         /// <summary>
-        /// Cluster ID for filtering backups of a specific cluster
+        /// Cluster ID, for filtering backups of a specific cluster
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Backup name list for exact matching filter criteria
+        /// List of backup names for exact matching filter criteria
         /// </summary>
         [JsonProperty("BackupNames")]
         public string[] BackupNames{ get; set; }
 
         /// <summary>
-        /// Filename list for exact matching filter
+        /// Filename list for exact matching filter criteria
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
 
         /// <summary>
-        /// Number of pages, range (0,100], default 100
+        /// Pagination quantity. Value range: (0, 100]. Default value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Range: [0, INF). Default is 0.
+        /// Pagination offset. Value range: [0, INF). Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method, available values: desc, asc, DESC, ASC, default desc
+        /// Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

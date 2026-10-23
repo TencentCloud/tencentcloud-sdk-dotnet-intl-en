@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Task ID, used for query task execution status
+        /// Task ID, used to query the task execution status.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Safe name, length must be greater than 0
+        /// Safe name. The length must be greater than 0.
         /// </summary>
         [JsonProperty("VaultName")]
         public string VaultName{ get; set; }
 
         /// <summary>
-        /// Backup retention period (seconds). Must be greater than 0.
+        /// Backup retention period in seconds. It must be greater than 0.
         /// </summary>
         [JsonProperty("BackupSaveSeconds")]
         public long? BackupSaveSeconds{ get; set; }
 
         /// <summary>
-        /// Safe description
+        /// Description of the safe
         /// </summary>
         [JsonProperty("VaultDescribe")]
         public string VaultDescribe{ get; set; }
 
         /// <summary>
-        /// KMS key ID, length 0-36 characters
+        /// KMS key ID, 0-36 characters in length
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Key type, available values: cloud (KMS managed keys), custom (custom key)
+        /// Key type. Available values: cloud (cloud-managed key), custom (custom key)
         /// </summary>
         [JsonProperty("KeyType")]
         public string KeyType{ get; set; }
 
         /// <summary>
-        /// Key region, length 0-32 characters
+        /// Region of the key, 0–32 characters in length
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
-        /// Lock time, format: YYYY-MM-DD HH:mm:ss
+        /// Lock time. Format: YYYY-MM-DD HH:mm:ss
         /// </summary>
         [JsonProperty("LockedTime")]
         public string LockedTime{ get; set; }

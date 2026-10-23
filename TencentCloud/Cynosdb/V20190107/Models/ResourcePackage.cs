@@ -25,20 +25,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of the resource package.
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Resource package type: CCU: compute resource package.
-        /// DISK: storage resource package.
+        /// Resource package type. CCU: compute resource package.
+        /// DISK: storage resource package
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Deduction priority of the current resource package bound to the current instance.
+        /// Deduction priority of the current resource pack bound to the current instance
         /// </summary>
         [JsonProperty("DeductionPriority")]
         public long? DeductionPriority{ get; set; }

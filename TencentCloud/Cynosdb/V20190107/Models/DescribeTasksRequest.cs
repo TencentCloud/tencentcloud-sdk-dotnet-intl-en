@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Starting value of the task start time.
+        /// Starting value of task start time
         /// </summary>
         [JsonProperty("StartTimeBegin")]
         public string StartTimeBegin{ get; set; }
 
         /// <summary>
-        /// End value of the task start time.
+        /// End value of the task start time
         /// </summary>
         [JsonProperty("StartTimeEnd")]
         public string StartTimeEnd{ get; set; }
 
         /// <summary>
-        /// Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+        /// Filter criteria. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType"
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Length of the list to be queried.
+        /// Query the list length
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset of the list to be queried.
+        /// List offset for queries
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

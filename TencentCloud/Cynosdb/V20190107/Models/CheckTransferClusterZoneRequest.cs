@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Source Cluster Id
+        /// Source cluster Id
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Target availability zone
+        /// Target zone
         /// </summary>
         [JsonProperty("DstZone")]
         public string DstZone{ get; set; }

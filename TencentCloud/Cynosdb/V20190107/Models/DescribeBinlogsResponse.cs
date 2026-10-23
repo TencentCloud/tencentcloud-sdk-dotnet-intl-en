@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Binlog list.
+        /// Binlog list
         /// </summary>
         [JsonProperty("Binlogs")]
         public BinlogItem[] Binlogs{ get; set; }

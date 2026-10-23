@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The generated rule template ID.
+        /// Generated rule template ID.
         /// </summary>
         [JsonProperty("RuleTemplateId")]
         public string RuleTemplateId{ get; set; }

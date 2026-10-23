@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ
+        /// Availability zone
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Whether there is inventory
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
         /// <summary>
-        /// Quantity in stock
+        /// Inventory quantity
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }
 
         /// <summary>
-        /// Available zone inventory information.
+        /// AZ inventory information
         /// </summary>
         [JsonProperty("SlaveZoneStockInfos")]
         public SlaveZoneStockInfo[] SlaveZoneStockInfos{ get; set; }

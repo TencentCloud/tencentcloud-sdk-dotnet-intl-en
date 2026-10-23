@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log topic ID.
+        /// Log topic id
         /// </summary>
         [JsonProperty("CLSTopicIds")]
         public string[] CLSTopicIds{ get; set; }
 
         /// <summary>
-        /// Log type.
+        /// Log type
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Whether the maintenance time is in operation.
+        /// Whether to run during the maintenance time
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

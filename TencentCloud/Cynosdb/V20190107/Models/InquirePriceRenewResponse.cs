@@ -31,25 +31,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance ID list
+        /// Instance ID list.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Price of instance specification in array
+        /// Corresponding inquiry result array.
         /// </summary>
         [JsonProperty("Prices")]
         public TradePrice[] Prices{ get; set; }
 
         /// <summary>
-        /// Total renewal price of compute node
+        /// Total price for renewing the computing node
         /// </summary>
         [JsonProperty("InstanceRealTotalPrice")]
         public long? InstanceRealTotalPrice{ get; set; }
 
         /// <summary>
-        /// Total renewal price of storage node
+        /// Total price for renewing the storage node
         /// </summary>
         [JsonProperty("StorageRealTotalPrice")]
         public long? StorageRealTotalPrice{ get; set; }

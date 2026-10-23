@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Rule template ID
+        /// Rule template ID.
         /// </summary>
         [JsonProperty("RuleTemplateId")]
         public string RuleTemplateId{ get; set; }
 
         /// <summary>
-        /// Rule template name
+        /// Rule template name.
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// Filter of the rule template
+        /// Filter criteria of the rule template
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Creation time of a rule template
+        /// Rule template creation time.
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
@@ -61,25 +61,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpdateAt{ get; set; }
 
         /// <summary>
-        /// Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+        /// Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Alarm policy. 0 - no alert, 1 - alert.
+        /// Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public ulong? AlarmPolicy{ get; set; }
 
         /// <summary>
-        /// Template status. 0 - no task, 1 - modifying.
+        /// Template status. Valid values: 0 - No task, 1 - modifying.
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// Template application is used in which instances.
+        /// Instances to which this rule template is applied.
         /// </summary>
         [JsonProperty("AffectedInstances")]
         public string[] AffectedInstances{ get; set; }

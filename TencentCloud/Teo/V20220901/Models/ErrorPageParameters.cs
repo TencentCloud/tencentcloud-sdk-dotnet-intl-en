@@ -26,7 +26,6 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Custom error page configuration list.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("ErrorPageParams")]
         public ErrorPage[] ErrorPageParams{ get; set; }

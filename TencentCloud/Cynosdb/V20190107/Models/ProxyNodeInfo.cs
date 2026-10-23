@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Database Proxy Node ID</p>
+        /// <p>Database proxy node ID</p>
         /// </summary>
         [JsonProperty("ProxyNodeId")]
         public string ProxyNodeId{ get; set; }
 
         /// <summary>
-        /// <p>Current connection number of nodes. This field value does not return in the DescribeProxyNodes API.</p>
+        /// <p>Current connection number of nodes. This field is not returned by the DescribeProxyNodes API.</p>
         /// </summary>
         [JsonProperty("ProxyNodeConnections")]
         public long? ProxyNodeConnections{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// <p>Database Proxy Node Status</p>
+        /// <p>Database proxy node status</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>User AppID</p>
+        /// <p>User AppID.</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>Database Proxy Node Name</p>
+        /// <p>Database proxy node name</p>
         /// </summary>
         [JsonProperty("OssProxyNodeName")]
         public string OssProxyNodeName{ get; set; }

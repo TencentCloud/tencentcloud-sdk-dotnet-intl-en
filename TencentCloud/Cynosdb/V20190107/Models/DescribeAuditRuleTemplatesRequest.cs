@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Rule template ID
+        /// Rule template ID.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
@@ -37,16 +37,28 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] RuleTemplateNames{ get; set; }
 
         /// <summary>
-        /// Number of results returned per request. Default value: `20`.
+        /// Number of items returned per request. Default value: 20.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Default value: `0`.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
+        /// </summary>
+        [JsonProperty("AlarmLevel")]
+        public ulong? AlarmLevel{ get; set; }
+
+        /// <summary>
+        /// Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
+        /// </summary>
+        [JsonProperty("AlarmPolicy")]
+        public ulong? AlarmPolicy{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "RuleTemplateNames.", this.RuleTemplateNames);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+            this.SetParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
         }
     }
 }

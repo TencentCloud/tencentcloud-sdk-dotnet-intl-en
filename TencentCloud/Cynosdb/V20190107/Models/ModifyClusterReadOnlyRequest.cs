@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Cluster read-only switch, valid values: ON, OFF.
+        /// Cluster read-only switch. Available values: ON, OFF
         /// </summary>
         [JsonProperty("ReadOnlyOperation")]
         public string ReadOnlyOperation{ get; set; }
 
         /// <summary>
-        /// Valid values: `yes` (modify in maintenance window), `no` (execute now by default).
+        /// yes: Modify within the Ops time window. no: Immediately execute (default value)
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

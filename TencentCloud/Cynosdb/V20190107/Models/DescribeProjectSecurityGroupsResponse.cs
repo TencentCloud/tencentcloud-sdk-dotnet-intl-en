@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
-        /// The total number of groups
+        /// Total number.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Cpu cores</p>
+        /// <p>Number of Cpu cores.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+        /// <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// <p>ID of the associated VPC network.</p>
+        /// <p>ID of the VPC network it belongs to.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+        /// <p>Database type. Value range: </p><li> MYSQL </li>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
@@ -104,13 +104,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// <p>Transaction mode. 0: place order and pay; 1: place order</p>
+        /// <p>Transaction mode 0-Place order and pay 1-Place order</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// <p>Parameter template ID</p>
+        /// <p>Parameter template ID.</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
@@ -128,7 +128,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// <p>proxy sync upgrade</p>
+        /// <p>Upgrade proxy synchronously</p>
         /// </summary>
         [JsonProperty("UpgradeProxy")]
         public UpgradeProxy UpgradeProxy{ get; set; }

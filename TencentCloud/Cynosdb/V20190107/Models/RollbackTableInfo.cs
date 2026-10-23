@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Old table name.
+        /// Old table name
         /// </summary>
         [JsonProperty("OldTable")]
         public string OldTable{ get; set; }
 
         /// <summary>
-        /// New table name.
+        /// New table name
         /// </summary>
         [JsonProperty("NewTable")]
         public string NewTable{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// A parameter used to replicate the array of cluster IDs
+        /// Copy the cluster ID array, for example ["cynosdbmysql-bzxxrmtq","cynosdbmysql-qwer"]
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Cluster ID
+        /// Cluster id, for example, cynosdbmysql-bzxxrmtq
         /// </summary>
         [JsonProperty("SourceClusterId")]
         public string SourceClusterId{ get; set; }

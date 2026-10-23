@@ -25,37 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Status code. valid values: 301, 302, 303, 307, 308.
+        /// <p>Status code, value is one of 301, 302, 303, 307, 308.</p>
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// Target request protocol. valid values:.
-        /// <Li>Http: target request protocol http;</li>.
-        /// <Li>Https: target request protocol https;</li>.
-        /// <Li>Follow: follow the request.</li>.
+        /// <p>Target request protocol.</p><p>Enumeration values:</p><ul><li>http: The target request protocol is HTTP.</li><li>https: The target request protocol is HTTPS.</li><li>follow: Follow request.</li></ul>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Target hostname.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Target HostName.</p>
         /// </summary>
         [JsonProperty("HostName")]
         public HostName HostName{ get; set; }
 
         /// <summary>
-        /// Target path.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Target path.</p>
         /// </summary>
         [JsonProperty("URLPath")]
         public URLPath URLPath{ get; set; }
 
         /// <summary>
-        /// Carry query parameters.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Query string.</p>
         /// </summary>
         [JsonProperty("QueryString")]
         public AccessURLRedirectQueryString QueryString{ get; set; }

@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Resource package ID to be exported.
+        /// Resource package ID to be exported
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster ID of the cynos cluster that uses the resource package capacity.
+        /// cynos cluster ID that uses the resource pack capacity
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Sorting field. currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount).
+        /// Sorting field. Currently supports: createTime (resource package deduction time), successDeductSpec (resource package deduction amount)
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting type. supports ASC, DESC, ASC, DESC.
+        /// Sorting type. Supports `ASC`, `DESC`, `asc`, and `desc`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// A maximum of 2000 rows of data can be exported at a time. currently, a maximum of 2000 rows are supported.
+        /// A maximum of 2000 rows of data can be exported at a time.
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
         /// <summary>
-        /// Offset and page number.
+        /// Offset and page number
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// Specifies the format for exporting data. currently only supports csv format, reserved for future expansion.
+        /// Data export format. Currently only csv format is supported. Reserved for extension.
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }

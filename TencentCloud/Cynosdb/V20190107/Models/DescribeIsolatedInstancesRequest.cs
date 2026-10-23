@@ -25,41 +25,41 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of returned results. the default value is 20. the maximum value is 100.
+        /// Returned quantity. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. default value: 0.
+        /// Record offset. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. valid values:.
-        /// <Li>CREATETIME: creation time</li>.
-        /// <li> PERIODENDTIME: expiration time</li>.
+        /// Sorting field. Valid values:
+        /// <li> CREATETIME: creation time</li>
+        /// <li> PERIODENDTIME: Expiration time</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting type. value range:.
-        /// <Li>ASC: specifies ascending sort.</li>.
-        /// <li> DESC: sorts in descending order. </li>.
+        /// Sorting type. Valid values:
+        /// <li> ASC: ascending order </li>
+        /// <li> DESC: sort in descending order </li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Search criteria. when multiple filters exist, the relationship between filters is logical AND.
+        /// Search criteria. When multiple filters exist, the relationship between filters is logical AND.
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Engine type: currently supports "MYSQL", "POSTGRESQL".
+        /// Engine type: Currently supports "MYSQL" and "POSTGRESQL"
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

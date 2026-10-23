@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Frozen transaction ID.
+        /// Frozen transaction ID
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] BigDealIds{ get; set; }
 
         /// <summary>
-        /// Order ID.
+        /// Order ID
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

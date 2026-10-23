@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Validity period, which needs to be used together with `TimeUnit`.
+        /// Purchase period, combined with TimeUnit for the changes to take effect
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Unit of validity period, which needs to be used together with `TimeSpan`. Valid values: `d` (day), `m` (month).
+        /// Duration unit, takes effect when combined with TimeSpan. Options: day:d, month:m
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

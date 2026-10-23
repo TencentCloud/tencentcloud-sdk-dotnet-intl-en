@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Db{ get; set; }
 
         /// <summary>
-        /// <p>Original SQL sample</p>
+        /// <p>Original SQL sample.</p>
         /// </summary>
         [JsonProperty("SQLSample")]
         public string SQLSample{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ExplainRow[] TablePlanBefore{ get; set; }
 
         /// <summary>
-        /// <p>Execution plan after optimization - List</p>
+        /// <p>Execution plan after optimization - list</p>
         /// </summary>
         [JsonProperty("TablePlanAfter")]
         public ExplainRow[] TablePlanAfter{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? QueryTimeAfter{ get; set; }
 
         /// <summary>
-        /// <p>Number of scanned rows before optimization</p>
+        /// <p>Scanned rows before optimization</p>
         /// </summary>
         [JsonProperty("SQLScanRowsBefore")]
         public long? SQLScanRowsBefore{ get; set; }

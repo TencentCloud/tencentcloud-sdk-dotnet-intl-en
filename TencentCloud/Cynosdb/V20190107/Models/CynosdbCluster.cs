@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offline<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
+        /// <p>Cluster status. Valid values include:<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: De-isolating<br>offlining: Offlining<br>offlined: Offline<br>deleting: Deleting<br>deleted: Deleted</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>Database version</p>
+        /// <p>Database version.</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// <p>User appid</p>
+        /// <p>User AppID.</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// <p>Cluster creation time</p>
+        /// <p>Cluster creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+        /// <p>Payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -145,31 +145,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>cynos kernel version</p>
+        /// <p>cynos kernel version.</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// <p>cynos version tag</p>
+        /// <p>cynos version tag.</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// <p>Storage capacity</p>
+        /// <p>Storage capacity.</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// <p>Renewal flag</p>
+        /// <p>Renewal flag.</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>Currently processing task</p>
+        /// <p>Currently Processing Tasks</p>
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// <p>tag Array of cluster binding</p>
+        /// <p>tag Array bound to the cluster</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
@@ -193,37 +193,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>pause</p>
+        /// <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values: <br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// <p>Cluster Prepaid storage size</p>
+        /// <p>Cluster prepaid storage size.</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// <p>Storage ID of cluster storage in prepayment, used for prepaid storage configuration change</p>
+        /// <p>Storage ID when cluster storage is prepaid, used for prepaid storage configuration changes</p>
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// <p>Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription</p>
+        /// <p>Cluster storage payment mode. Valid values: 0 (pay-as-you-go) and 1 (yearly/monthly subscription).</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// <p>Minimum storage of the cluster compute specification</p>
+        /// <p>Minimum storage corresponding to the cluster compute specification.</p>
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// <p>Maximum storage value of the cluster compute specification</p>
+        /// <p>Maximum storage value corresponding to the cluster compute specification</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
@@ -265,7 +265,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
-        /// <p>Freeze or not</p>
+        /// <p>Whether to freeze</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
@@ -283,7 +283,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// <p>Instance bind resource package info (here only return storage resource package, for example packageType=DISK)</p>
+        /// <p>Instance-bound resource package information (only storage resource packages are returned here, that is, packageType=DISK)</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
@@ -295,7 +295,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, the field is invalid.</p>
+        /// <p>Cluster role. Primary cluster - primary, slave cluster - standby. If GdnId is empty, this field is invalid.</p>
         /// </summary>
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Is it possible to switch vip.
+        /// Is it possible to switch vip
         /// </summary>
         [JsonProperty("IsVipSwitchable")]
         public bool? IsVipSwitchable{ get; set; }
 
         /// <summary>
-        /// The exchangeable time of vip.
+        /// vip exchangeable time
         /// </summary>
         [JsonProperty("VipSwitchableTime")]
         public string VipSwitchableTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ExchangeRoGroupInfo[] ExchangeRoGroupInfoList{ get; set; }
 
         /// <summary>
-        /// Current step.
+        /// Details of the current step
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? CurrentStepProgress{ get; set; }
 
         /// <summary>
-        /// Remaining time of the current step.
+        /// Remaining time of the current step
         /// </summary>
         [JsonProperty("CurrentStepRemainingTime")]
         public string CurrentStepRemainingTime{ get; set; }

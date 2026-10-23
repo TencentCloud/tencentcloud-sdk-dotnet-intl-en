@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Frozen transaction ID.
+        /// Frozen transaction ID
         /// </summary>
         [JsonProperty("TranId")]
         public string TranId{ get; set; }
 
         /// <summary>
-        /// Order ID.
+        /// Order ID
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// Resource ID list (this field is no longer maintained. please use the dealNames field and the query API DescribeResourcesByDealName to obtain resource ids).
+        /// Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API.)
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// Cluster ID list (this field is no longer maintained. please use the dealNames field to get cluster ids via the DescribeResourcesByDealName api.).
+        /// Cluster ID list (this field is no longer maintained. To get the cluster ID, please use the dealNames field to query the DescribeResourcesByDealName API)
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }

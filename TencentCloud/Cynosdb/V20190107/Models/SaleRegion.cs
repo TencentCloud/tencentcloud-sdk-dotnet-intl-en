@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Region name
+        /// English name of the region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Numeric ID of a region
+        /// Region numeric ID.
         /// </summary>
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
         /// <summary>
-        /// Region name
+        /// Region Name in Chinese
         /// </summary>
         [JsonProperty("RegionZh")]
         public string RegionZh{ get; set; }
 
         /// <summary>
-        /// List of purchasable AZs
+        /// List of available saleable zones
         /// </summary>
         [JsonProperty("ZoneSet")]
         public SaleZone[] ZoneSet{ get; set; }
 
         /// <summary>
-        /// Engine type
+        /// Engine type.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Supported modules in a region
+        /// Region module support status
         /// </summary>
         [JsonProperty("Modules")]
         public Module[] Modules{ get; set; }

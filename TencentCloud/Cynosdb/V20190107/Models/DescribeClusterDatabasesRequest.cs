@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Pagination offset.
+        /// Pagination Offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination number limit.
+        /// Page limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

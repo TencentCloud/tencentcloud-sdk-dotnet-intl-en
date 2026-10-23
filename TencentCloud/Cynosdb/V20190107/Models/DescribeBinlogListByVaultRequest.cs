@@ -43,37 +43,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long?[] BackupIds{ get; set; }
 
         /// <summary>
-        /// Backup name list
+        /// List of backup names
         /// </summary>
         [JsonProperty("BackupNames")]
         public string[] BackupNames{ get; set; }
 
         /// <summary>
-        /// Filename list
+        /// File name list
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
 
         /// <summary>
-        /// Number of returned results, range (0,100], default 100
+        /// Number of returned results. Value range: (0, 100]. Default value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Range: [0, INF). Default is 0
+        /// Offset. Value range: [0, INF). Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: createTime.
+        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: createTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method, available values: desc, asc, DESC, ASC, default desc
+        /// Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Log timestamp.
+        /// Log timestamp
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Level{ get; set; }
 
         /// <summary>
-        /// Log content.
+        /// Log content
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

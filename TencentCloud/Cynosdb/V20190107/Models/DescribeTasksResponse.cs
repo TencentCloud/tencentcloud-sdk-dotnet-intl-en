@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of entries in the task list.
+        /// Total number of items in the task list
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Task list.
+        /// Task list
         /// </summary>
         [JsonProperty("TaskList")]
         public BizTaskInfo[] TaskList{ get; set; }

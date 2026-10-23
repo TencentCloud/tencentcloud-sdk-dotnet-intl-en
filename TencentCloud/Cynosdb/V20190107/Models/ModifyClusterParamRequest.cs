@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+        /// List of parameters to modify. Each element is a combination of ParamName, CurrentValue, and OldValue. ParamName is the parameter name, CurrentValue is the current value, and OldValue is the old value and is not validated.
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamItem[] ParamList{ get; set; }
 
         /// <summary>
-        /// Valid values: `yes` (execute during maintenance time), `no` (execute now)
+        /// Execute during the maintenance period - yes, immediate execution - no
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

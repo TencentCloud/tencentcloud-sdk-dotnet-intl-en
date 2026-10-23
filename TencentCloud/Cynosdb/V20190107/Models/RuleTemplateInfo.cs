@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// The rule content.
+        /// Rule content.
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// Alarm level. valid values: 1 (low risk), 2 (medium risk), 3 (high risk).
+        /// Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public long? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Alarm policy. 0 - no alert, 1 - alert.
+        /// Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public long? AlarmPolicy{ get; set; }

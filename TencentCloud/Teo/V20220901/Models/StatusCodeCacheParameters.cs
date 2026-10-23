@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Status code cache ttl.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Status code cache TTL.
         /// </summary>
         [JsonProperty("StatusCodeCacheParams")]
         public StatusCodeCacheParam[] StatusCodeCacheParams{ get; set; }

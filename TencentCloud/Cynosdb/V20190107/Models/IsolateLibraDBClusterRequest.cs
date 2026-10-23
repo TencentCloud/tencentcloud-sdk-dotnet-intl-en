@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// Cause of isolation
+        /// Isolation reason
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }

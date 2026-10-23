@@ -31,37 +31,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Specifies the private network port number.
+        /// Private network port number
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Specifies the public network domain name.
+        /// Public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// Specifies the public network port number.
+        /// Public network port number.
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Network type (ro - read-only, rw/ha - read-write).
+        /// Network type (ro: read-only, rw/ha: read-write)
         /// </summary>
         [JsonProperty("NetType")]
         public string NetType{ get; set; }
 
         /// <summary>
-        /// Specifies the subnet ID.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Specifies the virtual private cloud ID.
+        /// VPC ID
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Specifies the public network status.
+        /// Public network status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }

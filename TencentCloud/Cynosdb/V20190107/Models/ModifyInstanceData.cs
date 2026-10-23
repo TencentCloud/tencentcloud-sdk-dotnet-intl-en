@@ -25,71 +25,71 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// CPU after resizing.
+        /// CPU after configuration change
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory after resizing.
+        /// Memory after configuration change
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Storage upper limit after resizing.
+        /// Storage limit after configuration change
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// CPU before resizing.
+        /// CPU before specification adjustment
         /// </summary>
         [JsonProperty("OldCpu")]
         public long? OldCpu{ get; set; }
 
         /// <summary>
-        /// Memory before resizing.
+        /// Memory before specification modification
         /// </summary>
         [JsonProperty("OldMemory")]
         public long? OldMemory{ get; set; }
 
         /// <summary>
-        /// Storage upper limit before resizing.
+        /// Storage limit before configuration change
         /// </summary>
         [JsonProperty("OldStorageLimit")]
         public long? OldStorageLimit{ get; set; }
 
         /// <summary>
-        /// Instance Machine Type Before Scaling
-        /// 1. common, universal type.
-        /// 2. exclusive, dedicated.
+        /// Instance machine type before scaling
+        /// 1. common: universal type.
+        /// 2. exclusive: dedicated.
         /// </summary>
         [JsonProperty("OldDeviceType")]
         public string OldDeviceType{ get; set; }
 
         /// <summary>
-        /// Instance Machine Type After Scaling
-        /// 1. common, universal type.
-        /// 2. exclusive, dedicated.
+        /// Instance machine type after scaling
+        /// 1. common: universal type.
+        /// 2. exclusive: dedicated.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Upgrade method. Switch after upgrade completes or switch within maintenance window.
+        /// Upgrade method. Switch after the upgrade is completed or switch during the maintenance window.
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// Specifies the quantity of libra nodes.
+        /// Number of libra nodes
         /// </summary>
         [JsonProperty("LibraNodeCount")]
         public long? LibraNodeCount{ get; set; }
 
         /// <summary>
-        /// Specifies the original quantity of libra nodes.
+        /// Original libra node count
         /// </summary>
         [JsonProperty("OldLibraNodeCount")]
         public long? OldLibraNodeCount{ get; set; }

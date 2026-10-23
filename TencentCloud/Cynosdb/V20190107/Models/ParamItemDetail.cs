@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Default{ get; set; }
 
         /// <summary>
-        /// <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+        /// <p>Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty</p>
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// <p>1: Global parameter, 0: Non-global parameter</p>
+        /// <p>1: global parameter, 0: non-global parameter</p>
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Min{ get; set; }
 
         /// <summary>
-        /// <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+        /// <p>Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.</p>
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Whether the type is formula</p>
+        /// <p>Whether the type is a formula</p>
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }

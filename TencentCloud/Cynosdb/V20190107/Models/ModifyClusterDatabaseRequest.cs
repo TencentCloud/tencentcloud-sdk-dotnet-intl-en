@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbName{ get; set; }
 
         /// <summary>
-        /// Host permissions of the new authorized user
+        /// Host permissions for new authorized users
         /// </summary>
         [JsonProperty("NewUserHostPrivileges")]
         public UserHostPrivilege[] NewUserHostPrivileges{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Host permissions of previously authorized users
+        /// Historical authorization of user host permissions
         /// </summary>
         [JsonProperty("OldUserHostPrivileges")]
         public UserHostPrivilege[] OldUserHostPrivileges{ get; set; }

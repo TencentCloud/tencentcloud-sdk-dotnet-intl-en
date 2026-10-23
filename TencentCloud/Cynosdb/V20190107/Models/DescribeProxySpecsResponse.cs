@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// List of database proxyspecifications
+        /// List of database proxy specifications
         /// </summary>
         [JsonProperty("ProxySpecs")]
         public ProxySpec[] ProxySpecs{ get; set; }

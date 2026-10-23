@@ -25,328 +25,262 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Operation name. The name must correspond to the parameter structure. For example, if Name=Cache, CacheParameters is required.
-        /// <li>Cache: Node caching TTL;</li>
-        /// <li>CacheKey: custom Cache Key;</li>
-        /// <li>CachePrefresh: cache pre-refresh;</li>
-        /// <li>AccessURLRedirect: URL redirection;</li>
-        /// <li>UpstreamURLRewrite: origin-pull URL rewrite;</li>
-        /// <li>QUIC:QUIC;</li>
-        /// <li>WebSocket:WebSocket;</li>
-        /// <li>Authentication: Token authentication;</li>
-        /// <li>MaxAge: Browser cache TTL;</li>
-        /// <li>StatusCodeCache: Status code cache TTL;</li>
-        /// <li>OfflineCache: Offline cache;</li>
-        /// <li>SmartRouting: Smart acceleration;</li>
-        /// <li>RangeOriginPull: Range-based origin pull;</li>
-        /// <li>UpstreamHTTP2: HTTP/2 origin pull;</li>
-        /// <li>HostHeader: Host header rewrite;</li>
-        /// <li>ForceRedirectHTTPS: Forced HTTPS redirect configuration for access protocol.</li>
-        /// <li>HTTPS origin pull (OriginPullProtocol);</li>
-        /// <li>Compression: Intelligent compression configuration;</li>
-        /// <li>HSTS:HSTS;</li>
-        /// <li>ClientIPHeader: Header information configuration that stores the client request IP.</li>
-        /// <li>OCSPStapling: OCSP stapling;</li>
-        /// <li>HTTP2: HTTP/2 integration;</li>
-        /// <li>PostMaxSize: Maximum limit for file streaming transmission in POST requests.</li>
-        /// <li>ClientIPCountry: Carry regional information of the client IP during origin pull.</li>
-        /// <li>UpstreamFollowRedirect: Parameter configuration for redirection during origin pull;</li>
-        /// <li>UpstreamRequest: Origin-pull request parameter;</li>
-        /// <li>Shield: Origin server uninstallation.</li>
-        /// <li>TLSConfig: SSL/TLS security;</li>
-        /// <li>ModifyOrigin: Modify origin server;</li>
-        /// <li>SiteFailover: origin server failure failover;</li>
-        /// <li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration.</li>
-        /// <li>HTTP response: HTTP response;</li>
-        /// <li>ErrorPage: Custom error page;</li>
-        /// <li>ModifyResponseHeader: Modify the HTTP node response header;</li>
-        /// <li>ModifyRequestHeader: Modify the request header of an HTTP node;</li>
-        /// <li>ResponseSpeedLimit: Download speed limit for a single connection;</li>
-        /// <li>SetContentIdentifier: Set the content identifier.</li>
-        /// <li>Vary: Vary feature configuration;</li>
-        /// <li>ContentCompression: Content compression configuration;</li>
-        /// <li>OriginAuthentication: Origin authentication configuration.</li>
+        /// <p>Operation name. The name must correspond to the parameters structure. For example, if Name=Cache, then CacheParameters is required.<li>Cache: Node cache TTL;</li><li>CacheKey: Custom Cache Key;</li><li>CachePrefresh: Cache pre-refresh;</li><li>AccessURLRedirect: Access URL redirection;</li><li>UpstreamURLRewrite: Origin-pull URL rewrite;</li><li>QUIC: QUIC;</li><li>WebSocket: WebSocket;</li><li>Authentication: Token authentication;</li><li>MaxAge: Browser cache TTL;</li><li>StatusCodeCache: Status code cache TTL;</li><li>OfflineCache: Offline cache;</li><li>SmartRouting: Smart acceleration;</li><li>AdvancedOriginRouting: Advanced origin optimization;</li><li>RangeOriginPull: Range-based origin pull;</li><li>UpstreamHTTP2: HTTP2 origin-pull;</li><li>HostHeader: Host header rewrite;</li><li>ForceRedirectHTTPS: Forced HTTPS redirect configuration;</li><li>OriginPullProtocol: Origin-pull HTTPS;</li><li>Compression: Intelligent compression configuration;</li><li>HSTS: HSTS;</li><li>ClientIPHeader: Configuration for storing client IP address in the header;</li><li>OCSPStapling: OCSP stapling;</li><li>HTTP2: HTTP2 integration;</li><li>PostMaxSize: Maximum limit configuration for POST request upload file streaming transmission;</li><li>ClientIPCountry: Carrying regional information of the client IP during origin-pull;</li><li>UpstreamFollowRedirect: Upstream follow redirect parameter configuration;</li><li>UpstreamRequest: Origin-pull request parameters;</li><li>Shield: Origin server uninstallation configuration;</li><li>TLSConfig: SSL/TLS security;</li><li>ModifyOrigin: Modify origin server;</li><li>SiteFailover: Origin server fault migration;</li><li>HTTPUpstreamTimeout: Layer-7 origin-pull timeout configuration;</li><li>HttpResponse: HTTP response;</li><li>ErrorPage: Custom error page;</li><li>ModifyResponseHeader: Modify HTTP node response header;</li><li>ModifyRequestHeader: Modify HTTP node request header;</li><li>ResponseSpeedLimit: Single connection download speed limit;</li><li>SetContentIdentifier: Set content identifier;</li><li>Vary: Vary feature configuration;</li><li>ContentCompression: Content compression configuration;</li><li>OriginAuthentication: Origin-pull authentication configuration;</li><li>CustomAction: Custom configuration.</li></p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Node cache ttl configuration parameter. when name is cache, this parameter is required.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Node cache TTL configuration parameter. This parameter is required when the Name value is Cache.</p>
         /// </summary>
         [JsonProperty("CacheParameters")]
         public CacheParameters CacheParameters{ get; set; }
 
         /// <summary>
-        /// Custom cache key configuration parameter. when name is cachekey, this parameter is required.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Custom Cache Key configuration parameter. When Name value is CacheKey, this parameter is required.
         /// </summary>
         [JsonProperty("CacheKeyParameters")]
         public CacheKeyParameters CacheKeyParameters{ get; set; }
 
         /// <summary>
-        /// The cache prefresh configuration parameter. this parameter is required when `name` is `cacheprefresh`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Cache pre-refresh configuration parameter. This parameter is required when the Name value is CachePrefresh.</p>
         /// </summary>
         [JsonProperty("CachePrefreshParameters")]
         public CachePrefreshParameters CachePrefreshParameters{ get; set; }
 
         /// <summary>
-        /// The access url redirection configuration parameter. this parameter is required when `name` is `accessurlredirect`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Access URL redirection configuration parameter. This parameter is required when the Name value is AccessURLRedirect.</p>
         /// </summary>
         [JsonProperty("AccessURLRedirectParameters")]
         public AccessURLRedirectParameters AccessURLRedirectParameters{ get; set; }
 
         /// <summary>
-        /// The origin-pull url rewrite configuration parameter. this parameter is required when `name` is `upstreamurlrewrite`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin-pull URL rewrite configuration parameter. This parameter is required when the value of Name is UpstreamURLRewrite.</p>
         /// </summary>
         [JsonProperty("UpstreamURLRewriteParameters")]
         public UpstreamURLRewriteParameters UpstreamURLRewriteParameters{ get; set; }
 
         /// <summary>
-        /// The quic configuration parameter. this parameter is required when `name` is `quic`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>QUIC configuration parameter. This parameter is required when the Name value is QUIC.</p>
         /// </summary>
         [JsonProperty("QUICParameters")]
         public QUICParameters QUICParameters{ get; set; }
 
         /// <summary>
-        /// The websocket configuration parameter. this parameter is required when `name` is `websocket`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>WebSocket configuration parameter. This parameter is required when the Name value is WebSocket.</p>
         /// </summary>
         [JsonProperty("WebSocketParameters")]
         public WebSocketParameters WebSocketParameters{ get; set; }
 
         /// <summary>
-        /// Token authentication configuration parameter. this parameter is required when `name` is `authentication`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Token authentication configuration parameter. This parameter is required when the Name value is Authentication.</p>
         /// </summary>
         [JsonProperty("AuthenticationParameters")]
         public AuthenticationParameters AuthenticationParameters{ get; set; }
 
         /// <summary>
-        /// Browser cache ttl configuration parameter. this parameter is required when `name` is `maxage`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Browser cache TTL configuration parameter. This parameter is required when the value of Name is MaxAge.</p>
         /// </summary>
         [JsonProperty("MaxAgeParameters")]
         public MaxAgeParameters MaxAgeParameters{ get; set; }
 
         /// <summary>
-        /// Status code cache ttl configuration parameter. this parameter is required when `name` is `statuscodecache`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Status code cache TTL configuration parameter. This parameter is required when the Name value is StatusCodeCache.</p>
         /// </summary>
         [JsonProperty("StatusCodeCacheParameters")]
         public StatusCodeCacheParameters StatusCodeCacheParameters{ get; set; }
 
         /// <summary>
-        /// Offline cache configuration parameter. this parameter is required when `name` is `offlinecache`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Offline cache configuration parameter. This parameter is required when the Name value is OfflineCache.</p>
         /// </summary>
         [JsonProperty("OfflineCacheParameters")]
         public OfflineCacheParameters OfflineCacheParameters{ get; set; }
 
         /// <summary>
-        /// Smart acceleration configuration parameter. this parameter is required when `name` is `smartrouting`.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Smart acceleration configuration parameter. This parameter is required when the Name value is SmartRouting.</p>
         /// </summary>
         [JsonProperty("SmartRoutingParameters")]
         public SmartRoutingParameters SmartRoutingParameters{ get; set; }
 
         /// <summary>
-        /// Shard source retrieval configuration parameter. this parameter is required when name is set to rangeoriginpull.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Advanced origin optimization configuration parameter. This parameter is required when the Name value is AdvancedOriginRouting.</p>
+        /// </summary>
+        [JsonProperty("AdvancedOriginRoutingParameters")]
+        public AdvancedOriginRoutingParameters AdvancedOriginRoutingParameters{ get; set; }
+
+        /// <summary>
+        /// <p>Configuration parameter for range-based origin pull. This parameter is required when the value of Name is RangeOriginPull.</p>
         /// </summary>
         [JsonProperty("RangeOriginPullParameters")]
         public RangeOriginPullParameters RangeOriginPullParameters{ get; set; }
 
         /// <summary>
-        /// HTTP2 origin-pull configuration parameter. this parameter is required when name is set to upstreamhttp2.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HTTP2 origin configuration parameter. This parameter is required when the Name value is UpstreamHTTP2.</p>
         /// </summary>
         [JsonProperty("UpstreamHTTP2Parameters")]
         public UpstreamHTTP2Parameters UpstreamHTTP2Parameters{ get; set; }
 
         /// <summary>
-        /// Host header rewrite configuration parameter. this parameter is required when name is set to hostheader.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Host header rewrite configuration parameter. When the Name value is HostHeader, this parameter is required.</p>
         /// </summary>
         [JsonProperty("HostHeaderParameters")]
         public HostHeaderParameters HostHeaderParameters{ get; set; }
 
         /// <summary>
-        /// Force https redirect configuration parameter. this parameter is required when the name is set to forceredirecthttps.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Forced HTTPS redirect configuration for the access protocol. This parameter is required when the Name value is ForceRedirectHTTPS.</p>
         /// </summary>
         [JsonProperty("ForceRedirectHTTPSParameters")]
         public ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters{ get; set; }
 
         /// <summary>
-        /// HTTPS configuration for origin-pull. this parameter is required when the Name value is OriginPullProtocol.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin HTTPS configuration parameter. This parameter is required when the Name value is OriginPullProtocol.</p>
         /// </summary>
         [JsonProperty("OriginPullProtocolParameters")]
         public OriginPullProtocolParameters OriginPullProtocolParameters{ get; set; }
 
         /// <summary>
-        /// Intelligent compression configuration. this parameter is required when name is set to compression.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Intelligent compression configuration. This parameter is required when the Name value is Compression.</p>
         /// </summary>
         [JsonProperty("CompressionParameters")]
         public CompressionParameters CompressionParameters{ get; set; }
 
         /// <summary>
-        /// HSTS configuration parameter. this parameter is required when name is hsts.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HSTS configuration parameter. When the Name value is HSTS, this parameter is required.</p>
         /// </summary>
         [JsonProperty("HSTSParameters")]
         public HSTSParameters HSTSParameters{ get; set; }
 
         /// <summary>
-        /// Client ip header configuration for storing client request ip information. this parameter is required when name is clientipheader.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Configuration header information for storing client request IP. When the Name value is ClientIPHeader, this parameter is required.</p>
         /// </summary>
         [JsonProperty("ClientIPHeaderParameters")]
         public ClientIPHeaderParameters ClientIPHeaderParameters{ get; set; }
 
         /// <summary>
-        /// OCSP stapling configuration parameter. this parameter is required when the name is set to ocspstapling.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>OCSP stapling configuration parameter. This parameter is required when Name value is OCSPStapling.</p>
         /// </summary>
         [JsonProperty("OCSPStaplingParameters")]
         public OCSPStaplingParameters OCSPStaplingParameters{ get; set; }
 
         /// <summary>
-        /// HTTP2 access configuration parameter. this parameter is required when name is http2.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HTTP2 integration configuration parameter. This parameter is required when the Name value is HTTP2.</p>
         /// </summary>
         [JsonProperty("HTTP2Parameters")]
         public HTTP2Parameters HTTP2Parameters{ get; set; }
 
         /// <summary>
-        /// Maximum size configuration for file streaming upload via a post request. this parameter is required when name is postmaxsize.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Maximum limit configuration for file streaming transmission in POST request upload. When the Name value is PostMaxSize, this parameter is required.</p>
         /// </summary>
         [JsonProperty("PostMaxSizeParameters")]
         public PostMaxSizeParameters PostMaxSizeParameters{ get; set; }
 
         /// <summary>
-        /// Configuration parameter for carrying the region information of the client ip during origin-pull. this parameter is required when the name is set to clientipcountry.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Configuration parameter for carrying client IP regional information during origin pull. When the Name value is ClientIPCountry, this parameter is required.</p>
         /// </summary>
         [JsonProperty("ClientIPCountryParameters")]
         public ClientIPCountryParameters ClientIPCountryParameters{ get; set; }
 
         /// <summary>
-        /// Configuration parameter for following redirects during origin-pull. this parameter is required when the name is set to upstreamfollowredirect.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin-pull follow redirect parameter configuration. This parameter is required when the Name value is UpstreamFollowRedirect.</p>
         /// </summary>
         [JsonProperty("UpstreamFollowRedirectParameters")]
         public UpstreamFollowRedirectParameters UpstreamFollowRedirectParameters{ get; set; }
 
         /// <summary>
-        /// Configuration parameter for origin-pull request. this parameter is required when the name is set to upstreamrequest.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin-pull request parameter configuration parameter. This parameter is required when the Name value is UpstreamRequest.</p>
         /// </summary>
         [JsonProperty("UpstreamRequestParameters")]
         public UpstreamRequestParameters UpstreamRequestParameters{ get; set; }
 
         /// <summary>
-        /// Origin server uninstallation config. When the Name value is Shield, this parameter is required.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin server uninstallation configuration parameter. This parameter is required when the Name value is Shield.</p>
         /// </summary>
         [JsonProperty("ShieldParameters")]
         public ShieldParameters ShieldParameters{ get; set; }
 
         /// <summary>
-        /// SSL/TLS security configuration parameter. this parameter is required when the name is set to tlsconfig.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>SSL/TLS security configuration parameter. This parameter is required when the Name value is TLSConfig.</p>
         /// </summary>
         [JsonProperty("TLSConfigParameters")]
         public TLSConfigParameters TLSConfigParameters{ get; set; }
 
         /// <summary>
-        /// Configuration parameter for modifying the origin server. this parameter is required when the name is set to modifyorigin.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Modify origin server configuration parameter. When the Name value is ModifyOrigin, this parameter is required.</p>
         /// </summary>
         [JsonProperty("ModifyOriginParameters")]
         public ModifyOriginParameters ModifyOriginParameters{ get; set; }
 
         /// <summary>
-        /// Origin server failure failover configuration parameter. This parameter is required when the Name value is SiteFailover.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Source site fault migration config. When the Name value is SiteFailover, this parameter is required.</p>
         /// </summary>
         [JsonProperty("SiteFailoverParameters")]
         public SiteFailoverParameters SiteFailoverParameters{ get; set; }
 
         /// <summary>
-        /// Configuration of layer 7 origin timeout. this parameter is required when name is httpupstreamtimeout.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Layer 7 origin pull timeout configuration. This parameter is required when the Name value is HTTPUpstreamTimeout.</p>
         /// </summary>
         [JsonProperty("HTTPUpstreamTimeoutParameters")]
         public HTTPUpstreamTimeoutParameters HTTPUpstreamTimeoutParameters{ get; set; }
 
         /// <summary>
-        /// HTTP response configuration parameters. this parameter is required when name is httpresponse.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HTTP response configuration parameter. This parameter is required when the Name value is HttpResponse.</p>
         /// </summary>
         [JsonProperty("HttpResponseParameters")]
         public HTTPResponseParameters HttpResponseParameters{ get; set; }
 
         /// <summary>
-        /// Custom error page configuration parameters. this parameter is required when name is errorpage.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Custom error page configuration parameter. This parameter is required when the value of Name is ErrorPage.</p>
         /// </summary>
         [JsonProperty("ErrorPageParameters")]
         public ErrorPageParameters ErrorPageParameters{ get; set; }
 
         /// <summary>
-        /// Modify http node response header configuration parameters. this parameter is required when name is modifyresponseheader.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Modify the HTTP node response header configuration parameter. This parameter is required when the Name value is ModifyResponseHeader.</p>
         /// </summary>
         [JsonProperty("ModifyResponseHeaderParameters")]
         public ModifyResponseHeaderParameters ModifyResponseHeaderParameters{ get; set; }
 
         /// <summary>
-        /// Modify http node request header configuration parameters. this parameter is required when name is modifyrequestheader.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Modify the request header configuration parameter of the HTTP node. This parameter is required when the Name value is ModifyRequestHeader.</p>
         /// </summary>
         [JsonProperty("ModifyRequestHeaderParameters")]
         public ModifyRequestHeaderParameters ModifyRequestHeaderParameters{ get; set; }
 
         /// <summary>
-        /// Single connection download speed limit configuration parameter. this parameter is required when name is responsespeedlimit.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Single connection download speed limit configuration parameter. This parameter is required when the Name value is ResponseSpeedLimit.</p>
         /// </summary>
         [JsonProperty("ResponseSpeedLimitParameters")]
         public ResponseSpeedLimitParameters ResponseSpeedLimitParameters{ get; set; }
 
         /// <summary>
-        /// Specifies the content identification configuration parameter. this parameter is required when the Name value is SetContentIdentifier.
-        /// 
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Content identification configuration parameter. This parameter is required when the Name value is SetContentIdentifier.</p>
         /// </summary>
         [JsonProperty("SetContentIdentifierParameters")]
         public SetContentIdentifierParameters SetContentIdentifierParameters{ get; set; }
 
         /// <summary>
-        /// Vary feature configuration parameter. when Name value is Vary, this parameter is required.
+        /// <p>Vary feature configuration parameter. This parameter is required when the Name value is Vary.</p>
         /// </summary>
         [JsonProperty("VaryParameters")]
         public VaryParameters VaryParameters{ get; set; }
 
         /// <summary>
-        /// The content compression configuration parameter is required when Name value is ContentCompression. this parameter is an allowlist feature. if needed, contact tencent cloud engineers.
+        /// <p>Content compression configuration parameter. When the Name value is ContentCompression, this parameter is required. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
         /// </summary>
         [JsonProperty("ContentCompressionParameters")]
         public ContentCompressionParameters ContentCompressionParameters{ get; set; }
 
         /// <summary>
-        /// The origin authentication configuration parameter. this parameter is required when the Name value is OriginAuthentication. this parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+        /// <p>Origin authentication configuration parameter. This parameter is required when Name value is OriginAuthentication. This parameter is an allowlist feature. If needed, contact Tencent Cloud Engineers.</p>
         /// </summary>
         [JsonProperty("OriginAuthenticationParameters")]
         public OriginAuthenticationParameters OriginAuthenticationParameters{ get; set; }
+
+        /// <summary>
+        /// <p>Custom configuration operation parameter. This parameter is required when the Name value is CustomAction.</p><p>You can obtain the list of currently supported custom configuration items through the CustomActionSet returned value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+        /// </summary>
+        [JsonProperty("CustomActionParameters")]
+        public CustomActionParameters CustomActionParameters{ get; set; }
 
 
         /// <summary>
@@ -367,6 +301,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "StatusCodeCacheParameters.", this.StatusCodeCacheParameters);
             this.SetParamObj(map, prefix + "OfflineCacheParameters.", this.OfflineCacheParameters);
             this.SetParamObj(map, prefix + "SmartRoutingParameters.", this.SmartRoutingParameters);
+            this.SetParamObj(map, prefix + "AdvancedOriginRoutingParameters.", this.AdvancedOriginRoutingParameters);
             this.SetParamObj(map, prefix + "RangeOriginPullParameters.", this.RangeOriginPullParameters);
             this.SetParamObj(map, prefix + "UpstreamHTTP2Parameters.", this.UpstreamHTTP2Parameters);
             this.SetParamObj(map, prefix + "HostHeaderParameters.", this.HostHeaderParameters);
@@ -395,6 +330,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
             this.SetParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
             this.SetParamObj(map, prefix + "OriginAuthenticationParameters.", this.OriginAuthenticationParameters);
+            this.SetParamObj(map, prefix + "CustomActionParameters.", this.CustomActionParameters);
         }
     }
 }

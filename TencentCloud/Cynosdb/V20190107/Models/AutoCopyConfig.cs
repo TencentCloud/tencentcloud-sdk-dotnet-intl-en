@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VaultRegion{ get; set; }
 
         /// <summary>
-        /// Delivery Type: binlog, redolog, snapshot, logic
+        /// Delivery type: binlog, redolog, snapshot, logic
         /// </summary>
         [JsonProperty("CopyType")]
         public string CopyType{ get; set; }

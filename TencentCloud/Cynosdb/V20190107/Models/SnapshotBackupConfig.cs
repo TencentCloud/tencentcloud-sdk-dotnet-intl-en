@@ -31,43 +31,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? BackupCustomAutoTime{ get; set; }
 
         /// <summary>
-        /// Indicates the full backup start time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+        /// Indicates the full backup start time. Value range: [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// Indicates the full backup end time. value range: [0-24*3600]. for example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.
+        /// Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 correspond to 0, 3600, and 7200 respectively.
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// This parameter currently does not support modification and no need to specify. backup frequency is an array of length 7, corresponding to the backup method from sunday to saturday, full for full backup and increment for incremental backup.
+        /// Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponds to the backup method from Sunday to Saturday. full: full backup, increment: incremental backup.
         /// </summary>
         [JsonProperty("BackupWeekDays")]
         public string[] BackupWeekDays{ get; set; }
 
         /// <summary>
-        /// Interval.
+        /// Interval
         /// </summary>
         [JsonProperty("BackupIntervalTime")]
         public long? BackupIntervalTime{ get; set; }
 
         /// <summary>
-        /// Indicates the backup retention period in seconds. data will be cleaned up longer than this time. 7 days means 3600247=604800. the maximum is 158112000.
+        /// Indicates the backup retention period in seconds. Data is cleaned up after this time. Seven days means 3600 × 24 × 7 = 604800. The maximum value is 158112000.
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// Automatic data backup trigger policy, periodically: automatic periodic backup, frequent: high-frequency backup
+        /// Automatic data backup trigger policy. periodically: automatic periodic backup. frequent: high-frequency backup.
         /// </summary>
         [JsonProperty("BackupTriggerStrategy")]
         public string BackupTriggerStrategy{ get; set; }
 
         /// <summary>
-        /// Safe info
+        /// Safe information.
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }

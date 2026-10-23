@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Database Proxy Group ID.</p>
+        /// <p>Database Proxy Group ID</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// <p>Activate database proxy for RWNode</p>
+        /// <p>Activate database proxy on the read-write node</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }

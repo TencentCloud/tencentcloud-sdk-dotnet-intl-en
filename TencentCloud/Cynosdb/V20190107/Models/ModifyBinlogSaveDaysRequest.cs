@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BinlogSaveDays{ get; set; }
 
         /// <summary>
-        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
+        /// <p>Cross-region backup retention period</p><p>Unit: day</p>
         /// </summary>
         [JsonProperty("BinlogCrossRegionSaveDays")]
         public long? BinlogCrossRegionSaveDays{ get; set; }

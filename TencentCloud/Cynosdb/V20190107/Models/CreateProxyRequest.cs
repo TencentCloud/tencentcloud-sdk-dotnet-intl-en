@@ -37,61 +37,61 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory
+        /// memory
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// VPC ID, which is the same as that of the cluster by default.
+        /// VPC ID. Default value: the VPC ID of the cluster.
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
 
         /// <summary>
-        /// VPC subnet ID, which is the same as that of the cluster by default.
+        /// VPC subnet ID. Default value: the cluster subnet ID.
         /// </summary>
         [JsonProperty("UniqueSubnetId")]
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// Number of nodes in the proxy group
+        /// Number of database proxy group nodes (this parameter is no longer recommended. Use ProxyZones instead)
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// Connection pool type. Valid value: `SessionConnectionPool` (session-level connection pool)
+        /// Connection pool type: SessionConnectionPool (session-level connection pool)
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// Whether to enable connection pool. Valid value: `yes` (enable), `no` (disable).
+        /// Whether connection pool is enabled. yes: enabled; no: not enabled
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// Connection pool threshold in seconds
+        /// Connection pool threshold. Unit: second
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// Array of security group IDs
+        /// Security group ID array
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Description
+        /// Description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Database node information
+        /// Database node information (either this parameter or ProxyCount is required)
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

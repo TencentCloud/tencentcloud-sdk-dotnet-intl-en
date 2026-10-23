@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstancePeriodEndTime{ get; set; }
 
         /// <summary>
-        /// Instance role
+        /// Instance role.
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Public network status
+        /// Public network status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }

@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? BackupLogicVolume{ get; set; }
 
         /// <summary>
-        /// Total Log Capacity
+        /// Total log capacity
         /// </summary>
         [JsonProperty("LogTotalVolume")]
         public float? LogTotalVolume{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? LogBinlogVolume{ get; set; }
 
         /// <summary>
-        /// Redo log capacity
+        /// redolog capacity
         /// </summary>
         [JsonProperty("LogRedoLogVolume")]
         public float? LogRedoLogVolume{ get; set; }
 
         /// <summary>
-        /// Total Cross-Region Backup Capacity
+        /// Total cross-region backup capacity
         /// </summary>
         [JsonProperty("CrossTotalVolume")]
         public float? CrossTotalVolume{ get; set; }
 
         /// <summary>
-        /// Cross-Region Backup Capacity
+        /// Cross-region backup capacity.
         /// </summary>
         [JsonProperty("CrossRegionBackupVolume")]
         public float? CrossRegionBackupVolume{ get; set; }

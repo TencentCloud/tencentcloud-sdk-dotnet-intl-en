@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Task flow ID (returned for pay-as-you-go or serverless resources. if necessary to sync task status, please use the DescribeFlow api).
+        /// Task flow ID (returned for postpaid or serverless resources; to sync task status if necessary, please use the DescribeFlow API)
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RollbackInstanceInfo SrcInstanceInfo{ get; set; }
 
         /// <summary>
-        /// Target instance information.
+        /// Destination instance information.
         /// </summary>
         [JsonProperty("DstInstanceInfo")]
         public RollbackInstanceInfo DstInstanceInfo{ get; set; }

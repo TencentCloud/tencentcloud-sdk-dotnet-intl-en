@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Start time
+        /// Start time.
         /// </summary>
         [JsonProperty("TimeRangeStart")]
         public string TimeRangeStart{ get; set; }
 
         /// <summary>
-        /// End time
+        /// End time.
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }

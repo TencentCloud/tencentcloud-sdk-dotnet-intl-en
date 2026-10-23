@@ -25,91 +25,91 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 
+        /// User AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Deletion time.
         /// </summary>
         [JsonProperty("DeletedTime")]
         public string DeletedTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance group ID
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Type of the instance group (network). ha-ha group; ro - read-only group; proxy - proxy; singleRo - read-only instance exclusive.
+        /// Instance group (network) type. ha-ha: HA group; ro: read-only group; proxy: proxy; singleRo: exclusive read-only instance.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Private IP address
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 
+        /// Private network port.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public IP address
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// 
+        /// External port
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// 
+        /// Public network status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }
 
         /// <summary>
-        /// 
+        /// Instance group information including instances
         /// </summary>
         [JsonProperty("InstanceSet")]
         public CynosdbInstance[] InstanceSet{ get; set; }
@@ -121,31 +121,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Specifies the subnet ID.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Recycling IP information.
+        /// Recycling IP information
         /// </summary>
         [JsonProperty("OldAddrInfo")]
         public OldAddrInfo OldAddrInfo{ get; set; }
 
         /// <summary>
-        /// 
+        /// Ongoing task
         /// </summary>
         [JsonProperty("ProcessingTasks")]
         public string[] ProcessingTasks{ get; set; }
 
         /// <summary>
-        /// 
+        /// Task list
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// 
+        /// id of the biz_net_service table
         /// </summary>
         [JsonProperty("NetServiceId")]
         public long? NetServiceId{ get; set; }

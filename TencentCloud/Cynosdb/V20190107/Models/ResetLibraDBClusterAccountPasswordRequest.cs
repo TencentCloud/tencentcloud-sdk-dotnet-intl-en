@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EncryptMethod{ get; set; }
 
         /// <summary>
-        /// host
+        /// Host
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Parameter template ID.
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+        /// Database type. Available values: NORMAL, SERVERLESS
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }

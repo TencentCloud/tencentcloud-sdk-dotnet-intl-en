@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? BackupCustomAutoTime{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Indicates the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BackupIntervalTime{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. 7 days means 3600*24*7=604800. The maximum value is 158112000.</p>
+        /// <p>Indicates the backup retention period in seconds. Data will be cleaned up after this time. Seven days is represented as 3600*24*7=604800, with a maximum of 158112000.</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// <p>Cross-region backup enabled<br>yes-Enable<br>no-Disable</p>
+        /// <p>Cross-region backup enabled<br>yes-enabled<br>no-disabled</p>
         /// </summary>
         [JsonProperty("CrossRegionsEnable")]
         public string CrossRegionsEnable{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] CrossRegions{ get; set; }
 
         /// <summary>
-        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
+        /// <p>Cross-region backup retention period</p><p>Unit: day</p>
         /// </summary>
         [JsonProperty("CrossRegionSaveDays")]
         public long? CrossRegionSaveDays{ get; set; }

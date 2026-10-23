@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Prepaid total order number.
+        /// Prepaid Total Order Number
         /// </summary>
         [JsonProperty("BigDealIds")]
         public string[] BigDealIds{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TranId{ get; set; }
 
         /// <summary>
-        /// Delivery resource id list corresponding to each order number.
+        /// Delivery resource id list corresponding to each order number
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// List of Cluster IDs
+        /// List of cluster IDs.
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }

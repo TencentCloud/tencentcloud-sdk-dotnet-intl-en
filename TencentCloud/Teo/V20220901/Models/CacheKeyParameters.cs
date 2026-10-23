@@ -34,8 +34,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FullURLCache{ get; set; }
 
         /// <summary>
-        /// Configuration parameter for retaining the query string. this field and fullurlcache must be set simultaneously, but cannot both be on.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
         /// </summary>
         [JsonProperty("QueryString")]
         public CacheKeyQueryString QueryString{ get; set; }
@@ -50,8 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string IgnoreCase{ get; set; }
 
         /// <summary>
-        /// HTTP request header configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
         /// </summary>
         [JsonProperty("Header")]
         public CacheKeyHeader Header{ get; set; }
@@ -66,8 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// Cookie configuration parameters. at least one of the following configurations must be set: fullurlcache, ignorecase, header, scheme, cookie.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
         /// </summary>
         [JsonProperty("Cookie")]
         public CacheKeyCookie Cookie{ get; set; }

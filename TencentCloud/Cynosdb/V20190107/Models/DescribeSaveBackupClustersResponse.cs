@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Legacy backup information.
+        /// Legacy backup information
         /// </summary>
         [JsonProperty("SaveBackupClusterInfos")]
         public SaveBackupClusterInfo[] SaveBackupClusterInfos{ get; set; }

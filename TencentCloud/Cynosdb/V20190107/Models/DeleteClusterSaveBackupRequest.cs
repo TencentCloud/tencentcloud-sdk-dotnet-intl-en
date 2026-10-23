@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Reserved backup file ID. recommended.
+        /// Backup file ID to be reserved. Recommended for use.
         /// </summary>
         [JsonProperty("SaveBackupId")]
         public long? SaveBackupId{ get; set; }

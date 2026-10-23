@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Safe ID list for precise filtering
+        /// List of safe IDs for precise filtering
         /// </summary>
         [JsonProperty("VaultIds")]
         public string[] VaultIds{ get; set; }
 
         /// <summary>
-        /// Safe name, used for fuzzy filtering
+        /// Safe name, used for blurry filtering
         /// </summary>
         [JsonProperty("VaultName")]
         public string VaultName{ get; set; }
 
         /// <summary>
-        /// Status list of safe for filtering
+        /// Safe status list for filtering
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// Number of items per page, range (0,100], default 100
+        /// Number of items per page. Value range: (0,100]. Default: 100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Range: [0,+∞). Default is 0
+        /// Offset. Value range: [0, +∞). Default: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method, available values: desc, asc, DESC, ASC
+        /// Sorting method. Available values: `desc`, `asc`, `DESC`, `ASC`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

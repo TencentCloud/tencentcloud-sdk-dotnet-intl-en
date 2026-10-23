@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// Backup file ID list to be deleted, cannot be empty
+        /// List of backup file IDs to be deleted. Values cannot be empty.
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }

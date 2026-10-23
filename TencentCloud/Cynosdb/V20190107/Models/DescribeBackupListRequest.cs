@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The number of results to be returned. Value range: (0,100].
+        /// Number of returned results. Value range: (0, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. Value range: [0,INF).
+        /// Record offset. Value range: [0, INF).
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -50,25 +50,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Backup ID.
+        /// Backup ID
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }
 
         /// <summary>
-        /// Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+        /// Backup type. Available values: snapshot (snapshot backup); logic (logical backup).
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+        /// Backup method. Available values: auto (automatic backup); manual (manual backup).
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// Snapshot type. Optional values: full - Full snapshot; increment - Incremental snapshot.
+        /// Snapshot type. Available values: full (full snapshot); increment (incremental snapshot)
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
@@ -86,37 +86,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Backup file name, fuzzy search.
+        /// Backup file name for fuzzy query
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
 
         /// <summary>
-        /// Backup alias, which supports fuzzy query.
+        /// Backup notes name. Fuzzy query.
         /// </summary>
         [JsonProperty("BackupNames")]
         public string[] BackupNames{ get; set; }
 
         /// <summary>
-        /// ID list of the snapshot backup.
+        /// Snapshot backup Id list
         /// </summary>
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
 
         /// <summary>
-        /// Backup region.
+        /// Backup region
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// Whether cross-region backup.
+        /// Whether to perform cross-region backup
         /// </summary>
         [JsonProperty("IsCrossRegionsBackup")]
         public string IsCrossRegionsBackup{ get; set; }
 
         /// <summary>
-        /// Status you want to query.
+        /// Status to query.
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string[] BackupStatus{ get; set; }

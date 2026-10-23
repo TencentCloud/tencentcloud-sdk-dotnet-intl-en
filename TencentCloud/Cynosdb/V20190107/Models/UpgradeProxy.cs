@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyZone[] ProxyZones{ get; set; }
 
         /// <summary>
-        /// Rebalance
+        /// Load rebalance
         /// </summary>
         [JsonProperty("ReloadBalance")]
         public string ReloadBalance{ get; set; }

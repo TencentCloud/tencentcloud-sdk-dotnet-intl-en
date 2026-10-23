@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Backup method
+        /// Backup method.
         /// </summary>
         [JsonProperty("BackupMethod")]
         public string BackupMethod{ get; set; }

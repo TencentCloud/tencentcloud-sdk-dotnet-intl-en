@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// <p>host</p>
+        /// <p>Host</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// <p>Database account description.</p>
+        /// <p>Database account description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

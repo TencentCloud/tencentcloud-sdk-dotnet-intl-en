@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies whether it is a rule-based audit. true - rule-based audit; false - comprehensive audit.
+        /// Whether it is rule audit. true - Rule audit, false - Full audit.
         /// </summary>
         [JsonProperty("AuditRule")]
         public bool? AuditRule{ get; set; }
 
         /// <summary>
-        /// Specifies the audit rule details. valid when AuditRule=true.
+        /// Audit rule details. Valid only when AuditRule=true.
         /// </summary>
         [JsonProperty("AuditRuleFilters")]
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? OldRule{ get; set; }
 
         /// <summary>
-        /// The rule template details of the instance application.
+        /// Description of the rule template applied to the instance.
         /// </summary>
         [JsonProperty("RuleTemplates")]
         public RuleTemplateInfo[] RuleTemplates{ get; set; }

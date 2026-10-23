@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Database CPU.
+        /// Database CPU
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
@@ -43,51 +43,51 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain.
+        /// Upgrade type: upgradeImmediate, upgradeInMaintain
         /// </summary>
         [JsonProperty("UpgradeType")]
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// Instance Machine Type
-        /// 1. common: general.
-        /// 2. exclusive, dedicated.
+        /// Instance machine type
+        /// 1. common: universal type.
+        /// 2. exclusive: dedicated.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// This parameter has been disused.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public ulong? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0.
+        /// Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// This parameter has been disused.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order).
+        /// Transaction mode 0-Place order and pay 1-Place order
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+        /// NormalUpgrade: adjust. FastUpgrade: rapid configuration change. If the configuration adjustment is judged to cause a transient disconnection, the configuration adjustment process will be terminated.
         /// </summary>
         [JsonProperty("UpgradeMode")]
         public string UpgradeMode{ get; set; }
 
         /// <summary>
-        /// Proxy synchronous upgrade.
+        /// Synchronously upgrade proxy
         /// </summary>
         [JsonProperty("UpgradeProxy")]
         public UpgradeProxy UpgradeProxy{ get; set; }

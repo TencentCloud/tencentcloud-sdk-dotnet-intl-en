@@ -31,55 +31,55 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// Safe name, maximum 255 characters
+        /// Safe name. Maximum length: 255 characters.
         /// </summary>
         [JsonProperty("VaultName")]
         public string VaultName{ get; set; }
 
         /// <summary>
-        /// Safe description, maximum 1024 characters
+        /// Safe description. Maximum length: 1024 characters.
         /// </summary>
         [JsonProperty("VaultDescribe")]
         public string VaultDescribe{ get; set; }
 
         /// <summary>
-        /// Backup retention period (seconds). Range: (0, 632448000].
+        /// Backup retention period in seconds. Value range: (0, 632448000]
         /// </summary>
         [JsonProperty("BackupSaveSeconds")]
         public long? BackupSaveSeconds{ get; set; }
 
         /// <summary>
-        /// Encryption key ID, maximum 36 characters
+        /// Encryption key ID. Maximum length: 36 characters.
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Key type, available values: cloud, custom
+        /// Key type. Available values: cloud, custom
         /// </summary>
         [JsonProperty("KeyType")]
         public string KeyType{ get; set; }
 
         /// <summary>
-        /// Key region, maximum 32 characters
+        /// Region of the key. Maximum length: 32 characters.
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
 
         /// <summary>
-        /// Is the safe locked
+        /// Whether the safe is locked
         /// </summary>
         [JsonProperty("IsLock")]
         public bool? IsLock{ get; set; }
 
         /// <summary>
-        /// Lock expiry time, format: 2006-01-02 15:04:05, lock time current maximum 15 days
+        /// Lock expiration time. Format: 2006-01-02 15:04:05. The lock time can be up to 15 days from now.
         /// </summary>
         [JsonProperty("LockedTime")]
         public string LockedTime{ get; set; }
 
         /// <summary>
-        /// Whether it is encrypted
+        /// Encrypted or not
         /// </summary>
         [JsonProperty("IsEncryption")]
         public bool? IsEncryption{ get; set; }

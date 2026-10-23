@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SparseBackupSwitch{ get; set; }
 
         /// <summary>
-        /// Sparse backup policy list (1-3)
+        /// List of sparse backup policies (1-3)
         /// </summary>
         [JsonProperty("SparseBackupConfigInfos")]
         public SparseBackupConfigInfo[] SparseBackupConfigInfos{ get; set; }

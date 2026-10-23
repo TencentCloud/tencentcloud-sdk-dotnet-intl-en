@@ -25,21 +25,21 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or cluster ID.
-        /// Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+        /// Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
+        /// Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Security group ID list to modify. An array of one or more security group IDs.
+        /// Security group ID list to modify, which is an array of one or more security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
         /// Availability zone.
-        /// Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
+        /// Description: Please enter correctly the primary AZ of the cluster location. If the input is not the primary AZ of the cluster location, the call may succeed, but the actual execution will fail.
         /// </summary>
         [JsonProperty("Zone")]
         [System.Obsolete]

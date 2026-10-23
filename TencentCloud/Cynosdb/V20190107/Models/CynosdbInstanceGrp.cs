@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// User `appId`
+        /// User AppID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
@@ -55,61 +55,61 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// Status
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Instance group type. ha: HA group; ro: RO group
+        /// Instance group type. ha: HA group; ro: read-only group
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
         /// <summary>
-        /// Private IP
+        /// Private IP address
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Private port
+        /// Private network port
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Public domain name
+        /// Public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// Public IP
+        /// Public IP address
         /// </summary>
         [JsonProperty("WanIP")]
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Public port
+        /// External port
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Public network status
+        /// Public network status.
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }
 
         /// <summary>
-        /// Information of instances contained in instance group
+        /// Instance group information including instances
         /// </summary>
         [JsonProperty("InstanceSet")]
         public CynosdbInstance[] InstanceSet{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public OldAddrInfo OldAddrInfo{ get; set; }
 
         /// <summary>
-        /// Task in progress
+        /// Ongoing task
         /// </summary>
         [JsonProperty("ProcessingTasks")]
         public string[] ProcessingTasks{ get; set; }
@@ -145,7 +145,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// biz_net_service table ID
+        /// id of the biz_net_service table
         /// </summary>
         [JsonProperty("NetServiceId")]
         public long? NetServiceId{ get; set; }

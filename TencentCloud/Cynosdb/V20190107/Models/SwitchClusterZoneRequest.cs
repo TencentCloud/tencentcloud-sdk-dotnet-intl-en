@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Cluster Id</p>
+        /// <p>Cluster Id.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string NewZone{ get; set; }
 
         /// <summary>
-        /// <p>Execute during maintenance period - yes, immediately execute - no</p>
+        /// <p>Execute during the maintenance period - yes, immediate execution - no</p>
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

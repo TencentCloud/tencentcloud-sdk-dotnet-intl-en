@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
+        /// Maintenance start time in seconds. For example, 3:00 is 10800.
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// Maintenance duration in seconds. For example, one hour is represented by 3600
+        /// Maintenance duration in seconds. For example, 1 hour is 3600.
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+        /// Weekly maintenance date. Value range: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }

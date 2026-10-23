@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Analysis Cluster ID
+        /// Analysis cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Map mode
+        /// Mapping mode
         /// </summary>
         [JsonProperty("ForceDefaultMapRule")]
         public string ForceDefaultMapRule{ get; set; }
 
         /// <summary>
-        /// sync object
+        /// Synchronization object
         /// </summary>
         [JsonProperty("Objects")]
         public ReplicationObject[] Objects{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public AutoMapRule[] AutoMapRules{ get; set; }
 
         /// <summary>
-        /// Whether to refresh existing mapping relationships according to the latest mapping rule
+        /// Whether to update existing mapping relationships according to the latest mapping rule
         /// </summary>
         [JsonProperty("RefreshMapping")]
         public bool? RefreshMapping{ get; set; }

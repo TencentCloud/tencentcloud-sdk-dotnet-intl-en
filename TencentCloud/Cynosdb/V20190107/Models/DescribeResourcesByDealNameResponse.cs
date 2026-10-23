@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Billable resource ID information array
+        /// Billing resource id information array
         /// </summary>
         [JsonProperty("BillingResourceInfos")]
         public BillingResourceInfo[] BillingResourceInfos{ get; set; }

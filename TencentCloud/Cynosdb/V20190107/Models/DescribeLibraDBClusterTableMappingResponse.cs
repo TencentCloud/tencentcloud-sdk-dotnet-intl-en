@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCnt{ get; set; }
 
         /// <summary>
-        /// Database mapping info
+        /// Database mapping information
         /// </summary>
         [JsonProperty("TableMappings")]
         public TableMappingObject[] TableMappings{ get; set; }

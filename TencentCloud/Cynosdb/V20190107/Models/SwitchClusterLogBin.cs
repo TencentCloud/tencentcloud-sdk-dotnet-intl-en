@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Status
+        /// Status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

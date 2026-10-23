@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Source endpoint type
+        /// Source type
         /// </summary>
         [JsonProperty("SrcInstanceType")]
         public string SrcInstanceType{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Password{ get; set; }
 
         /// <summary>
-        /// Source sql mode
+        /// sql_mode of the source
         /// </summary>
         [JsonProperty("SqlMode")]
         public string SqlMode{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? SrcAppId{ get; set; }
 
         /// <summary>
-        /// source account
+        /// Source account
         /// </summary>
         [JsonProperty("SrcUin")]
         public string SrcUin{ get; set; }
 
         /// <summary>
-        /// sub-account
+        /// Source sub-account
         /// </summary>
         [JsonProperty("SrcSubAccountUin")]
         public string SrcSubAccountUin{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Operation of the source instance
+        /// Operations on the source instance
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

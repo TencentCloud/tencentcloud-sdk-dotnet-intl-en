@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Cluster Id</p>
+        /// <p>Cluster Id.</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Minimum specification of the ro instance</p>
+        /// <p>Minimum specification of a read-only instance</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// <p>Maximum specification of ro instance</p>
+        /// <p>Maximum specification of a read-only instance</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// <p>Whether to automatically pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
+        /// <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul>
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// <p>Auto-pause time</p><p>Unit: s</p>
+        /// <p>Auto-pause time</p><p>Unit: seconds</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Snapshot file ID, abandoned, please use BackupId</p>
+        /// <p>Snapshot file ID. This field is abandoned. Please use BackupId.</p>
         /// </summary>
         [JsonProperty("SnapshotId")]
         public ulong? SnapshotId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// <p>Backup start time.</p>
+        /// <p>Backup start time</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// <p>Backup completion time.</p>
+        /// <p>Backup completion time</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file deleting</p>
+        /// <p>Backup file status: success: backup successful; fail: backup failed; creating: backup file being created; deleting: backup file being deleted</p>
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string BackupStatus{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot type. Value range: full, full; increment, incremental</p>
+        /// <p>Snapshot type. Available values: full (full); increment (incremental)</p>
         /// </summary>
         [JsonProperty("SnapShotType")]
         public string SnapShotType{ get; set; }
 
         /// <summary>
-        /// <p>Backup file remark</p>
+        /// <p>Backup file remarks</p>
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CopyStatus{ get; set; }
 
         /// <summary>
-        /// <p>Key id</p>
+        /// <p>Secret key id.</p>
         /// </summary>
         [JsonProperty("EncryptKeyId")]
         public string EncryptKeyId{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EncryptRegion{ get; set; }
 
         /// <summary>
-        /// <p>Safe info</p>
+        /// <p>Safe information.</p>
         /// </summary>
         [JsonProperty("VaultInfos")]
         public VaultInfo[] VaultInfos{ get; set; }
 
         /// <summary>
-        /// <p>Backup cycle policy</p>
+        /// <p>Backup periodic policy</p>
         /// </summary>
         [JsonProperty("BackupPeriodStrategy")]
         public string BackupPeriodStrategy{ get; set; }

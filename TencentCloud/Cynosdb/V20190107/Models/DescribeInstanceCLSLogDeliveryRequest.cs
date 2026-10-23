@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log type.
+        /// Log type
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

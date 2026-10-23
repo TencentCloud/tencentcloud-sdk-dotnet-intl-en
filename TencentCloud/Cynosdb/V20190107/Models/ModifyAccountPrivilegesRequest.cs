@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Account infomation
+        /// Account information
         /// </summary>
         [JsonProperty("Account")]
         public InputAccount Account{ get; set; }
 
         /// <summary>
-        /// Array of global permissions
+        /// Global permission array
         /// </summary>
         [JsonProperty("GlobalPrivileges")]
         public string[] GlobalPrivileges{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public DatabasePrivileges[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// Array of table permissions
+        /// Table permission array
         /// </summary>
         [JsonProperty("TablePrivileges")]
         public TablePrivileges[] TablePrivileges{ get; set; }

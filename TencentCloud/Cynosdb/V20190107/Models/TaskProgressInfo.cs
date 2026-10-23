@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Current step.
+        /// Details of the current step
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
 
         /// <summary>
-        /// Current progress.
+        /// Current progress
         /// </summary>
         [JsonProperty("CurrentStepProgress")]
         public long? CurrentStepProgress{ get; set; }

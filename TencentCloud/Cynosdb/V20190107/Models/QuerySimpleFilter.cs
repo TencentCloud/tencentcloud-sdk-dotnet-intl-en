@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Field name
+        /// Field name.
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Field value.
+        /// Field value
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Fuzzy matching. valid values: true (yes), false (no).
+        /// Fuzzy matching. true: yes; false: no
         /// </summary>
         [JsonProperty("ExactMatch")]
         public bool? ExactMatch{ get; set; }

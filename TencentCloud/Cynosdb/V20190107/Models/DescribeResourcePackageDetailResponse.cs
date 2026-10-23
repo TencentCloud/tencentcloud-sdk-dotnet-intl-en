@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of deducted resource packs
+        /// Total number of resource package deductions.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

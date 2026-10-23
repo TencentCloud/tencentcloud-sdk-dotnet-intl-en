@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Safe info
+        /// Vault information
         /// </summary>
         [JsonProperty("ClusterInfos")]
         public DescribeVaultBackupClusterInfo[] ClusterInfos{ get; set; }

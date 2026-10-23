@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// List of instance parameters
+        /// Instance parameter list
         /// </summary>
         [JsonProperty("Items")]
         public InstanceParamItem[] Items{ get; set; }

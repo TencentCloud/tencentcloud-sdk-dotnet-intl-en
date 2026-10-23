@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// <p>Status</p>
+        /// <p>Status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// <p>VPC name</p>
+        /// <p>VPC name.</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Database version</p>
+        /// <p>Database version.</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RoAddr[] RoAddr{ get; set; }
 
         /// <summary>
-        /// <p>cynos version</p>
+        /// <p>cynos version.</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// <p>Freeze or not</p>
+        /// <p>Whether to freeze</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// <p>Expiry time</p>
+        /// <p>Expiration time</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
@@ -175,13 +175,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>Version tag</p>
+        /// <p>Version tag.</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// <p>Additions are not supported when ro is yes. Additions are supported when ro is no/null/&quot;&quot;.</p>
+        /// <p>Additions are not supported for ro yes - additions are not supported for ro, no/null/&quot;&quot; support adding ro</p>
         /// </summary>
         [JsonProperty("NoSupportAddRo")]
         public string NoSupportAddRo{ get; set; }

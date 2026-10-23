@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Instance Group List
+        /// Instance group list
         /// </summary>
         [JsonProperty("InstanceGroupInfoList")]
         public CynosdbInstanceGroup[] InstanceGroupInfoList{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Refers to the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the backup retention period in seconds. Backups longer than this time will be cleaned up. 7 days is represented as 3600<em>24</em>7=604800.</p>
+        /// <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800.</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup</p>
+        /// <p>Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// <p>Backup method, logic-logical backup, snapshot-snapshot backup</p>
+        /// <p>Backup method. logic: logical backup; snapshot: snapshot backup</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }

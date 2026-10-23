@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database table information
+        /// Contains database table information
         /// </summary>
         [JsonProperty("DatabaseTables")]
         public MigrateObject DatabaseTables{ get; set; }

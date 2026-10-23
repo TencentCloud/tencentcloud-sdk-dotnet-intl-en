@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Binlog filename</p>
+        /// <p>Binlog file name</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// <p>File size, measurement unit: byte</p>
+        /// <p>File size, unit: byte</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BinlogId{ get; set; }
 
         /// <summary>
-        /// <p>Cross-regional binlog</p>
+        /// <p>Cross-region of binlog</p>
         /// </summary>
         [JsonProperty("CrossRegions")]
         public string[] CrossRegions{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CopyStatus{ get; set; }
 
         /// <summary>
-        /// <p>Safe information</p>
+        /// <p>Safe information.</p>
         /// </summary>
         [JsonProperty("VaultInfos")]
         public VaultInfo[] VaultInfos{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EncryptRegion{ get; set; }
 
         /// <summary>
-        /// <p>Geographical distribution of backups</p>
+        /// <p>Geographical distribution information of backups</p>
         /// </summary>
         [JsonProperty("ExistRegions")]
         public BinlogRegionInfo[] ExistRegions{ get; set; }

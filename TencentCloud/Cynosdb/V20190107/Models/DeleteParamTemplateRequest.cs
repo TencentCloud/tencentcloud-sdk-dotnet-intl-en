@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Parameter template ID
+        /// Parameter template ID.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

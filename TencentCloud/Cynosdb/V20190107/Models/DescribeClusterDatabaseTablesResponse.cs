@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of entries
+        /// Total number of entries.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination limit.
+        /// Pagination limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Database table list.
+        /// List of database tables
         /// </summary>
         [JsonProperty("Tables")]
         public string[] Tables{ get; set; }

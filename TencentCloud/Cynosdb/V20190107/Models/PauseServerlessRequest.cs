@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Whether to pause forcibly and ignore the current user connections. Valid values: `0` (no), `1` (yes). Default value: `1`
+        /// Whether to forcibly pause and ignore current user connections. 0: not mandatory. 1: mandatory. Default value: 1
         /// </summary>
         [JsonProperty("ForcePause")]
         public long? ForcePause{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// Backup name, which can contain up to 60 characters.
+        /// Alias name, which cannot exceed 60 characters.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

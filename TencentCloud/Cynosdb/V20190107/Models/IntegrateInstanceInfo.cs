@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the cpu of the instance.
+        /// Instance cpu
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Specifies the instance memory.
+        /// Instance memory
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Instance type (rw/ro).
+        /// Instance type. Valid values: `rw` (primary), `ro` (read-only).
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Number of instances. value range: [1,15].
+        /// Number of instances. Value range: 1-15.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// Instance machine type. valid values: universal type (common), exclusive type.
+        /// Instance machine type. common: universal type; exclusive: dedicated type
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

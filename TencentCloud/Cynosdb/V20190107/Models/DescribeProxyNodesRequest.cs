@@ -25,35 +25,35 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of returned results. Default value: `20`. Maximum value: `100`,
+        /// Returned quantity. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. Default value: `0`.
+        /// Record offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// Sorting field. Valid values:
-        /// <li> CREATETIME: Creation time</li>
+        /// <li> CREATETIME: creation time</li>
         /// <li> PERIODENDTIME: Expiration time</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values:
-        /// <li> `ASC`: Ascending.</li>
-        /// <li> `DESC`: Descending</li>
+        /// Sorting type. Valid values:
+        /// <li> ASC: ascending sort </li>
+        /// <li> DESC: sort in descending order </li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+        /// Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supports the following search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }

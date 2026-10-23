@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// The unique ID of a resource pack. If this parameter is left empty, all resource packs of the instance will be unbound.
+        /// Unique ID of the resource package. If not provided, unbind all resource packages associated with the instance.
         /// </summary>
         [JsonProperty("PackageIds")]
         public string[] PackageIds{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance group ID.
+        /// Instance group ID
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// VPC information.
+        /// VPC information
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// vip information.
+        /// VIP information.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Specifies the vport information.
+        /// Virtual port information.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }

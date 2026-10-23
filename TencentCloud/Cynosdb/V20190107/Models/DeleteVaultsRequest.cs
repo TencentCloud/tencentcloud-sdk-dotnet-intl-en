@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// List of backup safe IDs to be deleted, cannot be empty. The safe must have all files cleared.
+        /// List of backup safe IDs to be deleted. It cannot be empty. All files in the safe must be cleared.
         /// </summary>
         [JsonProperty("VaultIds")]
         public string[] VaultIds{ get; set; }

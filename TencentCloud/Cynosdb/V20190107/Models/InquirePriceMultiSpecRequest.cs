@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Availability zone. specifies the best practice for region provision.
+        /// AZ. Best practice provided by each region
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Instance purchase type. available values are: PREPAID, POSTPAID, SERVERLESS.
+        /// Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS
         /// </summary>
         [JsonProperty("InstancePayMode")]
         public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// Storage purchase type. available values are: PREPAID, POSTPAID.
+        /// Storage purchase type. Available values are: PREPAID, POSTPAID
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// Specifies the product specification.
+        /// Product specification
         /// </summary>
         [JsonProperty("GoodsSpecs")]
         public GoodsSpec[] GoodsSpecs{ get; set; }

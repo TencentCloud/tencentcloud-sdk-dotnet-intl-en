@@ -37,43 +37,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// <p>Subnet ID</p>
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
+        /// <p>Database type</p><p>Enumeration values:</p><ul><li>MYSQL: MYSQL</li></ul>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
+        /// <p>Database version</p><p>Enumeration values:</p><ul><li>5.7: MySQL 5.7 version</li><li>8.0: MySQL 8.0 version</li></ul>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// <p>project-ID</p>
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
+        /// <p>Required when DbMode is NORMAL or left empty<br>Number of Cpu cores of a NORMAL instance</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
+        /// <p>Required when DbMode is NORMAL or not specified<br>Normal instance memory in GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
+        /// <p>Instance count</p><p>Value range: [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n means 1 rw instance + n-1 ro instances (identical specifications).</li><li>If you need a more precise cluster composition, please use InstanceInitInfos.</li><li>The value set by this parameter is applicable to provisioned resource clusters. To set the specifications and quantity of instances in a Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
@@ -85,49 +85,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
+        /// <p>Cluster name, length less than 64 characters. Each character can be an uppercase/lowercase letter, digit, or special symbol ('-', '_', '.')</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+        /// <p>Account password (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/)</p>
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// <p>Port, default 3306, in the range of [0, 65535)</p>
+        /// <p>Port. Default value: 3306. Value range: [0, 65535)</p>
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
+        /// <p>Billing mode</p><p>Enumeration values:</p><ul><li>0: pay-as-you-go</li><li>1: yearly/monthly subscription</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
+        /// <p>Number of clusters to purchase. Optional value range: [1,50]. Default value: 1</p>
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
+        /// <p>Rollback type</p><p>Enumeration values:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
         /// </summary>
         [JsonProperty("RollbackStrategy")]
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+        /// <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. If it is 0, you need to determine whether the time point is valid.</p>
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// <p>During rollback, input the source cluster ID to search for the source poolId</p>
+        /// <p>During rollback, import the source cluster ID to search for the source poolId</p>
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
@@ -139,13 +139,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ExpectTime{ get; set; }
 
         /// <summary>
-        /// <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
+        /// <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of the specified time</p>
         /// </summary>
         [JsonProperty("ExpectTimeThresh")]
         public ulong? ExpectTimeThresh{ get; set; }
 
         /// <summary>
-        /// <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
+        /// <p>Storage limit of a regular instance, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -157,61 +157,61 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
+        /// <p>Annual and monthly subscription duration measurement unit, [&#39;s&#39;,&#39;d&#39;,&#39;m&#39;,&#39;y&#39;]</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
+        /// <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration values:</p><ul><li>0: default renewal method</li><li>1: auto-renewal</li><li>2: no auto-renewal</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
+        /// <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p><p>Enumeration values:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
+        /// <p>Instance count (this parameter is deprecated and only accommodative for existing use)</p>
         /// </summary>
         [JsonProperty("HaCount")]
         public long? HaCount{ get; set; }
 
         /// <summary>
-        /// <p>Order source</p>
+        /// <p>Order Source</p>
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
 
         /// <summary>
-        /// <p>tag Array info that should be bound for cluster creation</p>
+        /// <p>tag array information that needs to be bound for cluster creation</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
+        /// <p>DB type</p><p>Enumeration values:</p><ul><li>NORMAL: normal instance</li><li>SERVERLESS: serverless instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default: NORMAL)</p>
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+        /// <p>Required when DbMode is SERVERLESS<br>Minimum cpu value. For the optional range, see the API return of DescribeServerlessInstanceSpecs</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
+        /// <p>Required when DbMode is SERVERLESS:<br>maximum value of cpu. For the optional range, see the API return of DescribeServerlessInstanceSpecs</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
+        /// <p>Whether to auto pause</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Takes effect when DbMode is SERVERLESS</p>
         /// </summary>
         [JsonProperty("AutoPause")]
         public string AutoPause{ get; set; }
@@ -223,7 +223,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
+        /// <p>Cluster storage billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default is pay-as-you-go.<br>When DbType is MYSQL and the cluster compute billing mode is postpaid (including when DbMode is SERVERLESS), the storage billing mode can only be pay-as-you-go.<br>Rollback and clone do not support monthly subscription storage.</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
@@ -241,19 +241,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
+        /// <p>Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.</p>
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
 
         /// <summary>
-        /// <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
+        /// <p>Transaction mode</p><p>Enumeration values:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+        /// <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
@@ -265,7 +265,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+        /// <p>Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.</p>
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
@@ -283,37 +283,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyConfig ProxyConfig{ get; set; }
 
         /// <summary>
-        /// <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
+        /// <p>Whether to automatically archive</p><p>Enumeration values:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
         /// <summary>
-        /// <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
+        /// <p>Archiving processing time after pausing</p><p>Unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
         /// </summary>
         [JsonProperty("AutoArchiveDelayHours")]
         public long? AutoArchiveDelayHours{ get; set; }
 
         /// <summary>
-        /// <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+        /// <p>Cluster level, nullable. For example, P0, P1. (This field can be ignored.)</p>
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// <p>Kernel minor version</p>
+        /// <p>Kernel minor version number.</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// <p>Synchronization method. Value range: async, semisync, sync.</p>
+        /// <p>Synchronization method. Available values: async, semisync, sync.</p>
         /// </summary>
         [JsonProperty("SyncWay")]
         public string SyncWay{ get; set; }
 
         /// <summary>
-        /// <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+        /// <p>Semi-sync timeout period, in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the standby availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
         /// </summary>
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }

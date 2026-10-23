@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Audit rule template ID
+        /// Audit rule template ID.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Audit rule after modification
+        /// Modified audit rule.
         /// </summary>
         [JsonProperty("RuleFilters")]
         public RuleFilters[] RuleFilters{ get; set; }
 
         /// <summary>
-        /// New name of the rule template
+        /// Modified rule template name.
         /// </summary>
         [JsonProperty("RuleTemplateName")]
         public string RuleTemplateName{ get; set; }
 
         /// <summary>
-        /// New description of the rule template
+        /// Modified rule template description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+        /// Alarm level. Valid values: 1 - Low risk, 2 - Medium risk, 3 - High risk.
         /// </summary>
         [JsonProperty("AlarmLevel")]
         public ulong? AlarmLevel{ get; set; }
 
         /// <summary>
-        /// Alert policy. 0 - No alert, 1 - Alert.
+        /// Alarm policy. Valid values: 0 - Alarm disabled, 1 - Alarm enabled.
         /// </summary>
         [JsonProperty("AlarmPolicy")]
         public ulong? AlarmPolicy{ get; set; }

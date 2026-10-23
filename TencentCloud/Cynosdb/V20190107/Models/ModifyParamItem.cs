@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Old parameter value (useful only in output parameters).
+        /// Old parameter value (only useful for output parameters)
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }
 
         /// <summary>
-        /// libra component type.
+        /// libra component type
         /// </summary>
         [JsonProperty("Component")]
         public string Component{ get; set; }

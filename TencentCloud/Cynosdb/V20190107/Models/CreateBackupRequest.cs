@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Backup type. Valid values: `logic` (logic backup), `snapshot` (physical backup)
+        /// Backup type. Available values: logic (logical backup); snapshot (physical backup).
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
 
         /// <summary>
-        /// Backup database, which is valid when `BackupType` is `logic`.
+        /// Database to be backed up. This parameter is valid only when BackupType is logic.
         /// </summary>
         [JsonProperty("BackupDatabases")]
         public string[] BackupDatabases{ get; set; }
 
         /// <summary>
-        /// Backup table, which is valid when `BackupType` is `logic`.
+        /// Tables to be backed up. This parameter is valid only when BackupType is logic.
         /// </summary>
         [JsonProperty("BackupTables")]
         public DatabaseTables[] BackupTables{ get; set; }
 
         /// <summary>
-        /// Backup name
+        /// Alias name
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 	Message sent to safe
+        /// 	Information sent to the safe
         /// </summary>
         [JsonProperty("Vaults")]
         public CreateBackupVaultItem[] Vaults{ get; set; }

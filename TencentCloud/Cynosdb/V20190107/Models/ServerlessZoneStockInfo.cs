@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Specifies the stored amount.
+        /// Stored amount
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }
 
         /// <summary>
-        /// Whether it contains inventory.
+        /// Whether inventory is included
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
 
         /// <summary>
-        /// Inventory information from availability zone.
+        /// Secondary AZ inventory information
         /// </summary>
         [JsonProperty("SlaveZoneStockInfos")]
         public SlaveZoneStockInfo[] SlaveZoneStockInfos{ get; set; }

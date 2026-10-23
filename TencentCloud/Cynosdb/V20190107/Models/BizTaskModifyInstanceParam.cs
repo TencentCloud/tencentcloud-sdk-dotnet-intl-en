@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Details of instance parameter modification task.
+        /// Instance parameter modification task details
         /// </summary>
         [JsonProperty("ModifyInstanceParamList")]
         public ModifyParamItem[] ModifyInstanceParamList{ get; set; }

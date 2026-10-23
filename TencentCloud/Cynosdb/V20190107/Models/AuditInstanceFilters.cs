@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Filter condition values. Supported values include: InstanceId - Instance ID, InstanceName - Instance name, ProjectId - Project ID, TagKey - Tag key, Tag - Tag (separated by vertical bar, e.g., TagKey|TagValue).
+        /// Filter condition value. Supports InstanceId (instance ID), InstanceName (instance name), ProjectId (project ID), TagKey (tag key), and Tag (tag, separated by vertical bars, for example: Tagkey|Tagvalue).
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// True indicates exact match, false indicates fuzzy match.
+        /// true indicates exact matching; false indicates fuzzy matching.
         /// </summary>
         [JsonProperty("ExactMatch")]
         public bool? ExactMatch{ get; set; }

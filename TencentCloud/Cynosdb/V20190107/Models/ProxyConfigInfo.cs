@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+        /// Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Specifies the memory.
+        /// memory
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+        /// Database node information (either this parameter or ProxyCount is required)
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

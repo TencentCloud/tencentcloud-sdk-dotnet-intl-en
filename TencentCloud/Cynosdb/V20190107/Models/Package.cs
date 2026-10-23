@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the resource package.
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageName{ get; set; }
 
         /// <summary>
-        /// Specifies the resource package type.
+        /// Resource package type
         /// CCU: compute resource package. DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
@@ -57,62 +57,62 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// Resource package region of use.
-        /// China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
+        /// Region of resource package use
+        /// china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Specifies the status of the resource package.
-        /// creating - indicates that it is in the process of being created.
-        /// {using} specifies that it is in use.
-        /// expired-expired;.
-        /// normal_finish - specifies that it is used up.
-        /// `Apply_refund`: apply for a refund.
-        /// Specifies that the fee has been refunded.
+        /// Resource package status
+        /// creating
+        /// using - in use;
+        /// expired
+        /// normal_finish: used up;
+        /// apply_refund: Refund requested
+        /// refund: refunded.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Total resource package quantity.
+        /// Total resource package quantity
         /// </summary>
         [JsonProperty("PackageTotalSpec")]
         public float? PackageTotalSpec{ get; set; }
 
         /// <summary>
-        /// Used amount of resource package.
+        /// Used amount of the resource package
         /// </summary>
         [JsonProperty("PackageUsedSpec")]
         public float? PackageUsedSpec{ get; set; }
 
         /// <summary>
-        /// Whether there is inventory surplus.
+        /// Whether there is still inventory surplus
         /// </summary>
         [JsonProperty("HasQuota")]
         public bool? HasQuota{ get; set; }
 
         /// <summary>
-        /// Specifies the bound instance information.
+        /// Bound instance information
         /// </summary>
         [JsonProperty("BindInstanceInfos")]
         public BindInstanceInfo[] BindInstanceInfos{ get; set; }
 
         /// <summary>
-        /// Specifies the effective time: 2022-07-01 00:00:00.
+        /// Effective time: 2022-07-01 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the expiration time: 2022-08-01 00:00:00.
+        /// Expiration time: 2022-08-01 00:00:00
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Information of the instance historically bound (now unbound) to the resource pack.
+        /// Resource package historic bound (unbound) instance information
         /// </summary>
         [JsonProperty("HistoryBindResourceInfos")]
         public BindInstanceInfo[] HistoryBindResourceInfos{ get; set; }

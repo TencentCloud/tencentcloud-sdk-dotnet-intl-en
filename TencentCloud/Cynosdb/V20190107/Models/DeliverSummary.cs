@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Select the delivery type, storage class, message channel.
+        /// Delivery type. Valid values: `store` (storage class), `mq` (message channel).
         /// </summary>
         [JsonProperty("DeliverType")]
         public string DeliverType{ get; set; }
 
         /// <summary>
-        /// Specifies the delivery subtype: cls, ckafka.
+        /// Delivery subtype: cls, ckafka.
         /// </summary>
         [JsonProperty("DeliverSubType")]
         public string DeliverSubType{ get; set; }
 
         /// <summary>
-        /// Sender.
+        /// Submitter
         /// </summary>
         [JsonProperty("DeliverConsumer")]
         public string DeliverConsumer{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the sender.
+        /// Submitter name
         /// </summary>
         [JsonProperty("DeliverConsumerName")]
         public string DeliverConsumerName{ get; set; }
 
         /// <summary>
-        /// Exception error in delivery
+        /// Submission exception error
         /// </summary>
         [JsonProperty("DeliverError")]
         public string DeliverError{ get; set; }

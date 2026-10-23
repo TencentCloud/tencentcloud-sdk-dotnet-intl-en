@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>User Uin</p>
+        /// <p>User Uin.</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -79,31 +79,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolation<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offline<br>offlined: Offline</p>
+        /// <p>Instance status<br>creating: Creating<br>running: Running<br>isolating: Isolating<br>isolated: Isolated<br>activating: Recovering<br>offlining: Offlining<br>offlined: Offline</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Status description in Chinese of the instance</p>
+        /// <p>Status description in Chinese of the instance.</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// <p>Status of the serverless instance. Possible value:<br>resume<br>pause</p>
+        /// <p>serverless instance status. Possible values: <br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// <p>Database type.</p>
+        /// <p>Database type</p>
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// <p>Database version</p>
+        /// <p>Database version.</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// <p>Memory, unit: GB</p>
+        /// <p>Memory in GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>Current instance role</p>
+        /// <p>Current role of the instance</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
@@ -151,7 +151,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Payment mode</p>
+        /// <p>Payment mode.</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PeriodEndTime{ get; set; }
 
         /// <summary>
-        /// <p>Network type.</p>
+        /// <p>Network type</p>
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
@@ -193,13 +193,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// <p>Instance public network domain name</p>
+        /// <p>Instance public network domain</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
 
         /// <summary>
-        /// <p>Character set</p>
+        /// <p>Character set.</p>
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
@@ -211,19 +211,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// <p>Renewal flag</p>
+        /// <p>Renewal flag.</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>serverless instance cpu minimum</p>
+        /// <p>serverless instance cpu lower limit</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// <p>cpu cap of the serverless instance</p>
+        /// <p>cpu upper limit of a serverless instance</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
@@ -235,7 +235,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// <p>Cluster read/write instance Availability Zone</p>
+        /// <p>Availability Zone of the Cluster's Read/Write Instance</p>
         /// </summary>
         [JsonProperty("MasterZone")]
         public string MasterZone{ get; set; }

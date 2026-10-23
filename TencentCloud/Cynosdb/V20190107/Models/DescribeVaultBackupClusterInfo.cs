@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Cluster status
+        /// Cluster status.
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
         /// <summary>
-        /// cluster region
+        /// Region of the cluster
         /// </summary>
         [JsonProperty("ClusterRegion")]
         public string ClusterRegion{ get; set; }

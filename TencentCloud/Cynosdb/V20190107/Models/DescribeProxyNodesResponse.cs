@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of the database proxy nodes
+        /// Total number of database proxy nodes
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of the database proxy nodes
+        /// List of database proxy nodes
         /// </summary>
         [JsonProperty("ProxyNodeInfos")]
         public ProxyNodeInfo[] ProxyNodeInfos{ get; set; }

@@ -31,25 +31,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// VPC ID in string
+        /// vpc id
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID in string
+        /// String subnet id
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// Valid hours of old IP
+        /// Old address reclamation time
         /// </summary>
         [JsonProperty("OldIpReserveHours")]
         public long? OldIpReserveHours{ get; set; }
 
         /// <summary>
-        /// Database proxy group ID (required), which can be obtained through the `DescribeProxies` API.
+        /// Database Proxy Group Id (required; can be obtained through the DescribeProxies API)
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }

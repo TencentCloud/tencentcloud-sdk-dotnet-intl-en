@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
-        /// Download limit type. valid values: NoLimit (unlimited), LimitOnlyIntranet (limited to private network), Customize (custom).
+        /// Download limit type. NoLimit: unlimited. LimitOnlyIntranet: restricted to private network. Customize: custom.
         /// </summary>
         [JsonProperty("LimitType")]
         public string LimitType{ get; set; }
 
         /// <summary>
-        /// This parameter only supports In, which indicates that the vpc specified by LimitVpc can be downloaded. the default is In.
+        /// This parameter only supports In, which means the vpc specified by LimitVpc can be downloaded. The default is In.
         /// </summary>
         [JsonProperty("VpcComparisonSymbol")]
         public string VpcComparisonSymbol{ get; set; }
 
         /// <summary>
-        /// Specified ips can download; specified ips are not allowed to download.
+        /// In: Download is allowed from the specified ip; NotIn: Download is not allowed from the specified ip
         /// </summary>
         [JsonProperty("IpComparisonSymbol")]
         public string IpComparisonSymbol{ get; set; }
 
         /// <summary>
-        /// Limit the vpc settings for downloads.
+        /// vpc settings with download restricted
         /// </summary>
         [JsonProperty("LimitVpcs")]
         public BackupLimitVpcItem[] LimitVpcs{ get; set; }
 
         /// <summary>
-        /// Specifies the ip settings for limiting downloads.
+        /// ip settings for download restriction
         /// </summary>
         [JsonProperty("LimitIps")]
         public string[] LimitIps{ get; set; }

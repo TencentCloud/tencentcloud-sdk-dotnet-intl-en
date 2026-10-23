@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// <p>User appid</p>
+        /// <p>User AppID.</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -79,14 +79,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Input{ get; set; }
 
         /// <summary>
-        /// <p>Instance group id.</p>
+        /// <p>Instance group id</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// <p>Instance group id.</p>
+        /// <p>Instance group id</p>
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public string InstanceGroupId{ get; set; }
@@ -98,13 +98,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Task operation object id</p>
+        /// <p>Task operation object id.</p>
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }
 
         /// <summary>
-        /// <p>Task operation object type.</p>
+        /// <p>Task operation object type</p>
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
@@ -122,7 +122,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// <p>Task status</p>
+        /// <p>Task status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -134,7 +134,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// <p>Parent task ID that triggers this task</p>
+        /// <p>ID of the parent task that triggers this task</p>
         /// </summary>
         [JsonProperty("TriggerTaskId")]
         public long? TriggerTaskId{ get; set; }
@@ -164,13 +164,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// <p>Task progress</p>
+        /// <p>Task Progress</p>
         /// </summary>
         [JsonProperty("Process")]
         public long? Process{ get; set; }
@@ -231,7 +231,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public BizTaskModifyParamsData ModifyInstanceParamsData{ get; set; }
 
         /// <summary>
-        /// <p>Maintenance time</p>
+        /// <p>Maintenance time.</p>
         /// </summary>
         [JsonProperty("TaskMaintainInfo")]
         public TaskMaintainInfo TaskMaintainInfo{ get; set; }

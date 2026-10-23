@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Key type (cloud, custom).
+        /// Key type (cloud, custom)
         /// </summary>
         [JsonProperty("KeyType")]
         public string KeyType{ get; set; }
 
         /// <summary>
-        /// Key Id.
+        /// Secret Id
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Key region.
+        /// Key region
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }

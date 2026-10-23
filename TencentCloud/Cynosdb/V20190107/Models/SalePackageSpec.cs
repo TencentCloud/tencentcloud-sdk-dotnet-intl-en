@@ -25,40 +25,40 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Resource package region of use.
+        /// Region of use for the resource package
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Specifies the resource package type.
-        /// CCU - compute resource package.
-        /// Storage resource package.
+        /// Resource package type
+        /// CCU: compute resource package
+        /// DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Resource pack version.
-        /// base - basic version; common - general version; enterprise - enterprise edition.
+        /// Resource pack version
+        /// base: basic edition, common: general edition, enterprise: Enterprise Edition
         /// </summary>
         [JsonProperty("PackageVersion")]
         public string PackageVersion{ get; set; }
 
         /// <summary>
-        /// Minimum number of resources in the current version of the resource package. compute resource unit: pieces; storage resource: GB.
+        /// Minimum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
         /// </summary>
         [JsonProperty("MinPackageSpec")]
         public float? MinPackageSpec{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum number of resources in the current version of the resource package. valid values: compute resource unit: pieces; storage resource: GB.
+        /// Maximum number of resources in the current resource package version. Compute resource unit: count; storage resource: GB.
         /// </summary>
         [JsonProperty("MaxPackageSpec")]
         public float? MaxPackageSpec{ get; set; }
 
         /// <summary>
-        /// Specifies the resource pack validity period. the measurement unit is day.
+        /// Resource pack validity period. Unit: day.
         /// </summary>
         [JsonProperty("ExpireDay")]
         public long? ExpireDay{ get; set; }

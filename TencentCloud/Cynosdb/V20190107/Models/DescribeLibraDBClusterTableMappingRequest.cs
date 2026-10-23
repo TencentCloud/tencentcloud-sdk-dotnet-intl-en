@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Analysis Cluster ID
+        /// Analysis cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Node ID
+        /// Node ID.
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Page history limit
+        /// Page record limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] StatusList{ get; set; }
 
         /// <summary>
-        /// Map database name
+        /// Map database names
         /// </summary>
         [JsonProperty("MapSchemas")]
         public string[] MapSchemas{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] MapTableName{ get; set; }
 
         /// <summary>
-        /// Query records where the database name is not null
+        /// Whether to query records where the mapping database name is not empty
         /// </summary>
         [JsonProperty("MapSchemaNotEmpty")]
         public bool? MapSchemaNotEmpty{ get; set; }
 
         /// <summary>
-        /// Query records where the mapping table name is not null
+        /// Whether to query records where the mapping table name is not empty
         /// </summary>
         [JsonProperty("MapTableNameNotEmpty")]
         public bool? MapTableNameNotEmpty{ get; set; }

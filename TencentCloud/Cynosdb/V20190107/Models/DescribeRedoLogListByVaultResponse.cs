@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total eligible redo log files
+        /// Total eligible RedoLog files
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Redo log file list
+        /// RedoLog file list
         /// </summary>
         [JsonProperty("RedoLogList")]
         public DescribeRedoLogListByVaultItem[] RedoLogList{ get; set; }

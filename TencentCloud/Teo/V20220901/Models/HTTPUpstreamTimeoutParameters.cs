@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP response timeout in seconds. value range: 5–600.
+        /// <p>HTTP response timeout.</p><p>Value range: [5, 600]</p><p>Unit: seconds</p><p>Default value: 15</p>
         /// </summary>
         [JsonProperty("ResponseTimeout")]
         public long? ResponseTimeout{ get; set; }

@@ -25,192 +25,192 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Availability zone.
+        /// Availability zone
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Specifies the ID of the VPC network it belongs to.
+        /// VPC network ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID.
+        /// Subnet ID
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Database version. valid values:. 
-        /// <li>Specifies the available values for MYSQL: 5.7, 8.0.</li>.
+        /// Database version. Valid values: 
+        /// <li> MYSQL available values: 5.7, 8.0 </li>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Project ID.
+        /// Project ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Cluster name, length less than 64 characters. each character value ranges from uppercase/lowercase letters, digits, special symbols ('-','_','.').
+        /// Cluster name. The length must be less than 64 characters. Each character can be an uppercase or lowercase letter, digit, or special symbol (-, _, .).
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// Account password (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&*_-+=|\(){}[]:;'<>,.?/ with any three types).
+        /// Account (8-64 characters, containing any three of the following: uppercase and lowercase letters, digits, and symbols ~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/)
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// Port, default 3306, in the range of [0, 65535).
+        /// Port. Default value: 3306. Value range: [0, 65535).
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
+        /// Billing mode. Pay-as-you-go: 0; monthly subscription: 1. Default: pay-as-you-go.
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// Number of clusters to purchase. value range: [1,3]. default is 1.
+        /// Number of clusters to purchase. Range of optional values: [1,3]. Default value: 1
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }
 
         /// <summary>
-        /// Maximum storage limit of a regular instance, in GB.
-        /// When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.
+        /// Storage limit of a regular instance in GB
+        /// When `DbType` is `MYSQL` and the storage billing mode is prepaid, this parameter cannot exceed the maximum storage specification corresponding to the cpu and memory.
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Specifies the annual and monthly subscription duration.
+        /// Annual and monthly subscription duration.
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Specifies the measurement unit for annual and monthly subscription duration. valid values: 's', 'd', 'm', 'y'.
+        /// Unit of the annual and monthly subscription duration. Valid values: s, d, m, y.
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// Whether annual/monthly subscription is auto-renewed. default value is 0.
-        /// 0 identifies the default renewal method, 1 means auto-renew, 2 indicates no auto-renewal.
+        /// Whether Annual/Monthly Subscription is auto-renewed. Default value: 0.
+        /// 0: default renewal method. 1: auto-renew. 2: no auto-renewal.
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// Whether to automatically select a voucher. 1: yes; 0: no. default value: 0.
+        /// Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// Specifies the tag array information that needs to be bound during cluster creation.
+        /// tag array information that needs to be bound for cluster creation
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// Specifies the cluster storage billing mode. 0: pay-as-you-go; 1: monthly subscription. default is pay-as-you-go.
-        /// When DbType is MYSQL and the cluster billing mode for computing is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be pay-as-you-go.
+        /// Cluster storage billing mode. Pay-as-you-go: 0. Monthly subscription: 1. Default: pay-as-you-go.
+        /// When `DbType` is `MYSQL` and the cluster compute billing mode is pay-as-you-go (including when `DbMode` is `SERVERLESS`), the storage billing mode can only be pay-as-you-go.
         /// Rollback and clone do not support monthly subscription storage.
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// Security group id array.
+        /// Security group id array
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Specifies the Alarm policy Id array.
+        /// Alarm policy Id array
         /// </summary>
         [JsonProperty("AlarmPolicyIds")]
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names. valid values: 1 (case-insensitive), 0 (case-sensitive).
+        /// Parameter array. It temporarily supports `character_set_server` (utf8 | latin1 | gbk | utf8mb4) and `lower_case_table_names`. 1: not case-sensitive; 0: case-sensitive.
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
 
         /// <summary>
-        /// Transaction mode. valid values: 0 (place order and pay), 1 (place order).
+        /// Transaction mode. 0: Place order and pay. 1: Place order
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// Parameter template ID. can be obtained through querying parameter template information DescribeParamTemplates.
+        /// Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates.
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// Multi-AZ address.
+        /// Multi-az address
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// Initializes configuration information, mainly used to purchase clusters with different specification instances.
+        /// Instance initialization configuration information, primarily used for selecting different specification instances during cluster purchase.
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public IntegrateInstanceInfo[] InstanceInitInfos{ get; set; }
 
         /// <summary>
-        /// Global database unique identifier.
+        /// Global database unique ID
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// Database proxy configuration.
+        /// Database proxy configuration
         /// </summary>
         [JsonProperty("ProxyConfig")]
         public ProxyConfigInfo ProxyConfig{ get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically archive.
+        /// Whether to automatically archive
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
         /// <summary>
-        /// Processing time after pausing.
+        /// Archiving processing time after pausing
         /// </summary>
         [JsonProperty("AutoArchiveDelayHours")]
         public long? AutoArchiveDelayHours{ get; set; }
 
         /// <summary>
-        /// Encryption method (consists of encryption algorithm and key pair version).
+        /// Encryption method (consists of the encryption algorithm and key pair version)
         /// </summary>
         [JsonProperty("EncryptMethod")]
         public string EncryptMethod{ get; set; }
 
         /// <summary>
-        /// Describes the cluster configuration information.
+        /// Integrated cluster configuration information
         /// </summary>
         [JsonProperty("IntegrateCreateClusterConfig")]
         public IntegrateCreateClusterConfig IntegrateCreateClusterConfig{ get; set; }
 
         /// <summary>
-        /// Storage architecture type. valid values: 1.0/2.0. default value: 1.0.
+        /// Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
         /// </summary>
         [JsonProperty("StorageVersion")]
         public string StorageVersion{ get; set; }

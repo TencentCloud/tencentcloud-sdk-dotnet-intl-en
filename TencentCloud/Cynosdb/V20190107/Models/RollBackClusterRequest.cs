@@ -25,49 +25,51 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Rollback policy. timeRollback - roll back by time point; snapRollback - roll back by backup file.
+        /// Rollback policy. timeRollback: rollback by time point. snapRollback: rollback by backup file.
         /// </summary>
         [JsonProperty("RollbackStrategy")]
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// Backup file ID. This parameter is required when the rollback policy is rolling back by backup file.
+        /// Backup file ID.
+        /// Required when the rollback policy is rollback by backup file.
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
 
         /// <summary>
-        /// Expected rollback time. This parameter is required when the rollback policy is timeRollback (roll back by time point).
+        /// Expected restore time.
+        /// Required if the rollback policy is timeRollback for rollback by time point.
         /// </summary>
         [JsonProperty("ExpectTime")]
         public string ExpectTime{ get; set; }
 
         /// <summary>
-        /// Expected threshold (deprecated).
+        /// Expected threshold (abandoned)
         /// </summary>
         [JsonProperty("ExpectTimeThresh")]
         public ulong? ExpectTimeThresh{ get; set; }
 
         /// <summary>
-        /// List of rollback databases.
+        /// Database list for rollback
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// List of rollback databases and tables.
+        /// List of rollback database tables
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }
 
         /// <summary>
-        /// Mode of rolling back by time point. full: normal; db: fast; table: ultra-fast (the default value is normal).
+        /// Point-in-Time Restore Mode. full: ordinary; db: quick; table: ultra-fast (ordinary is selected by default)
         /// </summary>
         [JsonProperty("RollbackMode")]
         public string RollbackMode{ get; set; }

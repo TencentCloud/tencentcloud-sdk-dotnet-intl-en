@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total files of backup that meets the conditions
+        /// Total number of backup files that meet the conditions
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Network Group id (cynosdbmysql-grp- prefix at the beginning) or Cluster id (such as cynosdbmysql-xxxxxxxx prefix). When configuring security group with instance IP address triplet (UniqVpcId, Vip, Vport), this field must be set to Cluster id (such as cynosdbmysql-xxxxxxxx prefix).</p>
+        /// <p>Network Group id (starting with cynosdbmysql-grp- prefix) or Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix). When configuring a security group using the instance IP address 3-tuple (UniqVpcId, Vip, Vport), this field must be set to the Cluster id (for example, starting with cynosdbmysql-xxxxxxxx prefix).</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input will perform a full replacement of the existing collection, not an incremental update. The modification requires the expected full collection.</p>
+        /// <p>List of security group IDs to modify, an array of one or more security group IDs.<br>Note: This input parameter will fully replace the existing collection, not incrementally update. For modification, import the expected full collection.</p>
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>ID of the VPC network for instance ownership. (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
+        /// <p>VPC network ID of the instance (UniqVpcId, Vip, and Vport must be specified simultaneously to uniquely identify the network instance)</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// <p>Instance IP address, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+        /// <p>Instance IP address. The 3-tuple of instance IP address (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify the network instance</p>
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// <p>Instance port, instance IP address triplet (UniqVpcId, Vip, and Vport). These three parameters must be specified simultaneously for unique identification of network instances.</p>
+        /// <p>Instance port, instance IP address 3-tuple (UniqVpcId, Vip, and Vport) must be specified simultaneously to uniquely identify a network instance</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }

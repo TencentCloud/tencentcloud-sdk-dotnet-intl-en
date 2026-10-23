@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Unique ID of the global database
+        /// Global database unique ID
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// unique alias of the global database
+        /// Unique alias of the global database
         /// </summary>
         [JsonProperty("GdnName")]
         public string GdnName{ get; set; }
 
         /// <summary>
-        /// Primary Cluster ID
+        /// Primary cluster ID
         /// </summary>
         [JsonProperty("PrimaryClusterId")]
         public string PrimaryClusterId{ get; set; }
 
         /// <summary>
-        /// Master cluster region
+        /// Region of the primary cluster
         /// </summary>
         [JsonProperty("PrimaryClusterRegion")]
         public string PrimaryClusterRegion{ get; set; }
 
         /// <summary>
-        /// from the cluster region
+        /// From the cluster region
         /// </summary>
         [JsonProperty("StandbyClusterRegion")]
         public string StandbyClusterRegion{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StandbyClusterName{ get; set; }
 
         /// <summary>
-        /// Whether forced switchover is performed
+        /// Whether a forced switchover has been performed
         /// </summary>
         [JsonProperty("ForceSwitchGdn")]
         public string ForceSwitchGdn{ get; set; }
 
         /// <summary>
-        /// Return code
+        /// code
         /// </summary>
         [JsonProperty("Code")]
         public long? Code{ get; set; }
 
         /// <summary>
-        /// prompt message
+        /// Prompt message
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

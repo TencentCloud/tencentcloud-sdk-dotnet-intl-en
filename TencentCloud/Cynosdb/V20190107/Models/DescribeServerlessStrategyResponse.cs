@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies how long (in seconds) the auto-pause is triggered when the cpu load is 0.
+        /// cpu load duration (seconds) at 0 before auto pause
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
         /// <summary>
-        /// Specifies how long (in seconds) the auto-scaling is triggered when the cpu load exceeds the number of cores in the current specifications.
+        /// cpu load exceeds the current specification cores. How long (in seconds) does it last before auto-scaling is triggered?
         /// </summary>
         [JsonProperty("AutoScaleUpDelay")]
         public long? AutoScaleUpDelay{ get; set; }
 
         /// <summary>
-        /// Specifies how long (in seconds) the system will wait for the cpu load to be lower than the number of cores in the lower specification before triggering automatic scaling down.
+        /// Duration (in seconds) of low cpu load before automatic scaling in is triggered when the load is lower than the core count of the next lower specification.
         /// </summary>
         [JsonProperty("AutoScaleDownDelay")]
         public long? AutoScaleDownDelay{ get; set; }
 
         /// <summary>
-        /// Whether to automatically pause. valid values:.
+        /// Whether to auto pause. Possible values:
         /// yes
         /// no
         /// </summary>
@@ -51,19 +51,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// Specifies whether the cluster allows upward scaling. valid values: <li>yes</li><li>no</li>.
+        /// Whether the cluster is allowed to scale upward. Optional range: <li>yes</li><li>no</li>
         /// </summary>
         [JsonProperty("AutoScaleUp")]
         public string AutoScaleUp{ get; set; }
 
         /// <summary>
-        /// Whether the cluster is allowed to scale down. valid values: <li>yes</li><li>no</li>.
+        /// Whether scale-in is allowed for the cluster. Optional range: <li>yes</li><li>no</li>
         /// </summary>
         [JsonProperty("AutoScaleDown")]
         public string AutoScaleDown{ get; set; }
 
         /// <summary>
-        /// Whether archiving is enabled. Optional range</p><li>yes</li><li>no</li>Default value: yes</p>
+        /// Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }

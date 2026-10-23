@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConfigId{ get; set; }
 
         /// <summary>
-        /// <p>Policy type: weekly/monthly/yearly</p>
+        /// <p>Period policy type: weekly/monthly/yearly</p>
         /// </summary>
         [JsonProperty("SparsePeriodConfig")]
         public string SparsePeriodConfig{ get; set; }
 
         /// <summary>
-        /// <p>Cycle time configuration</p>
+        /// <p>Periodic time configuration</p>
         /// </summary>
         [JsonProperty("SparsePeriodTime")]
         public SparsePeriodTime SparsePeriodTime{ get; set; }
 
         /// <summary>
-        /// <p>Retention days (7-7320 days, longest 20 years)</p>
+        /// <p>Retention days (7-7320 days, up to 20 years)</p>
         /// </summary>
         [JsonProperty("SparseBackupSaveDays")]
         public long? SparseBackupSaveDays{ get; set; }

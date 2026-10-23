@@ -25,50 +25,59 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string[] PackageId{ get; set; }
 
         /// <summary>
-        /// Resource pack name
+        /// Resource package name.
         /// </summary>
         [JsonProperty("PackageName")]
         public string[] PackageName{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values: `CCU` (compute resource pack), `DISK` (storage resource pack).
+        /// Resource package type
+        /// CCU: compute resource package. DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string[] PackageType{ get; set; }
 
         /// <summary>
-        /// Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+        /// Region of use for the resource package
+        /// china: common in the Chinese mainland; overseas: common in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string[] PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack status. Valid values: `using`, `expired`, `normal_finish` (used up), `apply_refund` (requesting a refund), `refund` (refunded).
+        /// Resource pack status
+        /// creating
+        /// using: in use;
+        /// expired
+        /// normal_finish: used up;
+        /// apply_refund: refund requested.
+        /// refund: refunded.
         /// </summary>
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
         /// <summary>
-        /// Sorting conditions. Valid values: `startTime` (effective time), `expireTime` (expiration date), `packageUsedSpec` (used capacity), `packageTotalSpec` (total storage capacity). 
-        /// Sorting by array order
+        /// Sort condition. Supported sort condition: startTime - effective time.
+        /// expireTime: expiration time, packageUsedSpec: used capacity, packageTotalSpec: total storage capacity.
+        /// Sequential arrangement by array.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string[] OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `ASC` (ascending), `DESC` (descending).
+        /// Sorting method. `DESC`: descending order. `ASC`: ascending order.
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

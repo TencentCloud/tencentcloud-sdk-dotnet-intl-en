@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Each item has only one `dealName`, through which you can ensure the idempotency of the delivery API.
+        /// Each item corresponds to a dealName. The business needs to ensure the delivery API idempotency based on the dealName.
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

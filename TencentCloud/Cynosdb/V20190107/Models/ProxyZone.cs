@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ of the proxy node
+        /// proxy node availability zone
         /// </summary>
         [JsonProperty("ProxyNodeZone")]
         public string ProxyNodeZone{ get; set; }
 
         /// <summary>
-        /// The number of proxy nodes
+        /// Number of proxy nodes.
         /// </summary>
         [JsonProperty("ProxyNodeCount")]
         public long? ProxyNodeCount{ get; set; }

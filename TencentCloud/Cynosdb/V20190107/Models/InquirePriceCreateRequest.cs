@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Availability zone, each region provision best practice</p>
+        /// <p>AZ. Best practice provided by each region</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -37,19 +37,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? GoodsNum{ get; set; }
 
         /// <summary>
-        /// <p>Instance purchase type, optional values: PREPAID, POSTPAID, SERVERLESS</p>
+        /// <p>Instance purchase type. Available values are: PREPAID, POSTPAID, SERVERLESS</p>
         /// </summary>
         [JsonProperty("InstancePayMode")]
         public string InstancePayMode{ get; set; }
 
         /// <summary>
-        /// <p>Storage purchase type, optional values: PREPAID, POSTPAID</p>
+        /// <p>Storage purchase type. Available values are: PREPAID, POSTPAID</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public string StoragePayMode{ get; set; }
 
         /// <summary>
-        /// <p>Instance device type. Supported values are as follows:</p><ul><li>common: refers to universal type</li><li>exclusive: refers to dedicated type</li></ul>
+        /// <p>Instance device type. Supported values are as follows:</p><ul><li>common: universal type</li><li>exclusive: dedicated</li></ul>
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
@@ -67,37 +67,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// <p>Ccu size. Required for the serverless type.</p>
+        /// <p>Ccu size, required for serverless type</p>
         /// </summary>
         [JsonProperty("Ccu")]
         public float? Ccu{ get; set; }
 
         /// <summary>
-        /// <p>Storage size. Required for PREPAID storage type</p>
+        /// <p>Storage size. Required for PREPAID storage type.</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// <p>Purchase period, required for PREPAID purchase type</p>
+        /// <p>Purchase period. Required when the purchase type is PREPAID.</p>
         /// </summary>
         [JsonProperty("TimeSpan")]
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// <p>Duration unit. Optional values: m, d. Required for PREPAID purchase type.</p>
+        /// <p>Duration unit. Available values are: m, d. Required for PREPAID purchase type</p>
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// <p>Storage architecture type. Enumeration value: 1.0/2.0 Default value: 1.0</p>
+        /// <p>Storage architecture type. Enumeration values: 1.0/2.0 Default value: 1.0</p>
         /// </summary>
         [JsonProperty("StorageVersion")]
         public string StorageVersion{ get; set; }
 
         /// <summary>
-        /// <p>Whether storage spans AZs. Valid for storage architecture 2.0</p>
+        /// <p>Whether the storage is cross-AZ. Valid for storage architecture 2.0.</p>
         /// </summary>
         [JsonProperty("IsMultiAz")]
         public bool? IsMultiAz{ get; set; }

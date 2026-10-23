@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// MySQL version number
+        /// mysql version number
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TemplateDescription{ get; set; }
 
         /// <summary>
-        /// ID of the template to be copied
+        /// Optional parameter. ID of the template to replicate.
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// Database type. Valid values:  `NORMAL` (default), `SERVERLESS`.
+        /// Database type. Available values: NORMAL (default), SERVERLESS
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// List of the parameters
+        /// Parameter list
         /// </summary>
         [JsonProperty("ParamList")]
         public ParamItem[] ParamList{ get; set; }

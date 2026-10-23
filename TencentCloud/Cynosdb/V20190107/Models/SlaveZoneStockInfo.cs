@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Replica AZ.
+        /// Secondary AZ
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }
 
         /// <summary>
-        /// Inventory quantity in spare availability zone.	
+        /// Inventory quantity in spare availability zone	
         /// </summary>
         [JsonProperty("StockCount")]
         public ulong? StockCount{ get; set; }
 
         /// <summary>
-        /// Whether there is inventory in the spare availability zone.	
+        /// Whether there is inventory in the spare AZ	
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }

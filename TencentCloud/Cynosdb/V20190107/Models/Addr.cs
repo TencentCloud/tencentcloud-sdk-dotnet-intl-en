@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// IP address
+        /// IP address.
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Filter criteria. Support the following conditions: WINC-include (segment dimension), WEXC-exclude (segment dimension), INC-include, EXC-exclude, EQS-equal, NEQ-not equal to, RA-range.
+        /// Filter criteria. The following conditions are supported: WINC - contains (segment dimension), WEXC - excludes (segment dimension), INC - contains, EXC - excludes, EQS - equals, NEQ - not equals, RA - range.
         /// </summary>
         [JsonProperty("Compare")]
         public string Compare{ get; set; }
 
         /// <summary>
-        /// Filtered value. For reverse query, multiple values have an AND relationship. For forward query, multiple values have an OR relationship.
+        /// Filtered value. In reverse query, multiple values have an AND relationship. In forward query, multiple values have an OR relationship.
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

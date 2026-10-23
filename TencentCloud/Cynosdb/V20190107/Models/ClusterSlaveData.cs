@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Old primary availability zone.
+        /// Old primary AZ
         /// </summary>
         [JsonProperty("OldMasterZone")]
         public string OldMasterZone{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] OldSlaveZone{ get; set; }
 
         /// <summary>
-        /// New primary availability zone.
+        /// New primary AZ
         /// </summary>
         [JsonProperty("NewMasterZone")]
         public string NewMasterZone{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] NewSlaveZone{ get; set; }
 
         /// <summary>
-        /// New from availability zone attribute.
+        /// New secondary availability zone attribute
         /// </summary>
         [JsonProperty("NewSlaveZoneAttr")]
         public SlaveZoneAttrItem[] NewSlaveZoneAttr{ get; set; }
 
         /// <summary>
-        /// Old availability zone attributes.
+        /// Old availability zone attributes
         /// </summary>
         [JsonProperty("OldSlaveZoneAttr")]
         public SlaveZoneAttrItem[] OldSlaveZoneAttr{ get; set; }

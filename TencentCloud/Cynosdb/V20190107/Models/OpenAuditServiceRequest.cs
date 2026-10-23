@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// Frequent log retention period.
+        /// High frequency log retention period.
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
@@ -50,13 +50,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public AuditRuleFilters[] AuditRuleFilters{ get; set; }
 
         /// <summary>
-        /// Rule template ID. If both this parameter and `AuditRuleFilters` are left empty, full audit will be applied.
+        /// Rule template ID. If both this parameter and AuditRuleFilters are left empty, full audit is enabled.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Audit type. true - Full audit; default false - Rule-based audit.
+        /// Audit type. true: full audit; default false: rule audit.
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }

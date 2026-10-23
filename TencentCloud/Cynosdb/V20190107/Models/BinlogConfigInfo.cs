@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BinlogSaveDays{ get; set; }
 
         /// <summary>
-        /// <p>Whether cross-region backup of binlog is enabled</p>
+        /// <p>Whether binlog cross-region backup is enabled</p>
         /// </summary>
         [JsonProperty("BinlogCrossRegionsEnable")]
         public string BinlogCrossRegionsEnable{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] BinlogCrossRegions{ get; set; }
 
         /// <summary>
-        /// <p>Cross-region backup retention period</p><p>Unit: Day</p>
+        /// <p>Cross-region backup retention period</p><p>Unit: day</p>
         /// </summary>
         [JsonProperty("BinlogCrossRegionSaveDays")]
         public long? BinlogCrossRegionSaveDays{ get; set; }
 
         /// <summary>
-        /// <p>Safe info</p>
+        /// <p>Safe information</p>
         /// </summary>
         [JsonProperty("AutoCopyVaults")]
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the persistence threshold of the connection pool. the unit is seconds.
+        /// Connection pool persistence threshold: measurement unit (seconds)
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// Whether the connection pool is enabled.
+        /// Whether the connection pool is enabled
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// Specifies the connection pool type. valid values: SessionConnectionPool (session-level connection pool).
+        /// Connection pool type: SessionConnectionPool (session-level connection pool)
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }

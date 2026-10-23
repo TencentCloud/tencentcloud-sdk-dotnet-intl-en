@@ -31,43 +31,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Database Proxy Group ID, such as cynosdbmysql-proxy-qwe123</p>
+        /// <p>Database Proxy Group ID, for example, cynosdbmysql-proxy-qwe123</p>
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// <p>Consistency Type "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
+        /// <p>Consistency type; "eventual"-final consistency, "session"-session consistency, "global"-global consistency</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// <p>Consistency timeout.<br>Value ranges from 0 to 1000000 (microseconds). When set to 0, it means the request will wait if the read-only instance fails to satisfy the consistency policy due to delay.</p>
+        /// <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public string ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// <p>Read-write weight allocation mode; system Auto-Assignment: "system", custom: "custom"</p>
+        /// <p>Read-write weight allocation mode; system auto-assignment: "system", custom: "custom"</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// <p>Instance read-only weight.</p>
+        /// <p>Instance Read-Only Weight.</p>
         /// </summary>
         [JsonProperty("InstanceWeights")]
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// <p>Whether fault migration is enabled. After a failure occurs, the connection address will be routed to primary instance. Value: "yes", "no"</p>
+        /// <p>Whether failover is enabled. After a fault occurs on the proxy, the connection address will be routed to the primary instance. Value: "yes", "no"</p>
         /// </summary>
         [JsonProperty("FailOver")]
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// <p>Automatically add read-only instance, value: "yes", "no"</p>
+        /// <p>Whether to automatically add read-only instance. Parameter Value: "yes", "no"</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
@@ -79,37 +79,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OpenRw{ get; set; }
 
         /// <summary>
-        /// <p>Read-write type:<br>READWRITE, READONLY</p>
+        /// <p>Read-write type:<br>READWRITE,READONLY</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// <p>Transaction split.<br>Read and write operations in a transaction are split and executed on different instances.</p>
+        /// <p>Transaction split.<br>Split reads and writes in a transaction to different instances for execution.</p>
         /// </summary>
         [JsonProperty("TransSplit")]
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// <p>Connection mode:<br>nearby, balance</p>
+        /// <p>Connection mode: <br>nearby, balance</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable the connection pool:<br>yes, no</p>
+        /// <p>Whether to enable connection pool: <br>yes,no</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// <p>Connection pool Type:<br>SessionConnectionPool</p>
+        /// <p>Connection pool type: <br>SessionConnectionPool</p>
         /// </summary>
         [JsonProperty("ConnectionPoolType")]
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// <p>Connection pool time.<br>Optional range: 0-300 (seconds).</p>
+        /// <p>Connection pool time.<br>Optional range: 0–300 (seconds)</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
@@ -127,10 +127,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? ApQueryToOtherNode{ get; set; }
 
         /// <summary>
-        /// <p>Load balancing mode</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+        /// <p>Load balancing mode</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
         /// </summary>
         [JsonProperty("LoadBalanceMode")]
         public string LoadBalanceMode{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable full transactional split. In a transaction, split the reads before and after the write to different instances for execution.</p>
+        /// </summary>
+        [JsonProperty("TransAllSplit")]
+        public bool? TransAllSplit{ get; set; }
 
 
         /// <summary>
@@ -156,6 +162,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
             this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
             this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+            this.SetParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
         }
     }
 }

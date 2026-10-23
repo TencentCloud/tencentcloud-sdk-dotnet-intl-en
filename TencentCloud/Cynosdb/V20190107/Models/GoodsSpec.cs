@@ -68,8 +68,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Instance machine type
-        /// 1. common, universal type.
-        /// 2. exclusive, dedicated.
+        /// 1. common: universal type.
+        /// 2. exclusive: dedicated.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

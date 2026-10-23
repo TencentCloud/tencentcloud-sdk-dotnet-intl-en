@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Cluster list
+        /// This example shows you how to obtain the cluster list.
         /// </summary>
         [JsonProperty("ClusterSet")]
         public CynosdbCluster[] ClusterSet{ get; set; }

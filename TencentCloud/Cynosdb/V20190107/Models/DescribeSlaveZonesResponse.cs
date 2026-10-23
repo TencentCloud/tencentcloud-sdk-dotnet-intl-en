@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Secondary AZ.
+        /// Secondary AZ
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }

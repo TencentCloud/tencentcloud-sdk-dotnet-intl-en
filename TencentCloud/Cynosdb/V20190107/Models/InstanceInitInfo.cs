@@ -43,31 +43,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>Number of instances, range [1,15]</p>
+        /// <p>Number of instances. Value range: [1,15]</p>
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
 
         /// <summary>
-        /// <p>Minimum count of Serverless instance, range [1,15]</p>
+        /// <p>Minimum number of Serverless instances. Value range: [1,15]</p>
         /// </summary>
         [JsonProperty("MinRoCount")]
         public long? MinRoCount{ get; set; }
 
         /// <summary>
-        /// <p>Maximum count of Serverless instances, range [1,15]</p>
+        /// <p>Maximum count of Serverless instances, ranging from 1 to 15</p>
         /// </summary>
         [JsonProperty("MaxRoCount")]
         public long? MaxRoCount{ get; set; }
 
         /// <summary>
-        /// <p>Minimum specification of Serverless instance</p>
+        /// <p>Minimum specification of a Serverless instance</p>
         /// </summary>
         [JsonProperty("MinRoCpu")]
         public float? MinRoCpu{ get; set; }
 
         /// <summary>
-        /// <p>Maximum specification of Serverless instance</p>
+        /// <p>Maximum specification of a Serverless instance</p>
         /// </summary>
         [JsonProperty("MaxRoCpu")]
         public float? MaxRoCpu{ get; set; }

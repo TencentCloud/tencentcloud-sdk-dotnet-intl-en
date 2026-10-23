@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Slow query export content
+        /// Exported content of slow query
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

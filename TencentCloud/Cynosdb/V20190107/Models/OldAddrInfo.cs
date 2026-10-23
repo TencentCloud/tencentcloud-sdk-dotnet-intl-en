@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Expect recycle time.
+        /// Expected recycle time
         /// </summary>
         [JsonProperty("ReturnTime")]
         public string ReturnTime{ get; set; }

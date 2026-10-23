@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of instance CPU cores
+        /// Instance CPU. Measurement unit: core
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }
 
         /// <summary>
-        /// Instance memory in GB
+        /// Instance memory. Unit: GB.
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// Maximum instance storage capacity GB
+        /// Maximum available storage of an instance, unit: GB
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public ulong? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// Minimum instance storage capacity GB
+        /// Minimum available storage of an instance, unit: GB
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public ulong? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// Whether there is an inventory.
+        /// Whether there is inventory
         /// </summary>
         [JsonProperty("HasStock")]
         public bool? HasStock{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MaxIops{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth
+        /// Maximum IO bandwidth
         /// </summary>
         [JsonProperty("MaxIoBandWidth")]
         public long? MaxIoBandWidth{ get; set; }
 
         /// <summary>
-        /// Regional inventory information.
+        /// Regional inventory information
         /// </summary>
         [JsonProperty("ZoneStockInfos")]
         public ZoneStockInfo[] ZoneStockInfos{ get; set; }
 
         /// <summary>
-        /// Inventory quantity.
+        /// Inventory quantity
         /// </summary>
         [JsonProperty("StockCount")]
         public long? StockCount{ get; set; }

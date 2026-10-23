@@ -25,73 +25,73 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Filename.
+        /// <p>File name.</p>
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// File size
+        /// <p>File size</p>
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }
 
         /// <summary>
-        /// Backup time
+        /// <p>Backup time</p>
         /// </summary>
         [JsonProperty("BackupTime")]
         public string BackupTime{ get; set; }
 
         /// <summary>
-        /// redoLogId
+        /// <p>redoLogId</p>
         /// </summary>
         [JsonProperty("RedoLogId")]
         public long? RedoLogId{ get; set; }
 
         /// <summary>
-        /// Cross-Region information.
+        /// <p>Cross-regional information</p>
         /// </summary>
         [JsonProperty("RedoCrossRegions")]
         public BackupRegionAndIds[] RedoCrossRegions{ get; set; }
 
         /// <summary>
-        /// Status.
+        /// <p>Status.</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Start time.
+        /// <p>Start time.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Completion time.
+        /// <p>Completion time</p>
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// Safe info
+        /// <p>Safe information.</p>
         /// </summary>
         [JsonProperty("VaultInfos")]
         public VaultInfo[] VaultInfos{ get; set; }
 
         /// <summary>
-        /// Backup delivery status
+        /// <p>Backup delivery status</p>
         /// </summary>
         [JsonProperty("CopyStatus")]
         public string CopyStatus{ get; set; }
 
         /// <summary>
-        /// Encryption key
+        /// <p>Encryption key.</p>
         /// </summary>
         [JsonProperty("EncryptKeyId")]
         public string EncryptKeyId{ get; set; }
 
         /// <summary>
-        /// Key region for encryption
+        /// <p>Encryption key region</p>
         /// </summary>
         [JsonProperty("EncryptRegion")]
         public string EncryptRegion{ get; set; }

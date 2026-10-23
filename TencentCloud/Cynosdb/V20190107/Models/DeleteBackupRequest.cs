@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Backup file ID. This field is used by legacy versions and thus not recommended.
+        /// Backup file ID. Field used in earlier versions. This is not recommended.
         /// </summary>
         [JsonProperty("SnapshotIdList")]
         public long?[] SnapshotIdList{ get; set; }
 
         /// <summary>
-        /// Backup file ID. This field is recommended.
+        /// Backup file ID. Recommended for use.
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }

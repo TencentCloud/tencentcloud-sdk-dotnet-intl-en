@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// LibraDB Node ID
+        /// LibraDB node ID
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// syncing data
+        /// Syncing data
         /// </summary>
         [JsonProperty("DataStatus")]
         public string DataStatus{ get; set; }

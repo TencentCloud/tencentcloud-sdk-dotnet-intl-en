@@ -109,7 +109,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+        /// Auto-renewal flag. 1: automatic renewal. 0: non-renewal upon expiration.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// Storage size in GB
+        /// Storage size in GB.
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -163,13 +163,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// vport port
+        /// vport.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Update time
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -181,7 +181,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// physical AZ
+        /// Physical AZ
         /// </summary>
         [JsonProperty("PhysicalZone")]
         public string PhysicalZone{ get; set; }

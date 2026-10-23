@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string IP{ get; set; }
 
         /// <summary>
-        /// Source database port
+        /// Source database port.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Source instance availability zone
+        /// Source instance AZ
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Source main account uin
+        /// Source root account uin
         /// </summary>
         [JsonProperty("SrcUin")]
         public string SrcUin{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// sync task status
+        /// Sync task status
         /// </summary>
         [JsonProperty("ReplicationJobStatus")]
         public string ReplicationJobStatus{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// proxy version number.
+        /// proxy version number
         /// </summary>
         [JsonProperty("ProxyVersion")]
         public string ProxyVersion{ get; set; }
 
         /// <summary>
-        /// Version description: GA: stable version. BETA: BETA version. DEPRECATED: outdated.
+        /// Version description: GA: stable version. BETA: preview version. DEPRECATED: deprecated.
         /// </summary>
         [JsonProperty("ProxyVersionType")]
         public string ProxyVersionType{ get; set; }

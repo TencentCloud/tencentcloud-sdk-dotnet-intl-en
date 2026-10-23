@@ -25,26 +25,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance group ID
+        /// Instance Group ID
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// Target IP to be modified
+        /// Instance Group ID
+        /// </summary>
+        [JsonProperty("InstanceGroupId")]
+        public string InstanceGroupId{ get; set; }
+
+        /// <summary>
+        /// Destination ip that needs to be modified
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Target port to be modified
+        /// Destination port that needs to be modified
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -57,7 +63,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Valid hours of old IPs. If it is set to `0` hours, the IPs will be released immediately.
+        /// Retention time of the old ip before recycling. Unit: hour. 0 means reclaim immediately.
         /// </summary>
         [JsonProperty("OldIpReserveHours")]
         public long? OldIpReserveHours{ get; set; }
@@ -70,6 +76,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
+            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);

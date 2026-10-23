@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Execution duration in seconds
+        /// Execution duration in seconds.
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
 
         /// <summary>
-        /// SQL statement
+        /// sql statement
         /// </summary>
         [JsonProperty("SqlText")]
         public string SqlText{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UserHost{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Username.
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
@@ -61,80 +61,80 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// Lock duration in seconds
+        /// Lock duration in seconds.
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }
 
         /// <summary>
-        /// Number of scanned rows
+        /// Number of scanned rows.
         /// </summary>
         [JsonProperty("RowsExamined")]
         public long? RowsExamined{ get; set; }
 
         /// <summary>
-        /// Number of returned rows
+        /// Rows returned
         /// </summary>
         [JsonProperty("RowsSent")]
         public long? RowsSent{ get; set; }
 
         /// <summary>
-        /// SQL template
+        /// sql template
         /// </summary>
         [JsonProperty("SqlTemplate")]
         public string SqlTemplate{ get; set; }
 
         /// <summary>
-        /// MD5 value of the SQL statement
+        /// md5 of the sql statement
         /// </summary>
         [JsonProperty("SqlMd5")]
         public string SqlMd5{ get; set; }
 
         /// <summary>
-        /// Remote reading count.
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Remote reading count
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncReadCountRemote")]
         public long? SyncReadCountRemote{ get; set; }
 
         /// <summary>
-        /// Number of remote read bytes.
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Number of remote read bytes
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncReadBytesRemote")]
         public long? SyncReadBytesRemote{ get; set; }
 
         /// <summary>
-        /// Time spent on remote reads (µs).
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Time spent on remote reads (µs)
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncReadTimeRemote")]
         public long? SyncReadTimeRemote{ get; set; }
 
         /// <summary>
-        /// Remote write count.
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Remote write count
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncWriteCountRemote")]
         public long? SyncWriteCountRemote{ get; set; }
 
         /// <summary>
-        /// Specifies the number of remote written bytes.
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Number of remote written bytes.
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncWriteBytesRemote")]
         public long? SyncWriteBytesRemote{ get; set; }
 
         /// <summary>
         /// Time spent on remote writing (µs).
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("SyncWriteTimeRemote")]
         public long? SyncWriteTimeRemote{ get; set; }
 
         /// <summary>
-        /// Transaction submission delay (µs).
-        /// Specifies that the database kernel version is larger than 3.1.12.
+        /// Transaction submission delay (µs)
+        /// Database kernel version above 3.1.12
         /// </summary>
         [JsonProperty("TrxCommitDelay")]
         public long? TrxCommitDelay{ get; set; }

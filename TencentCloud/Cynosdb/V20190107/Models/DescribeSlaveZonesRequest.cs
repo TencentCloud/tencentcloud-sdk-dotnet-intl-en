@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Cloud frame cluster ID.
+        /// Cloud cluster ID
         /// </summary>
         [JsonProperty("OssClusterId")]
         public long? OssClusterId{ get; set; }
 
         /// <summary>
-        /// Storage architecture type. Enumeration value: 1.0/2.0. Default value: 1.0.
+        /// Storage architecture type. Enumeration values: 1.0/2.0. Default value: 1.0
         /// </summary>
         [JsonProperty("StorageVersion")]
         public string StorageVersion{ get; set; }

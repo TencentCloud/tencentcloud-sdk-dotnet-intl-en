@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// File detail.
+        /// File detail
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

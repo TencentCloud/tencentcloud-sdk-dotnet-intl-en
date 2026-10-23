@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Retrieval criteria.
+        /// Retrieval criteria
         /// </summary>
         [JsonProperty("Filters")]
         public QuerySimpleFilter[] Filters{ get; set; }

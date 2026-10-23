@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Specifies the value of the read-only switch.
+        /// Read-only switch value
         /// </summary>
         [JsonProperty("ReadOnlyValue")]
         public string ReadOnlyValue{ get; set; }

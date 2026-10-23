@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Enabling status of instance audit. 1 - enabled; 0 - not enabled.
+        /// Whether audit is enabled for the instance. Valid values: 1 - Enabled; 0 - Disabled.
         /// </summary>
         [JsonProperty("AuditSwitch")]
         public long? AuditSwitch{ get; set; }
 
         /// <summary>
-        /// Filtering conditions for querying the instance list.
+        /// Filter conditions for querying the instance list.
         /// </summary>
         [JsonProperty("Filters")]
         public AuditInstanceFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// Instance audit rule mode. 1 - rule-based audit; 0 - full audit.
+        /// Audit rule mode for the instance. Valid values: 1 - Rule-based audit; 0 - Full audit.
         /// </summary>
         [JsonProperty("AuditMode")]
         public long? AuditMode{ get; set; }
 
         /// <summary>
-        /// Number of entries returned per request. The default value is 30, and the maximum value is 100.
+        /// Number of entries to return per request. Default value: 30. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. The default value is 0.
+        /// Offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

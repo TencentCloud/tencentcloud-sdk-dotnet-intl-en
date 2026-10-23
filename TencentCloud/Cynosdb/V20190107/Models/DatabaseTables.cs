@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// Table name list.
+        /// Table Name List
         /// </summary>
         [JsonProperty("Tables")]
         public string[] Tables{ get; set; }

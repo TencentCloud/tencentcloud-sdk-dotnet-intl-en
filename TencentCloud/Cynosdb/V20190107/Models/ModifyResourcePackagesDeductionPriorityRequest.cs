@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
+        /// Resource package type whose priority needs to be modified. CCU: compute resource package. DISK: storage resource package.
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// The modified deduction priority takes effect for which cynos resource.
+        /// Which cynos resource does the modified deduction priority take effect for?
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Resource package deduction priority.
+        /// Resource package deduction priority
         /// </summary>
         [JsonProperty("DeductionPriorities")]
         public PackagePriority[] DeductionPriorities{ get; set; }

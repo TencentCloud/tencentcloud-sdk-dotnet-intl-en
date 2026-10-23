@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// Whether to force isolation
+        /// Whether to forcibly isolate
         /// </summary>
         [JsonProperty("ForceIsolate")]
         public bool? ForceIsolate{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// Cause of isolation
+        /// Isolation reason
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }

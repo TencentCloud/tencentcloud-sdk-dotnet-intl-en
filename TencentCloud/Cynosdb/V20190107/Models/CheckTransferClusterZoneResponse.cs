@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Whether the check is successful
+        /// Whether the check succeeds
         /// </summary>
         [JsonProperty("CheckStatus")]
         public bool? CheckStatus{ get; set; }

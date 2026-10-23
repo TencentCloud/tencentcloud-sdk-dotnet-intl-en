@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -49,8 +49,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Specifies the table type.
-        /// Specifies that "view" only returns the view, "base_table" only returns the basic table, and "all" returns both the view and the table. the default value is all.
+        /// Table type.
+        /// "view" means only return views, "base_table" means only return basic tables, and "all" means return both views and tables. Default value: all.
         /// </summary>
         [JsonProperty("TableType")]
         public string TableType{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string LogicBackupEnable{ get; set; }
 
         /// <summary>
-        /// <p>Automatic logic backup start time</p>
+        /// <p>Start time of automatic logical backup</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeBeg")]
         public ulong? LogicBackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// <p>Automated logic backup end time</p>
+        /// <p>Auto logic backup end time</p>
         /// </summary>
         [JsonProperty("LogicBackupTimeEnd")]
         public ulong? LogicBackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// <p>Automatic logical backup retention time<br>Unit: second</p>
+        /// <p>Automated logic backup retention time<br>Unit: seconds</p>
         /// </summary>
         [JsonProperty("LogicReserveDuration")]
         public ulong? LogicReserveDuration{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public CreateBackupVaultItem[] AutoCopyVaults{ get; set; }
 
         /// <summary>
-        /// <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+        /// <p>Day</p><p>Unit: cross-regional logical backup retention time</p>
         /// </summary>
         [JsonProperty("LogicCrossRegionSaveDays")]
         public long? LogicCrossRegionSaveDays{ get; set; }

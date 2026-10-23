@@ -25,49 +25,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Log topic operation: Options are create, reuse. 
-        /// create: Create a new log topic, using TopicName to create the log topic.
-        /// reuse: Use an existing log topic, using TopicId to specify the log topic.
-        /// The combination of using an existing log topic while creating a new logset is not allowed.
+        /// Log topic operation. Options: create, reuse.
+        /// Create: Add a log topic. Use TopicName to create a log topic.
+        /// reuse: Use an existing log topic and specify it by TopicId.
+        /// It is not allowed to use a combination of an existing log topic and a new log set.
         /// </summary>
         [JsonProperty("TopicOperation")]
         public string TopicOperation{ get; set; }
 
         /// <summary>
-        /// Logset operation: Options are create, reuse.
-        /// create: Create a new logset, using GroupName to create the logset.
-        /// reuse: Use an existing logset, using GroupId to specify the logset.
-        /// The combination of using an existing log topic while creating a new logset is not allowed.
+        /// Logset operation. Options: create, reuse.
+        /// create: add a new log set using GroupName.
+        /// reuse: utilize an existing logset and specify the logset by GroupId.
+        /// It is not allowed to use a combination of an existing log topic and a new log set.
         /// </summary>
         [JsonProperty("GroupOperation")]
         public string GroupOperation{ get; set; }
 
         /// <summary>
-        /// Log delivery region.
+        /// Log delivery region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Log topic ID.
+        /// Log topic id
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log topic name.
+        /// Log topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Logset ID.
+        /// Logset id
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Logset name.
+        /// Log set name.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }

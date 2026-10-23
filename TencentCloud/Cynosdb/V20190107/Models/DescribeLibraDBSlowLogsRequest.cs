@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// Log items per page limit: 0-200.
+        /// Limit on number of log entries per page: 0-200.
         /// </summary>
         [JsonProperty("Limit")]
         public string Limit{ get; set; }
 
         /// <summary>
-        /// Log paginate, more than 0.
+        /// Log pagination. The value must be greater than 0.
         /// </summary>
         [JsonProperty("Offset")]
         public string Offset{ get; set; }
 
         /// <summary>
-        /// Log sorting method, DESC - descending order, ASC - ascending order.
+        /// Log sorting method. `DESC`: descending order. `ASC`: ascending order.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

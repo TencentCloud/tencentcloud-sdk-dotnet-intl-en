@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// This parameter has been disused.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Instance return reason type.
+        /// Reason type for instance return
         /// </summary>
         [JsonProperty("IsolateReasonTypes")]
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// Instance return reason supplement.
+        /// Supplementary reason for instance return
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
-        /// Retain backup, true - Retained (incur fees).
+        /// Retain backup. true: retain (fees will be incurred)
         /// </summary>
         [JsonProperty("SaveBackup")]
         public bool? SaveBackup{ get; set; }

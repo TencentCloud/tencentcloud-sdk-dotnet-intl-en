@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Execution start time (seconds from 0 o'clock).
+        /// Execution start time (seconds from 00:00:00)
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the continuous time. the unit is second.
+        /// Continuous time (unit: second)
         /// </summary>
         [JsonProperty("MaintainDuration")]
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+        /// The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }

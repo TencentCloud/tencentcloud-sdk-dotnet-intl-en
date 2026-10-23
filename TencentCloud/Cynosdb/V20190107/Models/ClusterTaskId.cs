@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Task ID
+        /// Task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

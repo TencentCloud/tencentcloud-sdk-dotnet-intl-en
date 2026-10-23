@@ -25,43 +25,43 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AppId account ID.
+        /// AppId account ID
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// The unique ID of the resource package.
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Successfully deduct capacity.
+        /// Capacity deducted successfully
         /// </summary>
         [JsonProperty("SuccessDeductSpec")]
         public float? SuccessDeductSpec{ get; set; }
 
         /// <summary>
-        /// The used capacity of the resource package up to the present.
+        /// Used capacity of the resource package as of now.
         /// </summary>
         [JsonProperty("PackageTotalUsedSpec")]
         public float? PackageTotalUsedSpec{ get; set; }
 
         /// <summary>
-        /// Deduction start time.
+        /// Deduction start time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Deduction end time.
+        /// Offset end time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

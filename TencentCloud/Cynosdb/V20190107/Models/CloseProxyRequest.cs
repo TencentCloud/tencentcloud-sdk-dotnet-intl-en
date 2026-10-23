@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Database proxy group ID
+        /// Database Proxy Group ID
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Whether only to disable read/write separation. Valid values: `true`, `false`.
+        /// Whether to only disable read-write separation. Value: true or false
         /// </summary>
         [JsonProperty("OnlyCloseRW")]
         public bool? OnlyCloseRW{ get; set; }

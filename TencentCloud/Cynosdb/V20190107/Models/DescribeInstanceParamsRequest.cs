@@ -31,16 +31,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance ID, which supports batch query.
+        /// Instance ID. Support batch querying.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Search condition for a parameter name, which supports fuzzy search.
+        /// Parameter name search criteria. Fuzzy matching is supported.
         /// </summary>
         [JsonProperty("ParamKeyword")]
         public string ParamKeyword{ get; set; }
+
+        /// <summary>
+        /// Whether it is a global parameter
+        /// </summary>
+        [JsonProperty("IsGlobal")]
+        public string IsGlobal{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "ParamKeyword", this.ParamKeyword);
+            this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the serverless cluster id.
+        /// serverless cluster id
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

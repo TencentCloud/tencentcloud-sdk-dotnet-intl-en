@@ -32,20 +32,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// Operation type.
-        /// Add new RO instance
-        /// modifyInstance: Modify configuration
+        /// addROInstance: Add an RO instance
+        /// modifyInstance: adjust the configuration
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// Instance ID, required when querying configuration modification specifications
+        /// Instance ID. Required when querying configuration modification specifications.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance Machine Type
+        /// Instance machine type.
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }

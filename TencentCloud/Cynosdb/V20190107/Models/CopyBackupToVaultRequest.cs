@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Target safe ID. The backup file will be copied to this safe.</p>
+        /// <p>Target safe ID. The backup file will be copied to this safe</p>
         /// </summary>
         [JsonProperty("VaultId")]
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// <p>List of backup file IDs. Supports batch operations to copy multiple backup files.</p>
+        /// <p>Backup file ID list. Supports batch replication of multiple backup files</p>
         /// </summary>
         [JsonProperty("BackupIds")]
         public long?[] BackupIds{ get; set; }

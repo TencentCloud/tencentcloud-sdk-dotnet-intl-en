@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Whether it is supported. Valid values: `yes`, `no`.
+        /// Whether it is supported. Available values: yes, no
         /// </summary>
         [JsonProperty("IsDisable")]
         public string IsDisable{ get; set; }
 
         /// <summary>
-        /// Module name
+        /// Module Name
         /// </summary>
         [JsonProperty("ModuleName")]
         public string ModuleName{ get; set; }

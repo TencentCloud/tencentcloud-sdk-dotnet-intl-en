@@ -25,20 +25,20 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+        /// <p>Number of database proxy group nodes. This parameter is no longer recommended. Use ProxyZones instead.</p>
         /// </summary>
         [JsonProperty("ProxyCount")]
         [System.Obsolete]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// <p>cpu cores</p>
+        /// <p>cpu cores.</p>
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// <p>Memory</p>
+        /// <p>memory</p>
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
@@ -50,25 +50,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConnectionPoolType{ get; set; }
 
         /// <summary>
-        /// <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+        /// <p>Whether the connection pool is enabled. yes: enabled; no: not enabled</p>
         /// </summary>
         [JsonProperty("OpenConnectionPool")]
         public string OpenConnectionPool{ get; set; }
 
         /// <summary>
-        /// <p>Connection pool threshold: Measurement unit (seconds)</p>
+        /// <p>Connection pool threshold: measurement unit (seconds)</p>
         /// </summary>
         [JsonProperty("ConnectionPoolTimeOut")]
         public long? ConnectionPoolTimeOut{ get; set; }
 
         /// <summary>
-        /// <p>description</p>
+        /// <p>Description</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
+        /// <p>Database node information (this parameter is used in combination with ProxyCount; either one is required as input)</p>
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }

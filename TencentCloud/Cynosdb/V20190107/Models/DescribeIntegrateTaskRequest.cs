@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Large order id. must choose between large order id and sub-order id.
+        /// Large order id. Either the large order id or the sub-order id must be selected.
         /// </summary>
         [JsonProperty("BigDealId")]
         public string BigDealId{ get; set; }

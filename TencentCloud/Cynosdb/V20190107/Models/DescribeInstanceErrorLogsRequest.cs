@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Limit on the number of logs.
+        /// Log entry limit
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset of the log number.
+        /// Log entry offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -55,25 +55,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid value: 'Timestamp'.
+        /// Sorting field. Valid values: `Timestamp` (enumeration value).
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `ASC`, `DESC`.
+        /// Sorting type. Valid values: `ASC`, `DESC`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Log level, which supports combo search by multiple levels. Valid values: `error`, `warning`, `note`.
+        /// Log level. Valid values: error, warning, note. You can search multiple levels at the same time.
         /// </summary>
         [JsonProperty("LogLevels")]
         public string[] LogLevels{ get; set; }
 
         /// <summary>
-        /// Keywords, supports fuzzy search.
+        /// Keyword. Fuzzy search is supported.
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }

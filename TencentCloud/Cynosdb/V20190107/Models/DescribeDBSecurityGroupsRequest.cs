@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies that the instance ID must be provided by selecting either InstanceId or InstanceGroupId.
+        /// Instance ID (you must import either InstanceId or InstanceGroupId)
         /// </summary>
         [JsonProperty("InstanceId")]
         [System.Obsolete]

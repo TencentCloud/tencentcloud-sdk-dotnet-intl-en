@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// instance information
+        /// Instance information
         /// </summary>
         [JsonProperty("InstanceSet")]
         public LibraInstanceSet[] InstanceSet{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Region{ get; set; }
 
         /// <summary>
-        /// Auto-renewal flag. 1: Automatic renewal. 0: Non-renewal upon expiration.
+        /// Auto-renewal flag. `1`: renew automatically. `0`: do not renew upon expiration.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// Used Capacity
+        /// Used capacity
         /// </summary>
         [JsonProperty("UsedStorage")]
         public long? UsedStorage{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// vport port
+        /// vport
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }

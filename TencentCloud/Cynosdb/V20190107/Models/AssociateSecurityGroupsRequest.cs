@@ -25,14 +25,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Array of instance group IDs, starting with the prefix cynosdbmysql-grp- or a cluster ID.
-        /// Description: To get the instance group ID of a cluster, perform [query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+        /// Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or the TKE cluster ID.
+        /// Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Security group ID list to be modified. An array of one or more security group IDs.
+        /// Security group ID list to modify, which is an array of one or more security group IDs.
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

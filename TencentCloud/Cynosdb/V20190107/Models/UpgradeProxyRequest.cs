@@ -37,49 +37,49 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory
+        /// memory
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Number of nodes in the proxy group
+        /// Number of database proxy group nodes
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// ID of the database proxy group (disused)
+        /// Database Proxy Group ID (abandoned)
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Load rebalance mode. Valid values: `auto`, `manual`
+        /// Load rebalance: auto (automatic), manual
         /// </summary>
         [JsonProperty("ReloadBalance")]
         public string ReloadBalance{ get; set; }
 
         /// <summary>
-        /// Upgrade time. Valid values: `no` (upon upgrade completion), `timeWindow` (upgrade during instance maintenance time)
+        /// Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }
 
         /// <summary>
-        /// Node information of the atabase proxy
+        /// Database proxy node information
         /// </summary>
         [JsonProperty("ProxyZones")]
         public ProxyZone[] ProxyZones{ get; set; }
 
         /// <summary>
-        /// whether rolling upgrade
+        /// Whether to perform a rolling upgrade
         /// </summary>
         [JsonProperty("IsRollUpgrade")]
         public string IsRollUpgrade{ get; set; }
 
         /// <summary>
-        /// Rolling upgrade waiting time, unit: second
+        /// In-place rolling upgrade waiting time. Unit: seconds
         /// </summary>
         [JsonProperty("RollUpgradeWaitingTime")]
         public long? RollUpgradeWaitingTime{ get; set; }

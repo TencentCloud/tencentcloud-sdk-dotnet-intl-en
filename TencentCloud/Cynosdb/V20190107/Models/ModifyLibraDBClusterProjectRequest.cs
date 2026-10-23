@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Analysis Cluster ID List
+        /// Analytical cluster ID list
         /// </summary>
         [JsonProperty("ClusterIdSet")]
         public string[] ClusterIdSet{ get; set; }

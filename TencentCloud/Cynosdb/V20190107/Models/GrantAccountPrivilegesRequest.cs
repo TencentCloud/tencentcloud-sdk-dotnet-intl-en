@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public InputAccount Account{ get; set; }
 
         /// <summary>
-        /// Array of table permission codes
+        /// Array of database table permission codes
         /// </summary>
         [JsonProperty("DbTablePrivileges")]
         public string[] DbTablePrivileges{ get; set; }

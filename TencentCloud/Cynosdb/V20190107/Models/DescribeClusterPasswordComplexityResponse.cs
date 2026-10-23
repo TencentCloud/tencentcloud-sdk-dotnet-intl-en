@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ParamInfo ValidatePasswordDictionary{ get; set; }
 
         /// <summary>
-        /// Specifies the password length.
+        /// Password length
         /// </summary>
         [JsonProperty("ValidatePasswordLength")]
         public ParamInfo ValidatePasswordLength{ get; set; }
 
         /// <summary>
-        /// Case-Sensitive character count.
+        /// Number of case-sensitive characters
         /// </summary>
         [JsonProperty("ValidatePasswordMixedCaseCount")]
         public ParamInfo ValidatePasswordMixedCaseCount{ get; set; }
 
         /// <summary>
-        /// Number of digits.
+        /// Number of digits
         /// </summary>
         [JsonProperty("ValidatePasswordNumberCount")]
         public ParamInfo ValidatePasswordNumberCount{ get; set; }
 
         /// <summary>
-        /// Password level.
+        /// Password level
         /// </summary>
         [JsonProperty("ValidatePasswordPolicy")]
         public ParamInfo ValidatePasswordPolicy{ get; set; }
 
         /// <summary>
-        /// Number of special characters.
+        /// Number of special characters
         /// </summary>
         [JsonProperty("ValidatePasswordSpecialCharCount")]
         public ParamInfo ValidatePasswordSpecialCharCount{ get; set; }

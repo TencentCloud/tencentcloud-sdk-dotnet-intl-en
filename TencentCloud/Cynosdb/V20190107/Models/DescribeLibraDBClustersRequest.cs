@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Bias
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

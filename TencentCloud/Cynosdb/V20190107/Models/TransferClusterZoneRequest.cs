@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Source Cluster Id
+        /// Source cluster Id
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Target availability zone
+        /// Target zone
         /// </summary>
         [JsonProperty("DstZone")]
         public string DstZone{ get; set; }
 
         /// <summary>
-        /// Cross-AZ migration master-slave data delay verification threshold, milliseconds (ms)
+        /// Threshold for primary-secondary data latency verification during cross-AZ migration, in milliseconds (ms).
         /// </summary>
         [JsonProperty("MaxLag")]
         public long? MaxLag{ get; set; }
 
         /// <summary>
-        /// Immediate: Immediate execution, InMaintain: Time window execution
+        /// Immediate: immediate execution. InMaintain: execute within the time window.
         /// </summary>
         [JsonProperty("TransferType")]
         public string TransferType{ get; set; }
 
         /// <summary>
-        /// Multi-availability zone backup zone
+        /// Secondary AZ in a multi-availability zone
         /// </summary>
         [JsonProperty("DstSlaveZone")]
         public string DstSlaveZone{ get; set; }

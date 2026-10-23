@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>New account list</p>
+        /// <p>New account list.</p>
         /// </summary>
         [JsonProperty("Accounts")]
         public NewAccount[] Accounts{ get; set; }

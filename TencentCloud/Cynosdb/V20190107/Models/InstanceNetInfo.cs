@@ -37,25 +37,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// Specifies the virtual private cloud ID.
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Specifies the subnet ID.
+        /// Subnet ID.
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Network type. valid values: 0 (basic network), 1 (vpc network), 2 (blackstone network).
+        /// Network type. 0: basic network; 1: vpc network; 2: Blackstone Network
         /// </summary>
         [JsonProperty("NetType")]
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// VPC IP.
+        /// VPC IP
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// Specifies the public network domain name.
+        /// Public network domain name.
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// Public network port.
+        /// External port
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
 
         /// <summary>
-        /// Public network enabled status.
+        /// Public network status
         /// </summary>
         [JsonProperty("WanStatus")]
         public string WanStatus{ get; set; }

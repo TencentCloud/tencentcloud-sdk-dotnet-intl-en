@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// Status of tasks.
+        /// Task status.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }
 
         /// <summary>
-        /// Task ID (cluster ID | instance group ID | instance ID).
+        /// Task ID (Cluster ID | instance group ID | instance ID)
         /// </summary>
         [JsonProperty("ObjectId")]
         public string ObjectId{ get; set; }

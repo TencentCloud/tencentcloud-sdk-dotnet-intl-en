@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Field value list, in one-to-one correspondence with Names. InstanceId/ClusterId uses exact matching, and InstanceName uses fuzzy matching by default.
+        /// Field value list, one-to-one with Names. InstanceId/ClusterId use exact match, and InstanceName uses fuzzy match by default.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Search field name list, support the following 3 fields (case-insensitive, multiple values are OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check cluster by instance ID), InstanceName (reverse-check cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). Take the intersection when InstanceId and InstanceName are input at the same time (AND semantics).
+        /// List of search field names. Only the following 3 fields are supported (case-insensitive, multiple values use OR relationship): ClusterId (filter by cluster ID, exact match), InstanceId (reverse-check the cluster by instance ID), InstanceName (reverse-check the cluster by instance name, default LIKE fuzzy matching, exact match when ExactMatch=true). When InstanceId and InstanceName are both imported, take the intersection (AND semantics).
         /// </summary>
         [JsonProperty("Names")]
         public string[] Names{ get; set; }
 
         /// <summary>
-        /// Exact match. Only applicable to InstanceName: true for exact matching, false (default) for LIKE fuzzy matching.
+        /// Exact match. Only applicable to InstanceName: true for exact match, false (default) for LIKE fuzzy matching.
         /// </summary>
         [JsonProperty("ExactMatch")]
         public bool? ExactMatch{ get; set; }
 
         /// <summary>
-        /// Search field name (single field mode, choose between this and Names). ClusterId, InstanceId, and InstanceName are supported.
+        /// Search field name (single field mode; either this parameter or Names). Supported: ClusterId, InstanceId, InstanceName.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

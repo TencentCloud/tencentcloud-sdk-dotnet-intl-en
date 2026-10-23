@@ -25,31 +25,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database name
+        /// Database name.
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// Character set
+        /// Character set type
         /// </summary>
         [JsonProperty("CharacterSet")]
         public string CharacterSet{ get; set; }
 
         /// <summary>
-        /// Database status
+        /// Database status.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Collation
+        /// Sorting rule
         /// </summary>
         [JsonProperty("CollateRule")]
         public string CollateRule{ get; set; }
 
         /// <summary>
-        /// Specifies the remark of the database.
+        /// Database remarks.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public UserHostPrivilege[] UserHostPrivileges{ get; set; }
 
         /// <summary>
-        /// Database ID
+        /// Database ID.
         /// </summary>
         [JsonProperty("DbId")]
         public long? DbId{ get; set; }
 
         /// <summary>
-        /// Creation time
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

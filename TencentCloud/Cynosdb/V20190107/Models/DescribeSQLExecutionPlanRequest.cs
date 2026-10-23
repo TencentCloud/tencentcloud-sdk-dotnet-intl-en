@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TemplateID{ get; set; }
 
         /// <summary>
-        /// <p>Plan details serial number</p>
+        /// <p>Plan detail serial number.</p>
         /// </summary>
         [JsonProperty("PlanDetailId")]
         public long? PlanDetailId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Binlog retention period in days
+        /// Binlog retention days
         /// </summary>
         [JsonProperty("BinlogSaveDays")]
         public long? BinlogSaveDays{ get; set; }

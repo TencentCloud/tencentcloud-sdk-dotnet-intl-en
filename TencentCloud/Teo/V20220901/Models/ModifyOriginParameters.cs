@@ -76,8 +76,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string PrivateAccess{ get; set; }
 
         /// <summary>
-        /// Private authentication parameter. this parameter is valid only when origintype = awss3 and privateaccess = on.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Private authentication parameter. This parameter is valid only when OriginType = AWSS3 and PrivateAccess = on.
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public OriginPrivateParameters PrivateParameters{ get; set; }

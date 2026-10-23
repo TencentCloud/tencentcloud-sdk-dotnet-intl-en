@@ -31,79 +31,79 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Audit status. ON - Indicates audit is enabled, OFF - Indicates audit is disabled.
+        /// Audit status. ON - Audit is enabled, OFF - Audit is disabled.
         /// </summary>
         [JsonProperty("AuditStatus")]
         public string AuditStatus{ get; set; }
 
         /// <summary>
-        /// Specifies the log retention period.
+        /// Log retention period.
         /// </summary>
         [JsonProperty("LogExpireDay")]
         public ulong? LogExpireDay{ get; set; }
 
         /// <summary>
-        /// High-Frequency storage duration.
+        /// High-frequency storage duration.
         /// </summary>
         [JsonProperty("HighLogExpireDay")]
         public ulong? HighLogExpireDay{ get; set; }
 
         /// <summary>
-        /// Specifies the duration of low-frequency storage.
+        /// Low-frequency storage duration.
         /// </summary>
         [JsonProperty("LowLogExpireDay")]
         public ulong? LowLogExpireDay{ get; set; }
 
         /// <summary>
-        /// Specifies the log storage volume.
+        /// Log storage volume.
         /// </summary>
         [JsonProperty("BillingAmount")]
         public float? BillingAmount{ get; set; }
 
         /// <summary>
-        /// Specifies the high-frequency storage volume.
+        /// High-frequency storage volume.
         /// </summary>
         [JsonProperty("HighRealStorage")]
         public float? HighRealStorage{ get; set; }
 
         /// <summary>
-        /// Specifies the infrequent access storage size.
+        /// Infrequent access storage size.
         /// </summary>
         [JsonProperty("LowRealStorage")]
         public float? LowRealStorage{ get; set; }
 
         /// <summary>
-        /// Specifies whether it is a full audit. true - indicates a full audit.
+        /// Whether full audit is enabled. true - Full audit.
         /// </summary>
         [JsonProperty("AuditAll")]
         public bool? AuditAll{ get; set; }
 
         /// <summary>
-        /// Specifies the audit activation time.
+        /// Time when the audit service was activated.
         /// </summary>
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
         /// <summary>
-        /// Instance-Related information.
+        /// Instance-related information.
         /// </summary>
         [JsonProperty("InstanceInfo")]
         public AuditInstanceInfo InstanceInfo{ get; set; }
 
         /// <summary>
-        /// Specifies the total storage capacity.
+        /// Total storage.
         /// </summary>
         [JsonProperty("RealStorage")]
         public float? RealStorage{ get; set; }
 
         /// <summary>
-        /// The rule template applied to the instance.
+        /// Rule template applied to the instance.
         /// </summary>
         [JsonProperty("RuleTemplateIds")]
         public string[] RuleTemplateIds{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable log delivery: ON, OFF.
+        /// Whether to enable log delivery: ON, OFF
         /// </summary>
         [JsonProperty("Deliver")]
         public string Deliver{ get; set; }

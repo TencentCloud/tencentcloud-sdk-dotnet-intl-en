@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// Database account description
+        /// Database account description information
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Host. Default value: `%`
+        /// Host. Default value: %.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

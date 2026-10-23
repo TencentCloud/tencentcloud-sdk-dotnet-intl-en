@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+        /// Parameter type: integer, enum, float, string, func
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
         /// <summary>
-        /// Whether `func` is supported. Valid values: `true` (supported), `false` (not supported).
+        /// true: supports "func"; false: no formula support
         /// </summary>
         [JsonProperty("SupportFunc")]
         public bool? SupportFunc{ get; set; }
@@ -55,73 +55,73 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Current value of the parameter
+        /// Current parameter value
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes).
+        /// Whether database restart is required after modifying parameters to take effect. 0: no restart required; 1: restart required.
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// Maximum value of the parameter
+        /// Maximum value allowed for the parameter
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Minimum value of the parameter
+        /// Minimum allowed parameter value
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// Optional enumerated values of the parameter. if it is a non-enumerated value, it is empty.
+        /// Optional enumerated values of the parameter. If it is a non-enumerated value, this parameter is empty
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Valid values: `1` (global parameter),  `0`  (non-global parameter).
+        /// 1: global parameter, 0: non-global parameter
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
-        /// The match type. Valid value: `multiVal`.
+        /// Match type. multiVal
         /// </summary>
         [JsonProperty("MatchType")]
         public string MatchType{ get; set; }
 
         /// <summary>
-        /// Match values, which will be separated by comma when `MatchType` is `multiVal`.
+        /// Match target value. If multiVal is set, separate each key with a comma.
         /// </summary>
         [JsonProperty("MatchValue")]
         public string MatchValue{ get; set; }
 
         /// <summary>
-        /// true - indicates a formula. false - indicates it is not a formula.
+        /// true: formula; false: non-formula
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Specifies that when the parameter is set as a formula, Func returns the set formula content.
+        /// When the parameter is set to a formula, Func returns the set formula content.
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
-        /// Whether the parameter is modifiable.
+        /// Whether the parameter is modifiable
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
 
         /// <summary>
-        /// The default formula style of parameters that support formulas.
+        /// Default formula style for parameters that support formulas
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }

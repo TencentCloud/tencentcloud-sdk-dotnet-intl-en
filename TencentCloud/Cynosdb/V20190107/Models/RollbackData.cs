@@ -25,61 +25,61 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance CPU.
+        /// Instance CPU
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Instance memory.
+        /// Instance memory
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Cluster storage upper limit.
+        /// Cluster storage limit
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Original cluster ID.
+        /// Source cluster id
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// Original cluster name.
+        /// Source cluster name
         /// </summary>
         [JsonProperty("OriginalClusterName")]
         public string OriginalClusterName{ get; set; }
 
         /// <summary>
-        /// Rollback method.
+        /// Rollback mode
         /// </summary>
         [JsonProperty("RollbackStrategy")]
         public string RollbackStrategy{ get; set; }
 
         /// <summary>
-        /// Snapshot time.
+        /// Snapshot time
         /// </summary>
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
         /// <summary>
-        /// Roll back to the Serverless cluster with minimum CPU.
+        /// Minimum CPU for rollback to a Serverless cluster
         /// </summary>
         [JsonProperty("MinCpu")]
         public long? MinCpu{ get; set; }
 
         /// <summary>
-        /// Roll back to the Serverless cluster with maximum CPU.
+        /// Maximum CPU when rolling back to a Serverless cluster
         /// </summary>
         [JsonProperty("MaxCpu")]
         public long? MaxCpu{ get; set; }
 
         /// <summary>
-        /// Snapshot ID.
+        /// Snapshot ID
         /// </summary>
         [JsonProperty("SnapShotId")]
         public ulong? SnapShotId{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public RollbackTable[] RollbackTables{ get; set; }
 
         /// <summary>
-        /// Specifies the backup file name.
+        /// Backup file name
         /// </summary>
         [JsonProperty("BackupFileName")]
         public string BackupFileName{ get; set; }
 
         /// <summary>
-        /// Rollback process.
+        /// Rollback process
         /// </summary>
         [JsonProperty("RollbackProcess")]
         public RollbackProcessInfo RollbackProcess{ get; set; }

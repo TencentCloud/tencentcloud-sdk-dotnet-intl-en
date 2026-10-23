@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Renewal period.
+        /// Renewal duration
         /// </summary>
         [JsonProperty("TimeSpan")]
         public float? TimeSpan{ get; set; }
 
         /// <summary>
-        /// Time unit, such as y, m, d, h, i, and s.
+        /// Time unit. y: year. m: month. d: day. h: hour. i: minute. s: second.
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// "Transaction mode. 	0 - place an order and pay; 1 - place an order."
+        /// Transaction mode 0-Place order and pay 1-Place order
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Cluster parameter modification data.
+        /// Cluster parameter modification data
         /// </summary>
         [JsonProperty("ClusterParamList")]
         public ModifyParamItem[] ClusterParamList{ get; set; }
 
         /// <summary>
-        /// Instance parameter modification data.
+        /// Instance parameter modification data
         /// </summary>
         [JsonProperty("ModifyInstanceParams")]
         public BizTaskModifyInstanceParam[] ModifyInstanceParams{ get; set; }

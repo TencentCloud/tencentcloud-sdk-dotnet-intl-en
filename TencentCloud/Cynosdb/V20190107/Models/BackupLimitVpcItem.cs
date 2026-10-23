@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the region for limiting download sources. currently only supports the current region.
+        /// Limit the region of the download source. Currently only support the current region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Limit the vpc list for downloads.
+        /// vpc list with download restrictions
         /// </summary>
         [JsonProperty("VpcList")]
         public string[] VpcList{ get; set; }

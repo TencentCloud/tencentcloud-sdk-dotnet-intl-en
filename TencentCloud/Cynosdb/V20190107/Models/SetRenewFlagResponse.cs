@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of successfully manipulated instances
+        /// Number of successfully operated instances
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

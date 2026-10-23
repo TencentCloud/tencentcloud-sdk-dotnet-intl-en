@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP origin-pull header rules list.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// HTTP origin header rule list.
         /// </summary>
         [JsonProperty("HeaderActions")]
         public HeaderAction[] HeaderActions{ get; set; }

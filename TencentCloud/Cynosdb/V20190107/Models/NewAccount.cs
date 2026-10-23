@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+        /// <p>Account name, contains letters, digits, and underscores, starts with a letter, ending with a letter or digit, length 1-30</p>
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// <p>host (% or ipv4 address)</p>
+        /// <p>Host (% or ipv4 address)</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// <p>Password. The length range is 8 to 64 characters.</p>
+        /// <p>Password. The password length range is 8 to 64 characters.</p>
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Maximum user connections cannot be greater than 10240</p>
+        /// <p>Maximum user connections, cannot be greater than 10240</p>
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }

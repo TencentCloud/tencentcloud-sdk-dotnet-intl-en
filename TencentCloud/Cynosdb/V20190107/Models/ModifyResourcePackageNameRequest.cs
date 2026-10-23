@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Custom resource pack name, which can contains up to 120 characters.
+        /// Custom resource package name, supporting up to 120 characters.
         /// </summary>
         [JsonProperty("PackageName")]
         public string PackageName{ get; set; }

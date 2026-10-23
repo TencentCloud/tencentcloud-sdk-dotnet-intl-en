@@ -103,13 +103,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MaintainDuration{ get; set; }
 
         /// <summary>
-        /// Execution start time (seconds from 00:00)
+        /// Execution start time (seconds from 00:00:00)
         /// </summary>
         [JsonProperty("MaintainStartTime")]
         public long? MaintainStartTime{ get; set; }
 
         /// <summary>
-        /// The time when it can be executed. Enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"].
+        /// The time when it can be executed. Enumeration values: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]
         /// </summary>
         [JsonProperty("MaintainWeekDays")]
         public string[] MaintainWeekDays{ get; set; }

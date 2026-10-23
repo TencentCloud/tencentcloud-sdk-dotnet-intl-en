@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The resource pack whose deduction priority needs to be customized.
+        /// Resource pack with a custom deduction priority
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// Custom deduction priority.
+        /// Custom deduction priority
         /// </summary>
         [JsonProperty("DeductionPriority")]
         public long? DeductionPriority{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BinlogId{ get; set; }
 
         /// <summary>
-        /// Backup download source restriction condition.
+        /// Backup download source limit
         /// </summary>
         [JsonProperty("DownloadRestriction")]
         public BackupLimitRestriction DownloadRestriction{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+        /// Instance ID list. A single instance ID is in the format of cynosdbmysql-ins-n7ocdslw, identical to the instance ID displayed on the TDSQL-C MySQL database console. You can obtain it through the query instance list API. Its value is the InstanceId field in the output parameter.
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Timestamp{ get; set; }
 
         /// <summary>
-        /// Specifies the log level. valid values are note, warning, and error.
+        /// Log level. Available values: note, warning, error
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Log content.
+        /// Log content
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

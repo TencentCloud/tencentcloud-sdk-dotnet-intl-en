@@ -25,15 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Query string configuration. optional. if not provided, it will not be configured.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Query string configuration. Optional configuration, leave blank for no configuration.
         /// </summary>
         [JsonProperty("QueryString")]
         public UpstreamRequestQueryString QueryString{ get; set; }
 
         /// <summary>
-        /// Cookie configuration. optional. if not provided, it will not be configured.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Cookie configuration. Optional configuration. Leave it blank for no configuration.
         /// </summary>
         [JsonProperty("Cookie")]
         public UpstreamRequestCookie Cookie{ get; set; }

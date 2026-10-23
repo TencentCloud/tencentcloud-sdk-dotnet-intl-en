@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// New value
+        /// Current value
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }

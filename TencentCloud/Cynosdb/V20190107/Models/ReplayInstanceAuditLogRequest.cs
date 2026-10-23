@@ -25,32 +25,32 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Source cluster id.
+        /// Source cluster id
         /// </summary>
         [JsonProperty("SourceClusterId")]
         public string SourceClusterId{ get; set; }
 
         /// <summary>
-        /// Source instance id.
+        /// Source instance ID.
         /// </summary>
         [JsonProperty("SourceInstanceId")]
         public string SourceInstanceId{ get; set; }
 
         /// <summary>
-        /// Target cluster id.
-        /// Specifies the target cluster must be a cluster cloned from the original cluster within three days.
+        /// Target cluster ID.
+        /// The target cluster must be a cluster cloned from the original cluster within three days.
         /// </summary>
         [JsonProperty("TargetClusterId")]
         public string TargetClusterId{ get; set; }
 
         /// <summary>
-        /// Target instance id.
+        /// Target instance ID.
         /// </summary>
         [JsonProperty("TargetInstanceId")]
         public string TargetInstanceId{ get; set; }
 
         /// <summary>
-        /// Username. host must be % username.
+        /// userName. A userName with the host as % is required.
         /// </summary>
         [JsonProperty("TargetUserName")]
         public string TargetUserName{ get; set; }
@@ -62,13 +62,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TargetPassword{ get; set; }
 
         /// <summary>
-        /// Start time. time format: yyyy-DD-mm hh:mm:ss.
+        /// Start time. Time format: yyyy-DD-mm hh:mm:ss
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Specifies the end time in the time format yyyy-DD-mm hh:mm:ss.
+        /// End time. Time format: yyyy-DD-mm hh:mm:ss
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

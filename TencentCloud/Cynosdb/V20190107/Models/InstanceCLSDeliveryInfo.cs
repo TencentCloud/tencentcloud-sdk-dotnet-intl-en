@@ -31,25 +31,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance name.
+        /// Instance name
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Log topic id.
+        /// Log topic id
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// Log topic name.
+        /// Log topic name
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// Log set id.
+        /// Logset id
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// Log delivery region.
+        /// Log delivery region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Delivery status: creating, running, offlining, offlined.
+        /// Delivery status. Valid values: `creating`, `running`, `offlining`, `offlined`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Log type.
+        /// Log type
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

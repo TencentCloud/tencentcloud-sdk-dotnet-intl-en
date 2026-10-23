@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Async process id</p>
+        /// <p>Asynchronous flow ID.</p>
         /// </summary>
         [JsonProperty("FlowId")]
         [System.Obsolete]

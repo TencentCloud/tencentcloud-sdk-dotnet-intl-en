@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Backup region.
+        /// Backup region
         /// </summary>
         [JsonProperty("BackupRegion")]
         public string BackupRegion{ get; set; }
 
         /// <summary>
-        /// Backup ID.
+        /// Backup ID
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of database proxy CPU cores
+        /// Number of cpu cores for the database proxy
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// List of cluster read-only switches.
+        /// List of cluster read-only switches
         /// </summary>
         [JsonProperty("ClusterReadOnlyValues")]
         public ClusterReadOnlyValue[] ClusterReadOnlyValues{ get; set; }

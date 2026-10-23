@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// List of accounts to be filtered
+        /// Account list to filter
         /// </summary>
         [JsonProperty("AccountNames")]
         public string[] AccountNames{ get; set; }
@@ -39,31 +39,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         /// <summary>
         /// Database type. Valid values: 
         /// <li> MYSQL </li>
-        /// This parameter has been disused.
+        /// This parameter is no longer in use.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// List of accounts to be filtered
+        /// Account list to filter
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// Maximum entries returned per page
+        /// Limit amount
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Keywords for fuzzy search (match `AccountName` and `AccountHost` at the same time), which supports regex. The union results will be returned.
+        /// Fuzzy match a keyword (match both AccountName and AccountHost at the same time, return the union of results, and support regular expressions)
         /// </summary>
         [JsonProperty("AccountRegular")]
         public string AccountRegular{ get; set; }

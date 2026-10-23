@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Async flow ID
+        /// Asynchronous process ID
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }
 
         /// <summary>
-        /// Async task ID
+        /// Asynchronous task ID.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

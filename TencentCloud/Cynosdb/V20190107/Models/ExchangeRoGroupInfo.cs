@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Source RO group information.
+        /// Source RO group information
         /// </summary>
         [JsonProperty("SrcRoGroupInfo")]
         public RollbackRoGroupInfo SrcRoGroupInfo{ get; set; }
 
         /// <summary>
-        /// Target RO group information.
+        /// Target RO group information
         /// </summary>
         [JsonProperty("DstRoGroupInfo")]
         public RollbackRoGroupInfo DstRoGroupInfo{ get; set; }

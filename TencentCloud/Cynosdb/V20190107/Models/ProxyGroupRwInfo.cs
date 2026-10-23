@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>Consistency Type eventual-final consistency,global-global consistency,session-session consistency</p>
+        /// <p>Consistency type: eventual - final consistency, global - global consistency, session - session consistency</p>
         /// </summary>
         [JsonProperty("ConsistencyType")]
         public string ConsistencyType{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ConsistencyTimeOut{ get; set; }
 
         /// <summary>
-        /// <p>Weight mode system-system-assigned, custom-custom</p>
+        /// <p>Weight mode: system - system-assigned, custom - custom</p>
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string FailOver{ get; set; }
 
         /// <summary>
-        /// <p>Automatically add read-only instance, yes-yes, no-no</p>
+        /// <p>Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically</p>
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ProxyInstanceWeight[] InstanceWeights{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable the read-write node, yes - enable, no - disable</p>
+        /// <p>Whether to enable read-write node. yes: enable, no: disable</p>
         /// </summary>
         [JsonProperty("OpenRw")]
         public string OpenRw{ get; set; }
 
         /// <summary>
-        /// <p>Read-write attribute, value range: READWRITE, READONLY</p>
+        /// <p>Read-write attribute. Available values: READWRITE, READONLY</p>
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? TransSplit{ get; set; }
 
         /// <summary>
-        /// <p>Connection mode, available values: balance, nearby</p>
+        /// <p>Connection mode. Available values: balance, nearby</p>
         /// </summary>
         [JsonProperty("AccessMode")]
         public string AccessMode{ get; set; }
@@ -97,10 +97,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? ApQueryToOtherNode{ get; set; }
 
         /// <summary>
-        /// <p>Auto load</p><p>Enumeration value:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
+        /// <p>Auto load</p><p>Enumeration values:</p><ul><li>static: Static load</li><li>dynamic: Dynamic load</li></ul>
         /// </summary>
         [JsonProperty("LoadBalanceMode")]
         public string LoadBalanceMode{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to enable full transaction split. In a transaction, split the reads before and after the transaction write to different instances for execution.</p>
+        /// </summary>
+        [JsonProperty("TransAllSplit")]
+        public bool? TransAllSplit{ get; set; }
 
 
         /// <summary>
@@ -121,6 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
             this.SetParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
             this.SetParamSimple(map, prefix + "LoadBalanceMode", this.LoadBalanceMode);
+            this.SetParamSimple(map, prefix + "TransAllSplit", this.TransAllSplit);
         }
     }
 }

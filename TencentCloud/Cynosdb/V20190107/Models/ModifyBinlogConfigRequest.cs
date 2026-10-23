@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Specifies the Binlog configuration message.
+        /// Binlog configuration message
         /// </summary>
         [JsonProperty("BinlogConfig")]
         public BinlogConfigInfo BinlogConfig{ get; set; }

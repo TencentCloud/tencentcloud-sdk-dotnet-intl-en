@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>cpu minimum value</p>
+        /// <p>Minimum cpu value</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// <p>Maximum storage space</p>
+        /// <p>maximum storage space</p>
         /// </summary>
         [JsonProperty("MaxStorageSize")]
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// <p>Is the default specification</p>
+        /// <p>Whether it is the default specification.</p>
         /// </summary>
         [JsonProperty("IsDefault")]
         public long? IsDefault{ get; set; }

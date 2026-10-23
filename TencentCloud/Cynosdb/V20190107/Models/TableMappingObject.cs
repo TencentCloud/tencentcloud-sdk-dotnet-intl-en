@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TableName{ get; set; }
 
         /// <summary>
-        /// Map database name
+        /// Map database names
         /// </summary>
         [JsonProperty("MapDatabaseName")]
         public string MapDatabaseName{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public bool? IsPrimary{ get; set; }
 
         /// <summary>
-        /// Virtual column padding value
+        /// Fill value of the virtual column
         /// </summary>
         [JsonProperty("VirtualColValue")]
         public string VirtualColValue{ get; set; }

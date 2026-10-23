@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VaultName{ get; set; }
 
         /// <summary>
-        /// Safe description
+        /// Safe description.
         /// </summary>
         [JsonProperty("VaultDescribe")]
         public string VaultDescribe{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Key region
+        /// Region of the key
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BinlogFileCount{ get; set; }
 
         /// <summary>
-        /// Total size of the Binlog file (byte)
+        /// Total size of Binlog files (byte)
         /// </summary>
         [JsonProperty("BinlogFileSize")]
         public long? BinlogFileSize{ get; set; }
@@ -103,31 +103,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// Backup retention period (seconds)
+        /// Backup retention period in seconds.
         /// </summary>
         [JsonProperty("BackupSaveSeconds")]
         public long? BackupSaveSeconds{ get; set; }
 
         /// <summary>
-        /// lock time
+        /// Locking time
         /// </summary>
         [JsonProperty("LockedTime")]
         public string LockedTime{ get; set; }
 
         /// <summary>
-        /// Associated task list
+        /// Associated task list.
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }
 
         /// <summary>
-        /// Safe region
+        /// Region of the safe
         /// </summary>
         [JsonProperty("VaultRegion")]
         public string VaultRegion{ get; set; }
 
         /// <summary>
-        /// Automatically deliver relationship
+        /// Automatically deliver relationships
         /// </summary>
         [JsonProperty("AutoCopyConfigs")]
         public AutoCopyConfig[] AutoCopyConfigs{ get; set; }

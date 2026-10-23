@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Indicates the full backup start time, [0-24*3600], for example, 0:00, 1:00, 2:00 are 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeBeg")]
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+        /// <p>Refers to the full backup end time, [0-24*3600], for example, 0:00, 1:00, 2:00 correspond to 0, 3600, 7200 respectively</p>
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
+        /// <p>Indicates the backup retention period, in seconds. Data older than this period will be cleaned up. Seven days is represented as 3600<em>24</em>7=604800, with a maximum of 158112000.</p>
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
+        /// <p>Currently this parameter cannot be modified and is not required. Backup frequency, an array of length 7, corresponding to Monday to Sunday backup methods, full-full backup, increment-incremental backup</p>
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// <p>This parameter currently does not support modification. No need to specify.</p>
+        /// <p>Currently this parameter does not support modification and is not required.</p>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public LogicBackupConfigInfo LogicBackupConfig{ get; set; }
 
         /// <summary>
-        /// <p>Whether to delete automatic logical backup</p>
+        /// <p>Delete or not automatic logical backup</p>
         /// </summary>
         [JsonProperty("DeleteAutoLogicBackup")]
         public bool? DeleteAutoLogicBackup{ get; set; }
 
         /// <summary>
-        /// <p>Second-level snapshot backup parameter</p>
+        /// <p>Level-2 snapshot backup parameter</p>
         /// </summary>
         [JsonProperty("SnapshotSecondaryBackupConfig")]
         public SnapshotBackupConfig SnapshotSecondaryBackupConfig{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// <p>User Uin</p>
+        /// <p>User Uin.</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Instance name</p>
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Instance status description in Chinese</p>
+        /// <p>Status description in Chinese of the instance.</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// <p>Memory, unit: GB</p>
+        /// <p>Memory in GB</p>
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+        /// <p>Instance type</p><p>Enumeration values:</p><ul><li>rw: read-write instance</li><li>ro: read-only instance</li></ul>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// <p>Current instance role</p>
+        /// <p>Current role of the instance</p>
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DestroyDeadlineText{ get; set; }
 
         /// <summary>
-        /// <p>Isolation time</p>
+        /// <p>Isolation time.</p>
         /// </summary>
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
@@ -205,7 +205,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? NetType{ get; set; }
 
         /// <summary>
-        /// <p>Public network domain name</p>
+        /// <p>Public network domain</p>
         /// </summary>
         [JsonProperty("WanDomain")]
         public string WanDomain{ get; set; }
@@ -217,7 +217,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string WanIP{ get; set; }
 
         /// <summary>
-        /// <p>Public network port</p>
+        /// <p>External port</p>
         /// </summary>
         [JsonProperty("WanPort")]
         public long? WanPort{ get; set; }
@@ -235,37 +235,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DestroyTime{ get; set; }
 
         /// <summary>
-        /// <p>Cynos kernel version</p>
+        /// <p>Cynos kernel version.</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
 
         /// <summary>
-        /// <p>Currently processing task</p>
+        /// <p>Currently Processing Task</p>
         /// </summary>
         [JsonProperty("ProcessingTask")]
         public string ProcessingTask{ get; set; }
 
         /// <summary>
-        /// <p>Renewal flag</p>
+        /// <p>Renewal flag.</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// <p>serverless instance cpu minimum</p>
+        /// <p>serverless instance cpu lower limit</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// <p>cpu cap of the serverless instance</p>
+        /// <p>cpu upper limit of a serverless instance</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
 
         /// <summary>
-        /// <p>serverless instance status, available values:<br>resume<br>pause</p>
+        /// <p>serverless instance status. Available values: <br>resume<br>pause</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
@@ -325,7 +325,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] SlaveZones{ get; set; }
 
         /// <summary>
-        /// <p>Instance network info</p>
+        /// <p>Instance network information</p>
         /// </summary>
         [JsonProperty("InstanceNetInfo")]
         public InstanceNetInfo[] InstanceNetInfo{ get; set; }
@@ -337,7 +337,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+        /// <p>Instance index form. Available values: [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
         /// </summary>
         [JsonProperty("InstanceIndexMode")]
         public string InstanceIndexMode{ get; set; }
@@ -361,7 +361,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceStorageType{ get; set; }
 
         /// <summary>
-        /// <p>Unknown field</p>
+        /// <p>Unknown field.</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
@@ -373,7 +373,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] NodeList{ get; set; }
 
         /// <summary>
-        /// <p>Unique ID of the global database</p>
+        /// <p>Global database unique ID</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }

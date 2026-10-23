@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of resource packs
+        /// Total number of resource packages.
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// Resource pack details.
+        /// Resource pack details
         /// </summary>
         [JsonProperty("Detail")]
         public Package[] Detail{ get; set; }

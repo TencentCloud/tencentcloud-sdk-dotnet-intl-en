@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Target region for backup.
+        /// Target region for backup
         /// </summary>
         [JsonProperty("CrossRegion")]
         public string CrossRegion{ get; set; }
 
         /// <summary>
-        /// Target region's backup task ID.
+        /// Backup task ID in the target region
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// Backup status in the target region.
+        /// Backup status in the target region
         /// </summary>
         [JsonProperty("BackupStatus")]
         public string BackupStatus{ get; set; }

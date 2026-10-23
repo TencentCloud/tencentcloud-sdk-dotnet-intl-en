@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Instance shipping information.
+        /// Instance Delivery Information
         /// </summary>
         [JsonProperty("InstanceCLSDeliveryInfos")]
         public InstanceCLSDeliveryInfo[] InstanceCLSDeliveryInfos{ get; set; }

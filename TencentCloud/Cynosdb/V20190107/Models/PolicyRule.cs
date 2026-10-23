@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Policy, which can be `ACCEPT` or `DROP`
+        /// Policy. Valid values: ACCEPT and DROP.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Source IP or source IP range, such as 192.168.0.0/16
+        /// Source Ip or Ip range, for example, 192.168.0.0/16
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
 
         /// <summary>
-        /// Port
+        /// Port.
         /// </summary>
         [JsonProperty("PortRange")]
         public string PortRange{ get; set; }
 
         /// <summary>
-        /// Network protocol, such as UDP and TCP
+        /// Network protocol. Supports udp and tcp.
         /// </summary>
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServiceModule{ get; set; }
 
         /// <summary>
-        /// IP address ID or IP address group ID.
+        /// IP address ID or IP address group ID
         /// </summary>
         [JsonProperty("AddressModule")]
         public string AddressModule{ get; set; }

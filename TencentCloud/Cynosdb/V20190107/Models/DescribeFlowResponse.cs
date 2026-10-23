@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Task flow status. Valid values: `0` (succeeded), `1` (failed), `2` (Processing).
+        /// Task flow status. 0: successful, 1: failed, 2: processing
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

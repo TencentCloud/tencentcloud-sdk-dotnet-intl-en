@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Project ID
+        /// Project ID.
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// Creation time in the format of yyyy-mm-dd hh:mm:ss
+        /// Creation time. Time format: yyyy-mm-dd hh:mm:ss
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// Security group name
+        /// Security group name.
         /// </summary>
         [JsonProperty("SecurityGroupName")]
         public string SecurityGroupName{ get; set; }

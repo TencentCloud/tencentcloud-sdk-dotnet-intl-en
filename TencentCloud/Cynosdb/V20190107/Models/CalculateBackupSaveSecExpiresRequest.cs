@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VaultId{ get; set; }
 
         /// <summary>
-        /// Backup retention period (seconds). Must be greater than 0.
+        /// Backup retention period (in seconds). Must be greater than 0.
         /// </summary>
         [JsonProperty("BackupSaveSeconds")]
         public long? BackupSaveSeconds{ get; set; }
 
         /// <summary>
-        /// Number of items per page, range (0,100], default 10
+        /// Number of items per page. Value range: (0,100]. Default: 10.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. Range: [0,INF). Default is 0
+        /// Offset. Value range: [0, INF). Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default: endTime.
+        /// Sorting field. Available values: VaultId, VaultName, BackupSaveSeconds, LockedTime, CreateTime, UpdateTime. Default value: endTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method, available values: desc, asc, DESC, ASC, default desc
+        /// Sorting method. Available values: desc, asc, DESC, ASC. Default value: desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

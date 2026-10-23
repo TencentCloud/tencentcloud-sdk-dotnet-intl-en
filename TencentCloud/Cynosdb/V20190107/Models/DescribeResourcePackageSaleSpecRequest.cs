@@ -31,19 +31,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// Region of the resource pack. Valid values: `China` (Chinese mainland), `overseas` (outside Chinese mainland).
+        /// Region of resource pack usage
+        /// china: universally applicable in the Chinese mainland; overseas: universally applicable in Hong Kong (China), Macao (China), Taiwan (China), and overseas regions.
         /// </summary>
         [JsonProperty("PackageRegion")]
         public string PackageRegion{ get; set; }
 
         /// <summary>
-        /// Resource pack type. Valid values: `CCU` (compute resource pack, `DISK` (storage resource pack).
+        /// Resource package type
+        /// CCU - compute resource package
+        /// DISK - storage resource package
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

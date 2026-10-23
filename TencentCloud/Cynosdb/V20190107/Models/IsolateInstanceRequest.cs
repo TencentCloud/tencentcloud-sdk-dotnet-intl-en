@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Instance ID array
+        /// Instance ID array, for example, ["cynosdbbmysql-ins-asd","cynosdbmysql-ins-zxc"]
         /// </summary>
         [JsonProperty("InstanceIdList")]
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// This parameter has been disused.
+        /// This parameter has been deprecated.
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Instance Refund Reason Types
+        /// Refund reason type of the instance
         /// </summary>
         [JsonProperty("IsolateReasonTypes")]
         public long?[] IsolateReasonTypes{ get; set; }
 
         /// <summary>
-        /// Instance Refund Reason Supplement
+        /// Supplementary reason for instance return
         /// </summary>
         [JsonProperty("IsolateReason")]
         public string IsolateReason{ get; set; }
 
         /// <summary>
-        /// Backup retention
+        /// Retain backups
         /// </summary>
         [JsonProperty("SaveBackup")]
         public bool? SaveBackup{ get; set; }

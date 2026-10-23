@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Database engine version number
+        /// Database engine version
         /// </summary>
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] TemplateNames{ get; set; }
 
         /// <summary>
-        /// Template ID
+        /// Template ID.
         /// </summary>
         [JsonProperty("TemplateIds")]
         public long?[] TemplateIds{ get; set; }
 
         /// <summary>
-        /// Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+        /// Database type. Available values: NORMAL, SERVERLESS
         /// </summary>
         [JsonProperty("DbModes")]
         public string[] DbModes{ get; set; }
 
         /// <summary>
-        /// Offset for query
+        /// Query offset
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on queries
+        /// Query limit count
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Product type of the queried template
+        /// Product type corresponding to the queried template.
         /// </summary>
         [JsonProperty("Products")]
         public string[] Products{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] EngineTypes{ get; set; }
 
         /// <summary>
-        /// The sorting order of the returned results
+        /// Sorting field of returned results
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `desc`, `asc `.
+        /// Sorting method (asc, desc)
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

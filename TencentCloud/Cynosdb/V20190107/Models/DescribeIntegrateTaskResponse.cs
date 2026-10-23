@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Current step.
+        /// Details of the current step
         /// </summary>
         [JsonProperty("CurrentStep")]
         public string CurrentStep{ get; set; }
 
         /// <summary>
-        /// Current progress.
+        /// Current progress
         /// </summary>
         [JsonProperty("CurrentProgress")]
         public string CurrentProgress{ get; set; }
 
         /// <summary>
-        /// Indicates the task status.
+        /// Task status.
         /// </summary>
         [JsonProperty("TaskStatus")]
         public string TaskStatus{ get; set; }

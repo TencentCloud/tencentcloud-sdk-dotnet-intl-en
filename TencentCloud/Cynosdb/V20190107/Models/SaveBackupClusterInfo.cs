@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Backup id of the deceased.
+        /// Backup id
         /// </summary>
         [JsonProperty("BackupId")]
         public long? BackupId{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// Db type (NORMAL, SERVERLESS).
+        /// Db type. Available values: NORMAL, SERVERLESS
         /// </summary>
         [JsonProperty("DbMode")]
         public string DbMode{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterStatus{ get; set; }
 
         /// <summary>
-        /// Task list.
+        /// Task list
         /// </summary>
         [JsonProperty("Tasks")]
         public ObjectTask[] Tasks{ get; set; }

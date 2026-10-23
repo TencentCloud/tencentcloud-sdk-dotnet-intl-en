@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Security group information
+        /// Security Group Information
         /// </summary>
         [JsonProperty("Groups")]
         public SecurityGroup[] Groups{ get; set; }

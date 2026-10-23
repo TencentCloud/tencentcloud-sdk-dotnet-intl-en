@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Intance ID.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log shipping configuration.
+        /// Log delivery configuration
         /// </summary>
         [JsonProperty("CLSInfoList")]
         public CLSInfo[] CLSInfoList{ get; set; }
 
         /// <summary>
-        /// Log type.
+        /// Log type
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// Whether the maintenance time is in operation.
+        /// Whether it is running during the maintenance time
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

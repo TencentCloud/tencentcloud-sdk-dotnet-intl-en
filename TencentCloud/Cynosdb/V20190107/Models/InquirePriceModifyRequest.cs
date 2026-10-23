@@ -31,37 +31,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Specifies the number of CPU cores.
+        /// Number of CPU cores.
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory Size
+        /// Memory size.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// Storage size, storage resource adjustment: ClusterId, StorageLimit.
+        /// Storage size and storage resource configuration change: ClusterId, StorageLimit
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// Instance ID. computational resource adjustment requires passing: ClusterId, instance ID, Cpu, Memory.
+        /// Instance ID. This parameter is required for compute resource reallocation: ClusterId, InstanceId, Cpu, Memory.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance device type.
+        /// Instance device type
         /// </summary>
         [JsonProperty("DeviceType")]
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// Specifies the ccu size of the serverless instance.
+        /// ccu size of a serverless instance
         /// </summary>
         [JsonProperty("Ccu")]
         public float? Ccu{ get; set; }

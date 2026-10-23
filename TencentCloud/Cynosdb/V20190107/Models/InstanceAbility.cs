@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies whether the instance supports forced reboot. valid values: yes (supported), no (unsupported).
+        /// Whether the instance supports forced reboot. Available values: yes: support, no: no support
         /// </summary>
         [JsonProperty("IsSupportForceRestart")]
         public string IsSupportForceRestart{ get; set; }
 
         /// <summary>
-        /// Specifies the causes for not supporting forced reboot.
+        /// The causes for not supporting forced reboot
         /// </summary>
         [JsonProperty("NonsupportForceRestartReason")]
         public string NonsupportForceRestartReason{ get; set; }

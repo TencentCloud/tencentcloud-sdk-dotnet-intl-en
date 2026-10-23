@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Async task flow ID
+        /// Asynchronous task flow ID
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

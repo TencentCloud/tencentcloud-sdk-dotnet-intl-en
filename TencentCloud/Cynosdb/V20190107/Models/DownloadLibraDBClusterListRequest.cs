@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting method, desc, asc, DESC, ASC
+        /// Sorting method. Valid values: `desc`, `asc`, `DESC`, `ASC`.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

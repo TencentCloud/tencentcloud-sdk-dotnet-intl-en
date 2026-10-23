@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID.
+        /// Cluster ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// CPU after specification adjustment.
+        /// CPU after configuration change
         /// </summary>
         [JsonProperty("DstCpu")]
         public long? DstCpu{ get; set; }
 
         /// <summary>
-        /// Memory after specification adjustment, in GB.
+        /// MEM after specification modification, in GB
         /// </summary>
         [JsonProperty("DstMem")]
         public long? DstMem{ get; set; }

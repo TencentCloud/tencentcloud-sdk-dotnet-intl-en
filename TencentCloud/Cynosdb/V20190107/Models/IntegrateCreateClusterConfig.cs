@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Retention days of binlog. value range: 7-1830.
+        /// binlog retention days [7,1830]
         /// </summary>
         [JsonProperty("BinlogSaveDays")]
         public long? BinlogSaveDays{ get; set; }
 
         /// <summary>
-        /// Specifies the backup retention days. value range: 7-1830.
+        /// Backup retention days [7,1830]
         /// </summary>
         [JsonProperty("BackupSaveDays")]
         public long? BackupSaveDays{ get; set; }
 
         /// <summary>
-        /// Specifies the semi-sync timeout period. value range: [1000,4294967295].
+        /// Semi-sync timeout period [1000,4294967295]
         /// </summary>
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }
 
         /// <summary>
-        /// proxy connection address configuration message.
+        /// proxy connection address configuration message
         /// </summary>
         [JsonProperty("ProxyEndPointConfigs")]
         public ProxyEndPointConfigInfo[] ProxyEndPointConfigs{ get; set; }

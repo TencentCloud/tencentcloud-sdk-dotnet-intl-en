@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Specifies the ID of the VPC network it belongs to.
+        /// VPC network ID
         /// </summary>
         [JsonProperty("UniqueVpcId")]
         public string UniqueVpcId{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UniqueSubnetId{ get; set; }
 
         /// <summary>
-        /// Security group id array.
+        /// Security group id array
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// Weight mode: system-system allocation, custom-custom.
+        /// Weight mode: system: system-assigned, custom: customization
         /// </summary>
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
         /// <summary>
-        /// Specifies whether to automatically add a read-only instance. valid values: yes, no.
+        /// Whether to automatically add a read-only instance. yes: add automatically; no: do not add automatically
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public string AutoAddRo{ get; set; }
 
         /// <summary>
-        /// Read-Write attribute. valid values: READWRITE, READONLY.
+        /// Read-write attribute. Available values: READWRITE, READONLY
         /// </summary>
         [JsonProperty("RwType")]
         public string RwType{ get; set; }
 
         /// <summary>
-        /// Weight information.
+        /// Weight information
         /// </summary>
         [JsonProperty("InstanceNameWeights")]
         public InstanceNameWeight[] InstanceNameWeights{ get; set; }

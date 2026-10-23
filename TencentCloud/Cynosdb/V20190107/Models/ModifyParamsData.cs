@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parameter value before modification.
+        /// Parameter value before modification
         /// </summary>
         [JsonProperty("OldValue")]
         public string OldValue{ get; set; }
 
         /// <summary>
-        /// Parameter value after modification.
+        /// New Value
         /// </summary>
         [JsonProperty("CurValue")]
         public string CurValue{ get; set; }

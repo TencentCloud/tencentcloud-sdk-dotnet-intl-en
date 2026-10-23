@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ValidatePasswordLength{ get; set; }
 
         /// <summary>
-        /// Number of letters
+        /// Number of uppercase/lowercase characters
         /// </summary>
         [JsonProperty("ValidatePasswordMixedCaseCount")]
         public long? ValidatePasswordMixedCaseCount{ get; set; }
 
         /// <summary>
-        /// Number of symbols
+        /// Number of special characters
         /// </summary>
         [JsonProperty("ValidatePasswordSpecialCharCount")]
         public long? ValidatePasswordSpecialCharCount{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ValidatePasswordNumberCount{ get; set; }
 
         /// <summary>
-        /// Password strength. Valid values: `MEDIUM`, `STRONG`.
+        /// Password strength ("MEDIUM", "STRONG")
         /// </summary>
         [JsonProperty("ValidatePasswordPolicy")]
         public string ValidatePasswordPolicy{ get; set; }

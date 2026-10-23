@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance ID
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Transaction start time
+        /// Earliest transaction start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Transaction end time
+        /// Latest transaction start time.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Maximum number
+        /// Limit of Items
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// Offset.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Username
+        /// Username.
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// File type. Valid values: csv, original.
+        /// File type. Available values: csv, original
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: `QueryTime`, `LockTime`, `RowsExamined`, and `RowsSent`.
+        /// Sorting field. Available values: QueryTime, LockTime, RowsExamined, RowsSent
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values: `asc`, `desc`.
+        /// Sorting type. Valid values: asc and desc.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

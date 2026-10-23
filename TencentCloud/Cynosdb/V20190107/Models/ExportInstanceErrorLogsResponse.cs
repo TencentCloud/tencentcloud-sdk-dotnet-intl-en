@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Exported error log content.
+        /// Exported content of the error log
         /// </summary>
         [JsonProperty("ErrorLogItems")]
         public ErrorLogItemExport[] ErrorLogItems{ get; set; }
 
         /// <summary>
-        /// Error log string.
+        /// Error log string
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }

@@ -31,31 +31,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// <p>During rollback, input the source cluster ID to search for the source poolId</p>
+        /// <p>During rollback, import the source cluster ID to search for the source poolId</p>
         /// </summary>
         [JsonProperty("OriginalClusterId")]
         public string OriginalClusterId{ get; set; }
 
         /// <summary>
-        /// <p>VPC network ID</p>
+        /// <p>ID of the VPC network it belongs to</p>
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// <p>Subnet ID</p>
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("UniqSubnetId")]
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+        /// <p>Cluster name, length less than 64 characters. Each character value range: uppercase/lowercase letters, digits, special symbols (&#39;-&#39;,&#39;_&#39;,&#39;.&#39;)</p>
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+        /// <p>Snapshot rollback refers to snapshotId; point-in-time rollback refers to queryId. A value of 0 indicates the need to determine whether the time point is valid.</p>
         /// </summary>
         [JsonProperty("RollbackId")]
         public ulong? RollbackId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// <p>tag Array information that should be bound for cluster creation</p>
+        /// <p>tag Array information that need to be bound for cluster creation</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+        /// <p>Required when DbMode is SEVERLESS<br>Minimum cpu value. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
         /// </summary>
         [JsonProperty("MinCpu")]
         public float? MinCpu{ get; set; }
 
         /// <summary>
-        /// <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+        /// <p>Required when DbMode is SEVERLESS:<br>maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs</p>
         /// </summary>
         [JsonProperty("MaxCpu")]
         public float? MaxCpu{ get; set; }
@@ -103,7 +103,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AutoPause{ get; set; }
 
         /// <summary>
-        /// <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+        /// <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause, in seconds, optional range [600,691200]<br>Default value: 600</p>
         /// </summary>
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
@@ -121,31 +121,31 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] AlarmPolicyIds{ get; set; }
 
         /// <summary>
-        /// <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+        /// <p>Parameter array. Currently supports character_set_server (utf8 | latin1 | gbk | utf8mb4) and lower_case_table_names. 1: case-insensitive, 0: case-sensitive</p>
         /// </summary>
         [JsonProperty("ClusterParams")]
         public ParamItem[] ClusterParams{ get; set; }
 
         /// <summary>
-        /// <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+        /// <p>Parameter template ID, which can be obtained by querying parameter template information through DescribeParamTemplates</p>
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+        /// <p>Instance initialization configuration information, mainly used for selecting different specification instances during cluster purchase</p>
         /// </summary>
         [JsonProperty("InstanceInitInfos")]
         public InstanceInitInfo[] InstanceInitInfos{ get; set; }
 
         /// <summary>
-        /// <p>0-Place order and pay 1-Placing order</p>
+        /// <p>0-Place order and pay 1-Place order</p>
         /// </summary>
         [JsonProperty("DealMode")]
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+        /// <p>Pay-per-compute-node model. Valid values: 0 (pay-as-you-go) and 1 (prepaid).</p>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -163,19 +163,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// <p>Rollback database info</p>
+        /// <p>Rollback database information</p>
         /// </summary>
         [JsonProperty("RollbackDatabases")]
         public RollbackDatabase[] RollbackDatabases{ get; set; }
 
         /// <summary>
-        /// <p>Roll back table information</p>
+        /// <p>Rollback table information</p>
         /// </summary>
         [JsonProperty("RollbackTables")]
         public RollbackTable[] RollbackTables{ get; set; }
 
         /// <summary>
-        /// <p>Original ro instance information</p>
+        /// <p>Information of the source read-only instance</p>
         /// </summary>
         [JsonProperty("OriginalROInstanceList")]
         public string[] OriginalROInstanceList{ get; set; }
@@ -187,13 +187,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+        /// <p>Whether archive is enabled. Optional range: <li>yes</li><li>no</li>. Default value: yes</p>
         /// </summary>
         [JsonProperty("AutoArchive")]
         public string AutoArchive{ get; set; }
 
         /// <summary>
-        /// <p>Whether to restore from the saved backup</p>
+        /// <p>Whether to restore from a saved backup</p>
         /// </summary>
         [JsonProperty("FromSaveBackup")]
         public bool? FromSaveBackup{ get; set; }
@@ -205,13 +205,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SyncWay{ get; set; }
 
         /// <summary>
-        /// <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+        /// <p>Semi-sync timeout in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. If the primary availability zone cluster exceeds this timeout period while waiting for the standby availability zone cluster to confirm a transaction, the replication method will degrade to asynchronous replication.</p><p>Value range: [1000, 4294967295]</p><p>Unit: ms</p><p>Default value: 10000</p>
         /// </summary>
         [JsonProperty("SemiSyncTimeout")]
         public long? SemiSyncTimeout{ get; set; }
 
         /// <summary>
-        /// <p>Standby availability zone</p>
+        /// <p>Secondary AZ</p>
         /// </summary>
         [JsonProperty("SlaveZone")]
         public string SlaveZone{ get; set; }

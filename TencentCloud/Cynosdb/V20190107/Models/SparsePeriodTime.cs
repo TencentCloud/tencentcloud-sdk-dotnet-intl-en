@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Weekly: List of days of the week, 1-7, 1=Monday, 7=Sunday (Only used for weekly cycle, up to 7).
+        /// By week: list of days of the week, 1-7, 1=Monday, 7=Sunday (only for weekly period, up to 7)
         /// </summary>
         [JsonProperty("WeekDays")]
         public long?[] WeekDays{ get; set; }
 
         /// <summary>
-        /// By month: Date list, 1-31 (for monthly cycle only, up to 7)
+        /// Monthly: date list, 1-31 (only for monthly cycle, up to 7)
         /// </summary>
         [JsonProperty("Days")]
         public long?[] Days{ get; set; }
 
         /// <summary>
-        /// Yearly: Month-day composite column (Only for yearly cycle, up to 7)
+        /// Yearly: list of month-day combinations (only for yearly cycle, up to 7)
         /// </summary>
         [JsonProperty("MonthDays")]
         public MonthDay[] MonthDays{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
         /// <summary>
-        /// ID of the cluster to be bound
+        /// Cluster ID for which a binding relationship needs to be established.
         /// </summary>
         [JsonProperty("BindClusterIds")]
         public string[] BindClusterIds{ get; set; }
 
         /// <summary>
-        /// ID of the cluster to be unbound
+        /// Cluster ID for which the binding relationship needs to be unbound.
         /// </summary>
         [JsonProperty("UnbindClusterIds")]
         public string[] UnbindClusterIds{ get; set; }

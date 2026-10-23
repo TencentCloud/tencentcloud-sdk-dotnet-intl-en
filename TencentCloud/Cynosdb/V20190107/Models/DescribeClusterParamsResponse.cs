@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Instance parameter list.
+        /// Instance parameter list
         /// </summary>
         [JsonProperty("Items")]
         public ParamInfo[] Items{ get; set; }

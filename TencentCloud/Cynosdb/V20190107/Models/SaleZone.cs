@@ -25,35 +25,35 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// AZ name
+        /// Availability zone name
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// Numeric ID of an AZ
+        /// Availability zone numeric ID
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// AZ name
+        /// AZ Chinese name
         /// </summary>
         [JsonProperty("ZoneZh")]
         public string ZoneZh{ get; set; }
 
         /// <summary>
-        /// Whether serverless cluster is supported. Valid values: <br>
-        /// `0`: No<br>
-        /// `1`: Yes
+        /// Whether serverless cluster is supported<br>
+        /// 0: not supported
+        /// 1: Support
         /// </summary>
         [JsonProperty("IsSupportServerless")]
         public long? IsSupportServerless{ get; set; }
 
         /// <summary>
-        /// Whether standard cluster is supported. Valid values: <br>
-        /// `0`: No<br>
-        /// `1`: Yes
+        /// Whether a general cluster is supported
+        /// 0: not supported
+        /// 1: Support
         /// </summary>
         [JsonProperty("IsSupportNormal")]
         public long? IsSupportNormal{ get; set; }
@@ -65,19 +65,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// Whether the user has AZ permission.
+        /// Whether the user has AZ permissions
         /// </summary>
         [JsonProperty("HasPermission")]
         public bool? HasPermission{ get; set; }
 
         /// <summary>
-        /// Whether it is a full-linkage RDMA AZ.
+        /// Whether it is an all-link RDMA availability zone
         /// </summary>
         [JsonProperty("IsWholeRdmaZone")]
         public string IsWholeRdmaZone{ get; set; }
 
         /// <summary>
-        /// Specifies whether a newly purchased cluster is allowed in the current availability zone. valid values: 1 (allowed), 0 (not allowed).
+        /// Whether new cluster purchase is allowed in the current AZ. 1: allowed, 0: not allowed
         /// </summary>
         [JsonProperty("IsSupportCreateCluster")]
         public long? IsSupportCreateCluster{ get; set; }

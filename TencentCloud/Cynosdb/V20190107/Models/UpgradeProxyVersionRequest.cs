@@ -31,25 +31,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Current version of database proxy
+        /// Current version of the database proxy.
         /// </summary>
         [JsonProperty("SrcProxyVersion")]
         public string SrcProxyVersion{ get; set; }
 
         /// <summary>
-        /// Target version of database proxy
+        /// Database proxy upgrade version
         /// </summary>
         [JsonProperty("DstProxyVersion")]
         public string DstProxyVersion{ get; set; }
 
         /// <summary>
-        /// Database proxy group ID
+        /// Database Proxy Group ID
         /// </summary>
         [JsonProperty("ProxyGroupId")]
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// Upgrade time. Valid values: `no` (upon upgrade completion), `yes` (upgrade during instance maintenance time)
+        /// Upgrade time: no (upon upgrade completion); yes (instance maintenance time)
         /// </summary>
         [JsonProperty("IsInMaintainPeriod")]
         public string IsInMaintainPeriod{ get; set; }

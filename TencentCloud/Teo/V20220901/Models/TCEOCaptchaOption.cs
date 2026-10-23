@@ -25,10 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// EdgeOne human-machine verification mode. Valid values:<li>Invisible: invisible verification;</li><li>Adaptive: self adaptive interactive verification.</li>
+        /// <p>Browser-side WebView human-machine verification interaction mode.</p><p>Enumeration values:</p><ul><li>Invisible: invisible verification</li><li>Adaptive: self adaptive interactive verification</li></ul><p>Default value: Invisible</p>
         /// </summary>
         [JsonProperty("CaptchaMode")]
         public string CaptchaMode{ get; set; }
+
+        /// <summary>
+        /// <p>Human-machine verification interaction mode for native apps on mobile terminals.</p><p>Enumeration values:</p><ul><li>Invisible: Invisible verification</li><li>Visible: interactive verification</li></ul><p>Default value: Invisible</p>
+        /// </summary>
+        [JsonProperty("MobileCaptchaMode")]
+        public string MobileCaptchaMode{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CaptchaMode", this.CaptchaMode);
+            this.SetParamSimple(map, prefix + "MobileCaptchaMode", this.MobileCaptchaMode);
         }
     }
 }

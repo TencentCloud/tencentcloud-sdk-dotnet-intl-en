@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The cluster ID
+        /// Cluster ID.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
@@ -37,9 +37,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// Whether to search exactly
+        /// Whether to perform an exact search.
         /// Valid values: `0` (fuzzy search), `1` (exact search). 
-        /// Default value: `0`.
+        /// The default is 0.
         /// </summary>
         [JsonProperty("MatchType")]
         public long? MatchType{ get; set; }

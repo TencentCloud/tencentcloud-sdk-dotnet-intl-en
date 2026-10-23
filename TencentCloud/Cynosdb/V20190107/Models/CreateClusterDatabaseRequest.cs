@@ -37,25 +37,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbName{ get; set; }
 
         /// <summary>
-        /// Character set
+        /// Character set type.
         /// </summary>
         [JsonProperty("CharacterSet")]
         public string CharacterSet{ get; set; }
 
         /// <summary>
-        /// Collation
+        /// Sorting rule
         /// </summary>
         [JsonProperty("CollateRule")]
         public string CollateRule{ get; set; }
 
         /// <summary>
-        /// Host permissions of the authorized user
+        /// Authorize user host permission
         /// </summary>
         [JsonProperty("UserHostPrivileges")]
         public UserHostPrivilege[] UserHostPrivileges{ get; set; }
 
         /// <summary>
-        /// Remarks
+        /// Remarks.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

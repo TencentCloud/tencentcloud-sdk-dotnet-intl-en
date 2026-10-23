@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Instance price.
+        /// Instance price
         /// </summary>
         [JsonProperty("InstancePrice")]
         public TradePrice InstancePrice{ get; set; }
 
         /// <summary>
-        /// Specifies the storage price.
+        /// Storage price
         /// </summary>
         [JsonProperty("StoragePrice")]
         public TradePrice StoragePrice{ get; set; }

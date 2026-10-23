@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// <p>Region</p>
+        /// <p>Region.</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string PhysicalZone{ get; set; }
 
         /// <summary>
-        /// <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolation</li><li>isolated: Isolated</li><li>activating: Restore from recycle bin</li><li>offlining: Offline</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
+        /// <p>Status. Supported values are as follows:</p><ul><li>creating: Creating</li><li>running: Running</li><li>isolating: Isolating</li><li>isolated: Isolated</li><li>activating: Restoring from recycle bin</li><li>offlining: Offlining</li><li>offlined: Offline</li><li>deleting: Deleting</li><li>deleted: Deleted</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Status description</p>
+        /// <p>Status description.</p>
         /// </summary>
         [JsonProperty("StatusDesc")]
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// <p>When the Db type is SERVERLESS, the SERVERLESS cluster status. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
+        /// <p>When the Db type is SERVERLESS, the status of the SERVERLESS cluster. Available values:<br>resume<br>resuming<br>pause<br>pausing</p>
         /// </summary>
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string StorageId{ get; set; }
 
         /// <summary>
-        /// <p>Storage size in GB</p>
+        /// <p>Storage size, in GB.</p>
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -91,19 +91,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? MaxStorageSize{ get; set; }
 
         /// <summary>
-        /// <p>Minimum storage specification, in GB</p>
+        /// <p>Minimum storage specification, in GB.</p>
         /// </summary>
         [JsonProperty("MinStorageSize")]
         public long? MinStorageSize{ get; set; }
 
         /// <summary>
-        /// <p>Storage billing type. Valid values: 1 (yearly/monthly subscription); 0 (pay-as-you-go).</p>
+        /// <p>Storage billing type. Valid values: 1 (yearly/monthly subscription) and 0 (pay-as-you-go).</p>
         /// </summary>
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
         /// <summary>
-        /// <p>VPC name</p>
+        /// <p>VPC name.</p>
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// <p>Character set.</p>
+        /// <p>Character set</p>
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbMode{ get; set; }
 
         /// <summary>
-        /// <p>Database version</p>
+        /// <p>Database version.</p>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
 
         /// <summary>
-        /// <p>Storage space limit</p>
+        /// <p>Maximum storage space</p>
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -175,7 +175,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// <p>vport port</p>
+        /// <p>vport</p>
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -193,7 +193,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public Ability Ability{ get; set; }
 
         /// <summary>
-        /// <p>cynos version</p>
+        /// <p>cynos version.</p>
         /// </summary>
         [JsonProperty("CynosVersion")]
         public string CynosVersion{ get; set; }
@@ -211,7 +211,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string HasSlaveZone{ get; set; }
 
         /// <summary>
-        /// <p>Freeze or not</p>
+        /// <p>Whether to freeze</p>
         /// </summary>
         [JsonProperty("IsFreeze")]
         public string IsFreeze{ get; set; }
@@ -229,7 +229,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string MasterZone{ get; set; }
 
         /// <summary>
-        /// <p>From the AZ list</p>
+        /// <p>From the availability zone list</p>
         /// </summary>
         [JsonProperty("SlaveZones")]
         public string[] SlaveZones{ get; set; }
@@ -247,7 +247,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// <p>Expiry time.</p>
+        /// <p>Expiration time.</p>
         /// </summary>
         [JsonProperty("PeriodEndTime")]
         public string PeriodEndTime{ get; set; }
@@ -259,37 +259,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectID{ get; set; }
 
         /// <summary>
-        /// <p>tag Array information for instance binding</p>
+        /// <p>tag Array information bound to the instance</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
         public Tag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Proxy status</p>
+        /// <p>Proxy status.</p>
         /// </summary>
         [JsonProperty("ProxyStatus")]
         public string ProxyStatus{ get; set; }
 
         /// <summary>
-        /// <p>binlog switch, available values: ON, OFF</p>
+        /// <p>binlog switch. Available values: ON, OFF</p>
         /// </summary>
         [JsonProperty("LogBin")]
         public string LogBin{ get; set; }
 
         /// <summary>
-        /// <p>Skip transaction or not</p>
+        /// <p>Whether to skip transaction</p>
         /// </summary>
         [JsonProperty("IsSkipTrade")]
         public string IsSkipTrade{ get; set; }
 
         /// <summary>
-        /// <p>PITR type, available values: normal, redo_pitr</p>
+        /// <p>PITR type. Available values: normal, redo_pitr</p>
         /// </summary>
         [JsonProperty("PitrType")]
         public string PitrType{ get; set; }
 
         /// <summary>
-        /// <p>Whether to toggle on password complexity</p>
+        /// <p>Whether to enable password complexity</p>
         /// </summary>
         [JsonProperty("IsOpenPasswordComplexity")]
         public string IsOpenPasswordComplexity{ get; set; }
@@ -301,13 +301,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string NetworkStatus{ get; set; }
 
         /// <summary>
-        /// <p>Package info of the bound resource for the cluster</p>
+        /// <p>Resource package information bound to the cluster</p>
         /// </summary>
         [JsonProperty("ResourcePackages")]
         public ResourcePackage[] ResourcePackages{ get; set; }
 
         /// <summary>
-        /// <p>Auto-renewal flag. 1 means auto-renewal, 0 means non-renewal upon expiration.</p>
+        /// <p>Auto-renewal flag. Valid values: 1 (auto-renewal) and 0 (non-renewal upon expiration).</p>
         /// </summary>
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
@@ -319,37 +319,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// <p>Secondary availability zone property</p>
+        /// <p>Secondary AZ property</p>
         /// </summary>
         [JsonProperty("SlaveZoneAttr")]
         public SlaveZoneAttrItem[] SlaveZoneAttr{ get; set; }
 
         /// <summary>
-        /// <p>Version tag</p>
+        /// <p>Version tag.</p>
         /// </summary>
         [JsonProperty("CynosVersionTag")]
         public string CynosVersionTag{ get; set; }
 
         /// <summary>
-        /// <p>Unique ID of the global database network</p>
+        /// <p>Global database network unique ID</p>
         /// </summary>
         [JsonProperty("GdnId")]
         public string GdnId{ get; set; }
 
         /// <summary>
-        /// <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, the field is invalid.</p>
+        /// <p>Role of the cluster in the global data network.<br>Primary cluster - primary<br>Slave cluster - standby<br>If empty, this field is invalid</p>
         /// </summary>
         [JsonProperty("GdnRole")]
         public string GdnRole{ get; set; }
 
         /// <summary>
-        /// <p>Second-level storage usage in GB</p>
+        /// <p>Level-2 storage usage, in GB.</p>
         /// </summary>
         [JsonProperty("UsedArchiveStorage")]
         public long? UsedArchiveStorage{ get; set; }
 
         /// <summary>
-        /// <p>Archiving status. Enumeration value <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
+        /// <p>Archiving status. Enumeration values: <li>normal: Normal</li><li>archiving: Archiving</li><li>resuming: Recovering</li><li>archived: Archived</li></p>
         /// </summary>
         [JsonProperty("ArchiveStatus")]
         public string ArchiveStatus{ get; set; }
@@ -361,13 +361,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ArchiveProgress{ get; set; }
 
         /// <summary>
-        /// <p>Cluster level. For example P0, P1</p>
+        /// <p>Cluster level. For example, P0, P1</p>
         /// </summary>
         [JsonProperty("ClusterLevel")]
         public string ClusterLevel{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable transparent data encryption</p>
+        /// <p>Whether to enable transparent encryption</p>
         /// </summary>
         [JsonProperty("IsOpenTDE")]
         public bool? IsOpenTDE{ get; set; }

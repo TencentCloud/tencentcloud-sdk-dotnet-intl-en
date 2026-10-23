@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? BackupId{ get; set; }
 
         /// <summary>
-        /// Backup file name
+        /// Backup file name.
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }

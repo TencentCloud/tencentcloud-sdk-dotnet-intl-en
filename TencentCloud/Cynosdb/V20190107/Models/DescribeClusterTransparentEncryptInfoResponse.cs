@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Encryption key id.
+        /// Encryption key id
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Encryption key region.
+        /// Encryption key region
         /// </summary>
         [JsonProperty("KeyRegion")]
         public string KeyRegion{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string KeyType{ get; set; }
 
         /// <summary>
-        /// To be enabled global encryption
+        /// Whether global encryption is enabled
         /// </summary>
         [JsonProperty("IsOpenGlobalEncryption")]
         public bool? IsOpenGlobalEncryption{ get; set; }

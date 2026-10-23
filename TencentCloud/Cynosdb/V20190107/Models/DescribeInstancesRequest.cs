@@ -25,35 +25,35 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of returned results. Default value: 20. Maximum value: 100
+        /// Number of returns. Default value: 20. Value range: (0, 100].
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Record offset. Default value: 0
+        /// Record offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Sort by field. Valid values:
+        /// Sorting field. Valid values:
         /// <li> CREATETIME: creation time</li>
-        /// <li> PERIODENDTIME: expiration time</li>
+        /// <li> PERIODENDTIME: Expiration time</li>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting order. Valid values:
-        /// <li> ASC: ascending</li>
-        /// <li> DESC: descending</li>
+        /// Sorting type. Valid values:
+        /// <li> ASC: ascending order </li>
+        /// <li> DESC: sort in descending order </li>
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
+        /// Search criteria. When multiple filters exist, the relationship between filters is logical AND.
         /// </summary>
         [JsonProperty("Filters")]
         public QueryFilter[] Filters{ get; set; }
@@ -65,14 +65,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// Instance status. Valid values:
+        /// Instance status. Available values:
         /// creating
         /// running
         /// isolating
         /// isolated
-        /// activating: Removing the instance from isolation
-        /// offlining: Eliminating the instance
-        /// offlined: Instance eliminated
+        /// Recovering
+        /// offlining
+        /// offlined
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -84,7 +84,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+        /// Cluster type. Value range: <li> CYNOSDB: transactional cluster </li><li> LIBRADB: analysis cluster </li><li> ALL: all </li>. Defaults to ALL.
         /// </summary>
         [JsonProperty("ClusterType")]
         public string ClusterType{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Log start time.
+        /// Earliest log time
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Log end time.
+        /// Latest log time
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The max number of returned results.
+        /// Limit of Items
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,25 +61,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] LogLevels{ get; set; }
 
         /// <summary>
-        /// KeyWords.
+        /// Keyword.
         /// </summary>
         [JsonProperty("KeyWords")]
         public string[] KeyWords{ get; set; }
 
         /// <summary>
-        /// The template type. Valid values: `csv`, `original`.
+        /// File type. Available values: csv, original
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Valid value: `Timestamp`.
+        /// Available values: Timestamp
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// Sorting type. valid values: ASC or DESC.
+        /// Sorting type. ASC or DESC.
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }

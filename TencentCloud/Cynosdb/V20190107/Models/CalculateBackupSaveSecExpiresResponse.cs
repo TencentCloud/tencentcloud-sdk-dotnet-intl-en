@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Total number of backup files that will be deleted
+        /// Total number of backup files to be deleted
         /// </summary>
         [JsonProperty("WillDeleteBackupFileCount")]
         public long? WillDeleteBackupFileCount{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public WillDeleteItem[] WillDeleteBackupFiles{ get; set; }
 
         /// <summary>
-        /// Total files of binlogs that will be deleted
+        /// Total number of Binlog files to be deleted
         /// </summary>
         [JsonProperty("WillDeleteBinlogFileCount")]
         public long? WillDeleteBinlogFileCount{ get; set; }
 
         /// <summary>
-        /// Binlog file list to be deleted
+        /// List of Binlog files to be deleted
         /// </summary>
         [JsonProperty("WillDeleteBinlogFiles")]
         public WillDeleteItem[] WillDeleteBinlogFiles{ get; set; }
 
         /// <summary>
-        /// Total Redolog files to be deleted
+        /// Total number of Redolog files to be deleted
         /// </summary>
         [JsonProperty("WillDeleteRedoLogFileCount")]
         public long? WillDeleteRedoLogFileCount{ get; set; }
 
         /// <summary>
-        /// List of Redolog files that will be deleted
+        /// List of Redolog files to be deleted
         /// </summary>
         [JsonProperty("WillDeleteRedoLogFiles")]
         public WillDeleteItem[] WillDeleteRedoLogFiles{ get; set; }

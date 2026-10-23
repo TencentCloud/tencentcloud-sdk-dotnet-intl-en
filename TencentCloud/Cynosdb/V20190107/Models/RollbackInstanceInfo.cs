@@ -49,13 +49,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// vip information.
+        /// VIP information.
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Specifies the vport information.
+        /// Virtual port information.
         /// </summary>
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
@@ -79,19 +79,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// CPU Size.
+        /// CPU Size
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// Memory Size.
+        /// Memory size.
         /// </summary>
         [JsonProperty("Mem")]
         public long? Mem{ get; set; }
 
         /// <summary>
-        /// Storage size.
+        /// Storage size
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }

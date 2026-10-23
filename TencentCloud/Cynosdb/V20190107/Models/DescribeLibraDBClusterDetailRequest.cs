@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Whether to get more server information, available values yes no
+        /// Whether to get more server information. Available values: yes, no
         /// </summary>
         [JsonProperty("GetServerInfo")]
         public string GetServerInfo{ get; set; }

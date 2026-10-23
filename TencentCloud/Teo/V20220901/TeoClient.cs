@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1413";
 
         /// <summary>
         /// Client constructor.
@@ -357,7 +357,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to create a new version of the specified configuration group.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
@@ -367,7 +367,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a new version for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to create a new version of the specified configuration group.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
@@ -1825,6 +1825,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the list of available custom configurations for rule engine operations on a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
+        /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
+        public Task<DescribeAvailableCustomActionsForRuleEngineResponse> DescribeAvailableCustomActionsForRuleEngine(DescribeAvailableCustomActionsForRuleEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of available custom configurations for rule engine operations on a site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
+        /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
+        public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngineSync(DescribeAvailableCustomActionsForRuleEngineRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query plan options available for purchase.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailablePlansRequest"/></param>
@@ -2598,6 +2619,48 @@ namespace TencentCloud.Teo.V20220901
         public DescribeLoadBalancerListResponse DescribeLoadBalancerListSync(DescribeLoadBalancerListRequest req)
         {
             return InternalRequestAsync<DescribeLoadBalancerListResponse>(req, "DescribeLoadBalancerList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
+        public Task<DescribeLogAnalysisDetailResponse> DescribeLogAnalysisDetail(DescribeLogAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDetailResponse>(req, "DescribeLogAnalysisDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
+        public DescribeLogAnalysisDetailResponse DescribeLogAnalysisDetailSync(DescribeLogAnalysisDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDetailResponse>(req, "DescribeLogAnalysisDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the log download task list for log analysis. Note: Only download task records from the last three days are retained.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDownloadTasksResponse"/></returns>
+        public Task<DescribeLogAnalysisDownloadTasksResponse> DescribeLogAnalysisDownloadTasks(DescribeLogAnalysisDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDownloadTasksResponse>(req, "DescribeLogAnalysisDownloadTasks");
+        }
+
+        /// <summary>
+        /// This API is used to query the log download task list for log analysis. Note: Only download task records from the last three days are retained.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisDownloadTasksRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisDownloadTasksResponse"/></returns>
+        public DescribeLogAnalysisDownloadTasksResponse DescribeLogAnalysisDownloadTasksSync(DescribeLogAnalysisDownloadTasksRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisDownloadTasksResponse>(req, "DescribeLogAnalysisDownloadTasks")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3401,6 +3464,31 @@ namespace TencentCloud.Teo.V20220901
         public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResultSync(DescribeZoneConfigImportResultRequest req)
         {
             return InternalRequestAsync<DescribeZoneConfigImportResultResponse>(req, "DescribeZoneConfigImportResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query site-level custom variable configurations, including variable definitions and variable operations. If not configured, both variable definitions and variable operations return empty lists.
+        /// 
+        /// If needed, call the DescribeL7AccRules API to query rule-level custom variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneCustomVariablesRequest"/></param>
+        /// <returns><see cref="DescribeZoneCustomVariablesResponse"/></returns>
+        public Task<DescribeZoneCustomVariablesResponse> DescribeZoneCustomVariables(DescribeZoneCustomVariablesRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneCustomVariablesResponse>(req, "DescribeZoneCustomVariables");
+        }
+
+        /// <summary>
+        /// This API is used to query site-level custom variable configurations, including variable definitions and variable operations. If not configured, both variable definitions and variable operations return empty lists.
+        /// 
+        /// If needed, call the DescribeL7AccRules API to query rule-level custom variables.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZoneCustomVariablesRequest"/></param>
+        /// <returns><see cref="DescribeZoneCustomVariablesResponse"/></returns>
+        public DescribeZoneCustomVariablesResponse DescribeZoneCustomVariablesSync(DescribeZoneCustomVariablesRequest req)
+        {
+            return InternalRequestAsync<DescribeZoneCustomVariablesResponse>(req, "DescribeZoneCustomVariables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4785,6 +4873,31 @@ namespace TencentCloud.Teo.V20220901
         public ModifyZoneResponse ModifyZoneSync(ModifyZoneRequest req)
         {
             return InternalRequestAsync<ModifyZoneResponse>(req, "ModifyZone")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
+        /// 
+        /// For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyZoneCustomVariablesRequest"/></param>
+        /// <returns><see cref="ModifyZoneCustomVariablesResponse"/></returns>
+        public Task<ModifyZoneCustomVariablesResponse> ModifyZoneCustomVariables(ModifyZoneCustomVariablesRequest req)
+        {
+            return InternalRequestAsync<ModifyZoneCustomVariablesResponse>(req, "ModifyZoneCustomVariables");
+        }
+
+        /// <summary>
+        /// This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
+        /// 
+        /// For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyZoneCustomVariablesRequest"/></param>
+        /// <returns><see cref="ModifyZoneCustomVariablesResponse"/></returns>
+        public ModifyZoneCustomVariablesResponse ModifyZoneCustomVariablesSync(ModifyZoneCustomVariablesRequest req)
+        {
+            return InternalRequestAsync<ModifyZoneCustomVariablesResponse>(req, "ModifyZoneCustomVariables")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

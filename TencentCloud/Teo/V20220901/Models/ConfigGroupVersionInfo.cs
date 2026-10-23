@@ -25,46 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Version ID.
+        /// <p>Configuration group version ID, a unique resource ID allocated by EdgeOne when creating a configuration group version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>For reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// Version No.
+        /// <p>Configuration group version number. This parameter only shows the version. Each time a new version of the configuration group is created, the version number increments by one. The initial version number is "0".</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></p>
         /// </summary>
         [JsonProperty("VersionNumber")]
         public string VersionNumber{ get; set; }
 
         /// <summary>
-        /// Configuraration group ID.
+        /// <p>Version ID of the source version on which the configuration group version is based. When creating a configuration group version, designate the source version ID. The new version will be created as a derivative based on the configuration of that source version.</p><p>Parameter format: ver-2kplomhisdcb</p><p>Value for reference:</p><ul><li><a href="https://www.tencentcloud.com/document/api/1552/101867?from_cn_redirect=1">CreateConfigGroupVersion</a> return value <code>VersionId</code></li><li><a href="https://www.tencentcloud.com/document/api/1552/101864?from_cn_redirect=1">DescribeConfigGroupVersions</a> return value <code>ConfigGroupVersionInfos</code></li></ul>
         /// </summary>
-        [JsonProperty("GroupId")]
-        public string GroupId{ get; set; }
+        [JsonProperty("SourceVersion")]
+        public string SourceVersion{ get; set; }
 
         /// <summary>
-        /// Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+        /// <p>Configuration group type to which the version belongs.</p><p>Enumeration value:</p><ul><li>l7_acceleration: Layer-7 acceleration configuration group</li><li>edge_functions: Edge function configuration group</li><li>web_security: Web protection configuration group</li></ul>
         /// </summary>
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
         /// <summary>
-        /// Version description.
+        /// <p>Configuration group ID for version ownership.</p><p>Parameter format: cg-2kplomhisdcb</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>Version description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Version status. Valid values: 
-        /// <li>creating: Being created.</li>
-        /// <li>inactive: Not effective.</li>
-        /// <li>active: Effective. </li>
+        /// <p>Version effective status.</p><p>Enumeration value:</p><ul><li>creating: Version creation in progress</li><li>inactive: Version not in effect</li><li>active: Version in effect</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Version creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+        /// <p>Version creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
@@ -77,8 +80,9 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "SourceVersion", this.SourceVersion);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

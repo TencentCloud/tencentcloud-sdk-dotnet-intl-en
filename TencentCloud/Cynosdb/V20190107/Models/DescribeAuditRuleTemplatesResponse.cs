@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Number of eligible instances
+        /// Total number of eligible instances.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Rule template detail list.
+        /// List of rule template details.
         /// </summary>
         [JsonProperty("Items")]
         public AuditRuleTemplateInfo[] Items{ get; set; }

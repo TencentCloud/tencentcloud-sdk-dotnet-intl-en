@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Error log list.
+        /// Error log list
         /// </summary>
         [JsonProperty("ErrorLogs")]
         public CynosdbErrorLogItem[] ErrorLogs{ get; set; }

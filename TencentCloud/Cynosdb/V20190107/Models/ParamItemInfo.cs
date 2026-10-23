@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string OldValue{ get; set; }
 
         /// <summary>
-        /// Parameter formula.
+        /// Parameter formula
         /// </summary>
         [JsonProperty("ValueFunction")]
         public string ValueFunction{ get; set; }

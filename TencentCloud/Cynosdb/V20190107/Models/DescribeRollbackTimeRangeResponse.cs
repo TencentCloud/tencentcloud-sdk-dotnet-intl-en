@@ -25,19 +25,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Valid regression time range start time point (abandoned).
+        /// Start of the valid regression time range (abandoned)
         /// </summary>
         [JsonProperty("TimeRangeStart")]
         public string TimeRangeStart{ get; set; }
 
         /// <summary>
-        /// Valid regression time range end time point (abandoned).
+        /// End time point of the valid regression time range (abandoned)
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }
 
         /// <summary>
-        /// Time range available for rollback
+        /// Available rollback time range
         /// </summary>
         [JsonProperty("RollbackTimeRanges")]
         public RollbackTimeRange[] RollbackTimeRanges{ get; set; }

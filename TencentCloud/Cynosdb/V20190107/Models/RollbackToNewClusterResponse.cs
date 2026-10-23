@@ -31,19 +31,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TranId{ get; set; }
 
         /// <summary>
-        /// <p>Order ID</p>
+        /// <p>Order ID.</p>
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
 
         /// <summary>
-        /// <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+        /// <p>Resource ID list (this field is no longer maintained. To obtain resource IDs, please use the dealNames field to query the DescribeResourcesByDealName API)</p>
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+        /// <p>Cluster ID list (this field is no longer maintained; please use the dealNames field to query the DescribeResourcesByDealName API to get the cluster ID)</p>
         /// </summary>
         [JsonProperty("ClusterIds")]
         public string[] ClusterIds{ get; set; }

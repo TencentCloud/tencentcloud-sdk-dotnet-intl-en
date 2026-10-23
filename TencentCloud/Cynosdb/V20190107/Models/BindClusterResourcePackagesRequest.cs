@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// The unique ID of a resource pack
+        /// Unique ID of the resource package
         /// </summary>
         [JsonProperty("PackageIds")]
         public string[] PackageIds{ get; set; }

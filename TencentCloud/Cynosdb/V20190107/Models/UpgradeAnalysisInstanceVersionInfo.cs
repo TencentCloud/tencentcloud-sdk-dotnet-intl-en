@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// <p>Version</p>
+        /// <p>Version.</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// <p>Expiry time</p>
+        /// <p>Expiration time.</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

@@ -37,85 +37,85 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Default{ get; set; }
 
         /// <summary>
-        /// If the parameter is of type enum/string/bool, the available options list.
+        /// Available option list when the parameter is enum, string, or bool.
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Maximum value when parameter type is `float` or `integer`.
+        /// Maximum value when the parameter type is float/integer.
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Minimum value when parameter type is `float` or `integer`.
+        /// Minimum value when the parameter type is float/integer
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Whether to restart the instance for the modified parameters to take effect.
+        /// Whether a restart is required.
         /// </summary>
         [JsonProperty("NeedReboot")]
         public long? NeedReboot{ get; set; }
 
         /// <summary>
-        /// Parameter type: `integer`, `float`, `string`, `enum`, `bool`.
+        /// Parameter type: integer, float, string, enum, or bool.
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
 
         /// <summary>
-        /// Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
+        /// Match type. multiVal and regex are used when the parameter type is string.
         /// </summary>
         [JsonProperty("MatchType")]
         public string MatchType{ get; set; }
 
         /// <summary>
-        /// Match values, which will be separated by semicolon when match type is `multiVal`.
+        /// Match the target value. For multiVal, separate each key with a semicolon (;).
         /// </summary>
         [JsonProperty("MatchValue")]
         public string MatchValue{ get; set; }
 
         /// <summary>
-        /// Parameter description
+        /// Parameter description.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Whether it is a global parameter.
+        /// Whether it is a global parameter
         /// </summary>
         [JsonProperty("IsGlobal")]
         public long? IsGlobal{ get; set; }
 
         /// <summary>
-        /// Whether the parameter is modifiable.
+        /// Whether the parameter is modifiable
         /// </summary>
         [JsonProperty("ModifiableInfo")]
         public ModifiableInfo ModifiableInfo{ get; set; }
 
         /// <summary>
-        /// Whether it is a function.
+        /// Whether it is a function
         /// </summary>
         [JsonProperty("IsFunc")]
         public bool? IsFunc{ get; set; }
 
         /// <summary>
-        /// Function.
+        /// Function
         /// </summary>
         [JsonProperty("Func")]
         public string Func{ get; set; }
 
         /// <summary>
-        /// The default formula style of parameters that support formulas.
+        /// Default formula style for parameters that support formulas
         /// </summary>
         [JsonProperty("FuncPattern")]
         public string FuncPattern{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Log file name.
+        /// redolog file name
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }

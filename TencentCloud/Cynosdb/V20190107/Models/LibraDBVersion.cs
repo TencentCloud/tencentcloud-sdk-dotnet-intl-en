@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string Version{ get; set; }
 
         /// <summary>
-        /// Version tag
+        /// Version tag.
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// Can be used this version
+        /// Whether this version can be used
         /// </summary>
         [JsonProperty("HasPermission")]
         public bool? HasPermission{ get; set; }
