@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>Data shipping area. Available values:<ul><li>mainland: within the Chinese mainland;</li><li>overseas: global (excluding the Chinese mainland).</li></ul></p>
+        /// <p>Data delivery area. Valid values:</p><ul><li>`mainland`: Chinese mainland;</li><li>`overseas`: Global (excluding the Chinese mainland).</li></ul>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// <p>Data delivery type. Available values:</p><ul><li>l7-access-logs: Layer 7 Access Logs;</li><li>application: Layer 4 Proxy Logs;</li><li>function: Function Logs;</li><li>web-attack: Managed Rule Logs.</li></ul><p>The following types of logs are merged into l7-access-logs and no longer support adding:</p><ul><li>domain: Site Acceleration Logs;</li><li>web-rateLiming: Rate Limit and CC Attack Defense Logs;</li><li>web-rule: Custom Rule Logs;</li><li>web-bot: Bot Management Logs.</li></ul>
+        /// <p>Data delivery type. Valid values:</p><ul><li>`l7-access-logs`: Layer 7 access logs;</li><li>`application`: Layer 4 proxy logs;</li><li>`function`: Edge Function execution logs;</li><li>`web-attack`: managed rule logs.</li></ul><p>The following log types have been merged into `l7-access-logs`, and no new tasks can be added for them:</p><ul><li>`domain`: site acceleration logs;</li><li>`web-rateLiming`: rate limiting and CC attack defense logs;</li><li>`web-rule`: custom rule logs;</li><li>`web-bot`: Bot management logs.</li></ul>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
@@ -49,70 +49,76 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// <p>Type of a real-time log shipping task. Valid values:<ul><li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analytics. This is supported only when LogType = l7-access-logs or web-attack.</li></ul></p>
+        /// <p>Type of the real-time log delivery task. Valid values:</p><ul><li>`cls`: deliver to Tencent Cloud CLS;</li><li>`custom_endpoint`: deliver to a custom HTTP(S) endpoint;</li><li>`s3`: deliver to an S3-compatible (SigV4 authentication algorithm compatible) object storage endpoint. This task type is not supported when `LogType` = `web-attack`;</li><li>`aws_s3`: deliver to an AWS S3 bucket. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3;</li><li>`log_analysis`: deliver to EdgeOne Log Analysis. This is supported only when `LogType` = `l7-access-logs` or `web-attack`.</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
-        /// <p>List of entities corresponding to real-time log delivery tasks. Example values:</p><ul><li>Layer 7 domain: domain.example.com</li><li>Layer 4 proxy instance: sid-2s69eb5wcms7</li><li>Edge function instance: test-zone-2mxigizoh9l9-1257626257</li></ul><p>For reference: <a href="https://www.tencentcloud.com/document/api/1552/103413?from_cn_redirect=1">DescribeL4Proxy</a></p>
+        /// <p>List of entities that the real-time log delivery task applies to. Examples:</p><ul><li>Layer 7 domain name: `domain.example.com`</li><li>Layer 4 proxy instance: `sid-2s69eb5wcms7`</li><li>Edge Function instance: `test-zone-2mxigizoh9l9-1257626257`</li></ul>For valid values, see <a href="https://www.tencentcloud.com/document/product/1145/59024">DescribeL4Proxy</a>.
         /// </summary>
         [JsonProperty("EntityList")]
         public string[] EntityList{ get; set; }
 
         /// <summary>
-        /// <p>Predefined fields for delivery. For reference: <ul><li><a href="https://www.tencentcloud.com/document/product/1552/105791?from_cn_redirect=1">Layer 7 Access Logs (site acceleration log)</a></li><li><a href="https://www.tencentcloud.com/document/product/1552/105792?from_cn_redirect=1">four-layer proxy logs</a></li><li><a href="https://www.tencentcloud.com/document/product/1552/115585?from_cn_redirect=1">edge function logs</a></li></ul></p><p>For reference: DescribeLogFields</p>
+        /// <p>List of preset fields to deliver. For valid values, see:</p><ul><li><a href="https://www.tencentcloud.com/document/product/1145/61300">Layer 7 access logs (site acceleration logs)</a></li><li><a href="https://www.tencentcloud.com/document/product/1145/61301">Layer 4 proxy logs</a></li><li><a href="https://www.tencentcloud.com/document/product/1145/67840">Edge Function execution logs</a></li></ul>For valid values, see also `DescribeLogFields`.
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }
 
         /// <summary>
-        /// <p>Custom fields for delivery support extracting specified content from HTTP request headers, response headers, cookies, and request bodies.<br>Custom field name must be unique. Only Layer 7 access logs (LogType= l7-access-logs or domain) support adding custom fields.<br>The count of custom fields allowed to be configured has a quota limit. If the quota is insufficient, please contact us (https://www.tencentcloud.com/contact-us).</p>
+        /// <p>List of custom fields to deliver. You can extract specified content from HTTP request headers, response headers, cookies, and request bodies.</p><p>Custom field names must be unique. Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p>
         /// </summary>
         [JsonProperty("CustomFields")]
         public CustomField[] CustomFields{ get; set; }
 
         /// <summary>
-        /// <p>The list of custom expression fields for submission can be used to implement personalized real-time log content push through custom log push field names and value expressions. For usage details, refer to [Custom Log Field Expressions]().<br>Only Layer 7 Access Logs (LogType= l7-access-logs or domain) support  adding custom fields.<br>There is a quota limit on the count of custom fields that can be configured. If the quota is insufficient, please [contact us](https://www.tencentcloud.com/contact-us).<br>**Note**: If a field named in CustomExpressionFields has the same name as a field in Fields and CustomFields, the value in CustomExpressionFields takes precedence.</p>
+        /// <p>List of custom expression fields to deliver. By defining the field name and value expression for log delivery, you can deliver personalized real-time log content. For details, see <a href="https://www.tencentcloud.com/document/product/1145/61302">Custom Log Field Expressions</a>.</p><p>Custom fields can be added only for Layer 7 access logs (`LogType` = `l7-access-logs` or `domain`).</p><p>The number of custom fields you can configure is subject to a quota. If the quota is insufficient, <a href="https://www.tencentcloud.com/contact-us">contact us</a>.</p><p><strong>Note</strong>: If a field in `CustomExpressionFields` has the same name as a field in `Fields` or `CustomFields`, the value in `CustomExpressionFields` takes precedence.</p>
         /// </summary>
         [JsonProperty("CustomExpressionFields")]
         public CustomExpressionField[] CustomExpressionFields{ get; set; }
 
         /// <summary>
-        /// <p>Filter criteria of log shipping. If this parameter is not input, all logs will be shipped.</p>
+        /// <p>Filter conditions for log delivery. If left empty, all logs are delivered.</p>
         /// </summary>
         [JsonProperty("DeliveryConditions")]
         public DeliveryCondition[] DeliveryConditions{ get; set; }
 
         /// <summary>
-        /// <p>Sampling ratio in permille. Value range: 1-1000. For example, 605 indicates a sampling ratio of 60.5%. If this parameter is not input, the sampling ratio is 100%.</p>
+        /// <p>Sampling ratio, in per mille. Value range: 1-1000. For example, 605 means a sampling ratio of 60.5%. If left empty, the sampling ratio is 100%.</p>
         /// </summary>
         [JsonProperty("Sample")]
         public ulong? Sample{ get; set; }
 
         /// <summary>
-        /// <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1552/110448?from_cn_redirect=1">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:<ul><li>When TaskType is 'custom_endpoint', the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When TaskType is 's3', the default format is JSON Lines;</li></ul>Particularly, when TaskType is 'cls' or 'log_analysis', the only allowed value for LogFormat.FormatType is 'json', and other parameters in LogFormat will be ignored. It is recommended not to transfer LogFormat.</p>
+        /// <p>Output format for log delivery. For usage details, see <a href="https://www.tencentcloud.com/document/product/1145/64485">Custom Log Output Format</a>. If left blank, the default format applies. The default format logic is as follows:</p><ul><li>When `TaskType` is `custom_endpoint`, the default format is an array of JSON objects, each JSON object represents a log entry;</li><li>When `TaskType` is `s3` or `aws_s3`, the default format is JSON Lines;</li></ul><p>Particularly, when `TaskType` is `cls` or `log_analysis`, the only allowed value for `LogFormat.FormatType` is `json`, and other parameters in `LogFormat` will be ignored. It is recommended not to transfer `LogFormat`.</p>
         /// </summary>
         [JsonProperty("LogFormat")]
         public LogFormat LogFormat{ get; set; }
 
         /// <summary>
-        /// <p>Configuration information of CLS. This parameter is required when TaskType is cls.</p>
+        /// <p>CLS configuration. This parameter is required when `TaskType` is `cls`.</p>
         /// </summary>
         [JsonProperty("CLS")]
         public CLSTopic CLS{ get; set; }
 
         /// <summary>
-        /// <p>Configuration information of the custom HTTP service. This parameter is required when TaskType is custom_endpoint.</p>
+        /// <p>Configuration of the custom HTTP service. This parameter is required when `TaskType` is `custom_endpoint`.</p>
         /// </summary>
         [JsonProperty("CustomEndpoint")]
         public CustomEndpoint CustomEndpoint{ get; set; }
 
         /// <summary>
-        /// <p>Configuration information of the AWS S3-compatible bucket. This parameter is required when TaskType is s3.</p>
+        /// <p>Configuration of the S3-compatible (SigV4 authentication algorithm compatible) object storage. This parameter is required when `TaskType` is `s3`.</p>
         /// </summary>
         [JsonProperty("S3")]
         public S3 S3{ get; set; }
+
+        /// <summary>
+        /// <p>Configuration of the AWS S3 object storage. It uses IAM role authorization, requires no long-term key, and applies only to AWS native S3. This parameter is required when `TaskType` is `aws_s3`.</p>
+        /// </summary>
+        [JsonProperty("AWSS3")]
+        public AWSS3 AWSS3{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "CLS.", this.CLS);
             this.SetParamObj(map, prefix + "CustomEndpoint.", this.CustomEndpoint);
             this.SetParamObj(map, prefix + "S3.", this.S3);
+            this.SetParamObj(map, prefix + "AWSS3.", this.AWSS3);
         }
     }
 }

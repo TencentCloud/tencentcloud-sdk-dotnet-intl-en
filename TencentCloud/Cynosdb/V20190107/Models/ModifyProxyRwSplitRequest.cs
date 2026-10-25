@@ -43,7 +43,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ConsistencyType{ get; set; }
 
         /// <summary>
-        /// <p>Consistency timeout.<br>Value range: 0–1000000 (µs). Setting it to 0 means that if a read-only instance has a delay, causing the consistency policy to fail, the request will wait indefinitely.</p>
+        /// <p>Consistency timeout. Value range: 0–1000000 (ms). If set to 0, requests will wait indefinitely when a read-only instance has a delay that causes the consistency policy to fail.</p>
         /// </summary>
         [JsonProperty("ConsistencyTimeOut")]
         public string ConsistencyTimeOut{ get; set; }

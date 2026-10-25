@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the Tencent Cloud CLS log set.
+        /// Tencent Cloud CLS log set ID.	
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// The ID of the Tencent Cloud CLS log topic.
+        /// Tencent Cloud CLS log topic ID.
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// The region of the Tencent Cloud CLS log set.
+        /// Region of the Tencent Cloud CLS log set.
         /// </summary>
         [JsonProperty("LogSetRegion")]
         public string LogSetRegion{ get; set; }

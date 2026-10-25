@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Log output format. Valid values:</p><ul><li>json: Use the predefined log output format JSON Lines, where each log entry is presented as key-value pairs;</li><li>csv: Use the predefined log output format CSV, where each log entry presents only field values, not field names.</li><li>template: Use a user-customized output template. Each log entry supports custom layout and concatenation based on the custom template, in conjunction with the RecordTemplate field.</li></ul>
+        /// <p>Log output format. Valid values:</p><ul><li>`json`: uses the preset JSON Lines format, where the fields in each log entry are presented as key-value pairs;</li><li>`csv`: uses the preset CSV format, where each log entry presents only field values and not field names;</li><li>`template`: uses a user-defined output template, which allows you to customize the layout and concatenation of each log entry. It must be used together with the `RecordTemplate` parameter.</li></ul>
         /// </summary>
         [JsonProperty("FormatType")]
         public string FormatType{ get; set; }
@@ -43,31 +43,31 @@ namespace TencentCloud.Teo.V20220901.Models
         public string BatchSuffix{ get; set; }
 
         /// <summary>
-        /// <p>Log prefix, a string added before each log record.</p>
+        /// <p>Prefix of a single log entry. String added before each log record.</p>
         /// </summary>
         [JsonProperty("RecordPrefix")]
         public string RecordPrefix{ get; set; }
 
         /// <summary>
-        /// <p>Single-line log suffix, a string appended after each log record.</p>
+        /// <p>Suffix of a single log entry. String appended after each log record.</p>
         /// </summary>
         [JsonProperty("RecordSuffix")]
         public string RecordSuffix{ get; set; }
 
         /// <summary>
-        /// <p>Log separator, a string inserted between log records as a separator. Valid values:</p><ul><li>\n: line break;</li><li>\t: tab character;</li><li>,: half-width comma.</li></ul>
+        /// <p>Log delimiter. String inserted between log records as a separator. Valid values:</p><ul><li>`\n`: line feed;</li><li>`\t`: tab;</li><li>`,`: half-width comma.</li></ul>
         /// </summary>
         [JsonProperty("RecordDelimiter")]
         public string RecordDelimiter{ get; set; }
 
         /// <summary>
-        /// <p>Log template, output template for a single log, length limited to 4KB, takes effect only when FormatType = template. Supports custom layout and concatenation of configured push fields according to the template.</p>
+        /// <p>Log template. Output template of a single log entry, with a length limit of 4 KB. It takes effect only when `FormatType` = `template`. It allows you to customize the layout and concatenation of the configured delivery fields according to the template.</p>
         /// </summary>
         [JsonProperty("RecordTemplate")]
         public string RecordTemplate{ get; set; }
 
         /// <summary>
-        /// <p>Field separator, a string inserted between fields within a single log record as a separator. It takes effect only when FormatType = csv. Valid values:</p><ul><li>\t: tab character;</li><li>,: half-width comma;</li><li>;: half-width semicolon.</li></ul>
+        /// <p>Field delimiter. String inserted between fields within a single log record as a separator. It takes effect only when `FormatType` = `csv`. Valid values:</p><ul><li>`\t`: tab;</li><li>`,`: half-width comma;</li><li>`;`: half-width semicolon.</li></ul>
         /// </summary>
         [JsonProperty("FieldDelimiter")]
         public string FieldDelimiter{ get; set; }

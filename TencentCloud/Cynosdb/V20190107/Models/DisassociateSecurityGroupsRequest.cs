@@ -26,7 +26,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         
         /// <summary>
         /// Array of instance group IDs, starting with the cynosdbmysql-grp- prefix or cluster ID.
-        /// Description: To get the instance group ID of a cluster, perform [Query Cluster Instance Group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
+        /// Description: To get the instance group ID of a cluster, perform [Query cluster instance group](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
