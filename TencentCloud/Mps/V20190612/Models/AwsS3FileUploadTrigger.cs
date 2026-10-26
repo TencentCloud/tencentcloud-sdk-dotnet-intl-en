@@ -31,7 +31,8 @@ namespace TencentCloud.Mps.V20190612.Models
         public string S3Bucket{ get; set; }
 
         /// <summary>
-        /// The region of the AWS S3 bucket.
+        /// The region of the AWS S3 bucket.  us-east-1  
+        /// eu-west-3
         /// </summary>
         [JsonProperty("S3Region")]
         public string S3Region{ get; set; }

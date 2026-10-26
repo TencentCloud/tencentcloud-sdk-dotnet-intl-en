@@ -1,0 +1,318 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{57641715-DA21-3068-8276-85056D8B441F}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1415</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Iss</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20230517\IssClient.cs" />
+    <Compile Include="V20230517\Models\AddDeviceData.cs" />
+    <Compile Include="V20230517\Models\AddOrgData.cs" />
+    <Compile Include="V20230517\Models\AddOrganizationRequest.cs" />
+    <Compile Include="V20230517\Models\AddOrganizationResponse.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupPlanData.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupPlanRequest.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupPlanResponse.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupTemplateData.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\AddRecordBackupTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\AddRecordPlanRequest.cs" />
+    <Compile Include="V20230517\Models\AddRecordPlanResponse.cs" />
+    <Compile Include="V20230517\Models\AddRecordRetrieveTaskData.cs" />
+    <Compile Include="V20230517\Models\AddRecordRetrieveTaskRequest.cs" />
+    <Compile Include="V20230517\Models\AddRecordRetrieveTaskResponse.cs" />
+    <Compile Include="V20230517\Models\AddRecordTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\AddRecordTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\AddStreamAuthData.cs" />
+    <Compile Include="V20230517\Models\AddStreamAuthRequest.cs" />
+    <Compile Include="V20230517\Models\AddStreamAuthResponse.cs" />
+    <Compile Include="V20230517\Models\AddUserDeviceRequest.cs" />
+    <Compile Include="V20230517\Models\AddUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\BatchAddVideoSnapshotConfigChannelRequest.cs" />
+    <Compile Include="V20230517\Models\BatchAddVideoSnapshotConfigChannelResponse.cs" />
+    <Compile Include="V20230517\Models\BatchAssignVLPlanChannelsRequest.cs" />
+    <Compile Include="V20230517\Models\BatchAssignVLPlanChannelsResponse.cs" />
+    <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\BatchDeleteVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\BatchGetVLPlanSourceFileURLRequest.cs" />
+    <Compile Include="V20230517\Models\BatchGetVLPlanSourceFileURLResponse.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlData.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlRequest.cs" />
+    <Compile Include="V20230517\Models\BatchGetVideoSnapshotImageUrlResponse.cs" />
+    <Compile Include="V20230517\Models\BatchOperateDeviceData.cs" />
+    <Compile Include="V20230517\Models\BatchOperateDeviceRequest.cs" />
+    <Compile Include="V20230517\Models\BatchOperateDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\BitRateInfo.cs" />
+    <Compile Include="V20230517\Models\CallISAPIRequest.cs" />
+    <Compile Include="V20230517\Models\CallISAPIResponse.cs" />
+    <Compile Include="V20230517\Models\CallbackURL.cs" />
+    <Compile Include="V20230517\Models\ChannelAttrInfo.cs" />
+    <Compile Include="V20230517\Models\ChannelInfo.cs" />
+    <Compile Include="V20230517\Models\ControlDevicePTZRequest.cs" />
+    <Compile Include="V20230517\Models\ControlDevicePTZResponse.cs" />
+    <Compile Include="V20230517\Models\ControlDevicePresetRequest.cs" />
+    <Compile Include="V20230517\Models\ControlDevicePresetResponse.cs" />
+    <Compile Include="V20230517\Models\ControlDeviceSnapshotRequest.cs" />
+    <Compile Include="V20230517\Models\ControlDeviceSnapshotResponse.cs" />
+    <Compile Include="V20230517\Models\ControlDeviceStreamData.cs" />
+    <Compile Include="V20230517\Models\ControlDeviceStreamRequest.cs" />
+    <Compile Include="V20230517\Models\ControlDeviceStreamResponse.cs" />
+    <Compile Include="V20230517\Models\ControlRecordTimelineRequest.cs" />
+    <Compile Include="V20230517\Models\ControlRecordTimelineResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVLTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\CreateVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteDomainRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteDomainResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteOrganizationRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteOrganizationResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordBackupPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordBackupPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordBackupTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordBackupTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordRetrieveTaskRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordRetrieveTaskResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteRecordTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteTaskRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteTaskResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteUserDeviceRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVLTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DeleteVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeCNAMERequest.cs" />
+    <Compile Include="V20230517\Models\DescribeCNAMEResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceAddrList.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceChannelData.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceChannelRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceChannelResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceData.cs" />
+    <Compile Include="V20230517\Models\DescribeDeviceListData.cs" />
+    <Compile Include="V20230517\Models\DescribeDevicePresetData.cs" />
+    <Compile Include="V20230517\Models\DescribeDevicePresetRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeDevicePresetResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainData.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainRegionData.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainRegionRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainRegionResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeDomainResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeGBDeviceAddrRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeGBDeviceAddrResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeOrganizationData.cs" />
+    <Compile Include="V20230517\Models\DescribeOrganizationRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeOrganizationResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupPlanData.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupTemplateData.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordBackupTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordFileData.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordFileRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordFileResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordPlaybackUrlRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordPlaybackUrlResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordRetrieveTaskData.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordRetrieveTaskRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordRetrieveTaskResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeRecordTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeStreamAuthData.cs" />
+    <Compile Include="V20230517\Models\DescribeStreamAuthRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeStreamAuthResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeTaskRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeTaskResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceListRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceListResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResultRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLPlanResultResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVLTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVLTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoBitRateList.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoBitRateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoBitRateResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoDownloadUrlData.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoDownloadUrlRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoDownloadUrlResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\DescribeVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\EffectiveTime.cs" />
+    <Compile Include="V20230517\Models\GBDeviceSnapInfo.cs" />
+    <Compile Include="V20230517\Models\ISAPIOutputData.cs" />
+    <Compile Include="V20230517\Models\ImageSceneInfo.cs" />
+    <Compile Include="V20230517\Models\ImageUrlInfo.cs" />
+    <Compile Include="V20230517\Models\LifeCycleData.cs" />
+    <Compile Include="V20230517\Models\ListDeviceInfo.cs" />
+    <Compile Include="V20230517\Models\ListDeviceSnapshotsRequest.cs" />
+    <Compile Include="V20230517\Models\ListDeviceSnapshotsResponse.cs" />
+    <Compile Include="V20230517\Models\ListDevicesRequest.cs" />
+    <Compile Include="V20230517\Models\ListDevicesResponse.cs" />
+    <Compile Include="V20230517\Models\ListForbidplayChannelsData.cs" />
+    <Compile Include="V20230517\Models\ListOrganizationChannelsData.cs" />
+    <Compile Include="V20230517\Models\ListOrganizationChannelsRequest.cs" />
+    <Compile Include="V20230517\Models\ListOrganizationChannelsResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlanData.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlanDevicesData.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlanDevicesRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlanDevicesResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlansRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupPlansResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupTemplatesData.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupTemplatesRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordBackupTemplatesResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordPlanDevicesData.cs" />
+    <Compile Include="V20230517\Models\ListRecordPlanDevicesRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordPlanDevicesResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordPlansRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordPlansResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordRetrieveTasksRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordRetrieveTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListRecordTemplatesRequest.cs" />
+    <Compile Include="V20230517\Models\ListRecordTemplatesResponse.cs" />
+    <Compile Include="V20230517\Models\ListSubTasksData.cs" />
+    <Compile Include="V20230517\Models\ListSubTasksRequest.cs" />
+    <Compile Include="V20230517\Models\ListSubTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListTasksData.cs" />
+    <Compile Include="V20230517\Models\ListTasksRequest.cs" />
+    <Compile Include="V20230517\Models\ListTasksResponse.cs" />
+    <Compile Include="V20230517\Models\ListVLPlansRequest.cs" />
+    <Compile Include="V20230517\Models\ListVLPlansResponse.cs" />
+    <Compile Include="V20230517\Models\ListVLTemplatesRequest.cs" />
+    <Compile Include="V20230517\Models\ListVLTemplatesResponse.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskData.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskRequest.cs" />
+    <Compile Include="V20230517\Models\ListVideoDownloadTaskResponse.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateData.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\ListVideoSnapshotTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\ModifyVLPlanRequest.cs" />
+    <Compile Include="V20230517\Models\ModifyVLPlanResponse.cs" />
+    <Compile Include="V20230517\Models\ModifyVideoSnapshotConfigRequest.cs" />
+    <Compile Include="V20230517\Models\ModifyVideoSnapshotConfigResponse.cs" />
+    <Compile Include="V20230517\Models\MultiSnapshotMode.cs" />
+    <Compile Include="V20230517\Models\MultiVideoSnapshotMode.cs" />
+    <Compile Include="V20230517\Models\OrganizationChannelInfo.cs" />
+    <Compile Include="V20230517\Models\PlayRecordData.cs" />
+    <Compile Include="V20230517\Models\PlayRecordRequest.cs" />
+    <Compile Include="V20230517\Models\PlayRecordResponse.cs" />
+    <Compile Include="V20230517\Models\QueryForbidPlayChannelListRequest.cs" />
+    <Compile Include="V20230517\Models\QueryForbidPlayChannelListResponse.cs" />
+    <Compile Include="V20230517\Models\RecordPlanBaseInfo.cs" />
+    <Compile Include="V20230517\Models\RecordPlanChannelInfo.cs" />
+    <Compile Include="V20230517\Models\RecordPlanOptData.cs" />
+    <Compile Include="V20230517\Models\RecordPlaybackUrl.cs" />
+    <Compile Include="V20230517\Models\RecordRetrieveTaskChannelInfo.cs" />
+    <Compile Include="V20230517\Models\RecordRetrieveTaskDetailsInfo.cs" />
+    <Compile Include="V20230517\Models\RecordTemplateInfo.cs" />
+    <Compile Include="V20230517\Models\RecordTemplateTimeSections.cs" />
+    <Compile Include="V20230517\Models\RecordTimeLine.cs" />
+    <Compile Include="V20230517\Models\RefreshDeviceChannelRequest.cs" />
+    <Compile Include="V20230517\Models\RefreshDeviceChannelResponse.cs" />
+    <Compile Include="V20230517\Models\RemoteAddrInfo.cs" />
+    <Compile Include="V20230517\Models\SetForbidPlayChannelsRequest.cs" />
+    <Compile Include="V20230517\Models\SetForbidPlayChannelsResponse.cs" />
+    <Compile Include="V20230517\Models\SetForbidplayChannelParam.cs" />
+    <Compile Include="V20230517\Models\SubTaskData.cs" />
+    <Compile Include="V20230517\Models\TaskData.cs" />
+    <Compile Include="V20230517\Models\Timeline.cs" />
+    <Compile Include="V20230517\Models\UpdateDeviceData.cs" />
+    <Compile Include="V20230517\Models\UpdateDeviceOrganizationRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateDeviceOrganizationResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateDeviceStatusRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateDeviceStatusResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateOrgData.cs" />
+    <Compile Include="V20230517\Models\UpdateOrganizationRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateOrganizationResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupPlanData.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupPlanModify.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupPlanRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupPlanResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupTemplateData.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupTemplateModify.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordBackupTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordPlanData.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordPlanRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordPlanResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordTemplateData.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordTemplateRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateRecordTemplateResponse.cs" />
+    <Compile Include="V20230517\Models\UpdateUserDeviceRequest.cs" />
+    <Compile Include="V20230517\Models\UpdateUserDeviceResponse.cs" />
+    <Compile Include="V20230517\Models\VLPlanInfo.cs" />
+    <Compile Include="V20230517\Models\VLPlanResultDetailInfo.cs" />
+    <Compile Include="V20230517\Models\VLPlanResultSnapshotImageUrlInfo.cs" />
+    <Compile Include="V20230517\Models\VLTemplateInfo.cs" />
+    <Compile Include="V20230517\Models\VideoDownloadTask.cs" />
+    <Compile Include="V20230517\Models\VideoDownloadTaskData.cs" />
+    <Compile Include="V20230517\Models\VideoSceneInfo.cs" />
+    <Compile Include="V20230517\Models\VideoSnapshotConfigInfo.cs" />
+    <Compile Include="V20230517\Models\VideoSnapshotTemplateInfo.cs" />
+  </ItemGroup>
+</Project>

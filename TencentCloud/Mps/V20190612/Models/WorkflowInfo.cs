@@ -38,79 +38,74 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// Workflow status. Valid values:
-        /// <li>Enabled: Enabled,</li>
+        /// <li>Enabled: on</li>
         /// <li>Disabled: Disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+        /// The input rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
         /// </summary>
         [JsonProperty("Trigger")]
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// The location to save the media processing output file.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// The media processing parameters to use.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// Type parameter of a video content audit task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiContentReviewTask")]
         public AiContentReviewTaskInput AiContentReviewTask{ get; set; }
 
         /// <summary>
-        /// Video content analysis task parameter.
+        /// 
         /// </summary>
         [JsonProperty("AiAnalysisTask")]
         public AiAnalysisTaskInput AiAnalysisTask{ get; set; }
 
         /// <summary>
-        /// Type parameter of a video content recognition task.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("AiRecognitionTask")]
         public AiRecognitionTaskInput AiRecognitionTask{ get; set; }
 
         /// <summary>
-        /// Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// 
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }
 
         /// <summary>
-        /// Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+        /// Priority of the task flow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
         /// </summary>
         [JsonProperty("TaskPriority")]
         public long? TaskPriority{ get; set; }
 
         /// <summary>
-        /// The directory to save the media processing output file, such as `/movie/201907/`.
+        /// Storage directory for the output file, such as `/movie/201907/`.
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Workflow creation time, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+        /// Last modification time of the workflow, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

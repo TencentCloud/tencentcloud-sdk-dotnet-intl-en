@@ -37,16 +37,16 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Prompt{ get; set; }
 
         /// <summary>
-        /// <p>Document-to-video model name</p><p>Default value: Wand</p>
-        /// </summary>
-        [JsonProperty("ModelName")]
-        public string ModelName{ get; set; }
-
-        /// <summary>
-        /// <p>Document-to-video model version number</p><p>Default value: 1.0</p>
+        /// <p>Document-to-video model version number</p><p>Enumeration values:</p><ul><li>1.0: 1.0</li><li>1.0-lite: 1.0-lite</li></ul><p>Default value: 1.0</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Documentation generation video model name</p><p>Enumeration values:</p><ul><li>WAND: WAND</li></ul><p>Default value: WAND</p>
+        /// </summary>
+        [JsonProperty("ModelName")]
+        public string ModelName{ get; set; }
 
         /// <summary>
         /// <p>Aspect ratio of the generated video.</p><p>Enumeration values: </p><ul><li>16:9: 16:9</li><li>9:16: 9:16</li><li>1:1: 1:1</li></ul><p>Default value: 16:9</p>
@@ -116,8 +116,8 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArraySimple(map, prefix + "FileUrl.", this.FileUrl);
             this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
-            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+            this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);

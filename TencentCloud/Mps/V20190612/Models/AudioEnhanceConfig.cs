@@ -43,7 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public VolumeBalanceConfig VolumeBalance{ get; set; }
 
         /// <summary>
-        /// <p>Audio beautification configurations.</p>
+        /// <p>Audio improvement configuration.</p>
         /// </summary>
         [JsonProperty("Beautify")]
         public AudioBeautifyConfig Beautify{ get; set; }

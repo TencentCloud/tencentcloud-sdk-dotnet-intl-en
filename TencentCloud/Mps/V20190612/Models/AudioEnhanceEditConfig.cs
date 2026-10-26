@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// <p>Capability configuration switch</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
+        /// <p>Capability configuration switch</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul><p>Default value: OFF</p>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// <p>Audio editing type</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify the enumeration value</p>
+        /// <p>Types of audio editing</p><p>Enumeration values:</p><ul><li>restore: Repair</li></ul><p>When enabled, you must explicitly specify an enumeration value</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

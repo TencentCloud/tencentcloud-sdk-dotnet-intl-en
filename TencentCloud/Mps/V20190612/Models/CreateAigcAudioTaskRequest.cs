@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
+        /// <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0.<br>Supported versions for EL: compose_v2 and sound_t2s_v2.<br>Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
         /// </summary>
         [JsonProperty("ModelVersion")]
         public string ModelVersion{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public AigcAudioExtraParam ExtraParameters{ get; set; }
 
         /// <summary>
-        /// <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
+        /// <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;。<br>Supported pass-through parameters: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate.</li><li>Pass-through parameters supported for EL music generation:<br>PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters.</li><li>Pass-through parameters supported by the Mureka model:<br>n: Specifies the number of output audio files.<br>Non-instrumental version supports: lyrics, gender, reference_id, melody_id.<br>Instrumental version supports: instrumental_id.</li></ol>
         /// </summary>
         [JsonProperty("AdditionalParameters")]
         public string AdditionalParameters{ get; set; }

@@ -25,28 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Workflow ID filter. Array length limit: 100.
+        /// <p>Workflow ID filter condition, with an array length limit of 100.</p>
         /// </summary>
         [JsonProperty("WorkflowIds")]
         public long?[] WorkflowIds{ get; set; }
 
         /// <summary>
-        /// Workflow status. Valid values:
-        /// <li>Enabled: Enabled,</li>
-        /// <li>Disabled: Disabled.</li>
-        /// If this parameter is left empty, the workflow status will not be distinguished.
+        /// <p>Workflow status. Value range:</p><li>Enabled: on,</li><li>Disabled: off.</li>If this parameter is not specified, workflow status is not distinguished.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Paging offset. Default value: 0.
+        /// <p>Paging offset. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number of returned entries. Default value: 10. Maximum value: 100.
+        /// <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

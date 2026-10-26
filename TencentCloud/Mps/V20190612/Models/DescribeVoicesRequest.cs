@@ -79,6 +79,18 @@ namespace TencentCloud.Mps.V20190612.Models
         public string[] Scenes{ get; set; }
 
         /// <summary>
+        /// <p>Pagination query page number. Value range: starts from 1. Default value: 1.</p>
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
+        /// <summary>
+        /// <p>Page size. If left blank, all data meeting conditions will be returned by default.</p>
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
         /// <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
         /// voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
         /// </summary>
@@ -100,6 +112,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Languages.", this.Languages);
             this.SetParamArraySimple(map, prefix + "Labels.", this.Labels);
             this.SetParamArraySimple(map, prefix + "Scenes.", this.Scenes);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "ExtParam", this.ExtParam);
         }
     }

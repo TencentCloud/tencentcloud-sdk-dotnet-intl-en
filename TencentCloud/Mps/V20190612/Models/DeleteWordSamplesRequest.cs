@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Keyword, array length limit: 100 words.
+        /// <p>Keyword. Array length limit: 100 words.</p>
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }

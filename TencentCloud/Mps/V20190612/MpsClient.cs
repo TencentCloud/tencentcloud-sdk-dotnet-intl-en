@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.intl.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1415";
 
         /// <summary>
         /// Client constructor.
@@ -2157,7 +2157,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to get the list of workflow details by workflow ID.
+        /// Based on the workflow ID, get the workflow details list.
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowsRequest"/></param>
         /// <returns><see cref="DescribeWorkflowsResponse"/></returns>
@@ -2167,7 +2167,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// This API is used to get the list of workflow details by workflow ID.
+        /// Based on the workflow ID, get the workflow details list.
         /// </summary>
         /// <param name="req"><see cref="DescribeWorkflowsRequest"/></param>
         /// <returns><see cref="DescribeWorkflowsResponse"/></returns>

@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Number of eligible entries.
+        /// <p>Total number of records that meet filter conditions.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Workflow information array.
+        /// <p>Workflow information array.</p>
         /// </summary>
         [JsonProperty("WorkflowInfoSet")]
         public WorkflowInfo[] WorkflowInfoSet{ get; set; }
