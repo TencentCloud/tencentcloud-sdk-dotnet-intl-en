@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public long? CheckMode{ get; set; }
 
         /// <summary>
-        /// <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>
+        /// <p>Identity document type used for authentication. Currently supported:<br>1.HKIDCard: Hong Kong (China) identity card<br>2.MLIDCard: Malaysian identity card<br>3.IndonesiaIDCard: Indonesian Identity Card<br>4.PhilippinesVoteID: Philippines voter card<br>5.PhilippinesDrivingLicense: Philippines driving license<br>6.PhilippinesTinID: Philippines TinID<br>7.PhilippinesSSSID: Philippines SSSID<br>8.PhilippinesUMID: Philippines UMID<br>9.InternationalIDPassport: Passport for Hong Kong (China), Macao (China), and Taiwan (China) as well as overseas passport<br>10.ThailandIDCard: Thai Identity Card<br>11.SingaporeIDCard: Singapore ID card<br>12.MainlandIDCard: Mainland ID card</p>13.VietnamIDCard: Vietnam ID card</p>
         /// </summary>
         [JsonProperty("IDCardType")]
         public string IDCardType{ get; set; }
@@ -126,6 +126,22 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
+        /// <summary>
+        /// When CheckMode = 1, this defines the waiting policy for OCR recognition results.
+        /// Enumeration values:
+        /// required: Wait for OCR result after document capture.
+        /// skip: Wait for OCR result confirmation before entering liveness check.
+        /// Default value: required.
+        /// </summary>
+        [JsonProperty("OcrWaitPolicy")]
+        public string OcrWaitPolicy{ get; set; }
+
+        /// <summary>
+        /// When CheckMode = 1, verification status callback URL. If configured, the service will actively push notifications to this address upon process completion. Leave it blank to disable callbacks. As callbacks cannot guarantee 100% delivery, it is recommended to use a polling mechanism to retrieve the final status.
+        /// </summary>
+        [JsonProperty("WebhookUrl")]
+        public string WebhookUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +165,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
             this.SetParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
             this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "OcrWaitPolicy", this.OcrWaitPolicy);
+            this.SetParamSimple(map, prefix + "WebhookUrl", this.WebhookUrl);
         }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDemo", "Windows
 EndProject
 Project("{C0C5CE89-418D-399D-AED0-9B87D308C5C7}") = "TencentCloudCommon", "TencentCloud\Common\TencentCloudCommon.csproj", "{C0C5CE89-418D-399D-AED0-9B87D308C5C7}"
 EndProject
+Project("{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}") = "TencentCloudAdp", "TencentCloud\Adp\TencentCloudAdp.csproj", "{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}"
+EndProject
 Project("{4CD0DF9B-4FE8-3573-9FD9-46CE7CD5A03A}") = "TencentCloudAdvisor", "TencentCloud\Advisor\TencentCloudAdvisor.csproj", "{4CD0DF9B-4FE8-3573-9FD9-46CE7CD5A03A}"
 EndProject
 Project("{81C24832-FA1E-3480-AD14-AC5089F6246D}") = "TencentCloudAi3d", "TencentCloud\Ai3d\TencentCloudAi3d.csproj", "{81C24832-FA1E-3480-AD14-AC5089F6246D}"
@@ -321,6 +323,10 @@ Global
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0C5CE89-418D-399D-AED0-9B87D308C5C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4CD0DF9B-4FE8-3573-9FD9-46CE7CD5A03A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4CD0DF9B-4FE8-3573-9FD9-46CE7CD5A03A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CD0DF9B-4FE8-3573-9FD9-46CE7CD5A03A}.Release|Any CPU.ActiveCfg = Release|Any CPU

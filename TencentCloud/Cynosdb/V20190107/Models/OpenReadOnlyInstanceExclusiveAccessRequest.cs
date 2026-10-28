@@ -25,13 +25,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the clusterId.
+        /// Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the clusterId.
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Please use [Cluster information description](https://www.tencentcloud.com/document/api/1003/48086?from_cn_redirect=1) to get the instanceId.
+        /// Please use [Cluster information description](https://www.tencentcloud.com/document/api/1098/40752) to get the instanceId.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

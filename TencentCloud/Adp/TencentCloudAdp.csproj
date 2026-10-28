@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.1417</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageId>TencentCloudSDKIntlEN.Adp</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 Tencent. All Rights Reserved.</Copyright>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>$(DotnetKeyFile)</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20260520\AdpClient.cs" />
+    <Compile Include="V20260520\Models\DBRetrievalConfig.cs" />
+    <Compile Include="V20260520\Models\DocRetrievalConfig.cs" />
+    <Compile Include="V20260520\Models\ExpirationAwareness.cs" />
+    <Compile Include="V20260520\Models\FinalRerankConfig.cs" />
+    <Compile Include="V20260520\Models\GraphRAG.cs" />
+    <Compile Include="V20260520\Models\KBRetrievalConfig.cs" />
+    <Compile Include="V20260520\Models\KVPair.cs" />
+    <Compile Include="V20260520\Models\KnowledgeResult.cs" />
+    <Compile Include="V20260520\Models\KnowledgeSnippetProfile.cs" />
+    <Compile Include="V20260520\Models\KnowledgeSource.cs" />
+    <Compile Include="V20260520\Models\ModelDetailInfo.cs" />
+    <Compile Include="V20260520\Models\ModelParams.cs" />
+    <Compile Include="V20260520\Models\QARetrievalConfig.cs" />
+    <Compile Include="V20260520\Models\RerankConfig.cs" />
+    <Compile Include="V20260520\Models\RetrievalOption.cs" />
+    <Compile Include="V20260520\Models\SearchAdvancedConfig.cs" />
+    <Compile Include="V20260520\Models\SearchBilling.cs" />
+    <Compile Include="V20260520\Models\SearchContext.cs" />
+    <Compile Include="V20260520\Models\SearchFilter.cs" />
+    <Compile Include="V20260520\Models\SearchFilterConfig.cs" />
+    <Compile Include="V20260520\Models\SearchInput.cs" />
+    <Compile Include="V20260520\Models\SearchKnowledgeRequest.cs" />
+    <Compile Include="V20260520\Models\SearchKnowledgeResponse.cs" />
+    <Compile Include="V20260520\Models\SearchResultPayload.cs" />
+    <Compile Include="V20260520\Models\SimilarQuestionExtra.cs" />
+    <Compile Include="V20260520\Models\TableEnhancement.cs" />
+    <Compile Include="V20260520\Models\TokenUsage.cs" />
+  </ItemGroup>
+</Project>
