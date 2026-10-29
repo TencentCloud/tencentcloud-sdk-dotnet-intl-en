@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IPv4 subnet.
+        /// IPv4 IP range list.
         /// </summary>
         [JsonProperty("IPv4")]
         public string[] IPv4{ get; set; }
 
         /// <summary>
-        /// IPv6 subnet.
+        /// IPv6 IP range list.
         /// </summary>
         [JsonProperty("IPv6")]
         public string[] IPv6{ get; set; }

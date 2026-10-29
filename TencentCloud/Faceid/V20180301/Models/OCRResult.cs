@@ -91,6 +91,15 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("CardBackImageBase64")]
         public string CardBackImageBase64{ get; set; }
 
+        /// <summary>
+        /// Card verification status:
+        /// PROCESSING: Verification is in progress.
+        /// COMPLETED: Verification completed with no alerts.
+        /// ABNORMAL: Verification completed with alerts raised.
+        /// </summary>
+        [JsonProperty("CardResultStatus")]
+        public string CardResultStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +117,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "OriginalCardInfo", this.OriginalCardInfo);
             this.SetParamSimple(map, prefix + "HeadImageBase64", this.HeadImageBase64);
             this.SetParamSimple(map, prefix + "CardBackImageBase64", this.CardBackImageBase64);
+            this.SetParamSimple(map, prefix + "CardResultStatus", this.CardResultStatus);
         }
     }
 }

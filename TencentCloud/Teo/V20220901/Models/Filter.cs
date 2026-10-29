@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// Value of the filtered field.
+        /// Filter value of the field.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

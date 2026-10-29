@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1417";
+       private const string sdkVersion = "SDK_NET_3.0.1418";
 
         /// <summary>
         /// Client constructor.
@@ -1862,6 +1862,59 @@ namespace TencentCloud.Teo.V20220901
         public DescribeAvailableCustomActionsForRuleEngineResponse DescribeAvailableCustomActionsForRuleEngineSync(DescribeAvailableCustomActionsForRuleEngineRequest req)
         {
             return InternalRequestAsync<DescribeAvailableCustomActionsForRuleEngineResponse>(req, "DescribeAvailableCustomActionsForRuleEngine")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query detailed information about the origin protection IP range control domain, including the version number and specific IP range information.
+        /// The main difference between standard control domain and streamlined control domain is the number of IP ranges provided. The latter has fewer IP ranges, but has some usage restrictions. For specific restrictions, consult the product. The format description is as follows:
+        /// Standard control domain:
+        /// <li>gaz: standard global control domain;</li>
+        /// <li>mlc: Standard China control domain;</li>
+        /// <li>emc: standard overseas (worldwide excluding China) control domain;</li>
+        /// Streamline the control domain.
+        /// <li>plat-gaz: simplified global control domain;</li>
+        /// <li>plat-mlc: Simplified China control domain;</li>
+        /// <li>plat-emc: Simplified overseas (global excluding China) control domain;</li>
+        /// <li>plat-specific-gaz: custom edition global availability zone control domain;</li>
+        /// <li>plat-specific-mlc: custom edition for controlling the Chinese mainland availability zone control domain;</li>
+        /// <li>plat-specific-emc: custom edition control domain for availability zones worldwide (excluding Chinese mainland);</li>
+        /// Abbreviation description:
+        /// <li>gaz:Global AZ Availability Zone;</li>
+        /// <li>mlc:mainlandChina;</li>
+        /// <li>emc:Exclude mainlandChina.</li>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableOriginACLFamilyRequest"/></param>
+        /// <returns><see cref="DescribeAvailableOriginACLFamilyResponse"/></returns>
+        public Task<DescribeAvailableOriginACLFamilyResponse> DescribeAvailableOriginACLFamily(DescribeAvailableOriginACLFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableOriginACLFamilyResponse>(req, "DescribeAvailableOriginACLFamily");
+        }
+
+        /// <summary>
+        /// This API is used to query detailed information about the origin protection IP range control domain, including the version number and specific IP range information.
+        /// The main difference between standard control domain and streamlined control domain is the number of IP ranges provided. The latter has fewer IP ranges, but has some usage restrictions. For specific restrictions, consult the product. The format description is as follows:
+        /// Standard control domain:
+        /// <li>gaz: standard global control domain;</li>
+        /// <li>mlc: Standard China control domain;</li>
+        /// <li>emc: standard overseas (worldwide excluding China) control domain;</li>
+        /// Streamline the control domain.
+        /// <li>plat-gaz: simplified global control domain;</li>
+        /// <li>plat-mlc: Simplified China control domain;</li>
+        /// <li>plat-emc: Simplified overseas (global excluding China) control domain;</li>
+        /// <li>plat-specific-gaz: custom edition global availability zone control domain;</li>
+        /// <li>plat-specific-mlc: custom edition for controlling the Chinese mainland availability zone control domain;</li>
+        /// <li>plat-specific-emc: custom edition control domain for availability zones worldwide (excluding Chinese mainland);</li>
+        /// Abbreviation description:
+        /// <li>gaz:Global AZ Availability Zone;</li>
+        /// <li>mlc:mainlandChina;</li>
+        /// <li>emc:Exclude mainlandChina.</li>
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailableOriginACLFamilyRequest"/></param>
+        /// <returns><see cref="DescribeAvailableOriginACLFamilyResponse"/></returns>
+        public DescribeAvailableOriginACLFamilyResponse DescribeAvailableOriginACLFamilySync(DescribeAvailableOriginACLFamilyRequest req)
+        {
+            return InternalRequestAsync<DescribeAvailableOriginACLFamilyResponse>(req, "DescribeAvailableOriginACLFamily")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
