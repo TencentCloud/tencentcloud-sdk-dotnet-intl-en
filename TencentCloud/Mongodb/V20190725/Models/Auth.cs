@@ -29,7 +29,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// - 0: no permissions.
         /// - 1: read-only.
         /// - 3: read-write.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Mask")]
         public long? Mask{ get; set; }
@@ -38,7 +37,6 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// Specifies the name of the database that has the current account permissions.
         /// - \*: indicates all databases.
         /// - db.name: indicates the database with a specific name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("NameSpace")]
         public string NameSpace{ get; set; }

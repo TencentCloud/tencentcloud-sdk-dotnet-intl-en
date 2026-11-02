@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.intl.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1329";
+       private const string sdkVersion = "SDK_NET_3.0.1419";
 
         /// <summary>
         /// Client constructor.
@@ -224,6 +224,48 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// Create a database role
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRoleRequest"/></param>
+        /// <returns><see cref="CreateInstanceRoleResponse"/></returns>
+        public Task<CreateInstanceRoleResponse> CreateInstanceRole(CreateInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceRoleResponse>(req, "CreateInstanceRole");
+        }
+
+        /// <summary>
+        /// Create a database role
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceRoleRequest"/></param>
+        /// <returns><see cref="CreateInstanceRoleResponse"/></returns>
+        public CreateInstanceRoleResponse CreateInstanceRoleSync(CreateInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceRoleResponse>(req, "CreateInstanceRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Create a database account
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceUserRequest"/></param>
+        /// <returns><see cref="CreateInstanceUserResponse"/></returns>
+        public Task<CreateInstanceUserResponse> CreateInstanceUser(CreateInstanceUserRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceUserResponse>(req, "CreateInstanceUser");
+        }
+
+        /// <summary>
+        /// Create a database account
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceUserRequest"/></param>
+        /// <returns><see cref="CreateInstanceUserResponse"/></returns>
+        public CreateInstanceUserResponse CreateInstanceUserSync(CreateInstanceUserRequest req)
+        {
+            return InternalRequestAsync<CreateInstanceUserResponse>(req, "CreateInstanceUser")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to create a log download task.
         /// </summary>
         /// <param name="req"><see cref="CreateLogDownloadTaskRequest"/></param>
@@ -283,6 +325,48 @@ namespace TencentCloud.Mongodb.V20190725
         public DeleteDBBackupsResponse DeleteDBBackupsSync(DeleteDBBackupsRequest req)
         {
             return InternalRequestAsync<DeleteDBBackupsResponse>(req, "DeleteDBBackups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete role
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRoleRequest"/></param>
+        /// <returns><see cref="DeleteInstanceRoleResponse"/></returns>
+        public Task<DeleteInstanceRoleResponse> DeleteInstanceRole(DeleteInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceRoleResponse>(req, "DeleteInstanceRole");
+        }
+
+        /// <summary>
+        /// Delete role
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceRoleRequest"/></param>
+        /// <returns><see cref="DeleteInstanceRoleResponse"/></returns>
+        public DeleteInstanceRoleResponse DeleteInstanceRoleSync(DeleteInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceRoleResponse>(req, "DeleteInstanceRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a database account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceUserRequest"/></param>
+        /// <returns><see cref="DeleteInstanceUserResponse"/></returns>
+        public Task<DeleteInstanceUserResponse> DeleteInstanceUser(DeleteInstanceUserRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceUserResponse>(req, "DeleteInstanceUser");
+        }
+
+        /// <summary>
+        /// This API is used to delete a database account.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInstanceUserRequest"/></param>
+        /// <returns><see cref="DeleteInstanceUserResponse"/></returns>
+        public DeleteInstanceUserResponse DeleteInstanceUserSync(DeleteInstanceUserRequest req)
+        {
+            return InternalRequestAsync<DeleteInstanceUserResponse>(req, "DeleteInstanceUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -690,6 +774,27 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// Obtains the list of roles
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRolesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceRolesResponse"/></returns>
+        public Task<DescribeInstanceRolesResponse> DescribeInstanceRoles(DescribeInstanceRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceRolesResponse>(req, "DescribeInstanceRoles");
+        }
+
+        /// <summary>
+        /// Obtains the list of roles
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRolesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceRolesResponse"/></returns>
+        public DescribeInstanceRolesResponse DescribeInstanceRolesSync(DescribeInstanceRolesRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceRolesResponse>(req, "DescribeInstanceRoles")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to view the enabling status of Secure Sockets Layer (SSL) for an instance.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceSSLRequest"/></param>
@@ -707,6 +812,27 @@ namespace TencentCloud.Mongodb.V20190725
         public DescribeInstanceSSLResponse DescribeInstanceSSLSync(DescribeInstanceSSLRequest req)
         {
             return InternalRequestAsync<DescribeInstanceSSLResponse>(req, "DescribeInstanceSSL")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUsersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUsersResponse"/></returns>
+        public Task<DescribeInstanceUsersResponse> DescribeInstanceUsers(DescribeInstanceUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUsersResponse>(req, "DescribeInstanceUsers");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the list of accounts.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceUsersRequest"/></param>
+        /// <returns><see cref="DescribeInstanceUsersResponse"/></returns>
+        public DescribeInstanceUsersResponse DescribeInstanceUsersSync(DescribeInstanceUsersRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceUsersResponse>(req, "DescribeInstanceUsers")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1463,6 +1589,48 @@ namespace TencentCloud.Mongodb.V20190725
         public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
         {
             return InternalRequestAsync<TerminateDBInstancesResponse>(req, "TerminateDBInstances")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update a database role.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstanceRoleRequest"/></param>
+        /// <returns><see cref="UpdateInstanceRoleResponse"/></returns>
+        public Task<UpdateInstanceRoleResponse> UpdateInstanceRole(UpdateInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateInstanceRoleResponse>(req, "UpdateInstanceRole");
+        }
+
+        /// <summary>
+        /// This API is used to update a database role.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstanceRoleRequest"/></param>
+        /// <returns><see cref="UpdateInstanceRoleResponse"/></returns>
+        public UpdateInstanceRoleResponse UpdateInstanceRoleSync(UpdateInstanceRoleRequest req)
+        {
+            return InternalRequestAsync<UpdateInstanceRoleResponse>(req, "UpdateInstanceRole")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Update database account
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstanceUserRequest"/></param>
+        /// <returns><see cref="UpdateInstanceUserResponse"/></returns>
+        public Task<UpdateInstanceUserResponse> UpdateInstanceUser(UpdateInstanceUserRequest req)
+        {
+            return InternalRequestAsync<UpdateInstanceUserResponse>(req, "UpdateInstanceUser");
+        }
+
+        /// <summary>
+        /// Update database account
+        /// </summary>
+        /// <param name="req"><see cref="UpdateInstanceUserRequest"/></param>
+        /// <returns><see cref="UpdateInstanceUserResponse"/></returns>
+        public UpdateInstanceUserResponse UpdateInstanceUserSync(UpdateInstanceUserRequest req)
+        {
+            return InternalRequestAsync<UpdateInstanceUserResponse>(req, "UpdateInstanceUser")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
