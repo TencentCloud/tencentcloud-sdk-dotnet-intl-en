@@ -25,67 +25,67 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of precise rate limiting. rule ID supports different rule configuration operations: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the RateLimitingRules parameter will be deleted.</li>.
+        /// <p>ID of the precise rate limiting rule.<br>Different rule configuration operations can be performed by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the RateLimitingRules parameter will be deleted.</li></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the precise rate limit.
+        /// <p>Name of the precise rate limit.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+        /// <p>The specific content of precise rate limiting must comply with expression syntax. For detailed specifications, see <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// Speed limit mode. Within the statistical time window CountingPeriod, the following speed limit modes can be configured for requests that meet the feature CountBy:<li>Block: Block access source. When the count exceeds the threshold MaxRequestThreshold, execute Action disposal for ALL subsequent requests that meet the feature within the ActionDuration. </li><li>Throttle: Only dispose excess requests. When the count exceeds the threshold MaxRequestThreshold, only execute Action disposal for requests that exceed the threshold, and stop disposal when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br />Default value is Block.
+        /// <p>Bandwidth limit mode. Within the statistical time window CountingPeriod, for requests that meet the CountBy feature, the following bandwidth limit modes can be configured: <li>Block: Block the access source. When the count exceeds the MaxRequestThreshold, execute the Action on all subsequent requests that meet the feature within the ActionDuration;</li><li>Throttle: Only handle excess requests. When the count exceeds the MaxRequestThreshold, execute the Action only on requests that exceed the threshold, and stop when the window ends. At this point, the ActionDuration parameter will be ignored.</li><br>Default value: Block.</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The match mode of the rate threshold request feature. this field is required when Enabled is on.<br /><br />when there are multiple conditions, composite conditions are used to collect statistics. the maximum number of conditions cannot exceed 5. valid values:<br/><li><b>http.request.ip</b>: client ip;</li><li><b>http.request.xff_header_ip</b>: client ip (priority match xff header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies['session']</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers['user-agent']</b>: http header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: ja3 fingerprint of the request;</li><li><b>http.request.ja4</b>: ja4 fingerprint of the request;</li><li><b>http.request.uri.query['test']</b>: URL query parameter named test, where test can be replaced with your own parameter.</li>.
+        /// <p>Match mode of the rate threshold request feature. Required when Enabled is on.<br><br>When there are multiple conditions, they will be combined for statistics and calculation. A maximum of 5 conditions is allowed. Valid values:<br><li><b>http.request.ip</b>: client IP;</li><li><b>http.request.xff_header_ip</b>: client IP (priority match XFF header);</li><li><b>http.request.uri.path</b>: access path of the request;</li><li><b>http.request.cookies[&#39;session&#39;]</b>: Cookie named session, where session can be replaced with your own parameter;</li><li><b>http.request.headers[&#39;user-agent&#39;]</b>: HTTP header named user-agent, where user-agent can be replaced with your own parameter;</li><li><b>http.request.ja3</b>: JA3 fingerprint of the request;</li><li><b>http.request.ja4</b>: JA4 fingerprint of the request;</li><li><b>http.request.uri.query[&#39;test&#39;]</b>: URL query parameter named test, where test can be replaced with your own parameter.</li></p>
         /// </summary>
         [JsonProperty("CountBy")]
         public string[] CountBy{ get; set; }
 
         /// <summary>
-        /// Precision rate limiting specifies the cumulative number of interceptions within the time range. value ranges from 1 to 100000.
+        /// <p>Cumulative number of interceptions by precise rate limiting within the time range, with a value range of 1 to 100000.</p>
         /// </summary>
         [JsonProperty("MaxRequestThreshold")]
         public long? MaxRequestThreshold{ get; set; }
 
         /// <summary>
-        /// Specifies the time window for statistics. valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li>.
+        /// <p>Time window for statistics. Valid values: <li>1s: 1 second;</li><li>5s: 5 seconds;</li><li>10s: 10 seconds;</li><li>20s: 20 seconds;</li><li>30s: 30 seconds;</li><li>40s: 40 seconds;</li><li>50s: 50 seconds;</li><li>1m: 1 minute;</li><li>2m: 2 minutes;</li><li>5m: 5 minutes;</li><li>10m: 10 minutes;</li><li>1h: 1 hour.</li></p>
         /// </summary>
         [JsonProperty("CountingPeriod")]
         public string CountingPeriod{ get; set; }
 
         /// <summary>
-        /// Duration of the Action. Only the following units are supported: <li>s: second, value range 1-120;</li><li>m: minute, value range 1-120;</li><li>h: hour, value range 1-48;</li><li>d: day, value range 1-30.</li><br />This parameter will be ignored and will not take effect when Mode is Throttle.
+        /// <p>Duration of the Action. Supported units: <li>s: seconds, value range: 1-120;</li><li>m: minutes, value range: 1-120;</li><li>h: hours, value range: 1-48;</li><li>d: days, value range: 1-30.</li><br>When Mode is Throttle, this parameter will be ignored and will not take effect.</p>
         /// </summary>
         [JsonProperty("ActionDuration")]
         public string ActionDuration{ get; set; }
 
         /// <summary>
-        /// Precision rate limiting handling methods. valid values: <li>Monitor: Monitor;</li> <li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL;</li>.
+        /// <p>Handling method for precise rate limiting. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports ReturnCustomPage and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }
 
         /// <summary>
-        /// Precision rate limiting specifies the priority. value range is 0 to 100. default is 0.
+        /// <p>Priority of precise rate limiting, ranging from 0 to 100, with a default value of 0.</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Whether the precise rate limiting rule is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+        /// <p>Whether the precise rate limiting rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }

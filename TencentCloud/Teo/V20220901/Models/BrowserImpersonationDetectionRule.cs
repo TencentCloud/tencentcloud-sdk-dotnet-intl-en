@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Browser spoofing identification rule ID. rule ID supports different rule configuration operations: <li> <b>add</b> a new rule: ID is empty or without specifying the ID parameter;</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li> <li> <b>delete</b> an existing rule: existing Rules not included in the Rules list of the BrowserImpersonationDetection parameter will be deleted.</li>.
+        /// ID of the browser spoofing identification rule.<br>You can perform different rule configuration operations by rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or unspecified;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BrowserImpersonationDetection parameter will be deleted.</li>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the browser spoofing identification rule.
+        /// Name of the browser spoofing identification rule.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether browser spoofing detection is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+        /// Whether to enable the browser forgery identification rule. Valid values: <li>on: enable;</li><li>off: disable.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Specifies the specific content of browser spoofing identification rules, which only support configuration of request Method (Method), request Path (Path), and request URL, and must comply with expression grammar. for detailed specifications, please refer to the product document.
+        /// Specific content of the browser spoofing identification rule. It only supports the configuration of request Method, request Path, and request URL, which must comply with expression syntax. For detailed specifications, see the product document.
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// Describes the handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
+        /// Handling method for browser spoofing identification rules, including Cookie verification, session tracking configuration, and client behavior validation configuration.
         /// </summary>
         [JsonProperty("Action")]
         public BrowserImpersonationDetectionAction Action{ get; set; }

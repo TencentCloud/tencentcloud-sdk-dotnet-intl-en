@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of client authentication. when using ModifySecurityPolicy to modify Web protection configuration: <li> if Rules in SecurityPolicy.BotManagement.ClientAttestationRules is not specified or the parameter length of Rules is zero: clear all client authentication rule configuration. </li> <li> if ClientAttestationRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing client authentication rule configuration and do not modify. </li>.
+        /// List of client authentication. When using ModifySecurityPolicy to modify Web protection configuration: <li> If the Rules parameter in SecurityPolicy.BotManagement.ClientAttestationRules is not specified, or the Rules parameter length is zero: clear all client authentication rule configurations.</li> <li> If the ClientAttestationRules parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing client authentication rule configuration without modification.</li>
         /// </summary>
         [JsonProperty("Rules")]
         public ClientAttestationRule[] Rules{ get; set; }

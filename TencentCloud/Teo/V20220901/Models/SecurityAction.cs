@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Specific actions for safe execution. Valid values:</p><ul><li>Deny: block, prevent requests from accessing site resources;</li><li>Monitor: observe, only record logs;</li><li>Redirect: redirect to URL;</li><li>Disabled: not enabled, do not enable the specified rule;</li><li>Allow: pass, skip the remaining rules of the current security module. Delay response when the AllowActionParameters parameter is configured;</li><li>Challenge: challenge, respond with challenge content;</li><li>BlockIP: to be deprecated, IP blocking;</li><li>ReturnCustomPage: to be deprecated, use a specified page for interception;</li><li>JSChallenge: to be deprecated, JavaScript challenge;</li><li>ManagedChallenge: to be deprecated, managed challenge.</li></ul>
+        /// <p>Specific actions for safe execution. Valid values:</p><ul><li>Deny: block, prevent requests from accessing site resources;</li><li>Monitor: observe, only record logs;</li><li>Redirect: redirect to URL;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Allow: allow, skip the remaining rules of the current security module. Delay response when the AllowActionParameters parameter is configured;</li><li>Challenge: challenge, respond with challenge content;</li><li>BlockIP: to be deprecated, IP block;</li><li>ReturnCustomPage: to be deprecated, use a specified page for interception;</li><li>JSChallenge: to be deprecated, JavaScript challenge;</li><li>ManagedChallenge: to be deprecated, managed challenge.</li></ul>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ChallengeActionParameters ChallengeActionParameters{ get; set; }
 
         /// <summary>
-        /// <p>To be deprecated. Additional parameter when Name is BlockIP.</p>
+        /// <p>To be deprecated. An additional parameter when Name is BlockIP.</p>
         /// </summary>
         [JsonProperty("BlockIPActionParameters")]
         public BlockIPActionParameters BlockIPActionParameters{ get; set; }

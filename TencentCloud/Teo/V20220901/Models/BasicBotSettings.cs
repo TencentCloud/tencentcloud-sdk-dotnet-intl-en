@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Client IP source IDC configuration, used for handling access requests from client ips in idcs (data centers). such source requests are not directly accessed by mobile terminals or browser-side.
+        /// Source IDC configuration of the client IP, used for handling access requests from client IPs in IDCs (data centers). This type of source request is not directly accessed from a mobile terminal or browser side.
         /// </summary>
         [JsonProperty("SourceIDC")]
         public SourceIDC SourceIDC{ get; set; }
 
         /// <summary>
-        /// Search engine crawler configuration, used to handle requests from search engine crawlers. the IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
+        /// Search engine crawler configuration, used for handling requests from search engine crawlers. The IP, User-Agent, or rDNS results of such requests match known search engine crawlers.
         /// </summary>
         [JsonProperty("SearchEngineBots")]
         public SearchEngineBots SearchEngineBots{ get; set; }
 
         /// <summary>
-        /// Commercial or open-source tool UA feature configuration (original UA feature rule), used to handle access requests from known commercial or open-source tools. the User-Agent header of such requests complies with known commercial or open-source tool features.
+        /// UA feature configuration for commercial or open-source tools (formerly UA feature rules), used for handling access requests from known commercial or open-source tools. The User-Agent header of such requests matches the features of known commercial or open-source tools.
         /// </summary>
         [JsonProperty("KnownBotCategories")]
         public KnownBotCategories KnownBotCategories{ get; set; }
 
         /// <summary>
-        /// Threat intelligence database (originally client profile analysis) configuration, used for handling client ips with specific risk characteristics in recent access behavior.
+        /// IP threat intelligence database (formerly client profile analysis) configuration, used for handling client IP addresses with specific risk characteristics in recent access behavior.
         /// </summary>
         [JsonProperty("IPReputation")]
         public IPReputation IPReputation{ get; set; }
 
         /// <summary>
-        /// Specifies the configuration for Bot intelligent analysis.
+        /// Specific configuration for Bot intelligent analysis.
         /// </summary>
         [JsonProperty("BotIntelligence")]
         public BotIntelligence BotIntelligence{ get; set; }

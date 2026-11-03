@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Custom rule name.</p>
+        /// <p>Name of the custom rule.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>The specific content of a custom rule must comply with the expression syntax. For detailed specifications, refer to the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
+        /// <p>The specific content of the custom rule must comply with the expression grammar. For detailed specifications, see the <a href="https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1">product document</a>.</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// <p>Handling action of the custom rule. SecurityAction.Name value range is as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+        /// <p>Handling action of the custom rule. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }
 
         /// <summary>
-        /// <p>Whether the custom rule is enabled. Valid values: <ul><li>on: enabled;</li><li>off: disabled.</li></ul></p>
+        /// <p>Whether the custom rule is enabled. Valid values: <ul><li>on: Enable;</li><li>off: Disable.</li></ul></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// <p>ID of the custom rule. The rule ID supports different rule configuration operations: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
+        /// <p>ID of the custom rule. You can perform different rule configuration operations by rule ID: <ul><li>Add a new rule: leave the ID empty or do not specify the ID parameter;</li><li>Modify an existing rule: specify the rule ID that needs to be updated/modified;</li><li>Delete an existing rule: existing rules not included in the Rules list in the CustomRules parameter will be deleted.</li></ul></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleType{ get; set; }
 
         /// <summary>
-        /// <p>Priority of custom rules. Value range: 0-100. Default value: 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
+        /// <p>Priority of custom rules, ranging from 0 to 100, with a default value of 0. Only exact matching rules (<code>PreciseMatchRule</code>) are supported.</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }

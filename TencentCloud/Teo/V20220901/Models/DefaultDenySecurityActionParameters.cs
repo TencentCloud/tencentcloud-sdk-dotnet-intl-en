@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The managed rule uses the default disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use a custom page.</li><li>ResponseCode: Status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
+        /// Default interception disposition action configuration for managed rules. Supported configuration parameters of DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
         /// </summary>
         [JsonProperty("ManagedRules")]
         public DenyActionParameters ManagedRules{ get; set; }
 
         /// <summary>
-        /// Security protection rules other than managed rules (custom rule, rate limit, and Bot management function) default to disposition action configuration. DenyActionParameters supported configuration parameters: <li>ReturnCustomPage: Whether to use custom page.</li> <li>ResponseCode: Status code of custom pages.</li> <li>ErrorPageId: PageId of custom pages.</li>
+        /// Security protection rules other than managed rules (custom rules, rate limit, and Bot management function) default interception disposition action configuration. Configuration parameters supported by DenyActionParameters: <li>ReturnCustomPage: whether to use a custom page.</li><li>ResponseCode: status code of the custom page.</li><li>ErrorPageId: PageId of the custom page.</li>
         /// </summary>
         [JsonProperty("OtherModules")]
         public DenyActionParameters OtherModules{ get; set; }

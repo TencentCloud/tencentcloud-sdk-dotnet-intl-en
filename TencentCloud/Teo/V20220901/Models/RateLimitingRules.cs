@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Definition list of precise rate limiting. when using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> if the Rules parameter is not specified or its length is zero: clear all precision rate limiting configurations.</li> <li> if the RateLimitingRules parameter value is unspecified in the SecurityPolicy parameter: retain the existing custom rule configuration without modification.</li>.
+        /// Definition list of precise rate limiting. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter is not specified or its length is zero: clear all precise rate limiting configurations.</li> <li> If the RateLimitingRules parameter value is not specified in the SecurityPolicy parameter: keep the existing custom rule configuration without modification.</li>
         /// </summary>
         [JsonProperty("Rules")]
         public RateLimitingRule[] Rules{ get; set; }

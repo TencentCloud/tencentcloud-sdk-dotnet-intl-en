@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Response custom status code.
+        /// status code.
         /// </summary>
         [JsonProperty("ResponseCode")]
         public string ResponseCode{ get; set; }
 
         /// <summary>
-        /// Response custom page ID.
+        /// ID of the custom page in the response.
         /// </summary>
         [JsonProperty("ErrorPageId")]
         public string ErrorPageId{ get; set; }

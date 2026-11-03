@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of a Bot custom rule. different rule configuration operations are supported by rule ID: <li><b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li><b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li><b>delete</b> an existing rule: existing Rules not included in the Rules list under the BotManagementCustomRules parameter will be deleted.</li>.
+        /// <p>ID of the bot custom rule.<br>Different rule configuration operations are supported via the rule ID:<br> <li> <b>Add</b> a new rule: leave the ID empty or do not specify the ID parameter;</li><li><b>Modify</b> an existing rule: specify the rule ID that needs to be updated/modified;</li><li><b>Delete</b> an existing rule: existing rules not included in the Rules list in the BotManagementCustomRules parameter will be deleted.</li></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the Bot custom rule.
+        /// <p>Name of the Bot custom rule.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether the custom Bot rule is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+        /// <p>Whether the custom Bot rule is enabled. Valid values: <li>on: enable;</li><li>off: disable.</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Priority of custom Bot rules. value range: 1–100. default value is 50.
+        /// <p>Priority of Bot custom rules, ranging from 1 to 100, with a default value of 50.</p>
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Specifies the specific content of the Bot custom rule, which must comply with expression grammar. for detailed specifications, refer to the product document.
+        /// <p>For specific content of the Bot custom rule, it must comply with the expression grammar. For detailed specifications, see the product document.</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// The handling method for Bot custom rules. valid values: <li>Monitor: observation;</li><li>Deny: block, where DenyActionParameters.Name supports Deny and ReturnCustomPage;</li><li>Challenge: Challenge, where ChallengeActionParameters.Name supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to URL.</li>.
+        /// <p>List of safe execution actions by weight assignment.</p>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityWeightedAction[] Action{ get; set; }

@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether slow attack protection is enabled. valid values: <li>on: enabled;</li> <li>off: disabled.</li>.
+        /// Whether slow attack protection is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Rule ID of slow attack protection, returned as an output parameter.
+        /// Rule ID of slow attack protection, returned only as an output parameter.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Slow attack protection handling method. required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li>.
+        /// Handling method for slow attack protection. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }
 
         /// <summary>
-        /// The specific configuration of the minimum body transfer rate threshold is required when Enabled is on.
+        /// Specific configuration of the minimum body transfer rate threshold. Required when Enabled is on.
         /// </summary>
         [JsonProperty("MinimalRequestBodyTransferRate")]
         public MinimalRequestBodyTransferRate MinimalRequestBodyTransferRate{ get; set; }
 
         /// <summary>
-        /// Specifies the specific configuration of body transfer timeout duration. required when Enabled is on.
+        /// Specific configuration of the body transfer timeout duration. Required if Enabled is on.
         /// </summary>
         [JsonProperty("RequestBodyTransferTimeout")]
         public RequestBodyTransferTimeout RequestBodyTransferTimeout{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Body transfer timeout duration. valid values: 5-120. measurement unit: seconds (s) only.
+        /// Body transfer timeout duration. Value range: 5–120. Unit: seconds (s) only.
         /// </summary>
         [JsonProperty("IdleTimeout")]
         public string IdleTimeout{ get; set; }
 
         /// <summary>
-        /// Whether body transfer timeout is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+        /// Whether body transfer timeout duration is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }

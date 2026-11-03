@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specific item under Bot rules used to rewrite the configuration content of this single rule. refer to the returned message from the DescribeBotManagedRules API for detailed information corresponding to Ids.
+        /// Specific item under the Bot rule group, used to rewrite the configuration content of this individual rule item. For detailed information corresponding to the Ids, see the returned message of the DescribeBotManagedRules API.
         /// </summary>
         [JsonProperty("Ids")]
         public string[] Ids{ get; set; }
 
         /// <summary>
-        /// Specifies the handling action for Bot rule items in Ids. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: Disabled, disable the specified rule;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: pass (only for Bot basic feature management).</li>.
+        /// Handling action for the Bot rule item specified in Ids. Supported values for SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (only for basic feature management of Bot).</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Access key.
+        /// <p>Access key.</p>
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

@@ -25,31 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies whether to extend the ban on the source IP. valid values.
+        /// Whether to extend the block on the source IP. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
-        /// 
-        /// After enabled, continuously blocks client ips that trigger the rule. when this option is enabled, the BlockIpDuration parameter must be simultaneously designated.
-        /// Note: this option cannot intersect with ReturnCustomPage or Stall.
+        /// After enabled, the client IP that triggers the rule will be continuously blocked. When this option is enabled, the BlockIpDuration parameter must be specified simultaneously.
+        /// Note: This option cannot intersect with ReturnCustomPage or Stall.
         /// </summary>
         [JsonProperty("BlockIp")]
         public string BlockIp{ get; set; }
 
         /// <summary>
-        /// The ban duration when BlockIP is on.
+        /// IP ban duration when BlockIP is on.
         /// </summary>
         [JsonProperty("BlockIpDuration")]
         public string BlockIpDuration{ get; set; }
 
         /// <summary>
-        /// Specifies whether to use a custom page. valid values:.
+        /// Whether to use custom pages. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
-        /// 
-        /// Enabled, use custom page content to intercept requests. when this option is enabled, ResponseCode and ErrorPageId parameters must be specified simultaneously.
-        /// Note: this option cannot intersect with the BlockIp or Stall option.
+        /// Enabled. Use custom page content to intercept (respond to) requests. When this option is enabled, you must specify the ResponseCode and ErrorPageId parameters simultaneously.
+        /// Note: This option cannot intersect with BlockIp or Stall.
         /// </summary>
         [JsonProperty("ReturnCustomPage")]
         public string ReturnCustomPage{ get; set; }
@@ -61,19 +57,17 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ResponseCode{ get; set; }
 
         /// <summary>
-        /// Specifies the page id of the custom page.
+        /// PageId of the custom page.
         /// </summary>
         [JsonProperty("ErrorPageId")]
         public string ErrorPageId{ get; set; }
 
         /// <summary>
-        /// Specifies whether to suspend the request source without processing. valid values:.
+        /// Whether to suspend requests from the request source without processing. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
-        /// 
-        /// Enabled, no longer responds to requests in the current connection session and does not actively disconnect. used for crawler combat to consume client connection resources.
-        /// Note: this option cannot intersect with BlockIp or ReturnCustomPage options.
+        /// Enabled. It no longer responds to requests in the current connection session and does not actively disconnect. When used for crawler counteraction, it consumes client connection resources.
+        /// Note: This option cannot intersect with BlockIp or ReturnCustomPage.
         /// </summary>
         [JsonProperty("Stall")]
         public string Stall{ get; set; }

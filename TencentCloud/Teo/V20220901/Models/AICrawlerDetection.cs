@@ -36,7 +36,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
         /// <li>Deny: block;</li>
         /// <li>Monitor: observation;</li>
-        /// <li>Allow: allow;</li>
+        /// <li>Allow: Allow access;</li>
         /// <li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
         /// </summary>
         [JsonProperty("Action")]

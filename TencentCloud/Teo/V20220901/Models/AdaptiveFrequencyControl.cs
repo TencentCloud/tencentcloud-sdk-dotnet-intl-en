@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether adaptive frequency control is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+        /// Whether adaptive frequency control is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Rule ID of adaptive frequency control, returned as an output parameter.
+        /// Rule ID of adaptive frequency control, returned only as an output parameter.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// The restriction level of adaptive frequency control. required when Enabled is on. valid values: <li>Loose: Loose</li><li>Moderate: Moderate</li><li>Strict: Strict</li>.
+        /// The limitation level of adaptive frequency control. This field is required when Enabled is on. Valid values: <li>Loose: loose;</li><li>Moderate: moderate;</li><li>Strict: strict.</li>
         /// </summary>
         [JsonProperty("Sensitivity")]
         public string Sensitivity{ get; set; }
 
         /// <summary>
-        /// The handling method of adaptive frequency control. this field is required when Enabled is on. valid values for SecurityAction Name: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+        /// Handling method of adaptive frequency control. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: monitor;</li><li>Deny: block;</li><li>Challenge: challenge. ChallengeActionParameters.Name only supports JSChallenge.</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }

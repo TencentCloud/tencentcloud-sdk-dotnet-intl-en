@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Execution action for malicious Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+        /// Execution action for malicious Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
         /// </summary>
         [JsonProperty("HighRiskBotRequestsAction")]
         public SecurityAction HighRiskBotRequestsAction{ get; set; }
 
         /// <summary>
-        /// The execution action for suspected Bot requests. valid values for the Name parameter in SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Allow: pass;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+        /// Execution action for suspected Bot requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
         /// </summary>
         [JsonProperty("LikelyBotRequestsAction")]
         public SecurityAction LikelyBotRequestsAction{ get; set; }
 
         /// <summary>
-        /// Execution action for friendly Bot request. SecurityAction Name parameter supports: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: pass;</li><li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>.
+        /// Execution action of friendly Bot requests. The Name parameter of SecurityAction supports the following values: <li>Deny: block;</li><li>Monitor: observe;</li><li>Allow: Allow;</li><li>Challenge: Challenge. The ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge.</li>
         /// </summary>
         [JsonProperty("VerifiedBotRequestsAction")]
         public SecurityAction VerifiedBotRequestsAction{ get; set; }
 
         /// <summary>
-        /// Execution action for a normal Bot request. valid values for the Name parameter in SecurityAction: <li>Allow: pass.</li>.
+        /// Execution action for normal Bot requests. Valid values of SecurityAction Name: <li>Allow: Allow.</li>
         /// </summary>
         [JsonProperty("HumanRequestsAction")]
         public SecurityAction HumanRequestsAction{ get; set; }

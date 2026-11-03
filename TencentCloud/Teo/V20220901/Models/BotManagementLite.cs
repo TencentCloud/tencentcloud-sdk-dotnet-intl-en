@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Configuration of the human-machine verification page.
+        /// Configuration of the CAPTCHA page.
         /// </summary>
         [JsonProperty("CAPTCHAPageChallenge")]
         public CAPTCHAPageChallenge CAPTCHAPageChallenge{ get; set; }
 
         /// <summary>
-        /// AI crawler detection configuration.
+        /// Specific configuration for AI crawler detection.
         /// </summary>
         [JsonProperty("AICrawlerDetection")]
         public AICrawlerDetection AICrawlerDetection{ get; set; }

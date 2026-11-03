@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies whether session rate and periodic feature verification are enabled. valid values: <li>on: enable</li><li>off: disable</li>.
+        /// Whether session rate and periodic feature verification are enabled. Valid values: <li>on: enable</li><li>off: disable</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Session rate and periodic feature verification high-risk execution actions. SecurityAction Name valid values: <li>Deny: block, where Stall configuration is supported in DenyActionParameters;</li> <li>Monitor: observation;</li> <li>Allow: respond after wait, where MinDelayTime and MaxDelayTime configuration is required in AllowActionParameters.</li>.
+        /// Session rate and periodic feature verification for high-risk executed actions. The Name parameter of SecurityAction supports the following values: <li>Deny: block, with Stall configuration supported in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
         /// </summary>
         [JsonProperty("HighRateSessionAction")]
         public SecurityAction HighRateSessionAction{ get; set; }
 
         /// <summary>
-        /// Session rate and periodic feature verification medium-risk execution action. SecurityAction Name parameter supports: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+        /// Execution action for medium-risk session rate and periodic feature verification. Supported values of SecurityAction Name: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after waiting, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
         /// </summary>
         [JsonProperty("MidRateSessionAction")]
         public SecurityAction MidRateSessionAction{ get; set; }
 
         /// <summary>
-        /// Session rate and periodic feature verification low risk execution action. SecurityAction Name parameter supports: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+        /// Session rate and periodic feature verification are low-risk execution actions. The Name parameter of SecurityAction supports: <li>Deny: block, where DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: wait then respond, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
         /// </summary>
         [JsonProperty("LowRateSessionAction")]
         public SecurityAction LowRateSessionAction{ get; set; }

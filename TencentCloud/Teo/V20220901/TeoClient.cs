@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1419";
+       private const string sdkVersion = "SDK_NET_3.0.1421";
 
         /// <summary>
         /// Client constructor.
@@ -2822,7 +2822,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+        /// This API is used to query the key for integrating a multi-channel security acceleration gateway. Customers sign with the integration key to access the multi-channel security acceleration gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>
@@ -2832,7 +2832,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query keys for integrating multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on key signature.
+        /// This API is used to query the key for integrating a multi-channel security acceleration gateway. Customers sign with the integration key to access the multi-channel security acceleration gateway.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewaySecretKeyResponse"/></returns>

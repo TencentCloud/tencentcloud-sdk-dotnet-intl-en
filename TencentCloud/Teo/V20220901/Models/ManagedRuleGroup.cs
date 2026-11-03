@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Name of the managed rule group, if the configuration for the rule group is not specified, it will be processed by default, refer to product documentation for the specific value of GroupId.
+        /// Group name of the managed rule. If no rule group is specified, the default configuration is used. For the specific value of GroupId, refer to the product documentation.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Protection level of the managed rule group. Values: <li>`loose`: lenient, only contain ultra-high risk rules, at this point, Action parameter needs configured instead of RuleActions parameter;</li> <li>`normal`: normal, contain ultra-high risk and high-risk rules, at this point,Action parameter needs configured instead of RuleActions parameter;</li> <li>`strict`: strict, contains ultra-high risk, high-risk and medium-risk rules, at this point, Action parameter needs configured instead of RuleActions parameter;</li> <li>`extreme`: super strict, contains ultra-high risk, high-risk, medium-risk and low-risk rules, at this point, Action parameter needs configured instead of RuleActions parameter;</li> <li>`custom`: custom, refined strategy, configure the RuleActions parameter for each individual rule, at this point, the Action field is invalid, use RuleActions to configure the refined strategy for each individual rule.</li>.
+        /// Protection level of the managed rule group. Valid values: <li>loose: Loose. It only contains ultra-high risk rules. At this point, Action is required and RuleActions is invalid.</li><li>normal: Normal. It contains ultra-high risk and high-risk rules. At this point, Action is required and RuleActions is invalid.</li><li>strict: Strict. It contains ultra-high risk, high-risk, and medium-risk rules. At this point, Action is required and RuleActions is invalid.</li><li>extreme: Ultra-strict. It contains ultra-high risk, high-risk, medium-risk, and low-risk rules. At this point, Action is required and RuleActions is invalid.</li><li>custom: Custom. Refined strategy. Configure the disposal method for each individual rule. At this point, the Action field is invalid. Use RuleActions to configure the refined strategy for individual rules.</li>	
         /// </summary>
         [JsonProperty("SensitivityLevel")]
         public string SensitivityLevel{ get; set; }
 
         /// <summary>
-        /// Action for ManagedRuleGroup. the Name parameter value of SecurityAction supports: <li>`Deny`: block and respond with a block page;</li> <li>`Monitor`: observe, do not process requests and record security events in logs;</li> <li>`Disabled`: not enabled, do not scan requests and skip this rule.</li>.
+        /// Handling action of the managed rule group. Supported values for SecurityAction Name: <li>Deny: Block. Respond with an interception page;</li><li>Monitor: Observe. Do not process requests, log security events in logs;</li><li>Disabled: Not activated. Do not scan requests, skip this rule.</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }
 
         /// <summary>
-        /// Specific configuration of rule items under the managed rule group, valid only when SensitivityLevel is custom.
+        /// Specific configuration of rule items in the managed rule group. This configuration is effective only when SensitivityLevel is custom.
         /// </summary>
         [JsonProperty("RuleActions")]
         public ManagedRuleAction[] RuleActions{ get; set; }
 
         /// <summary>
-        /// ManagedRuleGroup detailed information, output parameter only.
+        /// Managed rule group information. This is an output-only parameter.	
         /// </summary>
         [JsonProperty("MetaData")]
         public ManagedRuleGroupMeta MetaData{ get; set; }

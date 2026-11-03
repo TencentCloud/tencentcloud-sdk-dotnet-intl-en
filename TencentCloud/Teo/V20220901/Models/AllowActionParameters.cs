@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Minimum latency response time. when configured as 0s, it means no delay for direct response. supported units: <li>s: seconds, value ranges from 0 to 5.</li>.
+        /// Minimum delayed response time. When configured as 0s, it means no delay and direct response. Supported units: <li>s: second, value ranges from 0 to 5.</li>
         /// </summary>
         [JsonProperty("MinDelayTime")]
         public string MinDelayTime{ get; set; }
 
         /// <summary>
-        /// Maximum delayed response time. supported units: <li>s: seconds, value ranges from 5 to 10.</li>.
+        /// Maximum delayed response time. Supported units: <li>s: seconds, value range: 5–10.</li>
         /// </summary>
         [JsonProperty("MaxDelayTime")]
         public string MaxDelayTime{ get; set; }

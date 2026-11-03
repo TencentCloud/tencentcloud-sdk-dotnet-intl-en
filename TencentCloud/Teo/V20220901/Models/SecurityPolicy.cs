@@ -25,54 +25,58 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Custom rule configuration.</p>
         /// </summary>
         [JsonProperty("CustomRules")]
         public CustomRules CustomRules{ get; set; }
 
         /// <summary>
-        /// Managed. If the parameter is null or not filled, the configuration last set will be used by default.
-        /// Note: This field may return null, indicating that no valid value can be obtained.
+        /// <p>Managed rule configuration.</p>
         /// </summary>
         [JsonProperty("ManagedRules")]
         public ManagedRules ManagedRules{ get; set; }
 
         /// <summary>
-        /// HTTP DDOS protection configuration.
+        /// <p>HTTP DDoS protection configuration.</p>
         /// </summary>
         [JsonProperty("HttpDDoSProtection")]
         public HttpDDoSProtection HttpDDoSProtection{ get; set; }
 
         /// <summary>
-        /// Configures the rate limiting rule.
+        /// <p>Rate limiting rule configuration.</p>
         /// </summary>
         [JsonProperty("RateLimitingRules")]
         public RateLimitingRules RateLimitingRules{ get; set; }
 
         /// <summary>
-        /// Exception rule configuration.
+        /// <p>Exception rule configuration.</p>
         /// </summary>
         [JsonProperty("ExceptionRules")]
         public ExceptionRules ExceptionRules{ get; set; }
 
         /// <summary>
-        /// Bot management configuration.
+        /// <p>Bot management configuration.</p>
         /// </summary>
         [JsonProperty("BotManagement")]
         public BotManagement BotManagement{ get; set; }
 
         /// <summary>
-        /// Basic Bot management configuration.
+        /// <p>Basic Bot management configuration.</p>
         /// </summary>
         [JsonProperty("BotManagementLite")]
         public BotManagementLite BotManagementLite{ get; set; }
 
         /// <summary>
-        /// Default intercept action configuration.
+        /// <p>Default block action configuration.</p>
         /// </summary>
         [JsonProperty("DefaultDenySecurityActionParameters")]
         public DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters{ get; set; }
+
+        /// <summary>
+        /// <p>Security headers to include in requests to the origin. After the configuration takes effect, request headers with the corresponding `keyname` will be sent to the origin.</p>
+        /// </summary>
+        [JsonProperty("SecurityHeadersToOrigin")]
+        public SecurityHeadersToOrigin SecurityHeadersToOrigin{ get; set; }
 
 
         /// <summary>
@@ -88,6 +92,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "BotManagement.", this.BotManagement);
             this.SetParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
             this.SetParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
+            this.SetParamObj(map, prefix + "SecurityHeadersToOrigin.", this.SecurityHeadersToOrigin);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Penalty duration for `BlockIP`. Units: <li>`s`: second, value range 1-120;</li> <li>`m`: minute, value range 1-120;</li> <li>`h`: hour, value range 1-48.</li>.
+        /// Penalty duration for blocked IPs. Supported units: <li>s: second, value ranges from 1 to 120;</li><li>m: minute, value ranges from 1 to 120;</li><li>h: hour, value ranges from 1 to 48.</li>
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }

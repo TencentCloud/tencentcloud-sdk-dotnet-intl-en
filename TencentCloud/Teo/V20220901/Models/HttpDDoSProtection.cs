@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the specific configuration of adaptive frequency control.
+        /// Specific configuration of adaptive frequency control.
         /// </summary>
         [JsonProperty("AdaptiveFrequencyControl")]
         public AdaptiveFrequencyControl AdaptiveFrequencyControl{ get; set; }
 
         /// <summary>
-        /// Specifies the intelligent client filter configuration.
+        /// Specific configuration for intelligent client filtering.
         /// </summary>
         [JsonProperty("ClientFiltering")]
         public ClientFiltering ClientFiltering{ get; set; }
 
         /// <summary>
-        /// Specifies the specific configuration for bandwidth abuse protection.
+        /// Bandwidth abuse protection configuration.
         /// </summary>
         [JsonProperty("BandwidthAbuseDefense")]
         public BandwidthAbuseDefense BandwidthAbuseDefense{ get; set; }
 
         /// <summary>
-        /// Specifies the configuration of slow attack protection.
+        /// Specific configuration of slow attack protection.
         /// </summary>
         [JsonProperty("SlowAttackDefense")]
         public SlowAttackDefense SlowAttackDefense{ get; set; }

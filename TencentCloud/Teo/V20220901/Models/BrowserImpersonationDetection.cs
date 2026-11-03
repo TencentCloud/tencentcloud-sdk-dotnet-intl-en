@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of browser spoofing identification Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li>if Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified or parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li>if BrowserImpersonationDetection parameter value is unspecified in SecurityPolicy.BotManagement parameters: keep existing browser spoofing identification rule configurations without modification.</li>.
+        /// List of browser spoofing identification rules. When using ModifySecurityPolicy to modify Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.BrowserImpersonationDetection is not specified, or the parameter length is zero: clear all browser spoofing identification rule configurations.</li> <li> If the BrowserImpersonationDetection parameter value is not specified in the SecurityPolicy.BotManagement parameter: keep the existing browser spoofing identification rule configuration without modification.</li>
         /// </summary>
         [JsonProperty("Rules")]
         public BrowserImpersonationDetectionRule[] Rules{ get; set; }

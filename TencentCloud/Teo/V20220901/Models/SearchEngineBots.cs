@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the action for requests from search engine crawlers. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+        /// Execution action for requests from search engine crawlers. Supported values of SecurityAction Name: <li>Deny: block;</li><li>Monitor: observe;</li><li>Disabled: not enabled, disable the specified rule;</li><li>Challenge: challenge. ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: allow (to be deprecated).</li>
         /// </summary>
         [JsonProperty("BaseAction")]
         public SecurityAction BaseAction{ get; set; }
 
         /// <summary>
-        /// Specifies the handling method for search engine crawler requests.
+        /// Specify the handling method for search engine crawler requests.
         /// </summary>
         [JsonProperty("BotManagementActionOverrides")]
         public BotManagementActionOverrides[] BotManagementActionOverrides{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ManagedRuleGroup detailed information, output parameter only.
+        /// Managed rule group description. For output usage only.
         /// </summary>
         [JsonProperty("GroupDetail")]
         public string GroupDetail{ get; set; }
 
         /// <summary>
-        /// ManagedRuleGroup name, output parameter only.
+        /// Managed rule group name. Output parameter only.
         /// </summary>
         [JsonProperty("GroupName")]
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// All sub-rules information under current ManagedRuleGroup, output parameter only.
+        /// Rule information of all sub-rules in the current managed rule group. Output parameter only.
         /// </summary>
         [JsonProperty("RuleDetails")]
         public ManagedRuleDetail[] RuleDetails{ get; set; }

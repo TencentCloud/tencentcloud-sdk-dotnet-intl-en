@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Configures Cookie verification and session tracking.
+        /// Cookie verification and session tracking configuration.
         /// </summary>
         [JsonProperty("BotSessionValidation")]
         public BotSessionValidation BotSessionValidation{ get; set; }
 
         /// <summary>
-        /// Configures client behavior validation.
+        /// Client behavior validation configuration.
         /// </summary>
         [JsonProperty("ClientBehaviorDetection")]
         public ClientBehaviorDetection ClientBehaviorDetection{ get; set; }

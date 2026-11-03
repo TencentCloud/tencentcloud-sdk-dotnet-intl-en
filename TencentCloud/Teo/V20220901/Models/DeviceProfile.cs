@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+        /// <p>Client device type. Valid values: <li>iOS;</li><li>Android;</li><li>WebView;</li><li>WeChatMiniProgram.</li></p>
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }
 
         /// <summary>
-        /// The minimum value to determine a request as high-risk ranges from 1–99. the larger the value, the higher the request risk, and the closer it resembles a request initiated by a Bot client. the default value is 50, corresponding to high-risk for values 51–100.
+        /// <p>Minimum risk score for high-risk requests. A request is considered high-risk when its score is equal to or greater than this value.</p><p>Value range: [2, 99]</p><p>Default value: 50</p>
         /// </summary>
         [JsonProperty("HighRiskMinScore")]
         public ulong? HighRiskMinScore{ get; set; }
 
         /// <summary>
-        /// Handling method for high-risk requests. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+        /// <p>Handling method for high-risk requests. Supported values for the Name parameter of SecurityAction: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Redirect: Redirection;</li><li>Challenge: Challenge.</li>Default value: Monitor.</p>
         /// </summary>
         [JsonProperty("HighRiskRequestAction")]
         public SecurityAction HighRiskRequestAction{ get; set; }
 
         /// <summary>
-        /// Specifies the minimum value to determine a request as medium-risk. value range: 1–99. the larger the value, the higher the request risk, resembling requests initiated by a Bot client. default value: 15, corresponding to medium-risk for values 16–50.
+        /// <p>The minimum risk score for a medium-risk request. When the score is equal to or greater than this value and less than HighRiskMinScore, it is determined as medium-risk. When it is below this value, it is determined as low risk.</p><p>Value range: [1, 98]</p><p>Default value: 15</p>
         /// </summary>
         [JsonProperty("MediumRiskMinScore")]
         public ulong? MediumRiskMinScore{ get; set; }
 
         /// <summary>
-        /// Handling method for medium-risk requests. SecurityAction Name parameter supports: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Redirect: Redirect;</li> <li>Challenge: Challenge.</li> default value is Monitor.
+        /// <p>Handling method for medium risk requests. Supported values for the Name of SecurityAction: <li>Deny: block;</li><li>Monitor: monitor;</li><li>Redirect: redirect;</li><li>Challenge: challenge.</li>Default value: Monitor.</p>
         /// </summary>
         [JsonProperty("MediumRiskRequestAction")]
         public SecurityAction MediumRiskRequestAction{ get; set; }

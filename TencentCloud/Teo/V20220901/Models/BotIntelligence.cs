@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the switch for Bot intelligent analysis configuration. valid values:.
+        /// Specific configuration switch for Bot intelligent analysis. Valid values:
         /// 
-        /// on: enabled.
-        /// off: disabled.
+        /// on: enable;
+        /// off: Disable.
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Rule ID of Bot intelligent analysis, returned as an output parameter.
+        /// Rule ID of Bot intelligent analysis, returned only as an output parameter.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Based on client and request features, divides request sources into human requests, legitimate Bot requests, suspected Bot requests, and high-risk Bot requests, and provides request handling options.
+        /// Based on the client and request features, divide the request source into human requests, valid Bot requests, suspected Bot requests, and high-risk Bot requests, and provide request handling options.
         /// </summary>
         [JsonProperty("BotRatings")]
         public BotRatings BotRatings{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IP intelligence library (formerly client profile analysis). valid values: <li>on: enable;</li> <li>off: disable.</li>.
+        /// IP Intelligence Library (formerly client profile analysis). Valid values: <li>on: enable;</li><li>off: disable.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// IP intelligence library (formerly client profile analysis) configuration content.
+        /// Specific configuration content of the IP Intelligence Library (formerly client profile analysis).
         /// </summary>
         [JsonProperty("IPReputationGroup")]
         public IPReputationGroup IPReputationGroup{ get; set; }

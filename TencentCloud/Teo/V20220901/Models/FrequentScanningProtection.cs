@@ -25,43 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether the high-frequency scan protection rule is enabled. valid values: <li>on: enable. the high-frequency scan protection rule takes effect.</li><li>off: disable. the high-frequency scan protection rule does not take effect.</li>.	
+        /// Whether high-frequency scan protection is enabled. Valid values: <li>on: enabled, the high-frequency scan protection rule takes effect;</li><li>off: disabled, the high-frequency scan protection rule does not take effect.</li>	
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Rule ID of high frequency scan protection, returned as an output parameter.
+        /// Rule ID of high-frequency scan protection, returned only as an output parameter.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// The handling action for high-frequency scan protection. required when Enabled is on. valid values for SecurityAction Name: <li>Deny: block and respond with an interception page;</li> <li>Monitor: observe without processing requests, log security events in logs;</li> <li>JSChallenge: respond with a JavaScript challenge page.</li>.
+        /// Handling action for high frequency scan protection. When Enabled is on, this field is required. The Name parameter of SecurityAction supports: <li>Deny: block and respond with an Interception page;</li><li>Monitor: observe, do not process request records, and log security events;</li><li>JSChallenge: javascript challenge and respond with a JavaScript challenge page.</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }
 
         /// <summary>
-        /// The match mode for request statistics. required when Enabled is on. valid values: <li>http.request.xff_header_ip: client ip (priority match xff header);</li><li>http.request.ip: client ip.</li>.
+        /// Match mode for request statistics. This field is required when Enabled is on. Valid values: <li>http.request.xff_header_ip: client ip (priority match xff header);</li><li>http.request.ip: client ip.</li>
         /// </summary>
         [JsonProperty("CountBy")]
         public string CountBy{ get; set; }
 
         /// <summary>
-        /// This parameter specifies the threshold for high-frequency scan protection, which is the intercept count of managed rules set to interception within the time range set by CountingPeriod. value range: 1 to 4294967294, for example 100. when exceeding this statistical value, subsequent requests will trigger the handling Action set by Action. required when Enabled is on.
+        /// This parameter specifies the threshold for high-frequency scan protection, which is the total interception count when managed rules configured for interception are hit within the time range set by CountingPeriod. The value ranges from 1 to 4294967294, for example, 100. When this statistical value is exceeded, subsequent requests trigger the handling action set by Action. This field is required when Enabled is on.
         /// </summary>
         [JsonProperty("BlockThreshold")]
         public long? BlockThreshold{ get; set; }
 
         /// <summary>
-        /// This parameter specifies the statistical time window for high-frequency scan protection, which is the time window for counting requests that hit managed rules configured as block. valid values: 5-1800. measurement unit: seconds (s) only, such as 5s. this field is required when Enabled is on.
+        /// This parameter specifies the time window for high-frequency scan protection statistics, that is, the statistical time window for requests that hit managed rules configured for interception. Value range: 5-1800. The unit only supports seconds (s), for example, 5s. Required when Enabled is on.
         /// </summary>
         [JsonProperty("CountingPeriod")]
         public string CountingPeriod{ get; set; }
 
         /// <summary>
-        /// This parameter specifies the duration of the handling Action set by the high frequency scan protection Action parameter. value range: 60 to 86400. measurement unit: seconds (s) only, for example 60s. this field is required when Enabled is on.
+        /// This parameter specifies the duration of the handling Action set by the high frequency scan protection Action parameter. The value ranges from 60 to 86400. The unit only supports seconds (s), for example, 60s. This field is required when Enabled is on.
         /// </summary>
         [JsonProperty("ActionDuration")]
         public string ActionDuration{ get; set; }

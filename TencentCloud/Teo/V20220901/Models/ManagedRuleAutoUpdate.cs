@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Enable automatic update to the latest version or not. Values: <li>`on`: enabled</li> <li>`off`: disabled</li>.
+        /// Whether automatic update to the latest version is enabled. Valid values: <li>on: enabled</li><li>off: disabled</li>
         /// </summary>
         [JsonProperty("AutoUpdateToLatestVersion")]
         public string AutoUpdateToLatestVersion{ get; set; }
 
         /// <summary>
-        /// Current version, compliant with ISO 8601 standard format, such as 2023-12-21T12:00:32Z, empty by default, output parameter only.
+        /// Currently used version in ISO 8601 format, for example, 2023-12-21T12:00:32Z. Empty by default. Output only.
         /// </summary>
         [JsonProperty("RulesetVersion")]
         public string RulesetVersion{ get; set; }

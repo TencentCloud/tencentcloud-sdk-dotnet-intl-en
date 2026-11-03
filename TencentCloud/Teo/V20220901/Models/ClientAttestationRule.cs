@@ -25,52 +25,58 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Client authentication rule ID. supported rule configuration operations by rule ID: <li> <b>add</b> a new rule: leave the ID empty or do not specify the ID parameter.</li> <li> <b>modify</b> an existing rule: specify the rule ID that needs to be updated/modified.</li> <li> <b>delete</b> an existing rule: existing rules not included in the ClientAttestationRule list under BotManagement parameters will be deleted.</li>.
+        /// <p>ID of the client authentication rule.<br>Different rule configuration operations are supported by rule ID:<br> <li> <b>Add</b> a new rule: leave ID empty or do not specify the ID parameter;</li><li> <b>Modify</b> an existing rule: specify the rule ID to be updated/modified;</li><li> <b>Delete</b> an existing rule: existing rules not included in the ClientAttestationRule list in the BotManagement parameter will be deleted.</li></p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the client authentication rule.
+        /// <p>Name of the client authentication rule.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Whether the rule is enabled. valid values: <li>`on`: enable</li> <li>`off`: disable</li>.
+        /// <p>Whether the rule is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Priority of rules. a smaller value indicates higher priority execution. value range: 0-100. default value: 0.
+        /// <p>Priority of rules. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Priority")]
         public ulong? Priority{ get; set; }
 
         /// <summary>
-        /// The rule content must comply with expression grammar. for details, see the product document.
+        /// <p>The specific content of the rule must comply with the expression syntax. For detailed specifications, see the product document.</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// Specifies the client authentication option ID.
+        /// <p>Client authentication option ID.</p>
         /// </summary>
         [JsonProperty("AttesterId")]
         public string AttesterId{ get; set; }
 
         /// <summary>
-        /// Client device configuration. if the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter, keep the existing client device configuration and do not modify it.
+        /// <p>Handling method when client authentication fails. SecurityAction.Name values are as follows:</p><ul><li>Allow: allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: observe;</li><li>Challenge: challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge, ManagedChallenge, InterstitialChallenge, and InlineChallenge;</li><li>Redirect: redirect to a URL.</li></ul>
+        /// </summary>
+        [JsonProperty("InvalidAttestationAction")]
+        public SecurityAction InvalidAttestationAction{ get; set; }
+
+        /// <summary>
+        /// <p>Client device configuration. If the DeviceProfiles parameter value is not specified in the ClientAttestationRules parameter: keep the existing client device configuration without modification.</p>
         /// </summary>
         [JsonProperty("DeviceProfiles")]
         public DeviceProfile[] DeviceProfiles{ get; set; }
 
         /// <summary>
-        /// Handling method for failed client authentication. valid values for SecurityAction Name: <li>Deny: block;</li> <li>Monitor: observation;</li> <li>Redirect: redirection;</li> <li>Challenge: Challenge.</li> default value: Monitor.
+        /// <p>Account protection configuration.</p>
         /// </summary>
-        [JsonProperty("InvalidAttestationAction")]
-        public SecurityAction InvalidAttestationAction{ get; set; }
+        [JsonProperty("AccountProtectionSettings")]
+        public AccountProtectionSettings AccountProtectionSettings{ get; set; }
 
 
         /// <summary>
@@ -84,8 +90,9 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
             this.SetParamSimple(map, prefix + "Condition", this.Condition);
             this.SetParamSimple(map, prefix + "AttesterId", this.AttesterId);
-            this.SetParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
             this.SetParamObj(map, prefix + "InvalidAttestationAction.", this.InvalidAttestationAction);
+            this.SetParamArrayObj(map, prefix + "DeviceProfiles.", this.DeviceProfiles);
+            this.SetParamObj(map, prefix + "AccountProtectionSettings.", this.AccountProtectionSettings);
         }
     }
 }

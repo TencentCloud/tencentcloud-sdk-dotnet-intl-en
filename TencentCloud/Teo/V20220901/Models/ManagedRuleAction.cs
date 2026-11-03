@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specific items under ManagedRuleGroup, used to rewrite the configuration of this individual rule item, refer to product documentation for details.	
+        /// Specific item under the managed rule group, used for rewriting the configuration content of this individual rule. For details, refer to the product documentation.	
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Action for the managed rule item specified by RuleId, the SecurityAction Name parameter supports: <li>`Deny`: block and respond with an block page;</li> <li>`Monitor`: observe, do not process the request and record the security event in logs;</li> <li>`Disabled`: disabled, do not scan the request and skip this rule.</li>.
+        /// Specifies the handling action for the managed rule item in RuleId. Supported values for SecurityAction Name: <li>Deny: Block. Responds with an interception page.</li><li>Monitor: Observe. Does not process the request but records security events in logs.</li><li>Disabled: Not enabled. Skips the rule without scanning requests.</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }

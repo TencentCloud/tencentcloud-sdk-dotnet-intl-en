@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The handling method of the Bot custom rule. valid values: <li>Allow: pass, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li> <li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li> <li>Monitor: observation;</li> <li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li> <li>Redirect: Redirect to URL.</li>.
+        /// Handling method of the Bot custom rule. Valid values: <li>Allow: Allow, where AllowActionParameters supports MinDelayTime and MaxDelayTime configuration;</li><li>Deny: block, where DenyActionParameters supports BlockIp, ReturnCustomPage, and Stall configuration;</li><li>Monitor: Monitor;</li><li>Challenge: Challenge, where ChallengeActionParameters.ChallengeOption supports JSChallenge and ManagedChallenge;</li><li>Redirect: Redirect to a URL.</li>
         /// </summary>
         [JsonProperty("SecurityAction")]
         public SecurityAction SecurityAction{ get; set; }
 
         /// <summary>
-        /// The Weight of the current SecurityAction, only supported between 10 and 100 and must be a multiple of 10. the total of all Weight parameters must equal 100.
+        /// Weight of the current SecurityAction. Only multiples of 10 from 10 to 100 are supported. The sum of all Weight parameters must equal 100.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

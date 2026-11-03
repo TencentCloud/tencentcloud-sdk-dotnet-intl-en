@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Minimum body transfer rate threshold, the measurement unit is only supported in bps.
+        /// Minimum body transfer rate threshold. The measurement unit only supports bps.
         /// </summary>
         [JsonProperty("MinimalAvgTransferRateThreshold")]
         public string MinimalAvgTransferRateThreshold{ get; set; }
 
         /// <summary>
-        /// Minimum body transfer rate statistical time range, valid values: <li>10s: 10 seconds;</li> <li>30s: 30 seconds;</li> <li>60s: 60 seconds;</li> <li>120s: 120 seconds.</li>.
+        /// Statistical time range for minimum body transfer rate. Valid values: <li>10s: 10 seconds;</li><li>30s: 30 seconds;</li><li>60s: 60 seconds;</li><li>120s: 120 seconds.</li>
         /// </summary>
         [JsonProperty("CountingPeriod")]
         public string CountingPeriod{ get; set; }
 
         /// <summary>
-        /// Specifies whether the minimum body transfer rate threshold is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+        /// Whether the minimum body transfer rate threshold is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }

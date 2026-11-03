@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Time window for trigger threshold statistics. valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>.
+        /// Time window for trigger threshold statistics. Valid values: <li>5s: within 5 seconds;</li><li>10s: within 10 seconds;</li><li>15s: within 15 seconds;</li><li>30s: within 30 seconds;</li><li>60s: within 60 seconds;</li><li>5m: within 5 minutes;</li><li>10m: within 10 minutes;</li><li>30m: within 30 minutes;</li><li>60m: within 60 minutes.</li>
         /// </summary>
         [JsonProperty("MaxNewSessionCountInterval")]
         public string MaxNewSessionCountInterval{ get; set; }
 
         /// <summary>
-        /// Trigger threshold cumulative count. value range: 1-100000000.
+        /// Cumulative count of trigger threshold statistics. Value range: 1-100000000.
         /// </summary>
         [JsonProperty("MaxNewSessionCountThreshold")]
         public long? MaxNewSessionCountThreshold{ get; set; }

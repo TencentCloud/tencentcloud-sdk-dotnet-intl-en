@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether Bot management is enabled. valid values: <li>on: enabled;</li><li>off: disabled.</li>.
+        /// Whether Bot management is enabled. Valid values: <li>on: enabled;</li><li>off: disabled.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Bot management custom rule combines various crawlers and request behavior characteristics to accurately define bots and configure customized handling methods.
+        /// Custom rule for Bot management combines various types of crawlers and request behavior characteristics to precisely define bots and configure customized handling methods.
         /// </summary>
         [JsonProperty("CustomRules")]
         public BotManagementCustomRules CustomRules{ get; set; }
 
         /// <summary>
-        /// Bot management basic configuration. takes effect on all domains associated with the policy. can be customized through CustomRules.
+        /// Basic configuration of Bot management, which takes effect on all domains associated with the policy. It can be customized through CustomRules.
         /// </summary>
         [JsonProperty("BasicBotSettings")]
         public BasicBotSettings BasicBotSettings{ get; set; }
 
         /// <summary>
-        /// Definition list of client authentication rules. this feature is in beta test. submit a ticket if you need to use it.
+        /// Definition list of client authentication rules. This feature is in beta test. If needed, submit a ticket.
         /// </summary>
         [JsonProperty("ClientAttestationRules")]
         public ClientAttestationRules ClientAttestationRules{ get; set; }
 
         /// <summary>
-        /// Configures browser spoofing identification rules (formerly active feature detection rule). sets the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
+        /// Configure browser spoofing identification rules (formerly active feature detection rules). Set the response page range for JavaScript injection, browser check options, and handling method for non-browser clients.
         /// </summary>
         [JsonProperty("BrowserImpersonationDetection")]
         public BrowserImpersonationDetection BrowserImpersonationDetection{ get; set; }

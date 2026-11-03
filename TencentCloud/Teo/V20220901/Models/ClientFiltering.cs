@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether intelligent client filtering is enabled. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+        /// Whether intelligent client filtering is enabled. Valid values: <li>on: Enable;</li><li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Rule ID of intelligent client filtering, returned as an output parameter.
+        /// Rule ID of intelligent client filtering. Output only.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// The handling method of intelligent client filtering. when Enabled is on, this field is required. the Name parameter of SecurityAction supports: <li>Monitor: observation;</li> <li>Deny: block;</li> <li>Challenge: Challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>.
+        /// Handling method for intelligent client filtering. This field is required when Enabled is on. Supported values for SecurityAction Name: <li>Monitor: observe;</li><li>Deny: block;</li><li>Challenge: challenge, where ChallengeActionParameters.Name only supports JSChallenge.</li>
         /// </summary>
         [JsonProperty("Action")]
         public SecurityAction Action{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Handling method for access requests from known commercial tools or open-source tools. specifies the Name parameter value of SecurityAction: <li>Deny: block;</li> <li>Monitor: observe;</li> <li>Disabled: not enabled, disable specified rule;</li> <li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li> <li>Allow: pass (to be deprecated).</li>.
+        /// Handling method for access requests from known commercial or open-source tools. Supported values of SecurityAction Name: <li>Deny: Block;</li><li>Monitor: Observe;</li><li>Disabled: Not enabled, disable the specified rule;</li><li>Challenge: Challenge. Among them, ChallengeOption in ChallengeActionParameters supports JSChallenge and ManagedChallenge;</li><li>Allow: Release (to be deprecated).</li>
         /// </summary>
         [JsonProperty("BaseAction")]
         public SecurityAction BaseAction{ get; set; }
 
         /// <summary>
-        /// Specifies the handling method for access requests from known commercial tools or open-source tools.
+        /// Specify the handling method for access requests from known commercial or open-source tools.
         /// </summary>
         [JsonProperty("BotManagementActionOverrides")]
         public BotManagementActionOverrides[] BotManagementActionOverrides{ get; set; }

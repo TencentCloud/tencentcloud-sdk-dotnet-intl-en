@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to update Cookie and validate. valid values: <li>on: update Cookie and validate;</li> <li>off: verify only.</li>.
+        /// Whether to update the Cookie and verify. Valid values: <li>on: update the Cookie and verify;</li><li>off: verify only.</li>
         /// </summary>
         [JsonProperty("IssueNewBotSessionCookie")]
         public string IssueNewBotSessionCookie{ get; set; }
 
         /// <summary>
-        /// Specifies the trigger threshold for updating and validating cookies. valid only when IssueNewBotSessionCookie is set to on.
+        /// Update threshold for cookie update and validation. Valid only when IssueNewBotSessionCookie is on.
         /// </summary>
         [JsonProperty("MaxNewSessionTriggerConfig")]
         public MaxNewSessionTriggerConfig MaxNewSessionTriggerConfig{ get; set; }
 
         /// <summary>
-        /// Execution action when no Cookie is carried or the Cookie expired. valid values for the Name parameter in SecurityAction: <li>Deny: block, where Stall can be configured in DenyActionParameters;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where MinDelayTime and MaxDelayTime must be configured in AllowActionParameters.</li>.
+        /// Execution action without a Cookie or with an expired Cookie. Supported Name values for SecurityAction: <li>Deny: block. DenyActionParameters supports Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>
         /// </summary>
         [JsonProperty("SessionExpiredAction")]
         public SecurityAction SessionExpiredAction{ get; set; }
 
         /// <summary>
-        /// Execution action for invalid Cookie. valid values for the Name parameter in SecurityAction: <li>Deny: block, where the DenyActionParameters supports Stall configuration;</li><li>Monitor: observe;</li><li>Allow: respond after wait, where AllowActionParameters requires MinDelayTime and MaxDelayTime configuration.</li>.
+        /// Execution action for invalid Cookie. The Name parameter of SecurityAction supports the following values: <li>Deny: block. DenyActionParameters supports the Stall configuration.</li><li>Monitor: observe.</li><li>Allow: respond after waiting. AllowActionParameters requires the MinDelayTime and MaxDelayTime configurations.</li>
         /// </summary>
         [JsonProperty("SessionInvalidAction")]
         public SecurityAction SessionInvalidAction{ get; set; }
 
         /// <summary>
-        /// Specifies the session rate and periodic feature verification configuration.
+        /// Specific configuration for session rate and periodic feature verification.
         /// </summary>
         [JsonProperty("SessionRateControl")]
         public SessionRateControl SessionRateControl{ get; set; }

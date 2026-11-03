@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of Bot custom Rules. when using ModifySecurityPolicy to modify Web protection configuration: <br> <li> if Rules in SecurityPolicy.BotManagement.CustomRules is not specified or parameter length of Rules is zero: clear all Bot custom rule configurations.</li> <li> if CustomRules in SecurityPolicy.BotManagement parameters is unspecified: keep existing Bot custom rule configurations and do not modify them.</li>.
+        /// List of Bot custom Rules. When using ModifySecurityPolicy to modify the Web protection configuration: <br> <li> If the Rules parameter in SecurityPolicy.BotManagement.CustomRules is not specified, or the Rules parameter length is zero: clear all Bot custom rule configurations.</li> <li> If the CustomRules parameter value is not specified in the SecurityPolicy.BotManagement parameters: keep the existing Bot custom rule configuration without modification.</li>
         /// </summary>
         [JsonProperty("Rules")]
         public BotManagementCustomRule[] Rules{ get; set; }

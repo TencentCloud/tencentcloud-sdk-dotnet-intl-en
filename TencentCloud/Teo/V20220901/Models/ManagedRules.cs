@@ -25,37 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
+        /// <p>Whether managed rules are enabled. Valid values: <li>on: enabled. All managed rules take effect as configured.</li><li>off: disabled. No managed rules take effect.</li></p>
         /// </summary>
         [JsonProperty("Enabled")]
         public string Enabled{ get; set; }
 
         /// <summary>
-        /// Evaluation mode is enabled or not, it is valid only when the `Enabled` parameter is set to `on`. Values: <li>`on`: enabled, all managed rules take effect in `observe` mode.</li> <li>off: disabled, all managed rules take effect according to the specified configuration.</li>.
+        /// <p>Whether evaluation mode is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. All managed rules take effect in observation mode.</li><li>off: disabled. All managed rules take effect as configured.</li></p>
         /// </summary>
         [JsonProperty("DetectionOnly")]
         public string DetectionOnly{ get; set; }
 
         /// <summary>
-        /// Managed rule semantic analysis is enabled or not, it is valid only when the `Enabled` parameter is `on`. Values: <li>`on`: enabled, perform semantic analysis  before processing requests;</li> <li>`off`: disabled, process requests directly without semantic analysis.</li> <br/>The default value is `off`.
+        /// <p>Whether the deep analysis option for managed rules is enabled. This parameter is valid only when the `Enabled` parameter is set to `on`. Valid values: <li>on: enabled. Requests are processed after deep analysis.</li><li>off: disabled. Requests are processed directly without deep analysis.</li> <br>This parameter is to be deprecated. The switch for deep analysis rules is migrated to the `SemanticAnalysisRules.Enabled` parameter.</p>
         /// </summary>
         [JsonProperty("SemanticAnalysis")]
         public string SemanticAnalysis{ get; set; }
 
         /// <summary>
-        /// Managed rule automatic update option.
+        /// <p>Deep analysis configuration option. Identifies malicious behaviors in requests (such as SQL injection and XSS attacks), and logs and blocks malicious requests.</p>
+        /// </summary>
+        [JsonProperty("SemanticAnalysisRules")]
+        public SemanticAnalysisRules SemanticAnalysisRules{ get; set; }
+
+        /// <summary>
+        /// <p>Auto-update option for managed rules.</p>
         /// </summary>
         [JsonProperty("AutoUpdate")]
         public ManagedRuleAutoUpdate AutoUpdate{ get; set; }
 
         /// <summary>
-        /// Configuration of the managed rule group. If this structure is passed as an empty array or the GroupId is not included in the array, it will be processed based by default.
+        /// <p>Configuration of managed rule groups. If an empty array is passed for this structure or `GroupId` is not included in the list, the default processing method is used.</p>
         /// </summary>
         [JsonProperty("ManagedRuleGroups")]
         public ManagedRuleGroup[] ManagedRuleGroups{ get; set; }
 
         /// <summary>
-        /// High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+        /// <p>High-frequency scan protection configuration option. When a visitor's requests frequently trigger managed rules configured as block, all requests from this visitor are blocked for a period of time.</p>
         /// </summary>
         [JsonProperty("FrequentScanningProtection")]
         public FrequentScanningProtection FrequentScanningProtection{ get; set; }
@@ -69,6 +75,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamSimple(map, prefix + "DetectionOnly", this.DetectionOnly);
             this.SetParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
+            this.SetParamObj(map, prefix + "SemanticAnalysisRules.", this.SemanticAnalysisRules);
             this.SetParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
             this.SetParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
             this.SetParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);

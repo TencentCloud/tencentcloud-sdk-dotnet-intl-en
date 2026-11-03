@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Definition list of exception Rules. when using ModifySecurityPolicy to modify Web protection configuration: <li>if the Rules parameter is not specified or the parameter length is zero: clear all exception rule configurations.</li><li>if the ExceptionRules parameter value is not specified in SecurityPolicy: keep existing exception rule configurations without modification.</li>.
+        /// Definition list of exception Rules. When using ModifySecurityPolicy to modify Web protection configuration: <li>If the Rules parameter is not specified or its length is zero: clear all exception rule configurations.</li><li>If the ExceptionRules parameter value is not specified in the SecurityPolicy parameter: keep existing exception rule configurations without modification.</li>
         /// </summary>
         [JsonProperty("Rules")]
         public ExceptionRule[] Rules{ get; set; }
