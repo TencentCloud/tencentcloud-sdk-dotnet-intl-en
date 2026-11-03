@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1420";
 
         /// <summary>
         /// Client constructor.
@@ -7772,7 +7772,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to query verification results of dspm data identification data items.
+        /// Queries the verification result of a dspm data identification data item
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmIdentifyRuleTestResultRequest"/></param>
         /// <returns><see cref="DescribeDspmIdentifyRuleTestResultResponse"/></returns>
@@ -7782,7 +7782,7 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
-        /// This API is used to query verification results of dspm data identification data items.
+        /// Queries the verification result of a dspm data identification data item
         /// </summary>
         /// <param name="req"><see cref="DescribeDspmIdentifyRuleTestResultRequest"/></param>
         /// <returns><see cref="DescribeDspmIdentifyRuleTestResultResponse"/></returns>

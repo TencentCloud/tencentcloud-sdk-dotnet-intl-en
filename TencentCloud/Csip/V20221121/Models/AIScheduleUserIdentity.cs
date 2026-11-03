@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// <p>Account Uin</p>
+        /// <p>Account UIN.</p>
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ChatId{ get; set; }
 
         /// <summary>
-        /// <p>Channel identifier, for example, wecom / qq / wx / feishu / dingtalk / cloud</p>
+        /// <p>Channel identifier, such as wecom / qq / wx / feishu / dingtalk / cloud</p>
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }

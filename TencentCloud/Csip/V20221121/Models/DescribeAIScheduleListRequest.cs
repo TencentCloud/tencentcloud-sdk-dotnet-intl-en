@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Scheduled task ID, optional. If empty, a full query is performed.</p>
+        /// <p>Scheduled task ID. It is optional. If it is empty, a full query is performed.</p>
         /// </summary>
         [JsonProperty("ScheduleId")]
         public string ScheduleId{ get; set; }

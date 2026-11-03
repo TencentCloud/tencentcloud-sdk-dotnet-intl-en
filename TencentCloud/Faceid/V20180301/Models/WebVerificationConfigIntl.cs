@@ -129,8 +129,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// <summary>
         /// When CheckMode = 1, this defines the waiting policy for OCR recognition results.
         /// Enumeration values:
-        /// required: Wait for OCR result after document capture.
-        /// skip: Wait for OCR result confirmation before entering liveness check.
+        /// required: Proceed to liveness check only after OCR result confirmation.
+        /// skip: Enter liveness check immediately after card photo submission.
         /// Default value: required.
         /// </summary>
         [JsonProperty("OcrWaitPolicy")]

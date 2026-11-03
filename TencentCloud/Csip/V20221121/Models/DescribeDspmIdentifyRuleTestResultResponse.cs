@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Whether matched successfully</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
+        /// <p>Whether the match is successful</p><p>Enumeration values:</p><ul><li>true: match successful</li><li>false: fail to match</li></ul>
         /// </summary>
         [JsonProperty("IsMatch")]
         public bool? IsMatch{ get; set; }

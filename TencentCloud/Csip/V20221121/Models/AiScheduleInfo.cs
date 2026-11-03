@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>ID of the AI scheduled task.</p>
+        /// <p>AI scheduled task ID.</p>
         /// </summary>
         [JsonProperty("ScheduleId")]
         public string ScheduleId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Prompts{ get; set; }
 
         /// <summary>
-        /// <p>Status. Parameter Value: 1 (enabled), 2 (disabled).</p>
+        /// <p>Status. Value: 1 (enabled), 2 (disabled).</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
