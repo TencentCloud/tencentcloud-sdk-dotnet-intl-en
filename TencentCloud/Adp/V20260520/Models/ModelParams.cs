@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// <p>Whether deep thinking is enabled</p>
+        /// <p>Whether to enable deep thinking</p>
         /// </summary>
         [JsonProperty("DeepThinking")]
         public string DeepThinking{ get; set; }

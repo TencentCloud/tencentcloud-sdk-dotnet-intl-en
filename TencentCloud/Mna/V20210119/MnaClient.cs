@@ -28,7 +28,7 @@ namespace TencentCloud.Mna.V20210119
 
        private const string endpoint = "mna.intl.tencentcloudapi.com";
        private const string version = "2021-01-19";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -831,7 +831,7 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
-        /// Download traffic data on the usage statistics page
+        /// Download traffic data on the usage statistics page.
         /// </summary>
         /// <param name="req"><see cref="GetStatisticDataByNameRequest"/></param>
         /// <returns><see cref="GetStatisticDataByNameResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
-        /// Download traffic data on the usage statistics page
+        /// Download traffic data on the usage statistics page.
         /// </summary>
         /// <param name="req"><see cref="GetStatisticDataByNameRequest"/></param>
         /// <returns><see cref="GetStatisticDataByNameResponse"/></returns>

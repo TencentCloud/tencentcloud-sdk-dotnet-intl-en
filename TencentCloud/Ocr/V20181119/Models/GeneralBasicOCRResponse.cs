@@ -50,7 +50,8 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long? PdfPageSize{ get; set; }
 
         /// <summary>
-        /// 
+        /// Rotation angle of the image, measured in degrees. The horizontal direction of the text is 0; clockwise is positive, counterclockwise is negative.
+        /// Example value: 6.5 
         /// </summary>
         [JsonProperty("Angle")]
         public float? Angle{ get; set; }

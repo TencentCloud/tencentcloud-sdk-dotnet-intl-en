@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1422";
 
         /// <summary>
         /// Client constructor.
@@ -156,7 +156,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
+        /// This API is used to detect and recognize characters in an image in the following 21 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi and Arabic. Mixed characters in English and each supported language can be recognized together.
         /// 
         /// It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
         /// 
@@ -172,7 +172,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This API is used to detect and recognize characters in an image in the following 20 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, and Arabic. Mixed characters in English and each supported language can be recognized together.
+        /// This API is used to detect and recognize characters in an image in the following 21 languages: Chinese, English, Japanese, Korean, Spanish, French, German, Portuguese, Vietnamese, Malay, Russian, Italian, Dutch, Swedish, Finnish, Danish, Norwegian, Hungarian, Thai, Hindi and Arabic. Mixed characters in English and each supported language can be recognized together.
         /// 
         /// It can recognize printed text in paper documents, online images, ads, signboards, menus, video titles, profile photos, etc.
         /// 

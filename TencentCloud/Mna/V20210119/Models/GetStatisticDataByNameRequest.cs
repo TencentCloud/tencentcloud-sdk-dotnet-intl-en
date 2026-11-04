@@ -25,57 +25,55 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// Device name. If not specified, pass "-1".
+        /// <p>Device name. If no device is specified, you can pass "-1"</p>
         /// </summary>
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// Start time of statistics (seconds).
+        /// <p>Start time of statistics, unit: s</p>
         /// </summary>
         [JsonProperty("BeginTime")]
         public long? BeginTime{ get; set; }
 
         /// <summary>
-        /// Statistics end time (s).
+        /// <p>Statistics end time, unit: s</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// Aggregation granularity:
-        /// Hourly statistics
-        /// 2: Daily statistics
+        /// <p>Time granularity</p><p>Enumeration values:</p><ul><li>1: hourly statistics</li><li>2: daily statistics</li><li>3: per minute</li><li>4: every 5 minutes</li></ul>
         /// </summary>
         [JsonProperty("TimeGranularity")]
         public long? TimeGranularity{ get; set; }
 
         /// <summary>
-        /// Access region. Value ranges from 'MC' to 'AM'. MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. Leave it blank to represent all regions.
+        /// <p>Access region. Value range: ['MC','AP','EU','AM'] MC=Chinese mainland AP=Asia Pacific EU=Europe AM=Americas. If not specified, it represents all regions.</p>
         /// </summary>
         [JsonProperty("AccessRegion")]
         public string AccessRegion{ get; set; }
 
         /// <summary>
-        /// Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+        /// <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not passed.</p>
         /// </summary>
         [JsonProperty("GatewayType")]
         public long? GatewayType{ get; set; }
 
         /// <summary>
-        /// Device name list. Up to 10 devices. Used when downloading traffic volume of multiple devices. At this point, DeviceName can be "-1".
+        /// <p>Device name list, up to 10 devices. Used when downloading traffic for multiple devices. At this point, DeviceName can be set to "-1"</p>
         /// </summary>
         [JsonProperty("DeviceList")]
         public string[] DeviceList{ get; set; }
 
         /// <summary>
-        /// Device group ID. If not specified, do not pass it. Used when downloading data by grouping.
+        /// <p>Device group ID. Do not pass it if no group is specified. Used when downloading data by group</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// Application ID. Leave blank if no designated application is specified. Used when downloading data by app.
+        /// <p>Application ID. If not specified, leave it blank. Used when downloading data by application</p>
         /// </summary>
         [JsonProperty("MpApplicationId")]
         public string MpApplicationId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// Model alias.
+        /// Model alias
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
