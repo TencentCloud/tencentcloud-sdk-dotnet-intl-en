@@ -25,14 +25,13 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person description field index, whose value starts from 0.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Person description field Index, starts from 0.
         /// </summary>
         [JsonProperty("PersonExDescriptionIndex")]
         public ulong? PersonExDescriptionIndex{ get; set; }
 
         /// <summary>
-        /// Content of the person description field to be updated
+        /// Person description field content that needs to be updated.
         /// </summary>
         [JsonProperty("PersonExDescription")]
         public string PersonExDescription{ get; set; }

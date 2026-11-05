@@ -25,46 +25,43 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Person ID
+        /// Person ID.
         /// </summary>
         [JsonProperty("PersonId")]
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+        /// Face ID.
+        /// -Valid only in the API response of SearchFaces/SearchFacesReturnsByGroup.
+        /// -Person search class interfaces use the fusion feature method for retrieval. This field is meaningless.
         /// </summary>
         [JsonProperty("FaceId")]
         public string FaceId{ get; set; }
 
         /// <summary>
-        /// Match score of candidate. 
-        /// 
-        /// In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
-        /// In a face base library containing 100,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 80, 90, and 100, respectively;
-        /// In a face base library containing 300,000 faces, the 1% and 0.1% FARs correspond to scores of 85 and 95, respectively.
-        /// 
-        /// Generally, the score of 80 is suitable for most scenarios. We recommend choosing an appropriate score based on the actual situation, preferably no more than 90.
+        /// Match score of the candidate. 
+        /// -In a face base library of 10,000 faces, a false acceptance rate of 1% corresponds to a score of 70 points, 0.1% corresponds to 80 points, and 0.01% corresponds to 90 points.
+        /// -For a face base library of 100,000, a false acceptance rate of 1% corresponds to a score of 80 points, 0.1% corresponds to 90 points, and 0.01% corresponds to 100 points.
+        /// -With a face base library of 300,000, a false acceptance rate of 1% corresponds to a score of 85, and a false acceptance rate of 0.1% corresponds to a score of 95.
+        /// -Generally, a score of around 80 applies to most scenarios. It is advisable not to exceed 90. You can choose a suitable score according to the actual situation.
         /// </summary>
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
         /// <summary>
-        /// Person name
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Person name.
         /// </summary>
         [JsonProperty("PersonName")]
         public string PersonName{ get; set; }
 
         /// <summary>
-        /// Person gender
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Gender of personnel.
         /// </summary>
         [JsonProperty("Gender")]
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// List of groups containing this person and their description fields
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// List of person libraries containing this person and the content of the description field.
         /// </summary>
         [JsonProperty("PersonGroupInfos")]
         public PersonGroupInfo[] PersonGroupInfos{ get; set; }

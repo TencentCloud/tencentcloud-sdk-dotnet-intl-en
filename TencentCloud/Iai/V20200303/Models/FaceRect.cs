@@ -25,29 +25,29 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Horizontal coordinate of the top-left vertex of face frame. 
-        /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+        /// Top-left X-axis coordinate of the face box 
+        /// -The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+        /// -If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
         /// </summary>
         [JsonProperty("X")]
         public long? X{ get; set; }
 
         /// <summary>
-        /// Vertical coordinate of the top-left vertex of face frame. 
-        /// The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-        /// If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+        /// Top-left Y-axis coordinate of the face box 
+        /// -The face frame contains the facial feature locations and is expanded on this basis. If the face frame exceeds the image range, it can cause negative coordinate values. 
+        /// -If you need to capture a complete face, you can set negative coordinates to 0 when the completeness meets the requirements.
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
 
         /// <summary>
-        /// Face width
+        /// Face width.
         /// </summary>
         [JsonProperty("Width")]
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// Face height
+        /// Face height.
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }

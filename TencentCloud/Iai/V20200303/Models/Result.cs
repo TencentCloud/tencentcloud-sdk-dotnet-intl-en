@@ -25,19 +25,21 @@ namespace TencentCloud.Iai.V20200303.Models
     {
         
         /// <summary>
-        /// Most matching candidate recognized
+        /// The most similar candidate identified.
         /// </summary>
         [JsonProperty("Candidates")]
         public Candidate[] Candidates{ get; set; }
 
         /// <summary>
-        /// Position of detected face frame
+        /// Face bounding box position detected.
         /// </summary>
         [JsonProperty("FaceRect")]
         public FaceRect FaceRect{ get; set; }
 
         /// <summary>
-        /// The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+        /// Status return code of the detected face image.
+        /// - 0 indicates normal. 
+        /// -1601 indicates the image quality control requirement is not met. At this point, the Candidate content is empty.
         /// </summary>
         [JsonProperty("RetCode")]
         public long? RetCode{ get; set; }

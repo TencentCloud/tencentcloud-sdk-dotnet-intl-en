@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.intl.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1423";
 
         /// <summary>
         /// Client constructor.
@@ -1169,6 +1169,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// This API is used to obtain meta-information of audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogMetaRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogMetaResponse"/></returns>
+        public Task<DescribeAuditLogMetaResponse> DescribeAuditLogMeta(DescribeAuditLogMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogMetaResponse>(req, "DescribeAuditLogMeta");
+        }
+
+        /// <summary>
+        /// This API is used to obtain meta-information of audit logs.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAuditLogMetaRequest"/></param>
+        /// <returns><see cref="DescribeAuditLogMetaResponse"/></returns>
+        public DescribeAuditLogMetaResponse DescribeAuditLogMetaSync(DescribeAuditLogMetaRequest req)
+        {
+            return InternalRequestAsync<DescribeAuditLogMetaResponse>(req, "DescribeAuditLogMeta")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the classification list
         /// </summary>
         /// <param name="req"><see cref="DescribeCategoryListRequest"/></param>
@@ -1186,6 +1207,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeCategoryListResponse DescribeCategoryListSync(DescribeCategoryListRequest req)
         {
             return InternalRequestAsync<DescribeCategoryListResponse>(req, "DescribeCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query channel details (case-sensitive by scenario)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelRequest"/></param>
+        /// <returns><see cref="DescribeChannelResponse"/></returns>
+        public Task<DescribeChannelResponse> DescribeChannel(DescribeChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelResponse>(req, "DescribeChannel");
+        }
+
+        /// <summary>
+        /// Query channel details (case-sensitive by scenario)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelRequest"/></param>
+        /// <returns><see cref="DescribeChannelResponse"/></returns>
+        public DescribeChannelResponse DescribeChannelSync(DescribeChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelResponse>(req, "DescribeChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the channel list by scenario.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelListRequest"/></param>
+        /// <returns><see cref="DescribeChannelListResponse"/></returns>
+        public Task<DescribeChannelListResponse> DescribeChannelList(DescribeChannelListRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelListResponse>(req, "DescribeChannelList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the channel list by scenario.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelListRequest"/></param>
+        /// <returns><see cref="DescribeChannelListResponse"/></returns>
+        public DescribeChannelListResponse DescribeChannelListSync(DescribeChannelListRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelListResponse>(req, "DescribeChannelList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1253,6 +1316,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// Query resource consumption details, including billing fields such as consumption type, consumption target, consumption scenario, package, and PU consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumptionDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConsumptionDetailListResponse"/></returns>
+        public Task<DescribeConsumptionDetailListResponse> DescribeConsumptionDetailList(DescribeConsumptionDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumptionDetailListResponse>(req, "DescribeConsumptionDetailList");
+        }
+
+        /// <summary>
+        /// Query resource consumption details, including billing fields such as consumption type, consumption target, consumption scenario, package, and PU consumption.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumptionDetailListRequest"/></param>
+        /// <returns><see cref="DescribeConsumptionDetailListResponse"/></returns>
+        public DescribeConsumptionDetailListResponse DescribeConsumptionDetailListSync(DescribeConsumptionDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeConsumptionDetailListResponse>(req, "DescribeConsumptionDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// View session information.
         /// </summary>
         /// <param name="req"><see cref="DescribeConversationRequest"/></param>
@@ -1312,6 +1396,90 @@ namespace TencentCloud.Adp.V20260520
         public DescribeConversationMessageListResponse DescribeConversationMessageListSync(DescribeConversationMessageListRequest req)
         {
             return InternalRequestAsync<DescribeConversationMessageListResponse>(req, "DescribeConversationMessageList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries the details of a document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocRequest"/></param>
+        /// <returns><see cref="DescribeDocResponse"/></returns>
+        public Task<DescribeDocResponse> DescribeDoc(DescribeDocRequest req)
+        {
+            return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc");
+        }
+
+        /// <summary>
+        /// Queries the details of a document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocRequest"/></param>
+        /// <returns><see cref="DescribeDocResponse"/></returns>
+        public DescribeDocResponse DescribeDocSync(DescribeDocRequest req)
+        {
+            return InternalRequestAsync<DescribeDocResponse>(req, "DescribeDoc")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the abstract list of a document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeDocSummaryListResponse"/></returns>
+        public Task<DescribeDocSummaryListResponse> DescribeDocSummaryList(DescribeDocSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDocSummaryListResponse>(req, "DescribeDocSummaryList");
+        }
+
+        /// <summary>
+        /// Query the abstract list of a document.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDocSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeDocSummaryListResponse"/></returns>
+        public DescribeDocSummaryListResponse DescribeDocSummaryListSync(DescribeDocSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeDocSummaryListResponse>(req, "DescribeDocSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query knowledge base details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBRequest"/></param>
+        /// <returns><see cref="DescribeKBResponse"/></returns>
+        public Task<DescribeKBResponse> DescribeKB(DescribeKBRequest req)
+        {
+            return InternalRequestAsync<DescribeKBResponse>(req, "DescribeKB");
+        }
+
+        /// <summary>
+        /// Query knowledge base details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBRequest"/></param>
+        /// <returns><see cref="DescribeKBResponse"/></returns>
+        public DescribeKBResponse DescribeKBSync(DescribeKBRequest req)
+        {
+            return InternalRequestAsync<DescribeKBResponse>(req, "DescribeKB")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries the knowledge base list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeKBSummaryListResponse"/></returns>
+        public Task<DescribeKBSummaryListResponse> DescribeKBSummaryList(DescribeKBSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBSummaryListResponse>(req, "DescribeKBSummaryList");
+        }
+
+        /// <summary>
+        /// Queries the knowledge base list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKBSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeKBSummaryListResponse"/></returns>
+        public DescribeKBSummaryListResponse DescribeKBSummaryListSync(DescribeKBSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeKBSummaryListResponse>(req, "DescribeKBSummaryList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1379,6 +1547,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// Query the overview KPI card data of dashboards, distinguish resource dashboards from business dashboards by resource_type, and return the KPI metric list of each domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricOverviewListRequest"/></param>
+        /// <returns><see cref="DescribeMetricOverviewListResponse"/></returns>
+        public Task<DescribeMetricOverviewListResponse> DescribeMetricOverviewList(DescribeMetricOverviewListRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricOverviewListResponse>(req, "DescribeMetricOverviewList");
+        }
+
+        /// <summary>
+        /// Query the overview KPI card data of dashboards, distinguish resource dashboards from business dashboards by resource_type, and return the KPI metric list of each domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricOverviewListRequest"/></param>
+        /// <returns><see cref="DescribeMetricOverviewListResponse"/></returns>
+        public DescribeMetricOverviewListResponse DescribeMetricOverviewListSync(DescribeMetricOverviewListRequest req)
+        {
+            return InternalRequestAsync<DescribeMetricOverviewListResponse>(req, "DescribeMetricOverviewList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the model list
         /// </summary>
         /// <param name="req"><see cref="DescribeModelListRequest"/></param>
@@ -1417,6 +1606,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeMsgRecordCategoryListResponse DescribeMsgRecordCategoryListSync(DescribeMsgRecordCategoryListRequest req)
         {
             return InternalRequestAsync<DescribeMsgRecordCategoryListResponse>(req, "DescribeMsgRecordCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the dialogue message record list of an application. It supports filtering by channel type, feedback type, intent, call result, and other conditions, and supports cursor pagination and sorting by creation time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordListResponse"/></returns>
+        public Task<DescribeMsgRecordListResponse> DescribeMsgRecordList(DescribeMsgRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordListResponse>(req, "DescribeMsgRecordList");
+        }
+
+        /// <summary>
+        /// This API is used to query the dialogue message record list of an application. It supports filtering by channel type, feedback type, intent, call result, and other conditions, and supports cursor pagination and sorting by creation time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMsgRecordListRequest"/></param>
+        /// <returns><see cref="DescribeMsgRecordListResponse"/></returns>
+        public DescribeMsgRecordListResponse DescribeMsgRecordListSync(DescribeMsgRecordListRequest req)
+        {
+            return InternalRequestAsync<DescribeMsgRecordListResponse>(req, "DescribeMsgRecordList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1589,6 +1799,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// This API is used to obtain user resource package and value-added package usage information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceSummaryRequest"/></param>
+        /// <returns><see cref="DescribeResourceSummaryResponse"/></returns>
+        public Task<DescribeResourceSummaryResponse> DescribeResourceSummary(DescribeResourceSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceSummaryResponse>(req, "DescribeResourceSummary");
+        }
+
+        /// <summary>
+        /// This API is used to obtain user resource package and value-added package usage information.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceSummaryRequest"/></param>
+        /// <returns><see cref="DescribeResourceSummaryResponse"/></returns>
+        public DescribeResourceSummaryResponse DescribeResourceSummarySync(DescribeResourceSummaryRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceSummaryResponse>(req, "DescribeResourceSummary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the Skill classification list
         /// </summary>
         /// <param name="req"><see cref="DescribeSkillCategoryListRequest"/></param>
@@ -1606,6 +1837,27 @@ namespace TencentCloud.Adp.V20260520
         public DescribeSkillCategoryListResponse DescribeSkillCategoryListSync(DescribeSkillCategoryListRequest req)
         {
             return InternalRequestAsync<DescribeSkillCategoryListResponse>(req, "DescribeSkillCategoryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query skill details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public Task<DescribeSkillDetailResponse> DescribeSkillDetail(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail");
+        }
+
+        /// <summary>
+        /// Query skill details
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillDetailRequest"/></param>
+        /// <returns><see cref="DescribeSkillDetailResponse"/></returns>
+        public DescribeSkillDetailResponse DescribeSkillDetailSync(DescribeSkillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillDetailResponse>(req, "DescribeSkillDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1694,6 +1946,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// This API is used to query time series details of resource invocations, including two types of resources: models and plug-ins. It returns detailed information of each call record in chronological order.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeUsageDetailListResponse"/></returns>
+        public Task<DescribeUsageDetailListResponse> DescribeUsageDetailList(DescribeUsageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDetailListResponse>(req, "DescribeUsageDetailList");
+        }
+
+        /// <summary>
+        /// This API is used to query time series details of resource invocations, including two types of resources: models and plug-ins. It returns detailed information of each call record in chronological order.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsageDetailListRequest"/></param>
+        /// <returns><see cref="DescribeUsageDetailListResponse"/></returns>
+        public DescribeUsageDetailListResponse DescribeUsageDetailListSync(DescribeUsageDetailListRequest req)
+        {
+            return InternalRequestAsync<DescribeUsageDetailListResponse>(req, "DescribeUsageDetailList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query aggregated details of resource usage, including three types of resources: models, plug-ins, and platforms. It displays indicators such as call count and Token consumption, aggregated by space or application dimension.
         /// </summary>
         /// <param name="req"><see cref="DescribeUsageSummaryListRequest"/></param>
@@ -1778,6 +2051,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// Query the list of workflow running instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunSummaryListResponse"/></returns>
+        public Task<DescribeWorkflowRunSummaryListResponse> DescribeWorkflowRunSummaryList(DescribeWorkflowRunSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunSummaryListResponse>(req, "DescribeWorkflowRunSummaryList");
+        }
+
+        /// <summary>
+        /// Query the list of workflow running instances
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkflowRunSummaryListRequest"/></param>
+        /// <returns><see cref="DescribeWorkflowRunSummaryListResponse"/></returns>
+        public DescribeWorkflowRunSummaryListResponse DescribeWorkflowRunSummaryListSync(DescribeWorkflowRunSummaryListRequest req)
+        {
+            return InternalRequestAsync<DescribeWorkflowRunSummaryListResponse>(req, "DescribeWorkflowRunSummaryList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Asynchronously export QAs.
         /// </summary>
         /// <param name="req"><see cref="ExportQARequest"/></param>
@@ -1795,6 +2089,69 @@ namespace TencentCloud.Adp.V20260520
         public ExportQAResponse ExportQASync(ExportQARequest req)
         {
             return InternalRequestAsync<ExportQAResponse>(req, "ExportQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Favorite a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePluginRequest"/></param>
+        /// <returns><see cref="FavoritePluginResponse"/></returns>
+        public Task<FavoritePluginResponse> FavoritePlugin(FavoritePluginRequest req)
+        {
+            return InternalRequestAsync<FavoritePluginResponse>(req, "FavoritePlugin");
+        }
+
+        /// <summary>
+        /// Favorite a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="FavoritePluginRequest"/></param>
+        /// <returns><see cref="FavoritePluginResponse"/></returns>
+        public FavoritePluginResponse FavoritePluginSync(FavoritePluginRequest req)
+        {
+            return InternalRequestAsync<FavoritePluginResponse>(req, "FavoritePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Favorites a skill
+        /// </summary>
+        /// <param name="req"><see cref="FavoriteSkillRequest"/></param>
+        /// <returns><see cref="FavoriteSkillResponse"/></returns>
+        public Task<FavoriteSkillResponse> FavoriteSkill(FavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill");
+        }
+
+        /// <summary>
+        /// Favorites a skill
+        /// </summary>
+        /// <param name="req"><see cref="FavoriteSkillRequest"/></param>
+        /// <returns><see cref="FavoriteSkillResponse"/></returns>
+        public FavoriteSkillResponse FavoriteSkillSync(FavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<FavoriteSkillResponse>(req, "FavoriteSkill")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch imports documents
+        /// </summary>
+        /// <param name="req"><see cref="ImportDocListRequest"/></param>
+        /// <returns><see cref="ImportDocListResponse"/></returns>
+        public Task<ImportDocListResponse> ImportDocList(ImportDocListRequest req)
+        {
+            return InternalRequestAsync<ImportDocListResponse>(req, "ImportDocList");
+        }
+
+        /// <summary>
+        /// Batch imports documents
+        /// </summary>
+        /// <param name="req"><see cref="ImportDocListRequest"/></param>
+        /// <returns><see cref="ImportDocListResponse"/></returns>
+        public ImportDocListResponse ImportDocListSync(ImportDocListRequest req)
+        {
+            return InternalRequestAsync<ImportDocListResponse>(req, "ImportDocList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1862,6 +2219,69 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// Modify category
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyCategoryResponse"/></returns>
+        public Task<ModifyCategoryResponse> ModifyCategory(ModifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyCategoryResponse>(req, "ModifyCategory");
+        }
+
+        /// <summary>
+        /// Modify category
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCategoryRequest"/></param>
+        /// <returns><see cref="ModifyCategoryResponse"/></returns>
+        public ModifyCategoryResponse ModifyCategorySync(ModifyCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyCategoryResponse>(req, "ModifyCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a channel, including remarks and the callback robot ID of a WeCom chatbot channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChannelRequest"/></param>
+        /// <returns><see cref="ModifyChannelResponse"/></returns>
+        public Task<ModifyChannelResponse> ModifyChannel(ModifyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyChannelResponse>(req, "ModifyChannel");
+        }
+
+        /// <summary>
+        /// This API is used to modify a channel, including remarks and the callback robot ID of a WeCom chatbot channel.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChannelRequest"/></param>
+        /// <returns><see cref="ModifyChannelResponse"/></returns>
+        public ModifyChannelResponse ModifyChannelSync(ModifyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyChannelResponse>(req, "ModifyChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a conflict
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConflictQARequest"/></param>
+        /// <returns><see cref="ModifyConflictQAResponse"/></returns>
+        public Task<ModifyConflictQAResponse> ModifyConflictQA(ModifyConflictQARequest req)
+        {
+            return InternalRequestAsync<ModifyConflictQAResponse>(req, "ModifyConflictQA");
+        }
+
+        /// <summary>
+        /// Modify a conflict
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConflictQARequest"/></param>
+        /// <returns><see cref="ModifyConflictQAResponse"/></returns>
+        public ModifyConflictQAResponse ModifyConflictQASync(ModifyConflictQARequest req)
+        {
+            return InternalRequestAsync<ModifyConflictQAResponse>(req, "ModifyConflictQA")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Modify session information.
         /// </summary>
         /// <param name="req"><see cref="ModifyConversationRequest"/></param>
@@ -1879,6 +2299,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyConversationResponse ModifyConversationSync(ModifyConversationRequest req)
         {
             return InternalRequestAsync<ModifyConversationResponse>(req, "ModifyConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a single document
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocRequest"/></param>
+        /// <returns><see cref="ModifyDocResponse"/></returns>
+        public Task<ModifyDocResponse> ModifyDoc(ModifyDocRequest req)
+        {
+            return InternalRequestAsync<ModifyDocResponse>(req, "ModifyDoc");
+        }
+
+        /// <summary>
+        /// Modify a single document
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocRequest"/></param>
+        /// <returns><see cref="ModifyDocResponse"/></returns>
+        public ModifyDocResponse ModifyDocSync(ModifyDocRequest req)
+        {
+            return InternalRequestAsync<ModifyDocResponse>(req, "ModifyDoc")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1946,6 +2387,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// Modify the name of a specified message record category
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="ModifyMsgRecordCategoryResponse"/></returns>
+        public Task<ModifyMsgRecordCategoryResponse> ModifyMsgRecordCategory(ModifyMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyMsgRecordCategoryResponse>(req, "ModifyMsgRecordCategory");
+        }
+
+        /// <summary>
+        /// Modify the name of a specified message record category
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMsgRecordCategoryRequest"/></param>
+        /// <returns><see cref="ModifyMsgRecordCategoryResponse"/></returns>
+        public ModifyMsgRecordCategoryResponse ModifyMsgRecordCategorySync(ModifyMsgRecordCategoryRequest req)
+        {
+            return InternalRequestAsync<ModifyMsgRecordCategoryResponse>(req, "ModifyMsgRecordCategory")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public Task<ModifyPluginResponse> ModifyPlugin(ModifyPluginRequest req)
+        {
+            return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin");
+        }
+
+        /// <summary>
+        /// Modify a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
+        {
+            return InternalRequestAsync<ModifyPluginResponse>(req, "ModifyPlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Modify single QA
         /// </summary>
         /// <param name="req"><see cref="ModifyQARequest"/></param>
@@ -1984,6 +2467,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyQAListResponse ModifyQAListSync(ModifyQAListRequest req)
         {
             return InternalRequestAsync<ModifyQAListResponse>(req, "ModifyQAList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify a Skill
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillRequest"/></param>
+        /// <returns><see cref="ModifySkillResponse"/></returns>
+        public Task<ModifySkillResponse> ModifySkill(ModifySkillRequest req)
+        {
+            return InternalRequestAsync<ModifySkillResponse>(req, "ModifySkill");
+        }
+
+        /// <summary>
+        /// Modify a Skill
+        /// </summary>
+        /// <param name="req"><see cref="ModifySkillRequest"/></param>
+        /// <returns><see cref="ModifySkillResponse"/></returns>
+        public ModifySkillResponse ModifySkillSync(ModifySkillRequest req)
+        {
+            return InternalRequestAsync<ModifySkillResponse>(req, "ModifySkill")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2051,6 +2555,27 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// This API is used to read MCP UI resources in HTML for frontend iframe to load the MCP App interface.
+        /// </summary>
+        /// <param name="req"><see cref="ReadMCPResourceRequest"/></param>
+        /// <returns><see cref="ReadMCPResourceResponse"/></returns>
+        public Task<ReadMCPResourceResponse> ReadMCPResource(ReadMCPResourceRequest req)
+        {
+            return InternalRequestAsync<ReadMCPResourceResponse>(req, "ReadMCPResource");
+        }
+
+        /// <summary>
+        /// This API is used to read MCP UI resources in HTML for frontend iframe to load the MCP App interface.
+        /// </summary>
+        /// <param name="req"><see cref="ReadMCPResourceRequest"/></param>
+        /// <returns><see cref="ReadMCPResourceResponse"/></returns>
+        public ReadMCPResourceResponse ReadMCPResourceSync(ReadMCPResourceRequest req)
+        {
+            return InternalRequestAsync<ReadMCPResourceResponse>(req, "ReadMCPResource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to list a skill.
         /// </summary>
         /// <param name="req"><see cref="ReleaseSkillRequest"/></param>
@@ -2091,6 +2616,48 @@ namespace TencentCloud.Adp.V20260520
         public ResetConversationResponse ResetConversationSync(ResetConversationRequest req)
         {
             return InternalRequestAsync<ResetConversationResponse>(req, "ResetConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ResumeAppTrigger
+        /// </summary>
+        /// <param name="req"><see cref="ResumeAppTriggerRequest"/></param>
+        /// <returns><see cref="ResumeAppTriggerResponse"/></returns>
+        public Task<ResumeAppTriggerResponse> ResumeAppTrigger(ResumeAppTriggerRequest req)
+        {
+            return InternalRequestAsync<ResumeAppTriggerResponse>(req, "ResumeAppTrigger");
+        }
+
+        /// <summary>
+        /// ResumeAppTrigger
+        /// </summary>
+        /// <param name="req"><see cref="ResumeAppTriggerRequest"/></param>
+        /// <returns><see cref="ResumeAppTriggerResponse"/></returns>
+        public ResumeAppTriggerResponse ResumeAppTriggerSync(ResumeAppTriggerRequest req)
+        {
+            return InternalRequestAsync<ResumeAppTriggerResponse>(req, "ResumeAppTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Resume a workflow asynchronous execution instance that is waiting for input.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWorkflowRunRequest"/></param>
+        /// <returns><see cref="ResumeWorkflowRunResponse"/></returns>
+        public Task<ResumeWorkflowRunResponse> ResumeWorkflowRun(ResumeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<ResumeWorkflowRunResponse>(req, "ResumeWorkflowRun");
+        }
+
+        /// <summary>
+        /// Resume a workflow asynchronous execution instance that is waiting for input.
+        /// </summary>
+        /// <param name="req"><see cref="ResumeWorkflowRunRequest"/></param>
+        /// <returns><see cref="ResumeWorkflowRunResponse"/></returns>
+        public ResumeWorkflowRunResponse ResumeWorkflowRunSync(ResumeWorkflowRunRequest req)
+        {
+            return InternalRequestAsync<ResumeWorkflowRunResponse>(req, "ResumeWorkflowRun")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2158,6 +2725,48 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
+        /// SaveWorkflowDebugContext
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowDebugContextRequest"/></param>
+        /// <returns><see cref="SaveWorkflowDebugContextResponse"/></returns>
+        public Task<SaveWorkflowDebugContextResponse> SaveWorkflowDebugContext(SaveWorkflowDebugContextRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowDebugContextResponse>(req, "SaveWorkflowDebugContext");
+        }
+
+        /// <summary>
+        /// SaveWorkflowDebugContext
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowDebugContextRequest"/></param>
+        /// <returns><see cref="SaveWorkflowDebugContextResponse"/></returns>
+        public SaveWorkflowDebugContextResponse SaveWorkflowDebugContextSync(SaveWorkflowDebugContextRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowDebugContextResponse>(req, "SaveWorkflowDebugContext")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// SaveWorkflowToolNodeOutput
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowToolNodeOutputRequest"/></param>
+        /// <returns><see cref="SaveWorkflowToolNodeOutputResponse"/></returns>
+        public Task<SaveWorkflowToolNodeOutputResponse> SaveWorkflowToolNodeOutput(SaveWorkflowToolNodeOutputRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowToolNodeOutputResponse>(req, "SaveWorkflowToolNodeOutput");
+        }
+
+        /// <summary>
+        /// SaveWorkflowToolNodeOutput
+        /// </summary>
+        /// <param name="req"><see cref="SaveWorkflowToolNodeOutputRequest"/></param>
+        /// <returns><see cref="SaveWorkflowToolNodeOutputResponse"/></returns>
+        public SaveWorkflowToolNodeOutputResponse SaveWorkflowToolNodeOutputSync(SaveWorkflowToolNodeOutputRequest req)
+        {
+            return InternalRequestAsync<SaveWorkflowToolNodeOutputResponse>(req, "SaveWorkflowToolNodeOutput")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Knowledge retrieval
         /// </summary>
         /// <param name="req"><see cref="SearchKnowledgeRequest"/></param>
@@ -2175,6 +2784,69 @@ namespace TencentCloud.Adp.V20260520
         public SearchKnowledgeResponse SearchKnowledgeSync(SearchKnowledgeRequest req)
         {
             return InternalRequestAsync<SearchKnowledgeResponse>(req, "SearchKnowledge")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Batch stop running workflow instances.
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunListRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunListResponse"/></returns>
+        public Task<StopWorkflowRunListResponse> StopWorkflowRunList(StopWorkflowRunListRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunListResponse>(req, "StopWorkflowRunList");
+        }
+
+        /// <summary>
+        /// Batch stop running workflow instances.
+        /// </summary>
+        /// <param name="req"><see cref="StopWorkflowRunListRequest"/></param>
+        /// <returns><see cref="StopWorkflowRunListResponse"/></returns>
+        public StopWorkflowRunListResponse StopWorkflowRunListSync(StopWorkflowRunListRequest req)
+        {
+            return InternalRequestAsync<StopWorkflowRunListResponse>(req, "StopWorkflowRunList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Unfavorite a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePluginRequest"/></param>
+        /// <returns><see cref="UnfavoritePluginResponse"/></returns>
+        public Task<UnfavoritePluginResponse> UnfavoritePlugin(UnfavoritePluginRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePluginResponse>(req, "UnfavoritePlugin");
+        }
+
+        /// <summary>
+        /// Unfavorite a plug-in
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoritePluginRequest"/></param>
+        /// <returns><see cref="UnfavoritePluginResponse"/></returns>
+        public UnfavoritePluginResponse UnfavoritePluginSync(UnfavoritePluginRequest req)
+        {
+            return InternalRequestAsync<UnfavoritePluginResponse>(req, "UnfavoritePlugin")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Unfavorites a skill
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoriteSkillRequest"/></param>
+        /// <returns><see cref="UnfavoriteSkillResponse"/></returns>
+        public Task<UnfavoriteSkillResponse> UnfavoriteSkill(UnfavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<UnfavoriteSkillResponse>(req, "UnfavoriteSkill");
+        }
+
+        /// <summary>
+        /// Unfavorites a skill
+        /// </summary>
+        /// <param name="req"><see cref="UnfavoriteSkillRequest"/></param>
+        /// <returns><see cref="UnfavoriteSkillResponse"/></returns>
+        public UnfavoriteSkillResponse UnfavoriteSkillSync(UnfavoriteSkillRequest req)
+        {
+            return InternalRequestAsync<UnfavoriteSkillResponse>(req, "UnfavoriteSkill")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
