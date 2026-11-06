@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1424";
 
         /// <summary>
         /// Client constructor.
@@ -442,7 +442,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// This interface supports recognition of both the front and back sides of Brazilian ID cards. Default API request rate limit: 5 requests per second.
         /// </summary>
         /// <param name="req"><see cref="RecognizeBrazilIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeBrazilIDCardOCRResponse"/></returns>
@@ -452,7 +452,7 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
-        /// This interface supports identification of the front and back of Brazilian ID license. The identification fields include name, driver's license category, number, validity period, etc.
+        /// This interface supports recognition of both the front and back sides of Brazilian ID cards. Default API request rate limit: 5 requests per second.
         /// </summary>
         /// <param name="req"><see cref="RecognizeBrazilIDCardOCRRequest"/></param>
         /// <returns><see cref="RecognizeBrazilIDCardOCRResponse"/></returns>

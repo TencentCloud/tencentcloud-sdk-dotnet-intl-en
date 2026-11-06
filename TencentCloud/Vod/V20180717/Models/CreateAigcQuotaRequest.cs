@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</strong></p>
+        /// <p><strong>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</strong></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
@@ -37,16 +37,40 @@ namespace TencentCloud.Vod.V20180717.Models
         public string QuotaType{ get; set; }
 
         /// <summary>
-        /// <p>Number of task quotas.</p><p>Unit: images/seconds/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+        /// <p>Number of quotas for the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
         /// </summary>
         [JsonProperty("QuotaLimit")]
         public ulong? QuotaLimit{ get; set; }
 
         /// <summary>
-        /// <p>Valid only when QuotaType is Text. It is used to select the ApiToken that needs a quota limit.</p>
+        /// <p>Valid only when QuotaType=Text, used to select the ApiToken that requires quota limit</p>
         /// </summary>
         [JsonProperty("ApiToken")]
         public string ApiToken{ get; set; }
+
+        /// <summary>
+        /// <p>Quota reset cycle.</p><p>Enumeration values:</p><ul><li>Day: Reset every day.</li><li>Month: Reset on a specified date each month.</li><li>Total: Never reset. The QuotaLimit parameter is the total quota.</li></ul>
+        /// </summary>
+        [JsonProperty("QuotaPeriod")]
+        public string QuotaPeriod{ get; set; }
+
+        /// <summary>
+        /// <p>Reset date of the per month quota. Valid only when QuotaPeriod=Month.</p><p>If the selected date does not exist in the current month, the reset is postponed to 00:00 on the 1st of the next month.</p>
+        /// </summary>
+        [JsonProperty("ResetDay")]
+        public ulong? ResetDay{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to set specified quotas for each model</p><p>Enumeration values: </p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+        /// </summary>
+        [JsonProperty("ModelQuotaSwitch")]
+        public string ModelQuotaSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>Quota set for each model, valid only when ModelQuotaSwitch=ON.</p>
+        /// </summary>
+        [JsonProperty("ModelQuotas")]
+        public AigcModelQuota[] ModelQuotas{ get; set; }
 
 
         /// <summary>
@@ -58,6 +82,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "QuotaType", this.QuotaType);
             this.SetParamSimple(map, prefix + "QuotaLimit", this.QuotaLimit);
             this.SetParamSimple(map, prefix + "ApiToken", this.ApiToken);
+            this.SetParamSimple(map, prefix + "QuotaPeriod", this.QuotaPeriod);
+            this.SetParamSimple(map, prefix + "ResetDay", this.ResetDay);
+            this.SetParamSimple(map, prefix + "ModelQuotaSwitch", this.ModelQuotaSwitch);
+            this.SetParamArrayObj(map, prefix + "ModelQuotas.", this.ModelQuotas);
         }
     }
 }
