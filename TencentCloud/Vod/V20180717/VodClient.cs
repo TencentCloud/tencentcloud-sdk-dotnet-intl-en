@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -5756,7 +5756,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// Creates a Token for invoking AIGC APIs. Data sync has a delay once created. It can be queried or deleted after about 30 seconds.
+        /// Update the Token for AIGC API calls. Data synchronization has a delay of about 30 seconds after the update.
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
         /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>
@@ -5766,7 +5766,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// Creates a Token for invoking AIGC APIs. Data sync has a delay once created. It can be queried or deleted after about 30 seconds.
+        /// Update the Token for AIGC API calls. Data synchronization has a delay of about 30 seconds after the update.
         /// </summary>
         /// <param name="req"><see cref="UpdateAigcApiTokenRequest"/></param>
         /// <returns><see cref="UpdateAigcApiTokenResponse"/></returns>

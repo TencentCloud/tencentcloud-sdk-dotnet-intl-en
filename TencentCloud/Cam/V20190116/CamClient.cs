@@ -28,7 +28,7 @@ namespace TencentCloud.Cam.V20190116
 
        private const string endpoint = "cam.intl.tencentcloudapi.com";
        private const string version = "2019-01-16";
-       private const string sdkVersion = "SDK_NET_3.0.1422";
+       private const string sdkVersion = "SDK_NET_3.0.1425";
 
         /// <summary>
         /// Client constructor.
@@ -850,6 +850,27 @@ namespace TencentCloud.Cam.V20190116
         public DisableUserSSOResponse DisableUserSSOSync(DisableUserSSORequest req)
         {
             return InternalRequestAsync<DisableUserSSOResponse>(req, "DisableUserSSO")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Generate an OIDC access token. This feature is in grayscale stage. Contact Tencent Cloud if needed.
+        /// </summary>
+        /// <param name="req"><see cref="GenerateOIDCAccessTokenRequest"/></param>
+        /// <returns><see cref="GenerateOIDCAccessTokenResponse"/></returns>
+        public Task<GenerateOIDCAccessTokenResponse> GenerateOIDCAccessToken(GenerateOIDCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<GenerateOIDCAccessTokenResponse>(req, "GenerateOIDCAccessToken");
+        }
+
+        /// <summary>
+        /// Generate an OIDC access token. This feature is in grayscale stage. Contact Tencent Cloud if needed.
+        /// </summary>
+        /// <param name="req"><see cref="GenerateOIDCAccessTokenRequest"/></param>
+        /// <returns><see cref="GenerateOIDCAccessTokenResponse"/></returns>
+        public GenerateOIDCAccessTokenResponse GenerateOIDCAccessTokenSync(GenerateOIDCAccessTokenRequest req)
+        {
+            return InternalRequestAsync<GenerateOIDCAccessTokenResponse>(req, "GenerateOIDCAccessToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
