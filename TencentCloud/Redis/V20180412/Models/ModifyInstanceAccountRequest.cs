@@ -72,6 +72,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("EncryptPassword")]
         public bool? EncryptPassword{ get; set; }
 
+        /// <summary>
+        /// <p>Disabled command configuration at the account level.</p><ul><li>Default value: [] (empty array, meaning no commands are disabled)</li><li>Input parameter limitation: Only the following specified database commands can be configured (multiple selections are supported)<br>flushall, flushdb, keys, hgetall, eval, evalsha, script, scan, psetex, set, hmset, hset, lpush, rpush, sadd, zadd, del, mget, mset, bitop, exists, msetnx, blpop, brpop, rpoplpush, brpoplpush, smove, sunion, sinter, sdiff, sunionstore, sinterstore, sdiffstore, zunionstore, zinterstore, pfmerge, pfcount, pfadd.</li></ul><p>Default value: ""</p>
+        /// </summary>
+        [JsonProperty("DisableCommands")]
+        public string[] DisableCommands{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to modify the command disablement configuration at the account level. Pass in only when the command list needs to be updated.</p><ul><li>true: Modify (an overwrite update will be performed based on the new command list passed in).</li><li>false: Do not modify (default value).</li></ul>
+        /// </summary>
+        [JsonProperty("ModifyDisableCommands")]
+        public bool? ModifyDisableCommands{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Privilege", this.Privilege);
             this.SetParamSimple(map, prefix + "NoAuth", this.NoAuth);
             this.SetParamSimple(map, prefix + "EncryptPassword", this.EncryptPassword);
+            this.SetParamArraySimple(map, prefix + "DisableCommands.", this.DisableCommands);
+            this.SetParamSimple(map, prefix + "ModifyDisableCommands", this.ModifyDisableCommands);
         }
     }
 }

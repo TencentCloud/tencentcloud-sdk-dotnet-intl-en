@@ -61,13 +61,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// <p>Opening and ending content list. Up to 10 opening and ending contents are supported.</p>
+        /// <p>Opening and ending content list. Up to 10 supported.</p>
         /// </summary>
         [JsonProperty("HeadTailSet")]
         public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
-        /// <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the position at the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
+        /// <p>Start time offset of the transcoded video, in seconds.</p><li>If not specified or set to 0, the transcoded video starts from the start position of the original video;</li><li>If the value is greater than 0 (assuming n), the transcoded video starts from the nth second of the original video;</li><li>If the value is less than 0 (assuming -n), the transcoded video starts from the position n seconds before the end of the original video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public OverrideTranscodeParameter OverrideParameter{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle suppression information list. Up to 2 are supported.</p>
+        /// <p>Subtitle suppression information list. Up to 2 supported.</p>
         /// </summary>
         [JsonProperty("SubtitleInfoSet")]
         public SubtitleInfoInput[] SubtitleInfoSet{ get; set; }

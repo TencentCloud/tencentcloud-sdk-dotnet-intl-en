@@ -25,52 +25,82 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Parameter name
+        /// <p>Parameter name.</p>
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Parameter Type such as  `MULTI`
+        /// <p>Parameter type. For example: multi.</p>
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether to restart the database after modifying the parameter. Valid values:  - `true` (required) - `false` (not required)
+        /// <p>Whether restart is required after parameter modification.</p><ul><li>true: required.</li><li>false: not required.</li></ul>
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// Default value of the parameter
+        /// <p>Default parameter value.</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Current value
+        /// <p>Current running parameter value.</p>
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Description
+        /// <p>Parameter description.</p>
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// Parameter enumeration value.
+        /// <p>Parameter enumeration value.</p>
         /// </summary>
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// Parameter modification status. Valid values: - `1` (modifying) - `2` (modified)
+        /// <p>Parameter modification status.</p><ul><li>1: Modifying.</li><li>2: Modified.</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+        /// </summary>
+        [JsonProperty("ParamType")]
+        public string ParamType{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the current instance supports this feature</p>
+        /// </summary>
+        [JsonProperty("FeatureSupported")]
+        public bool? FeatureSupported{ get; set; }
+
+        /// <summary>
+        /// <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+        /// </summary>
+        [JsonProperty("NewFeatureOnlineTime")]
+        public string NewFeatureOnlineTime{ get; set; }
+
+        /// <summary>
+        /// <p>Regular expression validation rule</p>
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// <p>Input format description</p>
+        /// </summary>
+        [JsonProperty("InputDescription")]
+        public string InputDescription{ get; set; }
 
 
         /// <summary>
@@ -86,6 +116,11 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Tips", this.Tips);
             this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamSimple(map, prefix + "FeatureSupported", this.FeatureSupported);
+            this.SetParamSimple(map, prefix + "NewFeatureOnlineTime", this.NewFeatureOnlineTime);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "InputDescription", this.InputDescription);
         }
     }
 }

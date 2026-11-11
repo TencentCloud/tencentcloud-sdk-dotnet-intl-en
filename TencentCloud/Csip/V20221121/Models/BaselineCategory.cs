@@ -43,7 +43,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Detect the asset major category and distinguish between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
+        /// <p>Detect asset major category, case-sensitive between host baseline and container cluster baseline. Parameter Value:</p><ul><li>HOST: Host</li><li>CLUSTER: Container cluster</li></ul>
         /// </summary>
         [JsonProperty("CheckAssetType")]
         public string CheckAssetType{ get; set; }

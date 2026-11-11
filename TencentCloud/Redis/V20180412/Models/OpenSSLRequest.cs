@@ -36,6 +36,37 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("AddressType")]
         public long? AddressType{ get; set; }
 
+        /// <summary>
+        /// <p>Key type.</p><p>Enumeration values:</p><ul><li>0: Tencent Cloud provides</li><li>1: User-defined certificate</li></ul><p>Default value: 0</p>
+        /// </summary>
+        [JsonProperty("CertSource")]
+        public long? CertSource{ get; set; }
+
+        /// <summary>
+        /// <p>Switch time. (This parameter is deprecated and no longer effective.)</p><p>Enumeration values:</p><ul><li>1: Operate within the maintenance window: SSL encryption will be enabled and executed within the set maintenance window. Use the DescribeMaintenanceWindow interface to query the set maintenance time period.</li><li>2: Immediate operation: The operation will be executed immediately with no waiting for the maintenance window. The system default setting is immediate operation.</li></ul>
+        /// </summary>
+        [JsonProperty("SwitchOption")]
+        [System.Obsolete]
+        public long? SwitchOption{ get; set; }
+
+        /// <summary>
+        /// <p>Certificate ID of the SSL certificate service. Required when CertSource=1</p>
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// <p>Min TLS version</p><p>Enumeration values:</p><ul><li>TLSv1.0: TLSv1.0</li><li>TLSv1.1: TLSv1.1</li><li>TLSv1.2: TLSv1.2</li></ul>
+        /// </summary>
+        [JsonProperty("SSLMinVersion")]
+        public string SSLMinVersion{ get; set; }
+
+        /// <summary>
+        /// <p>Target encryption mode</p><p>Enumeration values:</p><ul><li>required: Enforced encryption</li><li>flexible: Compatible mode</li></ul><p>Default value: flexible</p>
+        /// </summary>
+        [JsonProperty("EncryptionMode")]
+        public string EncryptionMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +75,11 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "AddressType", this.AddressType);
+            this.SetParamSimple(map, prefix + "CertSource", this.CertSource);
+            this.SetParamSimple(map, prefix + "SwitchOption", this.SwitchOption);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "SSLMinVersion", this.SSLMinVersion);
+            this.SetParamSimple(map, prefix + "EncryptionMode", this.EncryptionMode);
         }
     }
 }

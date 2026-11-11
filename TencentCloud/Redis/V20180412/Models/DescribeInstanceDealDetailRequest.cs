@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Order number, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
+        /// Order ID, which is the output parameter DealId of [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), with the maximum array length of 10.
         /// </summary>
         [JsonProperty("DealIds")]
         [System.Obsolete]

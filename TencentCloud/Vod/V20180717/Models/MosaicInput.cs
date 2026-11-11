@@ -44,14 +44,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// Vertical position of the mosaic origin relative to the origin of coordinates of the video image. Supports two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `YPos` of a mosaic is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
-        /// <li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means the YPos is 100 pixels.</li>
+        /// <li>If a string ends with px, it means the mosaic YPos is specified in pixels. For example, 100px means YPos is 100 pixels.</li>
         /// Default value: 0px.
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// Width of the mosaic, supporting two formats: % and px.
+        /// Width of a mosaic, supporting two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Width` of a mosaic is a percentage of a video's width. For example, `10%` means that `Width` is 10% of a video's width.</li>
         /// <li>If a string ends with px, it means the mosaic Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
         /// Default value: 10%.
@@ -60,7 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Width{ get; set; }
 
         /// <summary>
-        /// Height of a mosaic, supporting two formats: % and px.
+        /// Height of the mosaic, supporting two formats: % and px.
         /// <li>If a string ends with %, it indicates that the `Height` of a mosaic is a percentage of a video's height. For example, `10%` means that `Height` is 10% of a video's height.</li>
         /// <li>If a string ends with px, it means the mosaic Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
         /// Default value: 10%.
@@ -70,8 +70,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Start time offset of a mosaic, in seconds. If not set or set to 0, a mosaic starts appearing when a video starts.
-        /// <li>If not set or set to 0, a mosaic appears when a video starts.</li>
-        /// <li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a frame.</li>
+        /// <li>If not set or set to 0, a mosaic starts appearing when a video starts.</li>
+        /// <li>If the value is greater than 0 (for example, n), a mosaic will appear at second n of a video.</li>
         /// <li>When the value is less than 0 (assuming -n), it means the mosaic appears n seconds before the end of a video.</li>
         /// </summary>
         [JsonProperty("StartTimeOffset")]
@@ -79,8 +79,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// End time offset of a mosaic, in seconds.
-        /// <li>If not set or set to 0, mosaic will last until the end of a frame.</li>
-        /// <li>If the value is greater than 0 (for example, n), a mosaic will disappear at second n.</li>
+        /// <li>If not set or set to 0, a mosaic will last until the end of a frame.</li>
+        /// <li>If the value is greater than 0 (for example, n), the mosaic will disappear at second n.</li>
         /// <li>When the value is less than 0 (assuming -n), it means the mosaic lasts until n seconds before the end of a video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]

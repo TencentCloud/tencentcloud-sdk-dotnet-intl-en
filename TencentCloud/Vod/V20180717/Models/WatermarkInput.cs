@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// Text content, up to 100 characters. This field is required only when the watermark type is text.
+        /// Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
         /// Text watermarks do not support watermarking screenshots.
         /// </summary>
         [JsonProperty("TextContent")]
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// SVG content. Length not exceeding 2,000,000 characters. Fill in only when the watermark type is SVG watermark.
-        /// SVG watermark does not support watermarking screenshots.
+        /// SVG watermark does not support screenshot watermarking.
         /// </summary>
         [JsonProperty("SvgContent")]
         public string SvgContent{ get; set; }
@@ -57,7 +57,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// End time offset of a watermark, in seconds.
         /// <li>If not set or set to 0, a watermark will last until the end of a video.</li>
         /// <li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
-        /// <li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+        /// <li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of a video.</li>
         /// </summary>
         [JsonProperty("EndTimeOffset")]
         public float? EndTimeOffset{ get; set; }

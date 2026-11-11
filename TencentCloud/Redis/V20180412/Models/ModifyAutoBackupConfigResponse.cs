@@ -25,25 +25,25 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Automatic backup type.  Valid value:  `1` (scheduled backup).
+        /// <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+        /// <p>Automatic backup cycle. Value: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// Time period for automatic scheduled backup  in the format of  “00:00-01:00, 01:00-02:00...... 23:00-00:00”.
+        /// <p>Automatic scheduled backup time period. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// Retention time of full backup files in days
+        /// <p>Number of days to save full backup files, in days.</p>
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }

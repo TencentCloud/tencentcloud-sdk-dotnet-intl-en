@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Container{ get; set; }
 
         /// <summary>
-        /// <p>Indicates whether to remove video data. Valid values:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
+        /// <p>Indicates whether to remove video data. Parameter value:<br>&lt;li&gt;0: Data is reserved;&lt;\li&gt;<br>&lt;li&gt;1: Data is removed.&lt;\li&gt;</p>
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public AudioTemplateInfoForUpdate AudioTemplate{ get; set; }
 
         /// <summary>
-        /// <p>Top Speed Codec transcoding configuration parameters.</p>
+        /// <p>TSC transcoding configuration parameters.</p>
         /// </summary>
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }

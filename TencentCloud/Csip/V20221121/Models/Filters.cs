@@ -31,13 +31,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of filter condition values
+        /// Filter condition value list
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// Exact match: 1 for exact match; fuzzy match by default
+        /// Exact match: 1 - exact match; fuzzy match by default
         /// </summary>
         [JsonProperty("ExactMatch")]
         public string ExactMatch{ get; set; }

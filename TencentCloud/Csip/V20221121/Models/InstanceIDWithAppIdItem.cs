@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// AppId of the machine ownership
+        /// AppId of the machine
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }

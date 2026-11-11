@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have different restrictions on this field (for example, SDMC does not support underscores in this field). For specific rules, please confirm with the DRM manufacturer.</p>
+        /// <p>Resource tagging. The field content is user-customized. It supports 1-128 characters, including numbers, letters, underscores (_), and hyphens (-). This field corresponds to the cid field in the Speke request. Note: Different DRM manufacturers have differences in the limits for this field (for example, SDMC does not support underscores in this field). For specific rules, please contact the DRM manufacturer for confirmation.</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// <p>DRM manufacturer access address. This field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon cannot exceed 5 substreams, and DRMtoday supports stream encryption for a maximum of 9 substreams.</p>
+        /// <p>DRM manufacturer access address. This field content is obtained from the DRM manufacturer. Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon allows no more than 5 substreams, while DRMtoday supports up to 9 substreams for encryption.</p>
         /// </summary>
         [JsonProperty("KeyServerUrl")]
         public string KeyServerUrl{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Vector{ get; set; }
 
         /// <summary>
-        /// <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady supported;<br>If left blank, cbcs is used by default for FairPlay;<br>cenc is used by default for PlayReady and Widevine;<br>cbcs is used by default for Widevine+FairPlay, PlayReady+FairPlay, Widevine+PlayReady+FairPlay;<br>cenc is used by default for Widevine+PlayReady;</p>
+        /// <p>Encryption method. Available values:<br>cbcs: PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, Widevine+PlayReady+FairPlay are supported;<br>cenc: PlayReady, Widevine, Widevine+PlayReady are supported;<br>If left blank, cbcs is used for FairPlay by default;<br>cenc is used for PlayReady and Widevine by default;<br>cbcs is used for Widevine+FairPlay, PlayReady+FairPlay, Widevine+PlayReady+FairPlay by default;<br>cenc is used for Widevine+PlayReady by default;</p>
         /// </summary>
         [JsonProperty("EncryptionMethod")]
         public string EncryptionMethod{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EncryptionPreset{ get; set; }
 
         /// <summary>
-        /// <p>DRM manufacturer request method.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
+        /// <p>Request method of the DRM manufacturer.</p><p>Enumeration values:</p><ul><li>POST: Most DRM manufacturers use the POST method for requests.</li><li>GET: Some DRM manufacturers support the GET method for requests. When using this method, request information needs to be included in the KeyServerUrl field.</li></ul><p>Default value: POST</p>
         /// </summary>
         [JsonProperty("KeyAcquireMode")]
         public string KeyAcquireMode{ get; set; }

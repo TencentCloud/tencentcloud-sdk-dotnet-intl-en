@@ -30,6 +30,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// <p>Certificate download format type. Defaults to nginx if not passed. Only applicable to custom certificates (CertSource=1)</p><p>Enumeration values:</p><ul><li>nginx: nginx available</li><li>apache: apache available</li><li>tomcat: tomcat available</li><li>iis: iis available</li></ul>
+        /// </summary>
+        [JsonProperty("ServiceType")]
+        public string ServiceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
         }
     }
 }

@@ -40,8 +40,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? SwitchOption{ get; set; }
 
         /// <summary>
-        /// Instance node information includes the node ID, node type, and node availability zone ID, and so on. For specific information, please see [RedisNodeInfo ](https://intl.cloud.tencent.com/document/product/239/20022?from_cn_redirect=1).
-        /// For instances in a single availability zone, there is no need to configure the NodeId. For instances in multiple availability zones, the NodeId is required to configure.
+        /// Node information of the instance, including node ID, node type, and node availability zone ID. For details, see [RedisNodeInfo](https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1).
+        /// For a single-AZ instance, no need to pass in NodeId. For a multi-AZ instance, NodeId is required.
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }

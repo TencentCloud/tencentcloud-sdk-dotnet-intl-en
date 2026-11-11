@@ -45,13 +45,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://intl.cloud.tencent.com/document/api/614/58624?from_cn_redirect=1).
+        /// ID of the shipped logset. It can be obtained through the API [DescribeLogsets](https://www.tencentcloud.com/document/api/614/58624?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("LogsetId")]
         public string LogsetId{ get; set; }
 
         /// <summary>
-        /// ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://intl.cloud.tencent.com/document/api/614/56454?from_cn_redirect=1).
+        /// ID of the shipped log topic. It can be obtained through the API [DescribeTopics](https://www.tencentcloud.com/document/api/614/56454?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

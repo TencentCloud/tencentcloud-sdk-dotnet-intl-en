@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1409</VersionPrefix>
+    <VersionPrefix>3.0.1426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -295,6 +295,10 @@
     <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\ModifyReplicationGroupRequest.cs" />
     <Compile Include="V20180412\Models\ModifyReplicationGroupResponse.cs" />
+    <Compile Include="V20180412\Models\ModifySSLEncryptionModeRequest.cs" />
+    <Compile Include="V20180412\Models\ModifySSLEncryptionModeResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyValkeyModuleRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyValkeyModuleResponse.cs" />
     <Compile Include="V20180412\Models\OpenLogRequest.cs" />
     <Compile Include="V20180412\Models\OpenLogResponse.cs" />
     <Compile Include="V20180412\Models\OpenSSLRequest.cs" />
@@ -345,6 +349,8 @@
     <Compile Include="V20180412\Models\TendisNodes.cs" />
     <Compile Include="V20180412\Models\TendisSlowLogDetail.cs" />
     <Compile Include="V20180412\Models\TradeDealDetail.cs" />
+    <Compile Include="V20180412\Models\UpdateSSLCertRequest.cs" />
+    <Compile Include="V20180412\Models\UpdateSSLCertResponse.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceProductVersionRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceProductVersionResponse.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F0564498-7F3D-381A-922E-7C32C8AFCB36}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1420</VersionPrefix>
+    <VersionPrefix>3.0.1426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20221121\Models\AlertExtraInfo.cs" />
     <Compile Include="V20221121\Models\AlertInfo.cs" />
     <Compile Include="V20221121\Models\AssetBaseInfoResponse.cs" />
+    <Compile Include="V20221121\Models\AssetBaselineRisk.cs" />
     <Compile Include="V20221121\Models\AssetCluster.cs" />
     <Compile Include="V20221121\Models\AssetClusterPod.cs" />
     <Compile Include="V20221121\Models\AssetComponent.cs" />
@@ -130,11 +131,13 @@
     <Compile Include="V20221121\Models\BaselineCustomItemConf.cs" />
     <Compile Include="V20221121\Models\BaselineFixRecord.cs" />
     <Compile Include="V20221121\Models\BaselineHostAsset.cs" />
+    <Compile Include="V20221121\Models\BaselineIgnorePolicy.cs" />
     <Compile Include="V20221121\Models\BaselineItem.cs" />
     <Compile Include="V20221121\Models\BaselineItemRiskRecord.cs" />
     <Compile Include="V20221121\Models\BaselineMainTask.cs" />
     <Compile Include="V20221121\Models\BaselineOverviewStatistic.cs" />
     <Compile Include="V20221121\Models\BaselinePolicy.cs" />
+    <Compile Include="V20221121\Models\BaselinePolicyBrief.cs" />
     <Compile Include="V20221121\Models\BaselinePolicySubCategoryConf.cs" />
     <Compile Include="V20221121\Models\BaselinePolicySystemCategoryConf.cs" />
     <Compile Include="V20221121\Models\BaselineRiskLevelStatistic.cs" />
@@ -192,6 +195,7 @@
     <Compile Include="V20221121\Models\CloudCountDesc.cs" />
     <Compile Include="V20221121\Models\CloudFromCnt.cs" />
     <Compile Include="V20221121\Models\CloudFunctionItem.cs" />
+    <Compile Include="V20221121\Models\ClusterBaselinePolicy.cs" />
     <Compile Include="V20221121\Models\ClusterContainerListItem.cs" />
     <Compile Include="V20221121\Models\ClusterCustomParameters.cs" />
     <Compile Include="V20221121\Models\ClusterIDWithAppIdItem.cs" />
@@ -265,6 +269,8 @@
     <Compile Include="V20221121\Models\CreateAccessKeySyncTaskResponse.cs" />
     <Compile Include="V20221121\Models\CreateAllAssetsExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateAllAssetsExportJobResponse.cs" />
+    <Compile Include="V20221121\Models\CreateAssetBaselineRiskExportJobRequest.cs" />
+    <Compile Include="V20221121\Models\CreateAssetBaselineRiskExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateAssetComponentListExportJobRequest.cs" />
     <Compile Include="V20221121\Models\CreateAssetComponentListExportJobResponse.cs" />
     <Compile Include="V20221121\Models\CreateAssetComponentRelatedImageListExportJobRequest.cs" />
@@ -470,6 +476,8 @@
     <Compile Include="V20221121\Models\DeleteAssetFilterViewResponse.cs" />
     <Compile Include="V20221121\Models\DeleteAssetTagRequest.cs" />
     <Compile Include="V20221121\Models\DeleteAssetTagResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteBaselineIgnorePolicyRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteBaselineIgnorePolicyResponse.cs" />
     <Compile Include="V20221121\Models\DeleteBaselineSelfDefinedPolicyListRequest.cs" />
     <Compile Include="V20221121\Models\DeleteBaselineSelfDefinedPolicyListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteCSIPMalwareScanTaskRequest.cs" />
@@ -540,6 +548,10 @@
     <Compile Include="V20221121\Models\DeleteImageVirusWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\DeleteImageVulWhitelistRequest.cs" />
     <Compile Include="V20221121\Models\DeleteImageVulWhitelistResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteCustomEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteCustomEDRResponse.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteLearnEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DeleteLoginWhiteLearnEDRResponse.cs" />
     <Compile Include="V20221121\Models\DeleteLoginWhiteListRequest.cs" />
     <Compile Include="V20221121\Models\DeleteLoginWhiteListResponse.cs" />
     <Compile Include="V20221121\Models\DeleteMachineClearHistoryRequest.cs" />
@@ -620,6 +632,8 @@
     <Compile Include="V20221121\Models\DescribeAgentRunPolicyResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAlertListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetBaselineRiskListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeAssetBaselineRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetComponentListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeAssetComponentListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeAssetComponentRelatedImageListRequest.cs" />
@@ -670,6 +684,8 @@
     <Compile Include="V20221121\Models\DescribeBaselineCategoryItemListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeBaselineFixRecordListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeBaselineFixRecordListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeBaselineIgnorePolicyListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeBaselineIgnorePolicyListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeBaselineItemRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeBaselineItemRiskListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeBaselineMainTaskItemListRequest.cs" />
@@ -766,6 +782,8 @@
     <Compile Include="V20221121\Models\DescribeClusterAssetSyncTaskStatusResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterAssetsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterAssetsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeClusterBaselineRiskPolicyListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeClusterBaselineRiskPolicyListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterContainerAppListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeClusterContainerAppListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeClusterContainerComponentListRequest.cs" />
@@ -1037,6 +1055,8 @@
     <Compile Include="V20221121\Models\DescribeEdrExportJobListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeEdrLogCollectPathsRequest.cs" />
     <Compile Include="V20221121\Models\DescribeEdrLogCollectPathsResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrMalwareFileRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeEdrMalwareFileResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobDownloadURLRequest.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobDownloadURLResponse.cs" />
     <Compile Include="V20221121\Models\DescribeExportJobManageListRequest.cs" />
@@ -1070,8 +1090,12 @@
     <Compile Include="V20221121\Models\DescribeHostVulItemVPRInfoResponse.cs" />
     <Compile Include="V20221121\Models\DescribeHostVulOverviewRequest.cs" />
     <Compile Include="V20221121\Models\DescribeHostVulOverviewResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulRiskEventListRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulRiskEventListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeHostVulRiskListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeHostVulRiskListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulScanStatusRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeHostVulScanStatusResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileListResponse.cs" />
     <Compile Include="V20221121\Models\DescribeIaCFileOverviewRequest.cs" />
@@ -1156,8 +1180,12 @@
     <Compile Include="V20221121\Models\DescribeLoginTypeHostResponse.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteCombinedListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteCombinedListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteCustomListEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteCustomListEDRResponse.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteHostListRequest.cs" />
     <Compile Include="V20221121\Models\DescribeLoginWhiteHostListResponse.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteLearnListEDRRequest.cs" />
+    <Compile Include="V20221121\Models\DescribeLoginWhiteLearnListEDRResponse.cs" />
     <Compile Include="V20221121\Models\DescribeMachineClearHistoryRequest.cs" />
     <Compile Include="V20221121\Models\DescribeMachineClearHistoryResponse.cs" />
     <Compile Include="V20221121\Models\DescribeMachineGeneralRequest.cs" />
@@ -1535,6 +1563,8 @@
     <Compile Include="V20221121\Models\HostVulComponent.cs" />
     <Compile Include="V20221121\Models\HostVulOverview.cs" />
     <Compile Include="V20221121\Models\HostVulRisk.cs" />
+    <Compile Include="V20221121\Models\HostVulRiskEventItem.cs" />
+    <Compile Include="V20221121\Models\HostVulScanStatus.cs" />
     <Compile Include="V20221121\Models\IPIntelInfo.cs" />
     <Compile Include="V20221121\Models\IaCFile.cs" />
     <Compile Include="V20221121\Models\IaCFileRisk.cs" />
@@ -1615,6 +1645,9 @@
     <Compile Include="V20221121\Models\LogTopicIndexInfo.cs" />
     <Compile Include="V20221121\Models\LogValueInfo.cs" />
     <Compile Include="V20221121\Models\LoginWhiteCombinedInfo.cs" />
+    <Compile Include="V20221121\Models\LoginWhiteItem.cs" />
+    <Compile Include="V20221121\Models\LoginWhitePlace.cs" />
+    <Compile Include="V20221121\Models\LoginWhitePlaceInput.cs" />
     <Compile Include="V20221121\Models\Machine.cs" />
     <Compile Include="V20221121\Models\MachineClearHistory.cs" />
     <Compile Include="V20221121\Models\MachineDetail.cs" />
@@ -1646,6 +1679,8 @@
     <Compile Include="V20221121\Models\ModifyAssetTagsResponse.cs" />
     <Compile Include="V20221121\Models\ModifyBanModeRequest.cs" />
     <Compile Include="V20221121\Models\ModifyBanModeResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyBaselineIgnorePolicyRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyBaselineIgnorePolicyResponse.cs" />
     <Compile Include="V20221121\Models\ModifyBaselinePolicyEnableRequest.cs" />
     <Compile Include="V20221121\Models\ModifyBaselinePolicyEnableResponse.cs" />
     <Compile Include="V20221121\Models\ModifyBaselinePolicyRequest.cs" />
@@ -1777,6 +1812,10 @@
     <Compile Include="V20221121\Models\ModifyImageVulWhitelistRequest.cs" />
     <Compile Include="V20221121\Models\ModifyImageVulWhitelistResponse.cs" />
     <Compile Include="V20221121\Models\ModifyLoginTypeFailInfo.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteCustomEDRRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteCustomEDRResponse.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteLearnEDRRequest.cs" />
+    <Compile Include="V20221121\Models\ModifyLoginWhiteLearnEDRResponse.cs" />
     <Compile Include="V20221121\Models\ModifyLoginWhiteRecordRequest.cs" />
     <Compile Include="V20221121\Models\ModifyLoginWhiteRecordResponse.cs" />
     <Compile Include="V20221121\Models\ModifyMachineAutoClearConfigRequest.cs" />

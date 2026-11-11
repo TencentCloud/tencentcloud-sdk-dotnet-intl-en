@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://intl.cloud.tencent.com/document/product/239/30601?from_cn_redirect=1).
+        /// Task ID. Obtain **taskId** and query the task execution status through the API [DescribeTaskInfo](https://www.tencentcloud.com/document/product/239/30601?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

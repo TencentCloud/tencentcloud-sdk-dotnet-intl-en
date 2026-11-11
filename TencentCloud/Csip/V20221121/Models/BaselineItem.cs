@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public ulong? RuleID{ get; set; }
 
         /// <summary>
-        /// <p>Detection object description, such as configuration file path, kernel parameter, and Kubernetes Resources.</p>
+        /// <p>Detection target description, such as configuration file path, kernel parameter, Kubernetes Resources.</p>
         /// </summary>
         [JsonProperty("CheckObject")]
         public string[] CheckObject{ get; set; }
@@ -61,67 +61,67 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Detection item repair advice (Chinese, including recommended configuration reference values or hardening commands).</p>
+        /// <p>Detection item repair advice (in Chinese, including recommended configuration reference values or hardening commands).</p>
         /// </summary>
         [JsonProperty("FixSuggestion")]
         public string FixSuggestion{ get; set; }
 
         /// <summary>
-        /// <p>Reference link list of detection items.</p>
+        /// <p>Detection item reference link list.</p>
         /// </summary>
         [JsonProperty("ReferenceLink")]
         public string ReferenceLink{ get; set; }
 
         /// <summary>
-        /// <p>Classification information of the parent category in the associated system.</p>
+        /// <p>Parent classification information of the associated system.</p>
         /// </summary>
         [JsonProperty("SystemCategory")]
         public BaselineCategory SystemCategory{ get; set; }
 
         /// <summary>
-        /// <p>Classification information of the subcategory it belongs to.</p>
+        /// <p>Belonging subcategory information.</p>
         /// </summary>
         [JsonProperty("Category")]
         public BaselineCategory Category{ get; set; }
 
         /// <summary>
-        /// <p>Whether one-click repair is supported. true: supported, false: unsupported.</p>
+        /// <p>Whether one-click repair is supported. true: support, false: no support.</p>
         /// </summary>
         [JsonProperty("SupportFix")]
         public bool? SupportFix{ get; set; }
 
         /// <summary>
-        /// <p>Whether user-defined judgment values are supported. true: supported; false: not supported.</p>
+        /// <p>Whether to support user customization of judgment values. true: support, false: no support.</p>
         /// </summary>
         [JsonProperty("SupportCustomValue")]
         public bool? SupportCustomValue{ get; set; }
 
         /// <summary>
-        /// <p>Operating system/component version list applicable to this detection item.</p>
+        /// <p>Applicable operating system/component version list for this detection item.</p>
         /// </summary>
         [JsonProperty("AffectedVersionList")]
         public string[] AffectedVersionList{ get; set; }
 
         /// <summary>
-        /// <p>Parameter definition when editing a custom judgment value (for example, permissible range, control type).</p>
+        /// <p>Parameter definition when editing custom judgment values (such as value range, control type, etc.).</p>
         /// </summary>
         [JsonProperty("WebEditParam")]
         public string WebEditParam{ get; set; }
 
         /// <summary>
-        /// <p>Default detection item judgment value list.</p>
+        /// <p>Default judgment value list of the detection item.</p>
         /// </summary>
         [JsonProperty("DefaultValueList")]
         public string[] DefaultValueList{ get; set; }
 
         /// <summary>
-        /// <p>Whether customized by the user. true: customized; false: use default values.</p>
+        /// <p>Whether it has been customized by the user. true: customized, false: still use default values.</p>
         /// </summary>
         [JsonProperty("IsCustomConf")]
         public bool? IsCustomConf{ get; set; }
 
         /// <summary>
-        /// <p>User-customized configuration record ID. The value is 0 if not customized.</p>
+        /// <p>User-customized configuration record ID. 0 if not customized.</p>
         /// </summary>
         [JsonProperty("CustomItemID")]
         public ulong? CustomItemID{ get; set; }

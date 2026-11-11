@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.intl.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1408";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -869,6 +869,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyAutoRenewFlagResponse ModifyAutoRenewFlagSync(ModifyAutoRenewFlagRequest req)
         {
             return InternalRequestAsync<ModifyAutoRenewFlagResponse>(req, "ModifyAutoRenewFlag")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify instance configurations. It combines the ability to vertically and horizontally modify instances, and supports composite modifications of CPU, memory, disk, number of nodes, availability zone, and storage type. It supports DryRun precheck mode, allowing you to obtain the modification plan without actual execution.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceResponse"/></returns>
+        public Task<ModifyDBInstanceResponse> ModifyDBInstance(ModifyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceResponse>(req, "ModifyDBInstance");
+        }
+
+        /// <summary>
+        /// This API is used to modify instance configurations. It combines the ability to vertically and horizontally modify instances, and supports composite modifications of CPU, memory, disk, number of nodes, availability zone, and storage type. It supports DryRun precheck mode, allowing you to obtain the modification plan without actual execution.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceResponse"/></returns>
+        public ModifyDBInstanceResponse ModifyDBInstanceSync(ModifyDBInstanceRequest req)
+        {
+            return InternalRequestAsync<ModifyDBInstanceResponse>(req, "ModifyDBInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

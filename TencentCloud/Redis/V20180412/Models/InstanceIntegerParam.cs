@@ -25,64 +25,94 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Parameter name
+        /// <p>Parameter name</p>
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// Parameter type: Integer
+        /// <p>Parameter type: integer</p>
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// Whether restart is required after a modification is made. Valid values: true, false
+        /// <p>Whether restart is required after modification: true, false</p>
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// Default value of the parameter
+        /// <p>Default parameter value</p>
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// Current value
+        /// <p>Current running parameter value</p>
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// Parameter description
+        /// <p>Parameter description</p>
         /// </summary>
         [JsonProperty("Tips")]
         public string Tips{ get; set; }
 
         /// <summary>
-        /// Minimum value of the parameter
+        /// <p>Minimum parameter value</p>
         /// </summary>
         [JsonProperty("Min")]
         public string Min{ get; set; }
 
         /// <summary>
-        /// Maximum value of the parameter
+        /// <p>Maximum parameter value</p>
         /// </summary>
         [JsonProperty("Max")]
         public string Max{ get; set; }
 
         /// <summary>
-        /// Parameter status. 1: modifying; 2: modified
+        /// <p>Parameter status. 1: modifying, 2: modified</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// Parameter unit.
+        /// <p>Parameter unit</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
+
+        /// <summary>
+        /// <p>Parameter type</p><p>Enumeration values:</p><ul><li>redis: parameters supported by cache nodes</li><li>redis-interface: parameters supported by proxy</li><li>tendis: parameters supported by tendis</li></ul>
+        /// </summary>
+        [JsonProperty("ParamType")]
+        public string ParamType{ get; set; }
+
+        /// <summary>
+        /// <p>Whether the current instance supports this feature</p>
+        /// </summary>
+        [JsonProperty("FeatureSupported")]
+        public bool? FeatureSupported{ get; set; }
+
+        /// <summary>
+        /// <p>New feature launch date</p><p>Parameter format: time format YYYY-MM-DD</p>
+        /// </summary>
+        [JsonProperty("NewFeatureOnlineTime")]
+        public string NewFeatureOnlineTime{ get; set; }
+
+        /// <summary>
+        /// <p>Regular expression validation rule</p>
+        /// </summary>
+        [JsonProperty("Pattern")]
+        public string Pattern{ get; set; }
+
+        /// <summary>
+        /// <p>Input format description</p>
+        /// </summary>
+        [JsonProperty("InputDescription")]
+        public string InputDescription{ get; set; }
 
 
         /// <summary>
@@ -100,6 +130,11 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Max", this.Max);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "ParamType", this.ParamType);
+            this.SetParamSimple(map, prefix + "FeatureSupported", this.FeatureSupported);
+            this.SetParamSimple(map, prefix + "NewFeatureOnlineTime", this.NewFeatureOnlineTime);
+            this.SetParamSimple(map, prefix + "Pattern", this.Pattern);
+            this.SetParamSimple(map, prefix + "InputDescription", this.InputDescription);
         }
     }
 }

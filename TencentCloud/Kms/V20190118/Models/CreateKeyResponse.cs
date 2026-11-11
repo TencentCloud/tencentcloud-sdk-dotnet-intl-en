@@ -25,55 +25,55 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Globally unique CMK ID
+        /// <p>Globally unique identifier of the CMK</p>
         /// </summary>
         [JsonProperty("KeyId")]
         public string KeyId{ get; set; }
 
         /// <summary>
-        /// Alias that makes a key more recognizable and understandable
+        /// <p>Alias that makes the key easier to identify and understand</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Key creation time in UNIX timestamp format
+        /// <p>Key creation time, unix timestamp</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the description of the CMK.
+        /// <p>Description of the CMK</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// CMK status
+        /// <p>Status of the CMK</p>
         /// </summary>
         [JsonProperty("KeyState")]
         public string KeyState{ get; set; }
 
         /// <summary>
-        /// CMK usage
+        /// <p>Purpose of the CMK</p>
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// Return code of Tag operation. `0`: success; `1`: cls internal error; `2`: business processing error.
+        /// <p>Return code of the tag operation. 0: Success; 1: Internal error; 2: Business processing error</p>
         /// </summary>
         [JsonProperty("TagCode")]
         public ulong? TagCode{ get; set; }
 
         /// <summary>
-        /// Response information of Tag operation.
+        /// <p>Return message of the tag operation</p>
         /// </summary>
         [JsonProperty("TagMsg")]
         public string TagMsg{ get; set; }
 
         /// <summary>
-        /// HSM cluster ID (valid only for exclusive or managed version KMS service instances).
+        /// <p>HSM cluster ID (valid only for KMS exclusive/managed service instances)</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

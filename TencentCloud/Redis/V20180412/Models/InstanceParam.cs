@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+        /// Parameter name. For example, timeout. For customizable parameters, see <a href="https://www.tencentcloud.com/document/product/239/49925?from_cn_redirect=1">Parameter Configuration</a>.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+        /// Set the running value corresponding to the parameter name. For example, the running value corresponding to timeout can be set to 120, in seconds (s). When the client connection idle time reaches 120 s, the connection closed. For more parameter value information, please refer to <a href="https://www.tencentcloud.com/document/product/239/49925?from_cn_redirect=1">parameter configuration</a>.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

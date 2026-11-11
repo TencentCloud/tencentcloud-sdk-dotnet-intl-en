@@ -37,8 +37,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Whether to disable the site. valid values: <li>false: not disabled;</li>.
-        /// <li>true: disabled.</li>.
+        /// Whether to disable the site. Valid values: <li>false: not disabled;</li>
+        /// <li>true: Disable.</li>
         /// </summary>
         [JsonProperty("Paused")]
         public bool? Paused{ get; set; }

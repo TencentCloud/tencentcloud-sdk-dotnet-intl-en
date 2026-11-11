@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Current proxy version. Call the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API to obtain the current proxy version for the instance.
+        /// Current Proxy version. Get the current Proxy version of an instance through the [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("CurrentProxyVersion")]
         public string CurrentProxyVersion{ get; set; }

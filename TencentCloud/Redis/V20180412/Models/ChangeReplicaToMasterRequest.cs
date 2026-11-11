@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Replica node group ID. Use the interface <a href="https://www.tencentcloud.com/document/product/239/50312?from_cn_redirect=1">DescribeInstanceZoneInfo</a> to obtain the id information of the multi-AZ replica node group. For a single AZ, no need to configure this parameter.</p>
+        /// <p>Replica node group ID. Use the interface <a href="https://www.tencentcloud.com/document/product/239/50312?from_cn_redirect=1">DescribeInstanceZoneInfo</a> to obtain the ID information of the multi-AZ replica node group. For single AZ, no need to configure this parameter.</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }

@@ -32,7 +32,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Screenshot type. Valid values:
-        /// <li>Time: time point screencapturing</li>
+        /// <li>Time: screenshot by time point</li>
         /// <li>Percent: screenshot by percentage</li>
         /// </summary>
         [JsonProperty("PositionType")]
@@ -40,8 +40,8 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// Screenshot position:
-        /// <li>For time point screenshot taking, this value indicates the second of the specified video to use as the cover</li>
-        /// <li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+        /// <li>For time point screenshots, this value indicates the second of the specified video to use as the cover</li>
+        /// <li>For screenshot by percentage, this value indicates the percentage of the video used as the cover.</li>
         /// </summary>
         [JsonProperty("PositionValue")]
         public float? PositionValue{ get; set; }

@@ -25,11 +25,11 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Target instance type after the change, which is the same as the `TypeId` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-        /// - For Redis 4.0 or later, a standard architecture instance can be upgraded to a cluster architecture instance on the same version; for example, you can upgrade from Redis 4.0 Standard Architecture to Redis 4.0 Cluster Architecture.
-        /// - Cross-version architecture upgrade is not supported; for example, you cannot upgrade from Redis 4.0 Standard Architecture to Redis 5.0 Cluster Architecture.
-        /// - The architecture of Redis 2.8 cannot be upgraded.
-        /// - Cluster architecture cannot be downgraded to standard architecture.
+        /// Target instance type, same as **TypeId** in [CreateInstances](https://www.tencentcloud.com/document/api/239/20026?from_cn_redirect=1), which is the target type to change the instance to.
+        /// - For Redis 4.0 or higher, instances of the same version support upgrading from standard architecture to cluster architecture. For example, Redis 4.0 standard architecture can be upgraded to Redis 4.0 cluster architecture.
+        /// -Cross-version architecture upgrade is not supported, for example, upgrading from Redis 4.0 standard architecture to Redis 5.0 cluster architecture.
+        /// -Architecture upgrade from Redis 2.8 is not supported.
+        /// -Downgrade from cluster architecture to standard architecture is not supported.
         /// </summary>
         [JsonProperty("TargetInstanceType")]
         public string TargetInstanceType{ get; set; }

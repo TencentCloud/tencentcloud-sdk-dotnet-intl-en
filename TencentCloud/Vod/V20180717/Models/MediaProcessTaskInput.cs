@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TranscodeTaskInput[] TranscodeTaskSet{ get; set; }
 
         /// <summary>
-        /// List of video-to-GIF tasks.
+        /// List of video-to-animated-image tasks.
         /// </summary>
         [JsonProperty("AnimatedGraphicTaskSet")]
         public AnimatedGraphicTaskInput[] AnimatedGraphicTaskSet{ get; set; }
 
         /// <summary>
-        /// List of time point screenshot tasks for videos.
+        /// List of time point screencapturing tasks for videos.
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTaskSet")]
         public SnapshotByTimeOffsetTaskInput[] SnapshotByTimeOffsetTaskSet{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ImageSpriteTaskInput[] ImageSpriteTaskSet{ get; set; }
 
         /// <summary>
-        /// Task list of screencapturing for cover images from videos.
+        /// Task list of screencapturing for cover images of videos.
         /// </summary>
         [JsonProperty("CoverBySnapshotTaskSet")]
         public CoverBySnapshotTaskInput[] CoverBySnapshotTaskSet{ get; set; }

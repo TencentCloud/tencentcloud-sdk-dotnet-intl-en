@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Codec{ get; set; }
 
         /// <summary>
-        /// <p>Audio stream bitrate, in kbps. Value range: 0 and [26, 256]. When the value is 0, it means VOD automatically sets the bitrate.</p>
+        /// <p>Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps. When the value is 0, it means VOD automatically sets the bitrate.</p>
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// <p>Audio channel. Available values:</p><li>1: single channel</li><li>2: dual-channel</li><li>6: stereo</li><li>0: the number of audio channels remains consistent with the original audio</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of sound channels cannot be set to stereo.
+        /// <p>Audio channel. Valid values:</p><li>1: Single channel</li><li>2: Two channels</li><li>6: Stereo</li><li>0: The number of audio channels remains the same as the original audio.</li>When the media encapsulation format is an audio format (flac, ogg, mp3, m4a), the number of audio channels cannot be set to stereo.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public long? AudioChannel{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in OverrideParameter. In other cases, it does not take effect.</p>
+        /// <p>Specifies the retained audio tracks for output. All source tracks are retained by default.</p><p>This parameter is valid only when specified in the OverrideParameter parameter. In other cases, it does not take effect.</p>
         /// </summary>
         [JsonProperty("StreamSelects")]
         public long?[] StreamSelects{ get; set; }

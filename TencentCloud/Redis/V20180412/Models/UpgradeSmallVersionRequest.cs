@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Current Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+        /// Current Redis minor version. For minor version information, please see Upgrade Instance Version (https://www.tencentcloud.com/document/product/239/46457?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("CurrentRedisVersion")]
         public string CurrentRedisVersion{ get; set; }
 
         /// <summary>
-        /// Upgraded Redis minor version. For minor version information, see [Upgrading Instance Version](https://www.tencentcloud.com/document/product/239/37710).
+        /// Redis minor version upgrade. For minor version information, please refer to upgrade instance version (https://www.tencentcloud.com/document/product/239/46457?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("UpgradeRedisVersion")]
         public string UpgradeRedisVersion{ get; set; }

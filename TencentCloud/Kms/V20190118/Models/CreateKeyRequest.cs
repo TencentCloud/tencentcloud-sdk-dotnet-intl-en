@@ -25,37 +25,37 @@ namespace TencentCloud.Kms.V20190118.Models
     {
         
         /// <summary>
-        /// Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products.
+        /// <p>Alias that makes the key easier to identify and understand. It cannot be empty and must contain 1-60 alphanumeric characters, hyphens (-), or underscores (_), and start with a letter or digit. Aliases prefixed with kms- are reserved for cloud services. The alias must be unique.</p>
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// CMK description of up to 1,024 bytes in length
+        /// <p>Description of the CMK. Maximum length: 1024 bytes.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Specifies the key purpose, defaults to "ENCRYPT_DECRYPT" indicating the creation of a symmetric encryption/decryption key. other supported purposes include "ASYMMETRIC_DECRYPT_RSA_2048" for RSA2048 ASYMMETRIC keys used to ENCRYPT and DECRYPT, "ASYMMETRIC_DECRYPT_SM2" for SM2 ASYMMETRIC keys used to ENCRYPT and DECRYPT, "ASYMMETRIC_SIGN_VERIFY_SM2" for SM2 ASYMMETRIC keys used for signature verification, "ASYMMETRIC_SIGN_VERIFY_ECC" for ECC ASYMMETRIC keys used for signature verification, "ASYMMETRIC_SIGN_VERIFY_RSA_2048" for RSA_2048 ASYMMETRIC keys used for signature verification, and "ASYMMETRIC_SIGN_VERIFY_ECDSA384" for ECDSA384 ASYMMETRIC keys used for signature verification. the complete list of key purposes and algorithm support can be obtained through the ListAlgorithms api.
+        /// <p>Specifies the purpose of the key. The default value is "ENCRYPT_DECRYPT", which indicates creating a symmetric encryption/decryption key. Other supported purposes: "ASYMMETRIC_DECRYPT_RSA_2048" indicates creating an RSA2048 asymmetric key for encryption/decryption; "ASYMMETRIC_DECRYPT_RSA_3072" indicates creating an RSA3072 asymmetric key for encryption/decryption; "ASYMMETRIC_DECRYPT_RSA_4096" indicates creating an RSA4096 asymmetric key for encryption/decryption; "ASYMMETRIC_DECRYPT_SM2" indicates creating an SM2 asymmetric key for encryption/decryption; "ASYMMETRIC_SIGN_VERIFY_SM2" indicates creating an SM2 asymmetric key for signature generation and verification; "ASYMMETRIC_SIGN_VERIFY_ECC" indicates creating an ECC asymmetric key for signature generation and verification; "ASYMMETRIC_SIGN_VERIFY_RSA_2048" indicates creating an RSA_2048 asymmetric key for signature generation and verification; "ASYMMETRIC_SIGN_VERIFY_RSA_3072" indicates creating an RSA_3072 asymmetric key for signature generation and verification; <br>"ASYMMETRIC_SIGN_VERIFY_RSA_4096" indicates creating an RSA_4096 asymmetric key for signature generation and verification; "ASYMMETRIC_SIGN_VERIFY_ECDSA384" indicates creating an ECDSA384 asymmetric key for signature generation and verification. For the complete list of key purposes and supported algorithms, call the ListAlgorithms API.</p>
         /// </summary>
         [JsonProperty("KeyUsage")]
         public string KeyUsage{ get; set; }
 
         /// <summary>
-        /// Specifies the key type. Default value: 1. Valid value: 1 - default type, indicating that the CMK is created by KMS; 2 - EXTERNAL type, indicating that you need to import key material. For more information, please see the `GetParametersForImport` and `ImportKeyMaterial` API documents.
+        /// <p>Specifies the key type. The default value is 1. 1 indicates the default type, where the CMK is created by KMS. 2 indicates the EXTERNAL type, where you need to import the key material. For more information, see the GetParametersForImport and ImportKeyMaterial APIs.</p>
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// Tag list
+        /// <p>Tag list.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+        /// <p>HSM cluster ID corresponding to KMS Advanced Edition (valid only for KMS exclusive/managed service instances).</p>
         /// </summary>
         [JsonProperty("HsmClusterId")]
         public string HsmClusterId{ get; set; }

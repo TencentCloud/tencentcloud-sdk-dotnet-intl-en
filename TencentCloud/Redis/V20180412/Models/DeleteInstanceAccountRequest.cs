@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Sub-account name. Log in to the [Redis console](https://console.tencentcloud.com/redis) and switch to the **Account Management** page to obtain it. For details, see [Managing Account](https://www.tencentcloud.com/document/product/239/34590).
+        /// Sub-account name. Log in to the [Redis console](https://console.cloud.tencent.com/redis), switch to the **Account Management** page to get it. For details, see [Managing Accounts](https://www.tencentcloud.com/document/product/239/36710?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("AccountName")]
         public string AccountName{ get; set; }

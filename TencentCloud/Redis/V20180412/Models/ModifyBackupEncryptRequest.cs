@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// <p>Regional information.</p><p>Parameter format: ap-xxxx</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/573/34406?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Supported region list for KMS</a></p>
+        /// <p>Regional information.</p><p>Parameter format: ap-xxxx</p><p>For parameter values, see <a href="https://www.tencentcloud.com/document/api/573/34406?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">KMS supported region list</a></p>
         /// </summary>
         [JsonProperty("KmsRegion")]
         public string KmsRegion{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Redis.V20180412
 
        private const string endpoint = "redis.intl.tencentcloudapi.com";
        private const string version = "2018-04-12";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -474,7 +474,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to remove a replication group member. Note: This API is being deprecated. Use [RemoveReplicationInstance](https://intl.cloud.tencent.com/document/product/239/90099?from_cn_redirect=1) instead.
+        /// This API is used to remove replication group members. Note: This API is offline. Please use RemoveReplicationInstance.
         /// </summary>
         /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
         /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
@@ -484,7 +484,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to remove a replication group member. Note: This API is being deprecated. Use [RemoveReplicationInstance](https://intl.cloud.tencent.com/document/product/239/90099?from_cn_redirect=1) instead.
+        /// This API is used to remove replication group members. Note: This API is offline. Please use RemoveReplicationInstance.
         /// </summary>
         /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
         /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// Tencent Cloud Database Redis decommissioned the API for querying large keys of instances on October 31, 2022. For the specific notice, please refer to the decommissioning announcement of the API for querying large keys of instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// Tencent Cloud Database Redis decommissioned the API for querying large keys of instances on October 31, 2022. For the specific notice, please refer to the decommissioning announcement of the API for querying large keys of instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyResponse"/></returns>
@@ -852,7 +852,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -862,7 +862,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeySizeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeySizeDistResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>
@@ -883,7 +883,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// The API for querying big keys of a TencentDB for Redis instance was disused on October 31, 2022. For more information, see [API for Querying Instance Big Key Will Be Disused](https://intl.cloud.tencent.com/document/product/239/81005?from_cn_redirect=1).
+        /// TencentDB for Redis decommissioned the API for querying large keys in instances on October 31, 2022. For the specific announcement, please refer to the decommissioning announcement of the API for querying large keys in instances.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorBigKeyTypeDistRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorBigKeyTypeDistResponse"/></returns>
@@ -915,7 +915,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://intl.cloud.tencent.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
+        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://www.tencentcloud.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -925,7 +925,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://intl.cloud.tencent.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
+        /// This API is no longer used. Please use the TencentDB for DBbrain API [DescribeProxyProcessStatistics](https://www.tencentcloud.com/document/product/1130/84544?from_cn_redirect=1) to obtain the instance access source.
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceMonitorSIPRequest"/></param>
         /// <returns><see cref="DescribeInstanceMonitorSIPResponse"/></returns>
@@ -1797,7 +1797,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to change the instance access password. Due to a spelling error in the original API name, it has been corrected to [ModifyInstancePassword](https://intl.cloud.tencent.com/document/product/239/111555?from_cn_redirect=1). It is recommended to use the corrected API.
+        /// This API is used to change the instance access password. As the API name contains a spelling error, it has been corrected to [ModifyInstancePassword](https://www.tencentcloud.com/document/product/239/111555?from_cn_redirect=1). The corrected API is recommended for use.
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>
@@ -1807,7 +1807,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// This API is used to change the instance access password. Due to a spelling error in the original API name, it has been corrected to [ModifyInstancePassword](https://intl.cloud.tencent.com/document/product/239/111555?from_cn_redirect=1). It is recommended to use the corrected API.
+        /// This API is used to change the instance access password. As the API name contains a spelling error, it has been corrected to [ModifyInstancePassword](https://www.tencentcloud.com/document/product/239/111555?from_cn_redirect=1). The corrected API is recommended for use.
         /// </summary>
         /// <param name="req"><see cref="ModfiyInstancePasswordRequest"/></param>
         /// <returns><see cref="ModfiyInstancePasswordResponse"/></returns>
@@ -2259,6 +2259,48 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// This API is used to change the SSL encryption mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySSLEncryptionModeRequest"/></param>
+        /// <returns><see cref="ModifySSLEncryptionModeResponse"/></returns>
+        public Task<ModifySSLEncryptionModeResponse> ModifySSLEncryptionMode(ModifySSLEncryptionModeRequest req)
+        {
+            return InternalRequestAsync<ModifySSLEncryptionModeResponse>(req, "ModifySSLEncryptionMode");
+        }
+
+        /// <summary>
+        /// This API is used to change the SSL encryption mode.
+        /// </summary>
+        /// <param name="req"><see cref="ModifySSLEncryptionModeRequest"/></param>
+        /// <returns><see cref="ModifySSLEncryptionModeResponse"/></returns>
+        public ModifySSLEncryptionModeResponse ModifySSLEncryptionModeSync(ModifySSLEncryptionModeRequest req)
+        {
+            return InternalRequestAsync<ModifySSLEncryptionModeResponse>(req, "ModifySSLEncryptionMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the enable status of the Valkey instance extension module.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyValkeyModuleRequest"/></param>
+        /// <returns><see cref="ModifyValkeyModuleResponse"/></returns>
+        public Task<ModifyValkeyModuleResponse> ModifyValkeyModule(ModifyValkeyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyValkeyModuleResponse>(req, "ModifyValkeyModule");
+        }
+
+        /// <summary>
+        /// This API is used to modify the enable status of the Valkey instance extension module.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyValkeyModuleRequest"/></param>
+        /// <returns><see cref="ModifyValkeyModuleResponse"/></returns>
+        public ModifyValkeyModuleResponse ModifyValkeyModuleSync(ModifyValkeyModuleRequest req)
+        {
+            return InternalRequestAsync<ModifyValkeyModuleResponse>(req, "ModifyValkeyModule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Enable logging
         /// </summary>
         /// <param name="req"><see cref="OpenLogRequest"/></param>
@@ -2507,6 +2549,27 @@ namespace TencentCloud.Redis.V20180412
         public SwitchProxyResponse SwitchProxySync(SwitchProxyRequest req)
         {
             return InternalRequestAsync<SwitchProxyResponse>(req, "SwitchProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to update SSL key information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSLCertRequest"/></param>
+        /// <returns><see cref="UpdateSSLCertResponse"/></returns>
+        public Task<UpdateSSLCertResponse> UpdateSSLCert(UpdateSSLCertRequest req)
+        {
+            return InternalRequestAsync<UpdateSSLCertResponse>(req, "UpdateSSLCert");
+        }
+
+        /// <summary>
+        /// This API is used to update SSL key information.
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSLCertRequest"/></param>
+        /// <returns><see cref="UpdateSSLCertResponse"/></returns>
+        public UpdateSSLCertResponse UpdateSSLCertSync(UpdateSSLCertRequest req)
+        {
+            return InternalRequestAsync<UpdateSSLCertResponse>(req, "UpdateSSLCert")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

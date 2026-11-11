@@ -31,13 +31,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? TypeId{ get; set; }
 
         /// <summary>
-        /// <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, query the sales specifications for all regions via the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API.</p><ul><li>When <strong>TypeId</strong> is standard architecture, <strong>MemSize</strong> is the total memory capacity of the instance.</li><li>When <strong>TypeId</strong> is cluster architecture, <strong>MemSize</strong> is the sharded memory capacity.</li></ul>
+        /// <p>Memory capacity, measured in MB. The value must be an integral multiple of 1024. For detailed parameter information, query the sales specifications for all regions through the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API.</p><ul><li>When <strong>TypeId</strong> is the standard architecture, <strong>MemSize</strong> is the total memory capacity of the instance.</li><li>When <strong>TypeId</strong> is the cluster architecture, <strong>MemSize</strong> is the sharded memory capacity.</li></ul>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// <p>Instance count. Number of instances to purchase at a time. For details, query sales specifications in all regions via the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API.</p>
+        /// <p>Instance count. The number of instances to purchase at a time. For details, use the <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">DescribeProductInfo</a> API to query the sales specifications in all regions.</p>
         /// </summary>
         [JsonProperty("GoodsNum")]
         public ulong? GoodsNum{ get; set; }
@@ -91,7 +91,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? AutoRenew{ get; set; }
 
         /// <summary>
-        /// <p>Security group ID array.</p><ul><li>A security group is a virtual firewall that controls network access to a cloud database instance. When creating an instance, it is recommended to bind the corresponding security group.</li><li>Get the security group ID of an instance through the <a href="https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1">DescribeInstanceSecurityGroup</a> API.</li></ul>
+        /// <p>Security group ID array.</p><ul><li>A security group is a virtual firewall to control network access to cloud database instances. It is recommended to bind the corresponding security group when creating an instance.</li><li>Obtain the security group ID of an instance through the <a href="https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1">DescribeInstanceSecurityGroup</a> API.</li></ul>
         /// </summary>
         [JsonProperty("SecurityGroupIdList")]
         public string[] SecurityGroupIdList{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? NoAuth{ get; set; }
 
         /// <summary>
-        /// <p>Node information of instance, including node ID, node type, node availability zone ID. For details, please see <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1">RedisNodeInfo</a>.<br>Currently support inputting node type (primary node or replica node) and availability zone. When this parameter is not specified, in regions that support multi-availability zone deployment, the system defaults to creating instances with multi-availability zone architecture.</p>
+        /// <p>Node information of the instance, including node ID, node type, and node availability zone ID. For details, see <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1">RedisNodeInfo </a>.<br>Currently supports inputting the node type (primary node or replica node) and the availability zone of the node. If this parameter is not specified, the system defaults to creating a multi-availability zone architecture instance in regions that support multi-availability zone deployment.</p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
@@ -145,13 +145,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Specify the name of the AZ to which the instance belongs. For details, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.</p>
+        /// <p>Specify the name of the availability zone to which the instance belongs. For details, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// <p>Parameter template ID of the specified instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt to the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
+        /// <p>Parameter template ID associated with the specified instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -169,7 +169,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string ProductVersion{ get; set; }
 
         /// <summary>
-        /// <p>Dedicated cluster ID.</p><ul><li>When <strong>ProductVersion</strong> is set to <strong>cdc</strong>, this parameter must be set.</li><li>Get cluster ID through the API <a href="https://www.tencentcloud.com/document/product/239/109628?from_cn_redirect=1">DescribeRedisClusters</a>.</li></ul>
+        /// <p>Dedicated cluster ID.</p><ul><li>When <strong>ProductVersion</strong> is set to <strong>cdc</strong>, this parameter must be set.</li><li>Get the cluster ID through the API <a href="https://www.tencentcloud.com/document/product/239/109628?from_cn_redirect=1">DescribeRedisClusters</a>.</li></ul>
         /// </summary>
         [JsonProperty("RedisClusterId")]
         public string RedisClusterId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Name of filter key</p>
+        /// <p>Name of filter key.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

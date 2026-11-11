@@ -28,7 +28,7 @@ namespace TencentCloud.Csip.V20221121
 
        private const string endpoint = "csip.intl.tencentcloudapi.com";
        private const string version = "2022-11-21";
-       private const string sdkVersion = "SDK_NET_3.0.1420";
+       private const string sdkVersion = "SDK_NET_3.0.1426";
 
         /// <summary>
         /// Client constructor.
@@ -495,6 +495,27 @@ namespace TencentCloud.Csip.V20221121
         public CreateAllAssetsExportJobResponse CreateAllAssetsExportJobSync(CreateAllAssetsExportJobRequest req)
         {
             return InternalRequestAsync<CreateAllAssetsExportJobResponse>(req, "CreateAllAssetsExportJob")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an asset baseline risk export task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetBaselineRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetBaselineRiskExportJobResponse"/></returns>
+        public Task<CreateAssetBaselineRiskExportJobResponse> CreateAssetBaselineRiskExportJob(CreateAssetBaselineRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetBaselineRiskExportJobResponse>(req, "CreateAssetBaselineRiskExportJob");
+        }
+
+        /// <summary>
+        /// This API is used to create an asset baseline risk export task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAssetBaselineRiskExportJobRequest"/></param>
+        /// <returns><see cref="CreateAssetBaselineRiskExportJobResponse"/></returns>
+        public CreateAssetBaselineRiskExportJobResponse CreateAssetBaselineRiskExportJobSync(CreateAssetBaselineRiskExportJobRequest req)
+        {
+            return InternalRequestAsync<CreateAssetBaselineRiskExportJobResponse>(req, "CreateAssetBaselineRiskExportJob")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2540,6 +2561,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Delete baseline ignore policy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="DeleteBaselineIgnorePolicyResponse"/></returns>
+        public Task<DeleteBaselineIgnorePolicyResponse> DeleteBaselineIgnorePolicy(DeleteBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineIgnorePolicyResponse>(req, "DeleteBaselineIgnorePolicy");
+        }
+
+        /// <summary>
+        /// Delete baseline ignore policy
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="DeleteBaselineIgnorePolicyResponse"/></returns>
+        public DeleteBaselineIgnorePolicyResponse DeleteBaselineIgnorePolicySync(DeleteBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteBaselineIgnorePolicyResponse>(req, "DeleteBaselineIgnorePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Delete custom baseline policies in batches. Only support deletion of policies with PolicyType=SELF. After deletion, historical risk records are retained, but no new results are generated.
         /// </summary>
         /// <param name="req"><see cref="DeleteBaselineSelfDefinedPolicyListRequest"/></param>
@@ -3271,6 +3313,48 @@ namespace TencentCloud.Csip.V20221121
         public DeleteImageVulWhitelistResponse DeleteImageVulWhitelistSync(DeleteImageVulWhitelistRequest req)
         {
             return InternalRequestAsync<DeleteImageVulWhitelistResponse>(req, "DeleteImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete CSC abnormal login custom allowlist entries in batches (soft delete, status=2), with support for cross-page select all. Either Ids or SelectAll is required. If both are empty, InvalidParameter is returned. If the total amount of cross-page select all exceeds 100,000 entries, the entire request is denied.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteCustomEDRResponse"/></returns>
+        public Task<DeleteLoginWhiteCustomEDRResponse> DeleteLoginWhiteCustomEDR(DeleteLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteCustomEDRResponse>(req, "DeleteLoginWhiteCustomEDR");
+        }
+
+        /// <summary>
+        /// This API is used to delete CSC abnormal login custom allowlist entries in batches (soft delete, status=2), with support for cross-page select all. Either Ids or SelectAll is required. If both are empty, InvalidParameter is returned. If the total amount of cross-page select all exceeds 100,000 entries, the entire request is denied.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteCustomEDRResponse"/></returns>
+        public DeleteLoginWhiteCustomEDRResponse DeleteLoginWhiteCustomEDRSync(DeleteLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteCustomEDRResponse>(req, "DeleteLoginWhiteCustomEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Delete CSC abnormal login self-learning allowlist rule groups in batches (soft delete the entire group with enable=0). Import any row ID in a group to locate the entire group. Cross-page select all is supported (cap: 100,000 rule groups). Once deleted, the groups will not be automatically re-learned. You need to toggle self-learning again to update the learning anchor. This interface does not rescan historical alarms.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteLearnEDRResponse"/></returns>
+        public Task<DeleteLoginWhiteLearnEDRResponse> DeleteLoginWhiteLearnEDR(DeleteLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteLearnEDRResponse>(req, "DeleteLoginWhiteLearnEDR");
+        }
+
+        /// <summary>
+        /// Delete CSC abnormal login self-learning allowlist rule groups in batches (soft delete the entire group with enable=0). Import any row ID in a group to locate the entire group. Cross-page select all is supported (cap: 100,000 rule groups). Once deleted, the groups will not be automatically re-learned. You need to toggle self-learning again to update the learning anchor. This interface does not rescan historical alarms.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="DeleteLoginWhiteLearnEDRResponse"/></returns>
+        public DeleteLoginWhiteLearnEDRResponse DeleteLoginWhiteLearnEDRSync(DeleteLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<DeleteLoginWhiteLearnEDRResponse>(req, "DeleteLoginWhiteLearnEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4139,6 +4223,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to obtain the asset risk list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetBaselineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetBaselineRiskListResponse"/></returns>
+        public Task<DescribeAssetBaselineRiskListResponse> DescribeAssetBaselineRiskList(DescribeAssetBaselineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetBaselineRiskListResponse>(req, "DescribeAssetBaselineRiskList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the asset risk list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetBaselineRiskListRequest"/></param>
+        /// <returns><see cref="DescribeAssetBaselineRiskListResponse"/></returns>
+        public DescribeAssetBaselineRiskListResponse DescribeAssetBaselineRiskListSync(DescribeAssetBaselineRiskListRequest req)
+        {
+            return InternalRequestAsync<DescribeAssetBaselineRiskListResponse>(req, "DescribeAssetBaselineRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the component list in an asset.
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetComponentListRequest"/></param>
@@ -4660,6 +4765,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeBaselineFixRecordListResponse DescribeBaselineFixRecordListSync(DescribeBaselineFixRecordListRequest req)
         {
             return InternalRequestAsync<DescribeBaselineFixRecordListResponse>(req, "DescribeBaselineFixRecordList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Queries the baseline ignore policy list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineIgnorePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineIgnorePolicyListResponse"/></returns>
+        public Task<DescribeBaselineIgnorePolicyListResponse> DescribeBaselineIgnorePolicyList(DescribeBaselineIgnorePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineIgnorePolicyListResponse>(req, "DescribeBaselineIgnorePolicyList");
+        }
+
+        /// <summary>
+        /// Queries the baseline ignore policy list
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaselineIgnorePolicyListRequest"/></param>
+        /// <returns><see cref="DescribeBaselineIgnorePolicyListResponse"/></returns>
+        public DescribeBaselineIgnorePolicyListResponse DescribeBaselineIgnorePolicyListSync(DescribeBaselineIgnorePolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeBaselineIgnorePolicyListResponse>(req, "DescribeBaselineIgnorePolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5668,6 +5794,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeClusterAssetsResponse DescribeClusterAssetsSync(DescribeClusterAssetsRequest req)
         {
             return InternalRequestAsync<DescribeClusterAssetsResponse>(req, "DescribeClusterAssets")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Get the cluster risk policy list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaselineRiskPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaselineRiskPolicyListResponse"/></returns>
+        public Task<DescribeClusterBaselineRiskPolicyListResponse> DescribeClusterBaselineRiskPolicyList(DescribeClusterBaselineRiskPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaselineRiskPolicyListResponse>(req, "DescribeClusterBaselineRiskPolicyList");
+        }
+
+        /// <summary>
+        /// Get the cluster risk policy list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterBaselineRiskPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeClusterBaselineRiskPolicyListResponse"/></returns>
+        public DescribeClusterBaselineRiskPolicyListResponse DescribeClusterBaselineRiskPolicyListSync(DescribeClusterBaselineRiskPolicyListRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterBaselineRiskPolicyListResponse>(req, "DescribeClusterBaselineRiskPolicyList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -8507,6 +8654,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Locate malicious file alarms by EDR alarm ID and return the download URL of the malicious sample. Only alarms with alert_sub_type=1 (malicious file) can be downloaded. Other sub-types are handled as resource not found. Public cloud returns a COS presigned URL (valid for 1 hour). Non-public cloud returns a base64 DataURL and FileName when the export switch is on. In cross-account scenarios, TargetAppId specifies the account that owns the alarm, and ownership verification is performed (fail-close, InvalidParameter is returned if no permission).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrMalwareFileRequest"/></param>
+        /// <returns><see cref="DescribeEdrMalwareFileResponse"/></returns>
+        public Task<DescribeEdrMalwareFileResponse> DescribeEdrMalwareFile(DescribeEdrMalwareFileRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrMalwareFileResponse>(req, "DescribeEdrMalwareFile");
+        }
+
+        /// <summary>
+        /// Locate malicious file alarms by EDR alarm ID and return the download URL of the malicious sample. Only alarms with alert_sub_type=1 (malicious file) can be downloaded. Other sub-types are handled as resource not found. Public cloud returns a COS presigned URL (valid for 1 hour). Non-public cloud returns a base64 DataURL and FileName when the export switch is on. In cross-account scenarios, TargetAppId specifies the account that owns the alarm, and ownership verification is performed (fail-close, InvalidParameter is returned if no permission).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdrMalwareFileRequest"/></param>
+        /// <returns><see cref="DescribeEdrMalwareFileResponse"/></returns>
+        public DescribeEdrMalwareFileResponse DescribeEdrMalwareFileSync(DescribeEdrMalwareFileRequest req)
+        {
+            return InternalRequestAsync<DescribeEdrMalwareFileResponse>(req, "DescribeEdrMalwareFile")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Result download URL of an export task
         /// </summary>
         /// <param name="req"><see cref="DescribeExportJobDownloadURLRequest"/></param>
@@ -8843,6 +9011,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to query the host vulnerability risk event list and return basic vulnerability information, instance information, risk status, and latest scan time by risk record dimension.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskEventListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskEventListResponse"/></returns>
+        public Task<DescribeHostVulRiskEventListResponse> DescribeHostVulRiskEventList(DescribeHostVulRiskEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskEventListResponse>(req, "DescribeHostVulRiskEventList");
+        }
+
+        /// <summary>
+        /// This API is used to query the host vulnerability risk event list and return basic vulnerability information, instance information, risk status, and latest scan time by risk record dimension.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulRiskEventListRequest"/></param>
+        /// <returns><see cref="DescribeHostVulRiskEventListResponse"/></returns>
+        public DescribeHostVulRiskEventListResponse DescribeHostVulRiskEventListSync(DescribeHostVulRiskEventListRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulRiskEventListResponse>(req, "DescribeHostVulRiskEventList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to retrieve the host vulnerability risk list.
         /// </summary>
         /// <param name="req"><see cref="DescribeHostVulRiskListRequest"/></param>
@@ -8860,6 +9049,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeHostVulRiskListResponse DescribeHostVulRiskListSync(DescribeHostVulRiskListRequest req)
         {
             return InternalRequestAsync<DescribeHostVulRiskListResponse>(req, "DescribeHostVulRiskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Query the host vulnerability scanning status to determine whether vulnerabilities have been scanned, whether the first vulnerability scan failed, and the fixable vulnerability status after the first scan is completed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulScanStatusRequest"/></param>
+        /// <returns><see cref="DescribeHostVulScanStatusResponse"/></returns>
+        public Task<DescribeHostVulScanStatusResponse> DescribeHostVulScanStatus(DescribeHostVulScanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulScanStatusResponse>(req, "DescribeHostVulScanStatus");
+        }
+
+        /// <summary>
+        /// Query the host vulnerability scanning status to determine whether vulnerabilities have been scanned, whether the first vulnerability scan failed, and the fixable vulnerability status after the first scan is completed.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostVulScanStatusRequest"/></param>
+        /// <returns><see cref="DescribeHostVulScanStatusResponse"/></returns>
+        public DescribeHostVulScanStatusResponse DescribeHostVulScanStatusSync(DescribeHostVulScanStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeHostVulScanStatusResponse>(req, "DescribeHostVulScanStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -9746,6 +9956,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// This API is used to query the CSC abnormal login custom allowlist. In multi-account scenarios, parse out all member AppIds by MemberId and perform an aggregate query only once. Return in pages by ModifyTime DESC. The output slice field is always [] and never null.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCustomListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCustomListEDRResponse"/></returns>
+        public Task<DescribeLoginWhiteCustomListEDRResponse> DescribeLoginWhiteCustomListEDR(DescribeLoginWhiteCustomListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCustomListEDRResponse>(req, "DescribeLoginWhiteCustomListEDR");
+        }
+
+        /// <summary>
+        /// This API is used to query the CSC abnormal login custom allowlist. In multi-account scenarios, parse out all member AppIds by MemberId and perform an aggregate query only once. Return in pages by ModifyTime DESC. The output slice field is always [] and never null.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteCustomListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteCustomListEDRResponse"/></returns>
+        public DescribeLoginWhiteCustomListEDRResponse DescribeLoginWhiteCustomListEDRSync(DescribeLoginWhiteCustomListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteCustomListEDRResponse>(req, "DescribeLoginWhiteCustomListEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to query the list of allowlisted machines after merge.
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginWhiteHostListRequest"/></param>
@@ -9763,6 +9994,27 @@ namespace TencentCloud.Csip.V20221121
         public DescribeLoginWhiteHostListResponse DescribeLoginWhiteHostListSync(DescribeLoginWhiteHostListRequest req)
         {
             return InternalRequestAsync<DescribeLoginWhiteHostListResponse>(req, "DescribeLoginWhiteHostList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the CSC abnormal login self-learning allowlist (rule group). Rule groups are aggregated by (AppId, common login location), and the ID is the minimum line ID in the group. The output fields SrcIp, UserName, StartTime, and EndTime are always empty. AutoLearnEnable returns the self-learning switch state for the frontend to determine whether to redirect to enable it based on the empty state.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteLearnListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteLearnListEDRResponse"/></returns>
+        public Task<DescribeLoginWhiteLearnListEDRResponse> DescribeLoginWhiteLearnListEDR(DescribeLoginWhiteLearnListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteLearnListEDRResponse>(req, "DescribeLoginWhiteLearnListEDR");
+        }
+
+        /// <summary>
+        /// This API is used to query the CSC abnormal login self-learning allowlist (rule group). Rule groups are aggregated by (AppId, common login location), and the ID is the minimum line ID in the group. The output fields SrcIp, UserName, StartTime, and EndTime are always empty. AutoLearnEnable returns the self-learning switch state for the frontend to determine whether to redirect to enable it based on the empty state.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLoginWhiteLearnListEDRRequest"/></param>
+        /// <returns><see cref="DescribeLoginWhiteLearnListEDRResponse"/></returns>
+        public DescribeLoginWhiteLearnListEDRResponse DescribeLoginWhiteLearnListEDRSync(DescribeLoginWhiteLearnListEDRRequest req)
+        {
+            return InternalRequestAsync<DescribeLoginWhiteLearnListEDRResponse>(req, "DescribeLoginWhiteLearnListEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -12857,6 +13109,27 @@ namespace TencentCloud.Csip.V20221121
         }
 
         /// <summary>
+        /// Modify baseline ignore policy
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselineIgnorePolicyResponse"/></returns>
+        public Task<ModifyBaselineIgnorePolicyResponse> ModifyBaselineIgnorePolicy(ModifyBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineIgnorePolicyResponse>(req, "ModifyBaselineIgnorePolicy");
+        }
+
+        /// <summary>
+        /// Modify baseline ignore policy
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBaselineIgnorePolicyRequest"/></param>
+        /// <returns><see cref="ModifyBaselineIgnorePolicyResponse"/></returns>
+        public ModifyBaselineIgnorePolicyResponse ModifyBaselineIgnorePolicySync(ModifyBaselineIgnorePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyBaselineIgnorePolicyResponse>(req, "ModifyBaselineIgnorePolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Create or edit a baseline policy. Policy.ID 0 means create, non-zero means edit. Name is required when creating or editing. CheckAssetType and Type must comply with the CheckAssetType and PolicyType enums.
         /// </summary>
         /// <param name="req"><see cref="ModifyBaselinePolicyRequest"/></param>
@@ -14218,6 +14491,48 @@ namespace TencentCloud.Csip.V20221121
         public ModifyImageVulWhitelistResponse ModifyImageVulWhitelistSync(ModifyImageVulWhitelistRequest req)
         {
             return InternalRequestAsync<ModifyImageVulWhitelistResponse>(req, "ModifyImageVulWhitelist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Modify the CSC abnormal login custom allowlist with full coverage saving (fields not passed are deemed as cleared). This API does not trigger historical alarm rescanning. Exclude itself during deduplication. If the rule does not exist, return ResourceNotFound.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteCustomEDRResponse"/></returns>
+        public Task<ModifyLoginWhiteCustomEDRResponse> ModifyLoginWhiteCustomEDR(ModifyLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteCustomEDRResponse>(req, "ModifyLoginWhiteCustomEDR");
+        }
+
+        /// <summary>
+        /// Modify the CSC abnormal login custom allowlist with full coverage saving (fields not passed are deemed as cleared). This API does not trigger historical alarm rescanning. Exclude itself during deduplication. If the rule does not exist, return ResourceNotFound.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteCustomEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteCustomEDRResponse"/></returns>
+        public ModifyLoginWhiteCustomEDRResponse ModifyLoginWhiteCustomEDRSync(ModifyLoginWhiteCustomEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteCustomEDRResponse>(req, "ModifyLoginWhiteCustomEDR")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the CSC abnormal login self-learning allowlist rule group, locating the entire group by (AppId, common login location). Constraints: creating is not supported, and taking effect by tag is not supported (TagIDs must be empty). Only Scope=0 direct selection and Scope=1 all assets + removal are supported. Reject when the rule group row count exceeds 5000. In a single transaction, insert first and delete later. It takes effect within one cache cycle (default 120s) after editing. This API does not rescan historical alarms.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteLearnEDRResponse"/></returns>
+        public Task<ModifyLoginWhiteLearnEDRResponse> ModifyLoginWhiteLearnEDR(ModifyLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteLearnEDRResponse>(req, "ModifyLoginWhiteLearnEDR");
+        }
+
+        /// <summary>
+        /// This API is used to modify the CSC abnormal login self-learning allowlist rule group, locating the entire group by (AppId, common login location). Constraints: creating is not supported, and taking effect by tag is not supported (TagIDs must be empty). Only Scope=0 direct selection and Scope=1 all assets + removal are supported. Reject when the rule group row count exceeds 5000. In a single transaction, insert first and delete later. It takes effect within one cache cycle (default 120s) after editing. This API does not rescan historical alarms.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoginWhiteLearnEDRRequest"/></param>
+        /// <returns><see cref="ModifyLoginWhiteLearnEDRResponse"/></returns>
+        public ModifyLoginWhiteLearnEDRResponse ModifyLoginWhiteLearnEDRSync(ModifyLoginWhiteLearnEDRRequest req)
+        {
+            return InternalRequestAsync<ModifyLoginWhiteLearnEDRResponse>(req, "ModifyLoginWhiteLearnEDR")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? TypeId{ get; set; }
 
         /// <summary>
-        /// <p>Memory capacity, measured in MB, must be a multiple of 1024. For specific specifications, refer to the specifications returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">query product sales specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance. When TypeId is cluster architecture, MemSize is the sharded memory capacity.</p>
+        /// <p>Memory capacity, measured in MB. The value must be a multiple of 1024. The specific specifications are subject to those returned by <a href="https://www.tencentcloud.com/document/api/239/30600?from_cn_redirect=1">Query Product Sales Specifications</a>. When TypeId is standard architecture, MemSize is the total memory capacity of the instance; when TypeId is cluster architecture, MemSize is the memory capacity of a single shard.</p>
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
-        /// <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>.<strong>Note</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+        /// <p>ID of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public bool? ReplicasReadonly{ get; set; }
 
         /// <summary>
-        /// <p>Name of the availability zone to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>. <strong>Description</strong>: Please specify at least one parameter in <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
+        /// <p>Name of the AZ to which the instance belongs. See <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and AZs</a>. <strong>Description</strong>: Please specify at least one of <strong>ZoneId</strong> and <strong>ZoneName</strong>.</p>
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

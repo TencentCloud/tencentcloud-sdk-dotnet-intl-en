@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// <p>Availability zone ID of the cloned instance. For supported AZ IDs, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
+        /// <p>Availability zone ID of the clone instance. For supported availability zone IDs, see <a href="https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1">Regions and Availability Zones</a>.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
-        /// <p>Backup ID used to clone an instance. Use the interface <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a> to obtain the backup ID.</p>
+        /// <p>Backup ID used for cloning an instance. Obtain the backup ID through the API <a href="https://www.tencentcloud.com/document/product/239/20011?from_cn_redirect=1">DescribeInstanceBackups</a>.</p>
         /// </summary>
         [JsonProperty("BackupId")]
         public string BackupId{ get; set; }
@@ -109,7 +109,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? VPort{ get; set; }
 
         /// <summary>
-        /// <p>Node information of instance.<ul><li>Currently supports configuring node type (primary node or replica node) and its availability zone info. For details, please refer to <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo">RedisNodeInfo</a>.</li><li>This parameter can be left blank for single-AZ deployment.</li></ul></p>
+        /// <p>Node information of the instance.<ul><li>Currently, you can configure the node type (primary node or replica node) and its availability zone info. For details, see <a href="https://www.tencentcloud.com/document/product/239/20022?from_cn_redirect=1#RedisNodeInfo">RedisNodeInfo</a>.</li><li>This parameter can be left blank for single-AZ deployment.</li></ul></p>
         /// </summary>
         [JsonProperty("NodeSet")]
         public RedisNodeInfo[] NodeSet{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ResourceTag[] ResourceTags{ get; set; }
 
         /// <summary>
-        /// <p>Specify the parameter template ID related to the cloned instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
+        /// <p>Specify the parameter template ID for cloning an instance.</p><ul><li>If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.</li><li>Query the parameter template list of the instance through the <a href="https://www.tencentcloud.com/document/product/239/58750?from_cn_redirect=1">DescribeParamTemplates</a> API to obtain the template ID number.</li></ul>
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

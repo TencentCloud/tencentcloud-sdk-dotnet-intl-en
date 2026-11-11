@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? NodeType{ get; set; }
 
         /// <summary>
-        /// ID of the master or replica node <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance by deleting a replica.  </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul> </li></ul>
+        /// ID of the primary or replica node.<ul><li>This parameter does not need to be set for the Create Redis Instance API [CreateInstances](https://www.tencentcloud.com/document/product/239/20026?from_cn_redirect=1), but needs to be set when deleting replicas through the instance configuration change API [UpgradeInstance](https://www.tencentcloud.com/document/product/239/20013?from_cn_redirect=1).</li><li>This parameter can be used to obtain the Integer type node ID through the API [DescribeInstances](https://www.tencentcloud.com/document/product/239/20018?from_cn_redirect=1).</li></ul>
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }

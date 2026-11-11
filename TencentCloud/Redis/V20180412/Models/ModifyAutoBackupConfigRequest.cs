@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+        /// <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID in the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+        /// <p>Set the automatic backup cycle. It can be set to Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. This parameter cannot be modified for the moment.</p>
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+        /// <p>Backup time period. It can be set to every full hour. Format: 00:00-01:00, 01:00-02:00...... 23:00-00:00.</p>
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// Automatic backup type.  Valid value:  `1` (scheduled backup).
+        /// <p>Automatic backup type. Currently, it can only be configured as: 1, scheduled backup.</p>
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+        /// <p>Number of days to save full backup files. Only support setting to 7, unit: days. For a longer period, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }

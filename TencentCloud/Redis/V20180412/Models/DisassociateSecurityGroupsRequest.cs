@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://intl.cloud.tencent.com/document/product/239/34447?from_cn_redirect=1).
+        /// Security group ID, which can be obtained through the sub-parameter **SecurityGroupId** of the response parameter InstanceSecurityGroupsDetail of the API [DescribeInstanceSecurityGroup](https://www.tencentcloud.com/document/product/239/34447?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }

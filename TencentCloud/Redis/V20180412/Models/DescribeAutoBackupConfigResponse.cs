@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// This parameter is retained due to compatibility and can be ignored.
+        /// <p>This parameter is temporarily reserved due to compatibility issues. Ignore it.</p>
         /// </summary>
         [JsonProperty("AutoBackupType")]
         public long? AutoBackupType{ get; set; }
 
         /// <summary>
-        /// Backup cycle, which will be daily by default. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+        /// <p>Backup cycle. Automatic backup is performed every day by default: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.</p>
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }
 
         /// <summary>
-        /// Time period for backup task initialization
+        /// <p>Backup task initiation time range.</p>
         /// </summary>
         [JsonProperty("TimePeriod")]
         public string TimePeriod{ get; set; }
 
         /// <summary>
-        /// Retention time of full backup files in days.  Default value: `7`.  To retain the files for more days, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.
+        /// <p>Number of days to save full backup files. Default value: 7 days. To save for more days, please <a href="https://console.cloud.tencent.com/workorder/category">submit a ticket</a> to apply.</p>
         /// </summary>
         [JsonProperty("BackupStorageDays")]
         public long? BackupStorageDays{ get; set; }
 
         /// <summary>
-        /// This parameter has been disused.
+        /// <p>This parameter is no longer in use. Ignore it.</p>
         /// </summary>
         [JsonProperty("BinlogStorageDays")]
         public long? BinlogStorageDays{ get; set; }

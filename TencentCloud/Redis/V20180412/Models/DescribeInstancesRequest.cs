@@ -25,196 +25,163 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+        /// <p>Number of instances output per page. Default parameter value: 20. Maximum value: 1000.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Pagination offset, which is an integral multiple of `Limit`. Calculation formula:  `offset` = `limit` * (page number - 1).
+        /// <p>Pagination offset, which is an integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// ID of a specified instance,  such as  "crs-xjhsdj****" Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
-        /// 
+        /// <p>Specifies the instance ID. Example: crs-xjhsdj****. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The instance list is sorted according to the following enumeration valid values:
-        /// - projectId: By project ID.- createtime: By the creation time of instances.- instancename: By the name of instances.- type: By the type of instances.- curDeadline: By the expiration time of instances.
+        /// <p>Instance list sorting criteria. Enumeration values are as follows:</p><ul><li>projectId: by project ID.</li><li>createtime: sort by instance creation time.</li><li>instancename: by instance name sorting.</li><li>type: by instance type.</li><li>curDeadline: by instance expiration time.</li></ul>
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// For instance sorting order, the default is descending order.
-        /// - 1: Descending order.
-        /// - 0: Ascending order.
+        /// <p>Instance sorting order, with a default value of reverse sorting.</p><ul><li>1: Reverse order.</li><li>0: Sequential order.</li></ul>
         /// </summary>
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
         /// <summary>
-        /// Array of VPC IDs such as 47525. If this parameter is not passed in or the array is empty, the classic network will be selected by default. This parameter is retained and can be ignored. It is set based on `UniqVpcIds` parameter format.
+        /// <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default. For example: 47525. This parameter is temporarily reserved and can be ignored. Set the VPC ID array according to the format of the UniqVpcIds parameter.</p>
         /// </summary>
         [JsonProperty("VpcIds")]
         public string[] VpcIds{ get; set; }
 
         /// <summary>
-        /// Array of VPC subnet IDs such as 56854. This parameter is retained and can be ignored. It is set based on `UniqSubnetIds` parameter format.
+        /// <p>Array of subnet IDs belonging to the private network, for example: 56854. This parameter is temporarily reserved and can be ignored. Set the private network subnet ID array according to the format of the UniqSubnetIds parameter.</p>
         /// </summary>
         [JsonProperty("SubnetIds")]
         public string[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// Setting keywords field for fuzzy query, only instance names support fuzzy query.
+        /// <p>Set the key field for fuzzy query. Only instance names support fuzzy query.</p>
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
         /// <summary>
-        /// Array of project IDs
+        /// <p>Array of project IDs.</p>
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// Instance name
+        /// <p>Instance name.</p>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Array of VPC IDs such as vpc-sad23jfdfk. If this parameter is not passed in or or the array is empty, the classic network will be selected by default.
+        /// <p>VPC ID array. If this parameter is not configured or the array is empty, the basic network is selected by default, for example: vpc-sad23jfdfk.</p>
         /// </summary>
         [JsonProperty("UniqVpcIds")]
         public string[] UniqVpcIds{ get; set; }
 
         /// <summary>
-        /// Array of VPC subnet IDs such as subnet-fdj24n34j2
+        /// <p>Subnet ID array belonging to the private network, for example: subnet-fdj24n34j2.</p>
         /// </summary>
         [JsonProperty("UniqSubnetIds")]
         public string[] UniqSubnetIds{ get; set; }
 
         /// <summary>
-        /// Array of region IDs (disused). The corresponding region can be queried through the common parameter `Region`.
+        /// <p>Region ID array. This parameter has been deprecated. Use the common parameter Region to query the corresponding region.</p>
         /// </summary>
         [JsonProperty("RegionIds")]
         public long?[] RegionIds{ get; set; }
 
         /// <summary>
-        /// Instance status.
-        /// - 0: To be initialized.
-        /// - 1: In process.
-        /// - 2: Running.
-        /// - -2: Isolated.
-        /// - -3: Pending Delete.
+        /// <p>Instance status.</p><ul><li>0: pending initialization.</li><li>1: in process.</li><li>2: running.</li><li>-2: isolated.</li><li>-3: pending deletion.</li></ul>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
         /// <summary>
-        /// Instance architecture version.
-        /// - 1: Single-node edition.
-        /// - 2: Master-replica edition.- 3: Cluster edition.
+        /// <p>Instance architecture version.</p><ul><li>1: standalone edition.</li><li>2: primary/secondary edition.</li><li>3: cluster version.</li></ul>
         /// </summary>
         [JsonProperty("TypeVersion")]
         public long? TypeVersion{ get; set; }
 
         /// <summary>
-        /// Storage engine information. Valid values: `Redis-2.8`, `Redis-4.0`, `Redis-5.0`, `Redis-6.0` or `CKV`.
+        /// <p>Storage engine info. It can be set to Redis-2.8, Redis-4.0, Redis-5.0, Redis-6.0, or CKV.</p>
         /// </summary>
         [JsonProperty("EngineName")]
         public string EngineName{ get; set; }
 
         /// <summary>
-        /// Renewal pattern.
-        /// - 0: Manual renewal.
-        /// - 1: Automatic renewal.
-        /// - 2: No renewal after expiry.
+        /// <p>Renewal mode.</p><ul><li>0: Manual renewal.</li><li>1: Automatic renewal.</li><li>2: No renewal after expiry.</li></ul>
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long?[] AutoRenew{ get; set; }
 
         /// <summary>
-        /// Billing mode.
-        /// - postpaid: pay-as-you-go.
-        /// - prepaid: monthly subscription.
+        /// <p>Billing mode.</p><ul><li>postpaid: pay-as-you-go billing.</li><li>prepaid: annual/monthly subscription.</li></ul>
         /// </summary>
         [JsonProperty("BillingMode")]
         public string BillingMode{ get; set; }
 
         /// <summary>
-        /// Instance type.
-        /// 
-        /// - 2: Redis 2.8 memory edition (standard architecture).
-        /// - 3: CKV 3.2 memory edition (standard architecture).
-        /// - 4: CKV 3.2 memory edition (cluster architecture).
-        /// - 5: Redis 2.8 memory edition (standalone).
-        /// - 6: Redis 4.0 memory edition (standard architecture).
-        /// - 7: Redis 4.0 memory edition (cluster architecture).
-        /// - 8: Redis 5.0 memory edition (standard architecture).
-        /// - 9: Redis 5.0 memory edition (cluster architecture).
-        /// - 15: Redis 6.2 memory edition (standard architecture).
-        /// - 16: Redis 6.2 memory edition (cluster architecture).
-        /// - 17: Redis 7.0 memory edition (standard architecture).
-        /// - 18: Redis 7.0 memory edition (cluster architecture).
-        /// - 200: Memcached 1.6 memory edition (cluster architecture).
+        /// <p>Instance type.</p><ul><li>2: Redis 2.8 memory edition (standard architecture).</li><li>3: CKV 3.2 memory edition (standard architecture).</li><li>4: CKV 3.2 memory edition (cluster architecture).</li><li>5: Redis 2.8 memory edition (standalone).</li><li>6: Redis 4.0 memory edition (standard architecture).</li><li>7: Redis 4.0 memory edition (cluster architecture).</li><li>8: Redis 5.0 memory edition (standard architecture).</li><li>9: Redis 5.0 memory edition (cluster architecture).</li><li>15: Redis 6.2 memory edition (standard architecture).</li><li>16: Redis 6.2 memory edition (cluster architecture).</li><li>17: Redis 7.0 memory edition (standard architecture).</li><li>18: Redis 7.0 memory edition (cluster architecture).</li><li>200: Memcached 1.6 memory edition (cluster architecture).</li></ul>
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// This parameter is of array type and supports the configuration of instance names, instance IDs, and IP addresses. Among these, the instance name is fuzzy matching while the instance ID and IP address are precise matching.
-        /// - Each element in the array is used for a union-based matching query.- When both **InstanceId** and **SearchKeys** are configured simultaneously, their intersection will be used for the matching query.
+        /// <p>This parameter is an array type and supports configuring instance name, instance ID, and IP address. Among them, instance name uses fuzzy matching, while instance ID and IP address use exact matching.</p><ul><li>Each element in the array uses union for match query.</li><li>If <strong>InstanceId</strong> and <strong>SearchKeys</strong> are configured concurrently, their intersection is used for matching query.</li></ul>
         /// </summary>
         [JsonProperty("SearchKeys")]
         public string[] SearchKeys{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
+        /// <p>Internal parameter, which can be ignored.</p>
         /// </summary>
         [JsonProperty("TypeList")]
         public long?[] TypeList{ get; set; }
 
         /// <summary>
-        /// Internal parameter, which can be ignored.
+        /// <p>Internal parameter, which can be ignored.</p>
         /// </summary>
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
         /// <summary>
-        /// Resources filter by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+        /// <p>Filter resources by tag Key and Value. If this parameter is not configured or the array is set to empty, no tag-based filtering is applied.</p>
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTagInfo[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// Resources filter by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+        /// <p>Filter resources by tag Key. If this parameter is not configured or the array is set to empty, no filtering by tag Key is performed.</p>
         /// </summary>
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
         /// <summary>
-        /// The product version of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.
-        /// - local: local Disk Edition.- cdc: Cluster dedicated edition.
+        /// <p>Deployment type of the instance. If this parameter is not configured or the array is set to empty, instances will not be filtered based on this parameter by default.</p><p>Enumeration values:</p><ul><li>local: Common I.</li><li>localv2: Common II.</li><li>cdc: Dedicated cluster.</li></ul>
         /// </summary>
         [JsonProperty("ProductVersions")]
         public string[] ProductVersions{ get; set; }
 
         /// <summary>
-        /// Batch query of the specified instances ID. The number of results returned is based on `Limit`.
+        /// <p>Batch query the specified instance IDs. The returned results are mainly limited by Limit.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// Availability zone mode.
-        /// - singleaz: Single availability zone.- multiaz: Multiple availability zones.
+        /// <p>Availability zone mode.</p><ul><li>singleaz: single availability zone.</li><li>multiaz: multi-availability zone.</li></ul>
         /// </summary>
         [JsonProperty("AzMode")]
         public string AzMode{ get; set; }

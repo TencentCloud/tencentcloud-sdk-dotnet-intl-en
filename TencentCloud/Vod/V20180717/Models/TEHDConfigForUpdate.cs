@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// Top speed Codec type. Available values: <li>TEHD-100: top speed Codec-100;</li> <li>OFF: disables top speed Codec.</li> If not specified, no modification is made.
+        /// Top speed Codec type. Available values: <li>TEHD-100 means top speed Codec-100;</li> <li>OFF means disabling top speed Codec.</li> If not specified, no modification is made.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum video bitrate. If not specified, no modification is made.
+        /// Maximum video bitrate. If this parameter is not specified, no modification is made.
         /// </summary>
         [JsonProperty("MaxVideoBitrate")]
         public ulong? MaxVideoBitrate{ get; set; }

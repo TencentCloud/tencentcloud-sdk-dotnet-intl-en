@@ -49,19 +49,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string TagValue{ get; set; }
 
         /// <summary>
-        /// <p>Tag value in English.</p>
+        /// <p>Tag value in English</p>
         /// </summary>
         [JsonProperty("TagValueEn")]
         public string TagValueEn{ get; set; }
 
         /// <summary>
-        /// <p>Tag description</p>
+        /// <p>Tag description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Tag color</p>
+        /// <p>Tag color.</p>
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates usage of the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing failed.</p>
+        /// <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
         /// </summary>
         [JsonProperty("StreamIndex")]
         public long? StreamIndex{ get; set; }
 
         /// <summary>
-        /// <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+        /// <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
         /// </summary>
         [JsonProperty("FontType")]
         public string FontType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FontSize{ get; set; }
 
         /// <summary>
-        /// <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+        /// <p>Font color. Format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
         /// </summary>
         [JsonProperty("FontColor")]
         public string FontColor{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? FontAlpha{ get; set; }
 
         /// <summary>
-        /// <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+        /// <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10% <em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
         /// </summary>
         [JsonProperty("YPos")]
         public string YPos{ get; set; }
 
         /// <summary>
-        /// <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+        /// <p>Y-coordinate position of the subtitle background plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background plate Y-coordinate = 10% * source video height. If not specified, the subtitle background plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background plate is at the bottom of its central axis. See the following diagram:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
         /// </summary>
         [JsonProperty("BoardY")]
         public string BoardY{ get; set; }
 
         /// <summary>
-        /// <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If background is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+        /// <p>Base plate width, positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
         /// </summary>
         [JsonProperty("BoardWidth")]
         public string BoardWidth{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? BoardAlpha{ get; set; }
 
         /// <summary>
-        /// <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+        /// <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: Top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines.</li><li>bottom: Bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines.</li></ul><p>Default value: bottom</p>
         /// </summary>
         [JsonProperty("Alignment")]
         public string Alignment{ get; set; }
 
         /// <summary>
-        /// <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, it is 0.3% of the source video height.</p>
+        /// <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>By default if left blank, 0.3% of the source video height.</p>
         /// </summary>
         [JsonProperty("OutlineWidth")]
         public string OutlineWidth{ get; set; }
@@ -133,7 +133,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ShadowColor{ get; set; }
 
         /// <summary>
-        /// <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+        /// <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque (with shadow configured).</p>
         /// </summary>
         [JsonProperty("ShadowAlpha")]
         public float? ShadowAlpha{ get; set; }
