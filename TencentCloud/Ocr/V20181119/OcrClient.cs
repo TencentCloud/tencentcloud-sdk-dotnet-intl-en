@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1424";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -522,6 +522,29 @@ namespace TencentCloud.Ocr.V20181119
         public RecognizeDetectCardCoordsResponse RecognizeDetectCardCoordsSync(RecognizeDetectCardCoordsRequest req)
         {
             return InternalRequestAsync<RecognizeDetectCardCoordsResponse>(req, "RecognizeDetectCardCoords")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API performs unified verification on images of various card types worldwide. It supports automatic card type classification, field recognition, quality check, tampering (PS) detection, copy detection, recapture detection, format validation, and information consistency check. Candidate card types and check items can be flexibly combined.
+        /// The following 20 document types are currently supported: Mainland China ID Card, Passport, Thai ID Card, Malaysian ID Card, Indonesian ID Card, Singapore ID Card, Philippine Driver's License, Philippine SSS ID, Philippine PRC ID, Philippine Postal ID Card, Philippine UMID, Philippine Voter ID, Philippine TIN Card, Philippine National ID, Philippine Health Card, Taiwan (China) ID Card, Vietnamese ID Card, Myanmar Driver's License, Brazilian ID Card, and Brazilian Driver's License.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralCardVerificationRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralCardVerificationResponse"/></returns>
+        public Task<RecognizeGeneralCardVerificationResponse> RecognizeGeneralCardVerification(RecognizeGeneralCardVerificationRequest req)
+        {
+            return InternalRequestAsync<RecognizeGeneralCardVerificationResponse>(req, "RecognizeGeneralCardVerification");
+        }
+
+        /// <summary>
+        /// This API performs unified verification on images of various card types worldwide. It supports automatic card type classification, field recognition, quality check, tampering (PS) detection, copy detection, recapture detection, format validation, and information consistency check. Candidate card types and check items can be flexibly combined.
+        /// The following 20 document types are currently supported: Mainland China ID Card, Passport, Thai ID Card, Malaysian ID Card, Indonesian ID Card, Singapore ID Card, Philippine Driver's License, Philippine SSS ID, Philippine PRC ID, Philippine Postal ID Card, Philippine UMID, Philippine Voter ID, Philippine TIN Card, Philippine National ID, Philippine Health Card, Taiwan (China) ID Card, Vietnamese ID Card, Myanmar Driver's License, Brazilian ID Card, and Brazilian Driver's License.
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeGeneralCardVerificationRequest"/></param>
+        /// <returns><see cref="RecognizeGeneralCardVerificationResponse"/></returns>
+        public RecognizeGeneralCardVerificationResponse RecognizeGeneralCardVerificationSync(RecognizeGeneralCardVerificationRequest req)
+        {
+            return InternalRequestAsync<RecognizeGeneralCardVerificationResponse>(req, "RecognizeGeneralCardVerification")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

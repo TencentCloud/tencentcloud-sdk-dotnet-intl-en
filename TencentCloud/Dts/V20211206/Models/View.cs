@@ -25,14 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// View name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// View name.
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// Reserved field. Currently, a view cannot be renamed. Note: This field may return null, indicating that no valid values can be obtained.
+        /// Reserved field. Currently, view renaming is not supported.
         /// </summary>
         [JsonProperty("NewViewName")]
         public string NewViewName{ get; set; }

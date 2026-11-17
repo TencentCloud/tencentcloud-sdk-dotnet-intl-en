@@ -28,7 +28,7 @@ namespace TencentCloud.Vod.V20180717
 
        private const string endpoint = "vod.intl.tencentcloudapi.com";
        private const string version = "2018-07-17";
-       private const string sdkVersion = "SDK_NET_3.0.1426";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -2365,6 +2365,27 @@ namespace TencentCloud.Vod.V20180717
         public DescribeAigcUsageDataResponse DescribeAigcUsageDataSync(DescribeAigcUsageDataRequest req)
         {
             return InternalRequestAsync<DescribeAigcUsageDataResponse>(req, "DescribeAigcUsageData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query AIGC allowlist settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeAigcWhitelistResponse"/></returns>
+        public Task<DescribeAigcWhitelistResponse> DescribeAigcWhitelist(DescribeAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcWhitelistResponse>(req, "DescribeAigcWhitelist");
+        }
+
+        /// <summary>
+        /// This API is used to query AIGC allowlist settings.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAigcWhitelistRequest"/></param>
+        /// <returns><see cref="DescribeAigcWhitelistResponse"/></returns>
+        public DescribeAigcWhitelistResponse DescribeAigcWhitelistSync(DescribeAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<DescribeAigcWhitelistResponse>(req, "DescribeAigcWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -5540,6 +5561,27 @@ namespace TencentCloud.Vod.V20180717
         public SearchMediaBySemanticsResponse SearchMediaBySemanticsSync(SearchMediaBySemanticsRequest req)
         {
             return InternalRequestAsync<SearchMediaBySemanticsResponse>(req, "SearchMediaBySemantics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify AIGC allowlist settings.
+        /// </summary>
+        /// <param name="req"><see cref="SetAigcWhitelistRequest"/></param>
+        /// <returns><see cref="SetAigcWhitelistResponse"/></returns>
+        public Task<SetAigcWhitelistResponse> SetAigcWhitelist(SetAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<SetAigcWhitelistResponse>(req, "SetAigcWhitelist");
+        }
+
+        /// <summary>
+        /// This API is used to modify AIGC allowlist settings.
+        /// </summary>
+        /// <param name="req"><see cref="SetAigcWhitelistRequest"/></param>
+        /// <returns><see cref="SetAigcWhitelistResponse"/></returns>
+        public SetAigcWhitelistResponse SetAigcWhitelistSync(SetAigcWhitelistRequest req)
+        {
+            return InternalRequestAsync<SetAigcWhitelistResponse>(req, "SetAigcWhitelist")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Vulnerability ID to be repaired</p>
+        /// <p>ID of the repaired vulnerability</p>
         /// </summary>
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
         /// <summary>
-        /// <p>Patch ID of the fixed KB</p>
+        /// <p>KB patch ID repaired</p>
         /// </summary>
         [JsonProperty("KBId")]
         public long? KBId{ get; set; }
@@ -73,19 +73,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string VulName{ get; set; }
 
         /// <summary>
-        /// <p>Execution status<br>Enumeration value:<br>0: Initial state<br>1: Task issued<br>11: Client confirmed<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failure<br>6: Unsupported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
+        /// <p>Execution status<br>Enumeration values:<br>0: Initial status<br>1: Task issued<br>11: Confirmed by client<br>2: Repair completed<br>3: Client offline<br>4: Timeout<br>5: Failed<br>6: Not supported<br>9: Waiting for snapshot creation<br>10: Snapshot creation failed</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial state</li><li>1: repair successful</li><li>2: fix failure</li><li>3: fix</li></ul>
+        /// <p>Fix result</p><p>Enumeration values:</p><ul><li>0: initial status</li><li>1: successful fix</li><li>2: fix failure</li><li>3: in remediation</li></ul>
         /// </summary>
         [JsonProperty("FixStatus")]
         public long? FixStatus{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot status<br>Enumeration value:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
+        /// <p>Snapshot status<br>Enumeration values:<br>-1: No need to create a snapshot<br>0: Not started<br>1: In progress<br>2: Completed<br>3: Creation failed</p>
         /// </summary>
         [JsonProperty("SnapshotStatus")]
         public long? SnapshotStatus{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string ExceptionMessage{ get; set; }
 
         /// <summary>
-        /// <p>Repair startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+        /// <p>Recovery startup time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -121,7 +121,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string SnapshotExpireTime{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot creation failure reason (available when SnapshotStatus=3)</p>
+        /// <p>Snapshot creation failure reason (valid when SnapshotStatus=3)</p>
         /// </summary>
         [JsonProperty("SnapshotFailReason")]
         public string SnapshotFailReason{ get; set; }

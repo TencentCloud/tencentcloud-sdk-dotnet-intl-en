@@ -25,7 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Billing mode. Valid values: `PrePay` (monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
+        /// Billing mode. Valid values: `PrePay` (yearly/monthly subscription); `PostPay` (pay-as-you-go). Currently, DTS at Tencent Cloud International is free of charge.
         /// </summary>
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Specification{ get; set; }
 
         /// <summary>
-        /// 
+        /// Purchase duration (in months); this configuration is applicable only when PayMode is set to 'PrePay'. The default value is 1 month, and the valid range is [1, 100].
         /// </summary>
         [JsonProperty("TimeSpan")]
         public ulong? TimeSpan{ get; set; }

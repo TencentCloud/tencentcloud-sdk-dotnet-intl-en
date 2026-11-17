@@ -85,7 +85,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+        /// Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
@@ -153,7 +153,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public SubscribeKafkaConfig KafkaConfig{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscribe to version information for the built-in Kafka
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
@@ -198,25 +198,25 @@ namespace TencentCloud.Dts.V20211206.Models
         public KeyValuePairOption[] ExtraAttr{ get; set; }
 
         /// <summary>
-        /// 
+        /// Data subscription version; currently supports Kafka and KafkaPro (Professional Edition).
         /// </summary>
         [JsonProperty("SubscribeVersion")]
         public string SubscribeVersion{ get; set; }
 
         /// <summary>
-        /// 
+        /// VPC where the consumer-side address is located
         /// </summary>
         [JsonProperty("ConsumerVpcId")]
         public string ConsumerVpcId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subnet where the consumer-side address is located
         /// </summary>
         [JsonProperty("ConsumerSubnetId")]
         public string ConsumerSubnetId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscribe to instance specifications
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }

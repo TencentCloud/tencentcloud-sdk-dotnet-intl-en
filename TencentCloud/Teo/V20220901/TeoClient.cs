@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1426";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -3338,6 +3338,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to query the time series data of edge function analysis. Note that the data queried by this API has a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingFunctionAnalysisDataResponse"/></returns>
+        public Task<DescribeTimingFunctionAnalysisDataResponse> DescribeTimingFunctionAnalysisData(DescribeTimingFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingFunctionAnalysisDataResponse>(req, "DescribeTimingFunctionAnalysisData");
+        }
+
+        /// <summary>
+        /// This API is used to query the time series data of edge function analysis. Note that the data queried by this API has a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingFunctionAnalysisDataResponse"/></returns>
+        public DescribeTimingFunctionAnalysisDataResponse DescribeTimingFunctionAnalysisDataSync(DescribeTimingFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTimingFunctionAnalysisDataResponse>(req, "DescribeTimingFunctionAnalysisData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// <p>This API is used to query time series monitoring data for L4 proxy instences.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
@@ -3426,6 +3447,27 @@ namespace TencentCloud.Teo.V20220901
         public DescribeTimingL7OriginPullDataResponse DescribeTimingL7OriginPullDataSync(DescribeTimingL7OriginPullDataRequest req)
         {
             return InternalRequestAsync<DescribeTimingL7OriginPullDataResponse>(req, "DescribeTimingL7OriginPullData")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the topN data of Edge Functions by a specified dimension. Note that the data returned by this API has a delay of about 10 minutes. We recommend that you query the data generated at least 10 minutes before the current time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopFunctionAnalysisDataResponse"/></returns>
+        public Task<DescribeTopFunctionAnalysisDataResponse> DescribeTopFunctionAnalysisData(DescribeTopFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTopFunctionAnalysisDataResponse>(req, "DescribeTopFunctionAnalysisData");
+        }
+
+        /// <summary>
+        /// This API is used to query the topN data of Edge Functions by a specified dimension. Note that the data returned by this API has a delay of about 10 minutes. We recommend that you query the data generated at least 10 minutes before the current time.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopFunctionAnalysisDataRequest"/></param>
+        /// <returns><see cref="DescribeTopFunctionAnalysisDataResponse"/></returns>
+        public DescribeTopFunctionAnalysisDataResponse DescribeTopFunctionAnalysisDataSync(DescribeTopFunctionAnalysisDataRequest req)
+        {
+            return InternalRequestAsync<DescribeTopFunctionAnalysisDataResponse>(req, "DescribeTopFunctionAnalysisData")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1208</VersionPrefix>
+    <VersionPrefix>3.0.1427</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,9 +56,12 @@
     <Compile Include="V20180125\Models\AddCustomRuleResponse.cs" />
     <Compile Include="V20180125\Models\AddCustomWhiteRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddCustomWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\AddLLMSdkAccessResponse.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionRequest.cs" />
     <Compile Include="V20180125\Models\AddSpartaProtectionResponse.cs" />
     <Compile Include="V20180125\Models\ApiPkg.cs" />
+    <Compile Include="V20180125\Models\Area.cs" />
     <Compile Include="V20180125\Models\AttackLogInfo.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlData.cs" />
     <Compile Include="V20180125\Models\BatchIpAccessControlItem.cs" />
@@ -69,6 +72,7 @@
     <Compile Include="V20180125\Models\CCRuleItems.cs" />
     <Compile Include="V20180125\Models\CCRuleLists.cs" />
     <Compile Include="V20180125\Models\CacheUrlItems.cs" />
+    <Compile Include="V20180125\Models\CategoryGroup.cs" />
     <Compile Include="V20180125\Models\ClbDomainsInfo.cs" />
     <Compile Include="V20180125\Models\ClbObject.cs" />
     <Compile Include="V20180125\Models\ClbWafRegionItem.cs" />
@@ -98,6 +102,12 @@
     <Compile Include="V20180125\Models\DeleteHostResponse.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Request.cs" />
     <Compile Include="V20180125\Models\DeleteIpAccessControlV2Response.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMContentRuleRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMContentRuleResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteLLMSdkAccessResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DeleteOwaspWhiteRuleRequest.cs" />
@@ -155,6 +165,22 @@
     <Compile Include="V20180125\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentRuleListRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentRuleListResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentSecCheckRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMContentSecCheckResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMHourBillDetailRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMHourBillDetailResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMSdkAccessResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafDLPRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafDLPRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafProtectRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafProtectRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafToolCallRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeLLMWafToolCallRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\DescribeModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\DescribeObjectsRequest.cs" />
@@ -175,6 +201,8 @@
     <Compile Include="V20180125\Models\DescribeRuleLimitResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSessionRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeSkillSecScanResultRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeSkillSecScanResultResponse.cs" />
     <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoRequest.cs" />
     <Compile Include="V20180125\Models\DescribeSpartaProtectionInfoResponse.cs" />
     <Compile Include="V20180125\Models\DescribeTlsVersionRequest.cs" />
@@ -196,6 +224,8 @@
     <Compile Include="V20180125\Models\DomainRuleId.cs" />
     <Compile Include="V20180125\Models\DomainURI.cs" />
     <Compile Include="V20180125\Models\DomainsPartInfo.cs" />
+    <Compile Include="V20180125\Models\ExportLLMKeywordLibRequest.cs" />
+    <Compile Include="V20180125\Models\ExportLLMKeywordLibResponse.cs" />
     <Compile Include="V20180125\Models\FiltersItemNew.cs" />
     <Compile Include="V20180125\Models\FindAllDomainDetail.cs" />
     <Compile Include="V20180125\Models\FraudPkg.cs" />
@@ -215,14 +245,26 @@
     <Compile Include="V20180125\Models\HostRecord.cs" />
     <Compile Include="V20180125\Models\HostStatus.cs" />
     <Compile Include="V20180125\Models\HybridPkg.cs" />
+    <Compile Include="V20180125\Models\ImageResult.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ImportIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\InstanceInfo.cs" />
+    <Compile Include="V20180125\Models\IntentContent.cs" />
+    <Compile Include="V20180125\Models\IntentDetectResult.cs" />
     <Compile Include="V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
     <Compile Include="V20180125\Models\IpAccessControlParam.cs" />
     <Compile Include="V20180125\Models\JobDateTime.cs" />
     <Compile Include="V20180125\Models\KVInt.cs" />
+    <Compile Include="V20180125\Models\KeyWordInfo.cs" />
+    <Compile Include="V20180125\Models\LLMBillItemFee.cs" />
+    <Compile Include="V20180125\Models\LLMDetectResult.cs" />
+    <Compile Include="V20180125\Models\LLMHourBillDetailItem.cs" />
+    <Compile Include="V20180125\Models\LLMHourBillTrendItem.cs" />
+    <Compile Include="V20180125\Models\LLMKeywordLibrary.cs" />
+    <Compile Include="V20180125\Models\LLMOptionsItem.cs" />
+    <Compile Include="V20180125\Models\LLMSdkAccessItem.cs" />
+    <Compile Include="V20180125\Models\LLMSensitiveValueLevel.cs" />
     <Compile Include="V20180125\Models\LoadBalancer.cs" />
     <Compile Include="V20180125\Models\LoadBalancerPackageNew.cs" />
     <Compile Include="V20180125\Models\LogHistogramInfo.cs" />
@@ -273,6 +315,22 @@
     <Compile Include="V20180125\Models\ModifyInstanceRenewFlagResponse.cs" />
     <Compile Include="V20180125\Models\ModifyIpAccessControlRequest.cs" />
     <Compile Include="V20180125\Models\ModifyIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMContentRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMKeywordLibraryRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMKeywordLibraryResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMSdkAccessRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMSdkAccessResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafDLPRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafDLPRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafProtectRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafProtectRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafToolCallRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyLLMWafToolCallRuleResponse.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyModuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ModifyObjectRequest.cs" />
@@ -306,17 +364,26 @@
     <Compile Include="V20180125\Models\PiechartItem.cs" />
     <Compile Include="V20180125\Models\PortInfo.cs" />
     <Compile Include="V20180125\Models\PortItem.cs" />
+    <Compile Include="V20180125\Models\PromptDetectResult.cs" />
     <Compile Include="V20180125\Models\QPSPackageNew.cs" />
     <Compile Include="V20180125\Models\QpsData.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultRequest.cs" />
     <Compile Include="V20180125\Models\RefreshAccessCheckResultResponse.cs" />
     <Compile Include="V20180125\Models\ReqUserRule.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\RuleDetail.cs" />
+    <Compile Include="V20180125\Models\RuleItem.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAttackLogResponse.cs" />
     <Compile Include="V20180125\Models\SearchItem.cs" />
     <Compile Include="V20180125\Models\SessionData.cs" />
     <Compile Include="V20180125\Models\SessionItem.cs" />
+    <Compile Include="V20180125\Models\SkillRuleCatalogItem.cs" />
+    <Compile Include="V20180125\Models\SkillScanCapabilityTag.cs" />
+    <Compile Include="V20180125\Models\SkillScanItem.cs" />
+    <Compile Include="V20180125\Models\SkillScanQueryData.cs" />
+    <Compile Include="V20180125\Models\SkillScanRuleHit.cs" />
+    <Compile Include="V20180125\Models\SkillScanUploadData.cs" />
     <Compile Include="V20180125\Models\SpartaProtectionPort.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
     <Compile Include="V20180125\Models\StrategyForAntiInfoLeak.cs" />
@@ -326,11 +393,17 @@
     <Compile Include="V20180125\Models\TLSVersion.cs" />
     <Compile Include="V20180125\Models\TargetEntity.cs" />
     <Compile Include="V20180125\Models\TimedJob.cs" />
+    <Compile Include="V20180125\Models\ToolCallResult.cs" />
+    <Compile Include="V20180125\Models\UploadSkillSecScanRequest.cs" />
+    <Compile Include="V20180125\Models\UploadSkillSecScanResponse.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleRequest.cs" />
     <Compile Include="V20180125\Models\UpsertCCRuleResponse.cs" />
     <Compile Include="V20180125\Models\UpsertSessionRequest.cs" />
     <Compile Include="V20180125\Models\UpsertSessionResponse.cs" />
+    <Compile Include="V20180125\Models\UrlDetectResult.cs" />
+    <Compile Include="V20180125\Models\UrlHitInfo.cs" />
     <Compile Include="V20180125\Models\UserDomainInfo.cs" />
+    <Compile Include="V20180125\Models\ValueLevel.cs" />
     <Compile Include="V20180125\Models\VipInfo.cs" />
     <Compile Include="V20180125\Models\WafRuleLimit.cs" />
     <Compile Include="V20180125\Models\WebshellStatus.cs" />

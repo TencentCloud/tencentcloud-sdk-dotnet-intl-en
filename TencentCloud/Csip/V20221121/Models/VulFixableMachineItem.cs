@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Vulnerability ID list, grouped by SupportAutoFix dimension: repairable vulnerability IDs when SupportAutoFix=1, non-repairable vulnerability IDs when SupportAutoFix=0</p>
+        /// <p>Vulnerability ID list, grouped by the SupportAutoFix dimension: When SupportAutoFix=1, it is a repairable vulnerability ID; when SupportAutoFix=0, it is a non-repairable vulnerability ID</p>
         /// </summary>
         [JsonProperty("VulIds")]
         public long?[] VulIds{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MachineIp{ get; set; }
 
         /// <summary>
-        /// <p>public IP address</p>
+        /// <p>Public IP Address</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
         /// <summary>
-        /// <p>OS type<br>Enumeration value:<br>linux: Linux operating system<br>windows: Windows operating system</p>
+        /// <p>Operating system type<br>Enumeration values:<br>linux: Linux operating system<br>windows: Windows operating system</p>
         /// </summary>
         [JsonProperty("OsType")]
         public string OsType{ get; set; }
 
         /// <summary>
-        /// <p>Operating system name.</p>
+        /// <p>OS name</p>
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MachineStatus{ get; set; }
 
         /// <summary>
-        /// <p>Is auto-repair supported<br>Enumeration value:<br>0: No support<br>1: Support</p>
+        /// <p>Is auto-repair supported<br>Enumeration values:<br>0: No support<br>1: Support</p>
         /// </summary>
         [JsonProperty("SupportAutoFix")]
         public long? SupportAutoFix{ get; set; }
 
         /// <summary>
-        /// <p>Current remediation status<br>Enumeration value:<br>0: Unfixed<br>1: In remediation<br>2: Fix failure<br>3: Repair successful<br>4: Timeout</p>
+        /// <p>Current remediation status<br>Enumeration values:<br>0: unfixed<br>1: in remediation<br>2: fix failed<br>3: successful fix<br>4: remediation timeout</p>
         /// </summary>
         [JsonProperty("FixStatus")]
         public long? FixStatus{ get; set; }
@@ -97,7 +97,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string NotFixableReason{ get; set; }
 
         /// <summary>
-        /// <p>Fix command list, returned when SupportAutoFix is 1</p>
+        /// <p>List of fix commands. Returned when SupportAutoFix is 1</p>
         /// </summary>
         [JsonProperty("FixCommands")]
         public string[] FixCommands{ get; set; }
@@ -115,13 +115,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public MiniTagItem[] TagItems{ get; set; }
 
         /// <summary>
-        /// <p>Account AppId</p>
+        /// <p>Associated account AppId</p>
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }
 
         /// <summary>
-        /// <p>Paid edition info<br>Enumeration value:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
+        /// <p>Paid edition info<br>Enumeration values:<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition</p>
         /// </summary>
         [JsonProperty("PayVersion")]
         public string PayVersion{ get; set; }

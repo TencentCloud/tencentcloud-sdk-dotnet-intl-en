@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The query dimension value.
+        /// Query the dimension value.
         /// </summary>
         [JsonProperty("TypeKey")]
         public string TypeKey{ get; set; }
 
         /// <summary>
-        /// Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+        /// Detailed time series data of the <code>Integer</code> type. If the value type of the query metric is <code>Integer</code>, the corresponding time series data will be returned in this field.<br> **Note**: If the value type of the query metric is unclear, data will be returned in this field by default.
         /// </summary>
         [JsonProperty("TypeValue")]
         public TimingTypeValue[] TypeValue{ get; set; }
 
         /// <summary>
-        /// Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+        /// Detailed time series data of <code>Float</code> type. For metrics whose query metric value type is <code>Float</code>, the corresponding time series data is returned in this field.
         /// </summary>
         [JsonProperty("FloatTypeValue")]
         public FloatTimingTypeValue[] FloatTypeValue{ get; set; }

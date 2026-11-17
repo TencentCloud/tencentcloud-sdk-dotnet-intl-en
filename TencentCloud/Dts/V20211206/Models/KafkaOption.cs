@@ -25,28 +25,34 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Data type delivered to Kafka, such as Avro, Json, canal-pb, canal-json
+        /// <p>Data type delivered to kafka, such as Avro, Json, canal-pb, canal-Json, debezium</p>
         /// </summary>
         [JsonProperty("DataType")]
         public string DataType{ get; set; }
 
         /// <summary>
-        /// Topic sync policy, such as `Single` (deliver all data to a single topic), `Multi` (deliver data to multiple custom topics).
+        /// <p>Synchronize topic policies, for example, Single (Deliver to a single topic), Multi (Custom topic name)</p>
         /// </summary>
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
         /// <summary>
-        /// Topic for DDL storage
+        /// <p>topic used to store ddl</p>
         /// </summary>
         [JsonProperty("DDLTopicName")]
         public string DDLTopicName{ get; set; }
 
         /// <summary>
-        /// Topic description
+        /// <p>Description of single topic and custom topic</p>
         /// </summary>
         [JsonProperty("TopicRules")]
         public TopicRule[] TopicRules{ get; set; }
+
+        /// <summary>
+        /// <p>Additional information, for specific data types, additional parameters can be set. For example, for Canal-compatible feature support: "canalOfficialFormat":"on" means to enable the Canal-compatible feature, not included by default. For large message skipping feature support: "skipLargeMessage":"on" means to enable skipping large messages, not included by default; when enabled, "maxMessageSizeMB" must be simultaneously set to a positive integer string from 1 to 100, representing the max message size threshold (MB), messages exceeding this size will be skipped, not included by default.</p>
+        /// </summary>
+        [JsonProperty("DataOption")]
+        public KeyValuePairOption[] DataOption{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "DDLTopicName", this.DDLTopicName);
             this.SetParamArrayObj(map, prefix + "TopicRules.", this.TopicRules);
+            this.SetParamArrayObj(map, prefix + "DataOption.", this.DataOption);
         }
     }
 }

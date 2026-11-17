@@ -31,7 +31,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// cache hit version
+        /// Hit version
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }

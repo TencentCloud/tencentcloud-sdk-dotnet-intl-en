@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// Business Error Codes.
         /// -When the return value is "Success", it indicates that liveness detection and face comparison passed. Determined to be the same person.
         /// -When the return value is "FailedOperation.CompareLowSimilarity", it indicates that liveness detection passed, but face comparison similarity is below 70. Determined not to be the same person.
-        /// -For other error cases, please refer to [Liveness Face Comparison (API only) Error Codes](https://www.tencentcloud.com/zh/document/product/1061/55390?lang=zh&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
+        /// -For other error cases, please refer to [Selfie Verification (Pure API) Error Codes](https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#97df7537-87fe-4266-87e9-02c816d41ee2)
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

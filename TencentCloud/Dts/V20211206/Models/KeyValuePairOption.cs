@@ -25,15 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Option key
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Option key.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Option value
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Option value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

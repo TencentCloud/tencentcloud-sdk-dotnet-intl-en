@@ -39,7 +39,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string JobName{ get; set; }
 
         /// <summary>
-        /// Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
+        /// Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (yearly/monthly subscription).
         /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("PayMode")]
@@ -256,7 +256,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string OfflineTime{ get; set; }
 
         /// <summary>
-        /// 
+        /// Dynamically modify objects, such as changing the status of a task.
         /// </summary>
         [JsonProperty("OptObjStatus")]
         public string OptObjStatus{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The query dimension value.
+        /// Dimension value to query.
         /// </summary>
         [JsonProperty("TypeKey")]
         public string TypeKey{ get; set; }
 
         /// <summary>
-        /// Top data rankings
+        /// top data ranking.
         /// </summary>
         [JsonProperty("DetailData")]
         public TopDetailData[] DetailData{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.intl.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1396";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -2310,7 +2310,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to access Kafka protocol consumption information.
+        /// Accesses Kafka protocol consumption information
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
         /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>
@@ -2320,7 +2320,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// This API is used to access Kafka protocol consumption information.
+        /// Accesses Kafka protocol consumption information
         /// </summary>
         /// <param name="req"><see cref="DescribeKafkaConsumerRequest"/></param>
         /// <returns><see cref="DescribeKafkaConsumerResponse"/></returns>

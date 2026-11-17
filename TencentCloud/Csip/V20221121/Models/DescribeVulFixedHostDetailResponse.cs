@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string CveId{ get; set; }
 
         /// <summary>
-        /// <p>Vulnerability type<br>Enumeration value:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
+        /// <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability</p>
         /// </summary>
         [JsonProperty("VulCategory")]
         public string VulCategory{ get; set; }
 
         /// <summary>
-        /// <p>Repair completion time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+        /// <p>Repair completed time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
         /// </summary>
         [JsonProperty("FixTime")]
         public string FixTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// <p>Public IP of the server</p>
+        /// <p>Public IP of the Server</p>
         /// </summary>
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PrivateIp{ get; set; }
 
         /// <summary>
-        /// <p>Associated component & path detail list</p>
+        /// <p>Associated component &amp; path detail list</p>
         /// </summary>
         [JsonProperty("ComponentDetails")]
         public ComponentDetailItem[] ComponentDetails{ get; set; }
 
         /// <summary>
-        /// <p>Total number of associated components & paths</p>
+        /// <p>Total number of associated components &amp; paths</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

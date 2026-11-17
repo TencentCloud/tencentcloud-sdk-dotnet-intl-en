@@ -25,52 +25,40 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// Consumption data format. Valid values: 0 (original content) and 1 (JSON).
+        /// <p>Consumption data format. 0: Raw content; 1: JSON.</p>
         /// </summary>
         [JsonProperty("Format")]
         public long? Format{ get; set; }
 
         /// <summary>
-        /// Whether to ship tag information
-        /// This parameter does not need to be set when `Format` is set to `0`.
+        /// <p>Whether to deliver TAG information<br>When Format is 0, this field does not need to be assigned a value</p>
         /// </summary>
         [JsonProperty("EnableTag")]
         public bool? EnableTag{ get; set; }
 
         /// <summary>
-        /// Metadata information list. Valid values: \_\_SOURCE\_\_, \_\_FILENAME\_\_,
-        /// \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
-        /// This parameter does not need to be set when `Format` is set to `0`.
+        /// <p>Metadata information list. Valid values: __SOURCE__, __FILENAME__<br>, __TIMESTAMP__, __HOSTNAME__, __PKGID__<br>When Format is 0, this field does not need to be assigned a value</p>
         /// </summary>
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
 
         /// <summary>
-        /// tag data processing method: 1: Not Tiled (default value); 2: Tile.
-        /// 
-        /// Untiled example:
-        /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-        /// No tiling: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-        /// 
-        /// Tiled example:
-        /// TAG information: `{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
-        /// Tiled: `{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
+        /// <p>Tag data processing method. 1: Not flattened (default); 2: Flattened.</p><p>Not flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Not flattened: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code></p><p>Flattened example:<br>TAG information: <code>{&quot;__TAG__&quot;:{&quot;fieldA&quot;:200,&quot;fieldB&quot;:&quot;text&quot;}}</code><br>Flattened: <code>{&quot;__TAG__.fieldA&quot;:200,&quot;__TAG__.fieldB&quot;:&quot;text&quot;}</code></p>
         /// </summary>
         [JsonProperty("TagTransaction")]
         public long? TagTransaction{ get; set; }
 
         /// <summary>
-        /// JSON data format:
-        /// 1: Not escaped (default format)
-        /// 2: Escaped
-        /// 
-        /// Deliver in JSON format.JsonType is 1: Consistent with the original log, not escaped. Example:
-        /// Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-        /// Deliver to CKafka: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`JsonType is 2: escaped. Example:Original log: `{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
-        /// Deliver to CKafka: `{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
+        /// <p>Consumption data Json format:<br>1: Not escaped (default format)<br>2: Escaped</p><p>Delivery Json format.<br>When JsonType is 1: Consistent with the original log, not escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code></p><p>When JsonType is 2: Escaped. Example:<br>Original log: <code>{&quot;a&quot;:&quot;aa&quot;, &quot;b&quot;:{&quot;b1&quot;:&quot;b1b1&quot;, &quot;c1&quot;:&quot;c1c1&quot;}}</code><br>Delivered to Ckafka: <code>{&quot;a&quot;:&quot;aa&quot;,&quot;b&quot;:&quot;{\&quot;b1\&quot;:\&quot;b1b1\&quot;, \&quot;c1\&quot;:\&quot;c1c1\&quot;}&quot;}</code></p>
         /// </summary>
         [JsonProperty("JsonType")]
         public long? JsonType{ get; set; }
+
+        /// <summary>
+        /// <p>Switch for automatic conversion of numeric types</p><p>Valid values:</p><ul><li>true: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure are automatically converted to numeric types (int/float).</li><li>false: Numeric strings (such as &quot;123&quot;) in the first-level values of the JSON structure remain strings.</li></ul><p>Default value: false</p>
+        /// </summary>
+        [JsonProperty("AutoConvertNumber")]
+        public bool? AutoConvertNumber{ get; set; }
 
 
         /// <summary>
@@ -83,6 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
             this.SetParamSimple(map, prefix + "TagTransaction", this.TagTransaction);
             this.SetParamSimple(map, prefix + "JsonType", this.JsonType);
+            this.SetParamSimple(map, prefix + "AutoConvertNumber", this.AutoConvertNumber);
         }
     }
 }

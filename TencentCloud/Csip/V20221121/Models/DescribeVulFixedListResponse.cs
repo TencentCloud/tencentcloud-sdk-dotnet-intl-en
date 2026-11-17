@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>List of fixed vulnerabilities</p>
+        /// <p>Fixed vulnerability list</p>
         /// </summary>
         [JsonProperty("Data")]
         public VulFixedItem[] Data{ get; set; }

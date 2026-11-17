@@ -25,31 +25,43 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <p>log topic id</p><ul><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">Get Log Topic List</a>.</li><li>Obtain the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">Create Log Topic</a>.</li></ul>
+        /// <p>Log topic Id.</p><ul><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56454?from_cn_redirect=1">getting the log topic list</a>.</li><li>Get the log topic Id through <a href="https://www.tencentcloud.com/document/product/614/56456?from_cn_redirect=1">creating a log topic</a>.</li></ul>
         /// </summary>
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }
 
         /// <summary>
-        /// <p>Compression mode. 0: No compression; 2: Use Snappy compression; 3: Use LZ4 compression</p>
+        /// <p>Compression method. 0: No compression; 2: Snappy compression; 3: LZ4 compression</p>
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
         /// <summary>
-        /// <p>kafka protocol consumption data format</p>
+        /// <p>kafka consumption data format</p>
         /// </summary>
         [JsonProperty("ConsumerContent")]
         public KafkaConsumerContent ConsumerContent{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable the delivery service log. 1: Disabled, 2: Enabled.</p>
+        /// <p>Whether to enable delivery service logs. 1: Disable, 2: Enable.</p>
         /// </summary>
         [JsonProperty("HasServicesLog")]
         public ulong? HasServicesLog{ get; set; }
 
         /// <summary>
-        /// <p>Range type of consumption, 0: latest, 1: history + latest</p>
+        /// <p>Public network consumption switch.</p>
+        /// </summary>
+        [JsonProperty("EnableInternetConsume")]
+        public bool? EnableInternetConsume{ get; set; }
+
+        /// <summary>
+        /// <p>Private network consumption switch.</p>
+        /// </summary>
+        [JsonProperty("EnableIntranetConsume")]
+        public bool? EnableIntranetConsume{ get; set; }
+
+        /// <summary>
+        /// <p>Consumption scope type. 0: Latest, 1: Historical + latest</p>
         /// </summary>
         [JsonProperty("ScopeType")]
         public ulong? ScopeType{ get; set; }
@@ -64,6 +76,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
             this.SetParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+            this.SetParamSimple(map, prefix + "EnableInternetConsume", this.EnableInternetConsume);
+            this.SetParamSimple(map, prefix + "EnableIntranetConsume", this.EnableIntranetConsume);
             this.SetParamSimple(map, prefix + "ScopeType", this.ScopeType);
         }
     }

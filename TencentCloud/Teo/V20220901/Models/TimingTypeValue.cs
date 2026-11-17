@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Sum.
+        /// Data and.
         /// </summary>
         [JsonProperty("Sum")]
         public long? Sum{ get; set; }
 
         /// <summary>
-        /// The maximum value.
+        /// Maximum value.
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
 
         /// <summary>
-        /// The average value.
+        /// Mean.
         /// </summary>
         [JsonProperty("Avg")]
         public long? Avg{ get; set; }
@@ -50,7 +50,6 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Details.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Detail")]
         public TimingDataItem[] Detail{ get; set; }

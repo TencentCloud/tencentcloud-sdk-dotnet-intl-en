@@ -25,14 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Column nameNote: This field may return null, indicating that no valid values can be obtained.
+        /// Column name
         /// </summary>
         [JsonProperty("ColumnName")]
         public string ColumnName{ get; set; }
 
         /// <summary>
-        /// New column name
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// New column name.
         /// </summary>
         [JsonProperty("NewColumnName")]
         public string NewColumnName{ get; set; }

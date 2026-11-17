@@ -62,7 +62,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to monthly subscription).
+        /// Data subscription lifecycle status. Valid values: normal (normal), isolating (isolating), isolated (isolated), offlining (offlining), post2PrePayIng (changing from pay-as-you-go to yearly/monthly subscription).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string IsolateTime{ get; set; }
 
         /// <summary>
-        /// Expiration time for monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Expiration time for yearly/monthly subscription tasks, the format is: Y-m-d h:m:s. Default time: 0000-00-00 00:00:00.Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
@@ -152,6 +152,18 @@ namespace TencentCloud.Dts.V20211206.Models
         [JsonProperty("Errors")]
         public SubsErr[] Errors{ get; set; }
 
+        /// <summary>
+        /// Subscribe to instance specifications
+        /// </summary>
+        [JsonProperty("InstanceClass")]
+        public string InstanceClass{ get; set; }
+
+        /// <summary>
+        /// Routing Phase for the New Version of Subscription Consumption
+        /// </summary>
+        [JsonProperty("ConsumerRoutePhase")]
+        public string ConsumerRoutePhase{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +191,8 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
+            this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
+            this.SetParamSimple(map, prefix + "ConsumerRoutePhase", this.ConsumerRoutePhase);
         }
     }
 }

@@ -25,30 +25,34 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Sync object type. Valid value: `Partial` (Partial objects). Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Sync object type Partial (partial objects)</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// Sync object, which is required if `Mode` is `Partial`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Sync object, not empty when Mode is Partial</p>
         /// </summary>
         [JsonProperty("Databases")]
         public Database[] Databases{ get; set; }
 
         /// <summary>
-        /// Advanced object types, such as function and procedure. Note: If you want to migrate and synchronize advanced objects, the corresponding advanced object type should be included in this configuration. When advanced objects need to be synchronized, the initialization type must include the structure initialization type, that is, the Options.InitType value of the task is Structure or Full.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Advanced object types, such as function and procedure. Note: If you need to migrate and synchronize advanced objects, this configuration should contain the corresponding advanced object type. When synchronization of advanced objects is required, the initialization type must contain the structure initialization type, that is, the field value of task Options.InitType must be Structure or Full.</p>
         /// </summary>
         [JsonProperty("AdvancedObjects")]
         public string[] AdvancedObjects{ get; set; }
 
         /// <summary>
-        /// A redundant field that specifies the online DDL type
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>This field is deprecated. For temporary table synchronization, use Objects.Databases[n].Tables[n].TmpTables to import.</p>
         /// </summary>
         [JsonProperty("OnlineDDL")]
         public OnlineDDL OnlineDDL{ get; set; }
+
+        /// <summary>
+        /// <p>Database/Table/View-level DML/DDL allowlist</p>
+        /// </summary>
+        [JsonProperty("DatabasesOpFilter")]
+        public DBOpFilter[] DatabasesOpFilter{ get; set; }
 
 
         /// <summary>
@@ -60,6 +64,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamArrayObj(map, prefix + "Databases.", this.Databases);
             this.SetParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
             this.SetParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
+            this.SetParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
         }
     }
 }

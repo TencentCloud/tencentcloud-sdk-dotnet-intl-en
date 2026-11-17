@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public float? Max{ get; set; }
 
         /// <summary>
-        /// Average.
+        /// Mean.
         /// </summary>
         [JsonProperty("Avg")]
         public float? Avg{ get; set; }

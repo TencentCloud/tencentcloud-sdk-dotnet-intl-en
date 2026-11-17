@@ -25,71 +25,118 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// The number of full export threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Currently effective number of threads for full export. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
         /// </summary>
         [JsonProperty("CurrentDumpThread")]
         public long? CurrentDumpThread{ get; set; }
 
         /// <summary>
-        /// The default number of full export threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The default number of threads for full export. This field is only meaningful in the output parameters.
         /// </summary>
         [JsonProperty("DefaultDumpThread")]
         public long? DefaultDumpThread{ get; set; }
 
         /// <summary>
-        /// The full export Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The currently effective Rps for full export. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.
         /// </summary>
         [JsonProperty("CurrentDumpRps")]
         public long? CurrentDumpRps{ get; set; }
 
         /// <summary>
-        /// The default full export Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The default Rps for full export. This field is only meaningful in the output parameters.
         /// </summary>
         [JsonProperty("DefaultDumpRps")]
         public long? DefaultDumpRps{ get; set; }
 
         /// <summary>
-        /// The number of full import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 16.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Currently effective number of threads for full import. You can adjust this field value when the task is configured. Note: If it is not set or set to 0, the current value is kept. The maximum value is 16.
         /// </summary>
         [JsonProperty("CurrentLoadThread")]
         public long? CurrentLoadThread{ get; set; }
 
         /// <summary>
-        /// The default number of full import threads. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The default number of threads for full import. This field is only meaningful in the output parameters.
         /// </summary>
         [JsonProperty("DefaultLoadThread")]
         public long? DefaultLoadThread{ get; set; }
 
         /// <summary>
-        /// The full import Rps currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 50,000,000.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The currently effective Rps for full import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 50000000.	
         /// </summary>
         [JsonProperty("CurrentLoadRps")]
         public long? CurrentLoadRps{ get; set; }
 
         /// <summary>
-        /// The default full import Rps. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Default full import Rps. This field is only meaningful in the output parameter.	
         /// </summary>
         [JsonProperty("DefaultLoadRps")]
         public long? DefaultLoadRps{ get; set; }
 
         /// <summary>
-        /// The number of incremental import threads currently in effect. The value of this field can be adjusted when configuring the task. Note: If it is not set or set to 0, it means the current value is maintained. The maximum value is 128.Note: This field may return null, indicating that no valid values can be obtained.
+        /// The currently effective number of threads for incremental import. You can adjust this field value when configuring the task. Note: If not set or set to 0, it indicates to keep the current value. The maximum value is 128.
         /// </summary>
         [JsonProperty("CurrentSinkerThread")]
         public long? CurrentSinkerThread{ get; set; }
 
         /// <summary>
-        /// The default number of incremental import threads. This field is only meaningful in the output parameter.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// The default number of threads for incremental import. This field is only meaningful in the output parameters.
         /// </summary>
         [JsonProperty("DefaultSinkerThread")]
         public long? DefaultSinkerThread{ get; set; }
 
         /// <summary>
-        /// enum:"no"/"yes", no: the user has not set a speed limit; yes: a speed limit has been set. This field is only meaningful in the output parameter.Note: This field may return null, indicating that no valid values can be obtained.
+        /// enum: "no"/"yes". no indicates that the user has not set a speed limit, while yes indicates that a speed limit has been set. This field is only meaningful in the output parameters.
         /// </summary>
         [JsonProperty("HasUserSetRateLimit")]
         public string HasUserSetRateLimit{ get; set; }
+
+        /// <summary>
+        /// Default full export BPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("DefaultDumpBps")]
+        public long? DefaultDumpBps{ get; set; }
+
+        /// <summary>
+        /// Incremental import RPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("CurrentSinkerRps")]
+        public long? CurrentSinkerRps{ get; set; }
+
+        /// <summary>
+        /// Default incremental import RPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("DefaultSinkerRps")]
+        public long? DefaultSinkerRps{ get; set; }
+
+        /// <summary>
+        /// Current import BPS. Currently, it is only used for Redis.
+        /// </summary>
+        [JsonProperty("CurrentLoadBps")]
+        public long? CurrentLoadBps{ get; set; }
+
+        /// <summary>
+        /// Number of shards in the target database. Currently, only used for Redis.
+        /// </summary>
+        [JsonProperty("CurrentDstShardCount")]
+        public long? CurrentDstShardCount{ get; set; }
+
+        /// <summary>
+        /// Full export BPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("CurrentDumpBps")]
+        public long? CurrentDumpBps{ get; set; }
+
+        /// <summary>
+        /// Incremental import BPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("CurrentSinkerBps")]
+        public long? CurrentSinkerBps{ get; set; }
+
+        /// <summary>
+        /// Default incremental import BPS, currently supported only for MongoDB links.
+        /// </summary>
+        [JsonProperty("DefaultSinkerBps")]
+        public long? DefaultSinkerBps{ get; set; }
 
 
         /// <summary>
@@ -108,6 +155,14 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "CurrentSinkerThread", this.CurrentSinkerThread);
             this.SetParamSimple(map, prefix + "DefaultSinkerThread", this.DefaultSinkerThread);
             this.SetParamSimple(map, prefix + "HasUserSetRateLimit", this.HasUserSetRateLimit);
+            this.SetParamSimple(map, prefix + "DefaultDumpBps", this.DefaultDumpBps);
+            this.SetParamSimple(map, prefix + "CurrentSinkerRps", this.CurrentSinkerRps);
+            this.SetParamSimple(map, prefix + "DefaultSinkerRps", this.DefaultSinkerRps);
+            this.SetParamSimple(map, prefix + "CurrentLoadBps", this.CurrentLoadBps);
+            this.SetParamSimple(map, prefix + "CurrentDstShardCount", this.CurrentDstShardCount);
+            this.SetParamSimple(map, prefix + "CurrentDumpBps", this.CurrentDumpBps);
+            this.SetParamSimple(map, prefix + "CurrentSinkerBps", this.CurrentSinkerBps);
+            this.SetParamSimple(map, prefix + "DefaultSinkerBps", this.DefaultSinkerBps);
         }
     }
 }

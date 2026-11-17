@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Repair task ID that needs to be retried</p>
+        /// <p>Repair task ID that needs to retry</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Specify the list of host instance IDs that need to retry. If not passed, retry all failed hosts.</p>
+        /// <p>Specify the instance ID list of the host that needs to retry. If not passed, retry all failed hosts.</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

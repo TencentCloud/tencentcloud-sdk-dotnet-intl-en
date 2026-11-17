@@ -25,37 +25,37 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Primary key ID of the fix task
+        /// Primary key ID of the repair task
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// Task ID, hash flag for interactive
+        /// Task ID, a hash flag for interaction.
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }
 
         /// <summary>
-        /// JobId, corresponding to the Task ID of the task system.
+        /// Task JobId, corresponding to the task ID in the task system.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// List of vulnerability IDs to be fixed
+        /// List of fixed vulnerability IDs
         /// </summary>
         [JsonProperty("VulIds")]
         public long?[] VulIds{ get; set; }
 
         /// <summary>
-        /// List of fixed KB patch IDs
+        /// List of repaired KB patch IDs
         /// </summary>
         [JsonProperty("KBIds")]
         public long?[] KBIds{ get; set; }
 
         /// <summary>
-        /// Repair the total number of assets
+        /// Total number of repaired assets
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
@@ -73,26 +73,26 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? FailCount{ get; set; }
 
         /// <summary>
-        /// Progress percentage of the repair
-        /// Valid values: [0, 100]
-        /// Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+        /// Repair progress percentage
+        /// Valid values: [0, 100].
+        /// Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Number of users in the fix task
+        /// Number of users for fix tasks
         /// </summary>
         [JsonProperty("TargetAppIdsCount")]
         public long? TargetAppIdsCount{ get; set; }
 
         /// <summary>
         /// Remediation status
-        /// Enumeration value:
+        /// Enumeration values:
         /// 0: initialization
         /// 1: In remediation
         /// 2: Repair successful
-        /// 3: Partially fix failed
+        /// 3: Partial fix failure
         /// 4: All fix failures
         /// 5: Stop repair
         /// </summary>
@@ -107,38 +107,38 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// Fix startup time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Repair startup time
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Fix end time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Repair end time
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
         /// Record creation time.
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// List of vulnerability names to be fixed, making it easy to show directly on the list page
+        /// List of names of repaired vulnerabilities, making it easy to show directly on the list page
         /// </summary>
         [JsonProperty("VulNames")]
         public string[] VulNames{ get; set; }
 
         /// <summary>
         /// Vulnerability Type List
-        /// Enumeration values:
+        /// Enumeration value:
         /// LINUX: Linux software vulnerability
-        /// WINDOWS: Windows system patch vulnerability
-        /// WEB_CMS: Web-CMS vulnerabilities
+        /// WINDOWS: WINDOWS system patch vulnerabilities
+        /// WEB_CMS: Web-CMS vulnerability
         /// APPLICATION: Application vulnerability
         /// EMERGENCY: Urgent vulnerability
         /// </summary>
@@ -146,7 +146,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string[] VulCategory{ get; set; }
 
         /// <summary>
-        /// Creator AppId
+        /// Creator `AppId`
         /// </summary>
         [JsonProperty("AppId")]
         public ulong? AppId{ get; set; }

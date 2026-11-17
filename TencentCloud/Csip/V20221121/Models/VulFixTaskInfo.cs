@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Primary key ID of the fix task
+        /// Repair task primary key ID
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -42,7 +42,7 @@ namespace TencentCloud.Csip.V20221121.Models
         /// 0: initialization
         /// 1: In remediation
         /// 2: Repair successful
-        /// 3: Partially fix failed
+        /// 3: Partially fixed
         /// 4: All fix failures
         /// 5: Stop repair
         /// </summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? FixStatus{ get; set; }
 
         /// <summary>
-        /// Repair total number of assets
+        /// Total number of repaired assets
         /// </summary>
         [JsonProperty("AssetCount")]
         public long? AssetCount{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? SuccessCount{ get; set; }
 
         /// <summary>
-        /// FIX_FAILURE count
+        /// Number of failed fixes
         /// </summary>
         [JsonProperty("FailCount")]
         public long? FailCount{ get; set; }
@@ -80,15 +80,15 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? QueueCount{ get; set; }
 
         /// <summary>
-        /// Progress percentage of the repair
+        /// Repair progress percentage
         /// Value range: [0, 100].
-        /// Supplemental description: Calculation method is (SuccessCount+FailCount)/AssetCount×100.
+        /// Supplemental description: Calculation method: (SuccessCount+FailCount)/AssetCount×100
         /// </summary>
         [JsonProperty("Progress")]
         public long? Progress{ get; set; }
 
         /// <summary>
-        /// Number of successfully fixed vulnerabilities
+        /// Number of vulnerabilities with successful fixes
         /// </summary>
         [JsonProperty("SuccessVulCount")]
         public long? SuccessVulCount{ get; set; }
@@ -100,27 +100,27 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? FailVulCount{ get; set; }
 
         /// <summary>
-        /// List of vulnerability names to be fixed
+        /// List of fixed vulnerability names
         /// </summary>
         [JsonProperty("VulNames")]
         public string[] VulNames{ get; set; }
 
         /// <summary>
-        /// Fix startup time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Startup time for repair
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// Fixing end time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// Repair end time
+        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of vulnerability dimensional remediation status, status details of each vulnerability
+        /// List of vulnerability dimensional remediation statuses, with status details for each vulnerability
         /// </summary>
         [JsonProperty("VulFixStatusList")]
         public VulFixStatusItem[] VulFixStatusList{ get; set; }

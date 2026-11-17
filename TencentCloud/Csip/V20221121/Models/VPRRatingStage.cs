@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Stage name (for example: threat activity level, exploitability, vulnerability severity)
+        /// Stage name (for example, threat activity, exploitability, vulnerability severity)
         /// </summary>
         [JsonProperty("Stage")]
         public string Stage{ get; set; }
 
         /// <summary>
-        /// Rating result of this stage
+        /// Rating result of this stage.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

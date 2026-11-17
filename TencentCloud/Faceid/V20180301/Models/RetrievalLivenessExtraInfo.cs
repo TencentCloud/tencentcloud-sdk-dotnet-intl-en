@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+        /// <p>Type of the matched template. Common: public library; Auto: automatic clustering library; Owner: custom template library.</p>
         /// </summary>
         [JsonProperty("HitGroup")]
         public string HitGroup{ get; set; }
 
         /// <summary>
-        /// <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+        /// <p>Similarity between the request image and the matched attack template. The value range is [0,2]. A smaller value indicates a higher probability of matching an attack template. The default threshold is 0.6. A SimilarityScore ≥ 0.6 indicates normal, and a SimilarityScore &lt; 0.6 indicates an attack.</p>
         /// </summary>
         [JsonProperty("SimilarityScore")]
         public float? SimilarityScore{ get; set; }
 
         /// <summary>
-        /// <p>Template id of the cache hit</p>
+        /// <p>id of the matched template</p>
         /// </summary>
         [JsonProperty("HitTemplate")]
         public string HitTemplate{ get; set; }

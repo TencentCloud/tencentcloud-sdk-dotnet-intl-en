@@ -25,89 +25,79 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Synchronization initialization options: Data (Full Data initialization), Structure (Structure initialization), Full (Full Data and Structure initialization, default), None (incremental only). The mongodb link supports only Full Data initialization or incremental only.</p>
         /// </summary>
         [JsonProperty("InitType")]
         public string InitType{ get; set; }
 
         /// <summary>
-        /// Processing method for duplicate tables. Valid values: `ReportErrorAfterCheck`, `InitializeAfterDelete`, `ExecuteAfterIgnore`. Default value: `ReportErrorAfterCheck`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Handling of tables with the same name, ReportErrorAfterCheck (pre-validation and error reporting, default), ExecuteAfterIgnore (ignore and continue execution).</p>
         /// </summary>
         [JsonProperty("DealOfExistSameTable")]
         public string DealOfExistSameTable{ get; set; }
 
         /// <summary>
-        /// Conflict processing option. Valid values: `ReportError` (report an error); `Ignore` (ignore); `Cover` (overwrite); `ConditionCover` (conditionally overwrite). Default value: `ReportError`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Conflict resolution options: ReportError (report error, default), Ignore, Cover, ConditionCover</p>
         /// </summary>
         [JsonProperty("ConflictHandleType")]
         public string ConflictHandleType{ get; set; }
 
         /// <summary>
-        /// Whether to add the additional column
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Whether to add an additional column</p>
         /// </summary>
         [JsonProperty("AddAdditionalColumn")]
         public bool? AddAdditionalColumn{ get; set; }
 
         /// <summary>
-        /// DML and DDL options to be synced. Valid values: `Insert` (INSERT operations); `Update` (UPDATE operations); `Delete` (DELETE operations); `DDL` (structure sync); `PartialDDL` (custom option, which is used together with `DdlOptions`). You can also leave this parameter empty.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Options for DML and DDL to be synchronized: Insert, Update, Delete, DDL (structure synchronization), PartialDDL (custom, can be used together with DdlOptions). Note that it must contain at least one DML option.</p>
         /// </summary>
         [JsonProperty("OpTypes")]
         public string[] OpTypes{ get; set; }
 
         /// <summary>
-        /// Detailed option for conflict processing, such as condition rows and operations in conditional overwrite.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Detailed options for conflict resolution, such as condition row and conditional operation in condition coverage</p>
         /// </summary>
         [JsonProperty("ConflictHandleOption")]
         public ConflictHandleOption ConflictHandleOption{ get; set; }
 
         /// <summary>
-        /// DDL statements to be synced
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>DDL synchronization option. Description of which DDLs to synchronize.</p>
         /// </summary>
         [JsonProperty("DdlOptions")]
         public DdlOption[] DdlOptions{ get; set; }
 
         /// <summary>
-        /// Kafka sync options
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>kafka sync options</p>
         /// </summary>
         [JsonProperty("KafkaOption")]
         public KafkaOption KafkaOption{ get; set; }
 
         /// <summary>
-        /// Task speed limit information
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Task speed limit information</p>
         /// </summary>
         [JsonProperty("RateLimitOption")]
         public RateLimitOption RateLimitOption{ get; set; }
 
         /// <summary>
-        /// Settings of the automatic retry time range
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Time window for automatic retry settings</p>
         /// </summary>
         [JsonProperty("AutoRetryTimeRangeMinutes")]
         public long? AutoRetryTimeRangeMinutes{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Synchronize to the specified checkpoint of the kafka link. Currently only support time format: 2023-12-20T19:24:23+08:00. If not specified, it is empty.</p>
         /// </summary>
         [JsonProperty("StartPosition")]
         public string StartPosition{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether to filter out begin and commit messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
         /// </summary>
         [JsonProperty("FilterBeginCommit")]
         public bool? FilterBeginCommit{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Whether to filter out checkpoint messages when synchronizing to kafka. Currently, only the mysql-to-kafka link supports this.</p>
         /// </summary>
         [JsonProperty("FilterCheckpoint")]
         public bool? FilterCheckpoint{ get; set; }

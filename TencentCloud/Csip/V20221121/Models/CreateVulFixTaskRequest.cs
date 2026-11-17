@@ -25,31 +25,31 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Repair item list, each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input parameter limit: No more than 100 items, total number of instances not more than 5000</p>
+        /// <p>Repair item list. Each item specifies a vulnerability/KB patch and its hosts requiring fixing<br>Input limit: up to 100 items, and the total number of instances cannot exceed 5000</p>
         /// </summary>
         [JsonProperty("FixItems")]
         public VulFixItem[] FixItems{ get; set; }
 
         /// <summary>
-        /// <p>Maximum repair time<br>Measurement unit: second<br>Default value: 3600</p>
+        /// <p>Maximum repair time<br>Unit: second<br>Default value: 3600</p>
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// <p>Whether to create a disk snapshot before repair<br>Default value: false</p>
+        /// <p>Create a disk snapshot before repair<br>Default value: false</p>
         /// </summary>
         [JsonProperty("CreateSnapshot")]
         public bool? CreateSnapshot{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot name. Valid when CreateSnapshot is true.<br>Input parameter limit: Up to 128 characters.</p>
+        /// <p>Snapshot name. Valid when CreateSnapshot is true. Input limits: up to 60 characters, with automatic truncation for overly long ones.</p>
         /// </summary>
         [JsonProperty("SnapshotName")]
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// <p>Snapshot retention days. Valid when CreateSnapshot is true.</p>
+        /// <p>Snapshot retention days. Valid when CreateSnapshot is true</p>
         /// </summary>
         [JsonProperty("SaveDays")]
         public long? SaveDays{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? AffectedCount{ get; set; }
 
         /// <summary>
-        /// <p>Whether restart is required after repair</p>
+        /// <p>Whether the system needs to be restarted after repair</p>
         /// </summary>
         [JsonProperty("NeedReboot")]
         public bool? NeedReboot{ get; set; }
 
         /// <summary>
-        /// <p>Whether one-click repair is supported true-supported false-unsupported</p>
+        /// <p>Whether one-click repair is supported. true - support; false - not support</p>
         /// </summary>
         [JsonProperty("FixSwitch")]
         public bool? FixSwitch{ get; set; }

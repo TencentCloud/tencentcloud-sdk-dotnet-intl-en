@@ -25,19 +25,19 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Instance ID list of hosts requiring fixing<br>Input parameter limitation: Up to 1,000 instance IDs per single item</p>
+        /// <p>Instance ID list of hosts requiring fixing<br>Input limit: up to 1000 instance IDs per single item</p>
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// <p>Vulnerability ID. Choose either VulId or KBId.</p>
+        /// <p>Vulnerability ID. Choose either VulId or KBId</p>
         /// </summary>
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
         /// <summary>
-        /// <p>Patch ID. Choose either VulId or KBId.</p>
+        /// <p>KB patch ID. Either VulId or KBId is required.</p>
         /// </summary>
         [JsonProperty("KBId")]
         public long? KBId{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// The value.
+        /// Specific values.
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

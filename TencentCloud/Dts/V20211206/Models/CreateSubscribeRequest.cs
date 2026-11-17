@@ -31,19 +31,19 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+        /// Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }
 
         /// <summary>
-        /// Purchase duration. This field needs to be filled in when the payType is monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
+        /// Purchase duration. This field needs to be filled in when the payType is yearly/monthly subscription. The unit is month. Value range: 1-120. Default value: 1.
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// Whether to renew automatically. This field needs to be filled in when the payType is monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
+        /// Whether to renew automatically. This field needs to be filled in when the payType is yearly/monthly subscription. Valid values: 0 (auto-renewal disabled); 1 (auto-renewal enabled). Automatic renewal is not performed by default. This flag is invalid for pay-as-you-go.
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
@@ -67,7 +67,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 
+        /// For the data subscription version, Kafka and KafkaPro (Professional Edition) are currently supported; if left blank, it defaults to KafkaPro.
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
+        /// <summary>
+        /// For subscription instance specifications, only 'small', 'medium', and 'large' are currently supported.
         /// </summary>
         [JsonProperty("InstanceClass")]
         public string InstanceClass{ get; set; }
@@ -85,6 +91,7 @@ namespace TencentCloud.Dts.V20211206.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
             this.SetParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         }
     }

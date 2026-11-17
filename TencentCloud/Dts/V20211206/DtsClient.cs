@@ -28,7 +28,7 @@ namespace TencentCloud.Dts.V20211206
 
        private const string endpoint = "dts.intl.tencentcloudapi.com";
        private const string version = "2021-12-06";
-       private const string sdkVersion = "SDK_NET_3.0.1409";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -801,7 +801,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and monthly subscription tasks will refund automatically.
+        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and yearly/monthly subscription tasks will refund automatically.
         /// </summary>
         /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
         /// <returns><see cref="IsolateSubscribeResponse"/></returns>
@@ -811,7 +811,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and monthly subscription tasks will refund automatically.
+        /// This API is used to isolate the subscription task. After calling, the subscription task will not be available. Pay-as-you-go tasks will stop billing, and yearly/monthly subscription tasks will refund automatically.
         /// </summary>
         /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
         /// <returns><see cref="IsolateSubscribeResponse"/></returns>
@@ -1032,7 +1032,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
+        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the yearly/monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
         /// </summary>
         /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>
@@ -1042,7 +1042,7 @@ namespace TencentCloud.Dts.V20211206
         }
 
         /// <summary>
-        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
+        /// This API is used to modify the auto-renewal flag of your subscription instance. Only the yearly/monthly subscription modification task makes sense. After modifying, the pay-as-you-go task has no impact.
         /// </summary>
         /// <param name="req"><see cref="ModifySubscribeAutoRenewFlagRequest"/></param>
         /// <returns><see cref="ModifySubscribeAutoRenewFlagResponse"/></returns>

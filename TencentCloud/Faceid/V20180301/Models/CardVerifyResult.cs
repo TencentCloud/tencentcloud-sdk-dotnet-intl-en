@@ -176,8 +176,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// -9101 Alarm for covered certificate,
         /// -9102 Alarm for photocopied certificate,
         /// -9103 Alarm for photographed certificate,
+        /// -9104 Alarm for tamper certificate,
         /// -9107 Alarm for reflective certificate,
         /// -9108 Alarm for blurry image,
+        /// -8101 Alarm for document information format verification,
+        /// -8102 Alarm for document information consistency verification,
         /// -9109 This capability is not enabled.
         /// </summary>
         [JsonProperty("WarnCardInfos")]
@@ -188,6 +191,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// </summary>
         [JsonProperty("EditDetails")]
         public EditDetail[] EditDetails{ get; set; }
+
+        /// <summary>
+        /// Detected card type. Returns the corresponding document type combining country or region name and document type. Enums: Passport, IndonesiaIDCard, MalaysiaIDCard, SingaporeIDCard, ThailandIDCard, ThailandPinkCard, VietnamIDCard, MyanmarDriverLicense, HongKongIDCard, MacaoIDCard, TaiwanIDCard, HmtTravelPermit, HmtMainlandTravelPermit, HmtResidencePermit, HmtResidencePermitBack, MainlandIDCard, MainlandIDCardBack, MainlandTempIDCard, MainlandTempIDCardBack, BrazilIDCard, BrazilIDCardBack, BrazilRNM, BrazilRNMBack, BrazilRNE, BrazilDriverLicense, BrazilDriverLicenseBack, MexicoVoterCard, PhilippinesUMID, PhilippinesDriverLicense, PhilippinesVoteID, PhilippinesSSSID, PhilippinesTINID, PhilippinesNationalID, PhilippinesPRCID, PhilippinesPostalID, PhilippinesHealthCard, Other.
+        /// </summary>
+        [JsonProperty("DetectedCardType")]
+        public string DetectedCardType{ get; set; }
 
 
         /// <summary>
@@ -205,6 +214,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "NormalCardInfo.", this.NormalCardInfo);
             this.SetParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
             this.SetParamArrayObj(map, prefix + "EditDetails.", this.EditDetails);
+            this.SetParamSimple(map, prefix + "DetectedCardType", this.DetectedCardType);
         }
     }
 }

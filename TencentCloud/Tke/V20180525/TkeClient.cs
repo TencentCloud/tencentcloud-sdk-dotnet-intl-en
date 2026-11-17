@@ -28,7 +28,7 @@ namespace TencentCloud.Tke.V20180525
 
        private const string endpoint = "tke.intl.tencentcloudapi.com";
        private const string version = "2018-05-25";
-       private const string sdkVersion = "SDK_NET_3.0.1419";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -2654,6 +2654,27 @@ namespace TencentCloud.Tke.V20180525
         public RemoveNodeFromNodePoolResponse RemoveNodeFromNodePoolSync(RemoveNodeFromNodePoolRequest req)
         {
             return InternalRequestAsync<RemoveNodeFromNodePoolResponse>(req, "RemoveNodeFromNodePool")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to rotate a cluster token.
+        /// </summary>
+        /// <param name="req"><see cref="RotateClusterTokenRequest"/></param>
+        /// <returns><see cref="RotateClusterTokenResponse"/></returns>
+        public Task<RotateClusterTokenResponse> RotateClusterToken(RotateClusterTokenRequest req)
+        {
+            return InternalRequestAsync<RotateClusterTokenResponse>(req, "RotateClusterToken");
+        }
+
+        /// <summary>
+        /// This API is used to rotate a cluster token.
+        /// </summary>
+        /// <param name="req"><see cref="RotateClusterTokenRequest"/></param>
+        /// <returns><see cref="RotateClusterTokenResponse"/></returns>
+        public RotateClusterTokenResponse RotateClusterTokenSync(RotateClusterTokenRequest req)
+        {
+            return InternalRequestAsync<RotateClusterTokenResponse>(req, "RotateClusterToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

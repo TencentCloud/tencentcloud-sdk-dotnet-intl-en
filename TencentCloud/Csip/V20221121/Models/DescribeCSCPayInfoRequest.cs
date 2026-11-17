@@ -24,12 +24,26 @@ namespace TencentCloud.Csip.V20221121.Models
     public class DescribeCSCPayInfoRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("MemberId")]
+        public string[] MemberId{ get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [JsonProperty("NeedQuotaUsed")]
+        public bool? NeedQuotaUsed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+            this.SetParamSimple(map, prefix + "NeedQuotaUsed", this.NeedQuotaUsed);
         }
     }
 }

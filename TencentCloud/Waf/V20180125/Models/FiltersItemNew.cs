@@ -25,7 +25,7 @@ namespace TencentCloud.Waf.V20180125.Models
     {
         
         /// <summary>
-        /// Field name, used for filtering
+        /// Field name; Filter
         /// Filter the sub-order number (value) by DealName.
         /// </summary>
         [JsonProperty("Name")]

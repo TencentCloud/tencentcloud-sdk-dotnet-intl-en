@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Export task ID<br>Used when: front-end polling the status of tasks for reference</p>
+        /// <p>Export task ID<br>Value for reference: used when polling the export task status on the frontend</p>
         /// </summary>
         [JsonProperty("JobID")]
         public string JobID{ get; set; }

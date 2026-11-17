@@ -29,6 +29,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 1: OCR + liveness detection + face comparison
         /// 2: Liveness detection + face comparison
         /// 3: Liveness detection
+        /// 4: OCR
         /// Default value: 1
         /// </summary>
         [JsonProperty("CheckMode")]

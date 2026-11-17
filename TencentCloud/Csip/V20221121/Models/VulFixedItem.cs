@@ -25,82 +25,76 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Vulnerability ID
+        /// <p>Vulnerability ID</p>
         /// </summary>
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
         /// <summary>
-        /// Vulnerability name
+        /// <p>Vulnerability name</p>
         /// </summary>
         [JsonProperty("VulName")]
         public string VulName{ get; set; }
 
         /// <summary>
-        /// Vulnerability level
-        /// Enumeration values:
-        /// LOW: low-risk
-        /// MEDIUM: Medium risk
-        /// HIGH: High risk
-        /// CRITICAL
+        /// <p>Vulnerability level<br>Enumeration values:<br>LOW: Low risk<br>MEDIUM: Medium risk<br>HIGH: High risk<br>CRITICAL: Critical</p>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// VPR rating information (including rating result, description, and phased score), consistent with DescribeHostVulRiskList
+        /// <p>VPR rating information (including rating result, description, and staged score), consistent with DescribeHostVulRiskList</p>
         /// </summary>
         [JsonProperty("VRPRatingInfo")]
         public VPRRatingInfo VRPRatingInfo{ get; set; }
 
         /// <summary>
-        /// Vulnerability Type
-        /// Enumeration values:
-        /// LINUX: Linux software vulnerability
-        /// WINDOWS: Windows system patch vulnerability
-        /// WEB_CMS: Web-CMS vulnerabilities
-        /// APPLICATION: Application vulnerability
-        /// EMERGENCY: Urgent vulnerability
+        /// <p>Vulnerability type<br>Enumeration values:<br>LINUX: Linux software vulnerability<br>WINDOWS: Windows system patch vulnerability<br>WEB_CMS: Web-CMS vulnerability<br>APPLICATION: Application vulnerability<br>EMERGENCY: Urgent vulnerability</p>
         /// </summary>
         [JsonProperty("VulCategory")]
         public string VulCategory{ get; set; }
 
         /// <summary>
-        /// CVE id
+        /// <p>CVE id</p>
         /// </summary>
         [JsonProperty("CveId")]
         public string CveId{ get; set; }
 
         /// <summary>
-        /// Repair the host name
+        /// <p>Repair host name</p>
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
 
         /// <summary>
-        /// Repair the host instance ID
+        /// <p>Repair host instance ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Associated component & number of paths
+        /// <p>Associated component &amp; number of paths</p>
         /// </summary>
         [JsonProperty("ComponentCount")]
         public long? ComponentCount{ get; set; }
 
         /// <summary>
-        /// Associated component & path list
+        /// <p>Associated component &amp; path list</p>
         /// </summary>
         [JsonProperty("Components")]
         public string[] Components{ get; set; }
 
         /// <summary>
-        /// Last repair time
-        /// Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+        /// <p>Last repair time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
         /// </summary>
         [JsonProperty("LatestFixTime")]
         public string LatestFixTime{ get; set; }
+
+        /// <summary>
+        /// <p>VPR rating basis</p>
+        /// </summary>
+        [JsonProperty("VPRExplainInfo")]
+        public VPRExplainInfo VPRExplainInfo{ get; set; }
 
 
         /// <summary>
@@ -119,6 +113,7 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamSimple(map, prefix + "ComponentCount", this.ComponentCount);
             this.SetParamArraySimple(map, prefix + "Components.", this.Components);
             this.SetParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+            this.SetParamObj(map, prefix + "VPRExplainInfo.", this.VPRExplainInfo);
         }
     }
 }

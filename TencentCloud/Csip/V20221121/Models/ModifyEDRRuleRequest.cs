@@ -216,6 +216,18 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("ConditionMatches")]
         public ConditionMatch[] ConditionMatches{ get; set; }
 
+        /// <summary>
+        /// <p>File operation rules, populated when ContentType=file_operation (file path regex AND any selected action)</p>
+        /// </summary>
+        [JsonProperty("FileOperationRules")]
+        public RuleContentFileOperation FileOperationRules{ get; set; }
+
+        /// <summary>
+        /// <p>K8s API rule passed when ContentType=k8s_api. Values of all non-empty fields must be Base64-encoded, and k8s_api rules apply only per cluster.</p>
+        /// </summary>
+        [JsonProperty("K8sApiRule")]
+        public RuleContentK8sAPI K8sApiRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +266,8 @@ namespace TencentCloud.Csip.V20221121.Models
             this.SetParamArrayObj(map, prefix + "ExcludeClusterIDsWithAppId.", this.ExcludeClusterIDsWithAppId);
             this.SetParamArrayObj(map, prefix + "ImageIDsWithAppId.", this.ImageIDsWithAppId);
             this.SetParamArrayObj(map, prefix + "ConditionMatches.", this.ConditionMatches);
+            this.SetParamObj(map, prefix + "FileOperationRules.", this.FileOperationRules);
+            this.SetParamObj(map, prefix + "K8sApiRule.", this.K8sApiRule);
         }
     }
 }

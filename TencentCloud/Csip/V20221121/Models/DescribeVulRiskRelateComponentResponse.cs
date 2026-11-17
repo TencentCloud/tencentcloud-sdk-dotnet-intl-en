@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>List of affected components for the vulnerability</p>
+        /// <p>List of affected components</p>
         /// </summary>
         [JsonProperty("List")]
         public VulComponentSummary[] List{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Repair task ID, used for subsequent query task status</p>
+        /// <p>Repair task ID, used for subsequent query of task status</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

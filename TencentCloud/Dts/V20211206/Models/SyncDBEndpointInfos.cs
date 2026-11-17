@@ -25,28 +25,25 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Region of the database
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database region
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Instance network access type. Valid values: `extranet` (public network); `ipv6` (public IPv6); `cvm` (self-build on CVM); `dcg` (Direct Connect); `vpncloud` (VPN access); `cdb` (database); `ccn` (CCN); `intranet` (intranet); `vpc` (VPC). Note that the valid values are subject to the current link.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance network access type. For example: extranet (public network), ipv6 (public network ipv6), cvm (self-built CVM), dcg (DC), vpncloud (instance accessed via VPN), cdb (cloud database), ccn (CCN), intranet (self-developed cloud migration), and vpc (VPC). Note that the specific valid values depend on the current linkage.
         /// </summary>
         [JsonProperty("AccessType")]
         public string AccessType{ get; set; }
 
         /// <summary>
-        /// Database type, such as `mysql`, `redis`, `mongodb`, `postgresql`, `mariadb`, and `percona`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Instance database type. For example: mysql, redis, mongodb, postgresql, mariadb, and percona.
         /// </summary>
         [JsonProperty("DatabaseType")]
         public string DatabaseType{ get; set; }
 
         /// <summary>
-        /// Database information. Note: If the data type is tdsqlmysql, the order of this Endpoint array should correspond to the set order, and the first shard (shardkey range starting from 0) must be entered first.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Database information. Note: If the database type is tdsqlmysql, the order of the Endpoint array should follow the following rule: proxy nodes are placed before set nodes. If SrcConnectType selects proxy access, only the proxy node needs to be filled. If set access is selected, the first set node in the array should be the shard with a shardkey range starting from 0.
         /// </summary>
         [JsonProperty("Info")]
         public Endpoint[] Info{ get; set; }

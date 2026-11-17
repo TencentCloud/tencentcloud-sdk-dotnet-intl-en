@@ -37,7 +37,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Public network IP address</p>
+        /// <p>Public IP address</p>
         /// </summary>
         [JsonProperty("PublicIP")]
         public string PublicIP{ get; set; }
@@ -49,31 +49,31 @@ namespace TencentCloud.Csip.V20221121.Models
         public string PrivateIP{ get; set; }
 
         /// <summary>
-        /// <p>Protection edition<br>Enumeration value:<br>NONE: No protection<br>BASIC: Basic version<br>PRO: Pro edition<br>ULTIMATE: Flagship edition<br>PRO_LH: Lightweight edition</p>
+        /// <p>Protection edition<br>Enumeration values:<br>NONE: no protection<br>BASIC: basic version<br>PRO: pro edition<br>ULTIMATE: flagship edition<br>PRO_LH: lightweight edition</p>
         /// </summary>
         [JsonProperty("DefendVersion")]
         public string DefendVersion{ get; set; }
 
         /// <summary>
-        /// <p>Vulnerability defense status<br>Enumeration value:<br>ENABLED: Enabled<br>NOT_SUPPORTED: Unsupported<br>NOT_ENABLED: Not enabled</p>
+        /// <p>Vulnerability defense status<br>Enumeration values:<br>ENABLED: enabled<br>NOT_SUPPORTED: unsupported<br>NOT_ENABLED: not enabled</p>
         /// </summary>
         [JsonProperty("DefendStatus")]
         public string DefendStatus{ get; set; }
 
         /// <summary>
-        /// <p>Associated account information</p>
+        /// <p>Account information belonging to</p>
         /// </summary>
         [JsonProperty("Account")]
         public AccountBriefInfo Account{ get; set; }
 
         /// <summary>
-        /// <p>Cloud host instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
+        /// <p>CVM instance status<br>Enumeration value:<br>RUNNING: running<br>STOPPED: stopped<br>UNKNOWN: unknown</p>
         /// </summary>
         [JsonProperty("InstanceStatus")]
         public string InstanceStatus{ get; set; }
 
         /// <summary>
-        /// <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scan in progress, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
+        /// <p>Remediation status enumeration values.</p><p>Enumeration values: </p><ul><li>PENDING: To be fixed, </li><li>SCANNING: Scanning, </li><li>FIXED: Fixed, </li><li>IGNORED: Ignored, </li><li>FIXING: In remediation, </li><li>FIX_FAILED: Fix failure, </li><li>NEED_REBOOT: Pending restart.</li></ul>
         /// </summary>
         [JsonProperty("RiskStatus")]
         public string RiskStatus{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public VPRRatingInfo VPRRating{ get; set; }
 
         /// <summary>
-        /// <p>CWP Agent status<br>Enumeration value:<br>ONLINE: Online<br>OFFLINE: Offline<br>UNINSTALLED: Not installed</p>
+        /// <p>CWP Agent status<br>Enumeration values:<br>ONLINE: ONLINE<br>OFFLINE: OFFLINE<br>UNINSTALLED: not installed</p>
         /// </summary>
         [JsonProperty("AgentStatus")]
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// <p>Asset tag list (CSIP internal asset tag)</p>
+        /// <p>Asset tag list (CSIP internal asset tags)</p>
         /// </summary>
         [JsonProperty("TagItem")]
         public MiniTagItem[] TagItem{ get; set; }

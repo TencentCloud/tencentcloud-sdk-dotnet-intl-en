@@ -31,6 +31,12 @@ namespace TencentCloud.Csip.V20221121.Models
         [JsonProperty("HostConfig")]
         public HostAutoScaleConfig HostConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Auto-scaling configuration for the container security module; if not passed, it remains unchanged</p>
+        /// </summary>
+        [JsonProperty("ContainerConfig")]
+        public ContainerAutoScaleConfig ContainerConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "HostConfig.", this.HostConfig);
+            this.SetParamObj(map, prefix + "ContainerConfig.", this.ContainerConfig);
         }
     }
 }

@@ -25,8 +25,7 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Status
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Status. Valid values: ON (enable) and OFF (disable).
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

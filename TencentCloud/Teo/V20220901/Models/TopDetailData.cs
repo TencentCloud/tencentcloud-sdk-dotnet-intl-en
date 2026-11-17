@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The field name.
+        /// Field name.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// The field value.
+        /// Field value.
         /// </summary>
         [JsonProperty("Value")]
         public long? Value{ get; set; }

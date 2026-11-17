@@ -25,15 +25,13 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// DDL type, such as database, table, view, and index.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// DDL type. For example: database, table, view, and index.
         /// </summary>
         [JsonProperty("DdlObject")]
         public string DdlObject{ get; set; }
 
         /// <summary>
-        /// DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Specific values of DDL. For Database, it can be [Create, Drop, Alter];<br>for Table, it can be [Create, Drop, Alter, Truncate, Rename];<br>for View, it can be [Create, Drop];<br>for Index, it can be [Create, Drop].
         /// </summary>
         [JsonProperty("DdlValue")]
         public string[] DdlValue{ get; set; }

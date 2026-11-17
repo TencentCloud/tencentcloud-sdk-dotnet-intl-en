@@ -37,13 +37,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// <p>Paging offset, used for associated component & path list pagination.<br>Value ranges from 0 to +∞.<br>Default value: 0.</p>
+        /// <p>Paging offset for associated component &amp; path list pagination<br>Value range: [0, +∞)<br>Default value: 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Number of results per page, used for paginating associated components & path list<br>Value ranges from 1 to 100<br>Default value: 10</p>
+        /// <p>Number of results per page, used for list pagination of associated components &amp; paths<br>Value range: [1, 100]<br>Default value: 10</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

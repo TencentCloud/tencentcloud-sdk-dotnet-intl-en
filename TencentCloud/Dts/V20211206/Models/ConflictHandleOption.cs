@@ -25,22 +25,19 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Conditionally overwritten column
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Columns for conditional overwrite.
         /// </summary>
         [JsonProperty("ConditionColumn")]
         public string ConditionColumn{ get; set; }
 
         /// <summary>
-        /// Conditional overwrite operation
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Condition coverage operation. Currently, only > is supported.
         /// </summary>
         [JsonProperty("ConditionOperator")]
         public string ConditionOperator{ get; set; }
 
         /// <summary>
-        /// Conditional overwrite priority configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Condition coverage priority processing. Supported types are >, <, and =.
         /// </summary>
         [JsonProperty("ConditionOrderInSrcAndDst")]
         public string ConditionOrderInSrcAndDst{ get; set; }

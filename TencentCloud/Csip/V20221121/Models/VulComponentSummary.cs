@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Component name.</p>
+        /// <p>Component name</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Associated hosts.</p>
+        /// <p>Number of associated hosts</p>
         /// </summary>
         [JsonProperty("RelateHostCount")]
         public ulong? RelateHostCount{ get; set; }

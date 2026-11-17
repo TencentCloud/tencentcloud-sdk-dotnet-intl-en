@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Task details</p>
+        /// <p>Task details list</p>
         /// </summary>
         [JsonProperty("Data")]
         public VulFixTaskDetailItem[] Data{ get; set; }

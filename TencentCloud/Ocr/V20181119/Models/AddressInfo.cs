@@ -85,13 +85,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string LineThree{ get; set; }
 
         /// <summary>
-        /// <p>Fourth line of the address bar</p>
+        /// <p>Line 4 of the address bar</p>
         /// </summary>
         [JsonProperty("LineFour")]
         public string LineFour{ get; set; }
 
         /// <summary>
-        /// <p>Fifth line of the address bar</p>
+        /// <p>Line 5 of the address bar</p>
         /// </summary>
         [JsonProperty("LineFive")]
         public string LineFive{ get; set; }

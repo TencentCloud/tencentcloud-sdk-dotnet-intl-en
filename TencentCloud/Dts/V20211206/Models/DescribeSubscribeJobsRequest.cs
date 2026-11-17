@@ -31,7 +31,7 @@ namespace TencentCloud.Dts.V20211206.Models
         public string SubscribeId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Filter by subscription ID, exact match
         /// </summary>
         [JsonProperty("SubscribeIds")]
         public string[] SubscribeIds{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Dts.V20211206.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// Subscribed topicName
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
         /// <summary>
-        /// Payment method. Valid values: 0 (monthly subscription); 1 (pay-as-you-go).
+        /// Payment method. Valid values: 0 (yearly/monthly subscription); 1 (pay-as-you-go).
         /// </summary>
         [JsonProperty("PayType")]
         public long? PayType{ get; set; }

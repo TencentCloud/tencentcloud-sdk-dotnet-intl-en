@@ -28,7 +28,7 @@ namespace TencentCloud.Waf.V20180125
 
        private const string endpoint = "waf.intl.tencentcloudapi.com";
        private const string version = "2018-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1208";
+       private const string sdkVersion = "SDK_NET_3.0.1427";
 
         /// <summary>
         /// Client constructor.
@@ -134,6 +134,27 @@ namespace TencentCloud.Waf.V20180125
         public AddCustomWhiteRuleResponse AddCustomWhiteRuleSync(AddCustomWhiteRuleRequest req)
         {
             return InternalRequestAsync<AddCustomWhiteRuleResponse>(req, "AddCustomWhiteRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to add an access configuration in llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="AddLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="AddLLMSdkAccessResponse"/></returns>
+        public Task<AddLLMSdkAccessResponse> AddLLMSdkAccess(AddLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<AddLLMSdkAccessResponse>(req, "AddLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// This API is used to add an access configuration in llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="AddLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="AddLLMSdkAccessResponse"/></returns>
+        public AddLLMSdkAccessResponse AddLLMSdkAccessSync(AddLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<AddLLMSdkAccessResponse>(req, "AddLLMSdkAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -386,6 +407,69 @@ namespace TencentCloud.Waf.V20180125
         public DeleteIpAccessControlV2Response DeleteIpAccessControlV2Sync(DeleteIpAccessControlV2Request req)
         {
             return InternalRequestAsync<DeleteIpAccessControlV2Response>(req, "DeleteIpAccessControlV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete an LLM content protection rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMContentRuleRequest"/></param>
+        /// <returns><see cref="DeleteLLMContentRuleResponse"/></returns>
+        public Task<DeleteLLMContentRuleResponse> DeleteLLMContentRule(DeleteLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMContentRuleResponse>(req, "DeleteLLMContentRule");
+        }
+
+        /// <summary>
+        /// This API is used to delete an LLM content protection rule.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMContentRuleRequest"/></param>
+        /// <returns><see cref="DeleteLLMContentRuleResponse"/></returns>
+        public DeleteLLMContentRuleResponse DeleteLLMContentRuleSync(DeleteLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMContentRuleResponse>(req, "DeleteLLMContentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a thesaurus list.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DeleteLLMKeywordLibraryResponse"/></returns>
+        public Task<DeleteLLMKeywordLibraryResponse> DeleteLLMKeywordLibrary(DeleteLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMKeywordLibraryResponse>(req, "DeleteLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// This API is used to delete a thesaurus list.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DeleteLLMKeywordLibraryResponse"/></returns>
+        public DeleteLLMKeywordLibraryResponse DeleteLLMKeywordLibrarySync(DeleteLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMKeywordLibraryResponse>(req, "DeleteLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete the access configuration in llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DeleteLLMSdkAccessResponse"/></returns>
+        public Task<DeleteLLMSdkAccessResponse> DeleteLLMSdkAccess(DeleteLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMSdkAccessResponse>(req, "DeleteLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// This API is used to delete the access configuration in llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DeleteLLMSdkAccessResponse"/></returns>
+        public DeleteLLMSdkAccessResponse DeleteLLMSdkAccessSync(DeleteLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DeleteLLMSdkAccessResponse>(req, "DeleteLLMSdkAccess")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -957,6 +1041,174 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// This API is used to obtain the LLM content protection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentRuleListRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentRuleListResponse"/></returns>
+        public Task<DescribeLLMContentRuleListResponse> DescribeLLMContentRuleList(DescribeLLMContentRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentRuleListResponse>(req, "DescribeLLMContentRuleList");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the LLM content protection rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentRuleListRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentRuleListResponse"/></returns>
+        public DescribeLLMContentRuleListResponse DescribeLLMContentRuleListSync(DescribeLLMContentRuleListRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentRuleListResponse>(req, "DescribeLLMContentRuleList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to review the request and response content of large models.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentSecCheckResponse"/></returns>
+        public Task<DescribeLLMContentSecCheckResponse> DescribeLLMContentSecCheck(DescribeLLMContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentSecCheckResponse>(req, "DescribeLLMContentSecCheck");
+        }
+
+        /// <summary>
+        /// This API is used to review the request and response content of large models.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMContentSecCheckRequest"/></param>
+        /// <returns><see cref="DescribeLLMContentSecCheckResponse"/></returns>
+        public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheckSync(DescribeLLMContentSecCheckRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMContentSecCheckResponse>(req, "DescribeLLMContentSecCheck")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the hourly bill details of a single instance for a single day, including the estimated total bill amount, itemized costs, hourly trends, and hourly details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMHourBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeLLMHourBillDetailResponse"/></returns>
+        public Task<DescribeLLMHourBillDetailResponse> DescribeLLMHourBillDetail(DescribeLLMHourBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMHourBillDetailResponse>(req, "DescribeLLMHourBillDetail");
+        }
+
+        /// <summary>
+        /// This API is used to query the hourly bill details of a single instance for a single day, including the estimated total bill amount, itemized costs, hourly trends, and hourly details.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMHourBillDetailRequest"/></param>
+        /// <returns><see cref="DescribeLLMHourBillDetailResponse"/></returns>
+        public DescribeLLMHourBillDetailResponse DescribeLLMHourBillDetailSync(DescribeLLMHourBillDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMHourBillDetailResponse>(req, "DescribeLLMHourBillDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the keyword list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DescribeLLMKeywordLibraryResponse"/></returns>
+        public Task<DescribeLLMKeywordLibraryResponse> DescribeLLMKeywordLibrary(DescribeLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMKeywordLibraryResponse>(req, "DescribeLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// This API is used to query the keyword list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="DescribeLLMKeywordLibraryResponse"/></returns>
+        public DescribeLLMKeywordLibraryResponse DescribeLLMKeywordLibrarySync(DescribeLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMKeywordLibraryResponse>(req, "DescribeLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query sdk access configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DescribeLLMSdkAccessResponse"/></returns>
+        public Task<DescribeLLMSdkAccessResponse> DescribeLLMSdkAccess(DescribeLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMSdkAccessResponse>(req, "DescribeLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// This API is used to query sdk access configurations.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="DescribeLLMSdkAccessResponse"/></returns>
+        public DescribeLLMSdkAccessResponse DescribeLLMSdkAccessSync(DescribeLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMSdkAccessResponse>(req, "DescribeLLMSdkAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query DLP rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafDLPRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafDLPRulesResponse"/></returns>
+        public Task<DescribeLLMWafDLPRulesResponse> DescribeLLMWafDLPRules(DescribeLLMWafDLPRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafDLPRulesResponse>(req, "DescribeLLMWafDLPRules");
+        }
+
+        /// <summary>
+        /// This API is used to query DLP rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafDLPRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafDLPRulesResponse"/></returns>
+        public DescribeLLMWafDLPRulesResponse DescribeLLMWafDLPRulesSync(DescribeLLMWafDLPRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafDLPRulesResponse>(req, "DescribeLLMWafDLPRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query LLM rule requests.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafProtectRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafProtectRulesResponse"/></returns>
+        public Task<DescribeLLMWafProtectRulesResponse> DescribeLLMWafProtectRules(DescribeLLMWafProtectRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafProtectRulesResponse>(req, "DescribeLLMWafProtectRules");
+        }
+
+        /// <summary>
+        /// This API is used to query LLM rule requests.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafProtectRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafProtectRulesResponse"/></returns>
+        public DescribeLLMWafProtectRulesResponse DescribeLLMWafProtectRulesSync(DescribeLLMWafProtectRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafProtectRulesResponse>(req, "DescribeLLMWafProtectRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query Tool Call rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafToolCallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafToolCallRulesResponse"/></returns>
+        public Task<DescribeLLMWafToolCallRulesResponse> DescribeLLMWafToolCallRules(DescribeLLMWafToolCallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafToolCallRulesResponse>(req, "DescribeLLMWafToolCallRules");
+        }
+
+        /// <summary>
+        /// This API is used to query Tool Call rules.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLLMWafToolCallRulesRequest"/></param>
+        /// <returns><see cref="DescribeLLMWafToolCallRulesResponse"/></returns>
+        public DescribeLLMWafToolCallRulesResponse DescribeLLMWafToolCallRulesSync(DescribeLLMWafToolCallRulesRequest req)
+        {
+            return InternalRequestAsync<DescribeLLMWafToolCallRulesResponse>(req, "DescribeLLMWafToolCallRules")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Query the switch status of each WAF basic security module, check if each module is enabled
         /// </summary>
         /// <param name="req"><see cref="DescribeModuleStatusRequest"/></param>
@@ -1167,6 +1419,27 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// This API is used to query Skill security detection results by file Hash.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillSecScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillSecScanResultResponse"/></returns>
+        public Task<DescribeSkillSecScanResultResponse> DescribeSkillSecScanResult(DescribeSkillSecScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillSecScanResultResponse>(req, "DescribeSkillSecScanResult");
+        }
+
+        /// <summary>
+        /// This API is used to query Skill security detection results by file Hash.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSkillSecScanResultRequest"/></param>
+        /// <returns><see cref="DescribeSkillSecScanResultResponse"/></returns>
+        public DescribeSkillSecScanResultResponse DescribeSkillSecScanResultSync(DescribeSkillSecScanResultRequest req)
+        {
+            return InternalRequestAsync<DescribeSkillSecScanResultResponse>(req, "DescribeSkillSecScanResult")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// WAF Sparta - Obtain protection domain information
         /// </summary>
         /// <param name="req"><see cref="DescribeSpartaProtectionInfoRequest"/></param>
@@ -1331,6 +1604,27 @@ namespace TencentCloud.Waf.V20180125
         public DescribeWebshellStatusResponse DescribeWebshellStatusSync(DescribeWebshellStatusRequest req)
         {
             return InternalRequestAsync<DescribeWebshellStatusResponse>(req, "DescribeWebshellStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to export lexicon files.
+        /// </summary>
+        /// <param name="req"><see cref="ExportLLMKeywordLibRequest"/></param>
+        /// <returns><see cref="ExportLLMKeywordLibResponse"/></returns>
+        public Task<ExportLLMKeywordLibResponse> ExportLLMKeywordLib(ExportLLMKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ExportLLMKeywordLibResponse>(req, "ExportLLMKeywordLib");
+        }
+
+        /// <summary>
+        /// This API is used to export lexicon files.
+        /// </summary>
+        /// <param name="req"><see cref="ExportLLMKeywordLibRequest"/></param>
+        /// <returns><see cref="ExportLLMKeywordLibResponse"/></returns>
+        public ExportLLMKeywordLibResponse ExportLLMKeywordLibSync(ExportLLMKeywordLibRequest req)
+        {
+            return InternalRequestAsync<ExportLLMKeywordLibResponse>(req, "ExportLLMKeywordLib")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1925,6 +2219,174 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// This API is used to update the LLM content security rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleResponse"/></returns>
+        public Task<ModifyLLMContentRuleResponse> ModifyLLMContentRule(ModifyLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleResponse>(req, "ModifyLLMContentRule");
+        }
+
+        /// <summary>
+        /// This API is used to update the LLM content security rule.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleResponse"/></returns>
+        public ModifyLLMContentRuleResponse ModifyLLMContentRuleSync(ModifyLLMContentRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleResponse>(req, "ModifyLLMContentRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the switch of protection rules for LLM content.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleStatusResponse"/></returns>
+        public Task<ModifyLLMContentRuleStatusResponse> ModifyLLMContentRuleStatus(ModifyLLMContentRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleStatusResponse>(req, "ModifyLLMContentRuleStatus");
+        }
+
+        /// <summary>
+        /// This API is used to enable or disable the switch of protection rules for LLM content.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMContentRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMContentRuleStatusResponse"/></returns>
+        public ModifyLLMContentRuleStatusResponse ModifyLLMContentRuleStatusSync(ModifyLLMContentRuleStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMContentRuleStatusResponse>(req, "ModifyLLMContentRuleStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify a custom lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="ModifyLLMKeywordLibraryResponse"/></returns>
+        public Task<ModifyLLMKeywordLibraryResponse> ModifyLLMKeywordLibrary(ModifyLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMKeywordLibraryResponse>(req, "ModifyLLMKeywordLibrary");
+        }
+
+        /// <summary>
+        /// This API is used to modify a custom lexicon.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMKeywordLibraryRequest"/></param>
+        /// <returns><see cref="ModifyLLMKeywordLibraryResponse"/></returns>
+        public ModifyLLMKeywordLibraryResponse ModifyLLMKeywordLibrarySync(ModifyLLMKeywordLibraryRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMKeywordLibraryResponse>(req, "ModifyLLMKeywordLibrary")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to configure boundary access for llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="ModifyLLMSdkAccessResponse"/></returns>
+        public Task<ModifyLLMSdkAccessResponse> ModifyLLMSdkAccess(ModifyLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMSdkAccessResponse>(req, "ModifyLLMSdkAccess");
+        }
+
+        /// <summary>
+        /// This API is used to configure boundary access for llmwaf-sdk.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMSdkAccessRequest"/></param>
+        /// <returns><see cref="ModifyLLMSdkAccessResponse"/></returns>
+        public ModifyLLMSdkAccessResponse ModifyLLMSdkAccessSync(ModifyLLMSdkAccessRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMSdkAccessResponse>(req, "ModifyLLMSdkAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the module switch status of large model protection, supporting independent on/off operations for the master switch and each submodule. Before enabling, ensure that the instance has purchased the large model protection capability. If not purchased, the enable operation returns the AuthFailure.ErrCodeNoPurchased error.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMStatusResponse"/></returns>
+        public Task<ModifyLLMStatusResponse> ModifyLLMStatus(ModifyLLMStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMStatusResponse>(req, "ModifyLLMStatus");
+        }
+
+        /// <summary>
+        /// This API is used to modify the module switch status of large model protection, supporting independent on/off operations for the master switch and each submodule. Before enabling, ensure that the instance has purchased the large model protection capability. If not purchased, the enable operation returns the AuthFailure.ErrCodeNoPurchased error.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMStatusRequest"/></param>
+        /// <returns><see cref="ModifyLLMStatusResponse"/></returns>
+        public ModifyLLMStatusResponse ModifyLLMStatusSync(ModifyLLMStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMStatusResponse>(req, "ModifyLLMStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify llmwaf DLP rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafDLPRuleResponse"/></returns>
+        public Task<ModifyLLMWafDLPRuleResponse> ModifyLLMWafDLPRule(ModifyLLMWafDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafDLPRuleResponse>(req, "ModifyLLMWafDLPRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify llmwaf DLP rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafDLPRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafDLPRuleResponse"/></returns>
+        public ModifyLLMWafDLPRuleResponse ModifyLLMWafDLPRuleSync(ModifyLLMWafDLPRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafDLPRuleResponse>(req, "ModifyLLMWafDLPRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify LLM rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafProtectRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafProtectRuleResponse"/></returns>
+        public Task<ModifyLLMWafProtectRuleResponse> ModifyLLMWafProtectRule(ModifyLLMWafProtectRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafProtectRuleResponse>(req, "ModifyLLMWafProtectRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify LLM rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafProtectRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafProtectRuleResponse"/></returns>
+        public ModifyLLMWafProtectRuleResponse ModifyLLMWafProtectRuleSync(ModifyLLMWafProtectRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafProtectRuleResponse>(req, "ModifyLLMWafProtectRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify Tool Call rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafToolCallRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafToolCallRuleResponse"/></returns>
+        public Task<ModifyLLMWafToolCallRuleResponse> ModifyLLMWafToolCallRule(ModifyLLMWafToolCallRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafToolCallRuleResponse>(req, "ModifyLLMWafToolCallRule");
+        }
+
+        /// <summary>
+        /// This API is used to modify Tool Call rules.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLLMWafToolCallRuleRequest"/></param>
+        /// <returns><see cref="ModifyLLMWafToolCallRuleResponse"/></returns>
+        public ModifyLLMWafToolCallRuleResponse ModifyLLMWafToolCallRuleSync(ModifyLLMWafToolCallRuleRequest req)
+        {
+            return InternalRequestAsync<ModifyLLMWafToolCallRuleResponse>(req, "ModifyLLMWafToolCallRule")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Set the switch for the basic security module under a certain domain
         /// </summary>
         /// <param name="req"><see cref="ModifyModuleStatusRequest"/></param>
@@ -2257,6 +2719,27 @@ namespace TencentCloud.Waf.V20180125
         public SwitchElasticModeResponse SwitchElasticModeSync(SwitchElasticModeRequest req)
         {
             return InternalRequestAsync<SwitchElasticModeResponse>(req, "SwitchElasticMode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to upload a Skill ZIP file and trigger asynchronous security detection.
+        /// </summary>
+        /// <param name="req"><see cref="UploadSkillSecScanRequest"/></param>
+        /// <returns><see cref="UploadSkillSecScanResponse"/></returns>
+        public Task<UploadSkillSecScanResponse> UploadSkillSecScan(UploadSkillSecScanRequest req)
+        {
+            return InternalRequestAsync<UploadSkillSecScanResponse>(req, "UploadSkillSecScan");
+        }
+
+        /// <summary>
+        /// This API is used to upload a Skill ZIP file and trigger asynchronous security detection.
+        /// </summary>
+        /// <param name="req"><see cref="UploadSkillSecScanRequest"/></param>
+        /// <returns><see cref="UploadSkillSecScanResponse"/></returns>
+        public UploadSkillSecScanResponse UploadSkillSecScanSync(UploadSkillSecScanRequest req)
+        {
+            return InternalRequestAsync<UploadSkillSecScanResponse>(req, "UploadSkillSecScan")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,205 +25,181 @@ namespace TencentCloud.Dts.V20211206.Models
     {
         
         /// <summary>
-        /// Region name, such as `ap-guangzhou`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Region English name, for example: ap-guangzhou</p>
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Node type. proxy means the node type is host, set means the node type is node. proxy type must be the first item in the array. Source/target configuration for tdsqlmysql type is required.</p>
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }
 
         /// <summary>
-        /// Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Database kernel type, used in tdsql to differentiate between different kernels: percona, mariadb, mysql. Note that tdsql-C mysql and tdsql PostgreSQL do not need to fill in this field.</p>
         /// </summary>
         [JsonProperty("DbKernel")]
         public string DbKernel{ get; set; }
 
         /// <summary>
-        /// Database instance ID in the format of `cdb-powiqx8q`
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Database instance ID, in the format of: cdb-powiqx8q</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Instance IP address, which is required if the access type is not `cdb`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>IP address of the instance. This item is required when the access type is not cdb.</p>
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// Instance port, which is required if the access type is not `cdb`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Instance port. This item is required when the access type is not cdb.</p>
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// Username, which is required for an instance authenticated by username and password.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>User name, required for accessing instances that need username and password authentication.</p>
         /// </summary>
         [JsonProperty("User")]
         public string User{ get; set; }
 
         /// <summary>
-        /// Password, which is required for an instance authenticated by username and password.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Password is required for accessing instances that need username and password authentication.</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
         /// <summary>
-        /// Database name, which is required if the database type is `cdwpg`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Database name, required when the database is cdwpg</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
         /// <summary>
-        /// VPC ID in the format of `vpc-92jblxto`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Private network ID. This item is required for private network, Direct Connect, and VPN access methods, in the format of vpc-92jblxto.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// ID of the subnet in the VPC in the format of `subnet-3paxmkdz`, which is required if the access type is `vpc`, `dcg`, or `vpncloud`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Subnet ID under the private network. This item is required for private network, Direct Connect, and VPN access methods, in the format of subnet-3paxmkdz.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Short CVM instance ID in the format of `ins-olgl39y8`, which is required if the access type is `cvm`. It is the same as the instance ID displayed in the CVM console.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>CVM instance short ID, in the format of: ins-olgl39y8, is identical to the instance ID displayed on the cloud server console page. If it is a CVM self-created instance, this field is required.</p>
         /// </summary>
         [JsonProperty("CvmInstanceId")]
         public string CvmInstanceId{ get; set; }
 
         /// <summary>
-        /// Direct Connect gateway ID in the format of `dcg-0rxtqqxb`, which is required if the access type is `dcg`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Direct Connect gateway ID. This item is required for dedicated access type, in the format of: dcg-0rxtqqxb</p>
         /// </summary>
         [JsonProperty("UniqDcgId")]
         public string UniqDcgId{ get; set; }
 
         /// <summary>
-        /// VPN gateway ID in the format of `vpngw-9ghexg7q`, which is required if the access type is `vpncloud`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>VPN Gateway ID. This item is required for VPN access type, in the format of vpngw-9ghexg7q.</p>
         /// </summary>
         [JsonProperty("UniqVpnGwId")]
         public string UniqVpnGwId{ get; set; }
 
         /// <summary>
-        /// CCN instance ID in the format of `ccn-afp6kltc`, which is required if the access type is `ccn`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud Connect Network ID. This item is required for the CCN access type, for example: ccn-afp6kltc</p>
         /// </summary>
         [JsonProperty("CcnId")]
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// Cloud vendor type. For Alibaba Cloud ApsaraDB for RDS instances, enter `aliyun`; otherwise, enter `others`. Default value: `others`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud vendor type. For RDS instances, fill in aliyun. In other cases, fill in others. Default is others.</p>
         /// </summary>
         [JsonProperty("Supplier")]
         public string Supplier{ get; set; }
 
         /// <summary>
-        /// Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Database version. Valid only for RDS instances, ignored for other instances, in the format of 5.6 or 5.7, defaults to 5.6.</p>
         /// </summary>
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
         /// <summary>
-        /// Instance account, which is required if the operation is performed across accounts.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Account of the instance. This item is required if it is a cross-account instance.</p>
         /// </summary>
         [JsonProperty("Account")]
         public string Account{ get; set; }
 
         /// <summary>
-        /// The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Associated account is empty, self (means resources within this account), or other (means cross-account resources).</p>
         /// </summary>
         [JsonProperty("AccountMode")]
         public string AccountMode{ get; set; }
 
         /// <summary>
-        /// The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Role for cross-account sync, only allow [a-zA-Z0-9-_]+. This item is required if it is a cross-account instance.</p>
         /// </summary>
         [JsonProperty("AccountRole")]
         public string AccountRole{ get; set; }
 
         /// <summary>
-        /// External role ID
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>External role id</p>
         /// </summary>
         [JsonProperty("RoleExternalId")]
         public string RoleExternalId{ get; set; }
 
         /// <summary>
-        /// Temporary SecretId, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
         /// </summary>
         [JsonProperty("TmpSecretId")]
         public string TmpSecretId{ get; set; }
 
         /// <summary>
-        /// Temporary SecretKey, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials at https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role definition.</p>
         /// </summary>
         [JsonProperty("TmpSecretKey")]
         public string TmpSecretKey{ get; set; }
 
         /// <summary>
-        /// Temporary token, you can obtain the temporary key by [GetFederationToken](https://intl.cloud.tencent.com/document/product/1312/48195?from_cn_redirect=1). This field is required if it is a cross-account instance. Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Temporary key Id can be obtained by applying for role assumption temporary access credentials https://www.tencentcloud.com/document/product/1312/48197.?from_cn_redirect=1 Among them, the definition of the role resource RoleArn can be found in the DTS cross-account sync document (https://www.tencentcloud.com/document/product/571/68729?from_cn_redirect=1) Section 4 about role-based definition.</p>
         /// </summary>
         [JsonProperty("TmpToken")]
         public string TmpToken{ get; set; }
 
         /// <summary>
-        /// Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Whether to use encrypted transmission. UnEncrypted means no encrypted transmission, Encrypted means encrypted transmission. Default: UnEncrypted</p>
         /// </summary>
         [JsonProperty("EncryptConn")]
         public string EncryptConn{ get; set; }
 
         /// <summary>
-        /// Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Network environment of the database. Required when AccessType is Cloud Connect Network (ccn). UserIDC refers to User IDC, and TencentVPC refers to Tencent Cloud VPC.</p>
         /// </summary>
         [JsonProperty("DatabaseNetEnv")]
         public string DatabaseNetEnv{ get; set; }
 
         /// <summary>
-        /// The root account of CCN in the scenario where the database is connected to CCN under another Tencent Cloud account
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// <p>When the database is an instance of cross-account cloud networking, it refers to the main account to which the CCN belongs.</p>
         /// </summary>
         [JsonProperty("CcnOwnerUin")]
         public string CcnOwnerUin{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the ID of the sub-instance.</p>
         /// </summary>
         [JsonProperty("ChildInstanceId")]
         public string ChildInstanceId{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>When the database is cynos and it is a sub-database instance within the cynos cluster, this parameter is the type of the sub-instance, for example: pass ro for a read-only instance, pass rw for a read-write instance.</p>
         /// </summary>
         [JsonProperty("ChildInstanceType")]
         public string ChildInstanceType{ get; set; }
 
         /// <summary>
-        /// 
+        /// <p>Shard id of tdsql. Required if the node type is set.</p>
         /// </summary>
         [JsonProperty("SetId")]
         public string SetId{ get; set; }

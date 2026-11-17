@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>List of affected hosts for the vulnerability</p>
+        /// <p>List of affected hosts</p>
         /// </summary>
         [JsonProperty("List")]
         public VulHostBriefInfo[] List{ get; set; }
 
         /// <summary>
-        /// <p>Total number of qualified instances</p>
+        /// <p>Total number of eligible items</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

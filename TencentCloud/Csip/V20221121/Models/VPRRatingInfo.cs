@@ -27,8 +27,8 @@ namespace TencentCloud.Csip.V20221121.Models
         /// <summary>
         /// VPR rating result
         /// Enumeration value:
-        /// URGENT: Immediate repair
-        /// SUGGESTED: Suggested repairs
+        /// URGENT: immediate repair
+        /// SUGGESTED repairs
         /// DEFERRABLE: Deferrable repair
         /// </summary>
         [JsonProperty("Result")]
@@ -41,7 +41,7 @@ namespace TencentCloud.Csip.V20221121.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// List of stage rating details
+        /// List of phased rating details
         /// </summary>
         [JsonProperty("Stage")]
         public VPRRatingStage[] Stage{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// <p>Repair host list</p>
+        /// <p>Repairable host list</p>
         /// </summary>
         [JsonProperty("Data")]
         public VulFixableMachineItem[] Data{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Csip.V20221121.Models
         public long? FixableCount{ get; set; }
 
         /// <summary>
-        /// <p>Number of hosts that cannot be one-click repaired</p>
+        /// <p>Number of hosts that cannot be repaired with one click</p>
         /// </summary>
         [JsonProperty("NotFixableCount")]
         public long? NotFixableCount{ get; set; }
 
         /// <summary>
-        /// <p>Summary information of vulnerability dimension, showing overview of list of vulnerabilities to be fixed</p>
+        /// <p>Vulnerability dimensional summary, showing an overview of the list of repaired vulnerabilities</p>
         /// </summary>
         [JsonProperty("VulSummary")]
         public VulFixSummaryItem[] VulSummary{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Csip.V20221121.Models
     {
         
         /// <summary>
-        /// Vulnerability ID (empty for KB patch fix tasks)
+        /// Vulnerability ID (empty for KB patch repair tasks)
         /// </summary>
         [JsonProperty("VulId")]
         public long? VulId{ get; set; }
 
         /// <summary>
-        /// Patch ID (empty for vulnerability repair tasks)
+        /// KB patch ID (empty for vulnerability repair tasks)
         /// </summary>
         [JsonProperty("KBId")]
         public long? KBId{ get; set; }
@@ -47,26 +47,26 @@ namespace TencentCloud.Csip.V20221121.Models
         /// Enumeration value:
         /// 0: In remediation
         /// 1: All successful
-        /// 2: partially failed
+        /// 2: Partially failed
         /// 3: All failed
         /// </summary>
         [JsonProperty("FixStatus")]
         public long? FixStatus{ get; set; }
 
         /// <summary>
-        /// Total hosts associated with the vulnerability/KB patch
+        /// Total number of hosts associated with this vulnerability/KB patch
         /// </summary>
         [JsonProperty("HostCount")]
         public long? HostCount{ get; set; }
 
         /// <summary>
-        /// Number of hosts successfully fixed by the vulnerability/KB patch
+        /// Number of hosts successfully fixed by this vulnerability/KB patch
         /// </summary>
         [JsonProperty("SuccessHostCount")]
         public long? SuccessHostCount{ get; set; }
 
         /// <summary>
-        /// Number of hosts failed to be fixed for the vulnerability/KB patch
+        /// Number of hosts failed to be fixed by this vulnerability/KB patch
         /// </summary>
         [JsonProperty("FailHostCount")]
         public long? FailHostCount{ get; set; }

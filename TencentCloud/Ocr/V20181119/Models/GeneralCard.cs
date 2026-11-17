@@ -73,7 +73,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string MiddleNameLocal{ get; set; }
 
         /// <summary>
-        /// <p>Last name</p>
+        /// <p>Surname</p>
         /// </summary>
         [JsonProperty("LastName")]
         public string LastName{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string LastNameLocal{ get; set; }
 
         /// <summary>
-        /// <p>Gender on the document</p><ul><li>M: man</li><li>F: woman</li><li>X: other gender identity</li></ul>
+        /// <p>Gender on the document</p><ul><li>M: Man</li><li>F: Woman</li><li>X: Other gender identity</li></ul>
         /// </summary>
         [JsonProperty("Sex")]
         public string Sex{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssuedAuthority{ get; set; }
 
         /// <summary>
-        /// <p>Place where the specified file is issued</p>
+        /// <p>Place where the file is issued.</p>
         /// </summary>
         [JsonProperty("IssuedPlace")]
         public string IssuedPlace{ get; set; }
@@ -139,7 +139,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ExpirationDate{ get; set; }
 
         /// <summary>
-        /// <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the order in which the line appears in the MRZ</p>
+        /// <p>Content of the single-line machine-readable zone (MRZ) on the document. The number represents the line count in the order of the MRZ</p>
         /// </summary>
         [JsonProperty("MRZLine1")]
         public string MRZLine1{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Nationality{ get; set; }
 
         /// <summary>
-        /// <p>Address information on the document</p>
+        /// <p>Document address information</p>
         /// </summary>
         [JsonProperty("Address")]
         public AddressInfo Address{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Height{ get; set; }
 
         /// <summary>
-        /// <p>Weight</p>
+        /// <p>Weight.</p>
         /// </summary>
         [JsonProperty("Weight")]
         public string Weight{ get; set; }
@@ -199,13 +199,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string VehicleClass{ get; set; }
 
         /// <summary>
-        /// <p>Driver's license restriction condition</p>
+        /// <p>Driver's license restrictions</p>
         /// </summary>
         [JsonProperty("Restrictions")]
         public string Restrictions{ get; set; }
 
         /// <summary>
-        /// <p>Driver's license extra records</p>
+        /// <p>Additional driver's license records</p>
         /// </summary>
         [JsonProperty("Endorsement")]
         public string Endorsement{ get; set; }
@@ -231,7 +231,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string PassportCodeSecond{ get; set; }
 
         /// <summary>
-        /// <p>Validity date, in YYYY-MM-DD format</p>
+        /// <p>Validity period, in YYYY-MM-DD format</p>
         /// </summary>
         [JsonProperty("DueDate")]
         [System.Obsolete]
@@ -250,6 +250,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RegistrationNumber")]
         [System.Obsolete]
         public string RegistrationNumber{ get; set; }
+
+        /// <summary>
+        /// <p>Complete enumeration of specific card types confirmed by server-side classification (for example, THA_ID_CARD). Wildcards are not returned.</p>
+        /// </summary>
+        [JsonProperty("DetectedCardType")]
+        public string DetectedCardType{ get; set; }
 
 
         /// <summary>
@@ -294,6 +300,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "DueDate", this.DueDate);
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
+            this.SetParamSimple(map, prefix + "DetectedCardType", this.DetectedCardType);
         }
     }
 }
