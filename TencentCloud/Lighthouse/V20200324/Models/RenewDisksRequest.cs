@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// Parameter settings for renewing the monthly subscribed cloud disk.
+        /// Parameter settings for renewing the yearly/monthly subscribed cloud disk.
         /// </summary>
         [JsonProperty("RenewDiskChargePrepaid")]
         public RenewDiskChargePrepaid RenewDiskChargePrepaid{ get; set; }

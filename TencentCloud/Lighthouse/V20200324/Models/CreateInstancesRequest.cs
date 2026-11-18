@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BlueprintId{ get; set; }
 
         /// <summary>
-        /// Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
+        /// Yearly/monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+        /// Number of the instances to purchase. For yearly/monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
         /// </summary>
         [JsonProperty("InstanceCount")]
         public ulong? InstanceCount{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
+        /// Login password of the instance. It's only available for Windows instances. If it's not specified, it means that the user choose to set the login password after the instance creation.
         /// </summary>
         [JsonProperty("LoginConfiguration")]
         public LoginConfiguration LoginConfiguration{ get; set; }
@@ -93,6 +93,36 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }
+
+        /// <summary>
+        /// Firewall template ID. If not specified, the default firewall policy is used.
+        /// </summary>
+        [JsonProperty("FirewallTemplateId")]
+        public string FirewallTemplateId{ get; set; }
+
+        /// <summary>
+        /// Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// The command to be automatically executed after the instance is created.
+        /// </summary>
+        [JsonProperty("InitCommand")]
+        public Command InitCommand{ get; set; }
+
+        /// <summary>
+        /// The primary domain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
+        /// The subdomain. Note: Once a domain is specified, only a single instance can be purchased (`InstanceCount` must be set to 1).
+        /// </summary>
+        [JsonProperty("Subdomain")]
+        public string Subdomain{ get; set; }
 
 
         /// <summary>
@@ -111,6 +141,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+            this.SetParamSimple(map, prefix + "FirewallTemplateId", this.FirewallTemplateId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "InitCommand.", this.InitCommand);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Subdomain", this.Subdomain);
         }
     }
 }

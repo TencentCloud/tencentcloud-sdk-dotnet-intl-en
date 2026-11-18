@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Parameter settings for purchasing the monthly subscribed cloud disk.
+        /// Parameter settings for purchasing the yearly/monthly subscribed cloud disk.
         /// </summary>
         [JsonProperty("DiskChargePrepaid")]
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? DiskCount{ get; set; }
 
         /// <summary>
-        /// Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+        /// Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }

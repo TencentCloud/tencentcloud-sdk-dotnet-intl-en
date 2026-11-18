@@ -43,7 +43,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// Parameters of monthly subscribed cloud disks
+        /// Parameters of yearly/monthly subscribed cloud disks
         /// </summary>
         [JsonProperty("DiskChargePrepaid")]
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? DiskCount{ get; set; }
 
         /// <summary>
-        /// Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+        /// Specify the quota of disk backups. No quota if it's left empty. Only one quota is allowed.
         /// </summary>
         [JsonProperty("DiskBackupQuota")]
         public long? DiskBackupQuota{ get; set; }
@@ -78,6 +78,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("AutoMountConfiguration")]
         public AutoMountConfiguration AutoMountConfiguration{ get; set; }
 
+        /// <summary>
+        /// Tag key and tag value. If multiple tags are specified, they are created and bound to the specified resources at the same time. A tag key can have only one value on a given resource. If you attempt to add a tag with an existing key, its value is updated to the new value. Tags that do not exist are created automatically. The array supports a maximum of 10 elements.
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// IDs of target instances. You can get the IDs from the `InstanceId` parameter returned by the `DescribeInstances` API. Up to 15 instances can be specified at the same time.
+        /// List of instance IDs. One or more IDs of the instances to be operated. You can obtain the InstanceId from the value returned by the [DescribeInstances](https://www.tencentcloud.com/document/api/1207/47573?from_cn_redirect=1) API. The maximum number of instances in each request is 15.
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// ID of bundles to change. You can get the IDs from the `BundleId` returned by the [DescribeBundles](https://intl.cloud.tencent.com/document/api/1207/47575?from_cn_redirect=1).
+        /// ID of the target bundle. Note that it cannot be the same as the current bundle ID of the instance to be upgraded. You can obtain the BundleId from the value returned by the [DescribeBundles](https://www.tencentcloud.com/document/api/1207/47575?from_cn_redirect=1) API.
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
