@@ -28,7 +28,7 @@ namespace TencentCloud.Lighthouse.V20200324
 
        private const string endpoint = "lighthouse.intl.tencentcloudapi.com";
        private const string version = "2020-03-24";
-       private const string sdkVersion = "SDK_NET_3.0.1428";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -1565,7 +1565,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to change the auto-renewal setting of monthly-subscribed instances. 
+        /// This API is used to change the auto-renewal setting of yearly/monthly-subscribed instances. 
         /// 
         /// * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
         /// * Batch operations are supported. Up to 100 instances per request is allowed.
@@ -1578,7 +1578,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// This API is used to change the auto-renewal setting of monthly-subscribed instances. 
+        /// This API is used to change the auto-renewal setting of yearly/monthly-subscribed instances. 
         /// 
         /// * Instances with auto-renewal enabled are automatically renewed on a monthly basis upon the expiration. 
         /// * Batch operations are supported. Up to 100 instances per request is allowed.

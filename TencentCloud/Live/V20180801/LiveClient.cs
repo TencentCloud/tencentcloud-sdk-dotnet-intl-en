@@ -28,7 +28,7 @@ namespace TencentCloud.Live.V20180801
 
        private const string endpoint = "live.intl.tencentcloudapi.com";
        private const string version = "2018-08-01";
-       private const string sdkVersion = "SDK_NET_3.0.1407";
+       private const string sdkVersion = "SDK_NET_3.0.1429";
 
         /// <summary>
         /// Client constructor.
@@ -2737,6 +2737,27 @@ namespace TencentCloud.Live.V20180801
         public StopRecordTaskResponse StopRecordTaskSync(StopRecordTaskRequest req)
         {
             return InternalRequestAsync<StopRecordTaskResponse>(req, "StopRecordTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to terminate a screenshot task in advance. After the task is successfully terminated, it will not be started again.
+        /// </summary>
+        /// <param name="req"><see cref="StopScreenshotTaskRequest"/></param>
+        /// <returns><see cref="StopScreenshotTaskResponse"/></returns>
+        public Task<StopScreenshotTaskResponse> StopScreenshotTask(StopScreenshotTaskRequest req)
+        {
+            return InternalRequestAsync<StopScreenshotTaskResponse>(req, "StopScreenshotTask");
+        }
+
+        /// <summary>
+        /// This API is used to terminate a screenshot task in advance. After the task is successfully terminated, it will not be started again.
+        /// </summary>
+        /// <param name="req"><see cref="StopScreenshotTaskRequest"/></param>
+        /// <returns><see cref="StopScreenshotTaskResponse"/></returns>
+        public StopScreenshotTaskResponse StopScreenshotTaskSync(StopScreenshotTaskRequest req)
+        {
+            return InternalRequestAsync<StopScreenshotTaskResponse>(req, "StopScreenshotTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
