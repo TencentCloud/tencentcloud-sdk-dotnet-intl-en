@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1427</VersionPrefix>
+    <VersionPrefix>3.0.1431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,7 @@
     <Compile Include="V20181119\Models\DetectedWords.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiRequest.cs" />
     <Compile Include="V20181119\Models\ExtractDocMultiResponse.cs" />
+    <Compile Include="V20181119\Models\ExtractedFields.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRRequest.cs" />
     <Compile Include="V20181119\Models\GeneralAccurateOCRResponse.cs" />
     <Compile Include="V20181119\Models\GeneralBasicOCRRequest.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="V20181119\Models\PassportRecognizeInfos.cs" />
     <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
     <Compile Include="V20181119\Models\PermitOCRResponse.cs" />
+    <Compile Include="V20181119\Models\PersonInfo.cs" />
     <Compile Include="V20181119\Models\Polygon.cs" />
     <Compile Include="V20181119\Models\PortraitImageInfo.cs" />
     <Compile Include="V20181119\Models\RecognizeBrazilCommonOCRRequest.cs" />
@@ -139,12 +141,16 @@
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeThaiPinkCardRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeThaiPinkCardResponse.cs" />
+    <Compile Include="V20181119\Models\Record.cs" />
+    <Compile Include="V20181119\Models\SignResult.cs" />
     <Compile Include="V20181119\Models\SkippedCheck.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRV2Request.cs" />
     <Compile Include="V20181119\Models\SmartStructuralOCRV2Response.cs" />
     <Compile Include="V20181119\Models\TextDetection.cs" />
     <Compile Include="V20181119\Models\TextDetectionResult.cs" />
     <Compile Include="V20181119\Models\Value.cs" />
+    <Compile Include="V20181119\Models\VerifyPdfOcrRequest.cs" />
+    <Compile Include="V20181119\Models\VerifyPdfOcrResponse.cs" />
     <Compile Include="V20181119\Models\VinOCRRequest.cs" />
     <Compile Include="V20181119\Models\VinOCRResponse.cs" />
     <Compile Include="V20181119\Models\WordItem.cs" />

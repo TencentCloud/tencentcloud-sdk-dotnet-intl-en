@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220106
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-01-06";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.

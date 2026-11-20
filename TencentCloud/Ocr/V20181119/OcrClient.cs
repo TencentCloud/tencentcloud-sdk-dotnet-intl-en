@@ -28,7 +28,7 @@ namespace TencentCloud.Ocr.V20181119
 
        private const string endpoint = "ocr.intl.tencentcloudapi.com";
        private const string version = "2018-11-19";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1431";
 
         /// <summary>
         /// Client constructor.
@@ -850,6 +850,27 @@ namespace TencentCloud.Ocr.V20181119
         public SmartStructuralOCRV2Response SmartStructuralOCRV2Sync(SmartStructuralOCRV2Request req)
         {
             return InternalRequestAsync<SmartStructuralOCRV2Response>(req, "SmartStructuralOCRV2")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to recognize entry and exit record PDFs and verify electronic signatures, returning structured entry and exit records and signature verification conclusions.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPdfOcrRequest"/></param>
+        /// <returns><see cref="VerifyPdfOcrResponse"/></returns>
+        public Task<VerifyPdfOcrResponse> VerifyPdfOcr(VerifyPdfOcrRequest req)
+        {
+            return InternalRequestAsync<VerifyPdfOcrResponse>(req, "VerifyPdfOcr");
+        }
+
+        /// <summary>
+        /// This API is used to recognize entry and exit record PDFs and verify electronic signatures, returning structured entry and exit records and signature verification conclusions.
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPdfOcrRequest"/></param>
+        /// <returns><see cref="VerifyPdfOcrResponse"/></returns>
+        public VerifyPdfOcrResponse VerifyPdfOcrSync(VerifyPdfOcrRequest req)
+        {
+            return InternalRequestAsync<VerifyPdfOcrResponse>(req, "VerifyPdfOcr")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
