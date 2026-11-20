@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Field to be filtered.
+        /// Fields to be filtered.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Filter value of field.
+        /// Filter value of the field.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

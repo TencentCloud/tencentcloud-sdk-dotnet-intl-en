@@ -25,21 +25,21 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// Network billing mode. Valid values:
-        /// <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>
-        /// <li>Bill by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
+        /// Network billing type. Valid values:
+        /// <li>Pay-as-you-go by traffic: TRAFFIC_POSTPAID_BY_HOUR</li>
+        /// <li>Pay-as-you-go by bandwidth: BANDWIDTH_POSTPAID_BY_HOUR</li>
         /// </summary>
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// Public network outbound bandwidth cap in Mbps.
+        /// Maximum outbound public bandwidth, in the unit of Mbps.
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
 
         /// <summary>
-        /// Whether to assign a public IP.
+        /// Indicates whether a public IP is assigned.
         /// </summary>
         [JsonProperty("PublicIpAssigned")]
         public bool? PublicIpAssigned{ get; set; }

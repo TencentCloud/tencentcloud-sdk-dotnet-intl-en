@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// User ID.
+        /// <p>uid.</p>
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

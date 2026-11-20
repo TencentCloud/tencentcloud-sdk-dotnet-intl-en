@@ -31,7 +31,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Package ID.
+        /// Bundle ID.
         /// </summary>
         [JsonProperty("BundleId")]
         public string BundleId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string BlueprintId{ get; set; }
 
         /// <summary>
-        /// Number of instance CPU cores.
+        /// Number of CPU cores for the instance, in cores.
         /// </summary>
         [JsonProperty("CPU")]
         public long? CPU{ get; set; }
 
         /// <summary>
-        /// Instance memory capacity in GB.
+        /// Instance memory capacity, in GB.
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// Instance billing mode. Valid values: 
-        /// PREPAID: prepaid (i.e., monthly subscription).
+        /// PREPAID: prepaid, that is, monthly or yearly subscription.
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
@@ -74,15 +74,15 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// Private IP of instance primary ENI. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Private IP of the instance's primary NIC. 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PrivateAddresses")]
         public string[] PrivateAddresses{ get; set; }
 
         /// <summary>
-        /// Public IP of instance primary ENI. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Public IP of the instance's primary NIC. 
+        /// Note: This field may return null, indicating that no valid value can be obtained.
         /// </summary>
         [JsonProperty("PublicAddresses")]
         public string[] PublicAddresses{ get; set; }
@@ -94,93 +94,96 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InternetAccessible InternetAccessible{ get; set; }
 
         /// <summary>
-        /// Auto-Renewal flag. Valid values: 
-        /// NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically  
-        /// NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
+        /// Auto-renewal flag. Valid values: 
+        /// NOTIFY_AND_MANUAL_RENEW: Notify when the subscription is about to expire, but do not renew automatically.  
+        /// NOTIFY_AND_AUTO_RENEW: Notify when the subscription is about to expire and renew automatically. DISABLE_NOTIFY_AND_MANUAL_RENEW: Do not renew automatically or send notifications.
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// Instance login settings.
+        /// Instance login setting.
         /// </summary>
         [JsonProperty("LoginSettings")]
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
         /// Instance status. Valid values: 
-        /// <li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
+        /// <li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting the rescue mode</li>
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
 
         /// <summary>
-        /// Globally unique ID of instance.
+        /// Globally unique ID of the instance.
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
+        /// Latest operation on the instance, such as StopInstances and ResetInstance. Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestOperation")]
         public string LatestOperation{ get; set; }
 
         /// <summary>
-        /// Last instance operation status. Valid values: 
-        /// SUCCESS: operation succeeded 
-        /// OPERATING: the operation is being executed 
-        /// FAILED: operation failed 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Status of the latest operation on the instance. Valid values: 
+        /// SUCCESS: The operation succeeded. 
+        /// OPERATING: The operation is in progress. 
+        /// FAILED: The operation failed. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestOperationState")]
         public string LatestOperationState{ get; set; }
 
         /// <summary>
-        /// Unique request ID for the last operation of the instance. 
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// Unique request ID of the latest operation on the instance. 
+        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("LatestOperationRequestId")]
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
-        /// Isolation time according to ISO 8601 standard. UTC time is used. 
+        /// Start time of the latest operation on the instance.
+        /// </summary>
+        [JsonProperty("LatestOperationStartedTime")]
+        public string LatestOperationStartedTime{ get; set; }
+
+        /// <summary>
+        /// Isolation time in UTC, formatted according to the ISO 8601 standard. 
         /// Format: YYYY-MM-DDThh:mm:ssZ.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
 
         /// <summary>
-        /// Creation time according to ISO 8601 standard. UTC time is used. 
+        /// Creation time in UTC, formatted according to the ISO 8601 standard. 
         /// Format: YYYY-MM-DDThh:mm:ssZ.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// Expiration time according to ISO 8601 standard. UTC time is used. 
+        /// Expiration time in UTC, formatted according to the ISO 8601 standard. 
         /// Format: YYYY-MM-DDThh:mm:ssZ.
-        /// Note: this field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// OS type, such as LINUX_UNIX and WINDOWS.
+        /// Operating system platform type, such as LINUX_UNIX and WINDOWS.
         /// </summary>
         [JsonProperty("PlatformType")]
         public string PlatformType{ get; set; }
 
         /// <summary>
-        /// OS type.
+        /// Operating system platform.
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// OS name.
+        /// Operating system name.
         /// </summary>
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
@@ -192,17 +195,29 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// The list of tags associated with the instance
+        /// List of tags bound to the instance.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Obtain instance status
-        /// <li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+        /// Instance ban status. Valid values:
+        /// <li>NORMAL: The instance is normal.</li><li>NETWORK_RESTRICT: The instance is banned from network access.</li>
         /// </summary>
         [JsonProperty("InstanceRestrictState")]
         public string InstanceRestrictState{ get; set; }
+
+        /// <summary>
+        /// Invocation ID of the TAT command to be automatically executed after the instance is created.
+        /// </summary>
+        [JsonProperty("InitInvocationId")]
+        public string InitInvocationId{ get; set; }
+
+        /// <summary>
+        /// Instance violation details.
+        /// </summary>
+        [JsonProperty("InstanceViolationDetail")]
+        public InstanceViolationDetail InstanceViolationDetail{ get; set; }
 
 
         /// <summary>
@@ -228,6 +243,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
             this.SetParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+            this.SetParamSimple(map, prefix + "LatestOperationStartedTime", this.LatestOperationStartedTime);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
@@ -237,6 +253,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
+            this.SetParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
+            this.SetParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Trtc.V20190722
 
        private const string endpoint = "trtc.intl.tencentcloudapi.com";
        private const string version = "2019-07-22";
-       private const string sdkVersion = "SDK_NET_3.0.1393";
+       private const string sdkVersion = "SDK_NET_3.0.1430";
 
         /// <summary>
         /// Client constructor.
@@ -71,6 +71,27 @@ namespace TencentCloud.Trtc.V20190722
         public ControlAIConversationResponse ControlAIConversationSync(ControlAIConversationRequest req)
         {
             return InternalRequestAsync<ControlAIConversationResponse>(req, "ControlAIConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to control it.
+        /// </summary>
+        /// <param name="req"><see cref="ControlVoiceConversationRequest"/></param>
+        /// <returns><see cref="ControlVoiceConversationResponse"/></returns>
+        public Task<ControlVoiceConversationResponse> ControlVoiceConversation(ControlVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ControlVoiceConversationResponse>(req, "ControlVoiceConversation");
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to control it.
+        /// </summary>
+        /// <param name="req"><see cref="ControlVoiceConversationRequest"/></param>
+        /// <returns><see cref="ControlVoiceConversationResponse"/></returns>
+        public ControlVoiceConversationResponse ControlVoiceConversationSync(ControlVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ControlVoiceConversationResponse>(req, "ControlVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -201,6 +222,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// This API is used to create an AI conversation task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVoiceConversationRequest"/></param>
+        /// <returns><see cref="CreateVoiceConversationResponse"/></returns>
+        public Task<CreateVoiceConversationResponse> CreateVoiceConversation(CreateVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<CreateVoiceConversationResponse>(req, "CreateVoiceConversation");
+        }
+
+        /// <summary>
+        /// This API is used to create an AI conversation task.
+        /// </summary>
+        /// <param name="req"><see cref="CreateVoiceConversationRequest"/></param>
+        /// <returns><see cref="CreateVoiceConversationResponse"/></returns>
+        public CreateVoiceConversationResponse CreateVoiceConversationSync(CreateVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<CreateVoiceConversationResponse>(req, "CreateVoiceConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to stop submission for moderation after the cloud moderation task is successfully started.
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudModerationRequest"/></param>
@@ -281,6 +323,27 @@ namespace TencentCloud.Trtc.V20190722
         public DeleteCloudTranscriptionResponse DeleteCloudTranscriptionSync(DeleteCloudTranscriptionRequest req)
         {
             return InternalRequestAsync<DeleteCloudTranscriptionResponse>(req, "DeleteCloudTranscription")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to stop it.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceConversationRequest"/></param>
+        /// <returns><see cref="DeleteVoiceConversationResponse"/></returns>
+        public Task<DeleteVoiceConversationResponse> DeleteVoiceConversation(DeleteVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceConversationResponse>(req, "DeleteVoiceConversation");
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to stop it.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVoiceConversationRequest"/></param>
+        /// <returns><see cref="DeleteVoiceConversationResponse"/></returns>
+        public DeleteVoiceConversationResponse DeleteVoiceConversationSync(DeleteVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DeleteVoiceConversationResponse>(req, "DeleteVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -867,6 +930,27 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// After a conversation task starts successfully, use this API to query the conversation status. It can be used only while the conversation task is in progress. Querying after the conversation task exits returns an error.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoiceConversationRequest"/></param>
+        /// <returns><see cref="DescribeVoiceConversationResponse"/></returns>
+        public Task<DescribeVoiceConversationResponse> DescribeVoiceConversation(DescribeVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeVoiceConversationResponse>(req, "DescribeVoiceConversation");
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to query the conversation status. It can be used only while the conversation task is in progress. Querying after the conversation task exits returns an error.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoiceConversationRequest"/></param>
+        /// <returns><see cref="DescribeVoiceConversationResponse"/></returns>
+        public DescribeVoiceConversationResponse DescribeVoiceConversationSync(DescribeVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<DescribeVoiceConversationResponse>(req, "DescribeVoiceConversation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Queries the status of a web-page recording task
         /// </summary>
         /// <param name="req"><see cref="DescribeWebRecordRequest"/></param>
@@ -989,6 +1073,27 @@ namespace TencentCloud.Trtc.V20190722
         public ModifyCloudSliceTaskResponse ModifyCloudSliceTaskSync(ModifyCloudSliceTaskRequest req)
         {
             return InternalRequestAsync<ModifyCloudSliceTaskResponse>(req, "ModifyCloudSliceTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to modify its configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVoiceConversationRequest"/></param>
+        /// <returns><see cref="ModifyVoiceConversationResponse"/></returns>
+        public Task<ModifyVoiceConversationResponse> ModifyVoiceConversation(ModifyVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ModifyVoiceConversationResponse>(req, "ModifyVoiceConversation");
+        }
+
+        /// <summary>
+        /// After a conversation task starts successfully, use this API to modify its configuration.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVoiceConversationRequest"/></param>
+        /// <returns><see cref="ModifyVoiceConversationResponse"/></returns>
+        public ModifyVoiceConversationResponse ModifyVoiceConversationSync(ModifyVoiceConversationRequest req)
+        {
+            return InternalRequestAsync<ModifyVoiceConversationResponse>(req, "ModifyVoiceConversation")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

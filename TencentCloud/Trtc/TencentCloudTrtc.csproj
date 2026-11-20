@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1393</VersionPrefix>
+    <VersionPrefix>3.0.1430</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20190722\Models\CloudVod.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\ControlAIConversationResponse.cs" />
+    <Compile Include="V20190722\Models\ControlVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\ControlVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
@@ -73,6 +75,8 @@
     <Compile Include="V20190722\Models\CreateCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\CreateCloudTranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\CreateCloudTranscriptionResponse.cs" />
+    <Compile Include="V20190722\Models\CreateVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\CreateVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudModerationResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
@@ -81,6 +85,8 @@
     <Compile Include="V20190722\Models\DeleteCloudSliceTaskResponse.cs" />
     <Compile Include="V20190722\Models\DeleteCloudTranscriptionRequest.cs" />
     <Compile Include="V20190722\Models\DeleteCloudTranscriptionResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationRequest.cs" />
     <Compile Include="V20190722\Models\DescribeAIConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAITranscriptionRequest.cs" />
@@ -125,6 +131,8 @@
     <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\DescribeWebRecordRequest.cs" />
     <Compile Include="V20190722\Models\DescribeWebRecordResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />
@@ -135,6 +143,7 @@
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
     <Compile Include="V20190722\Models\InvokeLLM.cs" />
+    <Compile Include="V20190722\Models\KeyValueItem.cs" />
     <Compile Include="V20190722\Models\MaxVideoUser.cs" />
     <Compile Include="V20190722\Models\McuAudioParams.cs" />
     <Compile Include="V20190722\Models\McuBackgroundCustomRender.cs" />
@@ -169,6 +178,8 @@
     <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\ModifyCloudSliceTaskRequest.cs" />
     <Compile Include="V20190722\Models\ModifyCloudSliceTaskResponse.cs" />
+    <Compile Include="V20190722\Models\ModifyVoiceConversationRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyVoiceConversationResponse.cs" />
     <Compile Include="V20190722\Models\PronunciationDict.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
     <Compile Include="V20190722\Models\QueryAIMessageListRequest.cs" />
@@ -251,6 +262,18 @@
     <Compile Include="V20190722\Models\Voice.cs" />
     <Compile Include="V20190722\Models\VoiceCloneRequest.cs" />
     <Compile Include="V20190722\Models\VoiceCloneResponse.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationDialogConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationHistoryContent.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationHistoryMessage.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationInvokeLLM.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationInvokeTTS.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationLLMConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationMcpServer.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationS2SConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationSTTConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationTTSConfig.cs" />
+    <Compile Include="V20190722\Models\VoiceConversationVisionConfig.cs" />
     <Compile Include="V20190722\Models\VoicePrint.cs" />
     <Compile Include="V20190722\Models\WaterMark.cs" />
     <Compile Include="V20190722\Models\WaterMarkChar.cs" />
