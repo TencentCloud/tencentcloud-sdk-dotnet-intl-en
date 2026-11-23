@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1431";
+       private const string sdkVersion = "SDK_NET_3.0.1433";
 
         /// <summary>
         /// Client constructor.
@@ -395,6 +395,27 @@ namespace TencentCloud.Teo.V20220901
         public CreateContentIdentifierResponse CreateContentIdentifierSync(CreateContentIdentifierRequest req)
         {
             return InternalRequestAsync<CreateContentIdentifierResponse>(req, "CreateContentIdentifier")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create a custom group. A custom group is used to centrally manage a set of reusable matching entries. For example, you can save multiple JA3/JA4 TLS fingerprints as a TLS fingerprint group and directly reference the group in security rules, avoiding the need to maintain the same fingerprint list in multiple rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public Task<CreateCustomGroupResponse> CreateCustomGroup(CreateCustomGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCustomGroupResponse>(req, "CreateCustomGroup");
+        }
+
+        /// <summary>
+        /// This API is used to create a custom group. A custom group is used to centrally manage a set of reusable matching entries. For example, you can save multiple JA3/JA4 TLS fingerprints as a TLS fingerprint group and directly reference the group in security rules, avoiding the need to maintain the same fingerprint list in multiple rules.
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public CreateCustomGroupResponse CreateCustomGroupSync(CreateCustomGroupRequest req)
+        {
+            return InternalRequestAsync<CreateCustomGroupResponse>(req, "CreateCustomGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1255,6 +1276,27 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// This API is used to delete a specified custom group. If the group is referenced by a rule, deletion is not allowed. Remove the reference first.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomGroupRequest"/></param>
+        /// <returns><see cref="DeleteCustomGroupResponse"/></returns>
+        public Task<DeleteCustomGroupResponse> DeleteCustomGroup(DeleteCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomGroupResponse>(req, "DeleteCustomGroup");
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified custom group. If the group is referenced by a rule, deletion is not allowed. Remove the reference first.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomGroupRequest"/></param>
+        /// <returns><see cref="DeleteCustomGroupResponse"/></returns>
+        public DeleteCustomGroupResponse DeleteCustomGroupSync(DeleteCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteCustomGroupResponse>(req, "DeleteCustomGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// You can use this API to batch delete DNS records.
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
@@ -2062,6 +2104,69 @@ namespace TencentCloud.Teo.V20220901
         public DescribeCustomErrorPagesResponse DescribeCustomErrorPagesSync(DescribeCustomErrorPagesRequest req)
         {
             return InternalRequestAsync<DescribeCustomErrorPagesResponse>(req, "DescribeCustomErrorPages")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information of a custom group, including all entries in the group (returned with pagination via Limit/Offset). The DescribeCustomGroups list API returns up to the first 500 entries for each group. To obtain all entries, use this API. The GroupId can be obtained from the response of CreateCustomGroup or by querying DescribeCustomGroups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public Task<DescribeCustomGroupResponse> DescribeCustomGroup(DescribeCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupResponse>(req, "DescribeCustomGroup");
+        }
+
+        /// <summary>
+        /// This API is used to query the detailed information of a custom group, including all entries in the group (returned with pagination via Limit/Offset). The DescribeCustomGroups list API returns up to the first 500 entries for each group. To obtain all entries, use this API. The GroupId can be obtained from the response of CreateCustomGroup or by querying DescribeCustomGroups.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public DescribeCustomGroupResponse DescribeCustomGroupSync(DescribeCustomGroupRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupResponse>(req, "DescribeCustomGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to obtain the security policy configuration that uses a custom group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupReferencesResponse"/></returns>
+        public Task<DescribeCustomGroupReferencesResponse> DescribeCustomGroupReferences(DescribeCustomGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupReferencesResponse>(req, "DescribeCustomGroupReferences");
+        }
+
+        /// <summary>
+        /// This API is used to obtain the security policy configuration that uses a custom group.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupReferencesRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupReferencesResponse"/></returns>
+        public DescribeCustomGroupReferencesResponse DescribeCustomGroupReferencesSync(DescribeCustomGroupReferencesRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupReferencesResponse>(req, "DescribeCustomGroupReferences")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of custom groups under a specified site. This API returns only the first 500 entries of each custom group. To query all entries in a group, use the DescribeSecurityCustomGroup API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupsRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupsResponse"/></returns>
+        public Task<DescribeCustomGroupsResponse> DescribeCustomGroups(DescribeCustomGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupsResponse>(req, "DescribeCustomGroups");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of custom groups under a specified site. This API returns only the first 500 entries of each custom group. To query all entries in a group, use the DescribeSecurityCustomGroup API.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupsRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupsResponse"/></returns>
+        public DescribeCustomGroupsResponse DescribeCustomGroupsSync(DescribeCustomGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeCustomGroupsResponse>(req, "DescribeCustomGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -4184,6 +4289,27 @@ namespace TencentCloud.Teo.V20220901
         public ModifyCustomErrorPageResponse ModifyCustomErrorPageSync(ModifyCustomErrorPageRequest req)
         {
             return InternalRequestAsync<ModifyCustomErrorPageResponse>(req, "ModifyCustomErrorPage")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the content of a custom group. GroupType cannot be modified after creation. When modifying entries in the group, you can specify replacement, append, or removal operations through GroupItemOperation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomGroupRequest"/></param>
+        /// <returns><see cref="ModifyCustomGroupResponse"/></returns>
+        public Task<ModifyCustomGroupResponse> ModifyCustomGroup(ModifyCustomGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomGroupResponse>(req, "ModifyCustomGroup");
+        }
+
+        /// <summary>
+        /// This API is used to modify the content of a custom group. GroupType cannot be modified after creation. When modifying entries in the group, you can specify replacement, append, or removal operations through GroupItemOperation.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomGroupRequest"/></param>
+        /// <returns><see cref="ModifyCustomGroupResponse"/></returns>
+        public ModifyCustomGroupResponse ModifyCustomGroupSync(ModifyCustomGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyCustomGroupResponse>(req, "ModifyCustomGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

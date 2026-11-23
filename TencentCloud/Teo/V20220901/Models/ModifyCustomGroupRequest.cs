@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Teo.V20220901.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ModifyCustomGroupRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>Site ID.</p>
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// <p>Unique ID of the custom group.</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>Custom group name. If this field is not specified, the original value is retained.</p>
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
+        /// <summary>
+        /// <p>Specifies how to update GroupItems.</p><p>Valid values:</p><ul><li>Replace: Replaces the entire original entry list with GroupItems.</li><li>Append: Appends GroupItems to the group entry list.</li><li>Remove: Removes entries whose Content and ItemType are the same as those in GroupItems from the original entry list. If a specified entry does not exist, it is ignored.</li></ul><p>Default value: Replace</p>
+        /// </summary>
+        [JsonProperty("GroupItemOperation")]
+        public string GroupItemOperation{ get; set; }
+
+        /// <summary>
+        /// <p>List of custom group entries. If this field is not specified, the original value is retained.</p>
+        /// </summary>
+        [JsonProperty("GroupItems")]
+        public CustomGroupItem[] GroupItems{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
+            this.SetParamSimple(map, prefix + "GroupItemOperation", this.GroupItemOperation);
+            this.SetParamArrayObj(map, prefix + "GroupItems.", this.GroupItems);
+        }
+    }
+}
+
