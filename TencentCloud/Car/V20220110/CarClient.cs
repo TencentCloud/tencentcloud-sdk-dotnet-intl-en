@@ -28,7 +28,7 @@ namespace TencentCloud.Car.V20220110
 
        private const string endpoint = "car.intl.tencentcloudapi.com";
        private const string version = "2022-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1164";
+       private const string sdkVersion = "SDK_NET_3.0.1434";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,27 @@ namespace TencentCloud.Car.V20220110
         public CreateApplicationVersionResponse CreateApplicationVersionSync(CreateApplicationVersionRequest req)
         {
             return InternalRequestAsync<CreateApplicationVersionResponse>(req, "CreateApplicationVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an MCP token (issue a token).
+        /// </summary>
+        /// <param name="req"><see cref="CreateMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateMCPTokenResponse"/></returns>
+        public Task<CreateMCPTokenResponse> CreateMCPToken(CreateMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateMCPTokenResponse>(req, "CreateMCPToken");
+        }
+
+        /// <summary>
+        /// This API is used to create an MCP token (issue a token).
+        /// </summary>
+        /// <param name="req"><see cref="CreateMCPTokenRequest"/></param>
+        /// <returns><see cref="CreateMCPTokenResponse"/></returns>
+        public CreateMCPTokenResponse CreateMCPTokenSync(CreateMCPTokenRequest req)
+        {
+            return InternalRequestAsync<CreateMCPTokenResponse>(req, "CreateMCPToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -495,6 +516,27 @@ namespace TencentCloud.Car.V20220110
         }
 
         /// <summary>
+        /// This API is used to query the MCP Token list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeMCPTokensResponse"/></returns>
+        public Task<DescribeMCPTokensResponse> DescribeMCPTokens(DescribeMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTokensResponse>(req, "DescribeMCPTokens");
+        }
+
+        /// <summary>
+        /// This API is used to query the MCP Token list.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMCPTokensRequest"/></param>
+        /// <returns><see cref="DescribeMCPTokensResponse"/></returns>
+        public DescribeMCPTokensResponse DescribeMCPTokensSync(DescribeMCPTokensRequest req)
+        {
+            return InternalRequestAsync<DescribeMCPTokensResponse>(req, "DescribeMCPTokens")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// This API is used to terminate a session. If cloud-based streaming has been enabled for this session, the cloud-based streaming will end upon session termination.
         /// </summary>
         /// <param name="req"><see cref="DestroySessionRequest"/></param>
@@ -617,6 +659,27 @@ namespace TencentCloud.Car.V20220110
         public ModifyMobileApplicationInfoResponse ModifyMobileApplicationInfoSync(ModifyMobileApplicationInfoRequest req)
         {
             return InternalRequestAsync<ModifyMobileApplicationInfoResponse>(req, "ModifyMobileApplicationInfo")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to renew an MCP Token.
+        /// </summary>
+        /// <param name="req"><see cref="RenewMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewMCPTokenResponse"/></returns>
+        public Task<RenewMCPTokenResponse> RenewMCPToken(RenewMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewMCPTokenResponse>(req, "RenewMCPToken");
+        }
+
+        /// <summary>
+        /// This API is used to renew an MCP Token.
+        /// </summary>
+        /// <param name="req"><see cref="RenewMCPTokenRequest"/></param>
+        /// <returns><see cref="RenewMCPTokenResponse"/></returns>
+        public RenewMCPTokenResponse RenewMCPTokenSync(RenewMCPTokenRequest req)
+        {
+            return InternalRequestAsync<RenewMCPTokenResponse>(req, "RenewMCPToken")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
