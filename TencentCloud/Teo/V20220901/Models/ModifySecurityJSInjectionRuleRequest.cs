@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// JavaScript injection rule list.
+        /// List of JavaScript injection rules.
         /// </summary>
         [JsonProperty("JSInjectionRules")]
         public JSInjectionRule[] JSInjectionRules{ get; set; }

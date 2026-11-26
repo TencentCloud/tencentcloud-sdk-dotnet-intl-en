@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Specify the custom variable name. A custom variable must be defined before it can be used in operations.</p>
+        /// <p>Custom Variable name. A Custom Variable must be defined before it can be used in operations.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Assign value to a Custom Variable. Supports the use of constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
+        /// <p>Assign values to custom variables. Supports using constant strings, variables, and formulas. Chinese characters are not allowed. Length cannot exceed 1000 characters.</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

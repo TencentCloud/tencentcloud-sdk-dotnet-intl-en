@@ -31,32 +31,32 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// Deployment operation type, value:
-        /// <li>create: creation</li>
-        /// <li>update: refresh;</li>
-        /// <li>resume: enabled;</li>
-        /// <li>stop: disable.</li>
+        /// Deployment operation type. Valid values:
+        /// <li>create: create;</li>
+        /// <li>update: update;</li>
+        /// <li>resume: enable;</li>
+        /// <li>stop: Disable.</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
         /// Deployment state. Valid values:
-        /// <li>processing: deployment in progress;</li>
-        /// <li>succeeded: Deployment successful;</li>
+        /// <li>processing: deploying;</li>
+        /// <li>succeeded: Deployed successfully;</li>
         /// <li>failed: Deployment failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Deployment duration, unit: second.
+        /// Deployment duration. Unit: seconds.
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// Configuration for this service deployment.
+        /// Configuration of this inference service deployment.
         /// </summary>
         [JsonProperty("InferenceServiceConfig")]
         public InferenceServiceConfig InferenceServiceConfig{ get; set; }
@@ -68,9 +68,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Whether the deployment configuration is the effective configuration. Value:
-        /// <li> active: effective configuration;</li>
-        /// <li> inactive: earlier version or abnormal version configuration.</li>
+        /// Whether the deployment configuration is currently effective. Value:
+        /// <li> active: effective configuration currently in use;</li>
+        /// <li> inactive: configuration of an earlier version or an abnormal version.</li>
         /// </summary>
         [JsonProperty("ActiveStatus")]
         public string ActiveStatus{ get; set; }

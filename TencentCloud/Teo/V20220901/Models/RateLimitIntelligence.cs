@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Function switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Action to be executed. Values:
-        /// <li>`monitor`: Observe</li>
-        /// <li>`alg`: Challenge</li>
+        /// Execution action. Valid values:
+        /// <li>monitor: observation;</li>
+        /// <li>alg: Challenge.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as a response parameter.
+        /// Rule id, output only.
         /// </summary>
         [JsonProperty("RuleId")]
         public long? RuleId{ get; set; }

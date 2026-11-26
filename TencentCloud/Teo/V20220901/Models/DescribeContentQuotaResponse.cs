@@ -25,15 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Purging quotas.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Update related quotas.
         /// </summary>
         [JsonProperty("PurgeQuota")]
         public Quota[] PurgeQuota{ get; set; }
 
         /// <summary>
-        /// Pre-warming quotas.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Preheating-related quota.
         /// </summary>
         [JsonProperty("PrefetchQuota")]
         public Quota[] PrefetchQuota{ get; set; }

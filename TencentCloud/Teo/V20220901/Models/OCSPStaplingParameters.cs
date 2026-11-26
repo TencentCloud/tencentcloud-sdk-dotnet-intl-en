@@ -25,10 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable ocsp stapling configuration switch. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// OCSP stapling configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

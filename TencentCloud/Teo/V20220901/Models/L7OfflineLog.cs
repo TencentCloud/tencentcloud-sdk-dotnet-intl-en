@@ -25,51 +25,51 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Log domain name.
+        /// Offline log domain name.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Log query area. Valid values:
-        /// <li>`mainland`: Chinese mainland;</li>
-        /// <li>`overseas`: Global (outside the Chinese mainland). </li>
+        /// Log associated region. Valid values:
+        /// <li>mainland: within the Chinese mainland; </li>
+        /// <li>overseas: global (excluding the Chinese mainland).</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Log packet name.	
+        /// Offline log data packet name.	
         /// </summary>
         [JsonProperty("LogPacketName")]
         public string LogPacketName{ get; set; }
 
         /// <summary>
-        /// Log download address.	
+        /// Offline log download address.	
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// (Disused) Log packaging time. 
+        /// Log packaging time. This parameter has been deprecated.
         /// </summary>
         [JsonProperty("LogTime")]
         public long? LogTime{ get; set; }
 
         /// <summary>
-        /// Start time of log packaging.
+        /// Log packaging start time.
         /// </summary>
         [JsonProperty("LogStartTime")]
         public string LogStartTime{ get; set; }
 
         /// <summary>
-        /// End time of the log package.
+        /// Log packaging end time.
         /// </summary>
         [JsonProperty("LogEndTime")]
         public string LogEndTime{ get; set; }
 
         /// <summary>
-        /// Original log size (in bytes).
+        /// Log original size in bytes.
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }

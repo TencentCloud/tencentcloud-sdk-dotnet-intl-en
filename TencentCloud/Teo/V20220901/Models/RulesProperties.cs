@@ -25,63 +25,62 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Parameter name.
+        /// Value of the parameter name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+        /// Minimum value of the numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
         /// </summary>
         [JsonProperty("Min")]
         public long? Min{ get; set; }
 
         /// <summary>
-        /// Valid parameter values.
-        /// Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+        /// Available values of the parameter.
+        /// Note: If the parameter value is user-customized, this array is an empty array.
         /// </summary>
         [JsonProperty("ChoicesValue")]
         public string[] ChoicesValue{ get; set; }
 
         /// <summary>
-        /// The parameter value type.
-        /// <Li>`CHOICE`: the parameter value can only be selected from `choicesvalue`.</li>
-        /// <Li>TOGGLE: the parameter value is of switch type and can be selected from `choicesvalue`.</li>
-        /// <Li>OBJECT: the parameter value is of object type, and `choiceproperties` are the properties associated with this object type.</li>
-        /// <Li>`CUSTOM_NUM`: (integer) custom value.</li>
-        /// <Li> custom_string: parameter value is user-customized, string type.</li> 
+        /// Parameter type.
+        /// <li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+        /// <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+        /// <li> OBJECT: The parameter value is an object type, and ChoiceProperties are attributes associated with the object type;</li>
+        /// <li> CUSTOM_NUM: user-customized parameter value, integer type;</li>
+        /// <li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>Note: When the parameter type is OBJECT, see [Example 2: Create with the parameter type OBJECT](https://www.tencentcloud.com/document/product/1552/80622?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B2-.E4.BF.AE.E6.94.B9.E6.BA.90.E7.AB.99.E4.B8.BAIP.E5.9F.9F.E5.90.8D)
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+        /// Maximum value of the numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
 
         /// <summary>
-        /// Whether multiple values can be selected or entered.
+        /// Whether the parameter value supports multiple selections or filling in multiple values.
         /// </summary>
         [JsonProperty("IsMultiple")]
         public bool? IsMultiple{ get; set; }
 
         /// <summary>
-        /// Whether the parameter can be left empty.
+        /// Allow Empty.
         /// </summary>
         [JsonProperty("IsAllowEmpty")]
         public bool? IsAllowEmpty{ get; set; }
 
         /// <summary>
-        /// Associated configuration parameters of this parameter, which are required for API call.
-        /// Note: This parameter will be an empty array if no special parameters are added as optional parameters.
+        /// The associated configuration parameter of this parameter is required for the API call.
+        /// Note: If no new configuration parameters are added to the optional parameter, this array is an empty array.
         /// </summary>
         [JsonProperty("ChoiceProperties")]
         public RuleChoicePropertiesItem[] ChoiceProperties{ get; set; }
 
         /// <summary>
-        /// <li>NULL: No special parameters when `NormalAction` is selected for `RuleAction`.</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <li> NULL: no special parameter. Select NormalAction for RuleAction;</li>
         /// </summary>
         [JsonProperty("ExtraParameter")]
         public RuleExtraParameter ExtraParameter{ get; set; }

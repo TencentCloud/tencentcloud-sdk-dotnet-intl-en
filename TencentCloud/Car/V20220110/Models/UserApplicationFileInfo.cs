@@ -26,14 +26,12 @@ namespace TencentCloud.Car.V20220110.Models
         
         /// <summary>
         /// Application file path.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// File status. NO_EXIST: The file does not exist; EXIST: The file exists.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// File status. NO_EXIST: not EXIST; EXIST: exist.
         /// </summary>
         [JsonProperty("FileState")]
         public string FileState{ get; set; }

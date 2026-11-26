@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+        /// <p>Task Id of this import configuration. Call the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import task. Note: The import task Id only supports querying import tasks from the most recent 7 days.</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

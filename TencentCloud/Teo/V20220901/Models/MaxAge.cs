@@ -25,16 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to follow the origin server. Values:
-        /// <li>`on`: Follow the origin server and ignore the field MaxAgeTime;</li>
-        /// <li>`off`: Do not follow the origin server and apply the field MaxAgeTime.</li>
+        /// Whether to follow the origin site, with values:
+        /// <li>on: follow the origin site, ignore the MaxAge time setting;</li>
+        /// <li>off: Do not follow the origin site. Use the MaxAge time setting.</li>
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }
 
         /// <summary>
-        /// MaxAge specifies the time setting in seconds. value range: 0–315360000.
-        /// Specifies the time when the cache is disabled if set to 0.
+        /// MaxAge time setting, in seconds. Value range: 0–315360000.
+        /// Note: If the time is 0, no cache is used.
         /// </summary>
         [JsonProperty("MaxAgeTime")]
         public long? MaxAgeTime{ get; set; }

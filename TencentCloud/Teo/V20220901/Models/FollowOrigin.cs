@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable the configuration of following the origin server. Valid values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Follow the origin site configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Whether to cache when an origin server does not return the cache-control header. this field is required when switch is on; when switch is off, this field is not required and will be ineffective if filled. valid values:.
-        /// <Li>On: cache;</li>.
-        /// <Li>Off: do not cache.</li>.
+        /// Whether to cache when an origin server does not return the Cache-Control header. This field is required when Switch is on. When Switch is off, no need to specify this field, and it does not take effect if specified. Valid values:
+        /// <li>`on`: cache;</li>
+        /// <li>off: Do not cache.</li>
         /// </summary>
         [JsonProperty("DefaultCache")]
         public string DefaultCache{ get; set; }
 
         /// <summary>
-        /// Whether to use the default caching policy when an origin server does not return the cache-control header. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachetime is not 0, this field should be off. valid values:.
-        /// <Li>On: use the default caching policy.</li>.
-        /// <Li>Off: do not use the default caching policy.</li>.
+        /// Whether to use the default caching policy when an origin server does not return the Cache-Control header. This field is required when DefaultCache is on; otherwise, it is ineffective. This field must be off when DefaultCacheTime is not 0. Valid values:
+        /// <li>on: Use the default caching policy;</li>
+        /// <li>off: Do not use the default caching policy.</li>
         /// </summary>
         [JsonProperty("DefaultCacheStrategy")]
         public string DefaultCacheStrategy{ get; set; }
 
         /// <summary>
-        /// The default cache time in seconds when an origin server does not return the cache-control header. the value ranges from 0 to 315360000. this field is required when defaultcache is set to on; otherwise, it is ineffective. when defaultcachestrategy is on, this field should be 0.
+        /// The default cache time in seconds when an origin server does not return the Cache-Control header. Value range: 0-315360000. This field is required when DefaultCache is set to on; otherwise, it is ineffective. When DefaultCacheStrategy is on, this field must be 0.
         /// </summary>
         [JsonProperty("DefaultCacheTime")]
         public long? DefaultCacheTime{ get; set; }

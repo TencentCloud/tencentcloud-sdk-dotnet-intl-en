@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Parameter name of the matched condition. Values:.
-        /// <li>`body_depth`: detection depth of the request body packet part.</li>
+        /// Parameter name of the match condition. Valid values:
+        /// <li>body_depth: Detection depth of the request body packet part.</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The parameter value of the match condition. the value is used in pairs with Name.
-        /// When the Name value is body_depth, Values only support passing in a single value. valid Values:.
+        /// Parameter value of the match condition. It is used with Name as a pair.
+        /// When the value of Name is body_depth, Values only support passing in a single value. Valid values:
         /// <li>10KB;</li>
         /// <li>64KB;</li>
         /// <li>128KB.</li>

@@ -25,43 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Namespace name. Has uniqueness in the same site.
+        /// Namespace name. It is unique within the same site.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Namespace description. Remark information filled in upon creation, used for explaining the purpose or business meaning of the namespace. Supports a maximum of 256 characters.
+        /// Namespace description. Remark information filled in upon creation, used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Available capacity of KV storage space in bytes. It indicates the maximum capacity limit of storable data in namespace, defaulting to 1 GB.
+        /// Available capacity of the KV storage space, in bytes. It indicates the maximum capacity limit of storable data in the namespace, which defaults to 1 GB.
         /// </summary>
         [JsonProperty("Capacity")]
         public long? Capacity{ get; set; }
 
         /// <summary>
-        /// KV storage space used capacity in bytes (Byte). It indicates the currently used storage space size of the namespace.
+        /// Used KV storage capacity in bytes. It indicates the currently used storage space size of the namespace.
         /// </summary>
         [JsonProperty("CapacityUsed")]
         public long? CapacityUsed{ get; set; }
 
         /// <summary>
-        /// List of referenced instances in the namespace. Shows which edge function instances reference the current namespace and the site information referenced. Returns an empty array if not referenced.
+        /// List of instances that reference the namespace. Shows which edge function instances currently reference the namespace, as well as the site information of the references. If not referenced, return an empty array.
         /// </summary>
         [JsonProperty("References")]
         public ComponentReference[] References{ get; set; }
 
         /// <summary>
-        /// The creation time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+        /// Namespace creation time in ISO 8601 format: YYYY-MM-DDThh:mm:ssZ (UTC time).
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// The last modification time of the namespace follows the ISO 8601 standard in the format YYYY-MM-DDThh:mm:ssZ (UTC time).
+        /// Last modification time of the namespace, following the ISO 8601 standard, format: YYYY-MM-DDThh:mm:ssZ (UTC time).
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }

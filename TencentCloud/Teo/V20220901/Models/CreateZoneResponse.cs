@@ -25,20 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Site ownership verification information. After the site is created, you need to complete the ownership verification before the site can serve normally.
+        /// Site ownership verification information. After site creation is completed, you also need to complete ownership verification before the site can run properly.
         /// 
-        /// If `Type=partial`, add TXT records to your DNS provider or add files to the root DNS server, and then call [VerifyOwnership]() to complete verification. For more information, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// When Type = partial, you need to refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1), go to your DNS service provider to add a TXT record or go to the root domain name server to add a file, and then call the API [VerifyOwnership]() to complete the verification;
         /// 
-        /// If `Type = full`, switch the DNS server as instructed by [Modifying DNS Server](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1). Then call [VerifyOwnership]() to check the result.
+        /// When Type is full, you need to refer to [modify DNS server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1) to switch the DNS server. You can query whether the DNS switchover is successful through the [VerifyOwnership]() API.
         /// 
-        /// If `Type = noDomainAccess`, leave it blank. No action is required.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// When Type is noDomainAccess, this value is empty and no operation is needed.
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }

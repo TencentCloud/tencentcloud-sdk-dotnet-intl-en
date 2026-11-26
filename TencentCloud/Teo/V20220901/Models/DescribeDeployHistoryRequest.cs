@@ -37,8 +37,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// Filtering condition. The maximum value of Filters.Values is 20. Detailed filtering conditions: 
-        /// <li>record-id: Filter by release record ID. </li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>record-id: Filter by release record ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }

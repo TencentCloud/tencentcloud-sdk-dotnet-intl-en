@@ -26,24 +26,24 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Instance type. Valid values:
-        /// -l7: L7 acceleration domain;
-        /// -l4: L4 proxy instance.
+        /// - l7: layer-7 accelerated domain;
+        /// - l4: layer-4 proxy instance.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Instance detail. Valid values:
-        /// -When Type = l7, please enter the L7 acceleration domain.
-        /// -When Type = l4, please enter the L4 proxy instance ID.
+        /// Instance details. Valid values:
+        /// - When Type = l7, enter the layer-7 accelerated domain;
+        /// - When Type = l4, enter the layer-4 proxy instance ID.
         /// </summary>
         [JsonProperty("Instances")]
         public string[] Instances{ get; set; }
 
         /// <summary>
-        /// Operation mode. Valid values:.
-        /// - enable: enabled L7/L4 instances.
-        /// - disable: disable L7/L4 instances.
+        /// Operation mode. Valid values:
+        /// <li>enable: enable;</li>
+        /// <li>disable: disable.</li>
         /// </summary>
         [JsonProperty("OperationMode")]
         public string OperationMode{ get; set; }

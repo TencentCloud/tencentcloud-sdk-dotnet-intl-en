@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Action to be executed. values:.
-        /// <Li>FollowOrigin: follow origin server domain name;</li>.
-        /// <Li>`Custom`: custom</li>.
+        /// Execution action. Valid values:
+        /// <li>`followOrigin`: Follow source site domain;</li>
+        /// <li>custom: Custom.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Host header rewrite requires a complete domain name.<br>note: this field is required when switch is on; when switch is off, this field is not required and any value will be ignored.
+        /// Host Header rewrite requires a complete domain name.<br>Note: When Switch is on, this field is required. When Switch is off, no need to specify this field, and if specified, it does not take effect.
         /// </summary>
         [JsonProperty("ServerName")]
         public string ServerName{ get; set; }

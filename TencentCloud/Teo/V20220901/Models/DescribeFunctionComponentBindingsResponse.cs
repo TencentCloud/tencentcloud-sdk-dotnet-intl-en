@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of eligible functions bound.
+        /// Total number of bound functions that meet the condition.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Function component bound list.
+        /// List of function component bindings.
         /// </summary>
         [JsonProperty("FunctionComponentBindings")]
         public FunctionComponentBinding[] FunctionComponentBindings{ get; set; }

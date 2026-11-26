@@ -31,19 +31,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>IP group ID.</p>
+        /// <p>ID of the IP group.</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// <p>Paging offset.</p><p>Default value: 0.</p>
+        /// <p>Paging offset.</p><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Paging query to refer to the number of entries of IP group configuration.</p><p>Value ranges from 1 to 200.</p><p>Default value: 20.</p>
+        /// <p>Number of entries for paging query of IP group configuration.</p><p>Value range: [1, 200]</p><p>Default value: 20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

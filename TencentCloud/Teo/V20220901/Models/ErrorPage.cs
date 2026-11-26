@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Status code. supported values are 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
+        /// Status code. Supported values: 400, 403, 404, 405, 414, 416, 451, 500, 501, 502, 503, 504.
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// Redirect url. requires a full redirect path, such as https://www.test.com/error.html.
+        /// Redirect URL. It needs to be a complete jump path, for example, https://www.test.com/error.html.
         /// </summary>
         [JsonProperty("RedirectURL")]
         public string RedirectURL{ get; set; }

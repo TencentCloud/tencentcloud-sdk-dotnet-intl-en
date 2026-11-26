@@ -25,26 +25,26 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Download rate limit mode. valid values:.
-        /// <Li>LimitUponDownload: rate limit throughout the download process;</li>.
-        /// <Li>LimitAfterSpecificBytesDownloaded: rate limit after downloading specific bytes at full speed;</li>.
-        /// <Li>LimitAfterSpecificSecondsDownloaded: start speed limit after downloading at full speed for a specific duration.</li>.
+        /// Download speed limit mode. Valid values:
+        /// <li>LimitUponDownload: download speed limit for the entire process;</li>
+        /// <li>LimitAfterSpecificBytesDownloaded: Start speed limit after downloading specific bytes at full speed;</li>
+        /// <li>LimitAfterSpecificSecondsDownloaded: Start rate limiting after downloading at full speed for a specified time.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The speed limit value specifies the size of the speed limit. fill in a value or variable with a unit. the currently supported unit is: KB/s.
+        /// Rate-limiting value. Specify the rate limit. Fill in a value with a unit or a variable. Currently supported unit: KB/s.
         /// </summary>
         [JsonProperty("MaxSpeed")]
         public string MaxSpeed{ get; set; }
 
         /// <summary>
-        /// The speed limit start value can be download size or specified duration. fill in a value with unit or variable to specify download size or specified duration.
+        /// Speed limit start value, which can be the download size or specified duration. Fill in a value with a unit or a variable to specify the download size or duration.
         /// 
-        /// -When the Mode value is LimitAfterSpecificBytesDownloaded, the valid values of the unit are: KB.
+        /// -When Mode is LimitAfterSpecificBytesDownloaded, valid values of the unit are: KB;
         /// 
-        /// -When the Mode value is LimitAfterSpecificSecondsDownloaded, the valid value of the unit is: s.
+        /// -When Mode is LimitAfterSpecificSecondsDownloaded, valid values of the measurement unit: s.
         /// </summary>
         [JsonProperty("StartAt")]
         public string StartAt{ get; set; }

@@ -25,33 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The rule name (1 to 255 characters)
+        /// Rule name. The string length is 1–255.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule status. Values:
-        /// <li>`enable`: Enabled</li>
-        /// <li>`disable`: Disabled</li>
+        /// Rule status. Valid values:
+        /// <li> enable: Enable;</li>
+        /// <li> disable: disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The rule content.
+        /// Rule content.
         /// </summary>
         [JsonProperty("Rules")]
         public Rule[] Rules{ get; set; }
 
         /// <summary>
-        /// Tag of the rule.
+        /// Rule tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

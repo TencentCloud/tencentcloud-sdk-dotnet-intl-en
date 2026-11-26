@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID, used to specify the query scope.
+        /// Site ID, used to specify the scope of the queried site.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Maximum number of entries returned in a single response. Default value: 20. Maximum query entries: 1000.
+        /// Maximum number of entries returned in a single response. Default value: 20. Maximum number of query entries: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// The starting entry offset for pagination queries. The default value is 0.
+        /// Starting entry offset for pagination queries. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

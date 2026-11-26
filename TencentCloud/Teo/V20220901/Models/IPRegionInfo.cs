@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IP address, IPV4 or IPV6.
+        /// IP, IPV4, or IPV6.
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
         /// Whether the IP belongs to an EdgeOne node. Valid values:
-        /// <li>yes: This IP belongs to an EdgeOne node;</li>
-        /// <li>no: This IP does not belong to an EdgeOne node.</li>
+        /// <li>yes: The IP belongs to an EdgeOne node;</li>
+        /// <li>no: The IP not within EdgeOne nodes.</li>
         /// </summary>
         [JsonProperty("IsEdgeOneIP")]
         public string IsEdgeOneIP{ get; set; }

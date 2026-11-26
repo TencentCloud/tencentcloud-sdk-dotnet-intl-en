@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Sub-Rule branch.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Sub-rule branch
         /// </summary>
         [JsonProperty("Branches")]
         public RuleBranch[] Branches{ get; set; }
 
         /// <summary>
-        /// Rule comments.
+        /// Rule note.
         /// </summary>
         [JsonProperty("Description")]
         public string[] Description{ get; set; }

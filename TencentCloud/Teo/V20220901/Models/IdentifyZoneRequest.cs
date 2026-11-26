@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site name.
+        /// Site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// A subdomain name under the site. Specify this field if you want to verify the ownership of a subdomain name. Otherwise you can leave it blank.
+        /// Subdomain under the site. If verifying a subdomain under the Verification Site, pass this value; otherwise empty.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

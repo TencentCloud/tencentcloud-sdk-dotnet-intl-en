@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Reasoning API Token ID.
+        /// Inference API Token ID.
         /// </summary>
         [JsonProperty("TokenId")]
         public string TokenId{ get; set; }

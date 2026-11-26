@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOfflineLogConfigRequest : AbstractModel
+    public class ConfigGroupFunctionRegionSelection : AbstractModel
     {
         
         /// <summary>
-        /// Unique project key for reporting
+        /// <p>Specify the function executed. The value is the unique identifier of the function in the site. This parameter is valid only when TriggerType is direct.</p>
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("Function")]
+        public string Function{ get; set; }
 
         /// <summary>
-        /// Unique identifier of the user to be listened on (`aid` or `uin`)
+        /// <p>List of countries/regions. Example value: CN: China, CN.GD: Guangdong, China. For values, see <a href="https://www.tencentcloud.com/document/product/1552/112542?from_cn_redirect=1">Countries/Regions and Corresponding Codes</a>.</p>
         /// </summary>
-        [JsonProperty("UniqueID")]
-        public string UniqueID{ get; set; }
+        [JsonProperty("Regions")]
+        public string[] Regions{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
-            this.SetParamSimple(map, prefix + "UniqueID", this.UniqueID);
+            this.SetParamSimple(map, prefix + "Function", this.Function);
+            this.SetParamArraySimple(map, prefix + "Regions.", this.Regions);
         }
     }
 }

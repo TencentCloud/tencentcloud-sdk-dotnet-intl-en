@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>History list for reasoning service deployment.</p>
+        /// <p>Reasoning service deployment history list.</p>
         /// </summary>
         [JsonProperty("RecordSet")]
         public InferenceServiceDeploymentRecord[] RecordSet{ get; set; }

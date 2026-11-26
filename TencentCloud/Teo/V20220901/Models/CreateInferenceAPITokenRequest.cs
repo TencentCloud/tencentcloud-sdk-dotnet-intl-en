@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Name of the reasoning API Token, length limited to no more than 30 characters.
+        /// Name of the inference API Token. Length limited to 30 characters.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

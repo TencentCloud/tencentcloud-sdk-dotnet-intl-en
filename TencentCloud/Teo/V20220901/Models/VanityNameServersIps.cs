@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Custom name of the name server
+        /// Custom name server name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// IPv4 address of the custom name server
+        /// Custom IPv4 address of the name server.
         /// </summary>
         [JsonProperty("IPv4")]
         public string IPv4{ get; set; }

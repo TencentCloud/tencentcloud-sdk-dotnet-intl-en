@@ -25,22 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Cache configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cache configuration.
         /// </summary>
         [JsonProperty("Cache")]
         public Cache Cache{ get; set; }
 
         /// <summary>
-        /// No-cache configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// No cache configuration.
         /// </summary>
         [JsonProperty("NoCache")]
         public NoCache NoCache{ get; set; }
 
         /// <summary>
-        /// Follows the origin server configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Follow the origin server configuration.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public FollowOrigin FollowOrigin{ get; set; }

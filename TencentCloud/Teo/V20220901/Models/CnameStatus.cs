@@ -31,16 +31,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RecordName{ get; set; }
 
         /// <summary>
-        /// EdgeOne is assigned to the CNAME of the domain name.
+        /// CNAME assigned to the domain name integrated with EdgeOne.
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// CNAME configuration status verification result. valid values:.
-        /// <li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
-        /// <li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
-        /// <li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+        /// CNAME configuration status check results. Valid values:
+        /// <li>active: means the domain name is correctly configured to the designated CNAME assigned by EdgeOne;</li>
+        /// <li>moved: indicates that the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>
+        /// <li>invalid: indicates that the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which will cause service exception. Change it to the designated CNAME provided by EdgeOne for this access domain. You can get the CNAME provided by EdgeOne for this access domain from the Cname field of this struct.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

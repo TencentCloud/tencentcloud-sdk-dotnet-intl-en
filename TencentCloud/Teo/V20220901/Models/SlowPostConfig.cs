@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
@@ -39,21 +39,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public FirstPartConfig FirstPartConfig{ get; set; }
 
         /// <summary>
-        /// Specifies the basic configuration.
+        /// Basic configuration.
         /// </summary>
         [JsonProperty("SlowRateConfig")]
         public SlowRateConfig SlowRateConfig{ get; set; }
 
         /// <summary>
-        /// Handling action for slow attack. valid values:.
-        /// <li>`monitor`: observe</li>.
-        /// <li>`drop`: block the request.</li>.
+        /// Handling action for slow attacks. Valid values:
+        /// <li>monitor: observation;</li>
+        /// <li>drop: block.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Specifies the Id of this rule.
+        /// Rule Id.
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }

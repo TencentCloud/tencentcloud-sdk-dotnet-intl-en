@@ -25,53 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID.
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Rule ID. you can first use the DescribeFunctionRules API to get the RuleId that needs to be modified, then input the modified rule content. the original rule content will be overwritten.
+        /// <p>Rule ID. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then import the modified rule content. The original rule content will be overwritten.</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If this parameter is not input, the original configuration is maintained.
+        /// <p>Rule condition list. There is an OR relationship between different conditions of the same trigger rule. If not specified, the original configuration is maintained.</p>
         /// </summary>
         [JsonProperty("FunctionRuleConditions")]
         public FunctionRuleCondition[] FunctionRuleConditions{ get; set; }
 
         /// <summary>
-        /// Function selection configuration type.
-        /// <Li>Direct: specifies the execution function directly.</li>.
-        /// <Li>Weight: selects the function based on weight ratio.</li>.
-        /// <li> region: specifies the country/region selection function based on client IP.</li>.
-        /// Specifies the default value as direct when left blank.
+        /// <p>Function selection configuration type:</p><li> direct: directly specify the execution function;</li><li> weight: select a function based on weight ratio;</li><li> region: select a function based on the client IP country/region.</li>Defaults to direct if not specified.
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }
 
         /// <summary>
-        /// Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+        /// <p>Specify the function ID to be executed. This parameter is valid only when TriggerType is direct or left empty.</p>
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+        /// <p>Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must contain one configuration with Regions as Default, and requires at least one other specific Region.</p>
         /// </summary>
         [JsonProperty("RegionMappingSelections")]
         public FunctionRegionSelection[] RegionMappingSelections{ get; set; }
 
         /// <summary>
-        /// Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+        /// <p>Weight-based function selection configuration. This parameter is valid only when TriggerType is weight and WeightedSelections is required. The sum of all weights in WeightedSelections need to be 100.</p>
         /// </summary>
         [JsonProperty("WeightedSelections")]
         public FunctionWeightedSelection[] WeightedSelections{ get; set; }
 
         /// <summary>
-        /// Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.
+        /// <p>Rule description, which can contain up to 60 characters. If this parameter is not input, the original configuration is maintained.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

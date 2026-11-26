@@ -31,20 +31,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Application ID.
+        /// App ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable IPv6 access. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+        /// Whether IPv6 access is enabled. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating a New Layer 4 Proxy Instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+        /// <li>`on`: Enable;</li> 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Ipv6")]
         public string Ipv6{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable network optimization in the Chinese mainland. If this parameter is not filled, this configuration will not be modified. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see [Creating an L4 Proxy Instance] (https://intl.cloud.tencent.com/document/product/1552/90025?from_cn_redirect=1). Valid values:<li>on: Enable;</li> 
+        /// Whether to enable network optimization in the Chinese mainland. If this parameter is not specified, do not modify this configuration. This configuration can only be enabled in certain acceleration zones and security protection configurations. For details, see Creating a New Layer 4 Proxy Instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). Value:
+        /// <li>`on`: Enable;</li> 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("AccelerateMainland")]

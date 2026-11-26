@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the version number.
+        /// Version.
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// Describes the IP range details for origin servers.
+        /// Origin-pull IP range details.
         /// </summary>
         [JsonProperty("EntireAddresses")]
         public Addresses EntireAddresses{ get; set; }
 
         /// <summary>
-        /// The latest origin IP range newly added compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+        /// Latest origin-pull IP range compared with the newly-added part of the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
         /// </summary>
         [JsonProperty("AddedAddresses")]
         public Addresses AddedAddresses{ get; set; }
 
         /// <summary>
-        /// Specifies the latest IP address range removed from the origin IP range in MultiPathGatewayCurrentOrginACL compared with the original.
+        /// Latest origin IP range compared with the part deleted from the origin IP range in MultiPathGatewayCurrentOrginACL.
         /// </summary>
         [JsonProperty("RemovedAddresses")]
         public Addresses RemovedAddresses{ get; set; }
 
         /// <summary>
-        /// The latest origin IP range unchanged compared with the origin IP range in MultiPathGatewayCurrentOrginACL.
+        /// The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in MultiPathGatewayCurrentOrginACL.
         /// </summary>
         [JsonProperty("NoChangeAddresses")]
         public Addresses NoChangeAddresses{ get; set; }

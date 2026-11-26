@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The metric name.
+        /// Metric name.
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// The time-series data details.
+        /// Details of time series data.
         /// </summary>
         [JsonProperty("Detail")]
         public TimingDataItem[] Detail{ get; set; }
 
         /// <summary>
-        /// The maximum value.
+        /// Maximum value.
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
 
         /// <summary>
-        /// The average value.
+        /// Mean.
         /// </summary>
         [JsonProperty("Avg")]
         public float? Avg{ get; set; }
 
         /// <summary>
-        /// Sum
+        /// Total data.
         /// </summary>
         [JsonProperty("Sum")]
         public float? Sum{ get; set; }

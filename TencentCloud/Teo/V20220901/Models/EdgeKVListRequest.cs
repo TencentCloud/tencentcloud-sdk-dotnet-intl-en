@@ -37,19 +37,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Prefix filtering for key names. Only return key names that begin with the specified prefix, with a length of 1-512 characters. Not specified means return all key names; does not allow input of empty string.
+        /// Filter by key name prefix. Only return key names beginning with the specified prefix. Length: 1–512 characters. If not specified, all key names are returned. Empty string is not allowed.
         /// </summary>
         [JsonProperty("Prefix")]
         public string Prefix{ get; set; }
 
         /// <summary>
-        /// Cursor position. Indicates the starting position of the current query for traversing large amounts of data. Do not fill in during the initial query, start traversal from the beginning. Fill in the Cursor value returned last time during follow-up queries to proceed with traversal from that position.
+        /// Cursor position. Identifies the starting position of the current query, used for traversing large amounts of data. Do not fill in for the initial query to start from the beginning. For subsequent queries, fill in the Cursor value returned last time to continue traversing backward from that position.
         /// </summary>
         [JsonProperty("Cursor")]
         public string Cursor{ get; set; }
 
         /// <summary>
-        /// Number of key names returned. Default value: 20. Maximum value: 1000.
+        /// Number of returned key names. Default value: 20. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

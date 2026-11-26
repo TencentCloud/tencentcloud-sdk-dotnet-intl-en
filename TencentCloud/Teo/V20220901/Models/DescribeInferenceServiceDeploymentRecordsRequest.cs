@@ -31,19 +31,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>ID of the inference service.</p>
+        /// <p>Inference service ID.</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// <p>Sorting field. Valid values: <li>create-time: Deployment creation time.</li>Default value: create-time.</p>
+        /// <p>Sorting field. Valid values: <li>create-time: deployment creation time.</li> Default value: create-time.</p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+        /// <p>Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.</p>
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

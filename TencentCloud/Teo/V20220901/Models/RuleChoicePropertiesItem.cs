@@ -25,57 +25,57 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The parameter name.
+        /// Parameter name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The parameter value type.
-        /// <li>CHOICE: The parameter value can be selected only from `Values`.</li>
-        /// <li>TOGGLE: The parameter value is of switch type and can be selected from `ChoicesValue`.</li>
-        /// <li>CUSTOM_NUM: The parameter value is a custom integer.</li>
-        /// <li>CUSTOM_STRING: The parameter value is a custom string.</li>
+        /// Parameter type.
+        /// <li> CHOICE: The parameter value can only be selected from ChoicesValue; </li>
+        /// <li> TOGGLE: The parameter value is a switch type, select from ChoicesValue;</li>
+        /// <li> CUSTOM_NUM: The parameter value is user-customized, integer type;</li>
+        /// <li>CUSTOM_STRING: The parameter value is user-customized and of string type.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Valid parameter values.
-        /// Note: If `Type` is `CUSTOM_NUM` or `CUSTOM_STRING`, this parameter will be an empty array.
+        /// Available values of the parameter.
+        /// Note: If the parameter value is user-customized, this array is an empty array.
         /// </summary>
         [JsonProperty("ChoicesValue")]
         public string[] ChoicesValue{ get; set; }
 
         /// <summary>
-        /// Minimum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+        /// Minimum value of the value parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
         /// </summary>
         [JsonProperty("Min")]
         public long? Min{ get; set; }
 
         /// <summary>
-        /// Maximum value. If both `Min` and `Max` are set to `0`, this parameter does not take effect.
+        /// Maximum value of a numeric parameter. This item is meaningless for non-numeric parameters or when both Min and Max are 0.
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
 
         /// <summary>
-        /// Whether multiple values can be selected or entered.
+        /// Whether the parameter value supports multi-select or filling in multiple values.
         /// </summary>
         [JsonProperty("IsMultiple")]
         public bool? IsMultiple{ get; set; }
 
         /// <summary>
-        /// Whether the parameter can be left empty.
+        /// Allow Empty.
         /// </summary>
         [JsonProperty("IsAllowEmpty")]
         public bool? IsAllowEmpty{ get; set; }
 
         /// <summary>
         /// Special parameter.
-        /// <li>NULL: Select `NormalAction` for `RuleAction`. </li>
-        /// <li>If the member parameter `Id` is `Action`, select `RewirteAction` for `RuleAction`.</li>
-        /// <li>If the member parameter `Id` is `StatusCode`, select `CodeAction` for `RuleAction`.</li>
+        /// <li> NULL: select NormalAction for RuleAction;</li>
+        /// <li> The member parameter Id is Action: select RewirteAction for RuleAction;</li>
+        /// <li> The member parameter Id is StatusCode: select CodeAction for RuleAction.</li>
         /// </summary>
         [JsonProperty("ExtraParameter")]
         public RuleExtraParameter ExtraParameter{ get; set; }

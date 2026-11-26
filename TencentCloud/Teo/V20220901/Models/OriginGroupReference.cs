@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Reference service type. valid values:.
-        /// <Li>Acceleration-Domain: specifies the acceleration domain name.</li>.
-        /// <Li>Rule-Engine: specifies the rule engine.</li>.
-        /// <Li>Load-Balancer: specifies the cloud load balancer.</li>.
-        /// <li>application-proxy: layer 4 proxy.</li>.
+        /// Reference service type. Valid values:
+        /// <li>acceleration-domain: Acceleration domain name;</li>
+        /// <li>rule-engine: rule engine;</li>
+        /// <li>load-balancer: load balancing;</li>
+        /// <li>application-proxy: Layer 4 proxy.</li>
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// ID of the instances referencing the origin group
+        /// ID of the referenced instance.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Specifies the instance name of the reference type.
+        /// Instance name of the reference type.
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -53,13 +53,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Refers to the site name.
+        /// Refer to the site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Refers to the site alias.
+        /// Refer to the site alias.
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the authentication option list.
+        /// Authentication option list.
         /// </summary>
         [JsonProperty("ClientAttesters")]
         public ClientAttester[] ClientAttesters{ get; set; }

@@ -25,16 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable configuration. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Name of the request header containing the client ip address for origin-pull. when switch is on, this parameter is required. x-forwarded-for is not allowed for this parameter.
+        /// Name of the request header containing the client IP address for origin-pull. When Switch is on, this parameter is required. X-Forwarded-For is not allowed for this parameter.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

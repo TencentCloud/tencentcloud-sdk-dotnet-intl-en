@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogConfigsRequest : AbstractModel
+    public class StatisticsRecord : AbstractModel
     {
         
         /// <summary>
-        /// Unique project key for reporting
+        /// <p>List single row record.</p>
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("Record")]
+        public string[] Record{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
+            this.SetParamArraySimple(map, prefix + "Record.", this.Record);
         }
     }
 }

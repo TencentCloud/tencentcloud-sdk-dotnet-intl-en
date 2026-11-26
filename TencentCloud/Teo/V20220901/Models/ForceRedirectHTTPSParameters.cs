@@ -25,18 +25,17 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable forced redirect configuration switch. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Access forced redirect configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Redirection status code. this field is required when switch is on; otherwise, it is not effective. valid values are:.
-        /// <Li>`301`: 301 redirect;</li>.
-        /// <Li>`302`: 302 redirect.</li>.
+        /// Redirection status code. When Switch is on, this field is required; otherwise, it is ineffective. Valid values:
+        /// <li>301: 301 redirect;</li>
+        /// <li>302: 302 redirection.</li>
         /// </summary>
         [JsonProperty("RedirectStatusCode")]
         public long? RedirectStatusCode{ get; set; }

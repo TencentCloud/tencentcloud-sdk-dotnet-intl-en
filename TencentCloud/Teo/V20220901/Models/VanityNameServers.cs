@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable custom name servers. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Custom ns switch. Valid values:
+        /// <li> on: enabled</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// List of custom name servers
+        /// List of custom namespaces.
         /// </summary>
         [JsonProperty("Servers")]
         public string[] Servers{ get; set; }

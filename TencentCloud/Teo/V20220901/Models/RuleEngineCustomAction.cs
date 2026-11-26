@@ -49,7 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public RuleEngineCustomActionParameterSchema[] Parameters{ get; set; }
 
         /// <summary>
-        /// <p>Match conditions supported by custom configuration.</p><p>For supported match conditions, refer to the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
+        /// <p>Custom configuration supported match conditions.</p><p>For supported match conditions, see the official documentation <a href="https://www.tencentcloud.com/document/product/1552/125344?from_cn_redirect=1">General Reference - Configuration Syntax - Variables</a>.</p>
         /// </summary>
         [JsonProperty("SupportedConditions")]
         public string[] SupportedConditions{ get; set; }

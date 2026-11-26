@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Exclusive DDoS protection configuration. used to control the effective scope of exclusive DDoS protection.
+        /// Exclusive DDoS protection configuration. Used to control the effective scope of exclusive DDoS protection.
         /// </summary>
         [JsonProperty("DDoSProtection")]
         public DDoSProtection DDoSProtection{ get; set; }

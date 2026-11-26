@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the authentication request attribute for origin pull.
+        /// Origin-pull authentication request attributes.
         /// </summary>
         [JsonProperty("RequestProperties")]
         public OriginAuthenticationRequestProperties[] RequestProperties{ get; set; }

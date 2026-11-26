@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Policy Name. Length limit is 1-30 characters. Policy name must be unique within the same service.
+        /// Policy Name. Length limit: 1–30 characters. Must be unique within the same service.
         /// </summary>
         [JsonProperty("PolicyName")]
         public string PolicyName{ get; set; }
 
         /// <summary>
-        /// Policy type, cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
+        /// Policy type. It cannot be modified after creation. Value: <li>ScheduledScaling: scheduled scaling.</li>
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// Scheduled scaling configuration. This field is required when the PolicyType value is ScheduledScaling.
+        /// Scheduled scaling configuration. This field is required when the value of PolicyType is ScheduledScaling.
         /// </summary>
         [JsonProperty("ScheduledScalingPolicy")]
         public InferenceScheduledScalingPolicy ScheduledScalingPolicy{ get; set; }

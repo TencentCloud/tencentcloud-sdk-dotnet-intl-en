@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the array of transcoding template unique identifiers to be deleted, with a length limit of 100.
+        /// Array of unique identifiers of instant transcoding templates to be deleted. Length limit: 100.
         /// </summary>
         [JsonProperty("TemplateIds")]
         public string[] TemplateIds{ get; set; }

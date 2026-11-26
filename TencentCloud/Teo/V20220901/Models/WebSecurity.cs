@@ -15,32 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogConfigsResponse : AbstractModel
+    public class WebSecurity : AbstractModel
     {
         
         /// <summary>
-        /// API call information
+        /// <p>Configuration details of the site-level policy.</p>
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
+        [JsonProperty("ZoneDefaultPolicy")]
+        public SecurityPolicy ZoneDefaultPolicy{ get; set; }
 
         /// <summary>
-        /// Array of unique user identifiers
+        /// <p>Configuration details of the domain-level policy.</p>
         /// </summary>
-        [JsonProperty("UniqueIDSet")]
-        public string[] UniqueIDSet{ get; set; }
+        [JsonProperty("HostPolicy")]
+        public HostPolicy[] HostPolicy{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// <p>Configuration details of the policy template.</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Templates")]
+        public WebSecurityTemplates[] Templates{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamArraySimple(map, prefix + "UniqueIDSet.", this.UniqueIDSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "ZoneDefaultPolicy.", this.ZoneDefaultPolicy);
+            this.SetParamArrayObj(map, prefix + "HostPolicy.", this.HostPolicy);
+            this.SetParamArrayObj(map, prefix + "Templates.", this.Templates);
         }
     }
 }

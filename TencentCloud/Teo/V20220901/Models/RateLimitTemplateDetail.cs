@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Template level name. valid values:.
-        /// <Li>Sup_loose: specifies super loose.</li>.
-        /// <Li>`Loose`: loose</li>.
-        /// <Li>`Emergency`: emergency</li>.
-        /// <li>`normal`: moderate</li>.
-        /// <li>strict</li>.
-        /// <li>`close`: off, precise rate limiting effective.</li>.
+        /// Template level name. Valid values:
+        /// <li>sup_loose: super loose;</li>
+        /// <li>loose: loose;</li>
+        /// <li>emergency: emergency;</li>
+        /// <li>normal: moderate;</li>
+        /// <li>strict: strict;</li>
+        /// <li>close: disabled, effective only for precise rate limiting.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -43,15 +43,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// Template action. valid values:.
-        /// <li>alg: JavaScript challenge;</li>.
-        /// <li>`monitor`: observe</li>.
+        /// Template action. Valid values:
+        /// <li>alg: JavaScript challenge;</li>
+        /// <li>monitor: observation.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Penalty time, value range 0-2 days, unit second.
+        /// Penalty duration, in seconds. Value range: 0-2 days.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }

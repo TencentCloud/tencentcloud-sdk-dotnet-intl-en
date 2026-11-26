@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IP group ID.
+        /// IP group Id.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }

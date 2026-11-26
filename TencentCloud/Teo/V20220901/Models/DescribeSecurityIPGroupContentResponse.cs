@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the number of effective ips or IP ranges in the IP group.
+        /// Number of IPs or IP ranges in effect in the IP group.
         /// </summary>
         [JsonProperty("IPTotalCount")]
         public long? IPTotalCount{ get; set; }
 
         /// <summary>
-        /// List of ips or ranges that meet the query conditions. limited by the Offset and Limit parameters.
+        /// List of IPs or IP ranges that meet the query condition. Limited by the Limit and Offset parameters.
         /// </summary>
         [JsonProperty("IPList")]
         public string[] IPList{ get; set; }

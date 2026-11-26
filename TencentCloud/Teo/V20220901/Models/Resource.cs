@@ -25,94 +25,92 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The resource ID.
+        /// Resource ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Billing mode
-        /// `0`: Pay-as-you-go
+        /// Payment mode. Valid values:
+        /// <li>0: postpaid.</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// The creation time.
+        /// Creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The effective time.
+        /// Effective time.
         /// </summary>
         [JsonProperty("EnableTime")]
         public string EnableTime{ get; set; }
 
         /// <summary>
-        /// The expiration time.
+        /// Expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// The plan status. Values:
-        /// <li>`normal`: Normal</li>
-        /// <li>`isolated`: Isolated</li>
-        /// <li>`destroyed`: Terminated</li>
+        /// Package status. Valid values:
+        /// <li>normal: Normal;</li>
+        /// <li>isolated: Isolated;</li>
+        /// <li>destroyed: Terminated.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Pricing query parameter
+        /// Price inquiry parameters.
         /// </summary>
         [JsonProperty("Sv")]
         public Sv[] Sv{ get; set; }
 
         /// <summary>
-        /// Whether to enable auto-renewal. Values:
-        /// <li>`0`: Default status.</li>
-        /// <li>`1`: Enable auto-renewal.</li>
-        /// <li>`2`: Disable auto-renewal.</li>
+        /// Whether it is automatically renewed. Valid values:
+        /// <li>0: default state</li>
+        /// <li>`1`: auto-renewal;</li>
+        /// <li>`2`: no auto-renewal.</li>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// ID of the resource associated with the plan.
+        /// ID of the associated resource in the package.
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// Region. valid values:.
-        /// <Li>Mainland: within the chinese mainland;</li>.
-        /// <li>overseas: outside the chinese mainland.</li>.
-        /// <Li>Global: global.</li>.
+        /// Region. Valid values:
+        /// <li>mainland: within the Chinese mainland;</li>
+        /// <li>overseas: outside the Chinese mainland.</li>
+        /// <li>global: global.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The resource type. Values:
-        /// <li>`plan`: Plan resources</li>
-        /// <li>`pay-as-you-go`: Pay-as-you-go resources </li>
-        /// <li>`value-added`: Value-added resources </li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Resource type. Valid values:
+        /// <li>plan: package type;</li>
+        /// <li>pay-as-you-go: postpaid mode.</li>
+        /// <li>value-added: value-added service type.</li>
         /// </summary>
         [JsonProperty("Group")]
         public string Group{ get; set; }
 
         /// <summary>
-        /// The sites that are associated with the current resources.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Number of sites bound to the current resource.
         /// </summary>
         [JsonProperty("ZoneNumber")]
         public long? ZoneNumber{ get; set; }
 
         /// <summary>
-        /// Resource tag type. Valid values:
+        /// Resource tag type, with values:
         /// <li>vodeo: vodeo resource.</li>
         /// </summary>
         [JsonProperty("Type")]

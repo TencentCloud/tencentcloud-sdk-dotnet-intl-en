@@ -37,13 +37,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic. Measurement unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic. Measurement unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request). Measurement unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth. Measurement unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth. Measurement unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request). Measurement unit: bps;</li><li>l7Flow_request: L7 client request count. Measurement unit: count;</li><li>l7Flow_avgResponseTime: L7 average response time. Measurement unit: ms;</li><li>l7Flow_avgFirstByteResponseTime: L7 average first byte response time. Measurement unit: ms;</li><li>l7Flow_requestRate: L7 client request rate. Measurement unit: qps.</li>
+        /// <p>Metric list. Valid values:</p><li>l7Flow_outFlux: L7 EdgeOne response traffic, unit: Byte;</li><li>l7Flow_inFlux: L7 client request traffic, unit: Byte;</li><li>l7Flow_flux: L7 total access traffic (EdgeOne response + client request), unit: Byte;</li><li>l7Flow_outBandwidth: L7 EdgeOne response bandwidth, unit: bps;</li><li>l7Flow_inBandwidth: L7 client request bandwidth, unit: bps;</li><li>l7Flow_bandwidth: L7 total access bandwidth (EdgeOne response + client request), unit: bps;</li><li>l7Flow_request: L7 access request count, unit: count;</li><li> l7Flow_avgResponseTime: L7 average response time, unit: ms;</li><li> l7Flow_avgFirstByteResponseTime: L7 average first byte response time, unit: ms;</li><li>l7Flow_requestRate: L7 access request rate, unit: qps.</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the notice: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. A maximum of 100 site IDs can be imported. To query all site data under the Tencent Cloud root account, use <code>*</code> as a replacement. Querying account-level data requires permission to all site resources of this interface.</p>
+        /// <p>Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: <a href="https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1">[Tencent Cloud EdgeOne] Cloud API Change Notification</a>. You can import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use <code>*</code> instead. To query account-level data, you must have permission for all site resources of this interface.</p>
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// <p>Filter conditions used when filtering data. For available filter options, refer to the <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Analytics Filter Options</a> for L7 client traffic, bandwidth, and request counts.<br>To limit the query to specific sites or content identifiers, pass the corresponding values in the <code>ZoneIds.N</code> parameter separately.</p>
+        /// <p>Filter criteria used when filtering data. For values, see the available filter items for L7 access traffic, bandwidth, and request count in <a href="https://www.tencentcloud.com/document/product/1552/98219?from_cn_redirect=1#1aaf1150-55a4-4b4d-b103-3a8317ac7945">Metric Analysis Filter Criteria</a>.<br>To limit by site or content identifier, input the corresponding values in the <code>ZoneIds.N</code> parameter.</p>
         /// </summary>
         [JsonProperty("Filters")]
         public QueryCondition[] Filters{ get; set; }
 
         /// <summary>
-        /// <p>The region to which the data belongs. This parameter is deprecated. To filter data by client region, use <code>Filters.country</code> instead.</p>
+        /// <p>Data ownership region. This parameter is deprecated. Please filter data by client region in <code>Filters.country</code>.</p>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

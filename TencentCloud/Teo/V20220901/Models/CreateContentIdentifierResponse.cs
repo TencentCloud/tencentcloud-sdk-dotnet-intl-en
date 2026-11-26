@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Generated content identifier id. after creation, you can go to the rule engine to "set the content identifier" under certain match conditions.
+        /// ID of the generated content. After creation is completed, go to the rule engine to set the content identifier under certain match conditions.
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }

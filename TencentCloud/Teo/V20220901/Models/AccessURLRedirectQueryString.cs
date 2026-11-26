@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Action to be executed. values:.
-        /// <Li>`Full`: retain all</li>.
-        /// <Li>`Ignore`: ignore all</li>.
+        /// Execution action. Valid values:
+        /// <li>full: retain all;</li>
+        /// <li>ignore: Ignore all.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

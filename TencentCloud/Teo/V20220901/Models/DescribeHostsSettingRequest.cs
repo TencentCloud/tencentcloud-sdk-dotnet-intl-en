@@ -25,25 +25,26 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Offset for paginated queries. Default value: 0. Minimum value: 0.
+        /// The offset of paginated query. Default value: 0, minimum value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: 100. Maximum value: 1000.
+        /// Paginated query limit. Default value: 100. Maximum value: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>host: Filter by domain name.</li>
+        /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>host: Filter by domain name.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: Self adaptive. The domain name must enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographic location of the client and origin server, without the need to manually specify. For example, if www.example.com enables "advanced origin optimization" but "smart acceleration" is turned off or only partial match conditions are enabled, "advanced origin optimization" will not be effective.</li>
+        /// <p>Origin optimization direction. Valid values:</p><li>MainlandChinaAndGlobalAdaptive: self-adaptation. The domain name needs to enable "smart acceleration" simultaneously to take effect. EdgeOne will automatically match the optimal origin-pull optimization direction based on the actual geographical locations of the client and the origin server, with no need to manually specify. For example, if www.example.com enables "advanced origin optimization", but "smart acceleration" is turned off or only partially enabled for match conditions, "advanced origin optimization" will not be effective.</li>
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }

@@ -25,65 +25,76 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The action. Values:
-        /// <li>`drop`: Block</li>
-        /// <li>`trans`: Allow</li>
-        /// <li>`monitor`: Observe</li>
+        /// Action. Valid values:
+        /// <li> drop: block;</li>
+        /// <li> trans: release;</li>
+        /// <li>monitor: observation.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The matching dimension. Values:
-        /// <li>`ip`: Match by IP.</li>
-        /// <li>`area`: Match by IP region.</li>
+        /// According to type matching. Valid values:
+        /// <li>ip: Match by client IP;</li>
+        /// <li>area: match by client IP region;</li>
+        /// <li>asn: Match the autonomous system to which the client belongs;</li>
+        /// <li>referer: match the Referer request header;</li>
+        /// <li>ua: match the User-Agent request header;</li>
+        /// <li>url: Request URL for matching.</li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// Matching method. It defaults to `equal` if it’s left empty.
-        /// Values: 
-        /// <li>`is_empty`: The field is empty.</li>
-        /// <li>`not_exists`: The configuration item does not exist.</li>
-        /// <li>`include`: Include</li>
-        /// <li>`not_include`: Do not include</li>
-        /// <li>`equal`: Equal to</li>
-        /// <li>`not_equal`: Not equal to</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Match method of the rule. Valid values:
+        /// <li> match: match, suitable for MatchFrom as ip;</li>
+        /// <li> not_match: Not match, suitable for when MatchFrom is ip;</li>
+        /// <li> include_area: region inclusion, suitable for MatchFrom as area;</li>
+        /// <li> not_include_area: Regions excluded, applicable to MatchFrom as area;</li>
+        /// <li> asn_match: ASN contains, suitable for MatchFrom as asn;</li>
+        /// <li> asn_not_match: ASN not contained, applicable to MatchFrom as asn;</li>
+        /// <li> equal: equal, suitable for MatchFrom being ua, referer;</li>
+        /// <li> not_equal: Not equal to, applicable to MatchFrom being ua, referer;</li>
+        /// <li> include: wildcard match, suitable for MatchFrom being ua, referer, url;</li>
+        /// <li> not_include: wildcard mismatch, suitable for MatchFrom being ua, referer;</li>
+        /// <li> is_emty: The configuration content is empty, suitable for MatchFrom being ua or referer;</li>
+        /// <li> not_exists: The configuration content does not exist. This is applicable when MatchFrom is ua or referer.</li>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
+        /// Rule id. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The update time, which is only used as an output parameter.
+        /// Update time. For output usage only.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// The rule status. A null value indicates that the rule is enabled. Values:
-        /// <li>`on`: Enabled</li>
-        /// <li>`off`: Disabled</li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Rule enablement status. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li> off: Disabled.</li>
+        /// If the input parameter is not specified, the value defaults to `on`.
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Specifies the rule name.
+        /// Rule name.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+        /// Matching content. Multi-value input is supported.
+        /// <li>When entering multiple matching values, please separate them with English commas;</li>
+        /// <li>When MatchFrom is ua, multi-value input is not supported;</li>
+        /// <li>When Operator is is_empty or not_exists, the input value of this field is invalid.</li>
         /// </summary>
         [JsonProperty("MatchContent")]
         public string MatchContent{ get; set; }

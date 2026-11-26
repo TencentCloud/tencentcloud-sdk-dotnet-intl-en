@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Plans available for the current user
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Package types available for purchase and information related to the current account.
         /// </summary>
         [JsonProperty("PlanInfo")]
         public PlanInfo[] PlanInfo{ get; set; }

@@ -25,10 +25,10 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP header setting methods. valid values are:.
-        /// <Li>`Set`: sets a value for an existing header parameter;</li>.
-        /// <Li>`Del`: deletes a header parameter;</li>.
-        /// <Li>`Add`: adds a header parameter.</li>.
+        /// HTTP header setting method. Valid values:
+        /// <li>set: Set. Change the value of the specified header parameter to the value after setting;</li>
+        /// <li>del: delete. Delete the specified header parameter;</li>
+        /// <li>add: Add. Add the specified header parameter.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -40,7 +40,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// HTTP header value. this parameter is required when the action is set to `set` or `add`; it is optional when the action is set to `del`.
+        /// HTTP header value. This parameter is required when Action is set or add, and not required when Action is del.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

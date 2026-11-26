@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID.		
+        /// Zone ID.	
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the ID list of API resources to be deleted.
+        /// List of API resource IDs to delete.
         /// </summary>
         [JsonProperty("APIResourceIds")]
         public string[] APIResourceIds{ get; set; }

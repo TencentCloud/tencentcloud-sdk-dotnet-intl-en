@@ -31,19 +31,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance ID.
+        /// Layer 4 Proxy Instance ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance name.
+        /// Name of the L4 proxy instance.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// Acceleration zone of the Layer 4 proxy instance.<li>mainland: Availability zone in the Chinese mainland;</li><li>overseas: Global availability zone (excluding the Chinese mainland);</li><li>global: Global availability zone.</li>	
+        /// Acceleration zone of the Layer 4 proxy instance. 
+        /// <li>mainland: Chinese mainland availability zone;</li>
+        /// <li>overseas: global availability zone (excluding the Chinese mainland);</li>
+        ///  <li>global: global availability zone.</li>	
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -55,51 +58,55 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Cname{ get; set; }
 
         /// <summary>
-        /// After the fixed IP address is enabled, this value will return the corresponding access IP address; if it is not enabled, this value will be empty.
+        /// After fixed IP address is enabled, this value returns the corresponding access IP address. If not enabled, this value is empty.
         /// </summary>
         [JsonProperty("Ips")]
         public string[] Ips{ get; set; }
 
         /// <summary>
-        /// Status of the Layer 4 proxy instance.<li>online: Enabled;</li>
+        /// Status of the Layer 4 proxy instance.
+        /// <li>online: enabled;</li>
         /// <li>offline: Disabled;</li>
-        /// <li>progress: Deploying;</li>	
-        /// <li>stopping: Disabling;</li>
-        /// <li>banned: Blocked;</li>
-        /// <li>fail: Failed to deploy or disable.</li>	
+        /// <li>progress: deploying;</li>	
+        /// <li>stopping: disabling;</li>
+        /// <li>`banned`: The name server is banned.</li>
+        /// <li>fail: deployment or disabling failed.</li>	
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable IPv6 access.<li>on: Enable;</li> <li>off: Disable.</li>
+        /// Specifies whether to enable IPv6 access. 
+        /// <li>`on`: Enable;</li> 
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Ipv6")]
         public string Ipv6{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable the fixed IP address.<li>on: Enable;</li> <li>off: Disable.</li>
+        /// Specifies whether to enable the fixed IP address.
+        /// <li>`on`: Enable;</li> <li>`off`: Disable.</li>
         /// </summary>
         [JsonProperty("StaticIp")]
         public string StaticIp{ get; set; }
 
         /// <summary>
-        /// Specifies whether to enable network optimization in the Chinese mainland.<li>on: Enable</li> <li>off: Disable</li>
+        /// Specifies whether to enable network optimization in the Chinese mainland.
+        /// <li>on: Enable.</li> <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public string AccelerateMainland{ get; set; }
 
         /// <summary>
-        /// Security protection settings.
+        /// Security protection configuration.
         /// This field is deprecated.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("DDosProtectionConfig")]
         [System.Obsolete]
         public DDosProtectionConfig DDosProtectionConfig{ get; set; }
 
         /// <summary>
-        /// Number of forwarding rules under the Layer 4 proxy instance.
+        /// Number of forwarding rules under the layer 4 proxy instance.
         /// </summary>
         [JsonProperty("L4ProxyRuleCount")]
         public long? L4ProxyRuleCount{ get; set; }

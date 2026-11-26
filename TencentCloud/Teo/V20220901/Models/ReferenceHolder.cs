@@ -31,14 +31,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Instance type. Values as follows:
+        /// Instance type. Valid values:
         /// <li>acceleration-domain: Acceleration domain name;</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Referenced instance information.
+        /// Instance information that is cited or referencing.
         /// </summary>
         [JsonProperty("Instance")]
         public string Instance{ get; set; }

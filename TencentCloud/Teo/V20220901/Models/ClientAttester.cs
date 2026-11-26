@@ -25,43 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Option ID for certification.</p>
+        /// <p>Authentication option ID.</p>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// <p>Option name for authentication.</p>
+        /// <p>Authentication option name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Authentication rule type. Returned only in the response. Valid values:</p><li>PRESET: System preset rule. Only AttesterDuration can be modified.</li><li>CUSTOM: User-defined rule.</li>
+        /// <p>Authentication rule type. Returned only as an output parameter. Valid values:</p><li>PRESET: system preset rule. Only AttesterDuration can be modified;</li><li>CUSTOM: user-defined rule.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tianyu verification code for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
+        /// <p>Authentication method. Valid values:</p><li>TC-RCE: Use risk identification RCE for authentication;</li><li>TC-CAPTCHA: Use Tencent Cloud CAPTCHA for authentication;</li><li>TC-EO-CAPTCHA: Use EdgeOne human-machine verification for authentication.</li>
         /// </summary>
         [JsonProperty("AttesterSource")]
         public string AttesterSource{ get; set; }
 
         /// <summary>
-        /// <p>Authentication validity time. Default value is 60s. Supported measurement units:</p><li>s: second, value ranges from 60 to 43200.</li><li>m: minute, value ranges from 1 to 720.</li><li>h: hour, value ranges from 1 to 12.</li>
+        /// <p>Authentication validity time. Default is 60s. Supported units:</p><li>s: second, value ranges from 60 to 43200;</li><li>m: minute, value ranges from 1 to 720;</li><li>h: hour, value ranges from 1 to 12.</li>
         /// </summary>
         [JsonProperty("AttesterDuration")]
         public string AttesterDuration{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+        /// <p>Whether to enable usage limits on authentication results. </p><p>Enumeration values:</p><ul><li>on: Enable</li><li>off: Disable</li></ul><p>Default value: off</p>
         /// </summary>
         [JsonProperty("UsageLimit")]
         public string UsageLimit{ get; set; }
 
         /// <summary>
-        /// <p>Whether to enable the usage limit for attestation results. </p><p>Valid values:</p><ul><li>on: Enabled</li><li>off: Disabled</li></ul><p>Default value: off</p>
+        /// <p>Maximum number of uses for the authentication result. This field is required when UsageLimit is on.</p><p>Value range: [1, 100000]</p>
         /// </summary>
         [JsonProperty("MaxUsageCount")]
         public long? MaxUsageCount{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public TCRCEOption TCRCEOption{ get; set; }
 
         /// <summary>
-        /// <p>Configuration message for TC-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-CAPTCHA.</li>
+        /// <p>Configuration message for TC-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-CAPTCHA.</li>
         /// </summary>
         [JsonProperty("TCCaptchaOption")]
         public TCCaptchaOption TCCaptchaOption{ get; set; }
 
         /// <summary>
-        /// <p>Configuration message for TC-EO-CAPTCHA certification.</p><li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+        /// <p>Configuration message for TC-EO-CAPTCHA authentication.</p><li>Required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
         /// </summary>
         [JsonProperty("TCEOCaptchaOption")]
         public TCEOCaptchaOption TCEOCaptchaOption{ get; set; }

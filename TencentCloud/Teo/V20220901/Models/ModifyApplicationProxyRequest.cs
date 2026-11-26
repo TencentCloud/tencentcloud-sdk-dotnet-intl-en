@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,34 +37,34 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Domain name or subdomain name when `ProxyType=hostname`; 
-        /// Instance name when `ProxyType=instance`.
+        /// When ProxyType=hostname, it indicates a domain name or subdomain.
+        /// Proxy name when `ProxyType=instance`.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// The session persistence duration. Value range: 30-3600 (in seconds).
-        /// The original configuration will apply if this field is not specified.
+        /// Session persistence duration. Value range: 30-3600. Unit: second.
+        /// Maintain the original configuration if not specified.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// L4 proxy mode. Valid values: 
-        /// <li>instance: Instance mode. </li>If it is not specified, instance is used by default.
+        /// L4 proxy mode. Valid values:
+        /// <li>`instance`: Create by instance.</li>Use default value `instance` if not specified.
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// IPv6 access configuration. The original configuration will apply if it is not specified.
+        /// Ipv6 access configuration. Maintain the original configuration if not specified.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// Cross-MLC-border acceleration. The original configuration will apply if it is not specified.
+        /// Chinese mainland acceleration optimization configuration. Leave blank to indicate retaining the original configuration.
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainland AccelerateMainland{ get; set; }

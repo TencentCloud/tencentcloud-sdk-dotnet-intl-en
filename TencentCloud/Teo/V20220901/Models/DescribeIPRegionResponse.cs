@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of IP attribution information.
+        /// IP attribution information list.
         /// </summary>
         [JsonProperty("IPRegionInfo")]
         public IPRegionInfo[] IPRegionInfo{ get; set; }

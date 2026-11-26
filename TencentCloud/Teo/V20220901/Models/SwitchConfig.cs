@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable web protection. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>It does not affect DDoS and bot configuration.
+        /// Master switch for Web security. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>Does not affect the DDoS and Bot switch.
         /// </summary>
         [JsonProperty("WebSwitch")]
         public string WebSwitch{ get; set; }

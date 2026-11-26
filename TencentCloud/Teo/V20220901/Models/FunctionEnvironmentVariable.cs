@@ -39,7 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Variable type. Valid values:
         /// <li>string: string type;</li>
-        /// <li>json: JSON object type.</li>Default value: string.
+        /// <li>json: JSON object type.</li><li>secret: Secret key type.</li>Default value: string.
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

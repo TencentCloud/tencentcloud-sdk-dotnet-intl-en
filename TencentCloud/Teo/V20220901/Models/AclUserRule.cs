@@ -25,97 +25,97 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The rule name.
+        /// Rule name.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`trans`: Allow</li>
-        /// <li>`drop`: Block the request</li>
-        /// <li>`monitor`: Observe</li>
-        /// <li>`ban`: Block the IP</li>
-        /// <li>`redirect`: Redirect the request</li>
-        /// <li>`page`: Return the specified page</li>
-        /// <li>`alg`: JavaScript challenge</li>
+        /// Penalty action. Valid values:
+        /// <li>trans: pass;</li>
+        /// <li>drop: block;</li>
+        /// <li>monitor: observation;</li>
+        /// <li>ban: IP block;</li>
+        /// <li>redirect: Redirection;</li>
+        /// <li>page: Specified page;</li>
+        /// <li>alg: JavaScript challenge.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The rule status. Values:
-        /// <li>`on`: Enabled</li>
-        /// <li>`off`: Disabled</li>
+        /// Rule status. Valid values:
+        /// <li>`on`: Take effect;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
 
         /// <summary>
-        /// The custom rule.
+        /// Custom rule.
         /// </summary>
         [JsonProperty("AclConditions")]
         public AclCondition[] AclConditions{ get; set; }
 
         /// <summary>
-        /// The rule priority. Value range: 0-100.
+        /// Rule priority. Value range: 0-100.
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// Rule ID, which is only used as an output parameter.
+        /// Rule Id. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The update time, which is only used as an output parameter.
+        /// Update time. For output usage only.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// IP ban duration. Range: 0-2 days. It's required when `Action=ban`. 
+        /// Penalty duration for ip blocking. Required when Action is ban. It cannot be empty and the value ranges from 0 to 2 days.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// The unit of the IP ban duration. Values:
-        /// <li>`second`: Second</li>
-        /// <li>`minutes`: Minute</li>
-        /// <li>`hour`: Hour</li>Default value: `second`.
+        /// Penalty time unit for ip blocking. Valid values:
+        /// <li>second: second;</li>
+        /// <li>minutes: minute;</li>
+        /// <li>hour: hour.</li>Default: second.
         /// </summary>
         [JsonProperty("PunishTimeUnit")]
         public string PunishTimeUnit{ get; set; }
 
         /// <summary>
-        /// Name of the custom return page. It's required when `Action=page`.	
+        /// Name of the custom return page. Required when Action is page, and cannot be empty.	
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// (Disused) ID of the custom return page. The default value is 0, which means that the system default blocking page is used. 
+        /// Instance Id for the custom return page. Default value: 0, which means the system default blocking page is used. This parameter is deprecated.
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+        /// Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
         /// </summary>
         [JsonProperty("CustomResponseId")]
         public string CustomResponseId{ get; set; }
 
         /// <summary>
-        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+        /// code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
         /// </summary>
         [JsonProperty("ResponseCode")]
         public long? ResponseCode{ get; set; }
 
         /// <summary>
-        /// The redirection URL. It's required when `Action=redirect`.	
+        /// Address for redirection. Required when Action is `redirect` and cannot be empty.	
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

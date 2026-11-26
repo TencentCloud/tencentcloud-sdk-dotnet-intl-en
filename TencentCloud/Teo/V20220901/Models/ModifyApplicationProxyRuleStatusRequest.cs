@@ -25,27 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The proxy ID.
+        /// Proxy ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// Rule ID.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// The rule status. Values:
-        /// <li>`offline`: Disabled</li>
-        /// <li>`online`: Enabled</li>
+        /// Status. Valid values:
+        /// <li>offline: disabled;</li>
+        /// <li>online: enabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

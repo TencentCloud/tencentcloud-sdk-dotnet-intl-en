@@ -25,40 +25,40 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Method to validate client behavior.
+        /// Operation name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Proof-of-work strength. Values:
-        /// <li>`low` (default): Low</li>
-        /// <li>`middle`: Medium</li>
-        /// <li>`high`: High</li>
+        /// Proof of Work (proof_Of-Work) verification strength. Default value: low. Valid values:
+        /// <li>low: low;</li>
+        /// <li>middle: Medium;</li>
+        /// <li>high: high.</li>
         /// </summary>
         [JsonProperty("WorkLevel")]
         public string WorkLevel{ get; set; }
 
         /// <summary>
-        /// Implement a delay before executing JS in milliseconds. Value range: 0-1000. Default value: 500.
+        /// Execution mode. The time when js delay execution is triggered. Unit: ms. Default value: 500. Value range: 0–1000.
         /// </summary>
         [JsonProperty("ExecuteMode")]
         public long? ExecuteMode{ get; set; }
 
         /// <summary>
-        /// The period threshold for validating the result "Client JS disabled" in seconds. Value range: 5-3600. Default value: 10.
+        /// Statistical cycle for clients that do not have JS enabled (test not completed). Unit: seconds. Default: 10. Value range: 5–3600.
         /// </summary>
         [JsonProperty("InvalidStatTime")]
         public long? InvalidStatTime{ get; set; }
 
         /// <summary>
-        /// The number of times for the result "Client JS disabled" occurred in the specified period. Value range: 1-100000000. Default value: 30.
+        /// Client JS not enabled (test not completed) trigger threshold. Count. Default: 300. Value: 1–100000000.
         /// </summary>
         [JsonProperty("InvalidThreshold")]
         public long? InvalidThreshold{ get; set; }
 
         /// <summary>
-        /// Client behavior validation results.
+        /// Bot proactive feature recognition client behavior validation result.
         /// </summary>
         [JsonProperty("AlgDetectResults")]
         public AlgDetectResult[] AlgDetectResults{ get; set; }

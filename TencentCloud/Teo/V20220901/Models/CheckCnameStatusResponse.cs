@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Integration of the CNAME of the domain name configuration status information list.
+        /// Information list of the CNAME configuration status of the integrated domain name.
         /// </summary>
         [JsonProperty("CnameStatus")]
         public CnameStatus[] CnameStatus{ get; set; }

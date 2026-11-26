@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The total count of forwarding rules.
+        /// Total number of forwarding rules.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of forwarding rules.	
+        /// Forwarding rule list.	
         /// </summary>
         [JsonProperty("L4ProxyRules")]
         public L4ProxyRule[] L4ProxyRules{ get; set; }

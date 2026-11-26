@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the server certificate ID.
+        /// Server certificate ID.
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -37,11 +37,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Certificate type. valid values:.
+        /// Certificate type. Valid values:
         /// <li>`default`: Default certificate;</li>
-        /// 
         /// <li>`upload`: External certificate;</li>
-        /// 
         /// <li>`managed`: Tencent Cloud managed certificate.</li>
         /// </summary>
         [JsonProperty("Type")]
@@ -60,28 +58,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EffectiveTime{ get; set; }
 
         /// <summary>
-        /// Common name of the cert.
+        /// Certificate common name.
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }
 
         /// <summary>
-        /// Specifies the SAN domain of the certificate.
+        /// SAN domain of the certificate.
         /// </summary>
         [JsonProperty("SubjectAltName")]
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// Deployment state. valid values:.
-        /// <li>processing: deployment in progress;</li>.
-        /// <Li>Deployed: deployed</li>.
-        /// <Li>`Failed`: deployment failed</li>.
+        /// Deployment status. Valid values:
+        /// <li>processing: under deployment;</li>
+        /// <li>deployed: deployed;</li>
+        /// <li>failed: Deployment failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Indicates the failure reason when the Status is failed.
+        /// If the Status is failed, this field returns the failure reason.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

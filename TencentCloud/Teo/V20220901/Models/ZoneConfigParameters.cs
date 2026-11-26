@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site name.
+        /// Site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Site configuration information.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Site configuration message.
         /// </summary>
         [JsonProperty("ZoneConfig")]
         public ZoneConfig ZoneConfig{ get; set; }

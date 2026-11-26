@@ -25,26 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable origin-pull request parameter query string. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Configuration switch for the origin-pull request parameter query string. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Query string mode. this parameter is required when switch is on. values:.
-        /// <Li>`Full`: retain all</li>.
-        /// <Li>`Ignore`: ignore all;</li>.
-        /// <Li>IncludeCustom: retain partial parameters.</li>.
-        /// <Li>ExcludeCustom: ignore partial parameters.</li>.
+        /// Query string mode. This parameter is required when Switch is on. Valid values:
+        /// <li>full: retain all;</li>
+        /// <li>ignore: Ignore all;</li>
+        /// <li>includeCustom: reserve some parameters;</li>
+        /// <li>excludeCustom: ignore some parameters.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+        /// Specified parameter values. This parameter takes effect only when the string mode Action is includeCustom or excludeCustom. It is used to specify parameters to keep or ignore. Supports up to 10 parameters.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

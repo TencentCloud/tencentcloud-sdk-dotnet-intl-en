@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Key-value pair data list. Return results sequentially in the order of input Keys. If a key does not exist, the corresponding Value Field returns empty string.
+        /// List of key-value pair data. Results are returned sequentially in the order of the input Keys. If a key does not exist, the Value Field of the corresponding item returns an empty string.
         /// </summary>
         [JsonProperty("Data")]
         public KeyValuePair[] Data{ get; set; }

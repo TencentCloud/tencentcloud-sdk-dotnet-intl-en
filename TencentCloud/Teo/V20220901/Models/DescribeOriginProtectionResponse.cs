@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin protection configuration.
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// Origin protection information.
         /// </summary>
         [JsonProperty("OriginProtectionInfo")]
         public OriginProtectionInfo[] OriginProtectionInfo{ get; set; }

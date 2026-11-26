@@ -25,40 +25,40 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Refer to the instance type. Valid values:
-        /// <li>edge-function: Edge function.</li>
+        /// Instance type to refer. Valid values:
+        /// <li>edge-function: edge function.</li>
         /// </summary>
         [JsonProperty("ReferenceType")]
         public string ReferenceType{ get; set; }
 
         /// <summary>
-        /// Referenced instance ID. According to the value of ReferenceType, return the corresponding instance ID.
-        /// <li>When ReferenceType is edge-function: Return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
+        /// ID of the referenced instance. Based on the value of ReferenceType, return the corresponding instance ID:
+        /// <li>When ReferenceType is edge-function: return the edge function ID in the format of ef-2vc5oe9mzqhm.</li>
         /// </summary>
         [JsonProperty("ReferenceId")]
         public string ReferenceId{ get; set; }
 
         /// <summary>
-        /// Referenced instance name. According to the value of ReferenceType, return the corresponding instance name.
-        /// <li>When ReferenceType is edge-function: Returns the edge function name.</li>
+        /// Name of the referenced instance. Based on the value of ReferenceType, the corresponding instance name is returned:
+        /// <li>When ReferenceType is edge-function: return the edge function name.</li>
         /// </summary>
         [JsonProperty("ReferenceName")]
         public string ReferenceName{ get; set; }
 
         /// <summary>
-        /// Site ID. Site identifier of the instance ownership that refers to the namespace.
+        /// Zone ID. Site identifier of the instance that references the namespace.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Site name. Refer to the site name of the instance ownership in namespace.
+        /// Site name. The name of the site to which the instances in this namespace belong.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// Refer to the site alias of the namespace instance. If the site alias is not set, return an empty string.
+        /// Alias of the site that the instance in the namespace belongs to. If no site alias is set, an empty string is returned.
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }

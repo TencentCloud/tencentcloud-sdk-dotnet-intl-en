@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Encoding format for audio streams. optional values:.
+        /// Audio stream encoding format. Optional values:
         /// <li>libfdk_aac.</li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
-        /// Audio channel quantity. valid values: <li>2: dual-channel.</li> default value: 2.
+        /// Audio channel quantity. Available values: <li>2: dual-channel.</li>Default value: 2.
         /// </summary>
         [JsonProperty("AudioChannel")]
         public ulong? AudioChannel{ get; set; }

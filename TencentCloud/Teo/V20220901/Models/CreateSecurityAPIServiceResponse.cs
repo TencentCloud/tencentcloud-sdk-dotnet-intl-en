@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// API service ID list.
+        /// List of API service IDs.
         /// </summary>
         [JsonProperty("APIServiceIds")]
         public string[] APIServiceIds{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The alias domain name to be deleted. If it is left empty, the delete operation is not performed.
+        /// Alias domain name pending deletion. If it is empty, no deletion operation is performed.
         /// </summary>
         [JsonProperty("AliasNames")]
         public string[] AliasNames{ get; set; }

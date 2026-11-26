@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The auto-renewal flag for prepaid plan has the following values:
+        /// Auto-renewal flag for prepaid plan. Valid values:
         /// <li> on: Enable auto-renewal;</li>
         /// <li> off: Disable auto-renewal. </li>
         /// </summary>

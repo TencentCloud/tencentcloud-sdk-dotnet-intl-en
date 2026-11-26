@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the total count of origin-pull speed limit restrictions.
+        /// Total number of origin-pull rate limits.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Describes the List of origin-pull speed limit details.
+        /// List of origin-pull rate limits.
         /// </summary>
         [JsonProperty("Limits")]
         public PrefetchOriginLimit[] Limits{ get; set; }

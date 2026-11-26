@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of purchased resources.
+        /// Name list of purchased resources.
         /// </summary>
         [JsonProperty("ResourceNames")]
         public string[] ResourceNames{ get; set; }
 
         /// <summary>
-        /// List or order numbers.
+        /// List of purchased order numbers.
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }

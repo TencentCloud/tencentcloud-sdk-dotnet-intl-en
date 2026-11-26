@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable WebSocket connection timeout. Values:
-        /// <li>`on`: The field "Timeout" can be configured.</li>
-        /// <li>`off`: The field "Timeout" is fixed to 15 seconds.</li>
+        /// WebSocket timeout configuration switch. Valid values:
+        /// <li>on: Use Timeout as the WebSocket timeout;</li>
+        /// <li>off: The platform still supports WebSocket connections, using the system default 15 seconds as the timeout period.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The timeout period in seconds. Maximum value: 120.
+        /// Timeout period in seconds. Maximum timeout time: 120 seconds.
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }

@@ -25,28 +25,28 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Details about the released version.
+        /// Detailed information of the released version.
         /// </summary>
         [JsonProperty("ConfigGroupVersionInfos")]
         public ConfigGroupVersionInfo[] ConfigGroupVersionInfos{ get; set; }
 
         /// <summary>
-        /// Release time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+        /// Release time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
 
         /// <summary>
-        /// Release status. Valid values: 
-        /// <li>deploying: Being released.</li>
-        /// <li>failure: Release failed.</li>
-        /// <li>success: Released successfully. </li>
+        /// Publishing status. Valid values:
+        /// <li> deploying: Releasing;</li>
+        /// <li>failure: release failure;</li>
+        /// <li>success: Published successfully.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Release result information.
+        /// Publish result information.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

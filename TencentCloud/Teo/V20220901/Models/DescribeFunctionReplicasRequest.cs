@@ -49,19 +49,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Sorting basis. Valid values: <li>created-on: Creation time.</li> Default sorting is based on the created-on attribute.
+        /// Sorting basis. Valid values: <li>created-on: creation time.</li> Default: sort by the created-on attribute.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: sort in descending order.</li> Default value: asc.
+        /// List sort method. Valid values: <li>asc: ascending order;</li> <li>desc: descending order.</li> Default value: asc.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// Filtering Conditions. The maximum of Filters.Values is 20. If this parameter is left empty, it returns all function replicas under the function ID. Detailed filter criteria: <li>replica-name: Filter by function replica name. Fuzzy query is supported.</li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all function copies under the function ID are returned. The detailed filter criteria are as follows: <li> replica-name: filter by function copy name. Fuzzy query is supported.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }

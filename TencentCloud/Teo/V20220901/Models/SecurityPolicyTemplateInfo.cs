@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The zone ID to which the policy template belongs.
+        /// Site ID of the policy template.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,13 +37,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// The name of the policy template.
+        /// Policy template name.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Information about domains bound to the policy template.
+        /// Domain name info bound to the policy template.
         /// </summary>
         [JsonProperty("BindDomains")]
         public BindDomainInfo[] BindDomains{ get; set; }

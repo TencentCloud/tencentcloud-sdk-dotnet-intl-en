@@ -25,51 +25,51 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the accelerated domain name.
+        /// Zone ID of the acceleration domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Accelerated domain name
+        /// Acceleration domain name.
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Details of the origin.
+        /// Origin server information.
         /// </summary>
         [JsonProperty("OriginInfo")]
         public OriginInfo OriginInfo{ get; set; }
 
         /// <summary>
-        /// Origin-pull protocol configuration. Values:
-        /// <li>`FOLLOW`: Follow the protocol of origin</li>
-        /// <li>`HTTP`: Send requests to the origin over HTTP</li>
-        /// <li>`HTTPS`: Send requests to the origin over HTTPS</li>
-        /// <li>The original configuration applies if this field is not specified.</li>
+        /// Origin-pull protocol. Valid values:
+        /// <li>FOLLOW: follow protocol;</li>
+        /// <li>HTTP: Origin-pull over HTTP;</li>
+        /// <li>HTTPS: Origin-pull over HTTPS protocol.</li>
+        /// <li>Leave blank to retain the original configuration.</li>
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// Ports for HTTP origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTP`. The original configuration is used if it's not specified.
+        /// HTTP origin-pull port. Value range: 1–65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTP. If not specified, the original configuration is retained.
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// Ports for HTTPS origin-pull requests. Range: 1-65535. It takes effect when `OriginProtocol=FOLLOW/HTTPS`. The original configuration is used if it's not specified.
+        /// HTTPS origin-pull port. Value range: 1-65535. This parameter is valid only when OriginProtocol is FOLLOW or HTTPS. If not specified, the original configuration is retained.
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// IPv6 status. Values:
-        /// <li>`follow`: Follow the IPv6 configuration of the site</li>
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
-        /// <li>The original configuration applies if this field is not specified.</li>
+        /// IPv6 status. Valid values:
+        /// <li>follow: follow the site IPv6 configuration;</li>
+        /// <li>on: enabled;</li>
+        /// <li>off: Disabled.</li>
+        /// <li>Leave blank to retain the original configuration.</li>
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }

@@ -25,39 +25,40 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// COS bucket name.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cos bucket name</p>
         /// </summary>
         [JsonProperty("CosBucket")]
         public string CosBucket{ get; set; }
 
         /// <summary>
-        /// COS bucket region.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cos Bucket Region</p>
         /// </summary>
         [JsonProperty("CosRegion")]
         public string CosRegion{ get; set; }
 
         /// <summary>
-        /// Repository type. LOG: application logs; ARCHIVE: application archive.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Repository type. LOG: application logs; ARCHIVE: application archive.</p>
         /// </summary>
         [JsonProperty("StoreType")]
         public string StoreType{ get; set; }
 
         /// <summary>
-        /// Repository status. ON: enabled; OFF: disabled.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Repository status. ON: enabled; OFF: disabled.</p>
         /// </summary>
         [JsonProperty("StoreState")]
         public string StoreState{ get; set; }
 
         /// <summary>
-        /// Repository path.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Repository path</p><p>Primary path data. If StoreType is ARCHIVE and SubStorePaths is configured, the system default value will be used.</p>
         /// </summary>
         [JsonProperty("StorePath")]
         public string StorePath{ get; set; }
+
+        /// <summary>
+        /// <p>Subpath list</p><p>Subpath data (multi-path pattern) supports only ARCHIVE StoreType; up to 25 data entries.</p>
+        /// </summary>
+        [JsonProperty("SubStorePaths")]
+        public string[] SubStorePaths{ get; set; }
 
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "StoreType", this.StoreType);
             this.SetParamSimple(map, prefix + "StoreState", this.StoreState);
             this.SetParamSimple(map, prefix + "StorePath", this.StorePath);
+            this.SetParamArraySimple(map, prefix + "SubStorePaths.", this.SubStorePaths);
         }
     }
 }

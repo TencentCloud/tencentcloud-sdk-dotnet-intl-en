@@ -25,15 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filter criteria. the maximum value of filters.values is 20. the detailed filter criteria are as follows:
-        /// .
-        /// <Li>Rule-Id: filter by rule id.</li>.
+        /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>rule-id: Filter by rule ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

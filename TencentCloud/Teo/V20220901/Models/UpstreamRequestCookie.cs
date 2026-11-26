@@ -25,26 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable the origin-pull request parameter cookie. valid values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Cookie configuration switch for origin-pull request parameters. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Origin-Pull request parameter cookie mode. this parameter is required when `switch` is on. valid values are:.
-        /// <Li>Full: indicates full retention;</li>.
-        /// <Li>Ignore: ignore all.</li>.
-        /// <Li>`IncludeCustom`: retain partial parameters.</li>.
-        /// <Li>ExcludeCustom: ignore partial parameters.</li>.
+        /// Cookie mode for origin-pull requests. This parameter is required when Switch is on. Valid values:
+        /// <li>full: retain all;</li>
+        /// <li>ignore: ignore all;</li>
+        /// <li>includeCustom: means to reserve some parameters;</li>
+        /// <li>excludeCustom: means to ignore some parameters.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Specifies parameter values. this parameter takes effect only when the query string mode action is `includecustom` or `excludecustom`, and is used to specify the parameters to be reserved or ignored. up to 10 parameters are supported.
+        /// Specified parameter values. This parameter takes effect only when the query string mode Action is includeCustom or excludeCustom, and is used to specify the parameters to keep or ignore. Supports up to 10 parameters.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

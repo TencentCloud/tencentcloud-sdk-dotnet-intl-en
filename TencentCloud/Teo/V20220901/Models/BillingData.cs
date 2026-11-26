@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the data timestamp.
+        /// Data timestamp.
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// Value.
+        /// Numeric value.
         /// </summary>
         [JsonProperty("Value")]
         public ulong? Value{ get; set; }
 
         /// <summary>
-        /// Site ID of the associated data point. if the content identifier feature is enabled, this item is the content identifier.
+        /// Site ID to which the data point belongs. If the content identifier feature is used, the value of this item is the content identifier.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the domain name of the data point.
+        /// Domain name to which the data point belongs.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Specifies the layer-4 proxy instance ID the data point belongs to.
+        /// ID of the Layer 4 Proxy instance to which the data point belongs.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Specifies the billing region ID the data point belongs to. the billing region is determined by the EdgeOne node region where the actual service user client is located. valid values: <li>CH: chinese mainland</li><li>AF: africa</li><li>AS1: asia pacific zone 1</li><li>AS2: asia pacific zone 2</li><li>AS3: asia pacific zone 3</li><li>EU: europe</li><li>MidEast: middle east</li><li>NA: north america</li><li>SA: south america</li>.
+        /// ID of the billing region to which the data point belongs. The billing region is determined by the region of the EdgeOne node that actually serves the user client. Valid values: <li>CH: Chinese mainland</li><li>AF: Africa</li><li>AS1: Asia Pacific zone 1</li><li>AS2: Asia Pacific zone 2</li><li>AS3: Asia Pacific zone 3</li><li>EU: Europe</li><li>MidEast: Middle East</li><li>NA: North America</li><li> SA: South America</li>
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }

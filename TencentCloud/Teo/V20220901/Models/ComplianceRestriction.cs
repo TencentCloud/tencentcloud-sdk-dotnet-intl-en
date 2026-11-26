@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateOfflineLogConfigResponse : AbstractModel
+    public class ComplianceRestriction : AbstractModel
     {
         
         /// <summary>
-        /// API response information
+        /// <p>The causes for access restriction.</p><p>Enumeration values:</p><ul><li>ICP_RECORD_REQUIRED: unlicensed (no ICP filing);</li><li>GOVERNMENT_ORDER: government directive.</li></ul>
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// <p>Restrict access to specific country/region codes using the "ISO 3166 country/region code standard".</p><p>Parameter format: view link: https://www.iso.org/iso-3166-country-codes.html.</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

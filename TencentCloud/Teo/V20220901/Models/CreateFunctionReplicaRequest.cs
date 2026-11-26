@@ -37,19 +37,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Edge function copy name. Limit to enter 1-50 characters. Allowed characters are a-z, 0-9, and -. The - cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names under the same FunctionId must be unique.
+        /// Edge function copy name. Limited to 1-50 characters. Allowed characters are a-z, 0-9, and -. The hyphen cannot be registered alone or used continuously, and cannot be placed at the beginning or the end. Copy names must be unique under the same FunctionId.
         /// </summary>
         [JsonProperty("ReplicaName")]
         public string ReplicaName{ get; set; }
 
         /// <summary>
-        /// Edge function replica content. Currently only supports JavaScript code. Supports a maximum of 5 MB.
+        /// Content of the edge function copy. It currently only supports JavaScript code, with a maximum size of 5 MB.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Edge function replica description. Supports up to 50 characters.
+        /// Edge function replica description, which can contain up to 50 characters.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

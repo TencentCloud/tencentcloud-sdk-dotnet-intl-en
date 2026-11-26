@@ -25,67 +25,67 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Managed rule. if the parameter is null or not filled, use the last set configuration by default.
+        /// Managed rule. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("WafConfig")]
         public WafConfig WafConfig{ get; set; }
 
         /// <summary>
-        /// Rate limiting. if the parameter is null or not filled, the configuration last set will be used by default.
+        /// Rate limit. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitConfig")]
         public RateLimitConfig RateLimitConfig{ get; set; }
 
         /// <summary>
-        /// Custom rule. specifies if the parameter is null or not filled, use the last set configuration by default.
+        /// Custom rule. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("AclConfig")]
         public AclConfig AclConfig{ get; set; }
 
         /// <summary>
-        /// Bot configuration. if the parameter is null or not filled, use the last set configuration by default.
+        /// Bot configuration. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("BotConfig")]
         public BotConfig BotConfig{ get; set; }
 
         /// <summary>
-        /// Switch setting of the 7-layer protection. if the parameter is null or not filled, use the last set configuration by default.
+        /// Switch setting of the 7-layer protection. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("SwitchConfig")]
         public SwitchConfig SwitchConfig{ get; set; }
 
         /// <summary>
-        /// Basic access control. if the parameter is null or not filled, use the last set configuration by default.
+        /// Basic access control. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("IpTableConfig")]
         public IpTableConfig IpTableConfig{ get; set; }
 
         /// <summary>
-        /// Exception rule configuration. if the parameter is null or not filled, use the last set configuration by default.
+        /// Exception rule configuration. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("ExceptConfig")]
         public ExceptConfig ExceptConfig{ get; set; }
 
         /// <summary>
-        /// Custom block page settings. if the parameter is null or not filled, use the last set configuration by default.
+        /// Custom block page settings. If the parameter is null or not filled, the last set configuration is used by default.
         /// </summary>
         [JsonProperty("DropPageConfig")]
         public DropPageConfig DropPageConfig{ get; set; }
 
         /// <summary>
-        /// Template configuration. specifies parameter usage for output only.
+        /// Template configuration. This parameter is output-only.
         /// </summary>
         [JsonProperty("TemplateConfig")]
         public TemplateConfig TemplateConfig{ get; set; }
 
         /// <summary>
-        /// Slow attack configuration. if the parameter is null or not filled, use the last set configuration by default.
+        /// Slow attack configuration. If the parameter is null or not filled, use the last set configuration by default.
         /// </summary>
         [JsonProperty("SlowPostConfig")]
         public SlowPostConfig SlowPostConfig{ get; set; }
 
         /// <summary>
-        /// Detect length limit configuration. for output usage only.
+        /// Detection length limit configuration. For output usage only.
         /// </summary>
         [JsonProperty("DetectLengthLimitConfig")]
         public DetectLengthLimitConfig DetectLengthLimitConfig{ get; set; }

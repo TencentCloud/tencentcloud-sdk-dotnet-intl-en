@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Specifies the transcoding template name.
+        /// Transcoding template name.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
@@ -43,43 +43,43 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Template type. valid values: <li>preset: system-preset template;</li> <li>custom: user-defined template.</li>.
+        /// Template type. Valid values: <li>preset: system-preset template.</li><li>custom: custom template.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Enable video stream. valid values: <li>on: turn on;</li> <li>off: turn off.</li>.
+        /// Enable the video stream switch. Value: <li>on: enable;</li><li>off: disable.</li>
         /// </summary>
         [JsonProperty("VideoStreamSwitch")]
         public string VideoStreamSwitch{ get; set; }
 
         /// <summary>
-        /// Enable audio stream. valid values: <li>on: enable;</li> <li>off: disable.</li>.
+        /// Enable the audio stream switch. Valid values: <li>on: enable;</li><li>off: disable.</li>
         /// </summary>
         [JsonProperty("AudioStreamSwitch")]
         public string AudioStreamSwitch{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameters. this field is valid only when VideoStreamSwitch is on.
+        /// Video stream configuration parameters. This field is valid only when VideoStreamSwitch is on.
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameters. specifies this field is valid only when AudioStreamSwitch is on.
+        /// Audio stream configuration parameters. This field is valid only when AudioStreamSwitch is on.
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }
 
         /// <summary>
-        /// Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+        /// Template last modified time, use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

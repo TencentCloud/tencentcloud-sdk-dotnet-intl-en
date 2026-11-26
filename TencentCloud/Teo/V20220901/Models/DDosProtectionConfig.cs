@@ -25,16 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Dedicated anti-DDoS specifications in the Chinese mainland. For details, refer to [Dedicated Anti-DDoS Related Fees](https://intl.cloud.tencent.com/document/product/1552/94162?from_cn_redirect=1).
+        /// Dedicated anti-DDoS specifications in the Chinese mainland. For details, refer to [Dedicated Anti-DDoS Related Fees](https://www.tencentcloud.com/document/product/1552/94162?from_cn_redirect=1)
         /// <li>PLATFORM: uses the default protection. Dedicated anti-DDoS is not enabled;</li>
-        /// <li>BASE30_MAX300: uses dedicated anti-DDoS, which provides 30 Gbps guaranteed protection bandwidth and up to 300 Gbps elastic protection bandwidth;</li>
+        /// <li>BASE30_MAX300: enables exclusive DDoS protection, providing 30 Gbps baseline protection bandwidth and 300 Gbps elastic protection bandwidth;</li>
         /// <li>BASE60_MAX600: uses dedicated anti-DDoS, which provides 60 Gbps guaranteed protection bandwidth and up to 600 Gbps elastic protection bandwidth. </li>If this field is not specified, the default value 'PLATFORM' will be used.
         /// </summary>
         [JsonProperty("LevelMainland")]
         public string LevelMainland{ get; set; }
 
         /// <summary>
-        /// Configuration of elastic protection bandwidth for exclusive DDoS protection in the Chinese mainland.Valid only when exclusive DDoS protection in the Chinese mainland is enabled (refer to the LevelMainland parameter configuration), and the value has the following limitations:<li>When exclusive DDoS protection is enabled in the Chinese mainland and the 30 Gbps baseline protection bandwidth is used (the LevelMainland parameter value is BASE30_MAX300): the value range is 30 to 300 in Gbps;</li><li>When exclusive DDoS protection is enabled in the Chinese mainland and the 60 Gbps baseline protection bandwidth is used (the LevelMainland parameter value is BASE60_MAX600): the value range is 60 to 600 in Gbps;</li><li>When the default protection of the platform is used (the LevelMainland parameter value is PLATFORM): configuration is not supported, and the value of this parameter is invalid.</li>
+        /// Configuration of elastic protection bandwidth for exclusive DDoS protection in the Chinese mainland.
+        /// Valid only when standalone DDos mitigation is enabled for the Chinese mainland region (see the LevelMainland parameter configuration). The value range imposes the following limitations:
+        /// <li>To enable exclusive DDoS protection in Chinese mainland with a 30 Gbps baseline protection bandwidth specification (LevelMainland parameter value: BASE30_MAX300): valid value range is 30 to 300, in Gbps;</li>
+        /// <li>To enable exclusive DDoS protection in the Chinese mainland with a 60 Gbps baseline protection bandwidth specification (when the LevelMainland parameter value is BASE60_MAX600): the valid value range is 60 to 600, in Gbps;</li>
+        /// <li>Use platform default protection (LevelMainland parameter value is PLATFORM): cannot be configured, the value of this parameter is invalid.</li>
         /// </summary>
         [JsonProperty("MaxBandwidthMainland")]
         public ulong? MaxBandwidthMainland{ get; set; }
@@ -42,7 +46,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Dedicated anti-DDoS specifications in global regions (excluding the Chinese mainland).
         /// <li>PLATFORM: uses the default protection. Dedicated anti-DDoS is not enabled;</li>
-        /// <li>ANYCAST300: uses dedicated anti-DDoS, which provides 300 Gbps protection bandwidth;</li>
+        /// <li>ANYCAST300: enables exclusive DDoS protection, providing 300 Gbps protection bandwidth;</li>
         /// <li>ANYCAST_ALLIN: uses dedicated anti-DDoS, which provides all available protection resources. </li>If this field is not specified, the default value 'PLATFORM' will be used.
         /// </summary>
         [JsonProperty("LevelOverseas")]

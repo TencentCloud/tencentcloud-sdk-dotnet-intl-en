@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TokenId{ get; set; }
 
         /// <summary>
-        /// Reasoning API Token name.
+        /// Name of the reasoning API Token.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Reasoning API Token content.
+        /// Content of the reasoning API Token.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

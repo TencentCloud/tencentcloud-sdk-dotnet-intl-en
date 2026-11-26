@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of domain names.
+        /// Domain name list.
         /// </summary>
         [JsonProperty("DetailHosts")]
         public DetailHost[] DetailHosts{ get; set; }
 
         /// <summary>
-        /// Number of domain names
+        /// Number of domain names.
         /// </summary>
         [JsonProperty("TotalNumber")]
         public long? TotalNumber{ get; set; }

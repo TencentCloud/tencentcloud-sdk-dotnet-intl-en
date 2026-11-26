@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Content identifier id.
+        /// Content identifier ID.
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }
 
         /// <summary>
-        /// Content identifier description. length limit: 20 characters.
+        /// Content identifier description, up to 20 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

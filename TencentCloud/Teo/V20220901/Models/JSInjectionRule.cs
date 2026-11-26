@@ -31,27 +31,27 @@ namespace TencentCloud.Teo.V20220901.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Rule name
+        /// Rule name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Rule priority. a smaller value indicates higher priority execution. value range: 0-100. default value is 0.
+        /// Rule priority. A smaller value indicates higher priority. Value range: 0-100. Default value: 0.
         /// </summary>
         [JsonProperty("Priority")]
         public long? Priority{ get; set; }
 
         /// <summary>
-        /// Specifies the match condition content, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+        /// Match condition content. It must comply with the expression syntax. For detailed specifications, see the product document.
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// JavaScript injection option. default value: run-attestations. valid values:.
-        /// <li>no-injection: specifies not to inject JavaScript.</li>.
-        /// <li>inject-sdk-only: injects sdks for all currently supported authentication methods. currently supported: TC-RCE and TC-CAPTCHA. note: to execute authentication detection, configure challenge rules.</li>.
+        /// JavaScript injection options. Default value: run-attestations. Valid values:
+        /// <li> no-injection: Do not inject JavaScript;</li>
+        /// <li> inject-sdk-only: Inject the SDKs of all currently supported authentication methods, including TC-RCE and TC-CAPTCHA. Note: To execute authentication detection, configure challenge rules.</li>
         /// </summary>
         [JsonProperty("InjectJS")]
         public string InjectJS{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of shared CNAMEs that meet filtering criteria.
+        /// Total count of shared CNAMEs that meet the filtering criteria.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Shared CNAME table detail.
+        /// List of shared CNAMEs.
         /// </summary>
         [JsonProperty("SharedCNAMEInfo")]
         public SharedCNAMEInfo[] SharedCNAMEInfo{ get; set; }

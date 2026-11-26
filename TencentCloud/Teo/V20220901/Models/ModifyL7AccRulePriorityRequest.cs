@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The complete rule ID list under the site ID can be obtained by [Querying the seven-layer acceleration rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and will be executed from the front to the back.
+        /// Complete rule ID list under the site ID. The rule ID list can be obtained through [Query Layer-7 Acceleration Rules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, and rules will be executed in sequence from front to back.
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }

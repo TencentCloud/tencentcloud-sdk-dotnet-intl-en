@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site to query
+        /// Site ID to query.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the policy template to query.
+        /// Template ID of the policy to query.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string[] TemplateId{ get; set; }

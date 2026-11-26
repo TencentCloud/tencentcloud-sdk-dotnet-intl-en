@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone id.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Site acceleration global configuration. the settings in this parameter will apply to all domain names under the site. you only need to modify the required settings directly, and other settings not passed in will remain unchanged.
+        /// Global configuration for site acceleration. The configuration in this parameter takes effect for all domain names under the site. You just need to directly modify the desired configuration. Other configuration not passed in will keep its original status.
         /// 
         /// </summary>
         [JsonProperty("ZoneConfig")]

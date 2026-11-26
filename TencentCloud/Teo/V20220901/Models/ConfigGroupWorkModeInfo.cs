@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Configuration group type. Options are as follows:<li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
+        /// Configuration group type. Options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group.</li><li>web_security: web protection configuration group.</li>
         /// </summary>
         [JsonProperty("ConfigGroupType")]
         public string ConfigGroupType{ get; set; }
 
         /// <summary>
-        /// Working mode. options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>.
+        /// Working mode. Options are as follows: <li>immediate_effect: immediate effect mode;</li><li>version_control: version management mode.</li>
         /// </summary>
         [JsonProperty("WorkMode")]
         public string WorkMode{ get; set; }

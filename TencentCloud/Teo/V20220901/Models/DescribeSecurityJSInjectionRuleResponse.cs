@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the total rule count for JavaScript injection.
+        /// Total rule count for JavaScript injection.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

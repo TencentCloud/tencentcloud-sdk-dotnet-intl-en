@@ -54,6 +54,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("QueryString")]
         public AccessURLRedirectQueryString QueryString{ get; set; }
 
+        /// <summary>
+        /// <p>Target port configuration.</p><p>If this parameter is not specified, it is processed in FollowProtocol mode, meaning the redirect address does not explicitly specify a port. The target protocol uses the default port: 80 for HTTP and 443 for HTTPS.</p>
+        /// </summary>
+        [JsonProperty("Port")]
+        public AccessURLRedirectPort Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "HostName.", this.HostName);
             this.SetParamObj(map, prefix + "URLPath.", this.URLPath);
             this.SetParamObj(map, prefix + "QueryString.", this.QueryString);
+            this.SetParamObj(map, prefix + "Port.", this.Port);
         }
     }
 }

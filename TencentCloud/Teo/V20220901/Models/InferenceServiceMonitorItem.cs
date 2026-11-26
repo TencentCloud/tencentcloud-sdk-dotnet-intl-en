@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Corresponding time point of monitoring data.
+        /// Time point of the monitoring data.
         /// </summary>
         [JsonProperty("Timestamp")]
         public string Timestamp{ get; set; }

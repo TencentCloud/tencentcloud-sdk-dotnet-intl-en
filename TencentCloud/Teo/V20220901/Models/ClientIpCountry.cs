@@ -25,16 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Name of the request header that contains the client IP region. It is valid when `Switch=on`. 
-        /// The default value `EO-Client-IPCountry` is used when it is not specified.
+        /// Request header name for storing the region of the client IP. Valid when Switch is on.
+        /// If it is empty, use the default value: EO-Client-IPCountry.
         /// </summary>
         [JsonProperty("HeaderName")]
         public string HeaderName{ get; set; }

@@ -31,19 +31,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Environment ID. Please specify the environment ID to which the version should be released.
+        /// Environment ID. Please enter the environment ID to which the version needs to be released.
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// Version information required for release. Multiple versions of different configuration groups can be modified simultaneously, while each group allows modifying only one version at a time.
+        /// Version information to release. You can update versions of multiple different configuration groups at the same time. Each configuration group supports updating only one version at a time.
         /// </summary>
         [JsonProperty("ConfigGroupVersionInfos")]
         public ConfigGroupVersionInfo[] ConfigGroupVersionInfos{ get; set; }
 
         /// <summary>
-        /// Change description. It is used to describe the content and reasons for this change. A maximum of 100 characters are supported.
+        /// Change description. Used to describe the content and reason for this change. Supports up to 100 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

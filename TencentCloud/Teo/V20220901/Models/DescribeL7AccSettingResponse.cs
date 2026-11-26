@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Global configuration for site acceleration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Site acceleration global configuration.
         /// </summary>
         [JsonProperty("ZoneSetting")]
         public ZoneConfigParameters ZoneSetting{ get; set; }

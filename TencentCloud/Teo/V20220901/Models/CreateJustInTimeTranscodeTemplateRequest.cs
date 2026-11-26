@@ -25,49 +25,47 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Name of the just in time transcoding template, length limited to 64 characters.
+        /// Just in time transcoding template name. Length limit: 64 characters.
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }
 
         /// <summary>
-        /// Template description, with a length limit of 256 characters. empty by default.
+        /// Template description information. The length cannot exceed 256 characters. Empty by default.
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
         /// <summary>
-        /// Enable video stream. valid values:.
+        /// Video stream switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
-        /// <li>off: disabled.</li>default value: on.
+        /// <li>off: Disable.</li>Default value: on.
         /// </summary>
         [JsonProperty("VideoStreamSwitch")]
         public string VideoStreamSwitch{ get; set; }
 
         /// <summary>
-        /// Enable audio stream switch. valid values:.
+        /// Enable audio stream switch. Value:
         /// <li>`on`: Enable;</li>
-        /// 
-        /// <li>off: disabled.</li>default value: on.
+        /// <li>off: Disable.</li>Default value: on.
         /// </summary>
         [JsonProperty("AudioStreamSwitch")]
         public string AudioStreamSwitch{ get; set; }
 
         /// <summary>
-        /// Video stream configuration parameters. this field is required when VideoStreamSwitch is on.
+        /// Video stream configuration parameters. This field is required when VideoStreamSwitch is on.
         /// </summary>
         [JsonProperty("VideoTemplate")]
         public VideoTemplateInfo VideoTemplate{ get; set; }
 
         /// <summary>
-        /// Audio stream configuration parameters. this field is required when AudioStreamSwitch is on.
+        /// Audio stream configuration parameters. This field is required when AudioStreamSwitch is on.
         /// </summary>
         [JsonProperty("AudioTemplate")]
         public AudioTemplateInfo AudioTemplate{ get; set; }

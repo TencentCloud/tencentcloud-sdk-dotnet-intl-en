@@ -25,27 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The validation result. Values:
-        /// <li>`invalid`: Invalid Cookie</li>
-        /// <li>`cookie_empty`: No Cookie/Cookie expired</li>
-        /// <li>`js_empty`: Client JS disabled</li>
-        /// <li>`low`: Low-risk session</li>
-        /// <li>`middle`: Medium-risk session</li>
-        /// <li>`high`: High-risk session</li>
-        /// <li>`timeout`: JS validation timed out</li>
-        /// <li>`not_browser`: Invalid browser</li>
-        /// <li>`is_bot`: Bot client</li>
+        /// Check results. Valid values:
+        /// <li>invalid: invalid Cookie;</li>
+        /// <li>cookie_empty: No cookie carried or the cookie has expired;</li>
+        /// <li>js_empty: JS is not enabled on the client (test not completed);</li>
+        /// <li>low: low risk in session rate and periodic feature verification;</li>
+        /// <li>middle: medium-risk in session rate and periodic feature verification;</li>
+        /// <li>high: high-risk session rate and periodic feature verification;</li>
+        /// <li>timeout: Timeout duration for detection;</li>
+        /// <li>not_browser: invalid browser;</li>
+        /// <li>is_bot: Bot Client.</li>
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`drop`: Block</li>
-        /// <li>`monitor`: Observe</li>
-        /// <li>`silence`: Drop w/o response</li>
-        /// <li>`shortdelay`: Add short latency</li>
-        /// <li>`longdelay`: Add long latency</li>
+        /// Penalty action. Valid values:
+        /// <li>drop: block;</li>
+        /// <li>monitor: observation;</li>
+        /// <li>silence: silence;</li>
+        /// <li>shortdelay: respond after a short time;</li>
+        /// <li>longdelay: respond after a long wait.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

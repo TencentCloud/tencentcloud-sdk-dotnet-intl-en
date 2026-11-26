@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Filter criteria: the maximum number of Filters.Values is 20. detailed filter criteria are as follows: <li>plan-type<br>  filter by <strong>package type</strong>.<br>  available types:<br>  plan-trial: trial package;<br>  plan-personal: personal plan;<br>  plan-basic: basic plan;<br>  plan-standard: standard edition plan;<br>  plan-enterprise: enterprise plan.</li> <li>plan-id<br>  filter by <strong>package id</strong>. the package id format is: edgeone-268z103ob0sx.</li> <li>area<br>  filter by <strong>acceleration region</strong>.</li> service area. available types:<br>  mainland: chinese mainland;<br>  overseas: worldwide (excluding chinese mainland);<br>  global: global (including chinese mainland). <li>status<br>  filter by <strong>status</strong>.<br>  available states:<br>  normal: normal status;<br>  expiring-soon: expiring soon;<br>  expired: expired;<br>  isolated: isolated.</li>.
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:<li>plan-type<br>  Filter by <strong>package type</strong>.<br>  Selectable types:<br>  plan-trial: trial package;<br>  plan-personal: personal plan;<br>  plan-basic: basic plan; <br>  plan-standard: Standard Edition Plan; <br>  plan-enterprise: enterprise plan. </li><li>plan-id<br>  Filter by <strong>Package ID</strong>. The package ID format is: edgeone-268z103ob0sx.</li><li>area<br>  Filter by <strong>package acceleration region</strong>.</li>  Service area. Selectable types:<br>  mainland: Chinese mainland;<br>  overseas: global (excluding Chinese mainland);<br>  global: global (including Chinese mainland).<br><li>status<br>  Filter by <strong>package status</strong>.<br>  Selectable statuses:<br>  normal: normal status;<br>  expiring-soon: expiring soon;<br>  expired: expired;<br>  isolated: isolated.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Specifies the sorting field. valid values:.
-        /// <li>enable-time: effective time;</li>.
-        /// <Li> expire-time: expiration time.</li>use default value enable-time if not specified.
+        /// Sorting field. Valid values:
+        /// <li> enable-time: effective time;</li>
+        /// <li> expire-time: expiration time.</li>Use the default value enable-time if not specified.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sorting order. valid values:.
-        /// <Li>`Asc`: sort in ascending order</li>.
-        /// <Li>`Desc`: from the largest to smallest.</li>default value: `desc`.
+        /// Sorting order. Valid values:
+        /// <li>asc: sort in ascending order;</li>
+        /// <li>desc: descending order.</li>Use default value desc if not specified.
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }

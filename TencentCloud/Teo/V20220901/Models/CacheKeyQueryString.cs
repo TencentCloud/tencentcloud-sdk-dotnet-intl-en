@@ -25,24 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Query string retain/ignore specified parameter switch. valid values are:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Switch to reserve or ignore specified parameters in the query string. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Actions to retain/ignore specified parameters in the query string. values:.
-        /// <Li>`IncludeCustom`: retain partial parameters.</li>.
-        /// <Li>`ExcludeCustom`: ignore partial parameters.</li> note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+        /// Action to reserve or ignore specified parameters in the query string. Valid values:
+        /// <li>includeCustom: means to reserve some parameters;</li>
+        /// <li>excludeCustom: means to ignore some parameters.</li>Note: This field is required when Switch is on. When Switch is off, this field is not required and does not take effect if filled in.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// List of parameter names to be retained/ignored in the query string. <br>note: this field is required when `switch` is on. when `switch` is off, this field is not required and will not take effect if filled.
+        /// List of parameter names to reserve/ignore in the query string.<br>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field, and if specified, it does not take effect.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

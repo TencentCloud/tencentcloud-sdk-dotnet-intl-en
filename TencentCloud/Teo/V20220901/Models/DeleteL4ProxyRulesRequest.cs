@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance ID.
+        /// Layer 4 Proxy Instance ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// List of forwarding rule IDs. It supports up to 200 forwarding rules at a time.
+        /// List of forwarding rule IDs. Supports up to 200 forwarding rules at a time.
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }

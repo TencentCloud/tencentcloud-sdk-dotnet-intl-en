@@ -25,50 +25,50 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The alias domain name.
+        /// Alias domain name.
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The target domain name.
+        /// Target domain name.
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
-        /// Status of the alias domain name. Values:
-        /// <li>`active`: Activated</li>
-        /// <li>`pending`: Deploying</li>
-        /// <li>`conflict`: Reclaimed</li>
-        /// <li>`stop`: Stopped</li>
+        /// Status of the alias domain name. Valid values:
+        /// <li> active: effective; </li>
+        /// <li> pending: deploying.</li>
+        /// <li> conflict: Retrieved. </li>
+        /// <li> stop: deactivated;</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The blocking mode. Values:
-        /// <li>`0`: Not blocked</li>
-        /// <li>`11`: Blocked due to regulatory compliance</li>
-        /// <li>`14`: Blocked due to ICP filing not obtained</li>
+        /// Blocking mode. Valid values:
+        /// <li>`0`: not blocked;</li>
+        /// <li> 11: Block due to regulatory compliance;</li>
+        /// <li> 14: Banned for non-filing.</li>
         /// </summary>
         [JsonProperty("ForbidMode")]
         public long? ForbidMode{ get; set; }
 
         /// <summary>
-        /// Creation time of the alias domain name.
+        /// Alias domain creation time.
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Modification time of the alias domain name.
+        /// Alias domain name modification time.
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }

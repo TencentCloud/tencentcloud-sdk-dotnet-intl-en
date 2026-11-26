@@ -43,13 +43,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
+        /// List of origin server groups and their corresponding disaster recovery scheduling priorities. For details, refer to Sample Scenario in [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The original configuration applies if this field is not specified.
         /// </summary>
         [JsonProperty("OriginGroups")]
         public OriginGroupInLoadBalancer[] OriginGroups{ get; set; }
 
         /// <summary>
-        /// Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
+        /// Health check policy. For details, refer to [Health Check Policies](https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1). The original configuration applies if this field is not specified.
         /// </summary>
         [JsonProperty("HealthChecker")]
         public HealthChecker HealthChecker{ get; set; }
@@ -62,7 +62,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string SteeringPolicy{ get; set; }
 
         /// <summary>
-        /// Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
+        /// Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
         /// <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
         /// <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li> The original configuration applies if not specified.
         /// </summary>

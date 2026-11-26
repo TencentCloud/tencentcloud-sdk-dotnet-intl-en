@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The item name.
+        /// Sort entity names.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The number of items.
+        /// Sort the number of entities.
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

@@ -25,18 +25,17 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable smart compression. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Intelligent compression configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Supported compression algorithm list. this field is required when switch is on; otherwise, it is not effective. valid values:.
-        /// <Li>`Brotli`: brotli algorithm;</li>.
-        /// <Li>`Gzip`: gzip algorithm.</li>.
+        /// List of supported compression algorithms. Required if Switch is on, unless it is ineffective. Valid values:
+        /// <li>brotli: brotli algorithm;</li>
+        /// <li>gzip: gzip algorithm.</li>
         /// </summary>
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }

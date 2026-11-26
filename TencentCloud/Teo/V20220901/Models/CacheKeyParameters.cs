@@ -25,46 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch for retaining the complete query string. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured. this field and querystring.switch must be set simultaneously, but cannot both be on.
+        /// Switch to retain all query strings. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: disabled.</li>Note: At least one configuration must be set for FullURLCache, IgnoreCase, Header, Scheme, and Cookie. This field and QueryString.Switch must be set both at the same time, but they cannot both be on.
         /// </summary>
         [JsonProperty("FullURLCache")]
         public string FullURLCache{ get; set; }
 
         /// <summary>
-        /// Query string retention configuration parameter. This field and FullURLCache must be set both at the same time, but cannot both be on.
+        /// Query string reserved configuration parameter. This field and FullURLCache must be set simultaneously, but cannot both be on.
         /// </summary>
         [JsonProperty("QueryString")]
         public CacheKeyQueryString QueryString{ get; set; }
 
         /// <summary>
-        /// Switch for ignoring case. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+        /// Case-insensitive switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
         /// <summary>
-        /// HTTP request header configuration parameter. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+        /// HTTP request header configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
         /// </summary>
         [JsonProperty("Header")]
         public CacheKeyHeader Header{ get; set; }
 
         /// <summary>
-        /// Request protocol switch. valid values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li> note: at least one of fullurlcache, ignorecase, header, scheme, or cookie must be configured.
+        /// Request protocol switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: disabled.</li>Note: Configure at least one of FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// Cookie configuration parameters. Set at least one configuration among FullURLCache, IgnoreCase, Header, Scheme, and Cookie.
+        /// Cookie configuration parameters. Set at least one configuration for FullURLCache, IgnoreCase, Header, Scheme, or Cookie.
         /// </summary>
         [JsonProperty("Cookie")]
         public CacheKeyCookie Cookie{ get; set; }

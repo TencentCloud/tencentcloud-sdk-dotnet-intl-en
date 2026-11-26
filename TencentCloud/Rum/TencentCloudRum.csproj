@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1341</VersionPrefix>
+    <VersionPrefix>3.0.1435</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,28 +48,14 @@
 
   <ItemGroup>
     <Compile Include="V20210622\RumClient.cs" />
-    <Compile Include="V20210622\Models\CreateLogExportRequest.cs" />
-    <Compile Include="V20210622\Models\CreateLogExportResponse.cs" />
-    <Compile Include="V20210622\Models\CreateOfflineLogConfigRequest.cs" />
-    <Compile Include="V20210622\Models\CreateOfflineLogConfigResponse.cs" />
-    <Compile Include="V20210622\Models\CreateProjectRequest.cs" />
-    <Compile Include="V20210622\Models\CreateProjectResponse.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileRequest.cs" />
     <Compile Include="V20210622\Models\CreateReleaseFileResponse.cs" />
     <Compile Include="V20210622\Models\CreateStarProjectRequest.cs" />
     <Compile Include="V20210622\Models\CreateStarProjectResponse.cs" />
-    <Compile Include="V20210622\Models\CreateTawInstanceRequest.cs" />
-    <Compile Include="V20210622\Models\CreateTawInstanceResponse.cs" />
     <Compile Include="V20210622\Models\CreateWhitelistRequest.cs" />
     <Compile Include="V20210622\Models\CreateWhitelistResponse.cs" />
     <Compile Include="V20210622\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20210622\Models\DeleteInstanceResponse.cs" />
-    <Compile Include="V20210622\Models\DeleteLogExportRequest.cs" />
-    <Compile Include="V20210622\Models\DeleteLogExportResponse.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogConfigRequest.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogConfigResponse.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogRecordRequest.cs" />
-    <Compile Include="V20210622\Models\DeleteOfflineLogRecordResponse.cs" />
     <Compile Include="V20210622\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20210622\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20210622\Models\DeleteReleaseFileRequest.cs" />
@@ -106,8 +92,6 @@
     <Compile Include="V20210622\Models\DescribeDataPerformancePageResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageV2Request.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageV2Response.cs" />
-    <Compile Include="V20210622\Models\DescribeDataPerformanceProjectRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeDataPerformanceProjectResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlInfoRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsRequest.cs" />
@@ -142,16 +126,6 @@
     <Compile Include="V20210622\Models\DescribeDataWebVitalsPageV2Response.cs" />
     <Compile Include="V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="V20210622\Models\DescribeErrorResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeLogExportsRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeLogExportsResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeLogListRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeLogListResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogRecordsRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogRecordsResponse.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogsRequest.cs" />
-    <Compile Include="V20210622\Models\DescribeOfflineLogsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeProjectLimitsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectsRequest.cs" />
@@ -185,7 +159,6 @@
     <Compile Include="V20210622\Models\DescribeWhitelistsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeWhitelistsResponse.cs" />
     <Compile Include="V20210622\Models\Filter.cs" />
-    <Compile Include="V20210622\Models\LogExport.cs" />
     <Compile Include="V20210622\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20210622\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20210622\Models\ModifyProjectLimitRequest.cs" />

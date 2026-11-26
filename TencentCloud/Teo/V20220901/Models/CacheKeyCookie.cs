@@ -25,26 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable feature. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Function switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Cache action. values:.
-        /// <Li>`Full`: retain all</li>.
-        /// <Li> `ignore`: ignore all;</li>.
-        /// <Li> `includecustom`: retain specified parameters;</li>.
-        /// <Li> `excludecustom`: ignore specified parameters.</li> **note**: when `switch` is on, this field is required. when `switch` is off, this field is not required and will not take effect if filled.
+        /// Cache action, with values:
+        /// <li>full: retain all;</li>
+        /// <li> ignore: ignore all;</li>
+        /// <li> includeCustom: retain specified parameters;</li>
+        /// <li>excludeCustom: ignore specified parameter.</li>Note: When Switch is on, this field is required; when Switch is off, no need to specify this field. If specified, it does not take effect.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Custom cache key cookie name list.<br>note: this field is required when action is includecustom or excludecustom; when action is full or ignore, this field is not required and will not take effect if filled.
+        /// List of custom Cache Key Cookie names.<br>Note: This field is required when Action is includeCustom or excludeCustom. It is not required when Action is full or ignore, and will not take effect if specified.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

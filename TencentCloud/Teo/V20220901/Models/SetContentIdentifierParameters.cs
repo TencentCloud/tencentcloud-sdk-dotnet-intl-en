@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Content identifier id.
+        /// Content identifier ID
         /// </summary>
         [JsonProperty("ContentIdentifier")]
         public string ContentIdentifier{ get; set; }

@@ -25,16 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Shared CNAME associated site ID.
+        /// Zone ID associated with the shared CNAME.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
         /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-        /// <li>shared-cname<br>   Filter by [<strong>shared CNAME</strong>].<br>   Type: String<br>   Required: No</li>
-        /// <li>type<br>   Filter by [<strong>shared CNAME type</strong>].<br>   type: String<br>   Required: No</li>
-        /// <li>Description<br>   Filter by [<strong>description</strong>].<br>   Type: String<br>   Required: No</li>
+        /// <li>shared-cname<br>        Filter by [<strong>shared CNAME</strong>].<br>        Type: String<br>        Required: No</li>
+        /// <li>type<br>        Filter by [<strong>shared canme type</strong>].<br>        Type: String<br>        Required: No</li>
+        /// <li>description<br> Filter by <strong>description</strong>.<br> Type: String<br> Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
@@ -42,23 +42,23 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// List sort method. Valid values:
         /// <li>asc: ascending order;</li>
-        /// <li>desc: Sort in descending order.</li>The default value is `asc`.
+        /// <li>desc: descending order.</li>Default value: asc.
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
 
         /// <summary>
         /// Match mode. Valid values:
-        /// <li>all: Returns the shared CNAME that matches all query conditions.</li>
-        /// <li>any: Returns the shared CNAME that matches any query condition.</li> Default value is all.
+        /// <li>all: return the shared CNAME that matches all query conditions;</li>
+        /// <li>any: return the shared CNAME that matches any query condition.</li>The default value is all.
         /// </summary>
         [JsonProperty("Match")]
         public string Match{ get; set; }
 
         /// <summary>
         /// Sorting basis. Valid values:
-        /// <li>create-time: Creation time;</li>
-        /// <li>shared-cname: Shared CNAME.</li> Default sorting order is based on the shared-cname attribute.
+        /// <li>create-time: creation time;</li>
+        /// <li>shared-cname: Shared CNAME.</li>Sorted by the shared-cname attribute by default.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
@@ -70,7 +70,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Number limit of paginated query. Default value: 20. Upper limit: 200.
+        /// Number limit of paginated query. Default value: 20. Maximum value: 200.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

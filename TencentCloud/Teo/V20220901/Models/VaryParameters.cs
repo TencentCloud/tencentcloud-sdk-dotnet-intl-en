@@ -25,9 +25,8 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Vary feature configuration switch. valid values:.
+        /// Vary feature configuration switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]

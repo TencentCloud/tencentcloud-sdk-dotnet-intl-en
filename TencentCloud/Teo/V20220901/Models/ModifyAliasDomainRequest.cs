@@ -25,34 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The alias domain name.
+        /// Alias domain name.
         /// </summary>
         [JsonProperty("AliasName")]
         public string AliasName{ get; set; }
 
         /// <summary>
-        /// The target domain name.
+        /// Target domain name.
         /// </summary>
         [JsonProperty("TargetName")]
         public string TargetName{ get; set; }
 
         /// <summary>
-        /// Certificate configuration. Values:
-        /// <li>`none`: Off</li>
-        /// <li>`hosting`: Managed SSL certificate</li>
-        /// <li>`apply`: Free certificate</li>The original configuration will apply if this field is not specified.
+        /// Certificate configuration. Valid values:
+        /// <li> none: without configuring;</li>
+        /// <li> hosting: managed SSL certificate;</li>
+        /// <li> apply: apply for a free certificate.</li>Maintain the original configuration if not specified.
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }
 
         /// <summary>
-        /// The certificate ID. This field is required when `CertType=hosting`.
+        /// When CertType is hosting, fill in the certificate ID accordingly.
         /// </summary>
         [JsonProperty("CertId")]
         public string[] CertId{ get; set; }

@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The site status. Values:
-        /// <li>`false`: Disabled</li>
-        /// <li>`true`: Enabled</li>
+        /// Site status. Valid values:
+        /// <li> false: enable site;</li>
+        /// <li> true: Disable the site.</li>
         /// </summary>
         [JsonProperty("Paused")]
         public bool? Paused{ get; set; }

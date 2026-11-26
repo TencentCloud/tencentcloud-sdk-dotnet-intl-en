@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLogExportResponse : AbstractModel
+    public class ConfigGroupRuleEngineItem : AbstractModel
     {
         
         /// <summary>
-        /// Whether it is successful. If so, `success` will be returned; otherwise, `Error` rather than this parameter will be returned
-        /// Note: this field may return null, indicating that no valid values can be obtained.
+        /// <p>Rule name. The name must be no more than 255 characters.</p>
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
+        [JsonProperty("RuleName")]
+        public string RuleName{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// <p>Rule note. Multiple notes can be filled.</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Description")]
+        public string[] Description{ get; set; }
+
+        /// <summary>
+        /// <p>Sub-rule branch. This list currently only supports filling in one rule. Additional entries are invalid.</p>
+        /// </summary>
+        [JsonProperty("Branches")]
+        public RuleBranch[] Branches{ get; set; }
 
 
         /// <summary>
@@ -43,8 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamArraySimple(map, prefix + "Description.", this.Description);
+            this.SetParamArrayObj(map, prefix + "Branches.", this.Branches);
         }
     }
 }

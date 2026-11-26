@@ -25,51 +25,51 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the origin group.
+        /// Origin server group ID.
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// The name of the origin group.
+        /// Origin server group name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The origin group type. Values:
-        /// <li>`GENERAL`: General origin group</li>
-        /// <li>`HTTP`: HTTP-specific origin group</li>
+        /// Origin server group type. Valid values:
+        /// <li>GENERAL: general origin group;</li>
+        /// <li>HTTP: HTTP-specific origin group.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Details of the origin record.
+        /// Origin server record information.
         /// </summary>
         [JsonProperty("Records")]
         public OriginRecord[] Records{ get; set; }
 
         /// <summary>
-        /// List of instances referencing this origin group.	
+        /// List of instances that reference the origin group.	
         /// </summary>
         [JsonProperty("References")]
         public OriginGroupReference[] References{ get; set; }
 
         /// <summary>
-        /// Creation time of the origin group.
+        /// Origin group creation time.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// The update time of the origin group.
+        /// Origin-pull group update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Specifies the origin-pull Host Header.
+        /// Origin-pull Host Header.
         /// </summary>
         [JsonProperty("HostHeader")]
         public string HostHeader{ get; set; }

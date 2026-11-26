@@ -25,7 +25,7 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Streaming GOP length, in seconds.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Push streaming GOP length, in seconds.
         /// </summary>
         [JsonProperty("StreamPushGOPSeconds")]
         public ulong? StreamPushGOPSeconds{ get; set; }

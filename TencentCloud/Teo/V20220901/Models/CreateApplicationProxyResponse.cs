@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The L4 application proxy ID.
+        /// ID of the newly-added L4 proxy application.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }

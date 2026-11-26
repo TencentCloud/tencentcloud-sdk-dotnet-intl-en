@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Shared CNAME associated site ID.
+        /// ID of the site associated with the shared CNAME.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Set the IP SSL message of the shared CNAME with IP SSL type.
+        /// Set the IP SSL info of the shared CNAME of IP SSL type.
         /// </summary>
         [JsonProperty("IPSSLSetting")]
         public IPSSLSetting IPSSLSetting{ get; set; }

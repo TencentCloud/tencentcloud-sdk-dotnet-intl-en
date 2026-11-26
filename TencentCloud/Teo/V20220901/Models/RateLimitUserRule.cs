@@ -25,113 +25,113 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The request threshold. Value range: 0-4294967294.
+        /// Rate limit statistical threshold, in times. Value range: 0-4294967294.
         /// </summary>
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
 
         /// <summary>
-        /// The statistical period. The value can be 10, 20, 30, 40, 50, or 60 seconds.
+        /// Rate limit statistical time. Value range: 10/20/30/40/50/60. Unit: seconds.
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// The rule name, which consists of only letters, digits, and underscores and cannot start with an underscore.
+        /// Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Action. Values:<li>`monitor`: Observe;</li><li>`drop`: Block;</li><li>`redirect`: Redirect;</li><li>`page`: Return a specific page;</li><li>`alg`: JavaScript challenge. </li>	
+        /// Handling action. Valid values: <li>monitor: observe;</li> <li>drop: block;</li><li> redirect: redirect;</li><li> page: specified page;</li><li>alg: JavaScript challenge.</li>	
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The amount of time taken to perform the action. Value range: 0 seconds - 2 days.
+        /// Penalty duration. Value range: 0-2 days.
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// The time unit. Values:
-        /// <li>`second`: Second</li>
-        /// <li>`minutes`: Minute</li>
-        /// <li>`hour`: Hour</li>
+        /// Penalty duration unit. Valid values:
+        /// <li>second: second;</li>
+        /// <li>minutes: minute;</li>
+        /// <li>hour: hour.</li>
         /// </summary>
         [JsonProperty("PunishTimeUnit")]
         public string PunishTimeUnit{ get; set; }
 
         /// <summary>
-        /// The rule status. Values:
-        /// <li>`on`: Enabled</li>
-        /// <li>`off`: Disabled</li>Default value: `on`
+        /// Rule status. Valid values:
+        /// <li>on: enabled</li>
+        /// <li>off: Disable.</li>Default on takes effect.
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
 
         /// <summary>
-        /// The rule details.
+        /// Rule details.
         /// </summary>
         [JsonProperty("AclConditions")]
         public AclCondition[] AclConditions{ get; set; }
 
         /// <summary>
-        /// The rule weight. Value range: 0-100.
+        /// Rule weight. Value range: 0-100.
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// Rule ID, which is only used as an output parameter.
+        /// Rule Id. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The filter. Values:
-        /// <li>`sip`: Client IP</li>
-        /// This parameter is left empty by default.
+        /// Filter word. Valid values:
+        /// <li>sip: Client IP.</li>
+        /// Defaults to an empty string.
         /// </summary>
         [JsonProperty("FreqFields")]
         public string[] FreqFields{ get; set; }
 
         /// <summary>
-        /// Update time. It is only used as a response parameter, and defaults to the current time. 
+        /// Update time. Output usage only. Defaults to the current time when modified.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Query scope. Values:
-        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-        /// <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-        /// Default: `source_to_eo`.
+        /// Statistical scope. Valid values:
+        /// <li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+        /// <li>client_to_eo: (request) Client to EdgeOne.</li>
+        /// Default value: source_to_eo.
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }
 
         /// <summary>
-        /// Name of the custom return page. It's required when `Action=page`.
+        /// Name of the custom return page. Required when Action is page, and cannot be empty.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+        /// Custom response Id, which can be obtained through the API for querying the custom error page list. The default value is default, which uses the system default page. Required and cannot be empty when Action is page.	
         /// </summary>
         [JsonProperty("CustomResponseId")]
         public string CustomResponseId{ get; set; }
 
         /// <summary>
-        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+        /// code of the custom return page. Required when Action is page. The value cannot be empty. Value range: 100-600. 3xx response codes are unsupported. Default value: 567.
         /// </summary>
         [JsonProperty("ResponseCode")]
         public long? ResponseCode{ get; set; }
 
         /// <summary>
-        /// The redirection URL. It's required when `Action=redirect`.
+        /// Address for redirection. Required when Action is `redirect` and cannot be empty.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

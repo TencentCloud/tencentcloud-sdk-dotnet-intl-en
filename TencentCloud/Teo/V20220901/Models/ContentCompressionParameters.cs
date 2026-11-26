@@ -25,10 +25,10 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the content compression configuration switch. valid values:.
+        /// Content compression configuration switch. Valid values:
         /// <li>`on`: Enable;</li>
         /// <li>off: Disable.</li>
-        /// Specifies whether to simultaneously support brotli and gzip compression algorithms when Switch is on.
+        /// When Switch is on, brotli and gzip compression algorithms are simultaneously supported.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

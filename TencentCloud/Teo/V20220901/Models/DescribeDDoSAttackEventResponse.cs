@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of DDoS attack data. 
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// List of DDOS attack event data.
         /// </summary>
         [JsonProperty("Data")]
         public DDoSAttackEvent[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

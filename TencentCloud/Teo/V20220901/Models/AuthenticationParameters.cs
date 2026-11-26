@@ -25,53 +25,53 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Authentication type. valid values:.
+        /// Authentication type. Valid values:
         /// 
-        /// <Li>TypeA: authentication method a type, for specific meaning please refer to [authentication method a](https://intl.cloud.tencent.com/document/product/1552/109329?from_cn_redirect=1);</li>.
-        /// <Li>TypeB: authentication method b type, for specific meaning please refer to [authentication method b](https://intl.cloud.tencent.com/document/product/1552/109330?from_cn_redirect=1);</li>.
-        /// <Li>TypeC: authentication method c type, for specific meaning please refer to [authentication method c](https://intl.cloud.tencent.com/document/product/1552/109331?from_cn_redirect=1);</li>.
-        /// <Li>TypeD: authentication method d type, for specific meaning please refer to [authentication method d](https://intl.cloud.tencent.com/document/product/1552/109332?from_cn_redirect=1);</li>.
-        /// <Li>TypeVOD: authentication method v type, for specific meaning please refer to [authentication method v](https://intl.cloud.tencent.com/document/product/1552/109333?from_cn_redirect=1).</li>.
+        /// <li>TypeA: authentication method type A. For its specific meaning, refer to [Authentication Method A](https://www.tencentcloud.com/document/product/1552/109329?from_cn_redirect=1);</li>
+        /// <li>TypeB: authentication method B type. For its specific meaning, refer to [Authentication Method B](https://www.tencentcloud.com/document/product/1552/109330?from_cn_redirect=1);</li>
+        /// <li>TypeC: authentication method C type. For its specific meaning, refer to [Authentication Method C](https://www.tencentcloud.com/document/product/1552/109331?from_cn_redirect=1);</li>
+        /// <li>TypeD: authentication method D type. For its specific meaning, refer to [Authentication Method D](https://www.tencentcloud.com/document/product/1552/109332?from_cn_redirect=1);</li>
+        /// <li>TypeVOD: authentication method V type. For its specific meaning, refer to [Authentication Method V](https://www.tencentcloud.com/document/product/1552/109333?from_cn_redirect=1).</li>
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
 
         /// <summary>
-        /// The primary authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
+        /// Primary authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Validity period of the authentication url, in seconds, value range: 1–630720000. used to determine if the client access request has expired:.
-        /// <Li>If the current time exceeds "timestamp + validity period", it is an expired request, and a 403 is returned directly.</li>.
-        /// <Li>If the current time does not exceed "timestamp + validity period", the request is not expired, and the md5 string is further validated.</li> note: when authtype is one of typea, typeb, typec, or typed, this field is required.
+        /// Valid duration of the authentication URL, in seconds. Value range: 1–630720000. It is used to determine whether the client access request is expired:
+        /// <li>If the current time exceeds the "timestamp + valid duration" time, the request is expired and 403 is returned directly.</li>
+        /// <li>If the current time has not exceeded the "timestamp + valid duration" time, the request is not expired. Proceed to validate the md5 string.</li>Note: This field is required when AuthType is one of TypeA, TypeB, TypeC, or TypeD.
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }
 
         /// <summary>
-        /// The backup authentication key consists of 6–40 uppercase and lowercase english letters or digits, and cannot contain " and $.
+        /// Backup authentication key. It contains 6–40 uppercase/lowercase letters or digits and cannot contain " or $.
         /// </summary>
         [JsonProperty("BackupSecretKey")]
         public string BackupSecretKey{ get; set; }
 
         /// <summary>
-        /// Authentication parameters name. the node will validate the value corresponding to this parameter name. consists of 1-100 uppercase and lowercase letters, numbers, or underscores.<br>note: this field is required when authtype is either typea or typed.
+        /// Authentication parameter name. The node will validate the value corresponding to this parameter name. It consists of 1–100 upper- and lower-case letters, digits, or underscores.<br>Note: This field is required when AuthType is one of TypeA and TypeD.
         /// </summary>
         [JsonProperty("AuthParam")]
         public string AuthParam{ get; set; }
 
         /// <summary>
-        /// Authentication timestamp. it cannot be the same as the value of the authparam field.<br>note: this field is required when authtype is typed.
+        /// Authentication timestamp. It cannot be the same as the AuthParam field value.<br>Note: This field is required when AuthType is TypeD.
         /// </summary>
         [JsonProperty("TimeParam")]
         public string TimeParam{ get; set; }
 
         /// <summary>
-        /// Authentication time format. values:.
-        /// <Li>Dec: decimal;</li>.
-        /// <Li>Hex: hexadecimal.</li>note: this field is required when authtype is typed. the default is hex.
+        /// Authentication time format. Valid values:
+        /// <li>dec: decimal;</li>
+        /// <li>hex: hexadecimal.</li>Note: This field is required when AuthType is TypeD. Default value: hex.
         /// </summary>
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }

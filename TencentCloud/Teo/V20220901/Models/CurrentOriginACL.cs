@@ -25,31 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IP range details.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Origin-pull IP range details.
         /// </summary>
         [JsonProperty("EntireAddresses")]
         public Addresses EntireAddresses{ get; set; }
 
         /// <summary>
-        /// Version number.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Version.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Version effective time in UTC+8, following the date and time format of the ISO 8601 standard.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("ActiveTime")]
         public string ActiveTime{ get; set; }
 
         /// <summary>
-        /// This parameter is used to record whether "I've upgraded to the lastest version" is completed before the origin ACLs version is effective. valid values:.
-        /// - true: specifies that the version is effective and the update to the latest version is confirmed.
-        /// - false: when the version takes effect, the confirmation of updating to the latest origin ACLs are not completed. The IP range is forcibly updated to the latest version in the backend. When this parameter returns false, please confirm in time whether your origin server firewall configuration has been updated to the latest version to avoid origin-pull failure.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// This parameter is used to record whether "I have updated to the latest origin-pull IP range" is confirmed before the current version takes effect. Valid values:
+        /// <li>true: When the version takes effect, the confirmation of updating to the latest origin-pull IP is completed;</li>
+        /// <li>false: When the version takes effect, the confirmation of updating to the latest origin-pull IP is not completed, and the origin-pull IP range is forcibly updated to the latest version by the backend.</li>Note: When this parameter returns false, confirm in time whether your origin server firewall configuration has been updated to the latest origin-pull IP range to avoid origin-pull failure.
         /// </summary>
         [JsonProperty("IsPlaned")]
         public string IsPlaned{ get; set; }

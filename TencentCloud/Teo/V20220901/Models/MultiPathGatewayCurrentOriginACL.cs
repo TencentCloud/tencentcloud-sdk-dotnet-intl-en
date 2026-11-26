@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Describes the IP range details for origin servers.
+        /// Origin-pull IP range details.
         /// </summary>
         [JsonProperty("EntireAddresses")]
         public Addresses EntireAddresses{ get; set; }
 
         /// <summary>
-        /// Specifies the version number.
+        /// Version.
         /// </summary>
         [JsonProperty("Version")]
         public long? Version{ get; set; }
 
         /// <summary>
-        /// This parameter records whether "i have updated to the latest origin IP range" is completed before taking effect. valid values:.
-        /// <li>true: confirms the update to the latest origin IP is completed.</li>.
-        /// <li>false: indicates the update to the latest origin IP is not completed.</li>.
-        /// Note: when false is returned for this parameter, please confirm in time whether your origin server firewall configuration has been updated to the latest IP range to avoid origin-pull failure.
+        /// This parameter is used to record whether the confirmation of "I have updated to the latest origin-pull IP range" is completed before the current version takes effect. Valid values:
+        /// <li>true: The confirmation of updating to the latest origin-pull IP is completed;</li>
+        /// <li>false: The confirmation of updating to the latest origin-pull IP is not completed;</li>
+        /// Note: When this parameter returns false, confirm in time whether your origin server firewall settings are updated to the latest origin-pull IP range to avoid origin-pull failure.
         /// </summary>
         [JsonProperty("IsPlaned")]
         public string IsPlaned{ get; set; }

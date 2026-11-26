@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Scheduled scaling action list. Fill in at least 1, supports up to 10.
+        /// List of scheduled scaling actions. Fill in at least 1 and up to 10.
         /// </summary>
         [JsonProperty("ScheduledActions")]
         public InferenceScheduledScalingAction[] ScheduledActions{ get; set; }
 
         /// <summary>
-        /// Validity period range, for description of whether the scheduled scaling policy is permanently valid or valid only within a specified date range.
+        /// Validity period range, for description of whether the scheduled scaling policy is long-term valid or valid only within a specified date range.
         /// </summary>
         [JsonProperty("EffectiveRange")]
         public InferenceScheduledScalingEffectiveRange EffectiveRange{ get; set; }
 
         /// <summary>
-        /// Time zone, using [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, Asia/Kolkata. UTC is used by default if not specified.
+        /// Time zone. Use the [IANA time zone](https://www.iana.org/time-zones) to identify the trigger time in ScheduledActions, such as UTC, Asia/Shanghai, America/New_York, Europe/London, and Asia/Kolkata. UTC is used by default if this parameter is not specified.
         /// 
         /// 
         /// 

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Rule engine condition. This condition will be considered met if all items in the array are met.
+        /// Condition of a rule engine. This condition is considered met if all items in the array are met.
         /// </summary>
         [JsonProperty("Conditions")]
         public RuleCondition[] Conditions{ get; set; }

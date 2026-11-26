@@ -49,8 +49,8 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter conditions. The maximum number of Filters.Values is 20. Detailed filter criteria:
-        /// <li>Name: Filter by the bound variable name. Fuzzy query is supported.</li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>name: filter by the bound variable name. Fuzzy query is supported;</li>
         /// <li>type: Filter by binding type. Fuzzy queries are not supported.</li>
         /// </summary>
         [JsonProperty("Filters")]

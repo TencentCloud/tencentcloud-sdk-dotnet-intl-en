@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site to which the shared CNAME belongs.
+        /// ID of the site associated with the shared CNAME.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The shared CNAME to be deleted
+        /// Shared CNAME that needs to be deleted.
         /// </summary>
         [JsonProperty("SharedCNAME")]
         public string SharedCNAME{ get; set; }

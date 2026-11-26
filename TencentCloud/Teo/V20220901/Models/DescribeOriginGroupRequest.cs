@@ -25,27 +25,26 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// (Required) Site ID
+        /// Site ID. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The paginated query offset. Default value: 0
+        /// Paginated query offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Value range: 1-1000. Default value: 20.
+        /// Paginated query limit. If not specified, the default value is 20. Value range: 1-1000.
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
         /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
-        /// 
-        /// <li>`origin-group-id`: filter by origin group id. fuzzy queries are not supported. format: `origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a`;</li><li>`origin-group-name`: filter by origin group name. when fuzzy search is used, only one origin server group name is supported.</li>.
+        /// <li>origin-group-id: filter by origin group ID. Fuzzy queries are not supported. The origin group ID format is: origin-2ccgtb24-7dc5-46s2-9r3e-95825d53dwe3a;</li><li>origin-group-name: filter by origin group name. When fuzzy search is used, only one origin group name can be filled in.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }

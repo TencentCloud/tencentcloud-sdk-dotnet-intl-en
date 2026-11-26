@@ -31,45 +31,45 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// Environment type. Valid values: 
-        /// <li>production: Production environment.</li><li> staging: Test environment. </li>
+        /// Environment type. Valid values:
+        /// <li>production: production environment;</li><li>staging: testing environment.</li>
         /// </summary>
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
 
         /// <summary>
-        /// Environment status. Valid values: 
-        /// <li>creating: Being created.</li>
-        /// <li>running: The environment is stable, with version changes allowed.</li>
-        /// <li>version_deploying: The version is currently being deployed, with no more changes allowed. </li>
+        /// Environment status. Valid values:
+        /// <li>creating: under creation;</li>
+        /// <li>running: running steadily. Version change can be performed;</li>
+        /// <li>version_deploying: Version deployment in progress, cannot proceed with new changes.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Effective scope of the configuration in the current environment. Valid values: 
-        /// <li>ALL: It takes effect on the entire network when EnvType is set to production.</li>
-        /// <li>It returns the IP address of the test node for host binding during testing when EnvType is set to staging. </li>
+        /// Configuration effective range in the current environment:
+        /// <li>When the value of EnvType is production, the value of this parameter is ["ALL"], which means it takes effect globally;</li>
+        /// <li>When the value of EnvType is staging, the test node IP will be returned, which can be used to bind a host for testing.</li>
         /// </summary>
         [JsonProperty("Scope")]
         public string[] Scope{ get; set; }
 
         /// <summary>
-        /// For the effective versions of each configuration group in the current environment, there are two possible scenarios based on the value of Status: 
-        /// <li>When Status is set to version_deploying, the returned value of this field represents the previously effective version. In other words, during the deployment of the new version, the effective version is the one that was in effect before any changes were made.</li>
-        /// <li>When Status is set to running, the value returned by this field is the currently effective version. </li>
+        /// Versions that actually take effect for each configuration group in the current environment. According to the value of Status, there are the following two scenarios:
+        /// <li>When the value of Status is version_deploying, the value returned by this field is the version effective before the change action is executed. That is, during the new version deployment, the version actually effective is the version prior to the execution of the change action;</li>
+        /// <li>When the value of Status is running, the returned value of this field is the currently effective version.</li>
         /// </summary>
         [JsonProperty("CurrentConfigGroupVersionInfos")]
         public ConfigGroupVersionInfo[] CurrentConfigGroupVersionInfos{ get; set; }
 
         /// <summary>
-        /// Creation time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+        /// Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Update time. The time format follows the ISO 8601 standard and is represented in Coordinated Universal Time (UTC).
+        /// Update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

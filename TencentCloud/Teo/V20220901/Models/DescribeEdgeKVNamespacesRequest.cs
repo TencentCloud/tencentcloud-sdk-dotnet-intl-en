@@ -45,8 +45,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Sorting basis. Valid values:
         /// <li>created-on: creation time;</li>
-        /// <li>updated-on: Update time.</li>
-        /// Default value is created-on.
+        /// <li>updated-on: update time.</li>
+        /// Default value: created-on.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
@@ -54,15 +54,15 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// List sort method. Valid values:
         /// <li>asc: ascending order;</li>
-        /// <li>desc: descending order.</li>
-        /// Default value is desc.
+        /// <li>desc: sort in descending order.</li>
+        /// Default value: desc.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The maximum of Filters.Values is 20. If this parameter is left empty, return all KV namespaces under the site ID. Detailed filter criteria:
-        /// <li>Namespace: Filter by KV namespace name. Fuzzy query is supported.</li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all KV namespaces under the site ID are returned. The detailed filter criteria are as follows:
+        /// <li>namespace: filter by KV namespace name; fuzzy query is supported;</li>
         /// <li>remark: Filter by namespace description. Fuzzy query is supported.</li>
         /// </summary>
         [JsonProperty("Filters")]

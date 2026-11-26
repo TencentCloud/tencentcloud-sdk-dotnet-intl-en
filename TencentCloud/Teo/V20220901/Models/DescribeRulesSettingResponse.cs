@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
+        /// Settings list and detailed recommendation configuration information that the rule engine can apply to match requests.
         /// </summary>
         [JsonProperty("Actions")]
         public RulesSettingAction[] Actions{ get; set; }

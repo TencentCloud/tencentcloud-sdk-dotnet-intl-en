@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
         /// Site access method. Valid values:
-        /// <li>full: NS access.</li>
+        /// <li>full: NS access;</li>
         /// <li>partial: CNAME access. If the site is currently accessed with no domain name, it can be switched only to CNAME access.</li>
         /// <li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>If this parameter is not input, the original configuration is maintained.
         /// </summary>
@@ -40,28 +40,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// The custom name servers. The original configuration applies if this field is not specified. It is not allowed to pass this field when a site is connected without using a domain name.
+        /// Custom site info used as an alternative to the default name server assigned by the system. Maintain the original configuration if not specified. This parameter cannot be passed when the site uses the no domain access method.
         /// </summary>
         [JsonProperty("VanityNameServers")]
         public VanityNameServers VanityNameServers{ get; set; }
 
         /// <summary>
-        /// Identical site identifier. limits input to numbers, english letters, ".", "-", and "_", with a character limit of 200 characters.
+        /// Identical site identifier. Enter numbers, letters, ".", "-", and "_" only, up to 200 characters.
         /// </summary>
         [JsonProperty("AliasZoneName")]
         public string AliasZoneName{ get; set; }
 
         /// <summary>
-        /// The region where the site requests access. Values:
-        /// <li> `global`: Global coverage</li>
-        /// <li> `mainland`: Chinese mainland</li>
-        /// <li> `overseas`: Outside the Chinese mainland </li>It is not allowed to pass this field when a site is connected without using a domain name.
+        /// Site access region. Valid values:
+        /// <li> global: global;</li>
+        /// <li>mainland: Chinese mainland;</li>
+        /// <li> overseas: outside the Chinese mainland.</li>This parameter is not allowed when the site uses no domain access method.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Name of the site. This field takes effect only when the site switches from domainless access to CNAME access.
+        /// Site name. This field is valid only when the site is switched from the no domain access method to the CNAME access method.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }

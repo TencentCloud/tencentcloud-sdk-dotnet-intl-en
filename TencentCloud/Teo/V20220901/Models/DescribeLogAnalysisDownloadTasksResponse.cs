@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Total number of entries for the log analysis download task that meets the match condition.</p>
+        /// <p>Total number of log analysis download tasks that meet the log match conditions.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Download task list for log analysis that meets the log match condition.</p>
+        /// <p>List of log analytics download tasks that meet the log match condition.</p>
         /// </summary>
         [JsonProperty("Tasks")]
         public LogAnalysisDownloadTask[] Tasks{ get; set; }

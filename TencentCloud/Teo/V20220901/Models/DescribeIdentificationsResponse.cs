@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// The site verification information.
+        /// Site verification information list.
         /// </summary>
         [JsonProperty("Identifications")]
         public Identification[] Identifications{ get; set; }

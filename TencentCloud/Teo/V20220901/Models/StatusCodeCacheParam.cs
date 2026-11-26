@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Status code. valid values: 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
+        /// Status code. Value is one of 400, 401, 403, 404, 405, 407, 414, 500, 501, 502, 503, 504, 509, 514.
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// Cache time value in seconds. value range: 0–31536000.
+        /// Cache time value, in seconds. Value range: 0–31536000.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }

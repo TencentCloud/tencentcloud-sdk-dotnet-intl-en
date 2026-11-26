@@ -25,31 +25,31 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Site ID.</p>
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>ID of the inference service.</p>
+        /// <p>Inference service ID.</p>
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+        /// <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
         /// </summary>
         [JsonProperty("ListenPort")]
         public long? ListenPort{ get; set; }
 
         /// <summary>
-        /// <p>Request path list for inference service. Supports up to 20 paths.</p>
+        /// <p>Request path list for the inference service. Supports up to 20 paths.</p>
         /// </summary>
         [JsonProperty("RequestPaths")]
         public string[] RequestPaths{ get; set; }
 
         /// <summary>
-        /// <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+        /// <p>Container configuration for the inference service. Currently only support setting 1 container.</p>
         /// </summary>
         [JsonProperty("Containers")]
         public InferenceContainerConfigForModify[] Containers{ get; set; }
@@ -61,7 +61,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public InferenceResourceConfigForModify ResourceConfig{ get; set; }
 
         /// <summary>
-        /// <p>Description. The length is limited to 60 characters.</p>
+        /// <p>Inference service affinity configuration</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Description. Length limit: no more than 60 characters.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
@@ -78,6 +84,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }

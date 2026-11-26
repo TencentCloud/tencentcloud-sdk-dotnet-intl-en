@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Time series data list for origin-pull data.
+        /// List of origin-pull time series data.
         /// </summary>
         [JsonProperty("TimingDataRecords")]
         public TimingDataRecord[] TimingDataRecords{ get; set; }

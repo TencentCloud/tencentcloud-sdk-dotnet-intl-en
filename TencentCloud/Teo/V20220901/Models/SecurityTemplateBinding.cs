@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// template ID
+        /// Template ID.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Binding status of the template.
+        /// Template binding status.
         /// </summary>
         [JsonProperty("TemplateScope")]
         public TemplateScope[] TemplateScope{ get; set; }

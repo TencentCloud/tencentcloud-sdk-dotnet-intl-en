@@ -25,33 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the block page. Specify `0` to use the default block page. 
-        /// (Disused) If 0 is passed, the default block page will be used.
+        /// Unique Id of the interception page. The system includes a built-in interception page by default, with Id 0.
+        /// The Id can be obtained by uploading via the blocking page creation interface. If 0 is passed in, the system default blocking page is used. This parameter is deprecated.
         /// </summary>
         [JsonProperty("PageId")]
         public long? PageId{ get; set; }
 
         /// <summary>
-        /// The HTTP status code to trigger the block page. Range: 100-600, excluding 3xx codes. Code 566: Requests blocked by managed rules. Code 567: Requests blocked by web security rules (except managed rules).
+        /// HTTP status code of the interception page. Value range: 100–600. 3xx status codes are not supported. Default for managed rule interception page: 566. Default for security protection (excluding managed rules) interception page: 567.
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
 
         /// <summary>
-        /// The block page file or URL.
+        /// Page file name or url.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Type of the block page. Values:
-        /// <li>`page`: Return the specified page.</li>
+        /// Page type, with values:
+        /// <li>page: Specified page.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Type=page`.
+        /// Id. You can obtain this Id through the API for querying the custom error page list. The default value is `default`, which uses the system default page. This field is required and cannot be empty when Type is `page`.
         /// </summary>
         [JsonProperty("CustomResponseId")]
         public string CustomResponseId{ get; set; }

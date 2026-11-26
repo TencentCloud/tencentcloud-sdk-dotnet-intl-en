@@ -25,42 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
+        /// <p>Origin protection mode for layer-7 acceleration domain names. Valid values: <li>all: automatic protection mode. All layer-7 acceleration domain names in the site are included in the origin protection list, including newly added layer-7 acceleration domain names;</li><li>specific: specified protection mode. Only bound layer-7 acceleration domain names are protected.</li></p>
+        /// </summary>
+        [JsonProperty("L7EnableMode")]
+        public string L7EnableMode{ get; set; }
+
+        /// <summary>
+        /// <p>List of layer-7 acceleration domain names that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
         /// </summary>
         [JsonProperty("L7Hosts")]
         public string[] L7Hosts{ get; set; }
 
         /// <summary>
-        /// The list of L4 proxy instances that enable the origin ACLs. This field is empty when origin protection is not enabled.
+        /// <p>Origin protection mode for layer-4 proxy instances. Valid values: <li>all: automatic protection mode. All layer-4 proxy instances in the site are included in the origin protection list, including newly added layer-4 proxy instances;</li><li>specific: specified protection mode. Only bound layer-4 proxy instances are protected.</li></p>
+        /// </summary>
+        [JsonProperty("L4EnableMode")]
+        public string L4EnableMode{ get; set; }
+
+        /// <summary>
+        /// <p>List of layer-4 proxy instances that have origin-pull from specific origin IP ranges enabled. Empty when origin protection is not enabled.</p>
         /// </summary>
         [JsonProperty("L4ProxyIds")]
         public string[] L4ProxyIds{ get; set; }
 
         /// <summary>
-        /// Currently effective origin ACLs. This field is empty when origin protection is not enabled.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Currently effective origin IP range. Empty when origin protection is not enabled.</p>
         /// </summary>
         [JsonProperty("CurrentOriginACL")]
         public CurrentOriginACL CurrentOriginACL{ get; set; }
 
         /// <summary>
-        /// When the origin ACLs are updated, this field will be returned with the next version's origin IP range to take effect, including a comparison with the current origin IP range. This field is empty if not updated or origin protection is not enabled.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>When the origin IP range is updated, this field returns the origin IP range that will take effect in the next version, including a comparison with the current origin IP range. Empty when there is no update or origin protection is not enabled.</p>
         /// </summary>
         [JsonProperty("NextOriginACL")]
         public NextOriginACL NextOriginACL{ get; set; }
 
         /// <summary>
-        /// Origin protection status. Vaild values:
-        /// - online: in effect;
-        /// - offline: disabled;
-        /// - updating: configuration deployment in progress.
+        /// <p>Origin protection status. Valid values:</p><li>online: Effective;</li><li>offline: Disabled;</li><li>updating: Configuration being deployed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Origin protection back-to-origin ACL control domain.
+        /// <p>Origin protection origin-pull ACL control domain.</p>
         /// </summary>
         [JsonProperty("OriginACLFamily")]
         public string OriginACLFamily{ get; set; }
@@ -71,7 +78,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "L7EnableMode", this.L7EnableMode);
             this.SetParamArraySimple(map, prefix + "L7Hosts.", this.L7Hosts);
+            this.SetParamSimple(map, prefix + "L4EnableMode", this.L4EnableMode);
             this.SetParamArraySimple(map, prefix + "L4ProxyIds.", this.L4ProxyIds);
             this.SetParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
             this.SetParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);

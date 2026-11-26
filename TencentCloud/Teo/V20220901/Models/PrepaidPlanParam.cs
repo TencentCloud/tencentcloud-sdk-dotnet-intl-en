@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// The auto-renewal flag for prepaid plan has the following values:
+        /// Auto-renewal flag for prepaid plan. Valid values:
         /// <li> on: Enable auto-renewal;</li>
         /// <li> off: Disable auto-renewal. </li>
         /// If this field is not specified, the default value 'off' will be used. When auto-renewal is enabled, it defaults to renewing for one month.

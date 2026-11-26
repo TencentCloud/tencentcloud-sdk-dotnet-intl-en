@@ -25,75 +25,67 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// LoadBalancer ID.
+        /// <p>Instance ID.</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// LoadBalancer name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).	
+        /// <p>Instance name, which can contain 1 to 200 characters, including a-z, A-Z, 0-9, underscores (_), and hyphens (-).</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// LoadBalancer type. Valid values:
-        /// <li>HTTP: HTTP-specific LoadBalancer. It supports adding HTTP-specific and general origin server groups. It can only be referenced by site acceleration services (such as domain name service and rule engine).</li>
-        /// <li>GENERAL: general LoadBalancer. It only supports adding general origin server groups. It can be referenced by site acceleration services (such as domain name service and rule engine) and Layer-4 proxy.</li>
+        /// <p>Instance type. Valid values:</p><li>HTTP_V2: HTTP dedicated (V2). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type supports selecting the region to trigger probes, which can significantly reduce probe request volume but has lower sensitivity to origin health awareness.</li><li>HTTP: HTTP dedicated (V1). Supports adding HTTP dedicated and general origin groups. Site acceleration services reference only (for example, domain name service and rule engine). This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li><li>GENERAL: General type. Supports adding general origin groups only. It can be referenced by site acceleration services (for example, domain name service and rule engine) and Layer-4 proxies. This instance type does not support selecting the region to trigger probes. The probe request volume is large, but the sensitivity to origin health awareness is higher.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Health check policy. For details, refer to [Health Check Policies](https://intl.cloud.tencent.com/document/product/1552/104228?from_cn_redirect=1).
+        /// <p>Health check policy. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104228?from_cn_redirect=1">Health Check Policies</a>.</p>
         /// </summary>
         [JsonProperty("HealthChecker")]
         public HealthChecker HealthChecker{ get; set; }
 
         /// <summary>
-        /// Traffic scheduling policy among origin server groups. Valid values:
-        /// <li>Priority: Perform failover according to priority.</li>
+        /// <p>Traffic scheduling policy among origin server groups. Valid values:</p><li>Pritory: Perform failover according to priority.</li>
         /// </summary>
         [JsonProperty("SteeringPolicy")]
         public string SteeringPolicy{ get; set; }
 
         /// <summary>
-        /// Request retry policy when access to an origin server fails. For details, refer to [Introduction to Request Retry Strategy](https://intl.cloud.tencent.com/document/product/1552/104227?from_cn_redirect=1). Valid values:
-        /// <li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group.</li>
-        /// <li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
+        /// <p>Request retry policy when access to an origin server fails. For details, refer to <a href="https://www.tencentcloud.com/document/product/1552/104227?from_cn_redirect=1">Introduction to Request Retry Strategy</a>. Valid values:</p><li>OtherOriginGroup: After a single request fails, retry with another origin server within the next lower priority origin server group;</li><li>OtherRecordInOriginGroup: After a single request fails, retry with another origin server within the same origin server group.</li>
         /// </summary>
         [JsonProperty("FailoverPolicy")]
         public string FailoverPolicy{ get; set; }
 
         /// <summary>
-        /// Origin server group health status.
+        /// <p>Origin server group health status.</p>
         /// </summary>
         [JsonProperty("OriginGroupHealthStatus")]
         public OriginGroupHealthStatus[] OriginGroupHealthStatus{ get; set; }
 
         /// <summary>
-        /// LoadBalancer status. Valid values:
-        /// <li>Pending: deploying.</li>
-        /// <li>Deleting: deleting.</li>
-        /// <li>Running: effective.</li>
+        /// <p>Load balancing status. Valid values:</p><li>Pending: deploying;</li><li>Deleting: deleting;</li><li>Running: effective.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Specifies the list of l4 proxy instances bound to the load balancing instance.
+        /// <p>List of L4 proxy instances bound to the load balancing instance.</p>
         /// </summary>
         [JsonProperty("L4UsedList")]
         public string[] L4UsedList{ get; set; }
 
         /// <summary>
-        /// List of Layer-7 domain names bound to a LoadBalancer.
+        /// <p>List of Layer-7 domain names bound to the load balancing instance.</p>
         /// </summary>
         [JsonProperty("L7UsedList")]
         public string[] L7UsedList{ get; set; }
 
         /// <summary>
-        /// Specifies the list of instances referenced by cloud load balancer.
+        /// <p>List of referenced instances of the load balancer.</p>
         /// </summary>
         [JsonProperty("References")]
         public OriginGroupReference[] References{ get; set; }

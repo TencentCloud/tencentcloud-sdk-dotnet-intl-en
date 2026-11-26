@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable Cross-MLC-border acceleration. Valid values: 
+        /// Whether acceleration optimization configuration is enabled for the Chinese mainland. Valid values:
         /// <li>`on`: Enable;</li>
-        /// <li>`off`: Disable.</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

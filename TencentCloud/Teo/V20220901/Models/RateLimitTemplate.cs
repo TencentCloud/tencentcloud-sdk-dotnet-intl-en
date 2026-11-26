@@ -25,27 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The mode. Values:
-        /// <li>`sup_loose`: Super loose</li>
-        /// <li>`loose`: Loose</li>
-        /// <li>`emergency`: Emergency</li>
-        /// <li>`normal`: Moderate</li>
-        /// <li>`strict`: Strict</li>
-        /// <li>`close`: Off</li>
+        /// Template level name. Valid values:
+        /// <li>sup_loose: super loose;</li>
+        /// <li>loose: loose;</li>
+        /// <li>emergency: emergency;</li>
+        /// <li>normal: moderate;</li>
+        /// <li>strict: strict;</li>
+        /// <li>close: disabled, effective only for precise rate limiting.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+        /// Template action. Valid values:
+        /// <li>alg: JavaScript challenge;</li>
+        /// <li>monitor: observe.</li>Default value: alg if not specified.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The settings of the rate limiting template. It is only used as an output parameter.
+        /// Description of the template value. Returned only as an output parameter.
         /// </summary>
         [JsonProperty("RateLimitTemplateDetail")]
         public RateLimitTemplateDetail RateLimitTemplateDetail{ get; set; }

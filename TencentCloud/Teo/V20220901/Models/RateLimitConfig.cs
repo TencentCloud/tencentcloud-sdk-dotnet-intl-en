@@ -25,33 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The settings of the custom rate limiting rule. If it is null, the settings that were last configured will be used.
+        /// Rate limit - user rule list. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitUserRules")]
         public RateLimitUserRule[] RateLimitUserRules{ get; set; }
 
         /// <summary>
-        /// The rate limit template feature. if null, use the last set configuration by default.
+        /// Rate limit template feature. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitTemplate")]
         public RateLimitTemplate RateLimitTemplate{ get; set; }
 
         /// <summary>
-        /// Intelligent client filtering. if null, use the last set configuration by default.
+        /// Intelligent client filtering. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitIntelligence")]
         public RateLimitIntelligence RateLimitIntelligence{ get; set; }
 
         /// <summary>
-        /// The custom rate limiting rules. if it is `null`, the previous settings is used.
+        /// Rate limit - Managed Custom Rules. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("RateLimitCustomizes")]
         public RateLimitUserRule[] RateLimitCustomizes{ get; set; }

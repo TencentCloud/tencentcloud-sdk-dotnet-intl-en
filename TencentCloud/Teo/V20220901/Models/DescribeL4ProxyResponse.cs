@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The number of Layer 4 proxy instances.
+        /// The number of L4 proxy instances.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of Layer 4 proxy instances.
+        /// Layer-4 proxy instance list.
         /// </summary>
         [JsonProperty("L4Proxies")]
         public L4Proxy[] L4Proxies{ get; set; }

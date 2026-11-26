@@ -25,167 +25,139 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <Intelligent acceleration configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Intelligent acceleration configuration.
         /// </summary>
         [JsonProperty("SmartRouting")]
         public SmartRoutingParameters SmartRouting{ get; set; }
 
         /// <summary>
-        /// Node cache expiration time configuration.
-        /// .
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Cache expiration time configuration.
         /// </summary>
         [JsonProperty("Cache")]
         public CacheConfigParameters Cache{ get; set; }
 
         /// <summary>
-        /// Browser cache rule configuration, which is used to set the default value of maxage and is disabled by default.
-        /// .
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Browser cache configuration.
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAgeParameters MaxAge{ get; set; }
 
         /// <summary>
-        /// The node cache key configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Node cache key configuration.
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKeyConfigParameters CacheKey{ get; set; }
 
         /// <summary>
-        /// Cache prefresh configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Cache pre-refresh configuration.
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefreshParameters CachePrefresh{ get; set; }
 
         /// <summary>
         /// Offline cache configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCacheParameters OfflineCache{ get; set; }
 
         /// <summary>
-        /// Smart compression configuration.
-        /// .
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Intelligent compression configuration.
         /// </summary>
         [JsonProperty("Compression")]
         public CompressionParameters Compression{ get; set; }
 
         /// <summary>
-        /// Forced https redirect configuration for access protocols.
-        /// .
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Forced HTTPS redirect configuration for access protocols.
         /// </summary>
         [JsonProperty("ForceRedirectHTTPS")]
         public ForceRedirectHTTPSParameters ForceRedirectHTTPS{ get; set; }
 
         /// <summary>
         /// HSTS configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("HSTS")]
         public HSTSParameters HSTS{ get; set; }
 
         /// <summary>
         /// TLS configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("TLSConfig")]
         public TLSConfigParameters TLSConfig{ get; set; }
 
         /// <summary>
         /// OCSP stapling configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("OCSPStapling")]
         public OCSPStaplingParameters OCSPStapling{ get; set; }
 
         /// <summary>
         /// HTTP/2 configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("HTTP2")]
         public HTTP2Parameters HTTP2{ get; set; }
 
         /// <summary>
         /// QUIC access configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("QUIC")]
         public QUICParameters QUIC{ get; set; }
 
         /// <summary>
-        /// HTTP2 origin-pull configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// HTTP/2 origin-pull configuration.
         /// </summary>
         [JsonProperty("UpstreamHTTP2")]
         public UpstreamHTTP2Parameters UpstreamHTTP2{ get; set; }
 
         /// <summary>
         /// IPv6 access configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("IPv6")]
         public IPv6Parameters IPv6{ get; set; }
 
         /// <summary>
         /// WebSocket configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocketParameters WebSocket{ get; set; }
 
         /// <summary>
-        /// POST request transport configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Configuration for POST request transmission.
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostMaxSizeParameters PostMaxSize{ get; set; }
 
         /// <summary>
-        /// Client ip origin-pull request header configuration.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Client IP origin-pull request header configuration.
         /// </summary>
         [JsonProperty("ClientIPHeader")]
         public ClientIPHeaderParameters ClientIPHeader{ get; set; }
 
         /// <summary>
-        /// Whether to carry the region information of the client ip during origin-pull.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Configuration of whether to carry the regional information of the client IP during origin-pull.
         /// </summary>
         [JsonProperty("ClientIPCountry")]
         public ClientIPCountryParameters ClientIPCountry{ get; set; }
 
         /// <summary>
-        /// Configuration of grpc support.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// The gRPC protocol supports configuration.
         /// </summary>
         [JsonProperty("Grpc")]
         public GrpcParameters Grpc{ get; set; }
 
         /// <summary>
-        /// Network Error Logging configuration.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// Network error log configuration.
         /// </summary>
         [JsonProperty("NetworkErrorLogging")]
         public NetworkErrorLoggingParameters NetworkErrorLogging{ get; set; }
 
         /// <summary>
-        /// Accelerate optimization and configuration in mainland china.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Acceleration optimization configuration in the Chinese mainland.
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainlandParameters AccelerateMainland{ get; set; }
 
         /// <summary>
-        /// Standard debugging configuration.
-        /// .
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Standard Debug configuration.
         /// </summary>
         [JsonProperty("StandardDebug")]
         public StandardDebugParameters StandardDebug{ get; set; }

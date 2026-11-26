@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The status of this import task. Valid values: <li>success: It indicates the configuration was successfully imported;</li> <li>failure: It indicates the configuration import failed;</li> <li>doing: It indicates the configuration is being imported.</li>
+        /// The import status of this import task. Valid values: <li>success: It indicates the configuration item was successfully imported;</li> <li>failure: It indicates the configuration item import failed;</li> <li>doing: It indicates the configuration item is being imported.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -31,41 +31,41 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Multi-Channel security acceleration gateway ID.
+        /// Multi-channel security acceleration gateway ID.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// Line ID. valid values:
-        /// <Li>Line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but does not support deletion.  </li>
-        /// <li<li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li> 
+        /// Line ID. Valid values:
+        /// <li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but deletion is not supported;</li>
+        /// <li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines. Modification and deletion of instances and rules are supported.</li>
         /// </summary>
         [JsonProperty("LineId")]
         public string LineId{ get; set; }
 
         /// <summary>
-        /// Line type. valid values:.
-        /// <li>proxy: EdgeOne layer-4 proxy line, supports modifying instances and rules, but deletion is not supported.</li>.
-        /// <Li>custom: Custom line.Supports editing, deleting instances and rules. 
+        /// Line type. Valid values: 
+        /// <li>proxy: EdgeOne Layer 4 proxy route. Supports modifying instances and rules. Deletion is not supported;</li> 
+        /// <li>custom: custom lines, support editing, deletion of instances, and rules.</li>
         /// </summary>
         [JsonProperty("LineType")]
         public string LineType{ get; set; }
 
         /// <summary>
-        /// Line address, formatted as host:port. Direct lines (LineType value is direct) cannot be modified, while other types support modifications.
+        /// Line address in the format of host:port. Direct-access lines (LineType value is direct) are not allowed to be modified. Modification is supported for other types.
         /// </summary>
         [JsonProperty("LineAddress")]
         public string LineAddress{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy instance ID. when the line type value is proxy (EdgeOne layer-4 proxy),  it allows modifications to the instance.
+        /// Layer 4 Proxy Instance ID. This can be input when the line type LineType value is proxy (EdgeOne Layer 4 proxy) for modification.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID. when the line type  value is proxy (EdgeOne layer-4 proxy), it allows input to modify.
+        /// Forwarding rule ID. It can be passed in when the line type LineType is proxy (EdgeOne Layer 4 proxy) for modification.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

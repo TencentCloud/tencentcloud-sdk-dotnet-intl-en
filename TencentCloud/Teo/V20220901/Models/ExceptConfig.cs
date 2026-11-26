@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The settings of the exception rule. if it is null, the settings that were last configured will be used.
+        /// Exception rule details. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("ExceptUserRules")]
         public ExceptUserRule[] ExceptUserRules{ get; set; }

@@ -25,109 +25,94 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site.
+        /// <p>Site ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Accelerated domain name
+        /// <p>Acceleration domain name.</p>
         /// </summary>
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Accelerated domain name status. valid values:.
-        /// <li>online: in effect;</li>.
-        /// <li>process: deployment in progress.</li>.
-        /// <li>offline: disabled;</li>.
-        /// <li>`forbidden`: banned.</li>.
-        /// <li>init: not applied, site to be activated.</li>.
+        /// <p>Acceleration domain name status</p><p>Enumeration values:</p><ul><li>online: effective</li><li>process: deploying</li><li>offline: disabled</li><li>init: not applied, site to be activated</li></ul>
         /// </summary>
         [JsonProperty("DomainStatus")]
         public string DomainStatus{ get; set; }
 
         /// <summary>
-        /// The CNAME address.
+        /// <p>CNAME address.</p>
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// IPv6 status. valid values:.
-        /// <li>follow: specifies whether to adhere to the site IPv6 configuration.</li>.
-        /// <li>on: enabled status.</li>.
-        /// <li>off: disabled.</li>.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>IPv6 status. Valid values:</p><li>follow: Follow the site IPv6 configuration;</li><li>on: Enabled;</li><li>off: Disabled.</li>
         /// </summary>
         [JsonProperty("IPv6Status")]
         public string IPv6Status{ get; set; }
 
         /// <summary>
-        /// Acceleration domain ownership verification status. valid values:. 
-        /// <li>pending: to be verified.</li>.
-        /// <li>finished: verified.</li>.	
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Acceleration domain ownership verification status. Valid values: </p><li>pending: to be verified;</li><li>finished: verified.</li>
         /// </summary>
         [JsonProperty("IdentificationStatus")]
         public string IdentificationStatus{ get; set; }
 
         /// <summary>
-        /// Acceleration domain name needs to perform ownership verification to continue providing services. this object carries the required information for the corresponding verification method.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>When the acceleration domain name needs to perform ownership verification to continue providing services, this object will carry the information required for the corresponding verification method.</p>
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
 
         /// <summary>
-        /// Details of the origin.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Origin server information.</p>
         /// </summary>
         [JsonProperty("OriginDetail")]
         public OriginDetail OriginDetail{ get; set; }
 
         /// <summary>
-        /// Origin-Pull protocol. valid values:.
-        /// <Li>FOLLOW: follow protocol.</li>.
-        /// <Li>HTTP: specifies the http protocol for origin-pull.</li>.
-        /// <Li>HTTPS: specifies the https protocol for origin-pull.</li>.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Origin-pull protocol. Valid values:</p><li>FOLLOW: follow protocol;</li><li>HTTP: origin-pull over HTTP protocol;</li><li>HTTPS: origin-pull over HTTPS protocol.</li>
         /// </summary>
         [JsonProperty("OriginProtocol")]
         public string OriginProtocol{ get; set; }
 
         /// <summary>
-        /// Specifies the HTTP origin port.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HTTP origin port.</p>
         /// </summary>
         [JsonProperty("HttpOriginPort")]
         public ulong? HttpOriginPort{ get; set; }
 
         /// <summary>
-        /// Specifies the HTTPS origin port.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>HTTPS origin port.</p>
         /// </summary>
         [JsonProperty("HttpsOriginPort")]
         public ulong? HttpsOriginPort{ get; set; }
 
         /// <summary>
-        /// Accelerates domain name certificate information.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Acceleration domain name certificate information.</p>
         /// </summary>
         [JsonProperty("Certificate")]
         public AccelerationDomainCertificate Certificate{ get; set; }
 
         /// <summary>
-        /// Creation time of the accelerated domain name.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Modification time of the accelerated domain name.
+        /// <p>Last modified.</p>
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
+
+        /// <summary>
+        /// <p>List of region access restrictions on a domain name due to compliance issues.</p>
+        /// </summary>
+        [JsonProperty("ComplianceRestrictions")]
+        public ComplianceRestriction[] ComplianceRestrictions{ get; set; }
 
 
         /// <summary>
@@ -149,6 +134,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamArrayObj(map, prefix + "ComplianceRestrictions.", this.ComplianceRestrictions);
         }
     }
 }

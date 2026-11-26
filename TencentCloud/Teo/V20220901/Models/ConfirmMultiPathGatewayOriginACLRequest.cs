@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// Describes the version number of the origin server IP.
+        /// Origin-pull IP version number.
         /// </summary>
         [JsonProperty("OriginACLVersion")]
         public long? OriginACLVersion{ get; set; }

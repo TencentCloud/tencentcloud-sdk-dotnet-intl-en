@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+        /// Namespace name. You can obtain the list of namespaces under a site through the DescribeEdgeKVNamespaces API.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, and supports valid UTF-8 characters. When querying a single key, input an array with one element.
+        /// Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long. Valid UTF-8 characters are supported. To query one key, input an array containing one element.
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }

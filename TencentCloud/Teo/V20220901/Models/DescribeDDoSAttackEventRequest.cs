@@ -25,68 +25,68 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The start time.
+        /// Start time. Time range: 30 days.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+        /// End time. The query time range (`EndTime` - `StartTime`) must be up to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// List of DDoS policy IDs. All policies are selected if this field is not specified.
+        /// Collection of ddos policy groups. If left blank, all policies are selected by default.
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+        /// Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). You can import up to 100 site IDs. To query all site data under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: 20. Maximum value: 1000.
+        /// Number limit of paginated query. Default value: 20. Maximum number of query entries: 1000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// The page offset. Default value: 0.
+        /// Page offset. Default value: 0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Parameter to show attack details. If it is configured as false, only the number of attacks is returned without details. If it is configured as true, attack details are returned.
+        /// Parameter to show attack details. If set to `false`, only the number of attacks is returned. If set to `true`, attack details are returned.
         /// </summary>
         [JsonProperty("ShowDetail")]
         public bool? ShowDetail{ get; set; }
 
         /// <summary>
-        /// Geolocation scope. Values: 
-        /// <li>`overseas`: Regions outside the Chinese mainland</li>
-        /// <li>`mainland`: Chinese mainland</li>
-        /// <li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+        /// Data ownership region. Valid values:
+        /// <li>overseas: global (excluding the Chinese mainland) data;</li>
+        /// <li>mainland: Chinese mainland data;</li>
+        /// <li>global: global data;</li>If this parameter is not input, the default value `global` is used.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The sorting field. Values: 
-        /// <li>`MaxBandWidth`: Peak bandwidth</li>
-        /// <li>`AttackStartTime` Start time of the attack</li>If this field is not specified, the default value `AttackStartTime` is used.
+        /// Sorting field. Valid values:
+        /// <li>MaxBandWidth: bandwidth peak;</li>
+        /// <li>AttackStartTime: attack start time.</li>If not specified, the default value is AttackStartTime.
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// The sorting method. Values: 
-        /// <Li>`asc`: Ascending</li>
-        /// <li>`desc`: Descending</li>If this field is not specified, the default value `desc` is used.
+        /// Sorting method. Valid values:
+        /// <li>asc: in ascending order;</li>
+        /// <li>desc: in descending order.</li> If not specified, the default value is desc.
         /// </summary>
         [JsonProperty("OrderType")]
         public string OrderType{ get; set; }

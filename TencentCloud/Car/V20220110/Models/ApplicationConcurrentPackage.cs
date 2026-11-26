@@ -24,12 +24,19 @@ namespace TencentCloud.Car.V20220110.Models
     public class ApplicationConcurrentPackage : AbstractModel
     {
         
+        /// <summary>
+        /// <p>Concurrency pack ID</p>
+        /// </summary>
+        [JsonProperty("ConcurrentId")]
+        public string ConcurrentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ConcurrentId", this.ConcurrentId);
         }
     }
 }

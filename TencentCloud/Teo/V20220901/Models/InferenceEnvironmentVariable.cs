@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Variable name  is limited to uppercase and lowercase letters, digits, and underscores, and must start with a letter or underscore. The length is limited to no more than 64 characters.
+        /// Variable name. Only letters, digits, and underscores are allowed, and it must start with a letter or underscore. Length limited to 64 characters.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Variable value. Supports any visible characters such as letters, numbers, and symbols. Length limited to no more than 2048 characters.
+        /// Variable value. Supports any visible characters, such as letters, digits, and symbols. Length limit: no more than 2048 characters.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

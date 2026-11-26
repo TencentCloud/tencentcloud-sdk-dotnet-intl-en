@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of zone IDs. A maximum of 100 zones can be queried in a single request.
+        /// Site ID list. A single query can import up to 100 sites.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the inference service.
+        /// Inference service ID.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }

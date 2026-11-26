@@ -31,25 +31,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the gateway ID.
+        /// Gateway ID.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
 
         /// <summary>
-        /// Gateway name, up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+        /// Gateway name, up to 16 characters. Usable characters: a-z, A-Z, 0-9, -, _.
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
-        /// Gateway address, if GatewayType value is private (private gateway), you can fill in and modify it. When using this address, please ensure it has been entered into the Tencent cloud multi-channel security acceleration gateway system. if not entered, you need to submit a ticket or contact the architect to enter the gateway IP address into the Tencent cloud multi-channel security acceleration gateway system in advance before making API calls.
+        /// Gateway address. When GatewayType is private, you can fill in and modify this address. Before using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not, enter the gateway IP address into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
         /// </summary>
         [JsonProperty("GatewayIP")]
         public string GatewayIP{ get; set; }
 
         /// <summary>
-        /// Gateway port, range 1-65535 (excluding 8888), supports modifying GatewayType with a value of private gateway.
+        /// Gateway port. Value range: 1–65535 (excluding 8888). Modification is supported only for private gateways with a GatewayType value of private.
         /// </summary>
         [JsonProperty("GatewayPort")]
         public long? GatewayPort{ get; set; }

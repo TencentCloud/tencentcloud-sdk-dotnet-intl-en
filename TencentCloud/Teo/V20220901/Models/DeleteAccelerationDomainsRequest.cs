@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the accelerated domain name.
+        /// Zone ID of the acceleration domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of accelerated domain names to be deleted.
+        /// List of acceleration domain name IDs that need to be deleted.
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }
 
         /// <summary>
-        /// Whether to forcibly delete a domain name if it is associated with resources (such as alias domain names and traffic scheduling policies). 
-        /// <li>`true`: Delete the domain name and all associated resources.</li>
-        /// <li>`false`: Do not delete the domain name and all associated resources.</li>If it’s not specified, the default value `false` is used.
+        /// Whether to force delete. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force delete that domain name. Valid values:
+        /// <li> true: delete that domain name and all associated resources;</li>
+        /// <li> false: When the acceleration domain name has associated resources, deletion is not allowed.</li>If not specified, the default value is false.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

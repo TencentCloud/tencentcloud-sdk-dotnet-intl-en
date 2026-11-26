@@ -25,15 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site.
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of instance statuses
-        /// Note: This field may return·null, indicating that no valid values can be obtained.
+        /// Instance status list.
         /// </summary>
         [JsonProperty("EntityStatus")]
         public EntityStatus[] EntityStatus{ get; set; }

@@ -25,17 +25,17 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The name of the private authentication parameter. Valid values:
+        /// Private authentication parameter name. Valid values:
         /// <li>AccessKeyId: Access Key ID for authentication;</li>
-        /// <li>SecretAccessKey: Secret Access Key for authentication;</li>
+        /// <li>SecretAccessKey: authentication parameter Secret Access Key;</li>
         /// <li>SignatureVersion: Authentication version, v2 or v4;</li>
-        /// <li>Region: The region of the storage bucket.</li>
+        /// <li>Region: bucket region.</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The parameter value.
+        /// Private authentication parameter value.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

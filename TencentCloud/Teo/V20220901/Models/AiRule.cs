@@ -25,10 +25,10 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The status of the AI rule engine. Values:
-        /// <li>`smart_status_close`: Disabled</li>
-        /// <li>`smart_status_open`: Block</li>
-        /// <li>`smart_status_observe`: Observe</li>
+        /// AI rule engine status. Valid values:
+        /// <li> smart_status_close: off;</li>
+        /// <li> smart_status_open: block;</li>
+        /// <li> smart_status_observe: observation and disposition.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

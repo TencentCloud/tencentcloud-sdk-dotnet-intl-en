@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Log generation time point, using unix millisecond-level timestamp.
+        /// Time point when the log is generated, using a unix millisecond-level timestamp.
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// Specific contents of the log, using JSON String Format.
+        /// Specific contents of the log in JSON String Format.
         /// </summary>
         [JsonProperty("LogJson")]
         public string LogJson{ get; set; }

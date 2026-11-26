@@ -25,40 +25,59 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specification flag.
+        /// <p>Specification flag. Abandoned. For reference, use the field <code>HardwareSpecId</code>.</p>
         /// </summary>
         [JsonProperty("Spec")]
+        [System.Obsolete]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// Specification name.
+        /// <p>Unique identification ID of the specification.</p>
+        /// </summary>
+        [JsonProperty("HardwareSpecId")]
+        public string HardwareSpecId{ get; set; }
+
+        /// <summary>
+        /// <p>Specification name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Number of CPU cores.
-        /// </summary>
-        [JsonProperty("CPUNum")]
-        public float? CPUNum{ get; set; }
-
-        /// <summary>
-        /// Memory size. Unit: MB.
-        /// </summary>
-        [JsonProperty("MemSize")]
-        public long? MemSize{ get; set; }
-
-        /// <summary>
-        /// Number of GPU cards.
+        /// <p>Number of GPU cards assigned by default for the specification.</p>
         /// </summary>
         [JsonProperty("GPUNum")]
         public float? GPUNum{ get; set; }
 
         /// <summary>
-        /// GPU VRAM size. Unit: MB.
+        /// <p>Default number of CPU cores allocated to the specification.</p>
+        /// </summary>
+        [JsonProperty("CPUNum")]
+        public float? CPUNum{ get; set; }
+
+        /// <summary>
+        /// <p>Default allocated memory size for the specification.</p><p>In MB.</p>
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public long? MemSize{ get; set; }
+
+        /// <summary>
+        /// <p>GPU VRAM size assigned by default in the specification.</p><p>Unit: MB</p>
         /// </summary>
         [JsonProperty("GPUMemSize")]
         public long? GPUMemSize{ get; set; }
+
+        /// <summary>
+        /// <p>Default disk space allocated for the specification.</p><p>Unit: MB</p>
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>List of GPU card counts currently supported by the specification.</p><p>If not filled or filled with an empty array, only the GPU card count assigned by default for the specification is supported.</p>
+        /// </summary>
+        [JsonProperty("AllowedGPUNums")]
+        public float?[] AllowedGPUNums{ get; set; }
 
 
         /// <summary>
@@ -67,11 +86,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Spec", this.Spec);
+            this.SetParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "GPUNum", this.GPUNum);
             this.SetParamSimple(map, prefix + "CPUNum", this.CPUNum);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
-            this.SetParamSimple(map, prefix + "GPUNum", this.GPUNum);
             this.SetParamSimple(map, prefix + "GPUMemSize", this.GPUMemSize);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamArraySimple(map, prefix + "AllowedGPUNums.", this.AllowedGPUNums);
         }
     }
 }

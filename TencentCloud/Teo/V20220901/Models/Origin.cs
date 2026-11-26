@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin server list.
+        /// Primary origin server list.
         /// </summary>
         [JsonProperty("Origins")]
         public string[] Origins{ get; set; }
@@ -37,18 +37,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] BackupOrigins{ get; set; }
 
         /// <summary>
-        /// Origin server protocol configuration. valid values:.
-        /// <Li>Http: forced http back to source;</li>.
-        /// <Li>`Follow`: follow protocol.</li>.
-        /// <Li>Https: enforce https origin-pull.</li>.
+        /// Origin-pull protocol configuration, with values:
+        /// <li>http: Force HTTP origin-pull.</li>
+        /// <li>follow: follow protocol for origin-pull;</li>
+        /// <li>https: Force HTTPS origin-pull.</li>
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// When the origin is tencent cloud COS, whether it is a private access bucket. valid values:.
-        /// <li>`on`: private network access;</li>.
-        /// <li>`off`: public access.</li>.
+        /// Whether the origin server is a private access bucket when it is Tencent Cloud COS. Valid values:
+        /// <li>on: Private access;</li>
+        /// <li>off: Public Access.</li>
         /// </summary>
         [JsonProperty("CosPrivateAccess")]
         public string CosPrivateAccess{ get; set; }

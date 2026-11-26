@@ -31,35 +31,33 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Gateway type. valid values:
-        /// <Li> Cloud: cloud gateway, a gateway created and managed by Tencent cloud;</li>
-        /// <Li>Private: private gateway, a user-deployed private gateway.</li>
+        /// Gateway type. Valid values:
+        /// <li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud;</li>
+        /// <li> private: Private gateway, a private gateway deployed by the user.</li>
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
-        /// Gateway name: up to 16 characters, allowed characters (a-z, A-Z, 0-9, -, _).
+        /// Gateway name, up to 16 characters. Available characters: a-z, A-Z, 0-9, -, _.
         /// </summary>
         [JsonProperty("GatewayName")]
         public string GatewayName{ get; set; }
 
         /// <summary>
-        /// Gateway port: value range: 1-65535 (excluding 8888).
+        /// Gateway port. Range: 1–65535 (excluding 8888).
         /// </summary>
         [JsonProperty("GatewayPort")]
         public long? GatewayPort{ get; set; }
 
         /// <summary>
-        /// Gateway region: GatewayType value is cloud (cloud gateway). required. RegionId list can be obtained from the DescribeMultiPathGatewayRegions API.
+        /// Gateway region. Required when the GatewayType value is cloud (Cloud Gateway). You can query the RegionId list via the DescribeMultiPathGatewayRegions API.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Gateway address (required when GatewayType=private):
-        /// Before using this address, ensure it has been registered in the Tencent Cloud Multi-Path Security Acceleration Gateway system. 
-        /// If not registered, submit a support ticket or contact your architect to pre-register the gateway IP address in the system before API invocation.
+        /// Gateway address. Required when GatewayType is private. When using this address, please ensure it has been entered into the Tencent Cloud multi-channel security acceleration gateway system. If not entered, the gateway IP address needs to be entered into the Tencent Cloud multi-channel security acceleration gateway system in advance through a ticket or by contacting the architect before calling this API.
         /// </summary>
         [JsonProperty("GatewayIP")]
         public string GatewayIP{ get; set; }

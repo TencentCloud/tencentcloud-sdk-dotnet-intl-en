@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Validity period type. Valid values: <li>LongTerm: Permanently valid;</li><li>Custom: Custom start and end date.</li></p>
+        /// <p>Validity period type. Valid values: <li>LongTerm: permanently valid;</li><li>Custom: custom start and end date.</li></p>
         /// </summary>
         [JsonProperty("EffectiveType")]
         public string EffectiveType{ get; set; }
 
         /// <summary>
-        /// <p>Start date of the valid period. Required when EffectiveType is Custom. Do not pass this field when EffectiveType is LongTerm.</p>
+        /// <p>Start date of the valid period. Required when EffectiveType is Custom; do not pass this field when EffectiveType is LongTerm.</p>
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }

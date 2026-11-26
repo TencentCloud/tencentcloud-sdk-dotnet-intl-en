@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the inference service.
+        /// Inference service ID.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Teo.V20220901.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time for retrieving logs. Default query time range (EndTime - StartTime) is the most recent 7 days.
+        /// End time for retrieving logs. The default query time range (`EndTime` - `StartTime`) is the most recent 7 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// Sorting field. Valid values: <li>timestamp: Log generation time.</li>Default value: timestamp.
+        /// Sorting field. Valid values: <li>timestamp: log generation time.</li> Default value: timestamp.
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// <p>Sorting method. Valid values: <li>asc: ascending order;</li><li>desc: descending order.</li>Default value: desc.</p>
+        /// Sorting method. Valid values: <li>asc: in ascending order;</li><li>desc: in descending order.</li> Default value: desc.
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

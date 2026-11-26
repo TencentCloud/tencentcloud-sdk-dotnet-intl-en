@@ -25,24 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable full path cache. valid values:.
-        /// <li>`on`: enable full-path cache (i.e., disable ignore query string).</li>.
-        /// <li>`off`: disable full-path cache (i.e., enable parameter ignore).</li>.
+        /// Whether to enable full path cache. Valid values:
+        /// <li>on: Turn on full path cache (that is, disable parameter ignoring);</li>
+        /// <li>off: Disable full path cache (parameter ignorable enabled).</li>
         /// </summary>
         [JsonProperty("FullUrlCache")]
         public string FullUrlCache{ get; set; }
 
         /// <summary>
-        /// Specifies whether to use case-insensitive cache. valid values:.
-        /// <li>`on`: ignore</li>.
-        /// <li>`off`: not ignore</li>.
+        /// Whether to ignore case-insensitive cache. Valid values:
+        /// <li>on: Ignore;</li>
+        /// <li>off: Do not ignore.</li>
         /// </summary>
         [JsonProperty("IgnoreCase")]
         public string IgnoreCase{ get; set; }
 
         /// <summary>
-        /// Request parameter contained in `CacheKey`. 
-        /// Note: This field may return `null`, indicating that no valid values can be obtained.
+        /// CacheKey contains request parameters.
         /// </summary>
         [JsonProperty("QueryString")]
         public QueryString QueryString{ get; set; }

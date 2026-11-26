@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies whether the Network Error Logging configuration is enabled. Valid values:.
+        /// Whether to enable network error log configuration. Valid values:
         /// <li>`on`: Enable;</li>
-        /// <li>`off`: Disable.</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

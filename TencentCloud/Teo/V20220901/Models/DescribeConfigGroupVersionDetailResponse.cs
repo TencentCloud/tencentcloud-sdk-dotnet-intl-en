@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ConfigGroupVersionInfo ConfigGroupVersionInfo{ get; set; }
 
         /// <summary>
-        /// Version file content. It is returned in JSON format.
+        /// The content of the version file. Return in JSON format.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

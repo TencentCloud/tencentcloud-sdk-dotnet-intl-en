@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// DNS record id.
+        /// DNS record ID.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }

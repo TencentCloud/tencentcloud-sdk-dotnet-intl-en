@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the gateway ID.
+        /// Gateway ID.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }

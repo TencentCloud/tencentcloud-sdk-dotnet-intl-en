@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Copy name of the deleted function. Input in the form of a list is supported.
+        /// Copy names of functions to be deleted. Input is supported in the form of a list.
         /// </summary>
         [JsonProperty("ReplicaNames")]
         public string[] ReplicaNames{ get; set; }

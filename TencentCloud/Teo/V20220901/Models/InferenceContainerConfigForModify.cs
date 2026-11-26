@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Image type. Valid values: <li>TCR: a Tencent Cloud container mirroring service mirror.</li>
+        /// <p>Image type. Valid values: <li>TCR: an image from Tencent Cloud container mirroring service.</li></p>
         /// </summary>
         [JsonProperty("ImageType")]
         public string ImageType{ get; set; }
 
         /// <summary>
-        /// TCR image repository information. Required when ImageType is TCR.
+        /// <p>TCR image repository info. Required when ImageType is TCR.</p>
         /// </summary>
         [JsonProperty("TcrRepositoryConfig")]
         public InferenceTCRRepositoryConfig TcrRepositoryConfig{ get; set; }
 
         /// <summary>
-        /// Command executed at container startup. Uses the mirror's Entrypoint/CMD by default when left empty. Supports up to 1024 characters.
+        /// <p>Command executed at container startup. If left empty, the image's Entrypoint/CMD is used by default. Supports up to 1024 characters.</p>
         /// </summary>
         [JsonProperty("StartupCommand")]
         public string StartupCommand{ get; set; }
 
         /// <summary>
-        /// Environment variables of the container runtime. Supports up to 10 variables.
+        /// <p>Environment variables of the container runtime. Supports up to 10 variables.</p>
         /// </summary>
         [JsonProperty("EnvironmentVariables")]
         public InferenceEnvironmentVariable[] EnvironmentVariables{ get; set; }

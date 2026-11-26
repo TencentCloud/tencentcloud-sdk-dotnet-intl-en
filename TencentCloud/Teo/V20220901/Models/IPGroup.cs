@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>IP group Id. Enter 0 when created.</p>
+        /// <p>IP group Id. Enter 0 upon creation.</p>
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>IP group content supports only IP and IP range.</p>
+        /// <p>IP group content. Only IP and IP range are supported.</p>
         /// </summary>
         [JsonProperty("Content")]
         public string[] Content{ get; set; }
 
         /// <summary>
-        /// <p>Number of IPs or IP ranges that are effective in the IP group. Valid as an output parameter. Not required as an input parameter.</p>
+        /// <p>Number of IPs or IP ranges currently effective in the IP group. Valid as an output parameter. As an input parameter, no need to specify this field.</p>
         /// </summary>
         [JsonProperty("IPTotalCount")]
         public long? IPTotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Scheduled expiration information for IP.<br>As an input parameter, it is used to specify a scheduled expiration time for a given IP address or IP range.<br>As an output parameter, it contains the following two categories of information:</p><li>Current scheduled expiration information that has not expired: expiration configuration not triggered.</li><li>Scheduled expiration information that has expired within a week: expiration configuration that has been triggered.</li>
+        /// <p>IP scheduled expiration info.<br>As an input parameter, it is used to specify a scheduled expiration time for an IP address or IP range.<br>As an output parameter, it includes the following two categories of info:</p><li>Current scheduled expiration info that has not expired: expiration configuration that has not been triggered.</li><li>Scheduled expiration info that has expired within a week: expiration configuration that has been triggered.</li>
         /// </summary>
         [JsonProperty("IPExpireInfo")]
         public IPExpireInfo[] IPExpireInfo{ get; set; }
 
         /// <summary>
-        /// <p>The number of IP groups referenced.</p>
+        /// <p>The number of times the IP group is referenced.</p>
         /// </summary>
         [JsonProperty("RefCount")]
         public long? RefCount{ get; set; }

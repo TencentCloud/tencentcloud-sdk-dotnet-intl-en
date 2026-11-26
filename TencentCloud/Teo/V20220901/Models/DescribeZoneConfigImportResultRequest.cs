@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// It indicates the configuration import task ID for which the result needs to be queried. The import task ID is only retained for 7 days.
+        /// It indicates the configuration import task ID for which the result needs to be queried. The import task ID only supports querying import tasks in the last 7 days.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

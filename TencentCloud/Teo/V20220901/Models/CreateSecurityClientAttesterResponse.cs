@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the authentication option ID list.
+        /// Authentication option ID list.
         /// </summary>
         [JsonProperty("ClientAttesterIds")]
         public string[] ClientAttesterIds{ get; set; }

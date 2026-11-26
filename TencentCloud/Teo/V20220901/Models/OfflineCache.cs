@@ -26,8 +26,8 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Whether offline cache is enabled. Valid values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

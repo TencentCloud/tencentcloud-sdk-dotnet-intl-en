@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Nested rule settings
+        /// Nested rule information.
         /// </summary>
         [JsonProperty("Rules")]
         public SubRule[] Rules{ get; set; }
 
         /// <summary>
-        /// Tag of the rule.
+        /// Rule tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

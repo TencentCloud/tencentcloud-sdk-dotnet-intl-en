@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site to be bound.
+        /// Site ID of the selected site that is not bound to a package.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// ID of the target plan.
+        /// Target package ID to be bound.
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }

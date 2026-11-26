@@ -25,40 +25,40 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable WAF configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>The configuration can be modified even when it is disabled.
+        /// WafConfig switch. Valid values:
+        /// <li>on: Enable;</li>
+        /// <li> off: disabled.</li>The switch only affects whether the configuration takes effect. Even if it is off, the configuration content can still be modified normally.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The protection level. Values:
-        /// <li>`loose`: Loose</li>
-        /// <li>`normal`: Moderate</li>
-        /// <li>`strict`: Strict</li>
-        /// <li>`stricter`: Super strict</li>
-        /// <li>`custom`: Custom</li>
+        /// Protection level set last time. Valid values:
+        /// <li> loose: loose;</li>
+        /// <li> normal: Normal;</li>
+        /// <li> strict: strict;</li>
+        /// <li>stricter: ultra-strict;</li>
+        /// <li> custom: Custom.</li>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// The WAF global mode. Values:
-        /// <li>`block`: Block globally</li>
-        /// <li>`observe`: Observe globally</li>
+        /// Global WAF mode. Valid values:
+        /// <li> block: block (global blocking, but you can configure rules to observe);</li>
+        /// <li> observe: observation (regardless of the detailed rule configuration, it is always observation).</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The settings of the managed rule. If it is null, the settings that were last configured will be used.
+        /// Detailed configuration of the managed rule. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("WafRule")]
         public WafRule WafRule{ get; set; }
 
         /// <summary>
-        /// The setting of the AI rule engine. If it is null, the setting that was last configured will be used.
+        /// Protection configuration of the AI rule engine. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("AiRule")]
         public AiRule AiRule{ get; set; }

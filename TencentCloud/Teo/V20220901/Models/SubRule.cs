@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The condition that determines if a feature should run.
-        /// Note: If any condition in the array is met, the feature will run.
+        /// Judgment condition for executing the feature.
+        /// Note: The feature can be executed if any condition in the array is met.
         /// </summary>
         [JsonProperty("Conditions")]
         public RuleAndConditions[] Conditions{ get; set; }
 
         /// <summary>
-        /// The feature to be executed.
+        /// Function to execute.
         /// </summary>
         [JsonProperty("Actions")]
         public Action[] Actions{ get; set; }

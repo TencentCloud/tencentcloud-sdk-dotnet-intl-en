@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Hardware specifications list.</p>
+        /// <p>Hardware specification list.</p>
         /// </summary>
         [JsonProperty("HardwareSpecifications")]
         public InferenceHardwareSpecification[] HardwareSpecifications{ get; set; }

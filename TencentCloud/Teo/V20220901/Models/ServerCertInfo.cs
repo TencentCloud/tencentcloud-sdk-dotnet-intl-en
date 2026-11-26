@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the server certificate ID, which originates from the SSL side. you can check the CertId from the [SSL certificate list](https://console.cloud.tencent.com/SSL).
+        /// Server certificate ID, which originates from the SSL side. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
         /// </summary>
         [JsonProperty("CertId")]
         public string CertId{ get; set; }
@@ -37,10 +37,10 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Certificate type. valid values:.
-        /// <Li>Specifies the default certificate.</li>.
-        /// <Li>Upload: user upload;</li>.
-        /// <li>managed: tencent cloud hosted.</li>.
+        /// Certificate type. Valid values:
+        /// <li>`default`: Default certificate;</li>
+        /// <li>`upload`: User-upload;</li>
+        /// <li>managed: Tencent Cloud hosted.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -52,7 +52,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Specifies the cert deployment time.
+        /// Deployment time of the certificate.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string SignAlgo{ get; set; }
 
         /// <summary>
-        /// Domain name of the certificate.
+        /// Domain name of the certificate ownership.
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }

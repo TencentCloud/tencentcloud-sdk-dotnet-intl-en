@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Offset of paginated query. Default value: 0.		
+        /// Offset of paginated query. Default value: 0.	
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -43,9 +43,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all LoadBalancer information under the current zone ID will be returned. The detailed filter criteria are as follows:
-        /// <li>InstanceName: Filter by LoadBalancer name.</li>
-        /// <li>InstanceId: Filter by LoadBalancer ID.</li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, information of all load balancing instances under the current zone-id is returned. Detailed filter criteria:
+        /// <li>InstanceName: Filter by load balancing instance name.</li>
+        /// <li>InstanceId: Filter by Cloud Load Balancer instance ID.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

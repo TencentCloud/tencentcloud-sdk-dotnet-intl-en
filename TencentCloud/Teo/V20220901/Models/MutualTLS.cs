@@ -25,13 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Mutual authentication configuration switch, the values are:<li>on: enable; </li> <li>off: disable. </li>
+        /// Mutual authentication configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Mutual authentication certificate list.
+        /// List of mutual authentication certificates.
         /// Note: When using MutualTLS as an input parameter in ModifyHostsCertificate, you only need to provide the CertId of the corresponding certificate. You can check the CertId from the [SSL Certificate List](https://console.cloud.tencent.com/ssl).
         /// </summary>
         [JsonProperty("CertInfos")]

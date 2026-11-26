@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of custom error pages.
+        /// <p>Total number of custom response pages.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Custom error page data list.
+        /// <p>Custom response page data list.</p>
         /// </summary>
         [JsonProperty("ErrorPages")]
         public CustomErrorPage[] ErrorPages{ get; set; }

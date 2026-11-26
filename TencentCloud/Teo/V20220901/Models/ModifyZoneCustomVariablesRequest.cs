@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Site ID.</p>
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>List of site-level custom variables. CustomVariable.Name must use user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after it.</p>
+        /// <p>List of site-level custom variables. CustomVariable.Name requires the use of user.zone. as a prefix. Variables are initialized sequentially in array order. InitialValue can only reference variables before the current variable. It does not support referencing the current variable itself or variables after the current variable.</p>
         /// </summary>
         [JsonProperty("CustomVariables")]
         public CustomVariable[] CustomVariables{ get; set; }
 
         /// <summary>
-        /// <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule; additional entries are invalid.</p>
+        /// <p>Site-level custom variable calculation rules. The calculation supports references to defined site-level custom variables. This list currently only supports filling in one rule, and additional entries are invalid.</p>
         /// </summary>
         [JsonProperty("CustomVariableOperations")]
         public CustomVariableOperation[] CustomVariableOperations{ get; set; }

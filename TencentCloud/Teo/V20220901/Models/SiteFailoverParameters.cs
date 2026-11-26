@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Origin server fault migration condition status code. The origin server response status code must hit the field return to execute origin server migration as SiteFailoverParams. The parameter value is one of 4xx, 5xx.
+        /// Status code for origin fault migration condition. Origin migration is executed as specified in SiteFailoverParams only when the response status code returned by the origin hits the value of this field. The parameter value is one of 4xx and 5xx.
         /// </summary>
         [JsonProperty("SiteFailoverStatusCodes")]
         public long?[] SiteFailoverStatusCodes{ get; set; }
 
         /// <summary>
-        /// Origin server failure failover configuration parameter list. Minimum length is 1, maximum length is 2.
+        /// List of origin server failover configuration parameters. Minimum length: 1. Maximum length: 2.
         /// </summary>
         [JsonProperty("SiteFailoverParams")]
         public SiteFailover[] SiteFailoverParams{ get; set; }

@@ -151,17 +151,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Env{ get; set; }
 
         /// <summary>
-        /// group by parameter value enumeration: 1:1m
-        ///    2:5m  3:30m 
-        ///    4:1h
-        ///  5:1d
+        /// Time aggregation interval. Valid values: 1 (1 minute), 2 (5 minutes), 3 (30 minutes), 4 (1 hour), and 5 (1 day).
         /// </summary>
         [JsonProperty("GroupByType")]
         public long? GroupByType{ get; set; }
 
         /// <summary>
-        /// 1: Query Intelligent Research
-        /// 0: Use old logic, already offline, do not use
+        /// Set to 1 to query the new data source. The legacy query mode (0) has been retired.
         /// </summary>
         [JsonProperty("IsNewData")]
         public long? IsNewData{ get; set; }

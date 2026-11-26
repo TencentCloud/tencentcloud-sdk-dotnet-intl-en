@@ -25,17 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable origin-pull to follow the redirection configuration. values:.
-        /// <Li>`On`: enable;</li>
-        /// .
-        /// <Li>Off: disable.</li>.
+        /// Configuration switch for origin-pull follow redirect. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The maximum number of redirects. value range: 1-5.
-        /// Note: this field is required when switch is on; when switch is off, this field is not required and will not take effect if filled.
+        /// Maximum number of redirects. Value range: 1-5.
+        /// Note: This field is required when Switch is on. When Switch is off, no need to specify this field. If specified, it does not take effect.
         /// </summary>
         [JsonProperty("MaxTimes")]
         public long? MaxTimes{ get; set; }

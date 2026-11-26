@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total eligible alias domain names.
+        /// Number of eligible alias domain names.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Information of the eligible alias domain names.
+        /// Alias domain name detailed information list.
         /// </summary>
         [JsonProperty("AliasDomains")]
         public AliasDomain[] AliasDomains{ get; set; }

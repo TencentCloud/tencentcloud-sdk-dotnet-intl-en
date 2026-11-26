@@ -25,16 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. valid values:.
+        /// Switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
-        /// <li>off: disabled;</li>.
+        /// <li>off: Disable;</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Basic control rules. if null, historical configuration is used by default.
+        /// Basic access control rule. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("IpTableRules")]
         public IpTableRule[] IpTableRules{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TCRType{ get; set; }
 
         /// <summary>
-        /// <p>Image address.</p>
+        /// <p>Image URL.</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// <p>ID of the repository instance. Required when TCRType = Enterprise.</p>
+        /// <p>Mirror repository instance ID. Required when TCRType is Enterprise.</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Quota limit for a single batch submission.
         /// </summary>
         [JsonProperty("Batch")]
         public long? Batch{ get; set; }
@@ -37,18 +37,18 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Daily{ get; set; }
 
         /// <summary>
-        /// Remaining daily submission quota.
+        /// Daily unconsumed submission quota.
         /// </summary>
         [JsonProperty("DailyAvailable")]
         public long? DailyAvailable{ get; set; }
 
         /// <summary>
-        /// Type of cache purging/pre-warming. Values:
-        /// <li>`purge_prefix`: Purge by prefix</li>
-        /// <li>`purge_url`: Purge by URL</li>
-        /// <li>`purge_host`: Purge by hostname</li>
-        /// <li>`purge_all`: Purge all caches</li>
-        /// <li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+        /// Purge and prefetch cache type. Valid values:
+        /// <li> purge_prefix: refresh by prefix;</li>
+        /// <li> purge_url: refresh by URL;</li>
+        /// <li> purge_host: refresh by Hostname;</li>
+        /// <li> purge_all: Refresh all cached content;</li>
+        /// <li> purge_cache_tag: refresh by cache tag;</li><li> prefetch_url: prefetch by url.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

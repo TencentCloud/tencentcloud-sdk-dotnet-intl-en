@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Status of the alias domain name. Values:
-        /// <li>`false`: Enable the alias domain name.</li>
-        /// <li>`true`: Disable the alias domain name.</li>
+        /// Alias domain name status. Valid values:
+        /// <li> false: enable alias domain name;</li>
+        /// <li> true: Disable the alias domain name.</li>
         /// </summary>
         [JsonProperty("Paused")]
         public bool? Paused{ get; set; }
 
         /// <summary>
-        /// The alias domain name you want to modify its status. If it is left empty, the modify operation is not performed.
+        /// Alias domain name in pending modification status. If it is empty, the modification status operation will not be performed.
         /// </summary>
         [JsonProperty("AliasNames")]
         public string[] AliasNames{ get; set; }

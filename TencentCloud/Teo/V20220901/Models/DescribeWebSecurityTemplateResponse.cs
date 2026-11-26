@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Web Security policy template configuration. Bot management configuration is not currently supported (under development).
+        /// Security policy template configuration content. Bot configuration is not currently supported and is under development.
         /// </summary>
         [JsonProperty("SecurityPolicy")]
         public SecurityPolicy SecurityPolicy{ get; set; }

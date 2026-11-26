@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the security ip group id. <li>when this parameter is provided, only the configuration of the specified security ip group id is queried;</li> <li>when this parameter is not provided, information of all security ip groups under the site is returned.</li>.
+        /// Specify security IP group ID. <li>When this parameter is provided, only the configuration of the security IP group with the specified ID is queried;</li> <li>When no parameter is passed, information of all security IP groups under the site is returned.</li>
         /// </summary>
         [JsonProperty("GroupIds")]
         public long?[] GroupIds{ get; set; }

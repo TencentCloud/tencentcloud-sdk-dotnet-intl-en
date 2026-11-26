@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Site ID.</p>
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>Service name. Length limit is no more than 30 characters, only lowercase letters, digits, and hyphens are supported, must start with a letter, ends with a digit or letter, duplicates are not supported.</p>
+        /// <p>Name of the reasoning service. Length limited to 30 characters. Only lowercase letters, digits, and hyphens are supported. It must start with a letter and end with a number or letter. Repetition is not supported.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Ports monitored by the model service. Only integers between 1 and 65535 are supported.</p>
+        /// <p>Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.</p>
         /// </summary>
         [JsonProperty("ListenPort")]
         public long? ListenPort{ get; set; }
 
         /// <summary>
-        /// <p>Container configuration of the inference service. Currently only support setting 1 container.</p>
+        /// <p>Container configuration for the inference service. Currently, only support setting 1 container.</p>
         /// </summary>
         [JsonProperty("Containers")]
         public InferenceContainerConfig[] Containers{ get; set; }
@@ -55,7 +55,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public InferenceResourceConfig ResourceConfig{ get; set; }
 
         /// <summary>
-        /// <p>Request path list for inference service. Supports up to 20 paths.</p>
+        /// <p>Inference service affinity configuration.</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
+
+        /// <summary>
+        /// <p>List of request paths for the inference service. Supports up to 20 paths.</p>
         /// </summary>
         [JsonProperty("RequestPaths")]
         public string[] RequestPaths{ get; set; }
@@ -77,6 +83,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ListenPort", this.ListenPort);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamSimple(map, prefix + "Description", this.Description);
         }

@@ -25,28 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Scaling way. Valid values: <li>Auto: Automatically adjust instance count based on request volume;</li><li>Manual: Fixed number of resource instances via manual setting.</li>
+        /// <p>Scaling method. Valid values: <li>Auto: automatically adjust the number of instances based on request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
         /// </summary>
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }
 
         /// <summary>
-        /// Inference service auto scaling configuration. Required when ScalingMode is Auto.
+        /// <p>Automatic scaling configuration for the inference service. Required when ScalingMode is Auto.</p>
         /// </summary>
         [JsonProperty("AutoScalingConfig")]
         public InferenceAutoScalingConfig AutoScalingConfig{ get; set; }
 
         /// <summary>
-        /// Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
+        /// <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
         /// </summary>
         [JsonProperty("ManualInstanceConfig")]
         public InferenceManualInstanceConfig ManualInstanceConfig{ get; set; }
 
         /// <summary>
-        /// Concurrency of a single instance. Default value is 1.
+        /// <p>Concurrency of a single instance. Default value: 1.</p>
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
+
+        /// <summary>
+        /// <p>Hardware resource configuration of the inference service.</p>
+        /// </summary>
+        [JsonProperty("HardwareConfig")]
+        public InferenceHardwareConfigForModify HardwareConfig{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
             this.SetParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);
+            this.SetParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
         }
     }
 }

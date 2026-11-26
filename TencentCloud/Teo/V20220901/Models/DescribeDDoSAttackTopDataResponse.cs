@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The list of top-ranked DDoS attack data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// DDoS attack Top Data List.
         /// </summary>
         [JsonProperty("Data")]
         public TopEntry[] Data{ get; set; }
 
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

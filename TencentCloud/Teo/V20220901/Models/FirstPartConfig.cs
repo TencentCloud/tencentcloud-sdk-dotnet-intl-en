@@ -25,16 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. valid values:.
+        /// Switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The statistical period of the first segment packet is in seconds. expect the duration to be 5 seconds by default.
+        /// Statistical period of the first segment packet, in seconds. This is the expected statistical period of the first segment packet. Default value: 5 seconds.
         /// </summary>
         [JsonProperty("StatTime")]
         public ulong? StatTime{ get; set; }

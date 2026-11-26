@@ -25,43 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the rule.
+        /// Rule id.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// Name of the rule.
+        /// Rule name.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Whether to enable the rule.
+        /// Rule switch.
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Condition specified for the rule.
+        /// Custom rule.
         /// </summary>
         [JsonProperty("AlgConditions")]
         public AclCondition[] AlgConditions{ get; set; }
 
         /// <summary>
-        /// Checksum of the Cookie and behavior analysis of the session.
+        /// Cookie checksum and session behavior analysis.
         /// </summary>
         [JsonProperty("AlgDetectSession")]
         public AlgDetectSession AlgDetectSession{ get; set; }
 
         /// <summary>
-        /// Validate client behavior when the condition is satisfied.
+        /// Client behavior validation.
         /// </summary>
         [JsonProperty("AlgDetectJS")]
         public AlgDetectJS[] AlgDetectJS{ get; set; }
 
         /// <summary>
-        /// The update time, which is only used as an output parameter.
+        /// Update time. For output usage only.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

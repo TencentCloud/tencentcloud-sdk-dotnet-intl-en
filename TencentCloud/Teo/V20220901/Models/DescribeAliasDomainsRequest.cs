@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The page offset. Default value: 0
+        /// The offset of paginated query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The paginated query limit. Default value: 20. Maximum value: 1000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:
+        /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
         /// <li>target-name: Filter by the target domain name;</li>
         /// <li>alias-name: Filter by the alias of the domain name.</li>Fuzzy queries are only supported for the field name alias-name.
         /// </summary>

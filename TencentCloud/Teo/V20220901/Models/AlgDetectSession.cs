@@ -25,47 +25,47 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Method to validate Cookie.
+        /// Operation name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// The validation mode. Values:
-        /// <li>`detect`: Validate only</li>
-        /// <li>`update_detect` (default): Update Cookie and validate</li>
+        /// Verification method. Default value: update_detect. Valid values:
+        /// <li>detect: verify;</li>
+        /// <li>update_detect: refresh the Cookie and validate it.</li>
         /// </summary>
         [JsonProperty("DetectMode")]
         public string DetectMode{ get; set; }
 
         /// <summary>
-        /// Whether to enable Cookie-based session check. The default value is `off`. Values:
-        /// <li>`off`: Disable</li>
-        /// <li>`on`: Enable</li>
+        /// Switch for session rate and periodic feature verification. Default value: off. Valid values:
+        /// <li>off: Disable;</li>
+        /// <li>`on`: Enable.</li>
         /// </summary>
         [JsonProperty("SessionAnalyzeSwitch")]
         public string SessionAnalyzeSwitch{ get; set; }
 
         /// <summary>
-        /// The period threshold for validating the result "No Cookie/Cookie expired" in seconds. Value range: 5-3600. Default value: 10.
+        /// Statistical cycle for the check result indicating no Cookie is carried or the Cookie has expired. Unit: seconds. Default: 10. Value range: 5–3600.
         /// </summary>
         [JsonProperty("InvalidStatTime")]
         public long? InvalidStatTime{ get; set; }
 
         /// <summary>
-        /// The number of times for the result "No Cookie/Cookie expired" occurred in the specified period. Value range: 1-100000000. Default value: 300.
+        /// Trigger threshold for the check result indicating no Cookie is carried or the Cookie has expired. Unit: count. Default: 300. Value range: 1–100000000.
         /// </summary>
         [JsonProperty("InvalidThreshold")]
         public long? InvalidThreshold{ get; set; }
 
         /// <summary>
-        /// Cookie validation results.
+        /// Cookie verification result.
         /// </summary>
         [JsonProperty("AlgDetectResults")]
         public AlgDetectResult[] AlgDetectResults{ get; set; }
 
         /// <summary>
-        /// Cookie-based session check results.
+        /// Session rate and periodic feature verification result.
         /// </summary>
         [JsonProperty("SessionBehaviors")]
         public AlgDetectResult[] SessionBehaviors{ get; set; }

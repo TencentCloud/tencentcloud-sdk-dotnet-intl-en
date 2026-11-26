@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable standard debugging. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable </li>
+        /// Debug feature switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The client IP to allow. It can be an IPv4/IPv6 address or a CIDR block. If not specified, it means to allow any client IP
+        /// Allowed client sources. Supports filling in IPv4 and IPv6 IPs or IP ranges. 0.0.0.0/0 indicates that all IPv4 clients are allowed for debugging, and ::/0 indicates that all IPv6 clients are allowed for debugging.
         /// </summary>
         [JsonProperty("AllowClientIPList")]
         public string[] AllowClientIPList{ get; set; }
 
         /// <summary>
-        /// The time when the standard debugging setting expires. If it is exceeded, this feature becomes invalid.
+        /// Debug feature expiration time. If the set time is exceeded, the feature becomes invalid.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

@@ -25,28 +25,34 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Ports monitored by the model service.
+        /// <p>Ports monitored by the model service.</p>
         /// </summary>
         [JsonProperty("ListenPort")]
         public long? ListenPort{ get; set; }
 
         /// <summary>
-        /// Request path list for inference service.
+        /// <p>Request path list of the inference service.</p>
         /// </summary>
         [JsonProperty("RequestPaths")]
         public string[] RequestPaths{ get; set; }
 
         /// <summary>
-        /// Container configuration of the inference service.
+        /// <p>Container configuration for the inference service.</p>
         /// </summary>
         [JsonProperty("Containers")]
         public InferenceContainerConfig[] Containers{ get; set; }
 
         /// <summary>
-        /// Resource configuration of the inference service.
+        /// <p>Resource configuration of the inference service.</p>
         /// </summary>
         [JsonProperty("ResourceConfig")]
         public InferenceResourceConfig ResourceConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Inference service affinity configuration.</p>
+        /// </summary>
+        [JsonProperty("AffinityConfig")]
+        public InferenceAffinityConfig AffinityConfig{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "RequestPaths.", this.RequestPaths);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
             this.SetParamObj(map, prefix + "ResourceConfig.", this.ResourceConfig);
+            this.SetParamObj(map, prefix + "AffinityConfig.", this.AffinityConfig);
         }
     }
 }

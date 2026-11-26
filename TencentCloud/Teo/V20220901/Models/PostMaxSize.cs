@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable POST upload limit (default limit: 32 MB). Valid values: 
-        /// <li>`on`: Enable;</li>
-        /// <li>`off`: Disable.</li>
+        /// Whether to enable the POST request upload file limit. The platform defaults to a limit of 32 MB. Valid values:
+        /// <li>on: enable limit;</li>
+        /// <li>off: disables the limit.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Specifies the maximum limit. this field is valid only when Switch is on. value range: 1MB to 800MB. unit: byte.
+        /// Maximum limit. This field is valid only when Switch is on. The value ranges from 1 MB to 800 MB, in bytes.
         /// </summary>
         [JsonProperty("MaxSize")]
         public long? MaxSize{ get; set; }

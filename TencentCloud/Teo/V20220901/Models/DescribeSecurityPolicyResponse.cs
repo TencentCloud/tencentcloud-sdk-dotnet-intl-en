@@ -26,7 +26,6 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Security policy configuration.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("SecurityPolicy")]
         public SecurityPolicy SecurityPolicy{ get; set; }

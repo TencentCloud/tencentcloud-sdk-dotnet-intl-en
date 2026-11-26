@@ -31,20 +31,22 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Paginated query offset. Defaults to 0 when not specified.
+        /// Offset of paginated query. If left empty, the default value is 0.
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Paginated query limit. Default value: 20. Maximum value: 1000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.	
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The upper limit for Filters.Values is 20. If left empty, all Layer 4 proxy instance information under the current zone ID is returned. The detailed filter criteria are as follows: <li>proxy-id: Filters by Layer 4 proxy instance ID;</li>
-        /// <li>ddos-protection-type: Filters by security protection type;</li>
+        /// Filter criteria. The maximum value of Filters.Values is 20. If this parameter is left empty, all Layer 4 proxy instance information under the current zone ID will be returned. The detailed filter criteria are as follows:
+        /// <li>proxy-id: filter by L4 proxy instance ID;</li>
+        /// <li>ddos-protection-type: filters by security protection type.</li>
+        /// 
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

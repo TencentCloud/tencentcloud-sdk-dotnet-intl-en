@@ -25,60 +25,56 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// http2 configuration switch. valid values:.
+        /// http/2 configuration switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }
 
         /// <summary>
-        /// OCSP configuration switch. valid values:.
+        /// OCSP configuration switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("OcspStapling")]
         public string OcspStapling{ get; set; }
 
         /// <summary>
-        /// Tls version settings. valid values:.
-        /// <Li>TLSv1: specifies the tlsv1 version.</li>.
-        /// <Li>TLSv1.1: specifies the tlsv1.1 version.</li>.
-        /// <Li>TLSv1.2: specifies the tlsv1.2 version.</li>.
-        /// <Li>TLSv1.3: specifies the tlsv1.3 version. consecutive versions must be enabled when modifying.</li>.
+        /// Tls version settings. Valid values:
+        /// <li>TLSv1: TLSv1 version;</li>
+        /// <li>TLSv1.1: TLSv1.1 version;</li>
+        /// <li>TLSv1.2: TLSv1.2 version;</li>
+        /// <li>TLSv1.3: TLSv1.3 version.</li>Consecutive versions must be enabled when modifying.
         /// </summary>
         [JsonProperty("TlsVersion")]
         public string[] TlsVersion{ get; set; }
 
         /// <summary>
-        /// HSTS Configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// HSTS configuration.
         /// </summary>
         [JsonProperty("Hsts")]
         public Hsts Hsts{ get; set; }
 
         /// <summary>
-        /// The certificate configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Certificate configuration.
         /// </summary>
         [JsonProperty("CertInfo")]
         public ServerCertInfo[] CertInfo{ get; set; }
 
         /// <summary>
-        /// Application type. valid values:.
-        /// <li>`apply`: managed by EdgeOne.</li>.
-        /// <li>`none`: not managed by EdgeOne.</li>if it is left empty, the default value `none` is used.
+        /// Application type. Valid values:
+        /// <li>apply: manage EdgeOne;</li>
+        /// <li>none: EdgeOne is not managed.</li>If not specified, the default value is none.
         /// </summary>
         [JsonProperty("ApplyType")]
         public string ApplyType{ get; set; }
 
         /// <summary>
-        /// The cipher suite, with valid values:.
-        /// <li>loose-v2023: provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>.
-        /// <li>general-v2023: provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites.</li>.
-        /// <li>strict-v2023: provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>.
+        /// Cipher suite. Valid values:
+        /// <li>loose-v2023: Provides high compatibility with general security, and supports TLS 1.0-1.3 cipher suites;</li>
+        /// <li>general-v2023: Provides relatively high compatibility with moderate security, and supports TLS 1.2-1.3 cipher suites;</li>
+        /// <li>strict-v2023: Provides high security, disables all cipher suites with security risks, and supports TLS 1.2-1.3 cipher suites.</li>
         /// </summary>
         [JsonProperty("CipherSuite")]
         public string CipherSuite{ get; set; }

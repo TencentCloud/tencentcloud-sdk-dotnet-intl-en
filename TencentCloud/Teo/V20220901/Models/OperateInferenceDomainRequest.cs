@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOfflineLogsResponse : AbstractModel
+    public class OperateInferenceDomainRequest : AbstractModel
     {
         
         /// <summary>
-        /// API call response
+        /// <p>Zone ID.</p>
         /// </summary>
-        [JsonProperty("Msg")]
-        public string Msg{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Log list
+        /// <p>Inference service ID.</p>
         /// </summary>
-        [JsonProperty("LogSet")]
-        public string[] LogSet{ get; set; }
+        [JsonProperty("ServiceId")]
+        public string ServiceId{ get; set; }
 
         /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+        /// <p>Reasoning service domain name.</p>
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// <p>Operation type.</p><p>Enumeration values:</p><ul><li>Resume: Enable domain;</li><li>Stop: Deactivate domain;</li><li>Delete: Delete domain name.</li></ul>
+        /// </summary>
+        [JsonProperty("Operation")]
+        public string Operation{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Msg", this.Msg);
-            this.SetParamArraySimple(map, prefix + "LogSet.", this.LogSet);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
         }
     }
 }

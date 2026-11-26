@@ -25,88 +25,94 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Application ID.
+        /// <p>Application Id</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application name.
+        /// <p>Application name</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application type (cloud 3D: Application3D; cloud XR: ApplicationXR; cloud Web: ApplicationWeb).
+        /// <p>Application type (Cloud 3D: Application3D, Cloud XR: ApplicationXR, Cloud Web: ApplicationWeb)</p>
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// Application program execution path.
+        /// <p>Program execution path</p>
         /// </summary>
         [JsonProperty("ApplicationExePath")]
         public string ApplicationExePath{ get; set; }
 
         /// <summary>
-        /// Application process list.
+        /// <p>Application process list</p>
         /// </summary>
         [JsonProperty("ApplicationInterList")]
         public string ApplicationInterList{ get; set; }
 
         /// <summary>
-        /// Application startup parameters.
+        /// <p>Application startup parameter</p>
         /// </summary>
         [JsonProperty("ApplicationParams")]
         public string ApplicationParams{ get; set; }
 
         /// <summary>
-        /// Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).
+        /// <p>Application running status (ApplicationDeleting: application deletion in progress; ApplicationCreateFail: application creation failed; ApplicationCreating: application creation in progress; ApplicationRunning: normal running; ApplicationNoConfigured: main execution program path not configured).</p>
         /// </summary>
         [JsonProperty("ApplicationRunStatus")]
         public string ApplicationRunStatus{ get; set; }
 
         /// <summary>
-        /// Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+        /// <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
         /// </summary>
         [JsonProperty("ApplicationUpdateStatus")]
         public string ApplicationUpdateStatus{ get; set; }
 
         /// <summary>
-        /// Application creation time.
+        /// <p>Application creation time</p>
         /// </summary>
         [JsonProperty("ApplicationCreateTime")]
         public string ApplicationCreateTime{ get; set; }
 
         /// <summary>
-        /// List of application versions.
+        /// <p>Application version list</p>
         /// </summary>
         [JsonProperty("ApplicationVersions")]
         public UserApplicationVersion[] ApplicationVersions{ get; set; }
 
         /// <summary>
-        /// Application basic data.
+        /// <p>Application basic data</p>
         /// </summary>
         [JsonProperty("ApplicationBaseInfo")]
         public ApplicationBaseInfo ApplicationBaseInfo{ get; set; }
 
         /// <summary>
-        /// Application update progress.
+        /// <p>Application update progress</p>
         /// </summary>
         [JsonProperty("ApplicationUpdateProgress")]
         public long? ApplicationUpdateProgress{ get; set; }
 
         /// <summary>
-        /// Application nature (PUBLIC: public application; PRIVATE: user application).
+        /// <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
         /// </summary>
         [JsonProperty("ApplicationNature")]
         public string ApplicationNature{ get; set; }
 
         /// <summary>
-        /// Application repository list.
+        /// <p>Application repository list</p>
         /// </summary>
         [JsonProperty("ApplicationStores")]
         public UserApplicationStore[] ApplicationStores{ get; set; }
+
+        /// <summary>
+        /// <p>Application tag</p>
+        /// </summary>
+        [JsonProperty("ApplicationTags")]
+        public Tag[] ApplicationTags{ get; set; }
 
 
         /// <summary>
@@ -128,6 +134,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "ApplicationUpdateProgress", this.ApplicationUpdateProgress);
             this.SetParamSimple(map, prefix + "ApplicationNature", this.ApplicationNature);
             this.SetParamArrayObj(map, prefix + "ApplicationStores.", this.ApplicationStores);
+            this.SetParamArrayObj(map, prefix + "ApplicationTags.", this.ApplicationTags);
         }
     }
 }

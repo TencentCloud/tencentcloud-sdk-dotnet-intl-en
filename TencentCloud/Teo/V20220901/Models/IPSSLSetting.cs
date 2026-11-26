@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Operation type, values as follows: <li>bind: bind</li> <li>unbind: unbind</li>
+        /// Operation type. Values are as follows: <li>bind: Bind</li> <li>unbind: Unbind</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

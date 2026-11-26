@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Modifies the enabled/disabled status of the gateway. valid values: <li> offline: disabled;</li> <li> online: enabled.</li>.
+        /// Modify the enabled/disabled status of the gateway. Valid values: <li> offline: disabled;</li><li> online: enabled.</li>
         /// </summary>
         [JsonProperty("GatewayStatus")]
         public string GatewayStatus{ get; set; }

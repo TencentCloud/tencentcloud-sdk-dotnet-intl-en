@@ -25,47 +25,47 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The rule action. Values:
-        /// <li>`drop`: Block</li>
-        /// <li>`trans`: Allow</li>
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`monitor`: Observe</li>
+        /// Handling method after the trigger rule is triggered. Valid values:
+        /// <li>drop: block;</li>
+        /// <li>trans: pass;</li>
+        /// <li>alg: Javascript challenge;</li>
+        /// <li>monitor: observation.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
+        /// Rule ID. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// Rule ID to allow. defaults to no rules configured for allowance.
+        /// Rule ID to allow. By default, no rule is allowed.
         /// </summary>
         [JsonProperty("TransManagedIds")]
         public long?[] TransManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID of the JS challenge. default is all rules without configuring the JS challenge.
+        /// Rule ID of the JS challenge. By default, no JS challenge is configured for all rules.
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
-        /// The rule ID for digit verification code. by default, all rules do not configure digit verification code.
+        /// Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID for observation. by default, observation is not configured for all rules.
+        /// Rule ID to observe. By default, no rule is configured for observation.
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID for interception. by default, all rules have no configuration interception.
+        /// Rule ID to intercept. By default, no rule is intercepted.
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }

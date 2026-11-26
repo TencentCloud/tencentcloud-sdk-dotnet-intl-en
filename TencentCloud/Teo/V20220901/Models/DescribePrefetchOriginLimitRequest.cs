@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,15 +37,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Specifies the paginated query limit. default value: 20. upper limit: 100.
+        /// Number limit of paginated query. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter condition. specifies the maximum number of Filters.Values is 20. detailed filter criteria:.
-        /// <Li>Domain-Name: specifies domain filtering. the domain-name format is like www.qq.com. fuzzy queries are not supported.</li>.
-        /// <li>area: specifies the acceleration region to filter by limit. fuzzy queries are not supported. valid values:<br> Overseas: global availability zone (excludes chinese mainland);<br> MainlandChina: chinese mainland availability zone.</li>.
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>domain-name: Filter by domain name. The domain-name format is like www.qq.com. Fuzzy queries are not supported.</li>
+        /// <li>area: Filter by restricted acceleration region. Fuzzy queries are not supported. Options:<br> Overseas: Global availability zone (excluding Chinese mainland);<br> MainlandChina: Chinese mainland availability zone.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

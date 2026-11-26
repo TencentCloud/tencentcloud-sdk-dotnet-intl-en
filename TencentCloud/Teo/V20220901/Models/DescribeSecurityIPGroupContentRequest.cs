@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the IP group ID.
+        /// IP group ID.
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// Paginated query limit. default value: 2000, maximum value: 100000.
+        /// Paginated query limit. Default value: 2000. Maximum value: 100000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -25,20 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Action. Valid values: 
-        /// <li>`monitor`: Observe;</li>
-        /// <li>`alg`: JavaScript challenge;</li>
-        /// <li>`captcha`: Managed challenge;</li>
-        /// <li>`random`: Actions are executed based on the percentage specified in `ExtendActions`;</li>
-        /// <li>`silence`: Silence;</li>
-        /// <li>`shortdelay`: Add short latency;</li>
-        /// <li>`longdelay`: Add long latency.</li>
+        /// Disposal actions. Valid values:
+        /// <li>monitor: observation;</li>
+        /// <li>alg: JavaScript challenge;</li>
+        /// <li>captcha: hosted challenge;</li>
+        /// <li>random: random, allocate handling actions and proportions according to ExtendActions;</li>
+        /// <li>silence: silence;</li>
+        /// <li>shortdelay: short-term response;</li>
+        /// <li>longdelay: long-time response.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The probability for triggering the action. value range: 0-100.
+        /// Probability for triggering the handling method. Value range: 0-100.
         /// </summary>
         [JsonProperty("Percent")]
         public ulong? Percent{ get; set; }

@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Result of ownership verification
-        /// <li>`success`: Verification passed</li>
-        /// <li>`fail`: Verification failed</li>
+        /// Ownership verification result.
+        /// <li>success: Verification succeeded;</li>
+        /// <li>fail: verification failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// When the ownership verification result is `fail`, this field returns the reason of failure.
+        /// When the verification result is failed, this field will return the reason to help you troubleshoot the problem.
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

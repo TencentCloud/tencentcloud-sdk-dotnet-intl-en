@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total environments.
+        /// Total number of environments.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Environment list.
+        /// List of environments.
         /// </summary>
         [JsonProperty("EnvInfos")]
         public EnvInfo[] EnvInfos{ get; set; }

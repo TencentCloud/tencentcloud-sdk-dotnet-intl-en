@@ -25,39 +25,39 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site name.
+        /// Site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The subdomain name to be verified. to verify the ownership of a site, leave it blank.
+        /// Verify a subdomain. This value is empty when verifying a site. A subdomain is verified for a specific subdomain.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// The verification status. Values:
-        /// <li>`pending`: The verification is ongoing.</li>
-        /// <li>`finished`: The verification completed.</li>
+        /// Verification status. Valid values:
+        /// <li>pending: verifying.</li>
+        /// <li> finished: verification complete.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Details of the DNS record.
+        /// Site ownership verification: Dns verification information.
         /// </summary>
         [JsonProperty("Ascription")]
         public AscriptionInfo Ascription{ get; set; }
 
         /// <summary>
-        /// Specifies the current NS record of the domain name.
+        /// Current NS record of the domain name.
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
 
         /// <summary>
-        /// Details of the verification file.
+        /// Site ownership verification: file verification information.
         /// </summary>
         [JsonProperty("FileAscription")]
         public FileAscriptionInfo FileAscription{ get; set; }

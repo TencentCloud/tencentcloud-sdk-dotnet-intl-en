@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Lists available regions for the gateway.
+        /// List of available regions for the gateway.
         /// </summary>
         [JsonProperty("GatewayRegions")]
         public GatewayRegion[] GatewayRegions{ get; set; }

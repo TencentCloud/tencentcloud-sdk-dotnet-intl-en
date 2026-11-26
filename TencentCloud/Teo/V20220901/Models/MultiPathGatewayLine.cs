@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// line ID. where line-0 and line-1 are system-reserved IDs. valid values:
-        /// <Li>line-0: direct connection line. Adding, editing, and deletion are not supported.</li>
-        /// <Li>line-1: EdgeOne layer-4 proxy line. Supports modifying instances and rules, but deletion is not supported.</li>
-        /// <li>line-2 and above: EdgeOne layer-4 proxy lines or custom lines, supports modifying, deleting instances and rules.</li>
+        /// Line ID. Among them, line-0 and line-1 are built-in line IDs. Valid values:
+        /// <li> line-0: direct-access line. Additions, edits, and deletion are not supported;</li>
+        /// <li> line-1: EdgeOne Layer 4 proxy line. Supports modifying instances and rules. Deletion is not supported;</li>
+        /// <li> line-2 and above: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
         /// </summary>
         [JsonProperty("LineId")]
         public string LineId{ get; set; }
 
         /// <summary>
-        /// Line type. valid values:
-        /// <Li>direct: Direct connection line. Editing and deletion are not supported. .</li>
-        /// <li>proxy: EdgeOne layer-4 proxy line, supports editing and modifying instances and rules, but deletion is not supported;</li>
-        /// <Li>custom: Custom line, supports editing and deletion.</li>
+        /// Line type. Valid values:
+        /// <li>direct: direct-access line, editing is not supported, and deletion is not supported;</li>
+        /// <li>proxy: EdgeOne Layer 4 proxy route. Supports editing and modifying instances and rules. Deletion is not supported;</li>
+        /// <li>custom: Custom lines, support editing and deletion.</li>
         /// </summary>
         [JsonProperty("LineType")]
         public string LineType{ get; set; }
 
         /// <summary>
-        /// Line address in the format host:port.
+        /// Line address in the format of host:port.
         /// </summary>
         [JsonProperty("LineAddress")]
         public string LineAddress{ get; set; }
 
         /// <summary>
-        /// Layer-4 proxy instance ID,returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+        /// Layer 4 proxy instance ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Forwarding rule ID. returned only when the LineType value is proxy (EdgeOne layer-4 proxy).
+        /// Forwarding rule ID, returned when the line type `LineType` is `proxy` (EdgeOne Layer 4 proxy).
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }

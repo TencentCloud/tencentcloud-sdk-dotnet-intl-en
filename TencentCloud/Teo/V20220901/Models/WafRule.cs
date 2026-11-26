@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable managed rules. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Managed rule switch. Valid values:
+        /// <li> on: enabled;</li>
+        /// <li> off: disabled</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// IDs of the rules to be disabled.
+        /// List of blocklisted IDs. Adding a rule ID to this parameter list disables the ID, meaning the rule ID no longer takes effect.
         /// </summary>
         [JsonProperty("BlockRuleIDs")]
         public long?[] BlockRuleIDs{ get; set; }
 
         /// <summary>
-        /// IDs of the rules to be executed in Observe mode.
+        /// List of observation mode IDs. Add a rule ID to this parameter list to make the ID take effect in observation mode, that is, the rule ID enters observation mode.
         /// </summary>
         [JsonProperty("ObserveRuleIDs")]
         public long?[] ObserveRuleIDs{ get; set; }

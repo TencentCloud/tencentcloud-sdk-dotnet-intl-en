@@ -31,21 +31,21 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Pagination offset. Default value: 0.
+        /// The offset of paginated query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Pagination limit. Default value: 20, maximum value: 1000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter fields for gateway list. If this parameter is left empty, return the current appid's all gateway information. detailed filter criteria:.
-        /// <Li>Gateway-Type: filter by gateway type. valid values: cloud and private, representing cloud gateway and private gateway respectively.</li>
-        /// <Li>Keyword: filter by keyword in the gateway name.</li>
+        /// Filter field for the gateway list. If this parameter is left empty, all gateway information under the current appid is returned. The detailed filter criteria are as follows:
+        /// <li> gateway-type: filter by gateway type. Valid values: cloud and private, representing Cloud Gateway and free gateway respectively;</li>
+        /// <li> keyword: filter by the keyword of the gateway name.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

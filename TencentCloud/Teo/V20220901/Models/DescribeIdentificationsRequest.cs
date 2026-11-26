@@ -25,19 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Filter conditions. The maximum value for Filters.Values is 20. The detailed conditions are as follows:<li>zone-name: Filter by site name.</li>
+        /// Filter criteria. The maximum value of Filters.Values is 20. The detailed filter criteria are as follows:
+        /// <li>zone-name: Filter by site name.</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The page offset. Default value: 0
+        /// The offset of paginated query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The paginated query limit. Default value: 20. Maximum value: 1000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

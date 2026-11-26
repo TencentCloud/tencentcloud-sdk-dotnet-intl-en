@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the acceleration domain name.	
+        /// Zone ID of the acceleration domain name.	
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Action type. Values:
-        /// <li>`bind`: To bind</li>
-        /// <li>`unbind`: To unbind</li>
+        /// Binding type. Valid values:
+        /// <li>bind: bind;</li>
+        /// <li>unbind: Unbind.</li>
         /// </summary>
         [JsonProperty("BindType")]
         public string BindType{ get; set; }
 
         /// <summary>
-        /// Bindings between domain names and a shared CNAME
+        /// Binding relationship between the domain name and shared CNAME.
         /// </summary>
         [JsonProperty("BindSharedCNAMEMaps")]
         public BindSharedCNAMEMap[] BindSharedCNAMEMaps{ get; set; }

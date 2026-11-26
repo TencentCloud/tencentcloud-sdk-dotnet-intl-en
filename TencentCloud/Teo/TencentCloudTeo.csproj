@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1433</VersionPrefix>
+    <VersionPrefix>3.0.1435</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -352,6 +352,7 @@
     <Compile Include="V20220901\Models\AccelerationDomain.cs" />
     <Compile Include="V20220901\Models\AccelerationDomainCertificate.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectParameters.cs" />
+    <Compile Include="V20220901\Models\AccessURLRedirectPort.cs" />
     <Compile Include="V20220901\Models\AccessURLRedirectQueryString.cs" />
     <Compile Include="V20220901\Models\AccountProtectionSettings.cs" />
     <Compile Include="V20220901\Models\AclCondition.cs" />
@@ -441,9 +442,14 @@
     <Compile Include="V20220901\Models\ClientIpHeader.cs" />
     <Compile Include="V20220901\Models\CnameStatus.cs" />
     <Compile Include="V20220901\Models\CodeAction.cs" />
+    <Compile Include="V20220901\Models\ComplianceRestriction.cs" />
     <Compile Include="V20220901\Models\ComponentReference.cs" />
     <Compile Include="V20220901\Models\Compression.cs" />
     <Compile Include="V20220901\Models\CompressionParameters.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupFunctionRegionSelection.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupFunctionTrigger.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupFunctionWeightedSelection.cs" />
+    <Compile Include="V20220901\Models\ConfigGroupRuleEngineItem.cs" />
     <Compile Include="V20220901\Models\ConfigGroupVersionInfo.cs" />
     <Compile Include="V20220901\Models\ConfigGroupWorkModeInfo.cs" />
     <Compile Include="V20220901\Models\ConfirmMultiPathGatewayOriginACLRequest.cs" />
@@ -482,6 +488,8 @@
     <Compile Include="V20220901\Models\CreateFunctionRuleResponse.cs" />
     <Compile Include="V20220901\Models\CreateInferenceAPITokenRequest.cs" />
     <Compile Include="V20220901\Models\CreateInferenceAPITokenResponse.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceDomainRequest.cs" />
+    <Compile Include="V20220901\Models\CreateInferenceDomainResponse.cs" />
     <Compile Include="V20220901\Models\CreateInferenceServiceRequest.cs" />
     <Compile Include="V20220901\Models\CreateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\CreateJustInTimeTranscodeTemplateRequest.cs" />
@@ -695,6 +703,8 @@
     <Compile Include="V20220901\Models\DescribeIdentificationsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceAPITokensRequest.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceAPITokensResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceDomainsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeInferenceDomainsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsRequest.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceHardwareSpecificationsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeInferenceServiceDeploymentLogsRequest.cs" />
@@ -721,6 +731,8 @@
     <Compile Include="V20220901\Models\DescribeLogAnalysisDetailResponse.cs" />
     <Compile Include="V20220901\Models\DescribeLogAnalysisDownloadTasksRequest.cs" />
     <Compile Include="V20220901\Models\DescribeLogAnalysisDownloadTasksResponse.cs" />
+    <Compile Include="V20220901\Models\DescribeLogAnalysisStatisticsRequest.cs" />
+    <Compile Include="V20220901\Models\DescribeLogAnalysisStatisticsResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineRequest.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayLineResponse.cs" />
     <Compile Include="V20220901\Models\DescribeMultiPathGatewayOriginACLRequest.cs" />
@@ -824,6 +836,8 @@
     <Compile Include="V20220901\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220901\Models\DropPageConfig.cs" />
     <Compile Include="V20220901\Models\DropPageDetail.cs" />
+    <Compile Include="V20220901\Models\DummyParseZoneFullConfigRequest.cs" />
+    <Compile Include="V20220901\Models\DummyParseZoneFullConfigResponse.cs" />
     <Compile Include="V20220901\Models\EdgeKVDeleteRequest.cs" />
     <Compile Include="V20220901\Models\EdgeKVDeleteResponse.cs" />
     <Compile Include="V20220901\Models\EdgeKVGetRequest.cs" />
@@ -878,8 +892,11 @@
     <Compile Include="V20220901\Models\Header.cs" />
     <Compile Include="V20220901\Models\HeaderAction.cs" />
     <Compile Include="V20220901\Models\HealthChecker.cs" />
+    <Compile Include="V20220901\Models\HostCertInfo.cs" />
     <Compile Include="V20220901\Models\HostHeaderParameters.cs" />
     <Compile Include="V20220901\Models\HostName.cs" />
+    <Compile Include="V20220901\Models\HostPolicy.cs" />
+    <Compile Include="V20220901\Models\HostsCertificate.cs" />
     <Compile Include="V20220901\Models\Hsts.cs" />
     <Compile Include="V20220901\Models\HttpDDoSProtection.cs" />
     <Compile Include="V20220901\Models\Https.cs" />
@@ -902,10 +919,14 @@
     <Compile Include="V20220901\Models\IncreasePlanQuotaRequest.cs" />
     <Compile Include="V20220901\Models\IncreasePlanQuotaResponse.cs" />
     <Compile Include="V20220901\Models\InferenceAPIToken.cs" />
+    <Compile Include="V20220901\Models\InferenceAffinityConfig.cs" />
     <Compile Include="V20220901\Models\InferenceAutoScalingConfig.cs" />
     <Compile Include="V20220901\Models\InferenceContainerConfig.cs" />
     <Compile Include="V20220901\Models\InferenceContainerConfigForModify.cs" />
+    <Compile Include="V20220901\Models\InferenceDomain.cs" />
     <Compile Include="V20220901\Models\InferenceEnvironmentVariable.cs" />
+    <Compile Include="V20220901\Models\InferenceHardwareConfig.cs" />
+    <Compile Include="V20220901\Models\InferenceHardwareConfigForModify.cs" />
     <Compile Include="V20220901\Models\InferenceHardwareSpecification.cs" />
     <Compile Include="V20220901\Models\InferenceManualInstanceConfig.cs" />
     <Compile Include="V20220901\Models\InferenceResourceConfig.cs" />
@@ -1077,6 +1098,8 @@
     <Compile Include="V20220901\Models\OCSPStaplingParameters.cs" />
     <Compile Include="V20220901\Models\OfflineCache.cs" />
     <Compile Include="V20220901\Models\OfflineCacheParameters.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceDomainRequest.cs" />
+    <Compile Include="V20220901\Models\OperateInferenceDomainResponse.cs" />
     <Compile Include="V20220901\Models\OperateInferenceServiceRequest.cs" />
     <Compile Include="V20220901\Models\OperateInferenceServiceResponse.cs" />
     <Compile Include="V20220901\Models\Origin.cs" />
@@ -1165,6 +1188,7 @@
     <Compile Include="V20220901\Models\SecurityWeightedAction.cs" />
     <Compile Include="V20220901\Models\SemanticAnalysisRules.cs" />
     <Compile Include="V20220901\Models\ServerCertInfo.cs" />
+    <Compile Include="V20220901\Models\SessionIdAffinityConfig.cs" />
     <Compile Include="V20220901\Models\SessionRateControl.cs" />
     <Compile Include="V20220901\Models\SetContentIdentifierParameters.cs" />
     <Compile Include="V20220901\Models\SetParameters.cs" />
@@ -1181,6 +1205,7 @@
     <Compile Include="V20220901\Models\SourceIDC.cs" />
     <Compile Include="V20220901\Models\StandardDebug.cs" />
     <Compile Include="V20220901\Models\StandardDebugParameters.cs" />
+    <Compile Include="V20220901\Models\StatisticsRecord.cs" />
     <Compile Include="V20220901\Models\StatusCodeCacheParam.cs" />
     <Compile Include="V20220901\Models\StatusCodeCacheParameters.cs" />
     <Compile Include="V20220901\Models\SubRule.cs" />
@@ -1223,11 +1248,15 @@
     <Compile Include="V20220901\Models\Waf.cs" />
     <Compile Include="V20220901\Models\WafConfig.cs" />
     <Compile Include="V20220901\Models\WafRule.cs" />
+    <Compile Include="V20220901\Models\WebSecurity.cs" />
+    <Compile Include="V20220901\Models\WebSecurityTemplates.cs" />
     <Compile Include="V20220901\Models\WebSocket.cs" />
     <Compile Include="V20220901\Models\WebSocketParameters.cs" />
     <Compile Include="V20220901\Models\Zone.cs" />
     <Compile Include="V20220901\Models\ZoneConfig.cs" />
     <Compile Include="V20220901\Models\ZoneConfigParameters.cs" />
+    <Compile Include="V20220901\Models\ZoneCustomVariables.cs" />
+    <Compile Include="V20220901\Models\ZoneFullConfig.cs" />
     <Compile Include="V20220901\Models\ZoneInfo.cs" />
     <Compile Include="V20220901\Models\ZoneSetting.cs" />
   </ItemGroup>

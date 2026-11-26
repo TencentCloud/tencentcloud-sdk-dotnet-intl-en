@@ -28,7 +28,7 @@ namespace TencentCloud.Rum.V20210622
 
        private const string endpoint = "rum.intl.tencentcloudapi.com";
        private const string version = "2021-06-22";
-       private const string sdkVersion = "SDK_NET_3.0.1341";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.
@@ -51,77 +51,6 @@ namespace TencentCloud.Rum.V20210622
             : base(endpoint, version, credential, region, profile)
         {
             SdkVersion = sdkVersion;
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to create a log download task.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLogExportRequest"/></param>
-        /// <returns><see cref="CreateLogExportResponse"/></returns>
-        public Task<CreateLogExportResponse> CreateLogExport(CreateLogExportRequest req)
-        {
-            return InternalRequestAsync<CreateLogExportResponse>(req, "CreateLogExport");
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to create a log download task.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="CreateLogExportRequest"/></param>
-        /// <returns><see cref="CreateLogExportResponse"/></returns>
-        public CreateLogExportResponse CreateLogExportSync(CreateLogExportRequest req)
-        {
-            return InternalRequestAsync<CreateLogExportResponse>(req, "CreateLogExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to create an offline log listener to report offline logs of particular users.
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="CreateOfflineLogConfigResponse"/></returns>
-        public Task<CreateOfflineLogConfigResponse> CreateOfflineLogConfig(CreateOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<CreateOfflineLogConfigResponse>(req, "CreateOfflineLogConfig");
-        }
-
-        /// <summary>
-        /// This API is used to create an offline log listener to report offline logs of particular users.
-        /// </summary>
-        /// <param name="req"><see cref="CreateOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="CreateOfflineLogConfigResponse"/></returns>
-        public CreateOfflineLogConfigResponse CreateOfflineLogConfigSync(CreateOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<CreateOfflineLogConfigResponse>(req, "CreateOfflineLogConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to create a RUM application which belongs to a specific team.
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectRequest"/></param>
-        /// <returns><see cref="CreateProjectResponse"/></returns>
-        public Task<CreateProjectResponse> CreateProject(CreateProjectRequest req)
-        {
-            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject");
-        }
-
-        /// <summary>
-        /// This API is used to create a RUM application which belongs to a specific team.
-        /// </summary>
-        /// <param name="req"><see cref="CreateProjectRequest"/></param>
-        /// <returns><see cref="CreateProjectResponse"/></returns>
-        public CreateProjectResponse CreateProjectSync(CreateProjectRequest req)
-        {
-            return InternalRequestAsync<CreateProjectResponse>(req, "CreateProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
         /// <summary>
@@ -167,27 +96,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to create a RUM business system.
-        /// </summary>
-        /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
-        /// <returns><see cref="CreateTawInstanceResponse"/></returns>
-        public Task<CreateTawInstanceResponse> CreateTawInstance(CreateTawInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateTawInstanceResponse>(req, "CreateTawInstance");
-        }
-
-        /// <summary>
-        /// This API is used to create a RUM business system.
-        /// </summary>
-        /// <param name="req"><see cref="CreateTawInstanceRequest"/></param>
-        /// <returns><see cref="CreateTawInstanceResponse"/></returns>
-        public CreateTawInstanceResponse CreateTawInstanceSync(CreateTawInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateTawInstanceResponse>(req, "CreateTawInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to create an allowlist.
         /// </summary>
         /// <param name="req"><see cref="CreateWhitelistRequest"/></param>
@@ -226,77 +134,6 @@ namespace TencentCloud.Rum.V20210622
         public DeleteInstanceResponse DeleteInstanceSync(DeleteInstanceRequest req)
         {
             return InternalRequestAsync<DeleteInstanceResponse>(req, "DeleteInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to delete a log download task.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLogExportRequest"/></param>
-        /// <returns><see cref="DeleteLogExportResponse"/></returns>
-        public Task<DeleteLogExportResponse> DeleteLogExport(DeleteLogExportRequest req)
-        {
-            return InternalRequestAsync<DeleteLogExportResponse>(req, "DeleteLogExport");
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to delete a log download task.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLogExportRequest"/></param>
-        /// <returns><see cref="DeleteLogExportResponse"/></returns>
-        public DeleteLogExportResponse DeleteLogExportSync(DeleteLogExportRequest req)
-        {
-            return InternalRequestAsync<DeleteLogExportResponse>(req, "DeleteLogExport")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete an offline RUM log listener. Then, offline logs of particular users will not be reported.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogConfigResponse"/></returns>
-        public Task<DeleteOfflineLogConfigResponse> DeleteOfflineLogConfig(DeleteOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogConfigResponse>(req, "DeleteOfflineLogConfig");
-        }
-
-        /// <summary>
-        /// This API is used to delete an offline RUM log listener. Then, offline logs of particular users will not be reported.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogConfigRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogConfigResponse"/></returns>
-        public DeleteOfflineLogConfigResponse DeleteOfflineLogConfigSync(DeleteOfflineLogConfigRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogConfigResponse>(req, "DeleteOfflineLogConfig")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to delete an offline log record.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogRecordRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogRecordResponse"/></returns>
-        public Task<DeleteOfflineLogRecordResponse> DeleteOfflineLogRecord(DeleteOfflineLogRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogRecordResponse>(req, "DeleteOfflineLogRecord");
-        }
-
-        /// <summary>
-        /// This API is used to delete an offline log record.
-        /// </summary>
-        /// <param name="req"><see cref="DeleteOfflineLogRecordRequest"/></param>
-        /// <returns><see cref="DeleteOfflineLogRecordResponse"/></returns>
-        public DeleteOfflineLogRecordResponse DeleteOfflineLogRecordSync(DeleteOfflineLogRecordRequest req)
-        {
-            return InternalRequestAsync<DeleteOfflineLogRecordResponse>(req, "DeleteOfflineLogRecord")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -700,27 +537,6 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// This API is used to get the PerformanceProject information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataPerformanceProjectRequest"/></param>
-        /// <returns><see cref="DescribeDataPerformanceProjectResponse"/></returns>
-        public Task<DescribeDataPerformanceProjectResponse> DescribeDataPerformanceProject(DescribeDataPerformanceProjectRequest req)
-        {
-            return InternalRequestAsync<DescribeDataPerformanceProjectResponse>(req, "DescribeDataPerformanceProject");
-        }
-
-        /// <summary>
-        /// This API is used to get the PerformanceProject information.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataPerformanceProjectRequest"/></param>
-        /// <returns><see cref="DescribeDataPerformanceProjectResponse"/></returns>
-        public DescribeDataPerformanceProjectResponse DescribeDataPerformanceProjectSync(DescribeDataPerformanceProjectRequest req)
-        {
-            return InternalRequestAsync<DescribeDataPerformanceProjectResponse>(req, "DescribeDataPerformanceProject")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// This API is used to get the PvUrlInfo information.
         /// </summary>
         /// <param name="req"><see cref="DescribeDataPvUrlInfoRequest"/></param>
@@ -1057,119 +873,6 @@ namespace TencentCloud.Rum.V20210622
         public DescribeErrorResponse DescribeErrorSync(DescribeErrorRequest req)
         {
             return InternalRequestAsync<DescribeErrorResponse>(req, "DescribeError")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to get the list of log download tasks.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogExportsRequest"/></param>
-        /// <returns><see cref="DescribeLogExportsResponse"/></returns>
-        public Task<DescribeLogExportsResponse> DescribeLogExports(DescribeLogExportsRequest req)
-        {
-            return InternalRequestAsync<DescribeLogExportsResponse>(req, "DescribeLogExports");
-        }
-
-        /// <summary>
-        /// API domain name: `rum.tencentcloudapi.com`.
-        /// 
-        /// This API is used to get the list of log download tasks.
-        /// 
-        /// Default API request rate limit: 20 requests/sec.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogExportsRequest"/></param>
-        /// <returns><see cref="DescribeLogExportsResponse"/></returns>
-        public DescribeLogExportsResponse DescribeLogExportsSync(DescribeLogExportsRequest req)
-        {
-            return InternalRequestAsync<DescribeLogExportsResponse>(req, "DescribeLogExports")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
-        /// <returns><see cref="DescribeLogListResponse"/></returns>
-        public Task<DescribeLogListResponse> DescribeLogList(DescribeLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeLogListResponse>(req, "DescribeLogList");
-        }
-
-        /// <summary>
-        /// This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
-        /// <returns><see cref="DescribeLogListResponse"/></returns>
-        public DescribeLogListResponse DescribeLogListSync(DescribeLogListRequest req)
-        {
-            return InternalRequestAsync<DescribeLogListResponse>(req, "DescribeLogList")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to get the configuration of the set offline log listener and return the unique user ID.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogConfigsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogConfigsResponse"/></returns>
-        public Task<DescribeOfflineLogConfigsResponse> DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogConfigsResponse>(req, "DescribeOfflineLogConfigs");
-        }
-
-        /// <summary>
-        /// This API is used to get the configuration of the set offline log listener and return the unique user ID.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogConfigsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogConfigsResponse"/></returns>
-        public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigsSync(DescribeOfflineLogConfigsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogConfigsResponse>(req, "DescribeOfflineLogConfigs")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to get all (up to 100) offline log records.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogRecordsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogRecordsResponse"/></returns>
-        public Task<DescribeOfflineLogRecordsResponse> DescribeOfflineLogRecords(DescribeOfflineLogRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogRecordsResponse>(req, "DescribeOfflineLogRecords");
-        }
-
-        /// <summary>
-        /// This API is used to get all (up to 100) offline log records.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogRecordsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogRecordsResponse"/></returns>
-        public DescribeOfflineLogRecordsResponse DescribeOfflineLogRecordsSync(DescribeOfflineLogRecordsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogRecordsResponse>(req, "DescribeOfflineLogRecords")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// This API is used to get the specified offline log.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogsResponse"/></returns>
-        public Task<DescribeOfflineLogsResponse> DescribeOfflineLogs(DescribeOfflineLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogsResponse>(req, "DescribeOfflineLogs");
-        }
-
-        /// <summary>
-        /// This API is used to get the specified offline log.
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOfflineLogsRequest"/></param>
-        /// <returns><see cref="DescribeOfflineLogsResponse"/></returns>
-        public DescribeOfflineLogsResponse DescribeOfflineLogsSync(DescribeOfflineLogsRequest req)
-        {
-            return InternalRequestAsync<DescribeOfflineLogsResponse>(req, "DescribeOfflineLogs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

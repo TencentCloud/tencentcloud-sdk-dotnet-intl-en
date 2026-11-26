@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable L4 remote authentication. Valid values:
+        /// L4 remote authentication switch. Valid values:
         /// <li>on: Enable;</li>
         /// <li>off: Disable.</li>
         /// </summary>
@@ -39,7 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Address{ get; set; }
 
         /// <summary>
-        /// Default origin-pull behavior based on L4 forwarding rules after the remote authentication service is disabled. Valid values:
+        /// Default origin-pull behavior based on L4 forwarding rules after remote authentication service inaccessibility. Valid values:
         /// <li>reject: Block and deny access;</li>
         /// <li>allow: Allow access.</li>
         /// </summary>

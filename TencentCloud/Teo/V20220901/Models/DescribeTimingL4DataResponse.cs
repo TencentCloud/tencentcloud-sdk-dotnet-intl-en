@@ -25,13 +25,14 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Layer 4 time series traffic data list.<br>For different queried metrics, time series data is returned from different parameters based on the value type. Currently, there are the following two value types:<ul><li><strong>Integer</strong>: Metrics with <code>Integer</code> value type return corresponding time series data from <code>Data.N.TypeValue</code>. Queried metrics (<code>MetricName</code>) include:<ul><li><code>l4Flow_flux</code>: Total client traffic.</li><li><code>l4Flow_inFlux</code>: Inbound client traffic.</li><li><code>l4Flow_outFlux</code>: Outbound client traffic.</li><li><code>l4Flow_inBandwidth</code>: Peak inbound client bandwidth.</li><li><code>l4Flow_outBandwidth</code>: Peak outbound client bandwidth.</li><li><code>l4Flow_connections</code>: Concurrent client connections.</li></ul></li><li><strong>Float</strong>: Metrics with <code>Float</code> value type return corresponding time series data from <code>Data.N.FloatTypeValue</code>. Queried metrics (<code>MetricName</code>) include:<ul><li><code>l4Flow_newConnectionsRate</code>: New connection rate. Rounded to two decimal places.</li></ul></li></ul>This API does not support dimension queries. It aggregates and returns data by root account by default, meaning <code>Data.N.TypeKey = AppId</code>. <code>AppId</code> is the unique ID of the Tencent Cloud root account, and <code>N</code> always equals <code>1</code>.<br><strong>Note</strong>: This field may return null, indicating a failure to obtain a valid value.
+        /// <p>List of L4 time series traffic data.<br>For different queried metrics, time series data is returned from different parameters based on the metric value type.<br>The existing value types are as follows:</p><ul><li><strong>Integer</strong>: Metrics of the <code>Integer</code> value type return corresponding time series data from <code>Data.N.TypeValue</code>.<br>The corresponding queried metrics <code>MetricName</code> are:<ul><li><code>l4Flow_flux</code>: total access traffic;</li><li><code>l4Flow_inFlux</code>: access inbound traffic;</li><li><code>l4Flow_outFlux</code>: access outbound traffic;</li><li><code>l4Flow_inBandwidth</code>: inbound bandwidth peak;</li><li><code>l4Flow_outBandwidth</code>: outbound bandwidth peak;</li><li><code>l4Flow_connections</code>: number of concurrent connections.</li></ul></li><li><strong>Float</strong>: Metrics of the <code>Float</code> value type return corresponding time series data from <code>Data.N.FloatTypeValue</code>.<br>The corresponding queried metric <code>MetricName</code> is:<ul><li><code>l4Flow_newConnectionsRate</code>: rate of new connections.</li></ul></li></ul>
+        /// </ul><p>This interface does not support dimension query. By default, data is aggregated by root account and returned, that is, <code>Data.N.TypeKey = AppId</code>. AppId is the unique identifier of the Tencent Cloud root account, and N is always equal to 1.</p>
         /// </summary>
         [JsonProperty("Data")]
         public TimingDataRecord[] Data{ get; set; }

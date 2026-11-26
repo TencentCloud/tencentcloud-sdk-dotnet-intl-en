@@ -37,25 +37,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Key name, with a length of 1-512 characters, supports valid UTF-8 characters.
+        /// Key name, 1-512 characters long, supports valid UTF-8 characters.
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Key-value. Cannot be empty and supports up to 1 MB. Supports storing string data.
+        /// Key-value. It cannot be empty and supports up to 1 MB. It supports storing string data.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// Expiry date of the key-value pair, absolute time in seconds, represents the seconds elapsed since 00:00:00 on January 1, 1970 (UTC) (Unix timestamp). The value must be greater than or equal to current time + 60, meaning the expiry date is at least 60 seconds from now. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence. If left empty, the key-value pair will never expire.
+        /// Expiration time of the key-value pair. It is an absolute time in seconds, representing the number of seconds elapsed since 00:00:00 (UTC) on January 1, 1970 (Unix timestamp). The value must be greater than or equal to the current time + 60, meaning the Expiration time must be at least 60 seconds from now. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If both are left empty, the key-value pair never expires.
         /// </summary>
         [JsonProperty("Expiration")]
         public long? Expiration{ get; set; }
 
         /// <summary>
-        /// The survival time of the key-value pair is a relative time in seconds, indicating that the data will expire after transit of specified seconds. Value ranges from 60. When both Expiration and ExpirationTTL are filled, ExpirationTTL takes precedence; if left empty, the key-value pair will never expire.
+        /// Survival time of the key-value pair, relative time, in seconds. It means the data will expire after the specified seconds following the write. Value range: equal to or greater than 60. If both Expiration and ExpirationTTL are filled in, ExpirationTTL takes precedence. If both are left empty, the key-value pair will never expire.
         /// </summary>
         [JsonProperty("ExpirationTTL")]
         public long? ExpirationTTL{ get; set; }

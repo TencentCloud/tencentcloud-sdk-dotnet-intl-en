@@ -31,14 +31,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance ID.
+        /// Layer 4 Proxy Instance ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance status. Valid values:<li>online: Enabled;</li>
-        /// <li>offline: Disabled.</li>
+        /// Status of the Layer 4 proxy instance. Valid values:
+        /// <li>`online`: Enable;</li>
+        /// <li>offline: Disable.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLogExportRequest : AbstractModel
+    public class ConfigGroupFunctionWeightedSelection : AbstractModel
     {
         
         /// <summary>
-        /// Project ID
+        /// <p>Specify the function executed. The value is the unique identifier of the function in the site. This parameter is valid only when TriggerType is direct.</p>
         /// </summary>
-        [JsonProperty("ID")]
-        public long? ID{ get; set; }
+        [JsonProperty("Function")]
+        public string Function{ get; set; }
 
         /// <summary>
-        /// Log export ID
+        /// <p>Select the weight. The value ranges from 0 to 100, and the sum of all weights must be 100. The probability of being selected is calculated as: weight/100. For example, if two functions A and B are set, where the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.</p>
         /// </summary>
-        [JsonProperty("ExportID")]
-        public string ExportID{ get; set; }
+        [JsonProperty("Weight")]
+        public ulong? Weight{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "ExportID", this.ExportID);
+            this.SetParamSimple(map, prefix + "Function", this.Function);
+            this.SetParamSimple(map, prefix + "Weight", this.Weight);
         }
     }
 }

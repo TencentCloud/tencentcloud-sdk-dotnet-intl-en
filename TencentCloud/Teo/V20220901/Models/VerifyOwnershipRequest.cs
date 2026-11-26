@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the site domain name or acceleration domain name under the site.
+        /// Site domain name or acceleration domain name under the site.
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

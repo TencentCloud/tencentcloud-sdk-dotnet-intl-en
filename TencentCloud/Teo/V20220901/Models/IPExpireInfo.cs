@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Scheduled expiration time, following the ISO 8601 standard date and time format, such as "2022-01-01T00:00:00+08:00".
+        /// Scheduled expiration time, following the ISO 8601 date and time format. For example, "2022-01-01T00:00:00+08:00".
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// IP list. supports ip and ip range.
+        /// IP list. Only IPs and IP ranges are supported.
         /// </summary>
         [JsonProperty("IPList")]
         public string[] IPList{ get; set; }

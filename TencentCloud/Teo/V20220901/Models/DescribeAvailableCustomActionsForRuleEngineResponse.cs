@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Total number of eligible rule engine custom configurations.</p>
+        /// <p>Total number of eligible custom configurations for the rule engine.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>List of eligible rule engine custom configurations.</p>
+        /// <p>List of eligible custom configurations for the rule engine.</p>
         /// </summary>
         [JsonProperty("CustomActionSet")]
         public RuleEngineCustomAction[] CustomActionSet{ get; set; }

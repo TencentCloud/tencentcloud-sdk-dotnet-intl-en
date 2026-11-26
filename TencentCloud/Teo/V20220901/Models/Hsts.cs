@@ -25,32 +25,30 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable the configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Whether it is enabled. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// MaxAge value. expressed in seconds, maximum value is 1 day.
+        /// MaxAge value, in seconds. Maximum value: 1 day.
         /// </summary>
         [JsonProperty("MaxAge")]
         public long? MaxAge{ get; set; }
 
         /// <summary>
-        /// Specifies whether the subdomain is included. valid values:.
+        /// Whether it contains subdomains. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("IncludeSubDomains")]
         public string IncludeSubDomains{ get; set; }
 
         /// <summary>
-        /// Whether to enable preloading. valid values:.
+        /// Whether to enable preloading. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Preload")]

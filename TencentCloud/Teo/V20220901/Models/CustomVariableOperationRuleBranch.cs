@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public CustomVariableOperationRuleAction[] Actions{ get; set; }
 
         /// <summary>
-        /// <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently only support filling one level of SubRules.</p>
+        /// <p>Sub-rule list. If there are multiple rules in the list, they are executed in order from top to bottom.<br>Note: SubRules and Actions cannot be empty at the same time. Currently, only one level of SubRules is supported.</p>
         /// </summary>
         [JsonProperty("SubRules")]
         public CustomVariableOperationSubRule[] SubRules{ get; set; }

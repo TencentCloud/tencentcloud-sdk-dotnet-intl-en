@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Namespace name. Input content with the following restrictions: support input of 1-50 characters, allowed characters are a-z, A-Z, 0-9, -, and - cannot be registered alone or used continuously, cannot be placed at the beginning or the end. Under the same site, ensure the name is unique.
+        /// Namespace name. Input restrictions: supports 1-50 characters. Allowed characters: a-z, A-Z, 0-9, and -. The hyphen cannot be used alone or consecutively, and cannot be placed at the beginning or the end. The name must be unique within the same site.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+        /// Namespace description. Used to describe the purpose or business meaning of the namespace. Supports up to 256 characters.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

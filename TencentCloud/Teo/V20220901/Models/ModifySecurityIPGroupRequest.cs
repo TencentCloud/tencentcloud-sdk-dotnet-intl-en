@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone Id.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public IPGroup IPGroup{ get; set; }
 
         /// <summary>
-        /// Operation type. valid values: <li>`append`: add new IP addresses or set scheduled expiration time to `IPGroup`;</li> <li>`remove`: delete specified IP addresses or their scheduled expiration time from `IPGroup`;</li> <li>`update`: replace all Content of `Content` or `ExpireInfo` in `IPGroup` and modify the IPGroup name.</li>  notes for `append` operation: <li>when adding a scheduled expiration time for an IP or range, it must be later than the current time. if the IP or range does not exist in the group, it must be added to the `Content` parameter simultaneously. if the IP or range already has an expiration time, the new time will overwrite the original one.</li>  notes for `remove` operation: <li>when deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li>when deleting a scheduled expiration time, only currently unexpired times can be removed.</li>  notes for `update` operation: <li>when replacing `Content`, unexpired times of ips or ranges not in `Content` will be deleted;</li> <li>when replacing `IPExpireInfo`, the ips or ranges in `IPExpireInfo` must exist in `Content` or the IP group.</li>.
+        /// Operation type. Valid values: <li> append: Add a new IP address to the IPGroup or set a scheduled expiration time;</li><li> remove: Delete a specified IP address or its scheduled expiration time from the IPGroup;</li><li> update: Replace all content in Content or ExpireInfo of the IPGroup, and modifications to the name of the IPGroup are allowed.</li>Notes for the append operation: <li> When adding a scheduled expiration time for an IP or range, it must be later than the current time. If the IP or range does not exist in the group, you must add it in the Content parameter simultaneously. If the IP or range already has an expiration time, the new time will override the original time.</li>Notes for the remove operation: <li> When deleting an IP or range, related unexpired scheduled expiration times will also be deleted;</li> <li> When deleting a scheduled expiration time, you can only delete a time that is not expired.</li>Notes for the update operation: <li> When replacing the content of Content, unexpired times of IPs or ranges not in Content will be deleted;</li> <li> When replacing the content of IPExpireInfo, the IPs or ranges in IPExpireInfo must be in Content or exist in the IP group.</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP origin header rule list.
+        /// List of HTTP origin-pull header rules.
         /// </summary>
         [JsonProperty("HeaderActions")]
         public HeaderAction[] HeaderActions{ get; set; }

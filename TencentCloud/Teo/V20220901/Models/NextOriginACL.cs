@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Version number.
+        /// Version.
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Version effective time, which adopts UTC+8 and follows the date and time format of the ISO 8601 standard.
+        /// Version effective time, which adopts Beijing time (UTC+8) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("PlannedActiveTime")]
         public string PlannedActiveTime{ get; set; }
 
         /// <summary>
-        /// IP range details.
+        /// Origin-pull IP range details.
         /// </summary>
         [JsonProperty("EntireAddresses")]
         public Addresses EntireAddresses{ get; set; }
 
         /// <summary>
-        /// The latest origin IP range newly-added compared with the origin IP range in CurrentOrginACL.
+        /// Latest origin-pull IP range newly added compared with the origin-pull IP range in CurrentOrginACL.
         /// </summary>
         [JsonProperty("AddedAddresses")]
         public Addresses AddedAddresses{ get; set; }
 
         /// <summary>
-        /// The latest origin IP range deleted compared with the origin IP range in CurrentOrginACL.
+        /// The part deleted from the latest origin-pull IP range compared with the origin-pull IP range in CurrentOrginACL.
         /// </summary>
         [JsonProperty("RemovedAddresses")]
         public Addresses RemovedAddresses{ get; set; }
 
         /// <summary>
-        /// The latest origin IP range is unchanged compared with the origin IP range in CurrentOrginACL.
+        /// The part of the latest origin-pull IP range that is unchanged compared with the origin-pull IP range in CurrentOrginACL.
         /// </summary>
         [JsonProperty("NoChangeAddresses")]
         public Addresses NoChangeAddresses{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of IPs to be queried, supporting IPV4 and IPV6. Up to 100 can be queried.
+        /// List of IPs to be queried. Supports IPV4 and IPV6. A maximum of 100 entries can be queried.
         /// </summary>
         [JsonProperty("IPs")]
         public string[] IPs{ get; set; }

@@ -25,45 +25,45 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable bot security. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// bot switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The settings of the bot managed rule. If it is null, the settings that were last configured will be used.
+        /// Common detailed basic rules. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("BotManagedRule")]
         public BotManagedRule BotManagedRule{ get; set; }
 
         /// <summary>
-        /// The settings of the client reputation rule. If it is null, the settings that were last configured will be used.
+        /// User profiling rule. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("BotPortraitRule")]
         public BotPortraitRule BotPortraitRule{ get; set; }
 
         /// <summary>
-        /// Bot intelligent analysis. if null, use the last set configuration by default.
+        /// Bot intelligent analysis. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("IntelligenceRule")]
         public IntelligenceRule IntelligenceRule{ get; set; }
 
         /// <summary>
-        /// Settings of the custom bot rule. If it is null, the settings that were last configured will be used.
+        /// Bot custom rule. If it is null, the last set configuration is used by default.
         /// </summary>
         [JsonProperty("BotUserRules")]
         public BotUserRule[] BotUserRules{ get; set; }
 
         /// <summary>
-        /// Active bot detection rule.
+        /// Bot active feature detection rule.
         /// </summary>
         [JsonProperty("AlgDetectRule")]
         public AlgDetectRule[] AlgDetectRule{ get; set; }
 
         /// <summary>
-        /// Bot managed custom policy. optional input. output usage only.
+        /// Bot managed custom policy. This input parameter is optional and is only used as an output parameter.
         /// </summary>
         [JsonProperty("Customizes")]
         public BotUserRule[] Customizes{ get; set; }

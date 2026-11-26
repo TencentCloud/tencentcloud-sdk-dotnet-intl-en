@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the gateway ID.
+        /// Gateway ID.
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }
@@ -37,49 +37,49 @@ namespace TencentCloud.Teo.V20220901.Models
         public string GatewayName{ get; set; }
 
         /// <summary>
-        /// Gateway type. valid values:
-        /// <Li>Cloud: cloud gateway,  created and managed by Tencent cloud.</li>
-        /// <Li>Private: private gateway, deployed by cutomer.</li>
+        /// Gateway type. Valid values:
+        /// <li> cloud: Cloud Gateway, a gateway created and managed by Tencent Cloud.</li>
+        /// <li> private: private gateway, a Private Gateway deployed by the user.</li>
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }
 
         /// <summary>
-        /// Gateway port. value range: 1-65535 (excluding 8888).
+        /// Gateway port. Range: 1–65535 (excluding 8888).
         /// </summary>
         [JsonProperty("GatewayPort")]
         public long? GatewayPort{ get; set; }
 
         /// <summary>
-        /// Gateway status. valid values:
-        /// <Li>creating: The gateway is being created. </li>
-        /// <Li>online: The gateway is online and operational.</li>
-        /// <Li>offline: The gateway is offline and unavailable.</li>
-        /// <Li>disabled: The gateway has been disabled.</li>
+        /// Gateway status. Valid values:
+        /// <li> creating : Creating;</li>
+        /// <li> online : Online;</li>
+        /// <li> offline : Offline;</li>
+        /// <li> disable : disabled.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Gateway IP, in IPv4 format.
+        /// Gateway IP in IPv4 format.
         /// </summary>
         [JsonProperty("GatewayIP")]
         public string GatewayIP{ get; set; }
 
         /// <summary>
-        /// Gateway region Id. which can be obtained from the DescribeMultiPathGatewayRegions API.
+        /// Gateway region ID. You can obtain the RegionId list through the DescribeMultiPathGatewayRegions API.
         /// </summary>
         [JsonProperty("RegionId")]
         public string RegionId{ get; set; }
 
         /// <summary>
-        /// Line information. The line information will be returned when querying gateway information with DescribeMultiPathGateway ande not returned when querying the gateway list with DescribeMultiPathGateways.
+        /// Line information. It will be returned when querying gateway information details via DescribeMultiPathGateway, but not when querying the gateway list via DescribeMultiPathGateways.
         /// </summary>
         [JsonProperty("Lines")]
         public MultiPathGatewayLine[] Lines{ get; set; }
 
         /// <summary>
-        /// Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+        /// Whether the origin-pull IP list of the gateway has changed and needs confirmation. Valid values: <li>true: The origin-pull IP list has changed and needs confirmation;</li><li>false: The origin-pull IP list has not changed and does not need confirmation.</li>
         /// </summary>
         [JsonProperty("NeedConfirm")]
         public string NeedConfirm{ get; set; }

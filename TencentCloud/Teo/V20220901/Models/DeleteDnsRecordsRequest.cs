@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone id.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of dns record ids to be deleted, upper limit: 1000.
+        /// List of DNS record IDs to be deleted. Upper limit: 1000.
         /// </summary>
         [JsonProperty("RecordIds")]
         public string[] RecordIds{ get; set; }

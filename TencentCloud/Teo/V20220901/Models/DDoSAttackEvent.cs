@@ -25,76 +25,76 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The event ID.
+        /// <p>Event ID.</p>
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// The attack type.
+        /// <p>Attack type.</p>
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// The attack status.
+        /// <p>Attack status.</p><p>Enumeration values:</p><ul><li>0: Observing</li><li>1: Attacking</li><li>2: Attack ended</li></ul>
         /// </summary>
         [JsonProperty("AttackStatus")]
         public long? AttackStatus{ get; set; }
 
         /// <summary>
-        /// Maximum bandwidth of the attack in bps.
+        /// <p>Maximum attack bandwidth, in bps.</p>
         /// </summary>
         [JsonProperty("AttackMaxBandWidth")]
         public long? AttackMaxBandWidth{ get; set; }
 
         /// <summary>
-        /// Peak attack packet rate, unit: pps.
+        /// <p>Peak attack packet rate, unit: pps.</p>
         /// </summary>
         [JsonProperty("AttackPacketMaxRate")]
         public long? AttackPacketMaxRate{ get; set; }
 
         /// <summary>
-        /// The attack start time recorded in seconds.
+        /// <p>Attack start timestamp.</p><p>Unit: second</p>
         /// </summary>
         [JsonProperty("AttackStartTime")]
         public long? AttackStartTime{ get; set; }
 
         /// <summary>
-        /// The attack end time recorded in seconds.
+        /// <p>Attack end timestamp.</p><p>Unit: second</p>
         /// </summary>
         [JsonProperty("AttackEndTime")]
         public long? AttackEndTime{ get; set; }
 
         /// <summary>
-        /// The DDoS policy ID. 
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>DDoS policy group ID.</p>
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
-        /// The site ID. 
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Geolocation scope. Values: 
-        /// <li>`overseas`: Regions outside the Chinese mainland</li>
-        /// <li>`mainland`: Chinese mainland</li>
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Region of the attack event.</p><p>Enumeration values:</p><ul><li>overseas: global (excluding the Chinese mainland) data;</li><li>mainland: Chinese mainland data.</li></ul>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The blocking time of a DDoS attack. 
-        /// Note: This field may return `null`, indicating that no valid value was found.
+        /// <p>Block and unblock info.</p>
         /// </summary>
         [JsonProperty("DDoSBlockData")]
         public DDoSBlockData[] DDoSBlockData{ get; set; }
+
+        /// <summary>
+        /// <p>List of target IPs under DDoS attack.</p>
+        /// </summary>
+        [JsonProperty("DDoSAttackDips")]
+        public string[] DDoSAttackDips{ get; set; }
 
 
         /// <summary>
@@ -113,6 +113,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArrayObj(map, prefix + "DDoSBlockData.", this.DDoSBlockData);
+            this.SetParamArraySimple(map, prefix + "DDoSAttackDips.", this.DDoSAttackDips);
         }
     }
 }

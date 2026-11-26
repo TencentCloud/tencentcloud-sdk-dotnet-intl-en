@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID. This parameter is required.
+        /// Site ID. This parameter is required.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filters. Each filter can have up to 20 entries. Details: <li>proxy-id<br>   Filter by the <strong>Proxy ID</strong>, such as: `proxy-ev2sawbwfd`. <br>   Type: String<br>   Required: No</li><li>zone-id<br>   Filter by the <strong>Site ID</strong>, such as `zone-vawer2vadg`. <br>   Type: String<br>   Required: No</li><li>rule-tag<br>   Filter by the <strong>Rule tag</strong>, such as `rule-service-1`. <br>   Type: String<br>   Required: No</li>
+        /// Filter criteria. The maximum number of Filters.Values is 20. The detailed filter criteria are as follows:<li>proxy-id<br>   Filter by <strong>proxy ID</strong>. A proxy ID is in the format of proxy-ev2sawbwfd.<br>   Type: String<br>   Required: No</li><li>zone-id<br>   Filter by <strong>site ID</strong>. A site ID is in the format of zone-vawer2vadg.<br>   Type: String<br>   Required: No</li><li>rule-tag<br>   Filter rules under an application proxy by <strong>rule tag</strong>. A rule tag is in the format of rule-service-1.<br>   Type: String<br>   Required: No</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// The paginated query offset. Default value: 0
+        /// Paginated query offset. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// The paginated query limit. Default value: 20. Maximum value: 1000.
+        /// The limit of paginated query. Default value: 20. Maximum value: 1,000.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

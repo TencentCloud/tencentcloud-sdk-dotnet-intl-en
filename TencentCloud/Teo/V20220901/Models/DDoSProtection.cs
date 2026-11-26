@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the protection scope of standalone DDoS. valid values:.
-        /// <li>protect_all_domains: specifies exclusive Anti-DDoS protection for all domain names in the site. newly added domain names automatically enable exclusive Anti-DDoS protection. when this parameter is specified, DomainDDoSProtections will not be processed.</li>.
-        /// <li>protect_specified_domains: only applicable to specified domains. specific scope can be set via DomainDDoSProtection parameter.</li>.
+        /// Specify the protection scope of standalone DDoS. Value:
+        /// <li> protect_all_domains: exclusive DDoS protection takes effect for all domains in the site. Newly added domain names automatically enable exclusive DDoS protection. When the input parameter is protect_all_domains, the input parameter DomainDDoSProtections will not be processed;</li>
+        /// <li> protect_specified_domains: only applicable to specified domains. The specific scope can be specified via the DomainDDoSProtection parameter.</li>
         /// </summary>
         [JsonProperty("ProtectionOption")]
         public string ProtectionOption{ get; set; }
 
         /// <summary>
-        /// Anti-DDoS configuration of the domain. specifies the exclusive ddos protection settings for the domain in request parameters.
-        /// <li>When ProtectionOption remains protect_specified_domains, the domain names not filled in keep their exclusive Anti-DDoS protection configuration unchanged, while explicitly specified domain names are updated according to the input parameters.</li>.
-        /// <li>When ProtectionOption switches from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, disable exclusive DDoS protection for all domains under the site; if DomainDDoSProtections is not empty, disable or maintain exclusive DDoS protection for the domain names specified in the parameter, and disable exclusive DDoS protection for other unlisted domain names.</li>.
+        /// Exclusive DDoS protection configuration of the domain. In the input parameter scenario:
+        /// <li> When ProtectionOption remains protect_specified_domains: domains not filled in keep their exclusive DDoS protection configuration unchanged, and explicitly specified domains are updated based on the input parameter;</li>
+        /// <li> When ProtectionOption is switched from protect_all_domains to protect_specified_domains: if DomainDDoSProtections is empty, exclusive DDoS protection is disabled for all domain names under the site; if DomainDDoSProtections is not empty, exclusive DDoS protection is disabled or retained for the specified domain names in the parameter, and exclusive DDoS protection is disabled for the rest of the unlisted domain names.</li>
         /// </summary>
         [JsonProperty("DomainDDoSProtections")]
         public DomainDDoSProtection[] DomainDDoSProtections{ get; set; }
 
         /// <summary>
-        /// Specifies the exclusive DDoS protection configuration of a shared CNAME. used as an output parameter.
+        /// Configuration of exclusive DDoS protection with a shared CNAME. Used only as an output parameter.
         /// </summary>
         [JsonProperty("SharedCNAMEDDoSProtections")]
         public DomainDDoSProtection[] SharedCNAMEDDoSProtections{ get; set; }

@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to use `QueryString` as part of `CacheKey`. Values:
-        /// <li>`on`: Yes</li>
-        /// <li>`off`: No</li>
+        /// Whether CacheKey consists of QueryString. Valid values:
+        /// <li>on: yes;</li>
+        /// <li>off: No.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// CacheKey usage via QueryString, valid values:.
-        /// <li>includeCustom: use partial url parameter;</li>.
-        /// <li>excludeCustom: exclude partial url parameters.</li>.
+        /// CacheKey uses QueryString. Valid values:
+        /// <li>includeCustom: use partial url parameters;</li>
+        /// <li>excludeCustom: Exclude some url parameters.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Specifies the url parameter array for usage/exclusion.
+        /// url parameter array for usage or exclusion.
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

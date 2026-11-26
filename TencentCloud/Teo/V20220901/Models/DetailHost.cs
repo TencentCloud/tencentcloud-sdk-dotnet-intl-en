@@ -25,158 +25,145 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The acceleration status. Values:
-        /// <li>`process`: In progress</li>
-        /// <li>`online`: Enabled</li>
-        /// <li>`offline`: Disabled</li>
+        /// Acceleration service status. Valid values:
+        /// <li> process: deploying;</li>
+        /// <li> online: started;</li>
+        /// <li>offline: closed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The domain name.
+        /// Domain name.
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// Name of the site
+        /// Site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The assigned CNAME
+        /// Assigned Cname domain name
         /// </summary>
         [JsonProperty("Cname")]
         public string Cname{ get; set; }
 
         /// <summary>
-        /// The resource ID.
+        /// Resource ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// The instance ID.
+        /// Instance ID.
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// The lock status.
+        /// Lock status.
         /// </summary>
         [JsonProperty("Lock")]
         public long? Lock{ get; set; }
 
         /// <summary>
-        /// The domain name status.
+        /// Domain name status type.
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }
 
         /// <summary>
-        /// The acceleration area of the domain name. Values:
-        /// <li>`global`: Global.</li>
-        /// <li>`mainland`: Chinese mainland.</li>
-        /// <li>`overseas`: Outside the Chinese mainland.</li>
+        /// Domain name acceleration area. Valid values:
+        /// <li> global: global;</li>
+        /// <li> mainland: Chinese mainland;</li>
+        /// <li> overseas: outside the Chinese mainland.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// The acceleration type configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Acceleration type configuration item.
         /// </summary>
         [JsonProperty("AccelerateType")]
         public AccelerateType AccelerateType{ get; set; }
 
         /// <summary>
-        /// The HTTPS configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Https configuration item.
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// The cache configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cache configuration item.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public CacheConfig CacheConfig{ get; set; }
 
         /// <summary>
-        /// The origin configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Origin server configuration item.
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// The security type.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Security type.
         /// </summary>
         [JsonProperty("SecurityType")]
         public SecurityType SecurityType{ get; set; }
 
         /// <summary>
-        /// The cache key configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Cache key configuration item.
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
-        /// The smart compression configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intelligent compression configuration item.
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// The WAF protection configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Waf protection configuration item.
         /// </summary>
         [JsonProperty("Waf")]
         public Waf Waf{ get; set; }
 
         /// <summary>
-        /// The CC protection configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// CC protection configuration item.
         /// </summary>
         [JsonProperty("CC")]
         public CC CC{ get; set; }
 
         /// <summary>
-        /// DDoS mitigation configuration
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// DDoS protection configuration.
         /// </summary>
         [JsonProperty("DDoS")]
         public DDoS DDoS{ get; set; }
 
         /// <summary>
-        /// The smart routing configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Intelligent routing configuration item.
         /// </summary>
         [JsonProperty("SmartRouting")]
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// The IPv6 access configuration item.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Ipv6 access configuration item.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether to carry the location information of the client IP during origin-pull.
-        /// Note: This field may return `null`, indicating that no valid value can be obtained.
+        /// Configuration of whether to carry the region of the client IP during origin-pull.
         /// </summary>
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }

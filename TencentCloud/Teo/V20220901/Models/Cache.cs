@@ -25,25 +25,24 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable cache configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Cache configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Specifies the cache expiration time settings.
-        /// Unit: seconds. the maximum settable value is 365 days.
+        /// Cache expiration time settings.
+        /// Unit: seconds. Maximum settable to 365 days.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }
 
         /// <summary>
-        /// Whether to enable force cache. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable </li>
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Whether to enable forced caching. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("IgnoreCacheControl")]
         [System.Obsolete]

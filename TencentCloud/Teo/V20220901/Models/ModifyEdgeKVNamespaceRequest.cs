@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Namespace description. Used to describe the purpose or business meaning of a namespace. Supports a maximum of 256 characters.
+        /// Namespace description. Used to describe the purpose or business meaning of a namespace. Supports up to 256 characters.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }

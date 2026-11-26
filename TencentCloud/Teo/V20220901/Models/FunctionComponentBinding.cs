@@ -32,17 +32,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// Variable name for binding. Limited to 1-50 characters. Allowed characters are letters, digits, and underscores. Digits cannot be at the beginning. Access the bound component via this variable name in the edge function code. Based on the Type value, the usage is as follows:
-        /// <li>When Type is kv_namespace: In code, you can access the KV namespace through the variable name, for example, when setting it to "MY_KV", you can perform read-write operations via MY_KV.get("key").</li>
+        /// Variable name for binding. It can contain 1-50 characters, including letters, digits, and underscores. It cannot start with a digit. In edge function code, access the bound component through this variable name. Usage varies based on the value of Type as follows:
+        /// <li>When Type is kv_namespace: In code, you can access the KV namespace through this variable name. For example, when setting it to "MY_KV", you can perform read-write operations through MY_KV.get("key").</li>
         /// </summary>
         [JsonProperty("VariableName")]
         public string VariableName{ get; set; }
 
         /// <summary>
-        /// KV namespace configuration parameter. Used for designated binding namespace details. Required when Type is kv_namespace.
+        /// KV namespace configuration parameter. Used to specify the bound KV namespace details. Required when Type is kv_namespace.
         /// 
-        /// 
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
         /// </summary>
         [JsonProperty("KVNamespaceParameters")]
         public KVNamespaceParameters KVNamespaceParameters{ get; set; }

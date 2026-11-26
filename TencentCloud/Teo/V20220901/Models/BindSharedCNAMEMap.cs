@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The shared CNAME to be bound with or unbound from.
+        /// Shared CNAME to bind or unbind.
         /// </summary>
         [JsonProperty("SharedCNAME")]
         public string SharedCNAME{ get; set; }
 
         /// <summary>
-        /// Acceleration domains (up to 20).
+        /// Acceleration domain names. You can pass multiple ones, up to 20.
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }

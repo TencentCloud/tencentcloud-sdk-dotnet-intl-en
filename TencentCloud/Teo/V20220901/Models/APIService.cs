@@ -31,13 +31,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the API service name.
+        /// API service name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Specifies the base path.
+        /// Base path.
         /// </summary>
         [JsonProperty("BasePath")]
         public string BasePath{ get; set; }

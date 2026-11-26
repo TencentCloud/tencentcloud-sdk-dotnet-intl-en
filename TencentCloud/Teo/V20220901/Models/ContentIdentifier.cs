@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Content identifier id.
+        /// Content identifier ID.
         /// </summary>
         [JsonProperty("ContentId")]
         public string ContentId{ get; set; }
@@ -37,46 +37,45 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Count of citations by the rule engine.
+        /// Number of times referenced by the rule engine.
         /// </summary>
         [JsonProperty("ReferenceCount")]
         public long? ReferenceCount{ get; set; }
 
         /// <summary>
-        /// Bound package id.
+        /// Bound package ID.
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
 
         /// <summary>
-        /// Bound tags.
+        /// Bound tag.
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// Content identifier status. valid values:.
-        /// <Li>`Active`: activated</li>.
-        /// <Li>`Deleted`: deleted</li>.
+        /// Content identifier status. Valid values:
+        /// <li> active: effective; </li>
+        /// <li> deleted: Deleted.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Creation time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+        /// Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Latest update time, which adopts coordinated universal time (utc) and follows the date and time format of the iso 8601 standard.
+        /// Latest update time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
 
         /// <summary>
-        /// Deletion time, which is empty when the status is not `deleted`. the time format follows the iso 8601 standard and is represented in coordinated universal time (utc).
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// Deletion time. It is empty when the status is not "deleted". The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
         /// </summary>
         [JsonProperty("DeletedOn")]
         public string DeletedOn{ get; set; }

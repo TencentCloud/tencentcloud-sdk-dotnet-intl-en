@@ -25,43 +25,42 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The origin record value, which can be an IPv4/IPv6 address or a domain name.
+        /// Origin server record value, excluding port information. It can be an IPv4 address, IPv6 address, or domain name format.
         /// </summary>
         [JsonProperty("Record")]
         public string Record{ get; set; }
 
         /// <summary>
-        /// The origin type. Values:
-        /// <li>`IP_DOMAIN`: IPv4/IPv6 address or domain name</li>
-        /// <li>`COS`: COS bucket address</li>
-        /// <li>`AWS_S3`: AWS S3 bucket address
+        /// Origin server type. Valid values:
+        /// <li>IP_DOMAIN: IPV4, IPV6, domain type origin server;</li>
+        /// <li>COS: COS origin.</li>
+        /// <li>AWS_S3: AWS S3 COS origin server.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The origin record ID.
+        /// Origin record ID.
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// [Origin server weight]: a parameter used to control traffic allocation priority, value ranges from 0 to 100 (integer): <li>empty value: no weight is set, and the system schedules traffic based on the default policy;</li> <li>0 value: explicitly set the weight to 0, and traffic will not be assigned to this origin server. note: make sure at least one origin server has a weight value above 0;</li> <li>normal value: the larger the value, the more traffic is assigned;</li>.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// 【Origin server weight】: A parameter used to control traffic assignment priority. Value range: 0-100 (integer): <li>Empty value: No weight is set, and the system schedules traffic based on the default policy;</li><li>0: The weight is explicitly set to 0, and traffic will not be assigned to this origin server. Note: Make sure at least one origin server has a weight above 0;</li><li>Normal value: The larger the value, the more traffic is assigned;</li>
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// Whether to enable private authentication. It is valid when `OriginType=COS/AWS_S3`. Values:
-        /// <li>`true`: Yes.</li>
-        /// <li>`false`: No.</li>Default: `false`.
+        /// Whether to use private authentication. This parameter is valid only when RecordType is COS or AWS_S3. Valid values:
+        /// <li>true: Enable private authentication;</li>
+        /// <li>false: Do not use private authentication.</li>Not specified. Default value: false.
         /// </summary>
         [JsonProperty("Private")]
         public bool? Private{ get; set; }
 
         /// <summary>
-        /// Private authentication parameters. This field is valid when `Private=true`.
+        /// Private authentication parameter. Valid when the origin server type is Private=true.
         /// </summary>
         [JsonProperty("PrivateParameters")]
         public PrivateParameter[] PrivateParameters{ get; set; }

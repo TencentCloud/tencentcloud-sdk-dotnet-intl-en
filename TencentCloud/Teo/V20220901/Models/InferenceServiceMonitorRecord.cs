@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the inference service.
+        /// Inference service ID.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// Detailed service monitoring data for reasoning.
+        /// Detailed reasoning service monitoring data.
         /// </summary>
         [JsonProperty("InferenceServiceMonitorItems")]
         public InferenceServiceMonitorItem[] InferenceServiceMonitorItems{ get; set; }

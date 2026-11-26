@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether it is a fake site, with values:.
-        /// <Li>0: non-fake site.</li>.
-        /// <Li>1: fake site.</li>.
+        /// Whether it is a fake site, with values:
+        /// <li>0: non-fake site</li>
+        /// <li> 1: Fake site.</li>
         /// </summary>
         [JsonProperty("IsFake")]
         public long? IsFake{ get; set; }

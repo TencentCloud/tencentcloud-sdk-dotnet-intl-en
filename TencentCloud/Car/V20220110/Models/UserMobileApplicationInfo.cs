@@ -25,52 +25,58 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Application ID.
+        /// <p>Application Id</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Application name.
+        /// <p>Application name</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Application type (cloud APK: application APK).
+        /// <p>App type (Cloud APK: ApplicationAPK)</p>
         /// </summary>
         [JsonProperty("ApplicationType")]
         public string ApplicationType{ get; set; }
 
         /// <summary>
-        /// Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package).
+        /// <p>Application running status (ApplicationRunning: normal running; ApplicationNoPackage: no available package)</p>
         /// </summary>
         [JsonProperty("ApplicationRunStatus")]
         public string ApplicationRunStatus{ get; set; }
 
         /// <summary>
-        /// Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none).
+        /// <p>Application update status (ApplicationUpdateCreating: version creation in progress; ApplicationUpdateCreateFail: version creation failed; ApplicationUpdateNoReleased: version to be released; ApplicationUpdateReleased: version release completed; ApplicationUpdateNormal: none)</p>
         /// </summary>
         [JsonProperty("ApplicationUpdateStatus")]
         public string ApplicationUpdateStatus{ get; set; }
 
         /// <summary>
-        /// Application creation time.
+        /// <p>Application creation time</p>
         /// </summary>
         [JsonProperty("ApplicationCreateTime")]
         public string ApplicationCreateTime{ get; set; }
 
         /// <summary>
-        /// List of application versions.
+        /// <p>Application version list</p>
         /// </summary>
         [JsonProperty("ApplicationVersions")]
         public UserApplicationVersion[] ApplicationVersions{ get; set; }
 
         /// <summary>
-        /// Application nature (PUBLIC: public application; PRIVATE: user application).
+        /// <p>Application nature (PUBLIC: public application; PRIVATE: user application)</p>
         /// </summary>
         [JsonProperty("ApplicationNature")]
         public string ApplicationNature{ get; set; }
+
+        /// <summary>
+        /// <p>Application tag</p>
+        /// </summary>
+        [JsonProperty("ApplicationTags")]
+        public Tag[] ApplicationTags{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "ApplicationCreateTime", this.ApplicationCreateTime);
             this.SetParamArrayObj(map, prefix + "ApplicationVersions.", this.ApplicationVersions);
             this.SetParamSimple(map, prefix + "ApplicationNature", this.ApplicationNature);
+            this.SetParamArrayObj(map, prefix + "ApplicationTags.", this.ApplicationTags);
         }
     }
 }

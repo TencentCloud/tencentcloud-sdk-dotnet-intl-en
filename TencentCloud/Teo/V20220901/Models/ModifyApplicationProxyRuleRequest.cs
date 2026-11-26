@@ -25,71 +25,71 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The proxy ID.
+        /// Proxy ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// The rule ID.
+        /// Rule ID.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
         /// Origin server type. Valid values:
-        /// <li>custom: Manually added;</li>
-        /// <li>origins: Origin server group.</li>
+        /// <li>`custom`: Manually added;</li>
+        /// <li>origins: origin server group.</li>
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// The access port, which can be:
-        /// <li>A single port, such as 80</li>
-        /// <li>A port range, such as 81-90</li>
+        /// Port. Supported formats:
+        /// <li>80: port 80;</li>
+        /// <li>81-90: ports 81 to 90.</li>
         /// </summary>
         [JsonProperty("Port")]
         public string[] Port{ get; set; }
 
         /// <summary>
-        /// The protocol. Values:
-        /// <li>`TCP`: TCP protocol</li>
-        /// <li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
+        /// Protocol. Valid values:
+        /// <li>TCP: TCP protocol;</li>
+        /// <li>UDP: UDP protocol.</li>Leave it blank to keep the original value.
         /// </summary>
         [JsonProperty("Proto")]
         public string Proto{ get; set; }
 
         /// <summary>
-        /// Origin server information:
-        /// <li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
-        /// <li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+        /// Details of the origin server:
+        /// <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
+        /// <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
         /// 
-        /// The original configuration will apply if this field is not specified.
+        /// If not specified, the original value is retained.
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }
 
         /// <summary>
-        /// Passes the client IP. Values:
-        /// <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
-        /// <li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
-        /// <li>`PPV2`: Pass the client IP via Proxy Protocol V2.</li>
-        /// <li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
+        /// Pass the client IP address. Valid values:
+        /// <li>TOA: TOA (selectable only when Proto = TCP);</li>
+        /// <li>PPV1: passing via Proxy Protocol V1, available only when Proto = TCP;</li>
+        /// <li>PPV2: passing via Proxy Protocol V2;</li>
+        /// <li>OFF: no passing.</li>Leave it blank to keep the original value.
         /// </summary>
         [JsonProperty("ForwardClientIp")]
         public string ForwardClientIp{ get; set; }
 
         /// <summary>
-        /// Whether to enable session persistence. Values:
-        /// <li>`true`: Enable</li>
-        /// <li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+        /// Whether to enable session persistence. Valid values:
+        /// <li>true: Enable;</li>
+        /// <li>false: Disable.</li>If not specified, false.
         /// </summary>
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
@@ -101,15 +101,15 @@ namespace TencentCloud.Teo.V20220901.Models
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// The origin port, which can be:
-        /// <li>A single port, such as 80</li>
-        /// <li>A port range, such as 81-82</li>
+        /// Origin server port. Supported formats:
+        /// <li>Single port: 80;</li>
+        /// <li>Port range: 81-90, ports 81 to 90.</li>
         /// </summary>
         [JsonProperty("OriginPort")]
         public string OriginPort{ get; set; }
 
         /// <summary>
-        /// Rule tag. The original configuration will apply if it is not specified.
+        /// Rule tag. If not specified, the original value is retained.
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

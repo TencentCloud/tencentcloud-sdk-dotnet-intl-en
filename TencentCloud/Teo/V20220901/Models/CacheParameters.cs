@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Cache follows the origin site. Leave unset means this configuration is not set. FollowOrigin, NoCache, and CustomTime can only be configured with one Switch set to on.
+        /// Cache follows the origin site. Leave unset means this configuration is not set. At most one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public FollowOrigin FollowOrigin{ get; set; }
 
         /// <summary>
-        /// No cache. Leave unset means not setting this configuration. Only one Switch among FollowOrigin, NoCache, and CustomTime can be configured as on.
+        /// No cache. If left empty, this configuration is not set. Among FollowOrigin, NoCache, and CustomTime, only one can have Switch set to on.
         /// </summary>
         [JsonProperty("NoCache")]
         public NoCache NoCache{ get; set; }
 
         /// <summary>
-        /// Custom cache time. Leave unset means this configuration is not set. Only one of FollowOrigin, NoCache, and CustomTime can be configured with the Switch set to on.
+        /// Custom cache time. Leave it unset means this configuration is not set. A maximum of one of FollowOrigin, NoCache, and CustomTime can be configured with Switch on.
         /// </summary>
         [JsonProperty("CustomTime")]
         public CustomTime CustomTime{ get; set; }

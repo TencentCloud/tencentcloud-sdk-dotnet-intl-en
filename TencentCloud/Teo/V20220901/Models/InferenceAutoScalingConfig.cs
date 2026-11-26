@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Minimum number of instances. When a scaling policy is configured and the policy is in the valid period, it will not take effect.</p>
+        /// <p>Minimum number of instances. It will not take effect when a scaling policy is configured and the policy is in its valid period.</p>
         /// </summary>
         [JsonProperty("MinInstanceCount")]
         public long? MinInstanceCount{ get; set; }

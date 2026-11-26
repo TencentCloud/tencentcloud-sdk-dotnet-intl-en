@@ -25,38 +25,49 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Rule status. values: <li>`enable`: enabled</li> <li>`disable`: disabled</li>.
+        /// <p>Rule status. Valid values: <li> enable: Enable; </li><li> disable: Disabled.</li></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Rule id. a unique identifier for the rule. this parameter is required when calling `modifyl7accrules`.
+        /// <p>Rule ID. The unique identifier of a rule. This parameter is required when calling ModifyL7AccRule.</p>
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// Rule name. name length limit: 255 characters.
+        /// <p>Rule name. The name can contain no more than 255 characters.</p>
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule annotation. multiple annotations can be added.
+        /// <p>Rule note. Multiple notes can be filled.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string[] Description{ get; set; }
 
         /// <summary>
-        /// Sub-Rule branch. this list currently supports filling in only one rule; multiple entries are invalid.
-        /// Note: this field may return null, which indicates a failure to obtain a valid value.
+        /// <p>List of rule-level custom variables. CustomVariable.Name requires the use of user.rule. as a prefix. Variables are initialized sequentially in the array order. InitialValue supports referencing site-level custom variables and rule-level custom variables before the current variable. It does not support referencing the current variable itself or rule-level custom variables after it. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. When Branches is empty, CustomVariable cannot be filled in, and any entry is invalid.</p>
+        /// </summary>
+        [JsonProperty("CustomVariables")]
+        public CustomVariable[] CustomVariables{ get; set; }
+
+        /// <summary>
+        /// <p>Operation details of rule-level custom variables. You can reference site-level custom variables and rule-level custom variables defined in the current rule during operations. Site-level custom variables can be queried through the DescribeZoneCustomVariables API. This list currently only supports filling in one rule; additional entries are invalid. When Branches is empty, CustomVariableOperations is not allowed to be filled in, and any entry will be invalid.</p>
+        /// </summary>
+        [JsonProperty("CustomVariableOperations")]
+        public CustomVariableOperation[] CustomVariableOperations{ get; set; }
+
+        /// <summary>
+        /// <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
         /// </summary>
         [JsonProperty("Branches")]
         public RuleBranch[] Branches{ get; set; }
 
         /// <summary>
-        /// Rule priority. only used as an output parameter.
+        /// <p>Rule priority. Output only.</p>
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
@@ -71,6 +82,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamArraySimple(map, prefix + "Description.", this.Description);
+            this.SetParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+            this.SetParamArrayObj(map, prefix + "CustomVariableOperations.", this.CustomVariableOperations);
             this.SetParamArrayObj(map, prefix + "Branches.", this.Branches);
             this.SetParamSimple(map, prefix + "RulePriority", this.RulePriority);
         }

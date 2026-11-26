@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Custom configuration list that needs to be configured.</p>
+        /// <p>List of custom configurations that need to be configured.</p>
         /// </summary>
         [JsonProperty("CustomActions")]
         public CustomAction[] CustomActions{ get; set; }

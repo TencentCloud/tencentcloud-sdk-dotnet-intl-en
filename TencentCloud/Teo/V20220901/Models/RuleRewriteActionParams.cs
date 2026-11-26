@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Feature parameter name. For details, see [DescribeRulesSetting](https://intl.cloud.tencent.com/document/product/1552/80618?from_cn_redirect=1).
-        /// <li>`add`: Add the HTTP header.</li>
-        /// <li>`set`: Rewrite the HTTP header.</li>
-        /// <li>`del`: Delete the HTTP header.</li>
+        /// For feature parameter names and completion specifications, call the API to query the rule engine's parameter settings (https://www.tencentcloud.com/document/product/1552/80618?from_cn_redirect=1). Currently, only three values are supported:
+        /// <li> add: Add an HTTP header;</li>
+        /// <li> set: rewrite HTTP header;</li>
+        /// <li> del: delete an HTTP header.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Parameter name
+        /// Parameter name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Parameter value
+        /// Parameter value.
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

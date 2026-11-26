@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the inference service.
+        /// Inference service ID.
         /// </summary>
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// Reasoning service name.
+        /// Name of the inference service.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// Ports monitored by the model service. Only integers between 1 and 65535 are supported.
+        /// Ports that the model service needs to monitor. Only integers between 1 and 65535 are supported.
         /// </summary>
         [JsonProperty("ListenPort")]
         public long? ListenPort{ get; set; }
 
         /// <summary>
-        /// Request path list for inference service. Supports up to 20 paths.
+        /// Request path list for the inference service. Supports up to 20 paths.
         /// </summary>
         [JsonProperty("RequestPaths")]
         public string[] RequestPaths{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Teo.V20220901.Models
         public InferenceResourceConfig ResourceConfig{ get; set; }
 
         /// <summary>
-        /// Reasoning service status, which includes the following status: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
+        /// Status of the inference service, including the following: <li>Deploying: deployment in progress;</li><li>Running: running;</li><li>Stopping: stopping;</li><li>Stopped: stopped;</li><li>Exception: exception;</li><li>Banned: banned.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Scaling status. Valid values: <li>Normal: Stable operation, no scaling operation in progress;</li><li>ScalingOut: Scaling out;</li><li>ScalingIn: Scaling in.</li>
+        /// Scaling status. Valid values: <li>Normal: running steadily with no scaling operation in progress;</li><li>ScalingOut: scaling out;</li><li>ScalingIn: scaling in.</li>
         /// </summary>
         [JsonProperty("ScalingStatus")]
         public string ScalingStatus{ get; set; }
 
         /// <summary>
-        /// Number of running instances.
+        /// Number of currently running instances.
         /// </summary>
         [JsonProperty("CurrentInstanceCount")]
         public long? CurrentInstanceCount{ get; set; }
 
         /// <summary>
-        /// Reasoning access address, perform reasoning via links to access the underlying model.
+        /// Inference access address. You can access the underlying model for reasoning via links.
         /// </summary>
         [JsonProperty("InferenceURL")]
         public string InferenceURL{ get; set; }

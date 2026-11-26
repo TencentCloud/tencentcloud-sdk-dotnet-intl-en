@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Describes the binding relationship between the multi-channel gateway instance and the origin IP ranges.
+        /// Details of the binding relationship between a multi-channel gateway instance and the origin-pull IP range.
         /// </summary>
         [JsonProperty("MultiPathGatewayOriginACLInfo")]
         public MultiPathGatewayOriginACLInfo MultiPathGatewayOriginACLInfo{ get; set; }

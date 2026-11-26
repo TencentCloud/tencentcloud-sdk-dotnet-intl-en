@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// IDs of newly added forwarding rules, returned as an array.
+        /// ID of newly added forwarding rule, returned as an array.
         /// </summary>
         [JsonProperty("L4ProxyRuleIds")]
         public string[] L4ProxyRuleIds{ get; set; }

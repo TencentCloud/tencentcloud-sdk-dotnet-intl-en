@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of policy templates.
+        /// Policy template list.
         /// </summary>
         [JsonProperty("SecurityPolicyTemplates")]
         public SecurityPolicyTemplateInfo[] SecurityPolicyTemplates{ get; set; }

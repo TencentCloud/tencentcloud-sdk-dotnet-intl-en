@@ -31,28 +31,28 @@ namespace TencentCloud.Teo.V20220901.Models
         public string CertId{ get; set; }
 
         /// <summary>
-        /// Alias of the certificate.
+        /// Certificate remark name.
         /// </summary>
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
         /// <summary>
-        /// Type of the certificate. Values:
-        /// <li>`default`: Default certificate</li>
-        /// <li>`upload`: Specified certificate</li>
-        /// <li>`managed`: Tencent Cloud-managed certificate</li>
+        /// Certificate type. Valid values:
+        /// <li>default: default certificate;</li>
+        /// <li>upload: user upload;</li>
+        /// <li>managed: Tencent Cloud hosted.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// The certificate expiration time.
+        /// Certificate expiration time.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// Time when the certificate is deployed.
+        /// Deployment time of the certificate.
         /// </summary>
         [JsonProperty("DeployTime")]
         public string DeployTime{ get; set; }
@@ -64,12 +64,12 @@ namespace TencentCloud.Teo.V20220901.Models
         public string SignAlgo{ get; set; }
 
         /// <summary>
-        /// Status of the certificate. Values:
-        /// u200c<li>`deployed`: The deployment has completed</li>
-        /// u200c<li>`processing`: Deployment in progress</li>
-        /// u200c<li>`applying`: Application in progress</li>
-        /// u200c<li>`failed`: Application rejected</li>
-        /// <li>`issued`: Binding failed.</li>
+        /// Certificate status. Valid values:
+        /// <li>deployed: Deployed;</li>
+        /// <li>processing: deploying;</li>
+        /// <li>applying: application in progress.</li>
+        /// <li>failed: Application failed;</li>
+        /// <li>issued: failed to bind.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

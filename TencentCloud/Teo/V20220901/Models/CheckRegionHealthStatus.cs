@@ -33,7 +33,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Health status of origin servers in a single health check region. Valid values:
         /// <li>Healthy: healthy.</li>
-        /// <li>Unhealthy: unhealthy.</li>
+        /// <li>Unhealthy: unhealthy;</li>
         /// <li>Undetected: no data detected.</li>Note: If all origin servers in a single health check region are healthy, the status is healthy; otherwise, it is unhealthy.
         /// </summary>
         [JsonProperty("Healthy")]

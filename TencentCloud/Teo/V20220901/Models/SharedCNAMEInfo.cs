@@ -25,39 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Shared CNAME type: Value ranges from...to...
-        /// <li>custom: User-created custom shared CNAME</li>
-        /// <li>ip-ssl: Shared CNAME of IP SSL type</li>
+        /// <p>Shared CNAME type: value range as follows:</p><li>custom: user-created custom shared CNAME</li><li>ip-ssl: IP SSL shared CNAME</li><li>zero-rating: zero-rating shared CNAME</li><li>preset: pre-configured resource shared CNAME</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Shared CNAME name.
+        /// <p>Shared CNAME name.</p>
         /// </summary>
         [JsonProperty("SharedCNAME")]
         public string SharedCNAME{ get; set; }
 
         /// <summary>
-        /// Description.
+        /// <p>Description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// When type is ip-ssl, show the associated IP SSL configuration message of the shared CNAME.
+        /// <p>When type is ip-ssl, show the IP SSL configuration message associated with the shared CNAME.</p>
         /// </summary>
         [JsonProperty("IPSSLConfig")]
         public IPSSLConfig IPSSLConfig{ get; set; }
 
         /// <summary>
-        /// Number of acceleration domain names bound to the shared CNAME.
+        /// <p>Number of acceleration domain names bound to the shared CNAME.</p>
         /// </summary>
         [JsonProperty("BindDomainCount")]
         public long? BindDomainCount{ get; set; }
 
         /// <summary>
-        /// List of acceleration domain names added to the shared CNAME. When the number of domains exceeds 100, only return the first 100 acceleration domain names.
+        /// <p>List of acceleration domain names added to the shared CNAME. When the number of added domains exceeds 100, only return the first 100 acceleration domain names.</p>
         /// </summary>
         [JsonProperty("AccelerationDomains")]
         public ReferenceHolder[] AccelerationDomains{ get; set; }

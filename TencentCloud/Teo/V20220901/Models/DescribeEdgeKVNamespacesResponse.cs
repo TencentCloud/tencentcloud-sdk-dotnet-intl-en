@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of eligible namespaces.
+        /// Total number of namespaces meeting conditions.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// KV namespace information list. If no matching criteria, return an empty array.
+        /// List of KV namespace information. If no namespace meets the conditions, an empty array is returned.
         /// </summary>
         [JsonProperty("KVNamespaces")]
         public KVNamespace[] KVNamespaces{ get; set; }

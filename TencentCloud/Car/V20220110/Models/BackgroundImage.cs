@@ -25,29 +25,25 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// ID of the COS file.Note: This field may return null, indicating that no valid values can be obtained.
+        /// ID of the COS file.
         /// </summary>
         [JsonProperty("COSFileId")]
         public string COSFileId{ get; set; }
 
         /// <summary>
-        /// Download URL.Note: This field may return null, indicating that no valid values can be obtained.
+        /// Download URL.
         /// </summary>
         [JsonProperty("URL")]
         public string URL{ get; set; }
 
         /// <summary>
         /// Name
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Creation time.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Creation Time
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The number of real-time log delivery tasks which match the query conditions.
+        /// Number of real-time log delivery tasks that meet the search criteria.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of all real-time log delivery tasks which match the query conditions.
+        /// List of all real-time log delivery tasks that meet the search criteria.
         /// </summary>
         [JsonProperty("RealtimeLogDeliveryTasks")]
         public RealtimeLogDeliveryTask[] RealtimeLogDeliveryTasks{ get; set; }

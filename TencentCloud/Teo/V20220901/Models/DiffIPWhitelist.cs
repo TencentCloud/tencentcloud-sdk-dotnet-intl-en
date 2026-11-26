@@ -25,25 +25,25 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The latest intermediate IPs.
+        /// Latest IP whitelist list.
         /// </summary>
         [JsonProperty("LatestIPWhitelist")]
         public IPWhitelist LatestIPWhitelist{ get; set; }
 
         /// <summary>
-        /// The intermediate IPs added to the existing list.
+        /// Newly added part of the latest IP whitelist list compared with the current IP whitelist list.
         /// </summary>
         [JsonProperty("AddedIPWhitelist")]
         public IPWhitelist AddedIPWhitelist{ get; set; }
 
         /// <summary>
-        /// The intermediate IPs removed from the existing list.
+        /// The latest IP whitelist list has partially deleted entries compared with the current IP whitelist list.
         /// </summary>
         [JsonProperty("RemovedIPWhitelist")]
         public IPWhitelist RemovedIPWhitelist{ get; set; }
 
         /// <summary>
-        /// The intermediate IPs that remain unchanged.
+        /// Unchanged part of the latest IP allowlist compared with the current IP allowlist.
         /// </summary>
         [JsonProperty("NoChangeIPWhitelist")]
         public IPWhitelist NoChangeIPWhitelist{ get; set; }

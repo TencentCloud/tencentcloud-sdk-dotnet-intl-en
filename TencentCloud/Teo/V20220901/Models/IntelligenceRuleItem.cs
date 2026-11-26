@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The tag to categorize bots. Values:
-        /// <li>`evil_bot`: Malicious bot</li>
-        /// <li>`suspect_bot`: Suspected bot</li>
-        /// <li>`good_bot`: Good bot</li>
-        /// <li>`normal`: Normal request</li>
+        /// Intelligent analysis tag. Valid values:
+        /// <li>evil_bot: malicious bot;</li>
+        /// <li>suspect_bot: suspected bot;</li>
+        /// <li>good_bot: good bot;</li>
+        /// <li>normal: Normal request.</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// The action taken on bots. Values
-        /// <li>`drop`: Block</li>
-        /// <li>`trans`: Allow</li>
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`captcha`: Managed challenge</li>
-        /// <li>`monitor`: Observe</li>
+        /// Trigger the handling method corresponding to the Intelligent Analysis tag. Valid values:
+        /// <li>drop: block;</li>
+        /// <li>trans: pass;</li>
+        /// <li>alg: Javascript challenge;</li>
+        /// <li>captcha: digit verification code;</li>
+        /// <li>monitor: observation.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

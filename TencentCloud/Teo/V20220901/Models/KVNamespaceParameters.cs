@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID belonging to the KV namespace. Specifies the site where the KV namespace resides that should be bound, supporting cross-site binding.
+        /// Site ID to which the KV namespace belongs. Specify the site where the KV namespace that should be bound is located. Cross-site binding is supported.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// KV namespace name. Specifies the specific namespace that should be bound. You can obtain the list of namespaces under the site through the DescribeKVNamespace API.
+        /// KV namespace name. Specify the specific namespace that should be bound. You can obtain the list of namespaces under a site through the DescribeKVNamespace API.
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

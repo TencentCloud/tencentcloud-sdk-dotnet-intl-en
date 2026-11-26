@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string CNName{ get; set; }
 
         /// <summary>
-        /// English name of the region.
+        /// English region name.
         /// </summary>
         [JsonProperty("ENName")]
         public string ENName{ get; set; }

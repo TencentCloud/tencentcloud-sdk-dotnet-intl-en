@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable ipv6 access functionality. valid values:.
-        /// <Li>`On`: enable ipv6 access;</li>.
-        /// <Li>`Off`: disable ipv6 access feature.</li>.
+        /// IPv6 access feature configuration. Valid values:
+        /// <li>on: Turn on the IPv6 access feature;</li>
+        /// <li>off: Disables the IPv6 access feature.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

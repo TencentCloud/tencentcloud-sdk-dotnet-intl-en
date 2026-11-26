@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of L7 logs.
+        /// Data list of layer-7 offline logs.
         /// </summary>
         [JsonProperty("Data")]
         public L7OfflineLog[] Data{ get; set; }

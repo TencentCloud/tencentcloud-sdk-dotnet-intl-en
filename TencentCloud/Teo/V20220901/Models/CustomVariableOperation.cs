@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Sub-rule branch. This list currently only supports filling in one rule; additional entries are invalid.</p>
+        /// <p>Sub-rule branch. This list currently only supports filling in one rule. Additional rules are invalid.</p>
         /// </summary>
         [JsonProperty("Branches")]
         public CustomVariableOperationRuleBranch[] Branches{ get; set; }
 
         /// <summary>
-        /// <p>Rule note. Multiple notes can be filled.</p>
+        /// <p>Rule annotation. Multiple annotations can be filled.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string[] Description{ get; set; }

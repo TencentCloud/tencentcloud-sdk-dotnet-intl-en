@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
+        /// <p>Parameter field data type. Valid values: <li>Boolean: boolean;</li><li>Integer: integer;</li><li>Float: floating-point type;</li><li>String: string;</li><li>ArrayOfInteger: integer array;</li><li>ArrayOfFloat: floating-point array;</li><li>ArrayOfString: array of strings.</li></p>
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>Field default value of the parameter.</p>
+        /// <p>Parameter field default value.</p>
         /// </summary>
         [JsonProperty("Default")]
         public string Default{ get; set; }
@@ -55,67 +55,67 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Unit{ get; set; }
 
         /// <summary>
-        /// <p>Whether the parameter field is required or not.</p><p>Default value: false</p><p>If filled, it is applicable to ALL parameter field type verification; if left blank, no verification.</p>
+        /// <p>Whether the parameter field is required.</p><p>Default value: false</p><p>If filled, it is suitable for all parameter field type verification; if not filled, no verification.</p>
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
 
         /// <summary>
-        /// <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value for integer, floating-point number, integer array, and floating-point number array type parameters; if left blank, there is no verification.</p>
+        /// <p>Minimum value of the parameter field.</p><p>If filled, it is used to validate the value of integer, floating-point number, integer array, and floating-point number array type parameters. If not filled, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MinValue")]
         public float? MinValue{ get; set; }
 
         /// <summary>
-        /// <p>Maximum value of the parameter field.</p><p>If filled, it is used for value verification of type parameters for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, there is no verification.</p>
+        /// <p>Maximum value of the parameter field.</p><p>If filled, it applies to value verification for integers, floating-point numbers, integer arrays, and floating-point number arrays. If left blank, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MaxValue")]
         public float? MaxValue{ get; set; }
 
         /// <summary>
-        /// <p>Minimum length of the parameter field.</p><p>If filled, it is used for value verification of string and string array type parameters. If not filled, there is no verification.</p>
+        /// <p>Minimum length of the parameter field.</p><p>If filled, it applies to value verification for string and string array type parameters; if left blank, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MinLength")]
         public long? MinLength{ get; set; }
 
         /// <summary>
-        /// <p>Maximum length of the parameter field.</p><p>If filled, it is used for value verification for strings and array of strings type parameters; if left blank, no verification.</p>
+        /// <p>Maximum length of the parameter field.</p><p>If filled, it is used for value validation of string and string array type parameters; if not filled, no validation is performed.</p>
         /// </summary>
         [JsonProperty("MaxLength")]
         public long? MaxLength{ get; set; }
 
         /// <summary>
-        /// <p>Minimum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters; if left blank, there is no verification.</p>
+        /// <p>Minimum item count of the parameter field.</p><p>If filled, it is used to validate the value of various array type parameters. If not filled, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MinItems")]
         public long? MinItems{ get; set; }
 
         /// <summary>
-        /// <p>Maximum item count of the parameter field.</p><p>If filled, it is applicable to value verification for various array type parameters. If left blank, there is no verification.</p>
+        /// <p>Maximum items in the parameter field.</p><p>If filled, it is suitable for value verification of various array type parameters; if left blank, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MaxItems")]
         public long? MaxItems{ get; set; }
 
         /// <summary>
-        /// <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is applicable to various array type parameter value verification; if left blank, no verification.</p>
+        /// <p>Whether the parameter field item is unique.</p><p>Default value: false</p><p>If filled, it is suitable for value verification of various array type parameters; if not filled, no verification.</p>
         /// </summary>
         [JsonProperty("UniqueItems")]
         public bool? UniqueItems{ get; set; }
 
         /// <summary>
-        /// <p>Allowed format of the parameter field.</p><p>If filled, verification of string or string array content is required. If not filled, there is no verification.</p>
+        /// <p>Allowed format of the parameter field.</p><p>If filled, verification is required to ensure the string or string array content is appropriate; if left blank, no verification is performed.</p>
         /// </summary>
         [JsonProperty("AllowedPattern")]
         public string AllowedPattern{ get; set; }
 
         /// <summary>
-        /// <p>Allowed values of the parameter field. If empty, there is no verification.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enum and only allows values from this parameter array; if left blank, there is no verification.</p>
+        /// <p>Allowed values of the parameter field. If empty, no verification is performed.</p><p>If this parameter is filled, it indicates that the corresponding parameter is an enumeration type, and only values in this parameter array are allowed. If not filled, no verification is performed.</p>
         /// </summary>
         [JsonProperty("AllowedValues")]
         public string[] AllowedValues{ get; set; }
 
         /// <summary>
-        /// <p>Minimum step size of the parameter field.</p><p>If filled, it is suitable for value verification of floating-point and floating-point array type parameters. If not filled, there is no verification.</p>
+        /// <p>Minimum step size of the parameter field. If filled, it applies to value verification for floating-point and floating-point array type parameters; if left blank, no verification is performed.</p>
         /// </summary>
         [JsonProperty("MultipleOf")]
         public string MultipleOf{ get; set; }

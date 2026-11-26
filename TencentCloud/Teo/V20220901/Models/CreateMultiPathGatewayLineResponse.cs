@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Line ID. valid values:
-        /// <li>line-1: EdgeOne layer-4 proxy line, supports modifying instances and rules, but cannot be deleted.</li>
-        /// <li> line-2 and above: EdgeOne layer-4 proxy or custom lines, supports modifying, deleting instances and rules.</li>
+        /// Line ID. Valid values:
+        /// <li> line-1: EdgeOne Layer 4 proxy line. It supports modifying instances and rules, but cannot be deleted;</li>
+        /// <li> line-2 or higher: EdgeOne Layer 4 proxy lines or custom lines, supports modifying and deletion of instances and rules.</li>
         /// </summary>
         [JsonProperty("LineId")]
         public string LineId{ get; set; }

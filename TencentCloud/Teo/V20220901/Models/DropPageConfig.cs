@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether to enable configuration. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Configuration switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Intercept page configuration for Waf(managed rules) module. if null, historical configuration is used by default.
+        /// Interception page configuration of the Waf (managed rule) module. If null, the last set configuration is used by default.
         /// </summary>
         [JsonProperty("WafDropPageDetail")]
         public DropPageDetail WafDropPageDetail{ get; set; }
 
         /// <summary>
-        /// Interception page configuration for custom pages. if null, use the last set configuration by default.
+        /// Interception page configuration for custom pages. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("AclDropPageDetail")]
         public DropPageDetail AclDropPageDetail{ get; set; }

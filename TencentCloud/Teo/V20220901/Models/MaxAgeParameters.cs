@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies whether to follow the origin server cache-control configuration, with the following values:.
-        /// <Li>`On`: follow the origin server and ignore the field cachetime;</li>.
-        /// <Li>`Off`: do not follow the origin server and apply the field cachetime.</li>.
+        /// Follow the origin server Cache-Control switch. Valid values:
+        /// <li>on: follow the origin site and ignore the CacheTime setting;</li>
+        /// <li>off: Do not follow the origin site. Use the CacheTime time setting.</li>
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }
 
         /// <summary>
-        /// Custom cache time value, unit: seconds. value range: 0-315360000.<br>note: when followorigin is off, it means not following the origin server and using cachetime to set the cache time; otherwise, this field will not take effect.
+        /// Custom cache time value in seconds. Value range: 0–315360000.<br>Note: When FollowOrigin is off, it means not to follow the origin site and use CacheTime to set the cache time. Otherwise, this field is ineffective.
         /// </summary>
         [JsonProperty("CacheTime")]
         public long? CacheTime{ get; set; }

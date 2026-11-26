@@ -31,20 +31,20 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Filter criteria. Each filter criteria can have up to 5 entries.
-        /// <li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
+        /// Filter criteria. The maximum value of Filters.Values is 5. The detailed filter criteria are as follows:
+        /// <li>zone-id<br>   Filter by <strong>site ID</strong>. The site ID format is zone-xxx.<br>   Type: String<br>   Required: Yes </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// Offset for paginated queries. Default value: `0`
+        /// The offset of paginated query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: `20`. Maximum value: `100`.
+        /// Paginated query limit. Default value: 20, maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

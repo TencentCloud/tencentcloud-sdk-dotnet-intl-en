@@ -37,7 +37,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters, supporting valid UTF-8 characters. To delete one key, input an array containing one element.
+        /// Key name list. The maximum array length is 20. Each key name cannot be empty and must be 1-512 characters long, supporting valid UTF-8 characters. To delete a single key, input an array containing one element.
         /// </summary>
         [JsonProperty("Keys")]
         public string[] Keys{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the access key for the multi-channel security acceleration gateway.
+        /// Key for integrating a multi-channel security acceleration gateway.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

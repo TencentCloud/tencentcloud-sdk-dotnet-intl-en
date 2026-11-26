@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The offset of paginated query. default value: 0.
+        /// The offset of paginated query. Default value: 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. default value: `20`. maximum value: `100`.
+        /// Number limit of paginated query. Default value: 20. Maximum value: 100.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter conditions. the upper limit for filters is 20, and the upper limit for filters.values is 20. if this parameter is not filled in, the content identifiers with permissions under the current appid are returned by default. detailed filtering conditions are as follows: <li>description: filter by content identifier description in batches; for example: test;</li><li>content-id: filter by content identifier id in batches; for example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by Tag key;</li><li>tag-value: filter by Tag value;</li><li>status: filter by content identifier status. valid values: active: active; deleted: deleted.</li>only description supports fuzzy query, other fields require precise query.
+        /// Filter criteria. The maximum number of Filters is 20, and the maximum number of Filters.Values is 20. If this parameter is left empty, the content identifiers authorized under the current AppId are returned by default. The detailed filter criteria are as follows: <li>description: filter by content identifier description in batches. For example: test;</li><li>content-id: filter by content identifier ID in batches. For example: eocontent-2noz78a8ev6k;</li><li>tag-key: filter by tag key;</li> <li>tag-value: filter by tag value;</li><li>status: filter by content identifier status. Valid values: active: active; deleted: deleted.</li>Fuzzy query is supported only for description. Precise query is required for other fields.
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }

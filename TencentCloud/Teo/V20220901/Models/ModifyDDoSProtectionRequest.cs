@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Specifies the exclusive Anti-DDoS configuration.
+        /// Exclusive DDoS protection configuration.
         /// </summary>
         [JsonProperty("DDoSProtection")]
         public DDoSProtection DDoSProtection{ get; set; }

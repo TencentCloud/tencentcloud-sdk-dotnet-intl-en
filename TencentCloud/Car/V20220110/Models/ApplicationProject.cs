@@ -25,115 +25,109 @@ namespace TencentCloud.Car.V20220110.Models
     {
         
         /// <summary>
-        /// Project ID.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project ID.</p>
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// Project name.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Project description.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project description.</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Concurrency type required for project operation.S1: concurrency for rendering small cloud applications.M1: concurrency for rendering medium cloud applications.L1: concurrency for rendering large cloud applications.L2: concurrency for rendering large cloud applications.XL2: concurrency for rendering extra large cloud applications.MM1_HD: concurrency for performance-based cloud ARM (HD).MM1_FHD: concurrency for performance-based cloud ARM (FHD).Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Concurrency type required for project operation.<br>S1: Small-scale cloud application rendering concurrency<br>M1: Medium cloud application rendering concurrency<br>L1: Large cloud application rendering concurrency<br>L2: Large cloud application rendering concurrency<br>XL2: Ultra-large cloud application rendering concurrency<br>MM1_HD: Performance Cloud ARM concurrency - high-definition<br>MM1_FHD: Performance Cloud ARM concurrency - ultra-high-definition</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Cloud application ID.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Cloud Application ID</p>
         /// </summary>
         [JsonProperty("ApplicationId")]
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// Pre-launch.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Pre-launch</p>
         /// </summary>
         [JsonProperty("IsPreload")]
         public bool? IsPreload{ get; set; }
 
         /// <summary>
-        /// Number of concurrencies already configured.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Configured concurrency</p>
         /// </summary>
         [JsonProperty("Amount")]
         public long? Amount{ get; set; }
 
         /// <summary>
-        /// Number of concurrencies in use.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Number of concurrencies in use</p>
         /// </summary>
         [JsonProperty("Using")]
         public long? Using{ get; set; }
 
         /// <summary>
-        /// Application status. NoConcurrent: no concurrency pack configured; Online: activated. Cloud application status: applicationCreating: creating; applicationCreateFail: creation failed; applicationDeleting: deleting; applicationNoConfigured: startup parameters not configured.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Application status: NoConcurrent - no concurrency package configured, Online - launched, other statuses are cloud application status: applicationCreating - creating, applicationCreateFail - creation failed, applicationDeleting - deleting, applicationNoConfigured - startup parameter not configured</p>
         /// </summary>
         [JsonProperty("ApplicationStatus")]
         public string ApplicationStatus{ get; set; }
 
         /// <summary>
-        /// Application startup parameters.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Application startup parameter</p>
         /// </summary>
         [JsonProperty("ApplicationParams")]
         public string ApplicationParams{ get; set; }
 
         /// <summary>
-        /// Creation time.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Application name.
-        /// 
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Application name</p>
         /// </summary>
         [JsonProperty("ApplicationName")]
         public string ApplicationName{ get; set; }
 
         /// <summary>
-        /// Resolution, in the format of widthxheight, such as 1920x1080.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Resolution, format as "width x height", for example 1920x1080</p>
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// Project type.SHARED: shared by all applications.EXCLUSIVE (default value): dedicated for one application.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project type.<br>SHARED: Shared by all applications<br>EXCLUSIVE (default value): Dedicated for one application</p>
         /// </summary>
         [JsonProperty("ProjectType")]
         public string ProjectType{ get; set; }
 
         /// <summary>
-        /// Purpose.EXPERIENCE: Experience.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Purpose.<br>EXPERIENCE: Experience</p>
         /// </summary>
         [JsonProperty("Purpose")]
         public string Purpose{ get; set; }
 
         /// <summary>
-        /// Application distribution area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Application distribution area (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China). Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
         /// </summary>
         [JsonProperty("ApplicationRegions")]
         public string[] ApplicationRegions{ get; set; }
 
         /// <summary>
-        /// Concurrency area. Standard areas are as follows. ap-chinese-mainland: Chinese mainland; na-north-america: North America; eu-frankfurt: Frankfurt; ap-mumbai: Mumbai; ap-tokyo: Tokyo; ap-seoul: Seoul; ap-singapore: Singapore; ap-bangkok: Bangkok; ap-hongkong: Hong Kong (China). Fusion areas are as follows. me-middle-east-fusion: Middle East; na-north-america-fusion: North America; sa-south-america-fusion: South America; ap-tokyo-fusion: Tokyo; ap-seoul-fusion: Seoul; eu-frankfurt-fusion: Frankfurt; ap-singapore-fusion: Singapore; ap-hongkong-fusion: Hong Kong (China).Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Concurrent region (Standard zone: ap-chinese-mainland: Chinese mainland, na-north-america: North America, eu-frankfurt: Frankfurt, ap-mumbai: Mumbai, ap-tokyo: Tokyo, ap-seoul: Seoul, ap-singapore: Singapore, ap-bangkok: Bangkok, ap-hongkong: Hong Kong (China), Fusion region: me-middle-east-fusion: Middle East, na-north-america-fusion: North America, sa-south-america-fusion: South America, ap-tokyo-fusion: Tokyo, ap-seoul-fusion: Seoul, eu-frankfurt-fusion: Frankfurt, ap-singapore-fusion: Singapore, ap-hongkong-fusion: Hong Kong (China))</p>
         /// </summary>
         [JsonProperty("ConcurrentRegions")]
         public string[] ConcurrentRegions{ get; set; }
 
         /// <summary>
-        /// Project category.DESKTOP: desktop (default value).MOBILE: mobile.Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Project category.<br>DESKTOP: On PC, default value<br>MOBILE: Mobile terminal</p>
         /// </summary>
         [JsonProperty("ProjectCategory")]
         public string ProjectCategory{ get; set; }

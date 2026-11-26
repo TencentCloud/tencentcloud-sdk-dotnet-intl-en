@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// List of rules that detect length limits.
+        /// Rule list for detection length limit.
         /// </summary>
         [JsonProperty("DetectLengthLimitRules")]
         public DetectLengthLimitRule[] DetectLengthLimitRules{ get; set; }

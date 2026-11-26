@@ -25,152 +25,152 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID to modify.
+        /// Site ID to be changed.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Cache expiration time configuration
-        /// The original configuration will apply if this field is not specified.
+        /// Cache expiration time configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("CacheConfig")]
         public CacheConfig CacheConfig{ get; set; }
 
         /// <summary>
-        /// The node cache key configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Node cache key configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
-        /// The browser cache configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Browser cache configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// The offline cache configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Offline cache configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// QUIC access configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Quic access configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// POST transport configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Configuration for Post request transmission.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostMaxSize PostMaxSize{ get; set; }
 
         /// <summary>
-        /// The smart compression configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Intelligent compression configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// HTTP2 origin-pull configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Http2 origin-pull configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("UpstreamHttp2")]
         public UpstreamHttp2 UpstreamHttp2{ get; set; }
 
         /// <summary>
-        /// Force HTTPS redirect configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Access protocol forcing Https redirection configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// HTTPS acceleration configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Https acceleration configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// The origin server configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Origin server configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// The smart acceleration configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Intelligent acceleration configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("SmartRouting")]
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// WebSocket configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// WebSocket configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// Origin-pull client IP header configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Client IP origin-pull request header configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("ClientIpHeader")]
         public ClientIpHeader ClientIpHeader{ get; set; }
 
         /// <summary>
-        /// The cache prefresh configuration.
-        /// The original configuration will apply if this field is not specified.
+        /// Cache pre-refresh configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefresh CachePrefresh{ get; set; }
 
         /// <summary>
-        /// Ipv6 access configuration. 
-        /// The original configuration will apply if it is not specified.
+        /// Ipv6 access configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// Whether to carry the location information of the client IP during origin-pull. 
-        /// The original configuration will apply if it is not specified.
+        /// Configuration of whether to carry the regional information of the client IP during origin-pull.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("ClientIpCountry")]
         public ClientIpCountry ClientIpCountry{ get; set; }
 
         /// <summary>
-        /// Configuration of gRPC support. 
-        /// The original configuration will apply if it is not specified.
+        /// Grpc protocol support configuration.
+        /// Leave blank to retain the original configuration.
         /// </summary>
         [JsonProperty("Grpc")]
         public Grpc Grpc{ get; set; }
 
         /// <summary>
-        /// Network Error Logging configuration. The original configuration will apply if it is not specified.
+        /// Network error log configuration. If this field is not specified, the original configuration will be retained.
         /// </summary>
         [JsonProperty("NetworkErrorLogging")]
         public NetworkErrorLogging NetworkErrorLogging{ get; set; }
 
         /// <summary>
-        /// Image optimization. 
-        /// It is disabled if this parameter is not specified.
+        /// Image optimization configuration.
+        /// Not specified: disabled.
         /// </summary>
         [JsonProperty("ImageOptimize")]
         public ImageOptimize ImageOptimize{ get; set; }
 
         /// <summary>
-        /// Standard debugging configuration.
+        /// Standard Debug configuration.
         /// </summary>
         [JsonProperty("StandardDebug")]
         public StandardDebug StandardDebug{ get; set; }

@@ -31,31 +31,31 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Edge function copy name.
+        /// Name of the edge function copy.
         /// </summary>
         [JsonProperty("ReplicaName")]
         public string ReplicaName{ get; set; }
 
         /// <summary>
-        /// Edge function replica content. Format is JavaScript code.
+        /// Content of the edge function copy. Format: JavaScript code.
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Edge function replica description.
+        /// Description of the edge function replica.
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Edge function replica creation time.
+        /// Creation time of the edge function replica.
         /// </summary>
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
         /// <summary>
-        /// Edge function replica last update time.
+        /// Last update time of the edge function replica.
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }

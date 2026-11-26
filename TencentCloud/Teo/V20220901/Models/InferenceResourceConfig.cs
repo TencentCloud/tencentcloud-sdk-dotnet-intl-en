@@ -25,33 +25,44 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Scaling way. Valid values: <li>Auto: Automatically adjust instance count according to request volume;</li><li>Manual: Manual setting of fixed number of resource instances.</li>
+        /// <p>Scaling method. Valid values: <li>Auto: automatically adjust instance count according to request volume;</li><li>Manual: manually set a fixed number of instances.</li></p>
         /// </summary>
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }
 
         /// <summary>
-        /// Hardware specifications.
+        /// <p>Hardware specification flag. Abandoned. For reference, use <code>HardwareSpecId</code>.</p>
         /// </summary>
         [JsonProperty("HardwareSpec")]
+        [System.Obsolete]
         public string HardwareSpec{ get; set; }
 
         /// <summary>
-        /// Inference service automatic scaling configuration. Required when ScalingMode is Auto.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Unique identification ID of the hardware specification. You can obtain the supported hardware specifications of the current site through the <code>DescribeInferenceHardwareSpecifications</code> API.</p><p>By default, the system configures the required resources for the inference service according to the hardware specification corresponding to the selected <code>HardwareSpecId</code>. If adjustments are needed, you can customize the hardware resource configuration through <code>HardwareConfig</code>.</p>
+        /// </summary>
+        [JsonProperty("HardwareSpecId")]
+        public string HardwareSpecId{ get; set; }
+
+        /// <summary>
+        /// <p>Hardware configuration for the inference service.</p><p>As an input parameter, if unpadded, hardware resources are configured according to the default value of the selected <code>HardwareSpecId</code> specification; if padded, priority is given to the fill value for configuration.</p>
+        /// </summary>
+        [JsonProperty("HardwareConfig")]
+        public InferenceHardwareConfig HardwareConfig{ get; set; }
+
+        /// <summary>
+        /// <p>Automatic scaling configuration of the inference service. Required when ScalingMode is Auto.</p>
         /// </summary>
         [JsonProperty("AutoScalingConfig")]
         public InferenceAutoScalingConfig AutoScalingConfig{ get; set; }
 
         /// <summary>
-        /// Manual setting of inference service instance configuration. Required when ScalingMode is Manual.
-        /// Note: This field may return null, which indicates a failure to obtain a valid value.
+        /// <p>Inference service manual setting instance configuration. Required when ScalingMode is Manual.</p>
         /// </summary>
         [JsonProperty("ManualInstanceConfig")]
         public InferenceManualInstanceConfig ManualInstanceConfig{ get; set; }
 
         /// <summary>
-        /// Single-instance concurrency. Default value is 1.
+        /// <p>Concurrency of a single instance. Default value: 1.</p>
         /// </summary>
         [JsonProperty("Concurrency")]
         public long? Concurrency{ get; set; }
@@ -64,6 +75,8 @@ namespace TencentCloud.Teo.V20220901.Models
         {
             this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
             this.SetParamSimple(map, prefix + "HardwareSpec", this.HardwareSpec);
+            this.SetParamSimple(map, prefix + "HardwareSpecId", this.HardwareSpecId);
+            this.SetParamObj(map, prefix + "HardwareConfig.", this.HardwareConfig);
             this.SetParamObj(map, prefix + "AutoScalingConfig.", this.AutoScalingConfig);
             this.SetParamObj(map, prefix + "ManualInstanceConfig.", this.ManualInstanceConfig);
             this.SetParamSimple(map, prefix + "Concurrency", this.Concurrency);

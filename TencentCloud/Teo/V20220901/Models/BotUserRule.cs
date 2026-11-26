@@ -25,103 +25,103 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 
+        /// Rule name can only contain English characters, digits, and underscores, and cannot begin with an underscore.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// The action. Values:
-        /// <li>`drop`: Block the request</li>
-        /// <li>`monitor`: Observe</li>
-        /// <li>`trans`: Allow</li>
-        /// <li>`redirect`: Redirect the request</li>
-        /// <li>`page`: Return the specified page</li>
-        /// <li>`alg`: JavaScript challenge</li>
-        /// <li>`captcha`: Managed challenge</li>
-        /// <li>`random`: Handle the request randomly by the weight</li>
-        /// <li>`silence`: Keep the connection but do not response to the client</li>
-        /// <li>`shortdelay`: Add a short latency period</li>
-        /// <li>`longdelay`: Add a long latency period</li>
+        /// Disposal actions. Valid values:
+        /// <li>drop: block;</li>
+        /// <li>monitor: observation;</li>
+        /// <li>trans: pass;</li>
+        /// <li>redirect: Redirection;</li>
+        /// <li>page: Specified page;</li>
+        /// <li>alg: JavaScript challenge;</li>
+        /// <li>captcha: hosted challenge;</li>
+        /// <li>random: Random disposal;</li>
+        /// <li>silence: silence;</li>
+        /// <li>shortdelay: short-term response;</li>
+        /// <li>longdelay: long-time response.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// The rule status. Values:
-        /// <li>`on`: Enabled</li>
-        /// <li>`off`: Disabled</li>Default value: `on`
+        /// Rule status. Valid values:
+        /// <li>`on`: Take effect;</li>
+        /// <li>off: Not effective.</li>Default on takes effect.
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
 
         /// <summary>
-        /// Details of the rule.
+        /// Rule details.
         /// </summary>
         [JsonProperty("AclConditions")]
         public AclCondition[] AclConditions{ get; set; }
 
         /// <summary>
-        /// The rule weight. Value range: 0-100.
+        /// Rule weight. Value range: 0-100.
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// Rule ID, which is only used as an output parameter.
+        /// Rule Id. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// [Currently unavailable] Specify the random action and percentage.
+        /// Disposal method and proportion of random disposal. Optional for non-random disposal. Not currently supported.
         /// </summary>
         [JsonProperty("ExtendActions")]
         public BotExtendAction[] ExtendActions{ get; set; }
 
         /// <summary>
-        /// The filter. Values:
-        /// <li>`sip`: Client IP</li>
-        /// This parameter is left empty by default.
+        /// Filter word. Valid values:
+        /// <li>sip: Client IP.</li>
+        /// Defaults to an empty string.
         /// </summary>
         [JsonProperty("FreqFields")]
         public string[] FreqFields{ get; set; }
 
         /// <summary>
-        /// The update time, which is only used as an output parameter.
+        /// Update time. For output usage only.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// Query scope. Values:
-        /// <li>`source_to_eo`: (Response) Traffic going from the origin to EdgeOne.</li>
-        /// <li>`client_to_eo`: (Request) Traffic going from the client to EdgeOne.</li>
-        /// Default: `source_to_eo`.
+        /// Statistical scope. Valid values:
+        /// <li>source_to_eo: (Response) Origin server to EdgeOne;</li>
+        /// <li>client_to_eo: (request) Client to EdgeOne.</li>
+        /// Default value: source_to_eo.
         /// </summary>
         [JsonProperty("FreqScope")]
         public string[] FreqScope{ get; set; }
 
         /// <summary>
-        /// Name of the custom return page. It's required when `Action=page`.
+        /// Name of the custom return page. Required when Action is page, and cannot be empty.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// ID of custom response. The ID can be obtained via the `DescribeCustomErrorPages` API. It's required when `Action=page`.	
+        /// Custom response Id, which can be obtained through the customized error page list interface. The default value is `default`, which uses the system default page. Required and cannot be empty when Action is `page`.	
         /// </summary>
         [JsonProperty("CustomResponseId")]
         public string CustomResponseId{ get; set; }
 
         /// <summary>
-        /// The response code to trigger the return page. It's required when `Action=page`. Value: 100-600. 3xx response codes are not supported. Default value: 567.
+        /// Custom response code for the return to page. Required when Action is page, and cannot be empty. Value range: 100–600. 3xx response codes are not supported. Default value: 567.
         /// </summary>
         [JsonProperty("ResponseCode")]
         public long? ResponseCode{ get; set; }
 
         /// <summary>
-        /// The redirection URL. It's required when `Action=redirect`.
+        /// Address for redirection. Required when Action is `redirect` and cannot be empty.
         /// </summary>
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }

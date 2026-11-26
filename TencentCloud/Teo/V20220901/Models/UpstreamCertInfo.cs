@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public MutualTLS UpstreamMutualTLS{ get; set; }
 
         /// <summary>
-        /// In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+        /// In the origin certificate verification scenario, this field is the CA certificate used by the EO node to verify the origin. It is deployed in the EO node and used for the EO node to authenticate the server certificate. As an input parameter, leave it blank to indicate retaining the original configuration.
         /// </summary>
         [JsonProperty("UpstreamCertificateVerify")]
         public OriginCertificateVerify UpstreamCertificateVerify{ get; set; }

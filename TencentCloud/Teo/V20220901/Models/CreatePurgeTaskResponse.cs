@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the task.
+        /// Task ID.
         /// </summary>
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
         /// <summary>
-        /// List of failed tasks and reasons.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// List of failed tasks and causes.
         /// </summary>
         [JsonProperty("FailedList")]
         public FailReason[] FailedList{ get; set; }

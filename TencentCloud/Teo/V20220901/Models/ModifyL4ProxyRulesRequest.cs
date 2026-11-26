@@ -31,14 +31,14 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy instance ID.
+        /// Layer 4 Proxy Instance ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// List of forwarding rules. A single request supports up to 200 forwarding rules.
-        /// Note: When L4ProxyRule is used here, RuleId is a required field; Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are all optional fields. No modification is made when no value is specified for those fields. Status should not be filled.
+        /// Forwarding rule list. Supports up to 200 forwarding rules at a time.
+        /// Note: When L4ProxyRule is used here, RuleId is a required field. Protocol, PortRange, OriginType, OriginValue, OriginPortRange, ClientIPPassThroughMode, SessionPersist, SessionPersistTime, and RuleTag are optional fields. Retain existing value if not specified. Status should not be filled.
         /// </summary>
         [JsonProperty("L4ProxyRules")]
         public L4ProxyRule[] L4ProxyRules{ get; set; }

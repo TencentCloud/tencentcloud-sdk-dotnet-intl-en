@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteOfflineLogRecordRequest : AbstractModel
+    public class WebSecurityTemplates : AbstractModel
     {
         
         /// <summary>
-        /// Unique project key for reporting
+        /// <p>ID of the policy template</p>
         /// </summary>
-        [JsonProperty("ProjectKey")]
-        public string ProjectKey{ get; set; }
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
 
         /// <summary>
-        /// Offline log file ID
+        /// <p>Policy template name. It consists of Chinese, English, digits, and underscores. It cannot begin with an underscore and its length cannot exceed 32 characters.</p>
         /// </summary>
-        [JsonProperty("FileID")]
-        public string FileID{ get; set; }
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
+
+        /// <summary>
+        /// <p>Policy settings of a policy template apply to all domain names associated with the template.</p>
+        /// </summary>
+        [JsonProperty("Policy")]
+        public SecurityPolicy Policy{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectKey", this.ProjectKey);
-            this.SetParamSimple(map, prefix + "FileID", this.FileID);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
+            this.SetParamObj(map, prefix + "Policy.", this.Policy);
         }
     }
 }

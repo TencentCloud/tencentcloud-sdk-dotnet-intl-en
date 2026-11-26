@@ -25,23 +25,23 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site to which the shared CNAME belongs.	
+        /// ID of the site associated with the shared CNAME.	
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Shared CNAME prefix. Enter a valid domain name prefix, such as "test-api" and "test-api.com". A maximum of 50 characters are allowed. 
+        /// Share the CNAME prefix. Enter a valid domain name prefix, for example, "test-api" or "test-api.com", limited to 50 characters.
         /// 
-        /// Complete format of the shared CNAME: '<Custom prefix>+<A 12-character random string in ZoneId>+share.dnse[0-5].com'. 
+        /// The full format of a shared CNAME is: `<custom prefix>+<12-bit random string in zoneid>+share.dnse[0-5].com`.
         /// 
-        /// For example, if the prefix is example.com, EdgeOne will create the shared CNAME: example.com.sai2ig51kaa5.share.dnse2.com.
+        /// For example, if the prefix input is example.com, EdgeOne will create a shared CNAME for you: example.com.sai2ig51kaa5.share.dnse2.com.
         /// </summary>
         [JsonProperty("SharedCNAMEPrefix")]
         public string SharedCNAMEPrefix{ get; set; }
 
         /// <summary>
-        /// Description. It supports 1-50 characters.
+        /// Description. Enter 1-50 characters.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

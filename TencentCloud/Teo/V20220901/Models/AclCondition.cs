@@ -25,59 +25,59 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Filters: 
-        /// <li>`host`: Request domain name;</li>
-        /// <li>`sip`: Client IP;</li>
-        /// <li>`ua`: User-Agent;</li>
-        /// <li>`cookie`: Cookie;</li>
-        /// <li>`cgi`: CGI script;</li>
-        /// <li>`xff`: XFF header;</li></li>
-        /// <li>`url`: Request URL;<li></li>
-        /// <li>`accept`: Request content type;</li>
-        /// <li>`method`: Request method<;/li>
-        /// <li>`header`: Request header;</li>
-        /// <li>`app_proto`: Application layer protocol;</li>
-        /// <li>`sip_proto`: Network layer protocol;</li>
-        /// <li>`uabot`: UA rules (only available in custom bot rules);</li>
-        /// <li>`idcid`: IDC rules (only available in custom bot rules);</li>
-        /// <li>`sipbot`: Search engine rules (only available in custom bot rules);</li>
-        /// <li>`portrait`: Client reputation (only available in custom bot rules);</li>
-        /// <li>`header_seq`: Header sequence (only available in custom bot rules);</li>
-        /// <li>`hdr`: Request body (only available in custom Web protection rules). </li>
+        /// Matching field. Valid values:
+        /// <li>host: request domain name;</li>
+        /// <li>sip: Client IP;</li>
+        /// <li>ua:User-Agent;</li>
+        /// <li>cookie: Session cookie;</li>
+        /// <li>cgi: CGI script;</li>
+        /// <li>xff: XFF extension header;</li>
+        /// <li>`url`: Request URL;
+        /// <li>accept: request content type;</li>
+        /// <li>method: request method;</li>
+        /// <li>header: request header;</li>
+        /// <li>app_proto: application layer protocol;</li>
+        /// <li>sip_proto: network layer protocol;</li>
+        /// <li>uabot: UA feature rule, available only for bot custom rules;</li>
+        /// <li>idcid: IDC rule, only available for bot custom rules;</li>
+        /// <li>sipbot: search engine rule, available only for bot custom rules;</li>
+        /// <li>portrait: profile analysis, available only for bot custom rules;</li>
+        /// <li>header_seq: Request header sequence, only available for bot custom rules;</li>
+        /// <li>hdr: Request body, available only for custom rules in Web protection.</li>
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+        /// Matching string. When MatchFrom is header, the key of the header can be set to this parameter.
         /// </summary>
         [JsonProperty("MatchParam")]
         public string MatchParam{ get; set; }
 
         /// <summary>
-        /// The logical operator. Values:
-        /// <li>`equal`: Value equals</li>
-        /// <li>`not_equal`: Value not equals</li>
-        /// <li>`include`: String contains</li>
-        /// <li>`not_include`: String not contains</li>
-        /// <li>`match`: IP matches</li>
-        /// <li>`not_match`: IP not matches</li>
-        /// <li>`include_area`: Regions contain</li>
-        /// <li>`is_empty`: Value left empty</li>
-        /// <li>`not_exists`: Key fields not exist</li>
-        /// <li>`regexp`: Regex matches</li>
-        /// <li>`len_gt`: Value greater than</li>
-        /// <li>`len_lt`: Value smaller than</li>
-        /// <li>`len_eq`: Value equals</li>
-        /// <li>`match_prefix`: Prefix matches</li>
-        /// <li>`match_suffix`: Suffix matches</li>
-        /// <li>`wildcard`: Wildcard</li>
+        /// Matching relationship. Valid values:
+        /// <li>equal: string equals;</li>
+        /// <li>not_equal: value not equal to;</li>
+        /// <li>include: string containing;</li>
+        /// <li>not_include: string does not contain;</li>
+        /// <li>match: ip match;</li>
+        /// <li>not_match: ip not matched;</li>
+        /// <li>include_area: region inclusion;</li>
+        /// <li>is_empty: field with null value;</li>
+        /// <li>not_exists: key field not found;</li>
+        /// <li>regexp: regular expression matching;</li>
+        /// <li>len_gt: value greater than;</li>
+        /// <li>len_lt: value is less than;</li>
+        /// <li>len_eq: value equal to;</li>
+        /// <li>match_prefix: prefix match;</li>
+        /// <li>match_suffix: suffix matching;</li>
+        /// <li>wildcard: wildcard.</li>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// The content to match.
+        /// Matching content.
         /// </summary>
         [JsonProperty("MatchContent")]
         public string MatchContent{ get; set; }

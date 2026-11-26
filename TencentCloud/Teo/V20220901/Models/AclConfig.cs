@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The custom rule.
+        /// User-defined rules.
         /// </summary>
         [JsonProperty("AclUserRules")]
         public AclUserRule[] AclUserRules{ get; set; }
 
         /// <summary>
-        /// Managed custom rules.
+        /// Managed custom rule
         /// </summary>
         [JsonProperty("Customizes")]
         public AclUserRule[] Customizes{ get; set; }

@@ -25,49 +25,55 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Function ID.
+        /// <p>Function ID.</p>
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Zone ID.
+        /// <p>Site ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Function name.
+        /// <p>Function name.</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Function description.
+        /// <p>Function description.</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// Function content.
+        /// <p>Function content.</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// Default domain name of a function.
+        /// <p>Default domain name of a function.</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+        /// <p>List of regional access restrictions on the default domain name of edge functions due to compliance issues.</p>
+        /// </summary>
+        [JsonProperty("DomainComplianceRestrictions")]
+        public ComplianceRestriction[] DomainComplianceRestrictions{ get; set; }
+
+        /// <summary>
+        /// <p>Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
+        /// <p>Modification time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -84,6 +90,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArrayObj(map, prefix + "DomainComplianceRestrictions.", this.DomainComplianceRestrictions);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

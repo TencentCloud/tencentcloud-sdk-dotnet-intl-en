@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of query results.
+        /// Total number of entries in the query result.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// The list of cached L7 top-ranked traffic data.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Data list of top N Layer-7 cache traffic volumes.
         /// </summary>
         [JsonProperty("Data")]
         public TopDataRecord[] Data{ get; set; }

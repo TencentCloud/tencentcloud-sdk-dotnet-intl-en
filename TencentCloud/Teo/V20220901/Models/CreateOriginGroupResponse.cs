@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The ID of the origin group.
+        /// Origin server group ID.
         /// </summary>
         [JsonProperty("OriginGroupId")]
         public string OriginGroupId{ get; set; }

@@ -25,71 +25,71 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Settlement currency. Values:
-        /// <li>`CNY`: Settled by Chinese RMB;</li>
-        /// <li>`USD`: Settled by US dollars.</li>
+        /// Settlement currency type. Valid values:
+        /// <li> CNY: settlement in RMB; </li>
+        /// <li> USD: Dollar settlement.</li>
         /// </summary>
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
         /// <summary>
-        /// Traffic quota of the plan. It includes the traffic for security acceleration, content acceleration and smart acceleration. Unit: byte.
+        /// Total traffic included in the package. This value is the sum of security acceleration traffic, content acceleration traffic, and smart acceleration traffic (unit: byte).
         /// </summary>
         [JsonProperty("Flux")]
         public ulong? Flux{ get; set; }
 
         /// <summary>
-        /// Settlement cycle. Values:
-        /// <li>`y`: Settled by year;</li>
-        /// <li>`m`: Settled by month;</li>
-        /// <li>`h`: Settled by hour;</li>
-        /// <li>`M`: Settled by minute;</li>
-        /// <li>`s`: Settled by second.</li>
+        /// Billing cycle. Valid values:
+        /// <li> y: settle by year; </li>
+        /// <li> m: monthly settlement;</li>
+        /// <li> h: settled by hour; </li>
+        /// <li> M: settle by minute;</li>
+        /// <li> s: settle by second. </li>
         /// </summary>
         [JsonProperty("Frequency")]
         public string Frequency{ get; set; }
 
         /// <summary>
-        /// The plan option. Values:
-        /// <li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
-        /// <li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-        /// <li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
-        /// <li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-        /// <li>`sta`: Standard plan that supports content delivery network over the globe.</li>
-        /// <li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
-        /// <li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
-        /// <li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
-        /// <li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
-        /// <li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
-        /// <li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
-        /// <li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+        /// Package type. Valid values:
+        /// <li> sta: Global content delivery network (excluding Chinese mainland) Standard Edition Plan; </li>
+        /// <li> sta_with_bot: Standard Edition Plan of the global content delivery network (excluding Chinese mainland) with bundled bot management;</li>
+        /// <li> sta_cm: CDN Standard Edition Plan for the Chinese mainland; </li>
+        /// <li> sta_cm_with_bot: CDN Standard Edition Plan for Chinese mainland with bundled bot management;</li>
+        /// <li> sta_global: Global content delivery network (including Chinese mainland) Standard Edition Plan; </li>
+        /// <li> sta_global_with_bot: Standard Edition Plan for global content delivery network (including Chinese mainland) with bundled bot management;</li>
+        /// <li> ent: Enterprise plan of the global content delivery network (excluding Chinese mainland); </li>
+        /// <li> ent_with_bot: Global content delivery network (excluding Chinese mainland) enterprise package with bundled bot management;</li>
+        /// <li> ent_cm: Enterprise edition package for CDN in Chinese mainland; </li>
+        /// <li> ent_cm_with_bot: CDN enterprise package with bundled bot management in the Chinese mainland;</li>
+        /// <li> ent_global: global content delivery network (including Chinese mainland) enterprise package; </li>
+        /// <li> ent_global_with_bot: Global content delivery network (including Chinese mainland) enterprise package with bundled bot management.</li>
         /// </summary>
         [JsonProperty("PlanType")]
         public string PlanType{ get; set; }
 
         /// <summary>
-        /// Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
+        /// Package pricing (unit: cent).
         /// </summary>
         [JsonProperty("Price")]
         public float? Price{ get; set; }
 
         /// <summary>
-        /// Quota on security acceleration requests
+        /// Request count included in the package. This is the security acceleration request count. (Unit: count).
         /// </summary>
         [JsonProperty("Request")]
         public ulong? Request{ get; set; }
 
         /// <summary>
-        /// Number of sites to be bound to the plan
+        /// Number of sites that can be bound to the package.
         /// </summary>
         [JsonProperty("SiteNumber")]
         public ulong? SiteNumber{ get; set; }
 
         /// <summary>
-        /// The acceleration region. Values:
-        /// <li>`mainland`: Chinese mainland</li>
-        /// <li>`overseas`: Global (Chinese mainland not included)</li>
-        /// <li>`global`: Global (Chinese mainland included)</li>
+        /// Acceleration region type of the package. Valid values:
+        /// <li>mainland: Chinese mainland;</li>
+        /// <li>overseas: global (excluding the Chinese mainland);</li>
+        /// <li> global: worldwide (including Chinese mainland). </li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

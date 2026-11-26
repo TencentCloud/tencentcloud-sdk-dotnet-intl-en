@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Log details list that meets the log match condition.</p>
+        /// <p>List of log details that meet the log match conditions.</p>
         /// </summary>
         [JsonProperty("LogDetail")]
         public LogItem[] LogDetail{ get; set; }
 
         /// <summary>
-        /// <p>Total number of logs that meet the match condition.</p>
+        /// <p>Total number of logs that meet the log match condition.</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

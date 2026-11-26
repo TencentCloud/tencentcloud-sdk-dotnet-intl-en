@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of certificates
+        /// Total number of certificates.
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// List of default certificates
+        /// Default certificate list.
         /// </summary>
         [JsonProperty("DefaultServerCertInfo")]
         public DefaultServerCertInfo[] DefaultServerCertInfo{ get; set; }

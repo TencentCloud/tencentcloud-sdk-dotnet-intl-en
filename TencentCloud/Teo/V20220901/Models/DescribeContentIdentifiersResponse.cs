@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total number of content identifiers that meet the filter conditions.	
+        /// Total number of unique identifiers of content that meet filtering criteria.	
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Detailed content identifier list.
+        /// Content identifier detailed content list.
         /// </summary>
         [JsonProperty("ContentIdentifiers")]
         public ContentIdentifier[] ContentIdentifiers{ get; set; }

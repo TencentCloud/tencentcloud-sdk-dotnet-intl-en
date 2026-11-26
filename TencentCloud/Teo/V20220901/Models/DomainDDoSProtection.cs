@@ -31,9 +31,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Standalone DDoS switch of the domain. valid values:.
-        /// <li>on: enabled;</li>.
-        /// <li>off: closed.</li>.
+        /// Standalone DDoS switch of the domain. Value:
+        /// <li>`on`: enabled;</li>
+        /// <li>off: closed.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

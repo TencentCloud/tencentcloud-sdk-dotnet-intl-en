@@ -25,39 +25,39 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The rule ID.
+        /// Rule ID.
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// The rule name. It is a string that can contain 1–255 characters.
+        /// Rule name. The name string must be 1 to 255 characters in length.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule status. Values:
-        /// <li>`enable`: Enabled</li>
-        /// <li>`disable`: Disabled</li>
+        /// Rule status. Valid values:
+        /// <li> enable: enable; </li>
+        /// <li> disable: disabled. </li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The rule content.
+        /// Rule content.
         /// </summary>
         [JsonProperty("Rules")]
         public Rule[] Rules{ get; set; }
 
         /// <summary>
-        /// The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+        /// Rule priority. A larger value indicates higher priority. Minimum value: 1.
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }
 
         /// <summary>
-        /// Tag of the rule.
+        /// Rule tag.
         /// </summary>
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }

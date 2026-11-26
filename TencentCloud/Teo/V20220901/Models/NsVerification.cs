@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The DNS server address assigned to the user when connecting a site to EO via NS. You need to switch the NameServer of the domain name to this address.
+        /// DNS server address assigned to the user for NS access. Switch the domain's NameServer to this address.
         /// </summary>
         [JsonProperty("NameServers")]
         public string[] NameServers{ get; set; }

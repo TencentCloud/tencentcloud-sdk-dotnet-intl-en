@@ -25,46 +25,45 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone id.
-        /// .
-        /// If you want to quickly submit targets urls under different sites, you can set it to *, but the account calling this api must have permission for all site resources under the main account.
+        /// Zone ID.
+        /// If you wish to quickly submit Targets Url under different sites, you can fill in *, but the account calling the API must have permission for all site resources under the root account.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Node cache clearing type, valid values:
+        /// Node cache clearing type, with values:
         /// <li>purge_url: URL refresh;</li>
-        /// <li>purge_prefix: Directory refresh.</li>
+        /// <li>purge_prefix: directory refresh;</li>
         /// <li>purge_host: Hostname refresh;</li>
-        /// <li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
-        /// <li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+        /// <li>purge_all: cache purge for all under the site (when this value is used, ZoneId input parameter * is not supported);</li>
+        /// <li>purge_cache_tag: cache-tag refresh.</li>For cache purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Node cache clearing method is valid for directory refresh, Hostname refresh, and refresh all cache types. valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li> <li> delete: refresh node resources regardless of whether resources under the directory are updated.</li> default value: invalidate.
+        /// Node cache purge method, valid for directory refresh, Hostname refresh, and refresh all cache types. Valid values: <li> invalidate: refresh only resources that have been updated under the directory;</li><li> delete: refresh node resources regardless of whether resources under the directory are updated.</li>Default value: invalidate.
         /// </summary>
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
         /// <summary>
-        /// The list of resources to purge cache, such as https://www.example.com/example.jpg, must carry protocol information. the format for multi-elements depends on the type of cache purging. refer to the following API call example.  <li>the number of tasks that can be submitted at a time is limited by the billing package quota. check [EO billing package](https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).</li>.
+        /// List of resources for cache purging, for example, https://www.example.com/example.jpg. Protocol information must be included. The format of additional elements depends on the type of cache purging. Refer to the API call example below.<li>The number of tasks that can be submitted at a time is limited by the billing package quota. Check [EO billing packages](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).</li>
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }
 
         /// <summary>
-        /// Specifies whether to transcode non-ASCII URLs according to RFC3986.
-        /// Note that if it’s enabled, the purging is based on the converted URLs.
+        /// If transcoding exists, only delete the resources that match after transcoding.
+        /// If the content contains characters in a non-ASCII character set, enable this switch for encoding conversion (the encoding rule adheres to RFC3986).
         /// </summary>
         [JsonProperty("EncodeUrl")]
         [System.Obsolete]
         public bool? EncodeUrl{ get; set; }
 
         /// <summary>
-        /// The parameter is required when the node cache clearing type is set to purge_cache_tag, and the input value is the domain name.
+        /// This parameter is required when the node cache purge type is set to purge_cache_tag. The input value is a domain name.
         /// </summary>
         [JsonProperty("CacheTag")]
         public CacheTag CacheTag{ get; set; }

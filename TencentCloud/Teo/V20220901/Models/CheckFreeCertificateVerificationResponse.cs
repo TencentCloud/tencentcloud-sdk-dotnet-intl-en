@@ -25,20 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the domain name to which the certificate is issued when the free certificate application succeeds.
-        /// Note: only one free certificate can be applied for a domain name. if a wildcard certificate has been applied for the domain name, its subdomains will use the wildcard certificate.
+        /// Domain name to which the certificate is issued when the free certificate application succeeds.
+        /// Note: A domain name can only be used to apply for one free certificate. If a free certificate has already been applied for a wildcard domain, its subdomains will match and use the wildcard certificate.
         /// </summary>
         [JsonProperty("CommonName")]
         public string CommonName{ get; set; }
 
         /// <summary>
-        /// Specifies the signature algorithm used by the certificate when the free certificate application succeeds. currently only support RSA 2048.
+        /// Signature algorithm used by the free certificate when the application succeeds. Currently only support RSA 2048.
         /// </summary>
         [JsonProperty("SignatureAlgorithm")]
         public string SignatureAlgorithm{ get; set; }
 
         /// <summary>
-        /// Expiration time of the certificate when the free certificate application is successful. the time is in coordinated universal time (UTC), following the ISO 8601 standard date and time format.
+        /// Expiration time of the certificate after a free certificate application succeeds. The time is in Coordinated Universal Time (UTC), following the ISO 8601 date and time format.
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

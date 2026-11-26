@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Describes the currently effective IP range for origin servers.
+        /// Currently effective origin-pull IP range.
         /// </summary>
         [JsonProperty("MultiPathGatewayCurrentOriginACL")]
         public MultiPathGatewayCurrentOriginACL MultiPathGatewayCurrentOriginACL{ get; set; }
 
         /// <summary>
-        /// When the origin IP range is updated, this field will be returned with the next version's effective origin IP range, including a comparison with the current origin IP range. this field is empty if not updated.
+        /// When the origin-pull IP range is updated, this field will return the origin-pull IP range that will take effect in the next version, including a contrast with the current origin-pull IP range. If there is no update, this field is empty.
         /// </summary>
         [JsonProperty("MultiPathGatewayNextOriginACL")]
         public MultiPathGatewayNextOriginACL MultiPathGatewayNextOriginACL{ get; set; }

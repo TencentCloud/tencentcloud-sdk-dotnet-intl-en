@@ -25,55 +25,43 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the acceleration domain name.
+        /// <p>Zone ID of the acceleration domain name.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Offset for paginated queries. Default value: 0.
+        /// <p>The offset of paginated query. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// Limit on paginated queries. Default value: 20. Maximum value: 200.
+        /// <p>Paginated query limit. Default value: 20, maximum value: 200.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Filter criteria. The maximum number of Filters.Values is 20. If this parameter is not input, all domain name information under the current zone-id will be returned. The detailed filter criteria are as follows:
-        /// <li>domain-name: Filter by acceleration domain name;</li>
-        /// <li>origin-type: Filter by origin server type;</li>
-        /// <li>origin: Filter by primary origin server address;</li>
-        /// <li>backup-origin: Filter by replica origin server address;</li>
-        /// <li>domain-cname: Filter by CNAME;</li>
-        /// <li>share-cname: Filter by shared CNAME.</li>
+        /// <p>Filter criteria. The maximum number of Filters.Values is 20. If this parameter is left empty, all domain information under the current zone-id is returned. The detailed filter criteria are as follows:</p><li>domain-name: Filter by acceleration domain name;</li><li>origin-type: Filter by origin server type;</li><li>origin: Filter by primary origin server address;</li><li>backup-origin: Filter by secondary origin server address;</li><li>domain-cname: Filter by CNAME;</li><li>share-cname: Filter by shared CNAME;</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// Sort the returned results according to this field. Values include:
-        /// <li>`created_on`: Creation time of the acceleration domain name</li>
-        /// <li>`domain-name`: (Default) Acceleration domain name.</li> 
+        /// <p>Sort returned results by this field. Valid values:</p><li>created_on: acceleration domain name creation time;</li><li>domain-name: acceleration domain name.</li>If left empty, returned results are sorted by domain-name by default.
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// Sort direction. If the field value is number, sort by the numeric value. If the field value is text, sort by the ascill code. Values include:
-        /// <li>`asc`: Ascending order.</li>
-        /// <li>`desc`: Descending order.</li> Default value: `asc`.
+        /// <p>Sorting order. If the field value is a number, sort by its size. If the field value is text, sort by ASCII code size. Valid values:</p><li>asc: ascending order;</li><li>desc: descending order.</li>Use default value asc if not specified.
         /// </summary>
         [JsonProperty("Direction")]
         public string Direction{ get; set; }
 
         /// <summary>
-        /// The match mode. Values:
-        /// <li>`all`: Return all matches.</li>
-        /// <li>`any`: Return any match.</li>Default value: `all`.
+        /// <p>Match mode. Valid values:</p><li>all: return acceleration domain names that match all query conditions;</li><li>any: return acceleration domain names that match any query condition.</li>If left empty, the default value is all.
         /// </summary>
         [JsonProperty("Match")]
         public string Match{ get; set; }

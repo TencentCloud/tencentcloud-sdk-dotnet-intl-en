@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Details of policy configurations that reference the specified IP group.</p>
+        /// <p>Refer to the configuration message of the corresponding IP group.</p>
         /// </summary>
         [JsonProperty("References")]
         public IPGroupReference[] References{ get; set; }

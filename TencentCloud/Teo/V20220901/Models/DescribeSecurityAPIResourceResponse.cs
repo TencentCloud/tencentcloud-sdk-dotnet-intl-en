@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// API resource list.	
+        /// List of API resources.	
         /// </summary>
         [JsonProperty("APIResources")]
         public APIResource[] APIResources{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>List of site-level custom variables.</p>
+        /// <p>Site-level custom variable list.</p>
         /// </summary>
         [JsonProperty("CustomVariables")]
         public CustomVariable[] CustomVariables{ get; set; }

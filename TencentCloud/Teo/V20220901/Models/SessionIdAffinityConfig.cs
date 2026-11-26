@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Rum.V20210622.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateProjectResponse : AbstractModel
+    public class SessionIdAffinityConfig : AbstractModel
     {
         
         /// <summary>
-        /// Project ID
+        /// <p>Transmission location of the session ID parameter. If left empty, it defaults to Header.</p><p>Enumeration values:</p><ul><li>Header: Pass the parameter in the request header.</li></ul><p>Default value: Header.</p>
         /// </summary>
-        [JsonProperty("ID")]
-        public ulong? ID{ get; set; }
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
 
         /// <summary>
-        /// Unique project key
+        /// <p>Request header name for transmitting the session ID. Required when Source is Header.<br>If left empty, it defaults to EO-Infer-Session-Id.</p><p>Input limits: 1-64 characters in length. Only letters, digits, and hyphens are supported.</p><p>Default value: EO-Infer-Session-Id.</p>
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
-
-        /// <summary>
-        /// The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("HeaderName")]
+        public string HeaderName{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Rum.V20210622.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "HeaderName", this.HeaderName);
         }
     }
 }

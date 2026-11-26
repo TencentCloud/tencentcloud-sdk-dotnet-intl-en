@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Zone ID
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -38,28 +38,28 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Function selection configuration type.
-        /// <Li>Direct: specifies the execution function directly.</li>.
-        /// <Li>Weight: selects the function based on weight ratio.</li>.
-        /// <li> region: specifies the country/region selection function based on client IP.</li>.
-        /// Specifies the default value as direct when left blank.
+        /// <li> direct: directly specify the execution function;</li>
+        /// <li> weight: Select a function based on the weight ratio;</li>
+        /// <li> region: country/region selection function based on client IP.</li>
+        /// Default value: direct.
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }
 
         /// <summary>
-        /// Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+        /// ID of the function to execute. This parameter is valid only when TriggerType is direct or not specified.
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+        /// Function selection configuration based on client IP country/region. This parameter is valid only when TriggerType is region, and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
         /// </summary>
         [JsonProperty("RegionMappingSelections")]
         public FunctionRegionSelection[] RegionMappingSelections{ get; set; }
 
         /// <summary>
-        /// Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+        /// Weight-based function selection configuration. This parameter is valid only when TriggerType is weight, and WeightedSelections is required. The sum of all weights in WeightedSelections needs to be 100.
         /// </summary>
         [JsonProperty("WeightedSelections")]
         public FunctionWeightedSelection[] WeightedSelections{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The ID of the real-time log delivery task.
+        /// ID of a real-time log shipping task.
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

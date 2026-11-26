@@ -31,9 +31,9 @@ namespace TencentCloud.Teo.V20220901.Models
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Specifies the selected weight. value ranges from 0 to 100. the sum of all weights needs to be 100.
-        /// Specifies the calculation method for the select probability.
-        /// weight/100. for example, setting two functions A and B, among them A has A weight of 30, then B must be 70, finally the probability of selecting A is 30%, and the probability of selecting B is 70%.
+        /// Select a weight. Value range: 0-100. The sum of all weights must be 100.
+        /// Probability calculation method when selected:
+        /// weight/100. For example, if two functions A and B are set, and the weight of A is 30, then the weight of B must be 70. Finally, the probability of selecting A is 30%, and the probability of selecting B is 70%.
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

@@ -38,21 +38,21 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Function selection configuration type.
-        /// <Li>Direct: specifies the execution function directly.</li>.
-        /// <Li>Weight: selects the function based on weight ratio.</li>.
-        /// <li> region: specifies the country/region selection function based on client IP.</li>.
+        /// <li> direct: directly specify the execution function;</li>
+        /// <li> weight: select a function based on the weight ratio;</li>
+        /// <li> region: country/region selection function based on client IP.</li>
         /// </summary>
         [JsonProperty("TriggerType")]
         public string TriggerType{ get; set; }
 
         /// <summary>
-        /// Specifies the function ID to be executed. valid only when TriggerType is direct.
+        /// Specify the function ID to be executed. Valid when TriggerType is direct.
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// Specifies the name of the function executed.
+        /// Name of the function to execute.
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
@@ -64,7 +64,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public FunctionRegionSelection[] RegionMappingSelections{ get; set; }
 
         /// <summary>
-        /// Describes the function selection configuration based on weight.
+        /// Function selection configuration based on weight.
         /// </summary>
         [JsonProperty("WeightedSelections")]
         public FunctionWeightedSelection[] WeightedSelections{ get; set; }

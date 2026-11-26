@@ -26,24 +26,24 @@ namespace TencentCloud.Teo.V20220901.Models
         
         /// <summary>
         /// Parameter name. Valid values:
-        /// <li>`Action`: Required parameter for HTTP header modification when `RewirteAction` is selected for `RuleAction`.</li>
-        /// <li>`StatusCode`: Required parameter for the status code feature when `CodeAction` is selected for `RuleAction`.</li>
+        /// <li> Action: Parameters required to modify HTTP header. Select RewirteAction for RuleAction;</li>
+        /// <li> StatusCode: Parameters required for status code related features. Select CodeAction for RuleAction.</li>
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
         /// Parameter value type.
-        /// <li>`CHOICE`: The parameter value can be selected only from `Values`.</li>
-        /// <li>`CUSTOM_NUM`: The parameter value is a custom integer.</li>
-        /// <li>`CUSTOM_STRING`: The parameter value is a custom string.</li>
+        /// <li> CHOICE: The parameter value can only be selected from Values; </li>
+        /// <li> CUSTOM_NUM: The parameter value is user-customized, int type;</li>
+        /// <li>CUSTOM_STRING: The parameter value is user-customized, string type.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Valid values.
-        /// Note: If the value of `Id` is `StatusCode`, values in the array are all integer values. When entering a parameter value, enter the integer value of the string.
+        /// Optional parameter values.
+        /// Note: When the value of Id is StatusCode, the values in the array are integers. Fill in the parameter value as an integer in string format.
         /// </summary>
         [JsonProperty("Choices")]
         public string[] Choices{ get; set; }

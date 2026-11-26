@@ -25,22 +25,22 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Action to be executed. values:.
-        /// <Li>`Follow`: follow the request;</li>.
-        /// <Li>`Custom`: custom;</li>.
-        /// <Li>`Regex`: regular expression matching.</li>.
+        /// Execution action. Valid values:
+        /// <li>follow: follow request;</li>
+        /// <li>custom: Custom;</li>
+        /// <li>regex: regular expression matching.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Regular expression matching expression, length range is 1-1024.<br>note: when action is regex, this field is required; when action is follow or custom, this field is not required and will not take effect if filled.
+        /// Regular expression for matching, with a length range of 1–1024.<br>Note: This field is required when Action is regex. When Action is follow or custom, no need to specify this field, and it does not take effect if specified.
         /// </summary>
         [JsonProperty("Regex")]
         public string Regex{ get; set; }
 
         /// <summary>
-        /// Redirect target url, length range is 1-1024.<br>note: when action is regex or custom, this field is required; when action is follow, this field is not required and will not take effect if filled.
+        /// Target URL for redirection. Length range: 1–1024.<br>Note: This field is required when Action is regex or custom. When Action is follow, no need to specify this field, and it does not take effect if specified.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

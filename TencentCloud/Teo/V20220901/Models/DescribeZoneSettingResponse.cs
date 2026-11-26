@@ -25,8 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site configuration.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// Site configuration.
         /// </summary>
         [JsonProperty("ZoneSetting")]
         public ZoneSetting ZoneSetting{ get; set; }

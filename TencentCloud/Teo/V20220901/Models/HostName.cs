@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Target hostname configuration, valid values are:.
-        /// <Li>`Follow`: follow the request;</li>.
-        /// <Li>`Custom`: custom</li>.
+        /// Target HostName configuration. Valid values:
+        /// <li>follow: follow request;</li>
+        /// <li>custom: Custom.</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Custom value for target hostname, maximum length is 1024.<br>note: when action is custom, this field is required; when action is follow, this field is not effective.
+        /// custom value of the target HostName. Maximum length: 1024.<br>Note: This field is required when Action is custom, and it is ineffective when Action is follow.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

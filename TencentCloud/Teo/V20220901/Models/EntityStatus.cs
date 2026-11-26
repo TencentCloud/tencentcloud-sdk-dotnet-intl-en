@@ -25,20 +25,20 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Instance name. Only subdomain names are supported.
+        /// Instance name. Currently, only subdomains are available.
         /// </summary>
         [JsonProperty("Entity")]
         public string Entity{ get; set; }
 
         /// <summary>
-        /// Instance configuration status. Values:
-        /// <li>`online`: Configuration has taken effect;</li><li>`fail`: Configuration failed;</li><li>`process`: Configuration is being delivered. </li>
+        /// Instance configuration issuance status. Valid values:
+        /// <li>online: Configuration in effect;</li><li>fail: Configuration failure;</li><li>process: Configuration is being deployed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Message returned after the operation completed. 
+        /// Prompt for instance configuration distribution.
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }

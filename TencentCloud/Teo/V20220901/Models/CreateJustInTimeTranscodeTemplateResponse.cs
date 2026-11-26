@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Unique identifier of the instant transcoding template for jit transcoding URL concatenation.
+        /// Unique identifier of the JIT transcoding template, used for JIT transcoding URL concatenation.
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

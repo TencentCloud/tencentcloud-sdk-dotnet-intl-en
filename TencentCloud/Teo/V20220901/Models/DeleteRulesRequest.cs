@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// IDs of the rules to be deleted.
+        /// List of specified rule IDs to be deleted.
         /// </summary>
         [JsonProperty("RuleIds")]
         public string[] RuleIds{ get; set; }

@@ -25,27 +25,27 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Authentication parameter access key id.
+        /// Access Key ID authentication parameter.
         /// </summary>
         [JsonProperty("AccessKeyId")]
         public string AccessKeyId{ get; set; }
 
         /// <summary>
-        /// Authentication parameter secret access key.
+        /// Secret Access Key authentication parameter.
         /// </summary>
         [JsonProperty("SecretAccessKey")]
         public string SecretAccessKey{ get; set; }
 
         /// <summary>
-        /// Authentication version. values:.
-        /// <Li>V2: v2 version;</li>.
-        /// <Li>V4: v4 version.</li>.
+        /// Authentication version. Valid values:
+        /// <li>v2: v2 version;</li>
+        /// <li>v4: v4 version.</li>
         /// </summary>
         [JsonProperty("SignatureVersion")]
         public string SignatureVersion{ get; set; }
 
         /// <summary>
-        /// Region of the bucket.
+        /// Bucket region.
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

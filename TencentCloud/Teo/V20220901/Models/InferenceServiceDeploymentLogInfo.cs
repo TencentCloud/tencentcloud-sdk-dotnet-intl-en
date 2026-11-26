@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Message content of log messages.
+        /// Log message content.
         /// </summary>
         [JsonProperty("LogMessage")]
         public string LogMessage{ get; set; }

@@ -25,47 +25,47 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies whether CNAME acceleration is enabled. valid values:.
-        /// <Li>Enabled: specifies whether the feature is enabled.</li>.
-        /// <li>disabled: specifies that the feature is turned off.</li>.
+        /// Whether CNAME acceleration is enabled. Valid values:
+        /// <li> enabled: Enable;</li>
+        /// <li> disabled: Disable.</li>
         /// </summary>
         [JsonProperty("CnameSpeedUp")]
         public string CnameSpeedUp{ get; set; }
 
         /// <summary>
-        /// Existence of a site with the same name. valid values:.
-        /// <Li>0: no site with the same name exists.</li>.
-        /// <Li>Specifies the name already exists.</li>.
+        /// Existence of a site with the same name. Valid values:
+        /// <li> 0: No site with the same name exists;</li>
+        /// <li> 1: A site with the same name already exists.</li>
         /// </summary>
         [JsonProperty("IsFake")]
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// Ownership verification information. for sites with NS access type, switching the current NS server to the designated NS server of tencent cloud EdgeOne is deemed as passing the ownership verification. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+        /// Ownership verification information. For sites with NS access type, switching the current NS server to the NS server designated by Tencent Cloud EdgeOne is deemed as passing ownership verification. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }
 
         /// <summary>
-        /// Lists the NS servers currently in use by the selected site detected by EdgeOne.
+        /// List of NS servers currently in use by the site detected by EdgeOne.
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
 
         /// <summary>
-        /// Lists the NS servers allocated by tencent cloud EdgeOne. requires pointing the current site's NS servers to this address for the changes to take effect.
+        /// List of NS servers assigned by Tencent Cloud EdgeOne. Point the NS server of the current site to this address for the site to take effect.
         /// </summary>
         [JsonProperty("NameServers")]
         public string[] NameServers{ get; set; }
 
         /// <summary>
-        /// Specifies the user-customized NS server domain name information. if enabled, the NS needs to be pointed to this address in the registered vendor of the domains.
+        /// User-customized NS server domain info. If the custom NS service is enabled, the NS need to be pointed to this address at the domain name registered vendor.
         /// </summary>
         [JsonProperty("VanityNameServers")]
         public VanityNameServers VanityNameServers{ get; set; }
 
         /// <summary>
-        /// Describes the IP address information of the user-customized NS server.
+        /// IP address information corresponding to the user-customized NS server.
         /// </summary>
         [JsonProperty("VanityNameServersIps")]
         public VanityNameServersIps[] VanityNameServersIps{ get; set; }

@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Whether it is a fake site, with values:.
-        /// <Li>0: non-fake site.</li>.
-        /// <Li>1: fake site.</li>.
+        /// Whether it is a fake site. Valid values:
+        /// <li> 0: non-fake site</li>
+        /// <li> 1: Fake site.</li>
         /// </summary>
         [JsonProperty("IsFake")]
         public long? IsFake{ get; set; }
 
         /// <summary>
-        /// Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+        /// Ownership verification information. For details, see [Site/Domain Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         [JsonProperty("OwnershipVerification")]
         public OwnershipVerification OwnershipVerification{ get; set; }

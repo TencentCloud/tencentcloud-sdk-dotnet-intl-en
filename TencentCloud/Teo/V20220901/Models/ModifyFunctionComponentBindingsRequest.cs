@@ -38,16 +38,16 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Operation type. Valid values:
-        /// <li>bind: bind component;</li>
-        /// <li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action.</li>
+        /// <li>bind: Bind a component;</li>
+        /// <li>bind-override: Bind a component. If the binding already exists, it is a rebind action; otherwise, it is a bind action;</li>
         /// <li>unbind: Unbind a component;</li>
-        /// <li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed in bound list. If an empty list is passed in, clear all bindings.</li>
+        /// <li>rebind: Reset the binding relationship. Clear all existing bindings and set to the passed-in bound list. If an empty list is passed in, all bindings are cleared.</li>
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }
 
         /// <summary>
-        /// Bound list of function components to operate. When Operation is rebind and an empty list is input, it means to clear ALL bindings.
+        /// List of bound function components to manipulate. If Operation is rebind and an empty list is imported, it means clearing all bindings.
         /// </summary>
         [JsonProperty("FunctionComponentBindings")]
         public FunctionComponentBinding[] FunctionComponentBindings{ get; set; }

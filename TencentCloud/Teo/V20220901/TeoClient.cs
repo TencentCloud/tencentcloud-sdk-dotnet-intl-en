@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.intl.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1433";
+       private const string sdkVersion = "SDK_NET_3.0.1435";
 
         /// <summary>
         /// Client constructor.
@@ -54,17 +54,17 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to apply for a free certificate. If you need to proceed with DNS delegated verification or file verification, you can call this API to initiate the certificate application and obtain the corresponding verification content based on the application method. The order for API calls is as follows:.
-        /// Step 1: Call ApplyFreeCertificate, specify the verification method for free certificate application, and obtain the verification content.
-        /// Step 2: Configure the corresponding domain as verification content.
-        /// Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
-        /// Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
+        /// When applying for a free certificate, if you need to apply through DNS delegation verification or file verification, you can call this API to initiate the certificate application and get the corresponding verification content based on the application method. The order in which to call the API is as follows:
+        /// Step 1: Call ApplyFreeCertificate to specify the verification method for the free certificate application and obtain the verification content.
+        /// Step 2: Configure the content for the corresponding domain as required for verification.
+        /// Step 3: Call CheckFreeCertificateVerification for verification. The free certificate application is completed after verification passes.
+        /// Step 4: Call ModifyHostsCertificate to configure the domain name certificate with an EdgeOne free certificate.
         /// 
-        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
-        /// description:
-        /// - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
-        /// - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
-        /// - A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
+        /// For the introduction to application methods, see the referenced document: Free Certificate Application Description (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1) 
+        /// Description:
+        /// -Only the CNAME access mode can call this API to specify the free certificate application method. The NS/DNSPod hosting access mode uses automatic validation to apply for a free certificate, with no need to call this API.
+        /// -If you need to switch the verification method for a free certificate, you can call this API again to update it by changing the VerificationMethod field.
+        /// -A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, and then complete certificate authentication.
         /// </summary>
         /// <param name="req"><see cref="ApplyFreeCertificateRequest"/></param>
         /// <returns><see cref="ApplyFreeCertificateResponse"/></returns>
@@ -74,17 +74,17 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to apply for a free certificate. If you need to proceed with DNS delegated verification or file verification, you can call this API to initiate the certificate application and obtain the corresponding verification content based on the application method. The order for API calls is as follows:.
-        /// Step 1: Call ApplyFreeCertificate, specify the verification method for free certificate application, and obtain the verification content.
-        /// Step 2: Configure the corresponding domain as verification content.
-        /// Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
-        /// Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
+        /// When applying for a free certificate, if you need to apply through DNS delegation verification or file verification, you can call this API to initiate the certificate application and get the corresponding verification content based on the application method. The order in which to call the API is as follows:
+        /// Step 1: Call ApplyFreeCertificate to specify the verification method for the free certificate application and obtain the verification content.
+        /// Step 2: Configure the content for the corresponding domain as required for verification.
+        /// Step 3: Call CheckFreeCertificateVerification for verification. The free certificate application is completed after verification passes.
+        /// Step 4: Call ModifyHostsCertificate to configure the domain name certificate with an EdgeOne free certificate.
         /// 
-        /// The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
-        /// description:
-        /// - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
-        /// - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
-        /// - A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, then finish certificate authentication.
+        /// For the introduction to application methods, see the referenced document: Free Certificate Application Description (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1) 
+        /// Description:
+        /// -Only the CNAME access mode can call this API to specify the free certificate application method. The NS/DNSPod hosting access mode uses automatic validation to apply for a free certificate, with no need to call this API.
+        /// -If you need to switch the verification method for a free certificate, you can call this API again to update it by changing the VerificationMethod field.
+        /// -A domain name can only apply for one free certificate. After calling this API, the backend will trigger the free certificate application task. You need to complete the domain name verification info configuration within 2 days, and then complete certificate authentication.
         /// </summary>
         /// <param name="req"><see cref="ApplyFreeCertificateRequest"/></param>
         /// <returns><see cref="ApplyFreeCertificateResponse"/></returns>
@@ -95,7 +95,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a specific policy template.
+        /// Operate a security policy template. This API is used to bind or rebind a domain name to a designated policy template, or unbind it from a designated policy template.
         /// </summary>
         /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
         /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
@@ -105,7 +105,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a specific policy template.
+        /// Operate a security policy template. This API is used to bind or rebind a domain name to a designated policy template, or unbind it from a designated policy template.
         /// </summary>
         /// <param name="req"><see cref="BindSecurityTemplateToEntityRequest"/></param>
         /// <returns><see cref="BindSecurityTemplateToEntityResponse"/></returns>
@@ -116,7 +116,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
+        /// Used to bind or unbind a shared CNAME for an acceleration domain name. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
         /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
@@ -126,7 +126,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind/unbind a domain name to/from a shared CNAME. It is now only available to beta users.
+        /// Used to bind or unbind a shared CNAME for an acceleration domain name. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="BindSharedCNAMERequest"/></param>
         /// <returns><see cref="BindSharedCNAMEResponse"/></returns>
@@ -137,7 +137,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind a site to a plan.
+        /// Bind the selected site not bound to a package to an existing package.
         /// </summary>
         /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
         /// <returns><see cref="BindZoneToPlanResponse"/></returns>
@@ -147,7 +147,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bind a site to a plan.
+        /// Bind the selected site not bound to a package to an existing package.
         /// </summary>
         /// <param name="req"><see cref="BindZoneToPlanRequest"/></param>
         /// <returns><see cref="BindZoneToPlanResponse"/></returns>
@@ -158,8 +158,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the site access type is CNAME, all domain names under the site must configure CNAME records as specified by the CNAME domain assigned by EdgeOne.
-        /// You can obtain the designated CNAME domain name assigned by EdgeOne for the integration domain through this API, and validate the configuration status of the CNAME for the integration domain through this API.
+        /// When the site access type is CNAME, all domain names under the site must complete CNAME record configuration as specified by the CNAME domain assigned by EdgeOne.
+        /// This API is used to obtain the CNAME domain name assigned by EdgeOne for the integrated domain name, and to validate the CNAME configuration status of the integrated domain name.
         /// </summary>
         /// <param name="req"><see cref="CheckCnameStatusRequest"/></param>
         /// <returns><see cref="CheckCnameStatusResponse"/></returns>
@@ -169,8 +169,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the site access type is CNAME, all domain names under the site must configure CNAME records as specified by the CNAME domain assigned by EdgeOne.
-        /// You can obtain the designated CNAME domain name assigned by EdgeOne for the integration domain through this API, and validate the configuration status of the CNAME for the integration domain through this API.
+        /// When the site access type is CNAME, all domain names under the site must complete CNAME record configuration as specified by the CNAME domain assigned by EdgeOne.
+        /// This API is used to obtain the CNAME domain name assigned by EdgeOne for the integrated domain name, and to validate the CNAME configuration status of the integrated domain name.
         /// </summary>
         /// <param name="req"><see cref="CheckCnameStatusRequest"/></param>
         /// <returns><see cref="CheckCnameStatusResponse"/></returns>
@@ -181,8 +181,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
-        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+        /// This API is used to verify a free certificate and obtain the application result. If verification is passed, you can query the free certificate information for the corresponding domain through this API. If the application failed, this API will return the corresponding failure description.
+        /// After triggering the free certificate application API (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1), you can check the free certificate application result through this API. Once the free certificate application is successful, you need to configure it through the domain certificate configuration API (https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="CheckFreeCertificateVerificationRequest"/></param>
         /// <returns><see cref="CheckFreeCertificateVerificationResponse"/></returns>
@@ -192,8 +192,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
-        /// This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+        /// This API is used to verify a free certificate and obtain the application result. If verification is passed, you can query the free certificate information for the corresponding domain through this API. If the application failed, this API will return the corresponding failure description.
+        /// After triggering the free certificate application API (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1), you can check the free certificate application result through this API. Once the free certificate application is successful, you need to configure it through the domain certificate configuration API (https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
         /// </summary>
         /// <param name="req"><see cref="CheckFreeCertificateVerificationRequest"/></param>
         /// <returns><see cref="CheckFreeCertificateVerificationResponse"/></returns>
@@ -204,7 +204,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+        /// This API is used to confirm that the latest origin-pull IP ranges have been updated to the origin server firewall when the origin-pull IP ranges of the multi-channel security acceleration gateway change.
         /// </summary>
         /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
         /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
@@ -214,7 +214,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to confirm the latest origin IP range is updated to the origin server firewall when the multi-channel security acceleration gateway's origin IP range changes.
+        /// This API is used to confirm that the latest origin-pull IP ranges have been updated to the origin server firewall when the origin-pull IP ranges of the multi-channel security acceleration gateway change.
         /// </summary>
         /// <param name="req"><see cref="ConfirmMultiPathGatewayOriginACLRequest"/></param>
         /// <returns><see cref="ConfirmMultiPathGatewayOriginACLResponse"/></returns>
@@ -225,7 +225,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
+        /// This API is used to confirm that the latest origin-pull IP ranges have been updated to the origin server firewall when the origin-pull IP ranges change. After confirming the update to the latest origin-pull IP ranges, related change notifications will stop being pushed.
         /// </summary>
         /// <param name="req"><see cref="ConfirmOriginACLUpdateRequest"/></param>
         /// <returns><see cref="ConfirmOriginACLUpdateResponse"/></returns>
@@ -235,7 +235,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to confirm that the latest origin ACLs have been updated to the origin server firewall when the origin ACLs change. After confirming the update to the latest version, related change notifications will stop pushing.
+        /// This API is used to confirm that the latest origin-pull IP ranges have been updated to the origin server firewall when the origin-pull IP ranges change. After confirming the update to the latest origin-pull IP ranges, related change notifications will stop being pushed.
         /// </summary>
         /// <param name="req"><see cref="ConfirmOriginACLUpdateRequest"/></param>
         /// <returns><see cref="ConfirmOriginACLUpdateResponse"/></returns>
@@ -246,9 +246,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an acceleration domain name. 
+        /// After creating a site, you can create an acceleration domain name through this API. 
         /// 
-        /// For sites connected via the CNAME, if you have not verified the ownership of the domain name, the ownership verification information of the domain name is returned. To verify your ownership of the domain name, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// In CNAME mode, if site ownership verification is ongoing, this API will return domain ownership verification info. You can verify domain ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
         /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
@@ -258,9 +258,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an acceleration domain name. 
+        /// After creating a site, you can create an acceleration domain name through this API. 
         /// 
-        /// For sites connected via the CNAME, if you have not verified the ownership of the domain name, the ownership verification information of the domain name is returned. To verify your ownership of the domain name, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// In CNAME mode, if site ownership verification is ongoing, this API will return domain ownership verification info. You can verify domain ownership separately. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateAccelerationDomainRequest"/></param>
         /// <returns><see cref="CreateAccelerationDomainResponse"/></returns>
@@ -272,7 +272,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://www.tencentcloud.com/contact-us).
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -283,7 +283,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to create an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, please [contact us](https://www.tencentcloud.com/contact-us).
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
         /// <returns><see cref="CreateAliasDomainResponse"/></returns>
@@ -294,7 +294,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version to create layer 4 proxy instances (https://www.tencentcloud.com/document/product/1552/103417?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -304,7 +304,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version [CreateL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103417?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version to create layer 4 proxy instances (https://www.tencentcloud.com/document/product/1552/103417?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyResponse"/></returns>
@@ -315,7 +315,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see [Create Layer 4 Proxy Forwarding Rule].
+        /// ](https://www.tencentcloud.com/document/product/1552/103416?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -325,7 +326,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [CreateL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103416?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see [Create Layer 4 Proxy Forwarding Rule].
+        /// ](https://www.tencentcloud.com/document/product/1552/103416?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="CreateApplicationProxyRuleResponse"/></returns>
@@ -336,7 +338,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+        /// This API is used to create key-value indexes for delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If indexes have been created in CLS, this API will append indexes through merging.
         /// </summary>
         /// <param name="req"><see cref="CreateCLSIndexRequest"/></param>
         /// <returns><see cref="CreateCLSIndexResponse"/></returns>
@@ -346,7 +348,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create key-value indexes for relevant delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If such indexes have been created in CLS, this API will append indexes through merging.
+        /// This API is used to create key-value indexes for delivered log fields in the corresponding Tencent Cloud CLS log topic for a specified real-time log delivery task (task-id). If indexes have been created in CLS, this API will append indexes through merging.
         /// </summary>
         /// <param name="req"><see cref="CreateCLSIndexRequest"/></param>
         /// <returns><see cref="CreateCLSIndexResponse"/></returns>
@@ -357,7 +359,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// In version management mode, this API is used to create a new version of the specified configuration group.
+        /// In version management mode, this API is used to create a new version of a specified configuration group.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
@@ -367,7 +369,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// In version management mode, this API is used to create a new version of the specified configuration group.
+        /// In version management mode, this API is used to create a new version of a specified configuration group.
         /// </summary>
         /// <param name="req"><see cref="CreateConfigGroupVersionRequest"/></param>
         /// <returns><see cref="CreateConfigGroupVersionResponse"/></returns>
@@ -378,7 +380,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+        /// This API is used to create a content identifier. You can set the description, tag, and other information. At the same time, you need to bind an enterprise package for billing data statistics. A content identifier can only be bound to one billing package, while a billing package can bind multiple content identifiers. This functionality is only available to allowlisted users.
         /// </summary>
         /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
         /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
@@ -388,7 +390,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create content identifiers, where you can set descriptions, tags, and other information. It is also necessary to bind an enterprise edition package for billing data statistics. A content identifier can only bind one billing package, while a billing package can bind multiple content identifiers. This feature is only available to the allowlist.
+        /// This API is used to create a content identifier. You can set the description, tag, and other information. At the same time, you need to bind an enterprise package for billing data statistics. A content identifier can only be bound to one billing package, while a billing package can bind multiple content identifiers. This functionality is only available to allowlisted users.
         /// </summary>
         /// <param name="req"><see cref="CreateContentIdentifierRequest"/></param>
         /// <returns><see cref="CreateContentIdentifierResponse"/></returns>
@@ -441,7 +443,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
+        /// After a site is created and accessed in NS mode, you can create DNS records through this API.
         /// </summary>
         /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
         /// <returns><see cref="CreateDnsRecordResponse"/></returns>
@@ -451,7 +453,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// After creating a site and the site is accessed in NS mode, you can create DNS records through this API.
+        /// After a site is created and accessed in NS mode, you can create DNS records through this API.
         /// </summary>
         /// <param name="req"><see cref="CreateDnsRecordRequest"/></param>
         /// <returns><see cref="CreateDnsRecordResponse"/></returns>
@@ -462,7 +464,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a KV namespace in the specified site.
+        /// This API is used to create a KV namespace at a specified site.
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
@@ -472,7 +474,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a KV namespace in the specified site.
+        /// This API is used to create a KV namespace at a specified site.
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="CreateEdgeKVNamespaceResponse"/></returns>
@@ -504,7 +506,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create copies of specified edge functions. After creating copies, when client requests match configured trigger rules or the default domain name, you can access specific function copies by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
+        /// This API is used to create copies of a specified edge function. After creating copies, when client requests match the configured trigger rules or default domain name, you can access a specific function copy by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionReplicaRequest"/></param>
         /// <returns><see cref="CreateFunctionReplicaResponse"/></returns>
@@ -514,7 +516,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create copies of specified edge functions. After creating copies, when client requests match configured trigger rules or the default domain name, you can access specific function copies by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
+        /// This API is used to create copies of a specified edge function. After creating copies, when client requests match the configured trigger rules or default domain name, you can access a specific function copy by adding EO-Function-Replica-Name:[copy name] to the request header. Each function supports creating two copies by default.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionReplicaRequest"/></param>
         /// <returns><see cref="CreateFunctionReplicaResponse"/></returns>
@@ -525,7 +527,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
+        /// Creates a trigger rule for an edge function. It supports customized filter conditions to determine whether to execute a function. When a function needs to be executed, multiple ways are provided to select the target function, including directly specifying, selecting based on the client's associated region, and weight-based selection.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -535,7 +537,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
+        /// Creates a trigger rule for an edge function. It supports customized filter conditions to determine whether to execute a function. When a function needs to be executed, multiple ways are provided to select the target function, including directly specifying, selecting based on the client's associated region, and weight-based selection.
         /// </summary>
         /// <param name="req"><see cref="CreateFunctionRuleRequest"/></param>
         /// <returns><see cref="CreateFunctionRuleResponse"/></returns>
@@ -546,7 +548,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+        /// Create an inference API Token for authentication when accessing the inference service. The Token content is returned only once when creating, and each site can create up to 100 tokens.
         /// </summary>
         /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
         /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
@@ -556,7 +558,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+        /// Create an inference API Token for authentication when accessing the inference service. The Token content is returned only once when creating, and each site can create up to 100 tokens.
         /// </summary>
         /// <param name="req"><see cref="CreateInferenceAPITokenRequest"/></param>
         /// <returns><see cref="CreateInferenceAPITokenResponse"/></returns>
@@ -567,7 +569,36 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+        /// Create an inference service domain name for accessing the inference service through a custom domain name. An inference service supports creating a maximum of 5 custom domain names.
+        /// After successful creation, complete the following steps to make the domain name function normally for external access:
+        /// 1. To validate the CNAME configuration status of a domain, see the CheckCnameStatus api.
+        /// 2. To verify ownership, refer to the VerifyOwnership API (https://www.tencentcloud.com/document/api/1552/98879?from_cn_redirect=1);
+        /// 3. To configure domain name certificates, refer to the ModifyHostsCertificate api.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceDomainRequest"/></param>
+        /// <returns><see cref="CreateInferenceDomainResponse"/></returns>
+        public Task<CreateInferenceDomainResponse> CreateInferenceDomain(CreateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceDomainResponse>(req, "CreateInferenceDomain");
+        }
+
+        /// <summary>
+        /// Create an inference service domain name for accessing the inference service through a custom domain name. An inference service supports creating a maximum of 5 custom domain names.
+        /// After successful creation, complete the following steps to make the domain name function normally for external access:
+        /// 1. To validate the CNAME configuration status of a domain, see the CheckCnameStatus api.
+        /// 2. To verify ownership, refer to the VerifyOwnership API (https://www.tencentcloud.com/document/api/1552/98879?from_cn_redirect=1);
+        /// 3. To configure domain name certificates, refer to the ModifyHostsCertificate api.
+        /// </summary>
+        /// <param name="req"><see cref="CreateInferenceDomainRequest"/></param>
+        /// <returns><see cref="CreateInferenceDomainResponse"/></returns>
+        public CreateInferenceDomainResponse CreateInferenceDomainSync(CreateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<CreateInferenceDomainResponse>(req, "CreateInferenceDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an inference service. You can set the service name, listening port, container image configuration, and resource configuration. An access address is provided after successful creation.
         /// </summary>
         /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
         /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
@@ -577,7 +608,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+        /// This API is used to create an inference service. You can set the service name, listening port, container image configuration, and resource configuration. An access address is provided after successful creation.
         /// </summary>
         /// <param name="req"><see cref="CreateInferenceServiceRequest"/></param>
         /// <returns><see cref="CreateInferenceServiceResponse"/></returns>
@@ -588,9 +619,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
-        /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
-        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
+        /// JIT transcoding already provides preset transcoding templates to meet most needs. For personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom templates.
+        /// To ensure consistency of JIT transcoding effects and avoid video output exceptions caused by template changes during EO cache or M3U8 sharding, the template cannot be modified after creation.
+        /// To learn about JIT transcoding capacity, see EdgeOne Video Instant Processing Function Introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
@@ -600,9 +631,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
-        /// This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
-        /// This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
+        /// JIT transcoding already provides preset transcoding templates to meet most needs. For personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom templates.
+        /// To ensure consistency of JIT transcoding effects and avoid video output exceptions caused by template changes during EO cache or M3U8 sharding, the template cannot be modified after creation.
+        /// To learn about JIT transcoding capacity, see EdgeOne Video Instant Processing Function Introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreateJustInTimeTranscodeTemplateRequest"/></param>
         /// <returns><see cref="CreateJustInTimeTranscodeTemplateResponse"/></returns>
@@ -613,7 +644,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create Layer 4 proxy instances.
+        /// This API is used to create a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
         /// <returns><see cref="CreateL4ProxyResponse"/></returns>
@@ -623,7 +654,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create Layer 4 proxy instances.
+        /// This API is used to create a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRequest"/></param>
         /// <returns><see cref="CreateL4ProxyResponse"/></returns>
@@ -634,7 +665,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+        /// This API is used to create Layer 4 proxy instance rules and supports individual and batch creation.
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
         /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
@@ -644,7 +675,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create Layer 4 proxy instance rules, supporting both individual and batch creation.
+        /// This API is used to create Layer 4 proxy instance rules and supports individual and batch creation.
         /// </summary>
         /// <param name="req"><see cref="CreateL4ProxyRulesRequest"/></param>
         /// <returns><see cref="CreateL4ProxyRulesResponse"/></returns>
@@ -655,7 +686,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+        /// This API is used to create rules in the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1), with support for batch creation.
         /// </summary>
         /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
         /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
@@ -665,7 +696,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). Batch creation is supported.
+        /// This API is used to create rules in the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1), with support for batch creation.
         /// </summary>
         /// <param name="req"><see cref="CreateL7AccRulesRequest"/></param>
         /// <returns><see cref="CreateL7AccRulesResponse"/></returns>
@@ -676,7 +707,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
@@ -686,7 +717,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://intl.cloud.tencent.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to create a LoadBalancer. For details, see [Quickly Create Load Balancers](https://www.tencentcloud.com/document/product/1552/104223?from_cn_redirect=1). The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerResponse"/></returns>
@@ -697,11 +728,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a log analysis download task. After creation, you can query the download task via the DescribeLogAnalysisDownloadTasks API.
+        /// This API is used to create a log analysis download task. After creation, you can query the download task through the DescribeLogAnalysisDownloadTasks API.
         /// Note:
         /// 1. Supports up to 50 million log entries per download.
-        /// 2. Log files are reserved for 3 days.
-        /// 3. When multiple tasks exist at the same time, they are processed sequentially based on task creation time.
+        /// 2. Log files will be retained for 3 days.
+        /// 3. If multiple tasks exist at the same time, they will be processed sequentially based on task creation time.
         /// </summary>
         /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
         /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
@@ -711,11 +742,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a log analysis download task. After creation, you can query the download task via the DescribeLogAnalysisDownloadTasks API.
+        /// This API is used to create a log analysis download task. After creation, you can query the download task through the DescribeLogAnalysisDownloadTasks API.
         /// Note:
         /// 1. Supports up to 50 million log entries per download.
-        /// 2. Log files are reserved for 3 days.
-        /// 3. When multiple tasks exist at the same time, they are processed sequentially based on task creation time.
+        /// 2. Log files will be retained for 3 days.
+        /// 3. If multiple tasks exist at the same time, they will be processed sequentially based on task creation time.
         /// </summary>
         /// <param name="req"><see cref="CreateLogAnalysisDownloadTaskRequest"/></param>
         /// <returns><see cref="CreateLogAnalysisDownloadTaskResponse"/></returns>
@@ -726,7 +757,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
+        /// This API is used to create a multi-channel security acceleration gateway, including Cloud Gateway and Private Gateway. Use the DescribeMultiPathGateway interface to query the status. If the status is online, the creation succeeded.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
@@ -736,7 +767,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
+        /// This API is used to create a multi-channel security acceleration gateway, including Cloud Gateway and Private Gateway. Use the DescribeMultiPathGateway interface to query the status. If the status is online, the creation succeeded.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewayRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewayResponse"/></returns>
@@ -747,7 +778,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create lines integrated with the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy and custom lines.
+        /// This API is used to create lines for integrating with the multi-channel security acceleration gateway, including EdgeOne Layer 4 proxy lines and custom lines.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
@@ -757,7 +788,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create lines integrated with the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy and custom lines.
+        /// This API is used to create lines for integrating with the multi-channel security acceleration gateway, including EdgeOne Layer 4 proxy lines and custom lines.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewayLineResponse"/></returns>
@@ -768,7 +799,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API creates an access key for the multi-channel security acceleration gateway. Customers use the access key to sign requests for accessing the gateway. Each site can have only one key, which is applicable to all gateways under that site. Query the key via the DescribeMultiPathGatewaySecretKey API.
+        /// This API is used to create a key for integrating with a multi-channel security acceleration gateway. Customers integrate with the multi-channel security acceleration gateway based on key signatures. Each site contains only one key, which can be used to integrate all gateways under the site. The key can be queried through the DescribeMultiPathGatewaySecretKey API.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
@@ -778,7 +809,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API creates an access key for the multi-channel security acceleration gateway. Customers use the access key to sign requests for accessing the gateway. Each site can have only one key, which is applicable to all gateways under that site. Query the key via the DescribeMultiPathGatewaySecretKey API.
+        /// This API is used to create a key for integrating with a multi-channel security acceleration gateway. Customers integrate with the multi-channel security acceleration gateway based on key signatures. Each site contains only one key, which can be used to integrate all gateways under the site. The key can be queried through the DescribeMultiPathGatewaySecretKey API.
         /// </summary>
         /// <param name="req"><see cref="CreateMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="CreateMultiPathGatewaySecretKeyResponse"/></returns>
@@ -789,7 +820,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
+        /// Create an origin server group to manage origin servers by group. The origin server group configured here can be referenced in features such as **adding an acceleration domain name** and **Layer 4 proxy**.
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -799,7 +830,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an origin group for easy management. The created origin server group can be used for **adding acceleration domain names** and **layer-4 proxy configuration**.
+        /// Create an origin server group to manage origin servers by group. The origin server group configured here can be referenced in features such as **adding an acceleration domain name** and **Layer 4 proxy**.
         /// </summary>
         /// <param name="req"><see cref="CreateOriginGroupRequest"/></param>
         /// <returns><see cref="CreateOriginGroupResponse"/></returns>
@@ -810,8 +841,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// If you need to use the EdgeOne product, you must create a billing plan through this interface.
-        /// > After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+        /// If you need to use the Edgeone product, you need to create a billing plan through this interface.
+        /// > After creating a package, you need to complete creating a site and binding the plan through [CreateZone](https://www.tencentcloud.com/document/product/1552/80719?from_cn_redirect=1) before Edgeone can provide services properly.
         /// </summary>
         /// <param name="req"><see cref="CreatePlanRequest"/></param>
         /// <returns><see cref="CreatePlanResponse"/></returns>
@@ -821,8 +852,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// If you need to use the EdgeOne product, you must create a billing plan through this interface.
-        /// > After creating a plan, you need to complete the process of creating a site and binding the plan through [CreateZone](https://intl.cloud.tencent.com/document/product/1552/80719?from_cn_redirect=1), so that the EdgeOne can provide services properly.
+        /// If you need to use the Edgeone product, you need to create a billing plan through this interface.
+        /// > After creating a package, you need to complete creating a site and binding the plan through [CreateZone](https://www.tencentcloud.com/document/product/1552/80719?from_cn_redirect=1) before Edgeone can provide services properly.
         /// </summary>
         /// <param name="req"><see cref="CreatePlanRequest"/></param>
         /// <returns><see cref="CreatePlanResponse"/></returns>
@@ -833,7 +864,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to purchase a plan for a new site.
+        /// Purchase a package for the selected site not bound to a package.
         /// </summary>
         /// <param name="req"><see cref="CreatePlanForZoneRequest"/></param>
         /// <returns><see cref="CreatePlanForZoneResponse"/></returns>
@@ -843,7 +874,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to purchase a plan for a new site.
+        /// Purchase a package for the selected site not bound to a package.
         /// </summary>
         /// <param name="req"><see cref="CreatePlanForZoneRequest"/></param>
         /// <returns><see cref="CreatePlanForZoneResponse"/></returns>
@@ -854,7 +885,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a pre-warming task.
+        /// This API is used to create a preheating task.
         /// </summary>
         /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
         /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
@@ -864,7 +895,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a pre-warming task.
+        /// This API is used to create a preheating task.
         /// </summary>
         /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
         /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
@@ -875,9 +906,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// When origin server resources update but the node cache TTL has not expired, users still access old resources. At this point, use this API to update node resources. The following two methods can trigger updates: <li>Direct deletion: Delete the node cache without any validation. User requests trigger origin-pull.</li><li>Mark expiration: Mark node resources as expired. User requests trigger back-to-origin validation, which sends HTTP conditional requests with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node fetches new resources from the origin and updates the cache. If the origin server responds with 304, the cache will not be updated.</li>
         /// 
-        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+        /// For details on purging cache tasks, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -887,9 +918,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When there are resources updated on the origin with the TTL remaining valid, users cannot access the latest resources. In this case, you can purge the cache using this API. There are two methods: <li>Delete: This method deletes the node cache without verification and retrieves the latest resources from the origin when receiving a request.</li><li>Invalidate: This method marks the node cache as invalid and sends a request with the If-None-Match and If-Modified-Since headers to the origin. If the origin responses with 200, the latest resources are retrieved to be cached on the node. If a 304 response is returned, the latest resources are not cached on the node.
+        /// When origin server resources update but the node cache TTL has not expired, users still access old resources. At this point, use this API to update node resources. The following two methods can trigger updates: <li>Direct deletion: Delete the node cache without any validation. User requests trigger origin-pull.</li><li>Mark expiration: Mark node resources as expired. User requests trigger back-to-origin validation, which sends HTTP conditional requests with If-None-Match and If-Modified-Since headers. If the origin server responds with 200, the node fetches new resources from the origin and updates the cache. If the origin server responds with 304, the cache will not be updated.</li>
         /// 
-        /// </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). </li>
+        /// For details on purging cache tasks, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
         /// <returns><see cref="CreatePurgeTaskResponse"/></returns>
@@ -955,7 +986,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for creating rule engine APIs. EdgeOne comprehensively upgraded the rule engine APIs on January 21, 2025. For details on the new API for creating layer-7 acceleration rules, refer to [CreateL7AccRules](https://www.tencentcloud.com/document/product/1552/115822?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version APIs will stop update and iteration. New features will only be provided by the latest version interface. The existing capacity supported by the old version APIs will not be affected. To avoid data field conflicts when using the old version APIs, migrate to the new version rule engine APIs as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -965,7 +997,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is the old version of the rule engine creation interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule creation interface, please refer to [CreateL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115822?from_cn_redirect=1).<p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for creating rule engine APIs. EdgeOne comprehensively upgraded the rule engine APIs on January 21, 2025. For details on the new API for creating layer-7 acceleration rules, refer to [CreateL7AccRules](https://www.tencentcloud.com/document/product/1552/115822?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version APIs will stop update and iteration. New features will only be provided by the latest version interface. The existing capacity supported by the old version APIs will not be affected. To avoid data field conflicts when using the old version APIs, migrate to the new version rule engine APIs as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
         /// <returns><see cref="CreateRuleResponse"/></returns>
@@ -976,7 +1009,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an API resource.
+        /// Used to create API resources.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
@@ -986,7 +1019,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an API resource.
+        /// Used to create API resources.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="CreateSecurityAPIResourceResponse"/></returns>
@@ -997,7 +1030,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an API service.
+        /// Used to create an API service.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
@@ -1007,7 +1040,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create an API service.
+        /// Used to create an API service.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="CreateSecurityAPIServiceResponse"/></returns>
@@ -1018,7 +1051,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create client authentication options.
+        /// Create client authentication options.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
@@ -1028,7 +1061,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create client authentication options.
+        /// Create client authentication options.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="CreateSecurityClientAttesterResponse"/></returns>
@@ -1039,7 +1072,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a security IP group.
+        /// Create a security IP group
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityIPGroupRequest"/></param>
         /// <returns><see cref="CreateSecurityIPGroupResponse"/></returns>
@@ -1049,7 +1082,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a security IP group.
+        /// Create a security IP group
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityIPGroupRequest"/></param>
         /// <returns><see cref="CreateSecurityIPGroupResponse"/></returns>
@@ -1060,7 +1093,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a JavaScript injection rule.
+        /// This API is used to create JavaScript injection rules.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
         /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
@@ -1070,7 +1103,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a JavaScript injection rule.
+        /// This API is used to create JavaScript injection rules.
         /// </summary>
         /// <param name="req"><see cref="CreateSecurityJSInjectionRuleRequest"/></param>
         /// <returns><see cref="CreateSecurityJSInjectionRuleResponse"/></returns>
@@ -1081,7 +1114,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a shared CNAME. It is now only available to beta users.
+        /// Used to create a shared CNAME. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -1091,7 +1124,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a shared CNAME. It is now only available to beta users.
+        /// Used to create a shared CNAME. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="CreateSharedCNAMERequest"/></param>
         /// <returns><see cref="CreateSharedCNAMEResponse"/></returns>
@@ -1102,7 +1135,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a security policy configuration template.
+        /// Create a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
@@ -1112,7 +1145,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a security policy configuration template.
+        /// Create a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="CreateWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="CreateWebSecurityTemplateResponse"/></returns>
@@ -1123,9 +1156,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
+        /// EdgeOne offers three access methods: CNAME, NS, and domainless access. You need to finalize site creation through this API first. For CNAME and NS connected site scenarios, see [Quickly access EdgeOne from scratch](https://www.tencentcloud.com/document/product/1552/87601?from_cn_redirect=1). For domainless access scenarios, see [Quickly enable layer 4 proxy service](https://www.tencentcloud.com/document/product/1552/96051?from_cn_redirect=1).
         /// 
-        /// If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
+        /// > It is recommended to call this API to create a site when a package already exists under the account. Please input `PlanId` in the parameter to directly bind the site to the package. If `PlanId` is not input, the created site will be inactive and unable to provide normal services. You need to complete package binding through [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) before the site can provide services normally. If you currently have no bindable package, go to the console to purchase a package to finalize site creation.
         /// </summary>
         /// <param name="req"><see cref="CreateZoneRequest"/></param>
         /// <returns><see cref="CreateZoneResponse"/></returns>
@@ -1135,9 +1168,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to create a site. After you create the site, you can connect it to EdgeOne via the CNAME or NS (see [Quick Start](https://intl.cloud.tencent.com/document/product/1552/87601?from_cn_redirect=1)), or connect it without a domain name (see [Quick Access to L4 Proxy Service](https://intl.cloud.tencent.com/document/product/1552/96051?from_cn_redirect=1)).
+        /// EdgeOne offers three access methods: CNAME, NS, and domainless access. You need to finalize site creation through this API first. For CNAME and NS connected site scenarios, see [Quickly access EdgeOne from scratch](https://www.tencentcloud.com/document/product/1552/87601?from_cn_redirect=1). For domainless access scenarios, see [Quickly enable layer 4 proxy service](https://www.tencentcloud.com/document/product/1552/96051?from_cn_redirect=1).
         /// 
-        /// If there are already EdgeOne plans under the current account, it is recommended to pass in the `PlanId` to bind the site with the plan directly. If `PlanId` is not passed in, the created site is not activated. You need to call [BindZoneToPlan](https://intl.cloud.tencent.com/document/product/1552/83042?from_cn_redirect=1) to bind the site with a plan. To purchase a plan, please go to the EdgeOne console.
+        /// > It is recommended to call this API to create a site when a package already exists under the account. Please input `PlanId` in the parameter to directly bind the site to the package. If `PlanId` is not input, the created site will be inactive and unable to provide normal services. You need to complete package binding through [BindZoneToPlan](https://www.tencentcloud.com/document/product/1552/83042?from_cn_redirect=1) before the site can provide services normally. If you currently have no bindable package, go to the console to purchase a package to finalize site creation.
         /// </summary>
         /// <param name="req"><see cref="CreateZoneRequest"/></param>
         /// <returns><see cref="CreateZoneResponse"/></returns>
@@ -1148,7 +1181,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch remove accelerated domain names.
+        /// Delete acceleration domain names in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DeleteAccelerationDomainsResponse"/></returns>
@@ -1158,7 +1191,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch remove accelerated domain names.
+        /// Delete acceleration domain names in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DeleteAccelerationDomainsResponse"/></returns>
@@ -1169,8 +1202,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Delete an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -1180,8 +1213,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an alias domain name.
-        /// The feature is only supported by the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Delete an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
         /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
@@ -1192,7 +1225,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Deleting a Layer 4 Proxy Instance.
+        /// ](https://www.tencentcloud.com/document/product/1552/103415?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -1202,7 +1236,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103415?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Deleting a Layer 4 Proxy Instance.
+        /// ](https://www.tencentcloud.com/document/product/1552/103415?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyResponse"/></returns>
@@ -1213,7 +1248,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Deleting L4 Proxy Rules (https://www.tencentcloud.com/document/product/1552/103414?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
@@ -1223,7 +1258,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [DeleteL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103414?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Deleting L4 Proxy Rules (https://www.tencentcloud.com/document/product/1552/103414?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="DeleteApplicationProxyRuleResponse"/></returns>
@@ -1234,7 +1269,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Delete the specified content identifier. This feature is only available to the allowlist.
+        /// Delete the specified content identifier. The feature is open only in the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
         /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
@@ -1244,7 +1279,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Delete the specified content identifier. This feature is only available to the allowlist.
+        /// Delete the specified content identifier. The feature is open only in the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeleteContentIdentifierRequest"/></param>
         /// <returns><see cref="DeleteContentIdentifierResponse"/></returns>
@@ -1297,7 +1332,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this API to batch delete DNS records.
+        /// You can use this API to delete DNS records in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
         /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
@@ -1307,7 +1342,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can use this API to batch delete DNS records.
+        /// You can use this API to delete DNS records in batches.
         /// </summary>
         /// <param name="req"><see cref="DeleteDnsRecordsRequest"/></param>
         /// <returns><see cref="DeleteDnsRecordsResponse"/></returns>
@@ -1318,7 +1353,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete specified KV namespace. Once deleted, all keys in namespace will be cleared and cannot be recovered. If the namespace is being referred by edge function, you need to unbind relationship before it can only be deleted.
+        /// This API is used to delete a specified KV namespace. After deletion, all key-value pair data in the namespace will be cleared and cannot be recovered. If the namespace is referenced by an edge function, unbind the relationship before deletion.
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
@@ -1328,7 +1363,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete specified KV namespace. Once deleted, all keys in namespace will be cleared and cannot be recovered. If the namespace is being referred by edge function, you need to unbind relationship before it can only be deleted.
+        /// This API is used to delete a specified KV namespace. After deletion, all key-value pair data in the namespace will be cleared and cannot be recovered. If the namespace is referenced by an edge function, unbind the relationship before deletion.
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="DeleteEdgeKVNamespaceResponse"/></returns>
@@ -1339,7 +1374,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules, environment variables, and replicas are also deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
         /// <returns><see cref="DeleteFunctionResponse"/></returns>
@@ -1349,7 +1384,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules are also deleted.
+        /// This API is used to delete an edge function. Once deleted, the function cannot be recovered, and associated trigger rules, environment variables, and replicas are also deleted.
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
         /// <returns><see cref="DeleteFunctionResponse"/></returns>
@@ -1360,7 +1395,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete specified edge function replicas.
+        /// This API is used to delete a specified edge function replica.
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionReplicaRequest"/></param>
         /// <returns><see cref="DeleteFunctionReplicaResponse"/></returns>
@@ -1370,7 +1405,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete specified edge function replicas.
+        /// This API is used to delete a specified edge function replica.
         /// </summary>
         /// <param name="req"><see cref="DeleteFunctionReplicaRequest"/></param>
         /// <returns><see cref="DeleteFunctionReplicaResponse"/></returns>
@@ -1402,7 +1437,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+        /// Delete an inference API Token. Once deleted, the Token expires immediately, and requests using it to access the inference service will not pass authentication.
         /// </summary>
         /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
         /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
@@ -1412,7 +1447,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+        /// Delete an inference API Token. Once deleted, the Token expires immediately, and requests using it to access the inference service will not pass authentication.
         /// </summary>
         /// <param name="req"><see cref="DeleteInferenceAPITokenRequest"/></param>
         /// <returns><see cref="DeleteInferenceAPITokenResponse"/></returns>
@@ -1423,7 +1458,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
+        /// Delete a just in time transcoding template based on the unique template identifier under the site ID.
         /// </summary>
         /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
@@ -1433,7 +1468,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
+        /// Delete a just in time transcoding template based on the unique template identifier under the site ID.
         /// </summary>
         /// <param name="req"><see cref="DeleteJustInTimeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DeleteJustInTimeTranscodeTemplatesResponse"/></returns>
@@ -1444,7 +1479,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a Layer 4 proxy instance.
+        /// This API is used to delete a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
         /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
@@ -1454,7 +1489,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a Layer 4 proxy instance.
+        /// This API is used to delete a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRequest"/></param>
         /// <returns><see cref="DeleteL4ProxyResponse"/></returns>
@@ -1465,7 +1500,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// This API is used to delete l4 proxy rules and supports both individual and batch operation.
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
         /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
@@ -1475,7 +1510,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// This API is used to delete l4 proxy rules and supports both individual and batch operation.
         /// </summary>
         /// <param name="req"><see cref="DeleteL4ProxyRulesRequest"/></param>
         /// <returns><see cref="DeleteL4ProxyRulesResponse"/></returns>
@@ -1486,7 +1521,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+        /// This API is used to delete rules from the rule engine (https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). Batch deletion supported.
         /// </summary>
         /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
         /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
@@ -1496,7 +1531,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete rules of the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting batch deletion.
+        /// This API is used to delete rules from the rule engine (https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). Batch deletion supported.
         /// </summary>
         /// <param name="req"><see cref="DeleteL7AccRulesRequest"/></param>
         /// <returns><see cref="DeleteL7AccRulesResponse"/></returns>
@@ -1507,7 +1542,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to delete a load balancing instance. If the load balancing instance is referenced by other services, such as a Layer 4 proxy, it cannot be deleted. Remove the reference relationship first. The load balancer feature is in beta test. If you need to use it, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
@@ -1517,7 +1552,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a LoadBalancer. If the LoadBalancer is referenced by other services (for example, Layer-4 proxy), the LoadBalancer cannot be deleted until the reference relationship is removed. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to delete a load balancing instance. If the load balancing instance is referenced by other services, such as a Layer 4 proxy, it cannot be deleted. Remove the reference relationship first. The load balancer feature is in beta test. If you need to use it, contact us (https://www.tencentcloud.com/online?from_cn_redirect=1-service).
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerResponse"/></returns>
@@ -1528,7 +1563,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a multi-channel security acceleration gateway, including private gateways and Cloud Gateways.
+        /// This API is used to delete multi-channel security acceleration gateways, including private gateways and Cloud Gateways.
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
         /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
@@ -1538,7 +1573,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a multi-channel security acceleration gateway, including private gateways and Cloud Gateways.
+        /// This API is used to delete multi-channel security acceleration gateways, including private gateways and Cloud Gateways.
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiPathGatewayRequest"/></param>
         /// <returns><see cref="DeleteMultiPathGatewayResponse"/></returns>
@@ -1549,7 +1584,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete lines integrated with the multi-channel security acceleration gateway. Only custom lines support deletion.
+        /// This API is used to delete lines integrated with multi-channel security acceleration gateways. Only custom lines support deletion.
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
@@ -1559,7 +1594,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete lines integrated with the multi-channel security acceleration gateway. Only custom lines support deletion.
+        /// This API is used to delete lines integrated with multi-channel security acceleration gateways. Only custom lines support deletion.
         /// </summary>
         /// <param name="req"><see cref="DeleteMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="DeleteMultiPathGatewayLineResponse"/></returns>
@@ -1570,7 +1605,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
+        /// Delete an origin group. If the origin group is still referenced by a service (for example, Layer 4 proxy, DNS, load balancing, or a rule), deletion is not allowed.
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
         /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
@@ -1580,7 +1615,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete an origin group. Note that an origin group can not be deleted if it is referenced by services (e.g. L4 Proxy, domain name service, load balancing, rule engines). 
+        /// Delete an origin group. If the origin group is still referenced by a service (for example, Layer 4 proxy, DNS, load balancing, or a rule), deletion is not allowed.
         /// </summary>
         /// <param name="req"><see cref="DeleteOriginGroupRequest"/></param>
         /// <returns><see cref="DeleteOriginGroupResponse"/></returns>
@@ -1612,7 +1647,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is the old version of the rule engine deletion interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule deletion interface, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).<0>Note: Starting from January 21, 2025, the earlier version API will no longer be updated. Subsequent new features will only be provided in the latest version interface. The original capabilities supported by the earlier version API will not be affected. To avoid field conflicts when using the earlier version API, it is recommended that you migrate to the new version rule engine API as soon as possible.</0>.
+        /// This API is on an earlier version for deleting rule engine APIs. EdgeOne completed a comprehensive upgrade of rule engine APIs on January 21, 2025. For details on the new API for deleting L7 acceleration rules, see [DeleteL7AccRules](https://www.tencentcloud.com/document/product/1552/115821?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version API will stop update and iteration. New features will only be provided in the new version API, and the existing capabilities supported by the old version API will not be affected. To avoid data field conflicts when using the old version API, migrate to the new version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -1622,7 +1658,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is the old version of the rule engine deletion interface. EdgeOne has fully upgraded the rule engine related interfaces on January 21, 2025. For details on the new version of the seven-layer acceleration rule deletion interface, please refer to [DeleteL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115821?from_cn_redirect=1).<0>Note: Starting from January 21, 2025, the earlier version API will no longer be updated. Subsequent new features will only be provided in the latest version interface. The original capabilities supported by the earlier version API will not be affected. To avoid field conflicts when using the earlier version API, it is recommended that you migrate to the new version rule engine API as soon as possible.</0>.
+        /// This API is on an earlier version for deleting rule engine APIs. EdgeOne completed a comprehensive upgrade of rule engine APIs on January 21, 2025. For details on the new API for deleting L7 acceleration rules, see [DeleteL7AccRules](https://www.tencentcloud.com/document/product/1552/115821?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version API will stop update and iteration. New features will only be provided in the new version API, and the existing capabilities supported by the old version API will not be affected. To avoid data field conflicts when using the old version API, migrate to the new version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DeleteRulesRequest"/></param>
         /// <returns><see cref="DeleteRulesResponse"/></returns>
@@ -1633,7 +1670,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete API resources.
+        /// Used to delete API resources.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
@@ -1643,7 +1680,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete API resources.
+        /// Used to delete API resources.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="DeleteSecurityAPIResourceResponse"/></returns>
@@ -1654,7 +1691,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete the API service.
+        /// Used to delete an API service.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
@@ -1664,7 +1701,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete the API service.
+        /// Used to delete an API service.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="DeleteSecurityAPIServiceResponse"/></returns>
@@ -1675,7 +1712,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete client authentication options.
+        /// Delete client authentication options.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
@@ -1685,7 +1722,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete client authentication options.
+        /// Delete client authentication options.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="DeleteSecurityClientAttesterResponse"/></returns>
@@ -1696,7 +1733,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a specified security IP group. Note that the security IP group cannot be deleted if it is referenced in a rule.
+        /// Delete a specified IP group. If a rule references the IP group, deletion is not allowed.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DeleteSecurityIPGroupResponse"/></returns>
@@ -1706,7 +1743,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a specified security IP group. Note that the security IP group cannot be deleted if it is referenced in a rule.
+        /// Delete a specified IP group. If a rule references the IP group, deletion is not allowed.
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DeleteSecurityIPGroupResponse"/></returns>
@@ -1738,7 +1775,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a shared CNAME. It is now only available to beta users.
+        /// Used to delete a shared CNAME. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
         /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
@@ -1748,7 +1785,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a shared CNAME. It is now only available to beta users.
+        /// Used to delete a shared CNAME. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="DeleteSharedCNAMERequest"/></param>
         /// <returns><see cref="DeleteSharedCNAMEResponse"/></returns>
@@ -1759,7 +1796,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a security policy configuration template.
+        /// Delete a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
@@ -1769,7 +1806,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a security policy configuration template.
+        /// Delete a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="DeleteWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="DeleteWebSecurityTemplateResponse"/></returns>
@@ -1780,7 +1817,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a site.
+        /// Delete a site.
         /// </summary>
         /// <param name="req"><see cref="DeleteZoneRequest"/></param>
         /// <returns><see cref="DeleteZoneResponse"/></returns>
@@ -1790,7 +1827,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete a site.
+        /// Delete a site.
         /// </summary>
         /// <param name="req"><see cref="DeleteZoneRequest"/></param>
         /// <returns><see cref="DeleteZoneResponse"/></returns>
@@ -1801,7 +1838,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to release versions in version management mode. Users can deploy the version to either the testing environment or the production environment by specifying the EnvId parameter. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used for version release. You can release a version to the testing environment or production environment by EnvId. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
         /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
@@ -1811,7 +1848,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to release versions in version management mode. Users can deploy the version to either the testing environment or the production environment by specifying the EnvId parameter. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used for version release. You can release a version to the testing environment or production environment by EnvId. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DeployConfigGroupVersionRequest"/></param>
         /// <returns><see cref="DeployConfigGroupVersionResponse"/></returns>
@@ -1822,7 +1859,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
+        /// This API is used to view domain information under a site, including acceleration domain names, origin servers, and domain name status. You can view information of all domains under a site, or specify filter conditions to query specific domain information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
@@ -1832,7 +1869,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query domain name information of a site, including the acceleration domain name, origin, and domain name status. You can query the information of all domain names, or specific domain names by specifying filters information.
+        /// This API is used to view domain information under a site, including acceleration domain names, origin servers, and domain name status. You can view information of all domains under a site, or specify filter conditions to query specific domain information.
         /// </summary>
         /// <param name="req"><see cref="DescribeAccelerationDomainsRequest"/></param>
         /// <returns><see cref="DescribeAccelerationDomainsResponse"/></returns>
@@ -1843,8 +1880,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the alias domain name information list.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Query the list of alias domain names.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -1854,8 +1891,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the alias domain name information list.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Query the list of alias domain names.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
         /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
@@ -1866,7 +1903,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. The latest version splits into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [Query Layer 4 Proxy Instance List](https://www.tencentcloud.com/document/product/1552/103413?from_cn_redirect=1) and [Query Layer 4 Proxy Forwarding Rule List](https://www.tencentcloud.com/document/product/1552/103412?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -1876,7 +1913,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. In the latest version, this API has been split into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [DescribeL4Proxy] (https://intl.cloud.tencent.com/document/product/1552/103413?from_cn_redirect=1) and [DescribeL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103412?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. The latest version splits into two APIs: one for querying the Layer 4 proxy instance list and the other for querying Layer 4 forwarding rules. For details, see [Query Layer 4 Proxy Instance List](https://www.tencentcloud.com/document/product/1552/103413?from_cn_redirect=1) and [Query Layer 4 Proxy Forwarding Rule List](https://www.tencentcloud.com/document/product/1552/103412?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationProxiesRequest"/></param>
         /// <returns><see cref="DescribeApplicationProxiesResponse"/></returns>
@@ -1887,7 +1924,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of available custom configurations for rule engine operations on a site.
+        /// Queries the list of available custom configurations for site rule engine operations.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
         /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
@@ -1897,7 +1934,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of available custom configurations for rule engine operations on a site.
+        /// Queries the list of available custom configurations for site rule engine operations.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableCustomActionsForRuleEngineRequest"/></param>
         /// <returns><see cref="DescribeAvailableCustomActionsForRuleEngineResponse"/></returns>
@@ -1961,7 +1998,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query plan options available for purchase.
+        /// Query the list of available package information for the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailablePlansRequest"/></param>
         /// <returns><see cref="DescribeAvailablePlansResponse"/></returns>
@@ -1971,7 +2008,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query plan options available for purchase.
+        /// Query the list of available package information for the current account.
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailablePlansRequest"/></param>
         /// <returns><see cref="DescribeAvailablePlansResponse"/></returns>
@@ -1982,7 +2019,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query billing data.
+        /// Query billing data via this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
         /// <returns><see cref="DescribeBillingDataResponse"/></returns>
@@ -1992,7 +2029,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query billing data.
+        /// Query billing data via this API.
         /// </summary>
         /// <param name="req"><see cref="DescribeBillingDataRequest"/></param>
         /// <returns><see cref="DescribeBillingDataResponse"/></returns>
@@ -2003,7 +2040,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to obtain detailed version information, including version ID, description, status, creation time, associated configuration group information, and the content of the version configuration file. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
         /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
@@ -2013,7 +2050,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to obtain detailed information about a version in version management mode. The response includes the version ID, description, status, creation time, configuration group information, and the content of the version configuration file. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to obtain detailed version information, including version ID, description, status, creation time, associated configuration group information, and the content of the version configuration file. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigGroupVersionDetailRequest"/></param>
         /// <returns><see cref="DescribeConfigGroupVersionDetailResponse"/></returns>
@@ -2024,7 +2061,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the version list for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query the version list of a specified configuration group. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
         /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
@@ -2034,7 +2071,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the version list for the specified configuration group in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query the version list of a specified configuration group. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeConfigGroupVersionsRequest"/></param>
         /// <returns><see cref="DescribeConfigGroupVersionsResponse"/></returns>
@@ -2045,7 +2082,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+        /// This API is used to query content identifiers in batches. They can be filtered by ID, description, status, or tags. Deleted content identifiers queried by status are only retained for three months. This feature is only open in the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
         /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
@@ -2055,7 +2092,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Batch query content identifiers, which can be filtered by ID, description, status, or Tag. Deleted content identifiers queried by status are retained for only three months. This feature is only open to the allowlist.
+        /// This API is used to query content identifiers in batches. They can be filtered by ID, description, status, or tags. Deleted content identifiers queried by status are only retained for three months. This feature is only open in the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeContentIdentifiersRequest"/></param>
         /// <returns><see cref="DescribeContentIdentifiersResponse"/></returns>
@@ -2066,7 +2103,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query content management quotas.
+        /// Query the content management API quota
         /// </summary>
         /// <param name="req"><see cref="DescribeContentQuotaRequest"/></param>
         /// <returns><see cref="DescribeContentQuotaResponse"/></returns>
@@ -2076,7 +2113,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query content management quotas.
+        /// Query the content management API quota
         /// </summary>
         /// <param name="req"><see cref="DescribeContentQuotaRequest"/></param>
         /// <returns><see cref="DescribeContentQuotaResponse"/></returns>
@@ -2087,7 +2124,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the custom response page list.
+        /// This API is used to query the custom error page list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomErrorPagesRequest"/></param>
         /// <returns><see cref="DescribeCustomErrorPagesResponse"/></returns>
@@ -2097,7 +2134,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the custom response page list.
+        /// This API is used to query the custom error page list.
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomErrorPagesRequest"/></param>
         /// <returns><see cref="DescribeCustomErrorPagesResponse"/></returns>
@@ -2171,7 +2208,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time-series data of DDoS attacks.
+        /// This API is used to query DDoS attack time-series data.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackDataRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackDataResponse"/></returns>
@@ -2181,7 +2218,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time-series data of DDoS attacks.
+        /// This API is used to query DDoS attack time-series data.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackDataRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackDataResponse"/></returns>
@@ -2192,7 +2229,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query DDoS attack events.
+        /// This API is used to query the list of DDoS attack events.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
@@ -2202,7 +2239,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query DDoS attack events.
+        /// This API is used to query the list of DDoS attack events.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackEventRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackEventResponse"/></returns>
@@ -2213,7 +2250,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top-ranked DDoS attack data.
+        /// This API is used to query Top-ranked data of DDoS attacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackTopDataRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackTopDataResponse"/></returns>
@@ -2223,7 +2260,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top-ranked DDoS attack data.
+        /// This API is used to query Top-ranked data of DDoS attacks.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSAttackTopDataRequest"/></param>
         /// <returns><see cref="DescribeDDoSAttackTopDataResponse"/></returns>
@@ -2234,7 +2271,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to search for site exclusive Anti-DDoS information.
+        /// This API is used to query exclusive DDoS protection info of a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
         /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
@@ -2244,7 +2281,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to search for site exclusive Anti-DDoS information.
+        /// This API is used to query exclusive DDoS protection info of a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSProtectionRequest"/></param>
         /// <returns><see cref="DescribeDDoSProtectionResponse"/></returns>
@@ -2255,7 +2292,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query a list of default certificates.
+        /// Query the default certificate list
+        /// <p style="color: red;">Note: This earlier version interface is no longer updated. New features will only be provided in the latest version interface. Existing capacities supported by the earlier version interface will not be affected. To query the cert configured for a domain name, please use DescribeAccelerationDomains.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
         /// <returns><see cref="DescribeDefaultCertificatesResponse"/></returns>
@@ -2265,7 +2303,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query a list of default certificates.
+        /// Query the default certificate list
+        /// <p style="color: red;">Note: This earlier version interface is no longer updated. New features will only be provided in the latest version interface. Existing capacities supported by the earlier version interface will not be affected. To query the cert configured for a domain name, please use DescribeAccelerationDomains.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeDefaultCertificatesRequest"/></param>
         /// <returns><see cref="DescribeDefaultCertificatesResponse"/></returns>
@@ -2276,7 +2315,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the release history of versions in the production or test environment in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query the version release history of production/test environments. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
         /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
@@ -2286,7 +2325,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the release history of versions in the production or test environment in version management mode. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query the version release history of production/test environments. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeDeployHistoryRequest"/></param>
         /// <returns><see cref="DescribeDeployHistoryResponse"/></returns>
@@ -2297,7 +2336,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
+        /// This API is used to view DNS records under a site, including DNS record names, record types, and record content. It supports specifying filter conditions to query specific DNS records.
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
         /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
@@ -2307,7 +2346,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to view DNS record information under a site, including DNS record name, record type, and record content. It supports querying specific DNS record information by specifying filter conditions.
+        /// This API is used to view DNS records under a site, including DNS record names, record types, and record content. It supports specifying filter conditions to query specific DNS records.
         /// </summary>
         /// <param name="req"><see cref="DescribeDnsRecordsRequest"/></param>
         /// <returns><see cref="DescribeDnsRecordsResponse"/></returns>
@@ -2318,7 +2357,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the KV namespace list of a specified site, supporting pagination, sorting and conditional filtering. It returns the basic info, capacity utilization and reference relationship of namespaces. If data not found, return an empty array.
+        /// Queries the KV namespace list under a specified site. Supports pagination, sorting, and conditional filtering. Returns basic namespace info, storage capacity utilization, and reference relationships. If no data is found, an empty array is returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
         /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
@@ -2328,7 +2367,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the KV namespace list of a specified site, supporting pagination, sorting and conditional filtering. It returns the basic info, capacity utilization and reference relationship of namespaces. If data not found, return an empty array.
+        /// Queries the KV namespace list under a specified site. Supports pagination, sorting, and conditional filtering. Returns basic namespace info, storage capacity utilization, and reference relationships. If no data is found, an empty array is returned.
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeKVNamespacesRequest"/></param>
         /// <returns><see cref="DescribeEdgeKVNamespacesResponse"/></returns>
@@ -2339,7 +2378,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query environment information, including the environment ID, type, and current effective version. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -2349,7 +2388,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
+        /// In version management mode, this API is used to query environment information, including the environment ID, type, and current effective version. The version management feature is in beta test and currently only available to the allowlist.
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -2360,7 +2399,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as bound component types, variable names, and configuration parameters. Currently supported bound component types include KV namespace (kv_namespace).
+        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as the bound component type, variable name, and configuration parameters. The currently supported binding component type is KV namespace (kv_namespace).
         /// </summary>
         /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
         /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
@@ -2370,7 +2409,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as bound component types, variable names, and configuration parameters. Currently supported bound component types include KV namespace (kv_namespace).
+        /// This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as the bound component type, variable name, and configuration parameters. The currently supported binding component type is KV namespace (kv_namespace).
         /// </summary>
         /// <param name="req"><see cref="DescribeFunctionComponentBindingsRequest"/></param>
         /// <returns><see cref="DescribeFunctionComponentBindingsResponse"/></returns>
@@ -2465,7 +2504,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. You can use [DescribeL7AccSetting](https://www.tencentcloud.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1) to obtain detailed configuration of a domain.
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -2475,7 +2514,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. You can obtain detailed configurations of domain names through [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. You can use [DescribeL7AccSetting](https://www.tencentcloud.com/document/product/1552/115819?from_cn_redirect=1) and [DescribeL7AccRules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1) to obtain detailed configuration of a domain.
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>
         /// <returns><see cref="DescribeHostsSettingResponse"/></returns>
@@ -2486,7 +2525,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query policy configurations that reference a specified IP group.
+        /// This API is used to obtain policy settings that use IP grouping.
         /// </summary>
         /// <param name="req"><see cref="DescribeIPGroupReferencesRequest"/></param>
         /// <returns><see cref="DescribeIPGroupReferencesResponse"/></returns>
@@ -2496,7 +2535,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query policy configurations that reference a specified IP group.
+        /// This API is used to obtain policy settings that use IP grouping.
         /// </summary>
         /// <param name="req"><see cref="DescribeIPGroupReferencesRequest"/></param>
         /// <returns><see cref="DescribeIPGroupReferencesResponse"/></returns>
@@ -2507,7 +2546,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to check if the IP is an EdgeOne IP.
+        /// This API is used to query if the IP is an EdgeOne IP.
         /// </summary>
         /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
         /// <returns><see cref="DescribeIPRegionResponse"/></returns>
@@ -2517,7 +2556,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to check if the IP is an EdgeOne IP.
+        /// This API is used to query if the IP is an EdgeOne IP.
         /// </summary>
         /// <param name="req"><see cref="DescribeIPRegionRequest"/></param>
         /// <returns><see cref="DescribeIPRegionResponse"/></returns>
@@ -2528,7 +2567,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the verification information of a site.
+        /// Queries verification information of a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentificationsRequest"/></param>
         /// <returns><see cref="DescribeIdentificationsResponse"/></returns>
@@ -2538,7 +2577,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the verification information of a site.
+        /// Queries verification information of a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeIdentificationsRequest"/></param>
         /// <returns><see cref="DescribeIdentificationsResponse"/></returns>
@@ -2549,7 +2588,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+        /// Queries the list of reasoning API tokens and returns the Token ID, name, content, and creation time. Paging query is supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
         /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
@@ -2559,7 +2598,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+        /// Queries the list of reasoning API tokens and returns the Token ID, name, content, and creation time. Paging query is supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceAPITokensRequest"/></param>
         /// <returns><see cref="DescribeInferenceAPITokensResponse"/></returns>
@@ -2570,7 +2609,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+        /// This API is used to query the inference service domain name list and return the Cname address, ownership verification, and certificate information of the domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceDomainsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceDomainsResponse"/></returns>
+        public Task<DescribeInferenceDomainsResponse> DescribeInferenceDomains(DescribeInferenceDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceDomainsResponse>(req, "DescribeInferenceDomains");
+        }
+
+        /// <summary>
+        /// This API is used to query the inference service domain name list and return the Cname address, ownership verification, and certificate information of the domain.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInferenceDomainsRequest"/></param>
+        /// <returns><see cref="DescribeInferenceDomainsResponse"/></returns>
+        public DescribeInferenceDomainsResponse DescribeInferenceDomainsSync(DescribeInferenceDomainsRequest req)
+        {
+            return InternalRequestAsync<DescribeInferenceDomainsResponse>(req, "DescribeInferenceDomains")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the inference hardware specification list and return the CPU, memory, GPU, and video memory configurations of each specification. You can select the required specification from the list when creating a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
         /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
@@ -2580,7 +2640,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+        /// This API is used to query the inference hardware specification list and return the CPU, memory, GPU, and video memory configurations of each specification. You can select the required specification from the list when creating a service.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceHardwareSpecificationsRequest"/></param>
         /// <returns><see cref="DescribeInferenceHardwareSpecificationsResponse"/></returns>
@@ -2591,7 +2651,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+        /// This API is used to query the logs of a specified deployment of an inference service, return log content and generation time, and support time range search, pagination, and sorting.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
@@ -2601,7 +2661,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+        /// This API is used to query the logs of a specified deployment of an inference service, return log content and generation time, and support time range search, pagination, and sorting.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceDeploymentLogsRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceDeploymentLogsResponse"/></returns>
@@ -2612,7 +2672,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+        /// This API is used to query the deployment history list of an inference service. It returns the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment. Pagination and sorting are supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
@@ -2622,7 +2682,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+        /// This API is used to query the deployment history list of an inference service. It returns the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment. Pagination and sorting are supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceDeploymentRecordsRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceDeploymentRecordsResponse"/></returns>
@@ -2633,7 +2693,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+        /// This API is used to query the monitoring data of inference services, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data from the most recent 30 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
@@ -2643,7 +2703,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+        /// This API is used to query the monitoring data of inference services, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data from the most recent 30 days.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServiceMonitorDataRequest"/></param>
         /// <returns><see cref="DescribeInferenceServiceMonitorDataResponse"/></returns>
@@ -2654,7 +2714,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+        /// This API is used to query the inference service list, support filtering by service name, service ID, and status, and return the service configuration, running state, number of instances, and inference access address.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
         /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
@@ -2664,7 +2724,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+        /// This API is used to query the inference service list, support filtering by service name, service ID, and status, and return the service configuration, running state, number of instances, and inference access address.
         /// </summary>
         /// <param name="req"><see cref="DescribeInferenceServicesRequest"/></param>
         /// <returns><see cref="DescribeInferenceServicesResponse"/></returns>
@@ -2675,7 +2735,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
+        /// This API is used to retrieve the transcoding template detail list based on the just in time transcoding template name, template type, or unique ID. The returned results include all eligible custom templates and preset templates.
         /// </summary>
         /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
@@ -2685,7 +2745,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
+        /// This API is used to retrieve the transcoding template detail list based on the just in time transcoding template name, template type, or unique ID. The returned results include all eligible custom templates and preset templates.
         /// </summary>
         /// <param name="req"><see cref="DescribeJustInTimeTranscodeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeJustInTimeTranscodeTemplatesResponse"/></returns>
@@ -2696,7 +2756,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query a Layer 4 proxy instance list.
+        /// This API is used to query the layer 4 proxy instance list.
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
         /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
@@ -2706,7 +2766,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query a Layer 4 proxy instance list.
+        /// This API is used to query the layer 4 proxy instance list.
         /// </summary>
         /// <param name="req"><see cref="DescribeL4ProxyRequest"/></param>
         /// <returns><see cref="DescribeL4ProxyResponse"/></returns>
@@ -2738,7 +2798,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+        /// This API is used to query the rule list of the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
         /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
@@ -2748,7 +2808,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the rule list of the rule engine (https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1).
+        /// This API is used to query the rule list of the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeL7AccRulesRequest"/></param>
         /// <returns><see cref="DescribeL7AccRulesResponse"/></returns>
@@ -2759,7 +2819,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// This API is used to query the global configuration of site acceleration.
         /// </summary>
         /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
         /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
@@ -2769,7 +2829,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// This API is used to query the global configuration of site acceleration.
         /// </summary>
         /// <param name="req"><see cref="DescribeL7AccSettingRequest"/></param>
         /// <returns><see cref="DescribeL7AccSettingResponse"/></returns>
@@ -2780,7 +2840,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to query the load balancing instance list. The load balancer feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
         /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
@@ -2790,7 +2850,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the LoadBalancer list. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to query the load balancing instance list. The load balancer feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancerListRequest"/></param>
         /// <returns><see cref="DescribeLoadBalancerListResponse"/></returns>
@@ -2801,7 +2861,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+        /// This API is used to query log analysis details. The data comes from the log data pushed by real-time log push tasks under the site with the destination "log-analysis".
         /// </summary>
         /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
@@ -2811,7 +2871,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the log analysis details. The data comes from the log data of the real-time log push task with the destination "log_analysis" under the site.
+        /// This API is used to query log analysis details. The data comes from the log data pushed by real-time log push tasks under the site with the destination "log-analysis".
         /// </summary>
         /// <param name="req"><see cref="DescribeLogAnalysisDetailRequest"/></param>
         /// <returns><see cref="DescribeLogAnalysisDetailResponse"/></returns>
@@ -2843,7 +2903,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
+        /// This API is used to query log analysis statistics results. Users append an SQL aggregation statement after the query statement ([retrieval condition] | [SQL statement]). The backend executes the aggregation and returns columnar statistics results (column definition + data row).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisStatisticsResponse"/></returns>
+        public Task<DescribeLogAnalysisStatisticsResponse> DescribeLogAnalysisStatistics(DescribeLogAnalysisStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisStatisticsResponse>(req, "DescribeLogAnalysisStatistics");
+        }
+
+        /// <summary>
+        /// This API is used to query log analysis statistics results. Users append an SQL aggregation statement after the query statement ([retrieval condition] | [SQL statement]). The backend executes the aggregation and returns columnar statistics results (column definition + data row).
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogAnalysisStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeLogAnalysisStatisticsResponse"/></returns>
+        public DescribeLogAnalysisStatisticsResponse DescribeLogAnalysisStatisticsSync(DescribeLogAnalysisStatisticsRequest req)
+        {
+            return InternalRequestAsync<DescribeLogAnalysisStatisticsResponse>(req, "DescribeLogAnalysisStatistics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query details of a multi-channel security acceleration gateway, such as name, Gateway ID, IP, port, and type.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
@@ -2853,7 +2934,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query multi-channel security acceleration gateway details such as name, Gateway ID, IP, port and type.
+        /// This API is used to query details of a multi-channel security acceleration gateway, such as name, Gateway ID, IP, port, and type.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayResponse"/></returns>
@@ -2864,7 +2945,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Use this API to query the lines integrated with the multi-channel security acceleration gateway, including direct connection lines, EdgeOne Layer-4 proxy lines, and custom lines.
+        /// This API is used to query lines connected to the multi-channel security acceleration gateway, including direct connections, EdgeOne Layer 4 proxy lines, and custom lines.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
@@ -2874,7 +2955,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Use this API to query the lines integrated with the multi-channel security acceleration gateway, including direct connection lines, EdgeOne Layer-4 proxy lines, and custom lines.
+        /// This API is used to query lines connected to the multi-channel security acceleration gateway, including direct connections, EdgeOne Layer 4 proxy lines, and custom lines.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayLineResponse"/></returns>
@@ -2885,7 +2966,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and origin IP ranges, as well as origin IP range details. If the MultiPathGatewayNextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall settings.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
@@ -2895,7 +2976,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and the origin server IP range, as well as the IP range details. If the MultiPathGatewayNextOriginACL field has a return value, the latest origin server IP range must be synchronized to the origin server firewall configuration.
+        /// This API is used to query the binding relationship between a multi-channel security acceleration gateway instance and origin IP ranges, as well as origin IP range details. If the MultiPathGatewayNextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall settings.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayOriginACLRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayOriginACLResponse"/></returns>
@@ -2906,7 +2987,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
+        /// This API is used to query the available region list of user-created multi-channel security acceleration gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
@@ -2916,7 +2997,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the list of available regions for user-created multi-channel security acceleration gateways (Cloud Gateway).
+        /// This API is used to query the available region list of user-created multi-channel security acceleration gateways.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewayRegionsRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewayRegionsResponse"/></returns>
@@ -2948,7 +3029,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Query the multi-channel security acceleration gateway list created by the user through this interface. Supports pagination.
+        /// This API is used to query the list of user-created multi-channel security acceleration gateways. Pagination is supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
@@ -2958,7 +3039,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Query the multi-channel security acceleration gateway list created by the user through this interface. Supports pagination.
+        /// This API is used to query the list of user-created multi-channel security acceleration gateways. Pagination is supported.
         /// </summary>
         /// <param name="req"><see cref="DescribeMultiPathGatewaysRequest"/></param>
         /// <returns><see cref="DescribeMultiPathGatewaysResponse"/></returns>
@@ -2969,7 +3050,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
+        /// This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin IP ranges under a site, as well as origin IP range details. If you want to periodically get the latest version of origin IP ranges through an automation script, you can poll this API at a low frequency (once every three days is recommended). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginACLRequest"/></param>
         /// <returns><see cref="DescribeOriginACLResponse"/></returns>
@@ -2979,7 +3060,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin ACLs under a site, as well as IP range details. If you want to periodically obtain the latest version of origin IP ranges through an automation script, you can poll this API at a low-frequency (recommended every three days). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
+        /// This API is used to query the binding relationship between L7 acceleration domains/L4 proxy instances and origin IP ranges under a site, as well as origin IP range details. If you want to periodically get the latest version of origin IP ranges through an automation script, you can poll this API at a low frequency (once every three days is recommended). If the NextOriginACL field has a return value, synchronize the latest origin IP ranges to the origin server firewall configuration.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginACLRequest"/></param>
         /// <returns><see cref="DescribeOriginACLResponse"/></returns>
@@ -2990,7 +3071,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to obtain a list of origin groups.
+        /// This API is used to query the origin server group list.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
         /// <returns><see cref="DescribeOriginGroupResponse"/></returns>
@@ -3000,7 +3081,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to obtain a list of origin groups.
+        /// This API is used to query the origin server group list.
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupRequest"/></param>
         /// <returns><see cref="DescribeOriginGroupResponse"/></returns>
@@ -3011,7 +3092,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to query the health status of origin server groups under a load balancing instance. The load balancer feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
         /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
@@ -3021,7 +3102,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the health status of origin server groups under a LoadBalancer. The load balancing feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// This API is used to query the health status of origin server groups under a load balancing instance. The load balancer feature is in beta test. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginGroupHealthStatusRequest"/></param>
         /// <returns><see cref="DescribeOriginGroupHealthStatusResponse"/></returns>
@@ -3032,9 +3113,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query origin protection on an earlier version. EdgeOne comprehensively upgraded relevant APIs for origin protection on June 27, 2025. For details on the new version, see [DescribeOriginACL](https://intl.cloud.tencent.com/document/product/1552/120408?from_cn_redirect=1).
+        /// This API is on an earlier version for origin protection queries. EdgeOne comprehensively upgraded the origin protection APIs on June 27, 2025. For details on the new version of the origin protection query API, refer to [DescribeOriginACL](https://www.tencentcloud.com/document/product/1552/120408?from_cn_redirect=1).
         /// 
-        /// Note: Starting from June 27, 2025, the legacy version APIs will stop updating. New features will only be provided in the latest version APIs. To avoid data field conflicts when using legacy version APIs, it is recommended to migrate to the new version origin protection APIs as soon as possible.
+        /// <p style="color: red;">Note: Starting from June 27, 2025, earlier version APIs will stop update and iteration, and new features will only be provided in the new version of APIs. To avoid data field conflicts when using earlier version APIs, migrate to the new version of origin protection APIs as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
         /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
@@ -3044,9 +3125,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query origin protection on an earlier version. EdgeOne comprehensively upgraded relevant APIs for origin protection on June 27, 2025. For details on the new version, see [DescribeOriginACL](https://intl.cloud.tencent.com/document/product/1552/120408?from_cn_redirect=1).
+        /// This API is on an earlier version for origin protection queries. EdgeOne comprehensively upgraded the origin protection APIs on June 27, 2025. For details on the new version of the origin protection query API, refer to [DescribeOriginACL](https://www.tencentcloud.com/document/product/1552/120408?from_cn_redirect=1).
         /// 
-        /// Note: Starting from June 27, 2025, the legacy version APIs will stop updating. New features will only be provided in the latest version APIs. To avoid data field conflicts when using legacy version APIs, it is recommended to migrate to the new version origin protection APIs as soon as possible.
+        /// <p style="color: red;">Note: Starting from June 27, 2025, earlier version APIs will stop update and iteration, and new features will only be provided in the new version of APIs. To avoid data field conflicts when using earlier version APIs, migrate to the new version of origin protection APIs as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeOriginProtectionRequest"/></param>
         /// <returns><see cref="DescribeOriginProtectionResponse"/></returns>
@@ -3057,7 +3138,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time sequence traffic data of the monitoring category in L7. This API is to be discarded. Please use the API <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a>.
+        /// This API is used to query layer-7 monitoring time series traffic Data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
@@ -3067,7 +3148,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time sequence traffic data of the monitoring category in L7. This API is to be discarded. Please use the API <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a>.
+        /// This API is used to query layer-7 monitoring time series traffic Data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
@@ -3078,7 +3159,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query package information list with pagination support.
+        /// Query the package information list with pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribePlansRequest"/></param>
         /// <returns><see cref="DescribePlansResponse"/></returns>
@@ -3088,7 +3169,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query package information list with pagination support.
+        /// Query the package information list with pagination.
         /// </summary>
         /// <param name="req"><see cref="DescribePlansRequest"/></param>
         /// <returns><see cref="DescribePlansResponse"/></returns>
@@ -3099,7 +3180,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the origin speed limit. This feature is in closed beta testing.
+        /// This API is used to query origin-pull rate limits. This feature is in beta test for allowlisted users.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
         /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
@@ -3109,7 +3190,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the origin speed limit. This feature is in closed beta testing.
+        /// This API is used to query origin-pull rate limits. This feature is in beta test for allowlisted users.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchOriginLimitRequest"/></param>
         /// <returns><see cref="DescribePrefetchOriginLimitResponse"/></returns>
@@ -3120,7 +3201,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
+        /// This API is used to query the commit history and execution progress of preheating tasks. Tasks submitted via the CreatePrefetchTasks API can be queried through this API.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
         /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
@@ -3130,7 +3211,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
+        /// This API is used to query the commit history and execution progress of preheating tasks. Tasks submitted via the CreatePrefetchTasks API can be queried through this API.
         /// </summary>
         /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
         /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
@@ -3141,7 +3222,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// DescribePurgeTasks is used to query the submitted URL refreshing and directory refreshing records and execution progress. This interface can be used to query the tasks submitted by the CreatePurgeTasks API.
+        /// This API is used to query submitted URL refresh and directory refresh records and task progress. All tasks submitted via the CreatePurgeTasks API can be queried through this API.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
@@ -3151,7 +3232,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// DescribePurgeTasks is used to query the submitted URL refreshing and directory refreshing records and execution progress. This interface can be used to query the tasks submitted by the CreatePurgeTasks API.
+        /// This API is used to query submitted URL refresh and directory refresh records and task progress. All tasks submitted via the CreatePurgeTasks API can be queried through this API.
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
@@ -3162,7 +3243,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the real-time log delivery task list.
+        /// This API is used to query real-time log delivery task list.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeLogDeliveryTasksRequest"/></param>
         /// <returns><see cref="DescribeRealtimeLogDeliveryTasksResponse"/></returns>
@@ -3172,7 +3253,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the real-time log delivery task list.
+        /// This API is used to query real-time log delivery task list.
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeLogDeliveryTasksRequest"/></param>
         /// <returns><see cref="DescribeRealtimeLogDeliveryTasksResponse"/></returns>
@@ -3183,8 +3264,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version to query engine rules. EdgeOne has comprehensively upgraded relevant APIs of the rule engine on January 21, 2025. For details about the new version API to query layer-7 acceleration rules, see DescribeL7AccRules(https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
-        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for querying rule engine rules. EdgeOne comprehensively upgraded the rule engine APIs on January 21, 2025. For details on the new version API for querying L7 acceleration rules, see [DescribeL7AccRules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the legacy version API will stop update and iteration. New features will only be provided in the new version API. The existing capacity supported by the legacy version API will not be affected. To avoid data field conflicts when using the legacy version API, migrate to the new version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -3194,8 +3275,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version to query engine rules. EdgeOne has comprehensively upgraded relevant APIs of the rule engine on January 21, 2025. For details about the new version API to query layer-7 acceleration rules, see DescribeL7AccRules(https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1).
-        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for querying rule engine rules. EdgeOne comprehensively upgraded the rule engine APIs on January 21, 2025. For details on the new version API for querying L7 acceleration rules, see [DescribeL7AccRules](https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the legacy version API will stop update and iteration. New features will only be provided in the new version API. The existing capacity supported by the legacy version API will not be affected. To avoid data field conflicts when using the legacy version API, migrate to the new version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
         /// <returns><see cref="DescribeRulesResponse"/></returns>
@@ -3206,7 +3287,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [RuleEngineAction](https://www.tencentcloud.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -3216,7 +3297,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [RuleEngineAction](https://intl.cloud.tencent.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [RuleEngineAction](https://www.tencentcloud.com/document/product/1552/80721?from_cn_redirect=1#RuleEngineAction).
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
         /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
@@ -3227,7 +3308,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query API resources under a site.
+        /// Query API resources under a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
@@ -3237,7 +3318,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query API resources under a site.
+        /// Query API resources under a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAPIResourceRequest"/></param>
         /// <returns><see cref="DescribeSecurityAPIResourceResponse"/></returns>
@@ -3248,7 +3329,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query API services under a site.
+        /// Query API services under a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
@@ -3258,7 +3339,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query API services under a site.
+        /// Query API services under a site.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAPIServiceRequest"/></param>
         /// <returns><see cref="DescribeSecurityAPIServiceResponse"/></returns>
@@ -3269,7 +3350,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query client authentication option configuration.
+        /// Query client authentication option configurations.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
@@ -3279,7 +3360,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query client authentication option configuration.
+        /// Query client authentication option configurations.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityClientAttesterRequest"/></param>
         /// <returns><see cref="DescribeSecurityClientAttesterResponse"/></returns>
@@ -3290,7 +3371,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a security IP group, including the ID, name and content of the security IP group. The query result of this API only returns up to 2000 IPs or CIDR blocks for each IP group. If there is a very large IP group exceeding 2000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent to perform a paging query.
+        /// This API is used to query the configuration information of a security IP group, including its ID, name, and content. In the query result of this API, each IP group returns up to 2,000 IPs or CIDR blocks. If an ultra-large IP group exceeds 2,000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent for paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
@@ -3300,7 +3381,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the configuration information of a security IP group, including the ID, name and content of the security IP group. The query result of this API only returns up to 2000 IPs or CIDR blocks for each IP group. If there is a very large IP group exceeding 2000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent to perform a paging query.
+        /// This API is used to query the configuration information of a security IP group, including its ID, name, and content. In the query result of this API, each IP group returns up to 2,000 IPs or CIDR blocks. If an ultra-large IP group exceeds 2,000 IPs or CIDR blocks, call DescribeSecurityIPGroupContent for paging query.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupResponse"/></returns>
@@ -3311,7 +3392,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to perform a paging query for the IP address list in a designated IP group. When the number of IP addresses in the group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
+        /// This API is used to query the IP address list in a specified IP group by page. When the number of IP addresses in an IP group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
@@ -3321,7 +3402,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to perform a paging query for the IP address list in a designated IP group. When the number of IP addresses in the group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
+        /// This API is used to query the IP address list in a specified IP group by page. When the number of IP addresses in an IP group exceeds 2000, you can use this API to perform a paging query to obtain the complete IP address list.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityIPGroupContentRequest"/></param>
         /// <returns><see cref="DescribeSecurityIPGroupContentResponse"/></returns>
@@ -3332,8 +3413,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
-        /// ](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+        /// This API is deprecated and will be discontinued on June 30, 2024. Please use the API for querying security IP groups.
+        /// ](https://www.tencentcloud.com/document/product/1552/105866?from_cn_redirect=1).
         /// 
         /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
         /// </summary>
@@ -3345,8 +3426,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// The API is deprecated and will be discontinued on June 30, 2024. Please use the API [DescribeSecurityIPGroup
-        /// ](https://intl.cloud.tencent.com/document/product/1552/105866?from_cn_redirect=1).
+        /// This API is deprecated and will be discontinued on June 30, 2024. Please use the API for querying security IP groups.
+        /// ](https://www.tencentcloud.com/document/product/1552/105866?from_cn_redirect=1).
         /// 
         /// This API is used to query the configuration information of an IP group, including the IP group name, IP group content, and the site the IP group belongs to.
         /// </summary>
@@ -3380,7 +3461,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the web and security protection configurations.
+        /// Query security protection configuration details.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -3390,7 +3471,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the web and security protection configurations.
+        /// Query security protection configuration details.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityPolicyRequest"/></param>
         /// <returns><see cref="DescribeSecurityPolicyResponse"/></returns>
@@ -3401,7 +3482,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query bindings of a policy template.
+        /// This API is used to query the binding relationship list of a specified policy template.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
         /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
@@ -3411,7 +3492,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query bindings of a policy template.
+        /// This API is used to query the binding relationship list of a specified policy template.
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityTemplateBindingsRequest"/></param>
         /// <returns><see cref="DescribeSecurityTemplateBindingsResponse"/></returns>
@@ -3422,7 +3503,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Query the shared CNAME list, support fuzzy search, paginate, and sort.
+        /// This API is used to query the shared CNAME list, supporting fuzzy search, pagination, and sorting.
         /// </summary>
         /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
         /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
@@ -3432,7 +3513,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Query the shared CNAME list, support fuzzy search, paginate, and sort.
+        /// This API is used to query the shared CNAME list, supporting fuzzy search, pagination, and sorting.
         /// </summary>
         /// <param name="req"><see cref="DescribeSharedCNAMERequest"/></param>
         /// <returns><see cref="DescribeSharedCNAMEResponse"/></returns>
@@ -3464,7 +3545,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// <p>This API is used to query time series monitoring data for L4 proxy instences.</p>
+        /// <p>This API is used to query the L4 time series Data list.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
         /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
@@ -3474,7 +3555,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// <p>This API is used to query time series monitoring data for L4 proxy instences.</p>
+        /// <p>This API is used to query the L4 time series Data list.</p>
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL4DataRequest"/></param>
         /// <returns><see cref="DescribeTimingL4DataResponse"/></returns>
@@ -3485,10 +3566,10 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time-series data for Layer 7 domain services.
-        /// Notes:
-        /// 1. Data queried by this API has a latency of approximately 10 minutes. It is recommended to pull data from at least 10 minutes prior to the current time.
-        /// 2. By default, this API returns post-protection traffic request data. Users can customize queries for mitigated data by using `Filters.mitigatedByWebSecurity`.
+        /// This API is used to query time series data of the L7 domain name business.
+        /// Note:
+        /// 1. This API queries data with a delay of about 10 minutes. It is advisable to pull data from 10 minutes before the current time.
+        /// 2. This interface returns post-protection traffic request data by default. Users can use `Filters.mitigatedByWebSecurity` to custom query defended data.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -3498,10 +3579,10 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time-series data for Layer 7 domain services.
-        /// Notes:
-        /// 1. Data queried by this API has a latency of approximately 10 minutes. It is recommended to pull data from at least 10 minutes prior to the current time.
-        /// 2. By default, this API returns post-protection traffic request data. Users can customize queries for mitigated data by using `Filters.mitigatedByWebSecurity`.
+        /// This API is used to query time series data of the L7 domain name business.
+        /// Note:
+        /// 1. This API queries data with a delay of about 10 minutes. It is advisable to pull data from 10 minutes before the current time.
+        /// 2. This interface returns post-protection traffic request data by default. Users can use `Filters.mitigatedByWebSecurity` to custom query defended data.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7AnalysisDataResponse"/></returns>
@@ -3512,7 +3593,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
+        /// This API is used to query L7 cache analysis time series traffic data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -3522,7 +3603,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the time series traffic data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API instead.
+        /// This API is used to query L7 cache analysis time series traffic data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80648?from_cn_redirect=1">DescribeTimingL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
@@ -3533,8 +3614,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data of the layer-7 domain name business.
-        /// You can choose to perform grouping queries by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed directions and usage limits, see [How to Implement Group Query in a Single Call Using API](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
+        /// This API is used to query the origin-pull time series data of an L7 domain.
+        /// You can choose to group queries by specifying the query dimension <code>DimensionName</code>, which returns multiple groups of time series data. For detailed directions and usage limits, see [How to Use APIs to Implement Group Query in a Single Call](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
@@ -3544,8 +3625,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query time series data of the layer-7 domain name business.
-        /// You can choose to perform grouping queries by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed directions and usage limits, see [How to Implement Group Query in a Single Call Using API](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
+        /// This API is used to query the origin-pull time series data of an L7 domain.
+        /// You can choose to group queries by specifying the query dimension <code>DimensionName</code>, which returns multiple groups of time series data. For detailed directions and usage limits, see [How to Use APIs to Implement Group Query in a Single Call](https://www.tencentcloud.com/document/product/1552/127501?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeTimingL7OriginPullDataRequest"/></param>
         /// <returns><see cref="DescribeTimingL7OriginPullDataResponse"/></returns>
@@ -3578,9 +3659,9 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to query the top N data of the L7 domain name business by specified dimension.
-        /// Create and bind policy Query instance Reset instance access password.
-        /// This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
-        /// This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
+        /// Note:
+        /// 1. This API queries data with a delay of about 10 minutes. It is recommended to pull data from 10 minutes before the current time.
+        /// 2. This interface returns post-protection traffic request data by default. Users can use `Filters.mitigatedByWebSecurity` to custom query defended data.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -3591,9 +3672,9 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to query the top N data of the L7 domain name business by specified dimension.
-        /// Create and bind policy Query instance Reset instance access password.
-        /// This API is used to query data with a delay of about 10 minutes. It is recommended to pull data from at least 10 minutes before the current time.
-        /// This API is used to return post-protection traffic request data by default. Users can query defended data in `Filters.mitigatedByWebSecurity`.
+        /// Note:
+        /// 1. This API queries data with a delay of about 10 minutes. It is recommended to pull data from 10 minutes before the current time.
+        /// 2. This interface returns post-protection traffic request data by default. Users can use `Filters.mitigatedByWebSecurity` to custom query defended data.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7AnalysisDataResponse"/></returns>
@@ -3604,7 +3685,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
+        /// This API is used to query L7 cache analysis topN data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
@@ -3614,7 +3695,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the top N data of the L7 cache analysis. It will be deprecated. Use the <a href="https://intl.cloud.tencent.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API instead.
+        /// This API is used to query L7 cache analysis topN data. This API is to be deprecated. Please use the <a href="https://www.tencentcloud.com/document/product/1552/80646?from_cn_redirect=1"> DescribeTopL7AnalysisData</a> API.
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
         /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
@@ -3625,7 +3706,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query security policy configuration template details.
+        /// Queries security policy configuration template details
         /// </summary>
         /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
@@ -3635,7 +3716,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query security policy configuration template details.
+        /// Queries security policy configuration template details
         /// </summary>
         /// <param name="req"><see cref="DescribeWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="DescribeWebSecurityTemplateResponse"/></returns>
@@ -3646,7 +3727,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the security policy configuration template list.
+        /// Queries the security policy configuration template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
         /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
@@ -3656,7 +3737,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the security policy configuration template list.
+        /// Queries the security policy configuration template list.
         /// </summary>
         /// <param name="req"><see cref="DescribeWebSecurityTemplatesRequest"/></param>
         /// <returns><see cref="DescribeWebSecurityTemplatesResponse"/></returns>
@@ -3667,7 +3748,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to query the results of site configuration item import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
         /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
@@ -3677,7 +3758,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the results of site configuration import via API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+        /// This API is used to query the results of site configuration item import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneConfigImportResultRequest"/></param>
         /// <returns><see cref="DescribeZoneConfigImportResultResponse"/></returns>
@@ -3713,7 +3794,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [DescribeL7AccSetting](https://www.tencentcloud.com/document/product/1552/115819?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -3723,7 +3804,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an old version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [DescribeL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115819?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [DescribeL7AccSetting](https://www.tencentcloud.com/document/product/1552/115819?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneSettingRequest"/></param>
         /// <returns><see cref="DescribeZoneSettingResponse"/></returns>
@@ -3734,7 +3815,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the information of sites that you have access to. You can filter sites based on different query criteria.
+        /// This API is used to query site information you have permission to access. You can filter sites based on different query conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -3744,7 +3825,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to query the information of sites that you have access to. You can filter sites based on different query criteria.
+        /// This API is used to query site information you have permission to access. You can filter sites based on different query conditions.
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -3755,14 +3836,14 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
-        /// > Terminating a billing plan requires the following conditions:
-        ///     1. The plan has expired (except for the Enterprise Edition Plan);
-        ///     2. All sites under the plan have been either shut down or deleted.
+        /// This API is used to terminate a billing plan when you need to stop billing for an Edgeone plan.
+        /// > The following conditions must be met to terminate a billing plan:
+        /// 1. The plan has expired (except for the Enterprise Edition Plan);
+        /// 2. All sites under the package have been shut down or deleted.
         /// 
-        /// > The site status can be queried through the [Query Site List](https://www.tencentcloud.com/zh/document/product/1145/50481) interface.
-        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
-        /// A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+        /// > The site status can be queried through the [Query Site List](https://www.tencentcloud.com/document/product/1552/80713?from_cn_redirect=1) interface.
+        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://www.tencentcloud.com/document/product/1552/80707?from_cn_redirect=1) interface.
+        /// A site can be deleted by using the Delete Site API.
         /// </summary>
         /// <param name="req"><see cref="DestroyPlanRequest"/></param>
         /// <returns><see cref="DestroyPlanResponse"/></returns>
@@ -3772,14 +3853,14 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// To stop billing for your EdgeOne plan, you can use this interface to terminate the billing plan.
-        /// > Terminating a billing plan requires the following conditions:
-        ///     1. The plan has expired (except for the Enterprise Edition Plan);
-        ///     2. All sites under the plan have been either shut down or deleted.
+        /// This API is used to terminate a billing plan when you need to stop billing for an Edgeone plan.
+        /// > The following conditions must be met to terminate a billing plan:
+        /// 1. The plan has expired (except for the Enterprise Edition Plan);
+        /// 2. All sites under the package have been shut down or deleted.
         /// 
-        /// > The site status can be queried through the [Query Site List](https://www.tencentcloud.com/zh/document/product/1145/50481) interface.
-        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://intl.cloud.tencent.com/document/product/1552/80707?from_cn_redirect=1) interface.
-        /// A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/document/product/1552/80717?from_cn_redirect=1) interface.
+        /// > The site status can be queried through the [Query Site List](https://www.tencentcloud.com/document/product/1552/80713?from_cn_redirect=1) interface.
+        /// A site can be deactivated by switching the site to a closed status through the [Switch Site Status](https://www.tencentcloud.com/document/product/1552/80707?from_cn_redirect=1) interface.
+        /// A site can be deleted by using the Delete Site API.
         /// </summary>
         /// <param name="req"><see cref="DestroyPlanRequest"/></param>
         /// <returns><see cref="DestroyPlanResponse"/></returns>
@@ -3790,7 +3871,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to disable 'Origin Protection' of a site. Once disabled, resources related to it will no longer use only the origin ACLs provided by "origin protection" to request your origin, and stops sending update notifications on the origin ACLs.
+        /// This API is used to disable origin protection for a site. Once disabled, resources related to the origin will no longer use only the origin IP range provided by origin protection to request your origin, and update notifications on origin IP ranges will stop simultaneously.
         /// </summary>
         /// <param name="req"><see cref="DisableOriginACLRequest"/></param>
         /// <returns><see cref="DisableOriginACLResponse"/></returns>
@@ -3800,7 +3881,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to disable 'Origin Protection' of a site. Once disabled, resources related to it will no longer use only the origin ACLs provided by "origin protection" to request your origin, and stops sending update notifications on the origin ACLs.
+        /// This API is used to disable origin protection for a site. Once disabled, resources related to the origin will no longer use only the origin IP range provided by origin protection to request your origin, and update notifications on origin IP ranges will stop simultaneously.
         /// </summary>
         /// <param name="req"><see cref="DisableOriginACLRequest"/></param>
         /// <returns><see cref="DisableOriginACLResponse"/></returns>
@@ -3811,7 +3892,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to download L4 logs.
+        /// This API is used to obtain the offline log download link for a Layer 4 proxy business.
+        /// **Note:** EO stores offline logs and provides a download service only when the offline log feature is enabled. For specific features, see the [document](https://www.tencentcloud.com/document/product/1552/73660?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
         /// <returns><see cref="DownloadL4LogsResponse"/></returns>
@@ -3821,7 +3903,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to download L4 logs.
+        /// This API is used to obtain the offline log download link for a Layer 4 proxy business.
+        /// **Note:** EO stores offline logs and provides a download service only when the offline log feature is enabled. For specific features, see the [document](https://www.tencentcloud.com/document/product/1552/73660?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
         /// <returns><see cref="DownloadL4LogsResponse"/></returns>
@@ -3832,7 +3915,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to download L7 logs.
+        /// This API is used to obtain the offline log download link for an L7 domain.
+        /// **Note:** EO stores offline logs and provides a download service only when the offline log feature is enabled. For specific features, see the [document](https://www.tencentcloud.com/document/product/1552/73660?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
         /// <returns><see cref="DownloadL7LogsResponse"/></returns>
@@ -3842,7 +3926,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to download L7 logs.
+        /// This API is used to obtain the offline log download link for an L7 domain.
+        /// **Note:** EO stores offline logs and provides a download service only when the offline log feature is enabled. For specific features, see the [document](https://www.tencentcloud.com/document/product/1552/73660?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
         /// <returns><see cref="DownloadL7LogsResponse"/></returns>
@@ -3853,7 +3938,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete one or more key-value pair data in the specified namespace, with batch deletion supported. Data cannot be recovered after deletion.
+        /// This API is used to define the structure of a complete site configuration for reference only. Note: This API does not return actual data.
+        /// </summary>
+        /// <param name="req"><see cref="DummyParseZoneFullConfigRequest"/></param>
+        /// <returns><see cref="DummyParseZoneFullConfigResponse"/></returns>
+        public Task<DummyParseZoneFullConfigResponse> DummyParseZoneFullConfig(DummyParseZoneFullConfigRequest req)
+        {
+            return InternalRequestAsync<DummyParseZoneFullConfigResponse>(req, "DummyParseZoneFullConfig");
+        }
+
+        /// <summary>
+        /// This API is used to define the structure of a complete site configuration for reference only. Note: This API does not return actual data.
+        /// </summary>
+        /// <param name="req"><see cref="DummyParseZoneFullConfigRequest"/></param>
+        /// <returns><see cref="DummyParseZoneFullConfigResponse"/></returns>
+        public DummyParseZoneFullConfigResponse DummyParseZoneFullConfigSync(DummyParseZoneFullConfigRequest req)
+        {
+            return InternalRequestAsync<DummyParseZoneFullConfigResponse>(req, "DummyParseZoneFullConfig")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete one or more key-value pair data in a specified namespace. Batch deletion supported. Data cannot be recovered after deletion.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
         /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
@@ -3863,7 +3969,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to delete one or more key-value pair data in the specified namespace, with batch deletion supported. Data cannot be recovered after deletion.
+        /// This API is used to delete one or more key-value pair data in a specified namespace. Batch deletion supported. Data cannot be recovered after deletion.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVDeleteRequest"/></param>
         /// <returns><see cref="EdgeKVDeleteResponse"/></returns>
@@ -3874,7 +3980,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch read key values from a specified namespace, supporting a single query of up to 20 keys.
+        /// This API is used to batch read key values from a specified namespace. It supports querying up to 20 keys in a single query.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
         /// <returns><see cref="EdgeKVGetResponse"/></returns>
@@ -3884,7 +3990,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch read key values from a specified namespace, supporting a single query of up to 20 keys.
+        /// This API is used to batch read key values from a specified namespace. It supports querying up to 20 keys in a single query.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVGetRequest"/></param>
         /// <returns><see cref="EdgeKVGetResponse"/></returns>
@@ -3895,7 +4001,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to list all keys in the specified namespace with prefix filtering support. It implements cursor traversal through Cursor and returns the next cursor to proceed with querying. Suitable for traversal of all keys in the namespace.
+        /// This API is used to list all keys in the specified namespace, with prefix filtering supported. Cursor-based traversal is implemented, and the next cursor is returned for continued querying. It is suitable for traversing all keys in a namespace.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVListRequest"/></param>
         /// <returns><see cref="EdgeKVListResponse"/></returns>
@@ -3905,7 +4011,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to list all keys in the specified namespace with prefix filtering support. It implements cursor traversal through Cursor and returns the next cursor to proceed with querying. Suitable for traversal of all keys in the namespace.
+        /// This API is used to list all keys in the specified namespace, with prefix filtering supported. Cursor-based traversal is implemented, and the next cursor is returned for continued querying. It is suitable for traversing all keys in a namespace.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVListRequest"/></param>
         /// <returns><see cref="EdgeKVListResponse"/></returns>
@@ -3916,7 +4022,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to write key-value pair data to a specified namespace and supports setting expiration time. If the key already exists, it overwrites the original value. If Not Exist, it creates a new key-value pair.
+        /// This API is used to write key-value pair data to a specified namespace, with support for setting expiration time. If the key already exists, the original value is overwritten. If not, a new key-value pair is created.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
         /// <returns><see cref="EdgeKVPutResponse"/></returns>
@@ -3926,7 +4032,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to write key-value pair data to a specified namespace and supports setting expiration time. If the key already exists, it overwrites the original value. If Not Exist, it creates a new key-value pair.
+        /// This API is used to write key-value pair data to a specified namespace, with support for setting expiration time. If the key already exists, the original value is overwritten. If not, a new key-value pair is created.
         /// </summary>
         /// <param name="req"><see cref="EdgeKVPutRequest"/></param>
         /// <returns><see cref="EdgeKVPutResponse"/></returns>
@@ -3937,11 +4043,17 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin-pull IP ranges for L7 acceleration domains/L4 proxy instances. The maximum quantity of L7 acceleration domains supported in a single submission is 200, and the maximum quantity of L4 proxy instances is 100. It supports composite submission of L7 acceleration domains/L4 proxy instances, with a maximum total number of instances of 200. To enable exceeding 200 resources, you can first enable the maximum allowed number via specified resources, and enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API. When enabling simultaneously, allowlisted accounts support selecting other origin-pull IP range versions, such as simplified edition, to achieve origin-pull effect with fewer IP ranges.
+        /// This API is used to enable origin protection for a site for the first time. After it is enabled, EdgeOne will use specific origin-pull IP ranges to pull from the origin for layer-7 acceleration domains/layer-4 proxy instances.
+        /// This API supports two modes: **Automatic Protection Mode** and **Specified Protection Mode**. <li>When **Automatic Protection Mode** is used (L7EnableMode/L4EnableMode is set to all), the acceleration domain list and layer-4 proxy instances under the site will be automatically added to the origin protection list in real time without manual intervention;</li><li>When **Specified Protection Mode** is used (L7EnableMode/L4EnableMode is set to specific), you need to manually specify the resources to be added to origin protection. Unspecified resources will not be added to the origin protection list. If resource adjustment is required, you need to actively call the ModifyOriginACL API to make adjustments.</li>
+        /// 
+        /// Instructions for using the Specified Protection Mode:
+        /// <li>The maximum number of layer-7 acceleration domains that can be submitted at a time is 200, and the maximum number of layer-4 proxy instances is 100. Mixed submission of layer-7 acceleration domains/layer-4 proxy instances is supported, with a maximum total of 200 instances;</li>
+        /// <li>When more than 200 resources need to be enabled, you need to first configure the resources of the first shard through this API, and then configure the remaining shards through the ModifyOriginACL API. For example, if 500 layer-7 acceleration domains need to be added, first use this API to set 200 domains, and then use the ModifyOriginACL API to configure the remaining 300 domains in two batches, with no more than 200 domains per batch.</li>
         /// 
         /// Note:
-        /// - Calling this API is deemed as agreement to [the special agreement for origin protection enablement](https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
-        /// - The origin IP range may change irregularly. EdgeOne will trigger notifications via Message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the origin IP range change notification, please ensure you have selected the edge security acceleration platform EO product services relevant message notification and configured the correct message recipients in the [Tencent Cloud Message Center Console](https://console.cloud.tencent.com/message). For the setting method, refer to [Message Subscription Management](https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
+        /// - When enabling, accounts on the allowlist can select other origin-pull IP range versions, such as the simplified version, to achieve the effect of pulling from the origin with fewer IP ranges.
+        /// - Calling this API is deemed as your agreement to the [Special Agreement on Enabling Origin Protection](https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
+        /// - Origin-pull IP ranges are subject to change from time to time. EdgeOne will send notifications 14 days, 7 days, 3 days, and 1 day before the change through one or more methods such as in-site messages, SMS, and emails. To ensure that you can receive notifications of origin-pull IP range changes, make sure that you have selected message notifications related to the EdgeOne product in the [Tencent Cloud Message Center Console](https://console.cloud.tencent.com/message) and configured the correct message recipients. For configuration methods, refer to [Message Subscription Management](https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -3951,11 +4063,17 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin-pull IP ranges for L7 acceleration domains/L4 proxy instances. The maximum quantity of L7 acceleration domains supported in a single submission is 200, and the maximum quantity of L4 proxy instances is 100. It supports composite submission of L7 acceleration domains/L4 proxy instances, with a maximum total number of instances of 200. To enable exceeding 200 resources, you can first enable the maximum allowed number via specified resources, and enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API. When enabling simultaneously, allowlisted accounts support selecting other origin-pull IP range versions, such as simplified edition, to achieve origin-pull effect with fewer IP ranges.
+        /// This API is used to enable origin protection for a site for the first time. After it is enabled, EdgeOne will use specific origin-pull IP ranges to pull from the origin for layer-7 acceleration domains/layer-4 proxy instances.
+        /// This API supports two modes: **Automatic Protection Mode** and **Specified Protection Mode**. <li>When **Automatic Protection Mode** is used (L7EnableMode/L4EnableMode is set to all), the acceleration domain list and layer-4 proxy instances under the site will be automatically added to the origin protection list in real time without manual intervention;</li><li>When **Specified Protection Mode** is used (L7EnableMode/L4EnableMode is set to specific), you need to manually specify the resources to be added to origin protection. Unspecified resources will not be added to the origin protection list. If resource adjustment is required, you need to actively call the ModifyOriginACL API to make adjustments.</li>
+        /// 
+        /// Instructions for using the Specified Protection Mode:
+        /// <li>The maximum number of layer-7 acceleration domains that can be submitted at a time is 200, and the maximum number of layer-4 proxy instances is 100. Mixed submission of layer-7 acceleration domains/layer-4 proxy instances is supported, with a maximum total of 200 instances;</li>
+        /// <li>When more than 200 resources need to be enabled, you need to first configure the resources of the first shard through this API, and then configure the remaining shards through the ModifyOriginACL API. For example, if 500 layer-7 acceleration domains need to be added, first use this API to set 200 domains, and then use the ModifyOriginACL API to configure the remaining 300 domains in two batches, with no more than 200 domains per batch.</li>
         /// 
         /// Note:
-        /// - Calling this API is deemed as agreement to [the special agreement for origin protection enablement](https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
-        /// - The origin IP range may change irregularly. EdgeOne will trigger notifications via Message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the origin IP range change notification, please ensure you have selected the edge security acceleration platform EO product services relevant message notification and configured the correct message recipients in the [Tencent Cloud Message Center Console](https://console.cloud.tencent.com/message). For the setting method, refer to [Message Subscription Management](https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
+        /// - When enabling, accounts on the allowlist can select other origin-pull IP range versions, such as the simplified version, to achieve the effect of pulling from the origin with fewer IP ranges.
+        /// - Calling this API is deemed as your agreement to the [Special Agreement on Enabling Origin Protection](https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
+        /// - Origin-pull IP ranges are subject to change from time to time. EdgeOne will send notifications 14 days, 7 days, 3 days, and 1 day before the change through one or more methods such as in-site messages, SMS, and emails. To ensure that you can receive notifications of origin-pull IP range changes, make sure that you have selected message notifications related to the EdgeOne product in the [Tencent Cloud Message Center Console](https://console.cloud.tencent.com/message) and configured the correct message recipients. For configuration methods, refer to [Message Subscription Management](https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="EnableOriginACLRequest"/></param>
         /// <returns><see cref="EnableOriginACLResponse"/></returns>
@@ -3966,7 +4084,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to export site configuration based on desired configuration items. The exported configuration is used for import via the site configuration import API.
+        /// This API is used to export site configuration by users based on desired configuration items. The exported configuration is used for import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>
@@ -3976,7 +4094,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to export site configuration based on desired configuration items. The exported configuration is used for import via the site configuration import API.
+        /// This API is used to export site configuration by users based on desired configuration items. The exported configuration is used for import via the site configuration import API.
         /// </summary>
         /// <param name="req"><see cref="ExportZoneConfigRequest"/></param>
         /// <returns><see cref="ExportZoneConfigResponse"/></returns>
@@ -3988,7 +4106,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
-        /// After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+        /// After the environment variables are set, they can be used in the function code and function replica code. For details, see [Edge Functions Referencing Environment Variables](https://www.tencentcloud.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
         /// </summary>
         /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
         /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
@@ -3999,7 +4117,7 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// This API is used to operate the runtime environment of an edge function. It supports related settings for environment variables.
-        /// After the environment variables are set, they can be used in the function code. For details, see [Edge Functions Referencing Environment Variables](https://intl.cloud.tencent.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
+        /// After the environment variables are set, they can be used in the function code and function replica code. For details, see [Edge Functions Referencing Environment Variables](https://www.tencentcloud.com/document/product/1552/109151?from_cn_redirect=1#0151fd9a-8b0e-407b-ae37-54553a60ded6).
         /// </summary>
         /// <param name="req"><see cref="HandleFunctionRuntimeEnvironmentRequest"/></param>
         /// <returns><see cref="HandleFunctionRuntimeEnvironmentResponse"/></returns>
@@ -4010,7 +4128,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify ownership of the site.
+        /// Used to verify site ownership.
         /// </summary>
         /// <param name="req"><see cref="IdentifyZoneRequest"/></param>
         /// <returns><see cref="IdentifyZoneResponse"/></returns>
@@ -4020,7 +4138,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify ownership of the site.
+        /// Used to verify site ownership.
         /// </summary>
         /// <param name="req"><see cref="IdentifyZoneRequest"/></param>
         /// <returns><see cref="IdentifyZoneResponse"/></returns>
@@ -4031,7 +4149,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID. Users need to use the site configuration import result query API to obtain the execution result of this import task.
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API to obtain the results of this import task.
         /// </summary>
         /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
         /// <returns><see cref="ImportZoneConfigResponse"/></returns>
@@ -4041,7 +4159,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID. Users need to use the site configuration import result query API to obtain the execution result of this import task.
+        /// This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API to obtain the results of this import task.
         /// </summary>
         /// <param name="req"><see cref="ImportZoneConfigRequest"/></param>
         /// <returns><see cref="ImportZoneConfigResponse"/></returns>
@@ -4052,7 +4170,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+        /// This API is used to purchase additional quotas when the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reach the plan's quota limit.
         /// > This interface only supports the Enterprise Edition Plan.
         /// </summary>
         /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
@@ -4063,7 +4181,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the number of rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reaches the plan's quota, you can use this interface to purchase additional quotas.
+        /// This API is used to purchase additional quotas when the number of sites bound to your plan, the number of rules under "Web Protection - Custom Rules - Precision Matching Policy", or the rules under "Web Protection - Rate Limiting - Precision Rate Limiting Module" reach the plan's quota limit.
         /// > This interface only supports the Enterprise Edition Plan.
         /// </summary>
         /// <param name="req"><see cref="IncreasePlanQuotaRequest"/></param>
@@ -4075,7 +4193,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an accelerated domain name.
+        /// Modify acceleration domain name information
         /// </summary>
         /// <param name="req"><see cref="ModifyAccelerationDomainRequest"/></param>
         /// <returns><see cref="ModifyAccelerationDomainResponse"/></returns>
@@ -4085,7 +4203,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an accelerated domain name.
+        /// Modify acceleration domain name information
         /// </summary>
         /// <param name="req"><see cref="ModifyAccelerationDomainRequest"/></param>
         /// <returns><see cref="ModifyAccelerationDomainResponse"/></returns>
@@ -4096,7 +4214,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch modify the status of accelerated domains.
+        /// Batch modify accelerated domain status
         /// </summary>
         /// <param name="req"><see cref="ModifyAccelerationDomainStatusesRequest"/></param>
         /// <returns><see cref="ModifyAccelerationDomainStatusesResponse"/></returns>
@@ -4106,7 +4224,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to batch modify the status of accelerated domains.
+        /// Batch modify accelerated domain status
         /// </summary>
         /// <param name="req"><see cref="ModifyAccelerationDomainStatusesRequest"/></param>
         /// <returns><see cref="ModifyAccelerationDomainStatusesResponse"/></returns>
@@ -4117,8 +4235,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// Modify an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -4128,8 +4246,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [contact us](https://www.tencentcloud.com/contact-us).
+        /// Modify an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
@@ -4140,8 +4258,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Modify the status of an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -4151,8 +4269,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the status of an alias domain name.
-        /// The feature is only supported in the enterprise plan and is currently in closed beta testing. If you need to use it, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// Modify the status of an alias domain name.
+        /// This feature is only supported in the enterprise plan and is currently in beta test. To use it, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
         /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
@@ -4163,8 +4281,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
-        /// ] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, refer to [Modify Layer 4 Proxy Instance].
+        /// ](https://www.tencentcloud.com/document/product/1552/103411?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -4174,8 +4292,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4Proxy
-        /// ] (https://intl.cloud.tencent.com/document/product/1552/103411?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, refer to [Modify Layer 4 Proxy Instance].
+        /// ](https://www.tencentcloud.com/document/product/1552/103411?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyResponse"/></returns>
@@ -4186,7 +4304,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Modifying Layer 4 Proxy Forwarding Rules.
+        /// ](https://www.tencentcloud.com/document/product/1552/103410?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -4196,7 +4315,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRules] (https://intl.cloud.tencent.com/document/product/1552/103410?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Modifying Layer 4 Proxy Forwarding Rules.
+        /// ](https://www.tencentcloud.com/document/product/1552/103410?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleResponse"/></returns>
@@ -4207,8 +4327,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
-        /// ] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Modifying Layer 4 Proxy Forwarding Rule Status.
+        /// ](https://www.tencentcloud.com/document/product/1552/103409?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -4218,8 +4338,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyRulesStatus
-        /// ] (https://intl.cloud.tencent.com/document/product/1552/103409?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see Modifying Layer 4 Proxy Forwarding Rule Status.
+        /// ](https://www.tencentcloud.com/document/product/1552/103409?from_cn_redirect=1) .
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRuleStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyRuleStatusResponse"/></returns>
@@ -4230,7 +4350,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see [modify layer 4 proxy instance status](https://www.tencentcloud.com/document/product/1552/103408?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>
@@ -4240,7 +4360,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. If you want to call it, please switch to the latest version. For details, see [ModifyL4ProxyStatus] (https://intl.cloud.tencent.com/document/product/1552/103408?from_cn_redirect=1).
+        /// This API is on an earlier version. If you want to call it, switch to the latest version. For details, see [modify layer 4 proxy instance status](https://www.tencentcloud.com/document/product/1552/103408?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyApplicationProxyStatusResponse"/></returns>
@@ -4251,7 +4371,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+        /// Modification content identifier. Only description modification is supported. The feature is open in the allowlist only.
         /// </summary>
         /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
         /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
@@ -4261,7 +4381,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// Modify content identifier, only description modification is supported. This feature is only open to the allowlist.
+        /// Modification content identifier. Only description modification is supported. The feature is open in the allowlist only.
         /// </summary>
         /// <param name="req"><see cref="ModifyContentIdentifierRequest"/></param>
         /// <returns><see cref="ModifyContentIdentifierResponse"/></returns>
@@ -4314,7 +4434,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify site exclusive Anti-DDoS protection.
+        /// Modify exclusive DDoS protection for a site.
         /// </summary>
         /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
         /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
@@ -4324,7 +4444,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify site exclusive Anti-DDoS protection.
+        /// Modify exclusive DDoS protection for a site.
         /// </summary>
         /// <param name="req"><see cref="ModifyDDoSProtectionRequest"/></param>
         /// <returns><see cref="ModifyDDoSProtectionResponse"/></returns>
@@ -4335,7 +4455,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bulk modify DNS records.
+        /// You can use this API to batch modify DNS records.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
@@ -4345,7 +4465,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to bulk modify DNS records.
+        /// You can use this API to batch modify DNS records.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsResponse"/></returns>
@@ -4356,7 +4476,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
+        /// You can use this API to batch modify the status of DNS records and enable or disable records in batches.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
@@ -4366,7 +4486,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// You can batch modify the status of DNS records through this API, enabling and disabling records in bulk.
+        /// You can use this API to batch modify the status of DNS records and enable or disable records in batches.
         /// </summary>
         /// <param name="req"><see cref="ModifyDnsRecordsStatusRequest"/></param>
         /// <returns><see cref="ModifyDnsRecordsStatusResponse"/></returns>
@@ -4377,7 +4497,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the attribute information of a specified KV namespace. Currently supported is namespace description modification.
+        /// This API is used to modify the attribute information of a specified KV namespace. Currently, only namespace description modification is supported.
         /// </summary>
         /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
@@ -4387,7 +4507,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the attribute information of a specified KV namespace. Currently supported is namespace description modification.
+        /// This API is used to modify the attribute information of a specified KV namespace. Currently, only namespace description modification is supported.
         /// </summary>
         /// <param name="req"><see cref="ModifyEdgeKVNamespaceRequest"/></param>
         /// <returns><see cref="ModifyEdgeKVNamespaceResponse"/></returns>
@@ -4419,7 +4539,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the binding relationship between edge functions and components, supporting four operation modes: bind, bind-override, unbind, and rebind. By specifying the operation type and component list, you can manage the component binding of functions.
+        /// Modify the binding relationship between edge functions and components. Four operation modes are supported: bind, bind-override, unbind, and rebind. Manage function component binding relationships by specifying the operation type and component list.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
         /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
@@ -4429,7 +4549,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the binding relationship between edge functions and components, supporting four operation modes: bind, bind-override, unbind, and rebind. By specifying the operation type and component list, you can manage the component binding of functions.
+        /// Modify the binding relationship between edge functions and components. Four operation modes are supported: bind, bind-override, unbind, and rebind. Manage function component binding relationships by specifying the operation type and component list.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionComponentBindingsRequest"/></param>
         /// <returns><see cref="ModifyFunctionComponentBindingsResponse"/></returns>
@@ -4461,7 +4581,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule to be modified, then input the modified rule content. The original rule content will be overwritten.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
@@ -4471,7 +4591,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.
+        /// This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule to be modified, then input the modified rule content. The original rule content will be overwritten.
         /// </summary>
         /// <param name="req"><see cref="ModifyFunctionRuleRequest"/></param>
         /// <returns><see cref="ModifyFunctionRuleResponse"/></returns>
@@ -4503,8 +4623,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
-        /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
+        /// After domain name creation is completed, you can configure a self-owned certificate for the domain name, or alternatively use the free certificate (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1) offered by EdgeOne.
+        /// If you need to configure a self-owned certificate, upload the certificate to the [SSL certificate console](https://console.cloud.tencent.com/certoverview) first, then import the corresponding certificate ID in this API. For details, see [Deploy self-owned certificates to EdgeOne domain names].
+        /// ](https://www.tencentcloud.com/document/product/1552/88874?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>
@@ -4514,8 +4635,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to configure the certificate of a site. You can use your own certificate or [apply for a free certificate](https://intl.cloud.tencent.com/document/product/1552/90437?from_cn_redirect=1).
-        /// To use an external certificate, upload the certificate to [SSL Certificates Console](https://console.cloud.tencent.com/certoview) first, and then input the certificate ID in this API. For details, see [Deploying Own Certificates to EdgeOne Domains](https://intl.cloud.tencent.com/document/product/1552/88874?from_cn_redirect=1).
+        /// After domain name creation is completed, you can configure a self-owned certificate for the domain name, or alternatively use the free certificate (https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1) offered by EdgeOne.
+        /// If you need to configure a self-owned certificate, upload the certificate to the [SSL certificate console](https://console.cloud.tencent.com/certoverview) first, then import the corresponding certificate ID in this API. For details, see [Deploy self-owned certificates to EdgeOne domain names].
+        /// ](https://www.tencentcloud.com/document/product/1552/88874?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyHostsCertificateRequest"/></param>
         /// <returns><see cref="ModifyHostsCertificateResponse"/></returns>
@@ -4526,7 +4648,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+        /// Modify an inference service to support updates to the listening port, request path, container image, resource configuration, and description. Only passed parameters will be modified, while unpassed parameters remain unchanged.
         /// </summary>
         /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
         /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
@@ -4536,7 +4658,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+        /// Modify an inference service to support updates to the listening port, request path, container image, resource configuration, and description. Only passed parameters will be modified, while unpassed parameters remain unchanged.
         /// </summary>
         /// <param name="req"><see cref="ModifyInferenceServiceRequest"/></param>
         /// <returns><see cref="ModifyInferenceServiceResponse"/></returns>
@@ -4547,7 +4669,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the configuration of a Layer 4 proxy instance.
+        /// This API is used to modify the configuration of a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
@@ -4557,7 +4679,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the configuration of a Layer 4 proxy instance.
+        /// This API is used to modify the configuration of a layer 4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyResponse"/></returns>
@@ -4589,7 +4711,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// This API is used to enable or disable the status of layer-4 proxy rules, supporting both individual and batch operation.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
@@ -4599,7 +4721,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to start or stop Layer 4 proxy forwarding rules, supporting both individual and batch operation.
+        /// This API is used to enable or disable the status of layer-4 proxy rules, supporting both individual and batch operation.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyRulesStatusRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyRulesStatusResponse"/></returns>
@@ -4610,7 +4732,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable a Layer 4 proxy instance.
+        /// This API is used to enable or disable an L4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
@@ -4620,7 +4742,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable a Layer 4 proxy instance.
+        /// This API is used to enable or disable an L4 proxy instance.
         /// </summary>
         /// <param name="req"><see cref="ModifyL4ProxyStatusRequest"/></param>
         /// <returns><see cref="ModifyL4ProxyStatusResponse"/></returns>
@@ -4631,7 +4753,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+        /// This API is used to modify a rule in the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). Only one rule can be modified at a time.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
         /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
@@ -4641,7 +4763,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify rules in the [rule engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1), supporting only one rule modification per request.
+        /// This API is used to modify a rule in the [rule engine](https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). Only one rule can be modified at a time.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccRuleRequest"/></param>
         /// <returns><see cref="ModifyL7AccRuleResponse"/></returns>
@@ -4652,7 +4774,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is used to modify the priority of the rule list in the [Rule Engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). This interface requires the complete rule ID list under the site ID to be passed in. The rule ID list can be obtained through the [Query Seven-Layer Acceleration Rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1) interface. The final priority order will be adjusted to the order of the rule ID list, and will be executed from front to back.
+        /// This API is used to modify the priority of the rule list in the rule engine (https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). It requires the input of the complete rule ID list under the site ID. The rule ID list can be obtained through the API for querying layer-7 acceleration rules (https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, executed from front to back.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
         /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
@@ -4662,7 +4784,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This interface is used to modify the priority of the rule list in the [Rule Engine](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1). This interface requires the complete rule ID list under the site ID to be passed in. The rule ID list can be obtained through the [Query Seven-Layer Acceleration Rules](https://intl.cloud.tencent.com/document/product/1552/115820?from_cn_redirect=1) interface. The final priority order will be adjusted to the order of the rule ID list, and will be executed from front to back.
+        /// This API is used to modify the priority of the rule list in the rule engine (https://www.tencentcloud.com/document/product/1552/70901?from_cn_redirect=1). It requires the input of the complete rule ID list under the site ID. The rule ID list can be obtained through the API for querying layer-7 acceleration rules (https://www.tencentcloud.com/document/product/1552/115820?from_cn_redirect=1). The final priority order will be adjusted to the order of the rule ID list, executed from front to back.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccRulePriorityRequest"/></param>
         /// <returns><see cref="ModifyL7AccRulePriorityResponse"/></returns>
@@ -4673,7 +4795,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// This API is used to modify the global configuration of site acceleration.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
         /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
@@ -4683,7 +4805,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the global configuration of [Site Acceleration](https://intl.cloud.tencent.com/document/product/1552/96193?from_cn_redirect=1).
+        /// This API is used to modify the global configuration of site acceleration.
         /// </summary>
         /// <param name="req"><see cref="ModifyL7AccSettingRequest"/></param>
         /// <returns><see cref="ModifyL7AccSettingResponse"/></returns>
@@ -4715,7 +4837,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP and port.
+        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP, and port.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
@@ -4725,7 +4847,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP and port.
+        /// This API is used to modify multi-channel security acceleration gateway information, such as name, gateway ID, IP, and port.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayResponse"/></returns>
@@ -4736,7 +4858,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the access lines of the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy lines and custom lines.
+        /// This API is used to modify the configuration for connecting lines to the multi-channel security acceleration gateway, including EdgeOne Layer 4 proxy lines and custom lines.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
@@ -4746,7 +4868,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the access lines of the multi-channel security acceleration gateway, including EdgeOne Layer-4 proxy lines and custom lines.
+        /// This API is used to modify the configuration for connecting lines to the multi-channel security acceleration gateway, including EdgeOne Layer 4 proxy lines and custom lines.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayLineRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayLineResponse"/></returns>
@@ -4757,7 +4879,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the access key for the multi-channel security acceleration gateway.The access key is used by customers to sign requests for gateway access. The original key becomes invalid after modification.
+        /// This API is used to modify the key for integrating a multi-channel security acceleration gateway. Customers sign with the integration key to access the multi-channel security acceleration gateway. After modification, the original key becomes invalid.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
@@ -4767,7 +4889,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the access key for the multi-channel security acceleration gateway.The access key is used by customers to sign requests for gateway access. The original key becomes invalid after modification.
+        /// This API is used to modify the key for integrating a multi-channel security acceleration gateway. Customers sign with the integration key to access the multi-channel security acceleration gateway. After modification, the original key becomes invalid.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewaySecretKeyResponse"/></returns>
@@ -4778,7 +4900,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to update the status of a multi-channel security gateway.
+        /// This API is used to update the multi-channel security gateway status.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
@@ -4788,7 +4910,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to update the status of a multi-channel security gateway.
+        /// This API is used to update the multi-channel security gateway status.
         /// </summary>
         /// <param name="req"><see cref="ModifyMultiPathGatewayStatusRequest"/></param>
         /// <returns><see cref="ModifyMultiPathGatewayStatusResponse"/></returns>
@@ -4799,7 +4921,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable specific origin IP ranges for L7 acceleration domains or L4 proxy instances. The maximum quantity for single submission is 200 L7 acceleration domains or 100 L4 proxy instances, with mixed submissions supported up to a total of 200 instances. If changes are needed for submissions exceeding 200 instances, please submit in batches via this interface. Meanwhile, allowlisted customers can switch to other available origin protection IP range versions such as the simplified edition, which can reduce origin IP ranges.
+        /// This API is used to modify the origin protection configuration of a site. The following operations are supported: <li>**Resource addition and deletion**: enable or disable origin-pull from specific origin IP ranges for layer-7 accelerated domains/layer-4 proxy instances. This applies to resource adjustment in **specified protection mode**, and unspecified resources will not change;</li><li>**Mode switching**: adjust the origin protection mode of layer-7 accelerated domains/layer-4 proxy instances. After switching to all, the list of accelerated domains or layer-4 proxy instances under the site will be automatically added to the origin protection list in real time, and subsequent resource changes will also be automatically adjusted without manual intervention; after switching to specific, only the mode is changed, and resources already included in protection remain unchanged;</li><li>**IP range version switching**: for whitelisted customers, it supports switching to other available origin protection IP range versions, such as the simplified version, to reduce origin-pull IP ranges.</li>
+        /// 
+        /// Instructions for specified protection mode:
+        /// <li>The maximum number of layer-7 accelerated domains that can be submitted at a time is 200, and the maximum number of layer-4 proxy instances is 100. Mixed submission of layer-7 accelerated domains/layer-4 proxy instances is supported, with a maximum total of 200 instances;</li>
+        /// <li>When more than 200 resources need to be changed, submit them in batches through this API. For example, to add 500 layer-7 accelerated domains, first submit 200 domains through this API, and then submit the remaining 300 domains in two batches, with no more than 200 domains each time.</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
         /// <returns><see cref="ModifyOriginACLResponse"/></returns>
@@ -4809,7 +4935,11 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to enable or disable specific origin IP ranges for L7 acceleration domains or L4 proxy instances. The maximum quantity for single submission is 200 L7 acceleration domains or 100 L4 proxy instances, with mixed submissions supported up to a total of 200 instances. If changes are needed for submissions exceeding 200 instances, please submit in batches via this interface. Meanwhile, allowlisted customers can switch to other available origin protection IP range versions such as the simplified edition, which can reduce origin IP ranges.
+        /// This API is used to modify the origin protection configuration of a site. The following operations are supported: <li>**Resource addition and deletion**: enable or disable origin-pull from specific origin IP ranges for layer-7 accelerated domains/layer-4 proxy instances. This applies to resource adjustment in **specified protection mode**, and unspecified resources will not change;</li><li>**Mode switching**: adjust the origin protection mode of layer-7 accelerated domains/layer-4 proxy instances. After switching to all, the list of accelerated domains or layer-4 proxy instances under the site will be automatically added to the origin protection list in real time, and subsequent resource changes will also be automatically adjusted without manual intervention; after switching to specific, only the mode is changed, and resources already included in protection remain unchanged;</li><li>**IP range version switching**: for whitelisted customers, it supports switching to other available origin protection IP range versions, such as the simplified version, to reduce origin-pull IP ranges.</li>
+        /// 
+        /// Instructions for specified protection mode:
+        /// <li>The maximum number of layer-7 accelerated domains that can be submitted at a time is 200, and the maximum number of layer-4 proxy instances is 100. Mixed submission of layer-7 accelerated domains/layer-4 proxy instances is supported, with a maximum total of 200 instances;</li>
+        /// <li>When more than 200 resources need to be changed, submit them in batches through this API. For example, to add 500 layer-7 accelerated domains, first submit 200 domains through this API, and then submit the remaining 300 domains in two batches, with no more than 200 domains each time.</li>
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginACLRequest"/></param>
         /// <returns><see cref="ModifyOriginACLResponse"/></returns>
@@ -4820,7 +4950,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
+        /// Modify origin group configuration. Newly submitted origin records will overwrite the original origin records in the origin group.
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
@@ -4830,7 +4960,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the configuration of an origin group. The original configuration will be overwritten. 
+        /// Modify origin group configuration. Newly submitted origin records will overwrite the original origin records in the origin group.
         /// </summary>
         /// <param name="req"><see cref="ModifyOriginGroupRequest"/></param>
         /// <returns><see cref="ModifyOriginGroupResponse"/></returns>
@@ -4862,8 +4992,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to configure the origin speed limit. This feature is in beta test.
-        /// This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
+        /// This API is used to configure origin-pull rate limiting. This feature is in allowlist beta test.
+        /// This API is used to create, modify, and delete preheated origin-pull rate limits. Each account supports up to 100 limits.
         /// </summary>
         /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
         /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
@@ -4873,8 +5003,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to configure the origin speed limit. This feature is in beta test.
-        /// This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
+        /// This API is used to configure origin-pull rate limiting. This feature is in allowlist beta test.
+        /// This API is used to create, modify, and delete preheated origin-pull rate limits. Each account supports up to 100 limits.
         /// </summary>
         /// <param name="req"><see cref="ModifyPrefetchOriginLimitRequest"/></param>
         /// <returns><see cref="ModifyPrefetchOriginLimitResponse"/></returns>
@@ -4918,8 +5048,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
-        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for modifying rule engine APIs. EdgeOne comprehensively upgraded rule engine-related APIs on January 21, 2025. For details on the new version API for modifying layer-7 acceleration rules, refer to [ModifyL7AccRule](https://www.tencentcloud.com/document/product/1552/115818?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the legacy version API will stop update and iteration. New features will only be provided in the latest version API. The existing capacity supported by the legacy version API will not be affected. To avoid data field conflict when using the legacy version API, migrate to the latest version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -4929,8 +5059,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is on an earlier version. EdgeOne has comprehensively upgraded the relevant APIs of the rule engine on January 21, 2025. For details about the new version of the API for modifying layer-7 acceleration rules, see ModifyL7AccRule(https://intl.cloud.tencent.com/document/product/1552/115818?from_cn_redirect=1).
-        /// <p style="color: red;">Note: Starting from January 21, 2025, the old version of the interface will stop updating and iteration. Subsequent new features will only be provided in the new version of the interface, and the original capabilities supported by the old version of the interface will not be affected. To avoid data field conflicts when using the old version of the interface, it is recommended that you migrate to the new version of the rule engine interface as soon as possible. </p>
+        /// This API is on an earlier version for modifying rule engine APIs. EdgeOne comprehensively upgraded rule engine-related APIs on January 21, 2025. For details on the new version API for modifying layer-7 acceleration rules, refer to [ModifyL7AccRule](https://www.tencentcloud.com/document/product/1552/115818?from_cn_redirect=1).
+        /// <p style="color: red;">Note: Starting from January 21, 2025, the legacy version API will stop update and iteration. New features will only be provided in the latest version API. The existing capacity supported by the legacy version API will not be affected. To avoid data field conflict when using the legacy version API, migrate to the latest version rule engine API as soon as possible.</p>
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
         /// <returns><see cref="ModifyRuleResponse"/></returns>
@@ -4941,7 +5071,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an API resource.
+        /// This API is used to modify API resources.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
         /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
@@ -4951,7 +5081,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an API resource.
+        /// This API is used to modify API resources.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityAPIResourceRequest"/></param>
         /// <returns><see cref="ModifySecurityAPIResourceResponse"/></returns>
@@ -4962,7 +5092,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an API service.
+        /// This API is used to modify API services.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
         /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
@@ -4972,7 +5102,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify an API service.
+        /// This API is used to modify API services.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityAPIServiceRequest"/></param>
         /// <returns><see cref="ModifySecurityAPIServiceResponse"/></returns>
@@ -4983,7 +5113,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify client authentication options.
+        /// Modify client authentication options.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
         /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
@@ -4993,7 +5123,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify client authentication options.
+        /// Modify client authentication options.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityClientAttesterRequest"/></param>
         /// <returns><see cref="ModifySecurityClientAttesterResponse"/></returns>
@@ -5004,7 +5134,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a security IP group.
+        /// Modifies a security IP group.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityIPGroupRequest"/></param>
         /// <returns><see cref="ModifySecurityIPGroupResponse"/></returns>
@@ -5014,7 +5144,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a security IP group.
+        /// Modifies a security IP group.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityIPGroupRequest"/></param>
         /// <returns><see cref="ModifySecurityIPGroupResponse"/></returns>
@@ -5046,7 +5176,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the web and bot security configurations.
+        /// Modify Web & Bot security configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
         /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
@@ -5056,7 +5186,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the web and bot security configurations.
+        /// Modify Web & Bot security configuration.
         /// </summary>
         /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
         /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
@@ -5067,7 +5197,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a shared CNAME. Currently only support modifying the description of a shared CNAME and setting the associated IP SSL domain name of a shared CNAME with IP SSL type. The shared CNAME itself cannot be modified after creation. This feature is in beta test.
+        /// This API is used to modify a shared CNAME. Currently, it only supports modifying the description and settings of a shared CNAME, and associating an IP SSL domain name with an IP SSL shared CNAME. Once created, a shared CNAME itself cannot be modified. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
         /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
@@ -5077,7 +5207,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a shared CNAME. Currently only support modifying the description of a shared CNAME and setting the associated IP SSL domain name of a shared CNAME with IP SSL type. The shared CNAME itself cannot be modified after creation. This feature is in beta test.
+        /// This API is used to modify a shared CNAME. Currently, it only supports modifying the description and settings of a shared CNAME, and associating an IP SSL domain name with an IP SSL shared CNAME. Once created, a shared CNAME itself cannot be modified. This feature is in beta test.
         /// </summary>
         /// <param name="req"><see cref="ModifySharedCNAMERequest"/></param>
         /// <returns><see cref="ModifySharedCNAMEResponse"/></returns>
@@ -5088,7 +5218,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the security policy configuration template.
+        /// Modifies a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
@@ -5098,7 +5228,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the security policy configuration template.
+        /// Modifies a security policy configuration template
         /// </summary>
         /// <param name="req"><see cref="ModifyWebSecurityTemplateRequest"/></param>
         /// <returns><see cref="ModifyWebSecurityTemplateResponse"/></returns>
@@ -5109,7 +5239,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a site.
+        /// Modifies site information.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneRequest"/></param>
         /// <returns><see cref="ModifyZoneResponse"/></returns>
@@ -5119,7 +5249,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify a site.
+        /// Modifies site information.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneRequest"/></param>
         /// <returns><see cref="ModifyZoneResponse"/></returns>
@@ -5132,7 +5262,7 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
         /// 
-        /// For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+        /// For rule-level custom variable related operations, call the CreateL7AccRules or ModifyL7AccRule API.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneCustomVariablesRequest"/></param>
         /// <returns><see cref="ModifyZoneCustomVariablesResponse"/></returns>
@@ -5144,7 +5274,7 @@ namespace TencentCloud.Teo.V20220901
         /// <summary>
         /// This API is used to manage site-level custom variables, supporting the creation, modification, and deletion of variable definitions and variable operations. The submitted list will override the corresponding existing configuration. To clear the configuration, pass in an empty list. Configuration items not passed in remain unchanged. The default values for variable definitions and variable operations are both empty.
         /// 
-        /// For operations related to rule-level custom variables, call the CreateL7AccRules or ModifyL7AccRule API.
+        /// For rule-level custom variable related operations, call the CreateL7AccRules or ModifyL7AccRule API.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneCustomVariablesRequest"/></param>
         /// <returns><see cref="ModifyZoneCustomVariablesResponse"/></returns>
@@ -5155,7 +5285,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [ModifyL7AccSetting](https://www.tencentcloud.com/document/product/1552/115817?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>
@@ -5165,7 +5295,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is an older version. EdgeOne has fully upgraded the APIs related to the rule engine. For details, please refer to [ModifyL7AccSetting](https://intl.cloud.tencent.com/document/product/1552/115817?from_cn_redirect=1).
+        /// This API is on an earlier version. EdgeOne has completed a comprehensive upgrade of rule engine APIs. For details, see [ModifyL7AccSetting](https://www.tencentcloud.com/document/product/1552/115817?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneSettingRequest"/></param>
         /// <returns><see cref="ModifyZoneSettingResponse"/></returns>
@@ -5176,7 +5306,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to change the site status.
+        /// Used to enable or disable a site.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneStatusRequest"/></param>
         /// <returns><see cref="ModifyZoneStatusResponse"/></returns>
@@ -5186,7 +5316,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to change the site status.
+        /// Used to enable or disable a site.
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneStatusRequest"/></param>
         /// <returns><see cref="ModifyZoneStatusResponse"/></returns>
@@ -5197,7 +5327,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the working mode of configuration modules under a site. Configuration modules can enable version management mode or immediate effect mode by configuration group dimension. For details, refer to [version management](https://www.tencentcloud.com/document/product/1145/67719).
+        /// This API is used to modify the working mode of each configuration module under a site. Each configuration module of a site can enable version management mode or immediate effect mode by configuration group dimension. For details, see Version Management (https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneWorkModeRequest"/></param>
         /// <returns><see cref="ModifyZoneWorkModeResponse"/></returns>
@@ -5207,7 +5337,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to modify the working mode of configuration modules under a site. Configuration modules can enable version management mode or immediate effect mode by configuration group dimension. For details, refer to [version management](https://www.tencentcloud.com/document/product/1145/67719).
+        /// This API is used to modify the working mode of each configuration module under a site. Each configuration module of a site can enable version management mode or immediate effect mode by configuration group dimension. For details, see Version Management (https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="ModifyZoneWorkModeRequest"/></param>
         /// <returns><see cref="ModifyZoneWorkModeResponse"/></returns>
@@ -5218,7 +5348,28 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+        /// Operate an inference service domain name. You can stop, enable, and delete it. Resources cannot be recovered after deletion.
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceDomainRequest"/></param>
+        /// <returns><see cref="OperateInferenceDomainResponse"/></returns>
+        public Task<OperateInferenceDomainResponse> OperateInferenceDomain(OperateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceDomainResponse>(req, "OperateInferenceDomain");
+        }
+
+        /// <summary>
+        /// Operate an inference service domain name. You can stop, enable, and delete it. Resources cannot be recovered after deletion.
+        /// </summary>
+        /// <param name="req"><see cref="OperateInferenceDomainRequest"/></param>
+        /// <returns><see cref="OperateInferenceDomainResponse"/></returns>
+        public OperateInferenceDomainResponse OperateInferenceDomainSync(OperateInferenceDomainRequest req)
+        {
+            return InternalRequestAsync<OperateInferenceDomainResponse>(req, "OperateInferenceDomain")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Operate an inference service. You can stop, start, and delete it. Resources cannot be recovered after deletion.
         /// </summary>
         /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
         /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
@@ -5228,7 +5379,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+        /// Operate an inference service. You can stop, start, and delete it. Resources cannot be recovered after deletion.
         /// </summary>
         /// <param name="req"><see cref="OperateInferenceServiceRequest"/></param>
         /// <returns><see cref="OperateInferenceServiceResponse"/></returns>
@@ -5239,7 +5390,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.
+        /// This API is used to refresh the key of a multi-channel security acceleration gateway. Customers integrate with the multi-channel security acceleration gateway based on key signatures. Each site contains only one key, which can be used to integrate all gateways under the site. After the key is refreshed, the original key becomes invalid.
         /// </summary>
         /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
@@ -5249,7 +5400,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.
+        /// This API is used to refresh the key of a multi-channel security acceleration gateway. Customers integrate with the multi-channel security acceleration gateway based on key signatures. Each site contains only one key, which can be used to integrate all gateways under the site. After the key is refreshed, the original key becomes invalid.
         /// </summary>
         /// <param name="req"><see cref="RefreshMultiPathGatewaySecretKeyRequest"/></param>
         /// <returns><see cref="RefreshMultiPathGatewaySecretKeyResponse"/></returns>
@@ -5260,8 +5411,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
-        /// > For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+        /// When your plan needs to be extended, you can use this API to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+        /// > For cost details, refer to [Plan Cost](https://www.tencentcloud.com/document/product/1552/94158?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="RenewPlanRequest"/></param>
         /// <returns><see cref="RenewPlanResponse"/></returns>
@@ -5271,8 +5422,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// When your plan needs to be extended, you can use this interface to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
-        /// > For cost details, refer to [Plan Fees](https://intl.cloud.tencent.com/document/product/1552/94158?from_cn_redirect=1).
+        /// When your plan needs to be extended, you can use this API to renew it. Plan renewal is only supported for the Personal, Basic, and Standard Editions.
+        /// > For cost details, refer to [Plan Cost](https://www.tencentcloud.com/document/product/1552/94158?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="RenewPlanRequest"/></param>
         /// <returns><see cref="RenewPlanResponse"/></returns>
@@ -5284,9 +5435,9 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
-        /// > For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
-        /// For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
-        /// If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// > For differences between different types of Edgeone billing plans, see Edgeone billing plan comparison (https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1)
+        /// For billing package upgrade rules and pricing details, see Edgeone billing package upgrade instructions (https://www.tencentcloud.com/document/product/1552/95291?from_cn_redirect=1)
+        /// If your plan needs to upgrade to the Enterprise Edition, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="UpgradePlanRequest"/></param>
         /// <returns><see cref="UpgradePlanResponse"/></returns>
@@ -5297,9 +5448,9 @@ namespace TencentCloud.Teo.V20220901
 
         /// <summary>
         /// When you need features available only in higher-tier plans, you can upgrade your plan through this interface. Upgrades are only supported for Personal and Basic Edition Plans.
-        /// > For differences between EdgeOne billing plans, refer to [Comparison of EdgeOne Plans](https://intl.cloud.tencent.com/document/product/1552/94165?from_cn_redirect=1).
-        /// For EdgeOne plan upgrade rules and pricing details, refer to [EdgeOne Plan Upgrade Guide](https://intl.cloud.tencent.com/document/product/1552/95291?from_cn_redirect=1).
-        /// If your plan needs to upgrade to the Enterprise Edition, [Contact Us](https://www.tencentcloud.com/contact-us).
+        /// > For differences between different types of Edgeone billing plans, see Edgeone billing plan comparison (https://www.tencentcloud.com/document/product/1552/94165?from_cn_redirect=1)
+        /// For billing package upgrade rules and pricing details, see Edgeone billing package upgrade instructions (https://www.tencentcloud.com/document/product/1552/95291?from_cn_redirect=1)
+        /// If your plan needs to upgrade to the Enterprise Edition, please [contact us](https://www.tencentcloud.com/contact-us).
         /// </summary>
         /// <param name="req"><see cref="UpgradePlanRequest"/></param>
         /// <returns><see cref="UpgradePlanResponse"/></returns>
@@ -5310,9 +5461,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// In CNAME access mode, you need to verify the ownership of the site or domain name. This API is used to trigger the verification. If the site passes ownership verification, no need to verify again when adding domains subsequently. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// 
-        /// For sites connected via the NS, you can query whether the NS is successfully switched through this API. For details, see [Modifying DNS Servers](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+        /// In NS access mode, you can also query through this API whether the NS server switch is successful. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="VerifyOwnershipRequest"/></param>
         /// <returns><see cref="VerifyOwnershipResponse"/></returns>
@@ -5322,9 +5473,9 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// This API is used to verify your ownership of a site or domain name. It's required in the CNAME access mode. After a site is verified, you don't need to verify the ownership again for domain names added to it in the future. For details, see [Ownership Verification](https://intl.cloud.tencent.com/document/product/1552/70789?from_cn_redirect=1).
+        /// In CNAME access mode, you need to verify the ownership of the site or domain name. This API is used to trigger the verification. If the site passes ownership verification, no need to verify again when adding domains subsequently. For details, see [Site/Domain Name Ownership Verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
         /// 
-        /// For sites connected via the NS, you can query whether the NS is successfully switched through this API. For details, see [Modifying DNS Servers](https://intl.cloud.tencent.com/document/product/1552/90452?from_cn_redirect=1).
+        /// In NS access mode, you can also query through this API whether the NS server switch is successful. For details, see [Modify DNS Server](https://www.tencentcloud.com/document/product/1552/90452?from_cn_redirect=1).
         /// </summary>
         /// <param name="req"><see cref="VerifyOwnershipRequest"/></param>
         /// <returns><see cref="VerifyOwnershipResponse"/></returns>

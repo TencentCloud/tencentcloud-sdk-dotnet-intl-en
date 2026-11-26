@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the resource ID.
+        /// Resource ID.
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Specifies the resource name.
+        /// Resource name.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Specifies the API service ID list associated with the API resource.
+        /// List of API service IDs associated with the API resource.
         /// </summary>
         [JsonProperty("APIServiceIds")]
         public string[] APIServiceIds{ get; set; }
 
         /// <summary>
-        /// Specifies the resource path.
+        /// Resource path.
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
 
         /// <summary>
-        /// Request method list. valid values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
+        /// Request method list. Supports the following values: GET, POST, PUT, HEAD, PATCH, OPTIONS, DELETE.
         /// </summary>
         [JsonProperty("Methods")]
         public string[] Methods{ get; set; }
 
         /// <summary>
-        /// Specifies the specific content of the request content match rule, which must comply with the expression grammar. please refer to the product document for detailed requirements.
+        /// Specific content of the request content matching rule. It must comply with the expression syntax. For detailed specifications, see the product document.
         /// </summary>
         [JsonProperty("RequestConstraint")]
         public string RequestConstraint{ get; set; }

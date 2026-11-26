@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Multi-Channel security acceleration gateway integration key, base64-encoded string with an unencoded length of 32-48 characters.
+        /// Key for multi-channel security acceleration gateway integration, base64 string. The string length before encoding is 32-48 characters.
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }

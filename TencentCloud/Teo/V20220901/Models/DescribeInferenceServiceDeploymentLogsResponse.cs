@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Deploy the log list.
+        /// List of deployment logs.
         /// </summary>
         [JsonProperty("DeploymentLogInfoSet")]
         public InferenceServiceDeploymentLogInfo[] DeploymentLogInfoSet{ get; set; }

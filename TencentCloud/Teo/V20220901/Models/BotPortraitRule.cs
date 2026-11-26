@@ -25,39 +25,39 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. Values:
-        /// <li>`on`: Enable</li>
-        /// <li>`off`: Disable</li>
+        /// Feature switch. Valid values:
+        /// <li>`on`: Enable;</li>
+        /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// The rule ID, which is only used as an output parameter.
+        /// Rule ID. Output only.
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// The rule ID of JS challenge. default all rules without configuring JS challenge.
+        /// Rule ID of the JS challenge. All rules have no JS challenge configured by default.
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID for digit captcha-intl. default is all rules without configuring digit captcha-intl.
+        /// Rule ID of the digit verification code. By default, no digit verification code is configured for all rules.
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID for observation. by default, observation is not configured for all rules.
+        /// Rule ID for observation. By default, no rule is configured for observation.
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
-        /// Rule ID for interception. default to all rules with no configuration interception.
+        /// Rule ID for interception. By default, no interception is configured for all rules.
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }

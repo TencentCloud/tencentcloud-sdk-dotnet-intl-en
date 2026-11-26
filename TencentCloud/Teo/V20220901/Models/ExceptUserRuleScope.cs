@@ -25,32 +25,32 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Exception mode. Values:
-        /// <li>`complete`: Skip the exception rule for full requests.</li>
-        /// <li>`partial`: Skip the exception rule for partial requests.</li>
+        /// Exception rule type. Among them, complete mode represents exceptions for full data, while partial mode represents selecting specified modules and specified fields for exceptions. The field values include:
+        /// <li>complete: skip entirely mode;</li>
+        /// <li>partial: Partially skip mode.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Effective module. the field value can be:.
-        /// <li>`waf`: tencent cloud-managed rules</li>.
-        /// <Li>`Rate`: rate limit</li>.
-        /// <li>`acl`: custom rule</li>.
-        /// <Li>`Cc`: cc attack defense</li>.
-        /// <Li>`Bot`: bot protection</li>.
+        /// Effective module. Valid values:
+        /// <li>waf: managed rules;</li>
+        /// <li>rate: rate limit;</li>
+        /// <li>acl: custom rule;</li>
+        /// <li>cc: CC attack defense;</li>
+        /// <li>bot: bot protection.</li>
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }
 
         /// <summary>
-        /// Skip exception rule details for some rule ids. if null, use the last set configuration by default.
+        /// Skip the exception rule details of some rule IDs. If it is null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("PartialModules")]
         public PartialModule[] PartialModules{ get; set; }
 
         /// <summary>
-        /// Details of the exception rule for skipping specific fields. if null, use the last set configuration by default.
+        /// Exception rule details for skipping specific fields during scan. If null, use the last set configuration by default.
         /// </summary>
         [JsonProperty("SkipConditions")]
         public SkipCondition[] SkipConditions{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// <p>Service monitoring data for reasoning.</p>
+        /// <p>Reasoning service monitoring data.</p>
         /// </summary>
         [JsonProperty("InferenceServiceMonitorRecords")]
         public InferenceServiceMonitorRecord[] InferenceServiceMonitorRecords{ get; set; }

@@ -25,71 +25,71 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Site ID.
+        /// Zone ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Domain name or subdomain name when `ProxyType=hostname`; 
-        /// Instance name when `ProxyType=instance`.
+        /// When ProxyType=hostname, it indicates a domain name or subdomain.
+        /// When ProxyType=instance, it indicates the proxy name.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// The scheduling mode. Values:
-        /// <li>`ip`: Schedule via Anycast IP.</li>
-        /// <li>`domain`: Schedule via CNAME.</li>
+        /// Scheduling mode. Valid values:
+        /// <li>`ip`: Anycast IP;</li>
+        /// <li>`domain`: CNAME.</li>
         /// </summary>
         [JsonProperty("PlatType")]
         public string PlatType{ get; set; }
 
         /// <summary>
-        /// Whether to enable security protection. Values:
-        /// <li>`0`: Disable security protection.</li>
-        /// <li>`1`: Enable security protection.</li>
+        /// Whether security is enabled. Valid values:
+        /// <li>0: security off;</li>
+        /// <li>1: Enable security.</li>
         /// </summary>
         [JsonProperty("SecurityType")]
         public long? SecurityType{ get; set; }
 
         /// <summary>
-        /// Whether to enable acceleration. Values:
-        /// <li>`0`: Disable acceleration.</li>
-        /// <li>`1`: Enable acceleration.</li>
+        /// Whether to enable acceleration. Valid values:
+        /// <li>0: disable acceleration;</li>
+        /// <li>1: Enable acceleration.</li>
         /// </summary>
         [JsonProperty("AccelerateType")]
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// Layer 4 proxy mode, with value: <li>instance: instance mode.</li>If not specified, the default value instance will be used.
+        /// Layer 4 proxy mode. Valid values: <li>instance: instance mode.</li>Use default value instance if not specified.
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// The session persistence duration. Value range: 30-3600 (in seconds).
-        /// If not specified, this field uses the default value 600.
+        /// Session persistence duration. Value range: 30-3600. Unit: second.
+        /// If this field is not specified, the default value '600' will be used.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// Ipv6 access configuration. 
-        /// IPv6 access is disabled if it is not specified.
+        /// Ipv6 access configuration.
+        /// Not specified means disabling Ipv6 access.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// The rule details.
-        /// If this field is not specified, an application proxy rule will not be created.
+        /// Rule details.
+        /// If not specified, no rules are created.
         /// </summary>
         [JsonProperty("ApplicationProxyRules")]
         public ApplicationProxyRule[] ApplicationProxyRules{ get; set; }
 
         /// <summary>
-        /// Cross-MLC-border acceleration. It is disabled if this parameter is not specified.
+        /// Acceleration optimization configuration for the Chinese mainland. Not specified means disabling acceleration optimization for the Chinese mainland.
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainland AccelerateMainland{ get; set; }

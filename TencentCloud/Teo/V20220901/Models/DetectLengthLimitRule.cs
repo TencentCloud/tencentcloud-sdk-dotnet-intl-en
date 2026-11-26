@@ -25,33 +25,33 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Rule Id, output parameter only.
+        /// Rule Id. Output only.
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// Rule name, output parameter only.
+        /// Rule name. Output usage only.
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// Rule description, output parameter only.
+        /// Rule description. For output usage only.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Rule configuration conditions, output parameter only.
+        /// Rule configuration condition. For output usage only.
         /// </summary>
         [JsonProperty("Conditions")]
         public DetectLengthLimitCondition[] Conditions{ get; set; }
 
         /// <summary>
-        /// Handling method. Values:.
-        /// <li>`skip`: when request body data exceeds the detection depth set by `body_depth` in `Conditions` output parameters, skip all request body content detection.</li>.
-        /// <li>`scan`: detect at the detection depth set by `body_depth` in the `Conditions` output parameters only. Truncate the excess part of the request body content directly, the excess part of the request body will not go through security detection.</li> Output paramter only.
+        /// Handling method. Valid values:
+        /// <li>skip: When the request body data exceeds the detection depth set by body_depth in the Conditions output parameter, skip testing of all request body content;</li>
+        /// <li>scan: Only detect the detection depth set by body_depth in the Conditions output. Request body content beyond this depth is directly truncated, and the excess request body will not undergo security detection.</li>Output usage only.
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }

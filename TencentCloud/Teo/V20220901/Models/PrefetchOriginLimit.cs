@@ -37,29 +37,29 @@ namespace TencentCloud.Teo.V20220901.Models
         public string DomainName{ get; set; }
 
         /// <summary>
-        /// Specifies the acceleration region with origin-pull speed limit.
-        /// During preheating, the acceleration region will be subject to the configured Bandwidth value limit. valid values:.
-        /// <Li>Overseas: global availability zone (excluding the chinese mainland);</li>.
-        /// <Li>MainlandChina: chinese mainland availability zone.</li>.
+        /// Acceleration region restricted by origin-pull rate limiting.
+        /// During preheating, the acceleration region will be subject to the configured Bandwidth value limit. Valid values:
+        /// <li>Overseas: global availability zone (excluding the Chinese mainland);</li>
+        /// <li>MainlandChina: Chinese mainland availability zone.</li>
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Specifies the bandwidth limit for origin-pull.
-        /// Specifies the upper limit of bandwidth returning to the origin server during preheating. value ranges from 100 to 100,000 Mbps.
+        /// Origin-pull bandwidth limit.
+        /// Upper limit of bandwidth for returning to the origin during preheating. Value range: 100–100,000. Unit: Mbps.
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// Describes the time when the origin-pull speed limit was created.
+        /// The time when the origin-pull speed limit was created.
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// Describes the time when the origin-pull speed limit is updated.
+        /// The time when the origin-pull rate limit is updated.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

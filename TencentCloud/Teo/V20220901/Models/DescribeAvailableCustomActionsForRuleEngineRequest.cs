@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>Zone ID.</p>
+        /// <p>Site ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// <p>Filter criteria. Multiple conditions have an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, return all available rule engine custom configurations under the current site. Detailed filter criteria:</p><li>action-id: Filter by the unique identification ID of the custom configuration.</li><li>name: Filter by the name of the custom configuration.</a></li>Fuzzy query only supports filtering fields named <code>name</code>.<p></p>
+        /// <p>Filter criteria. Multiple criteria are in an AND relationship. The maximum number of Filters.Values is 20. If this parameter is left empty, all available custom configurations of the rule engine under the current site are returned. The detailed filter criteria are as follows:</p><li>action-id: filter by the unique identification ID of the custom configuration;</li><li>name: filter by the name of the custom configuration.</li>For fuzzy query, only filtering by the field name <code>name</code> is supported.<p></p>
         /// </summary>
         [JsonProperty("Filters")]
         public AdvancedFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// <p>Paginated query limit.</p><p>Value ranges from 0 to 1000.</p><p>Default value: 20.</p>
+        /// <p>Number limit of paginated query.</p><p>Value range: [0, 1000]</p><p>Default value: 20</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// <p>Paging offset.</p><p>Default value: 0.</p>
+        /// <p>Paging offset.</p><p>Default value: 0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by custom configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
+        /// <p>Sorting field. Valid values:</p><li>action-id: Sort by custom configuration unique identification ID.</li><li>create-time: Sort by configuration creation time.</li>Default value: <code>action-id</code>.<p></p>
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: sort in descending order.</li>Default value: desc.<p></p>
+        /// <p>Sorting method. Valid values:</p><li>asc: ascending sort;</li><li>desc: descending sort.</li>Default value: desc.<p></p>
         /// </summary>
         [JsonProperty("SortOrder")]
         public string SortOrder{ get; set; }

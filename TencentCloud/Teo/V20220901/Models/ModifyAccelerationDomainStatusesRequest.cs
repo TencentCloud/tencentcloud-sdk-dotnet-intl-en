@@ -25,29 +25,29 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// ID of the site related with the accelerated domain name.
+        /// Zone ID of the acceleration domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// List of accelerated domain names to be modified.
+        /// List of acceleration domain names for which to modify the execution status.
         /// </summary>
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }
 
         /// <summary>
-        /// Status of the accelerated domain name. Values:
-        /// <li>`online`: Enabled</li>
-        /// <li>`offline`: Disabled</li>
+        /// Acceleration domain name status. Valid values:
+        /// <li>`online`: Enable;</li>
+        /// <li>offline: Disable.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// Whether to force suspension when the domain name has associated resources (such as alias domain names and traffic scheduling policies). Values:
-        /// <li>`true`: Suspend the domain name and all associated resources.</li>
-        /// <li>`true`: Do not suspend the domain name and all associated resources.</li>Default value: `false`.
+        /// Whether to force suspension. When a domain name has associated resources (for example, alias domain names or traffic scheduling functions), whether to force suspension of that domain name. Valid values:
+        /// <li> true: disable that domain name and all associated resources;</li>
+        /// <li> false: When the acceleration domain name has associated resources, it cannot be disabled.</li>If not specified, the default value is false.
         /// </summary>
         [JsonProperty("Force")]
         public bool? Force{ get; set; }

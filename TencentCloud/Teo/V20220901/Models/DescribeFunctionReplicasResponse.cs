@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// Edge function replica list.
+        /// List of edge function replicas.
         /// </summary>
         [JsonProperty("FunctionReplicas")]
         public FunctionReplica[] FunctionReplicas{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Total release records.
+        /// Total number of release records.
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// Release record details.
+        /// Details of the release record.
         /// </summary>
         [JsonProperty("Records")]
         public DeployRecord[] Records{ get; set; }

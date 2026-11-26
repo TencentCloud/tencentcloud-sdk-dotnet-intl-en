@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>Site ID.</p>
+        /// <p>Zone ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// <p>Start time, example value: 2020-04-29T00:00:00Z.</p>
+        /// <p>Start time. Example value: 2020-04-29T00:00:00Z.</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
@@ -55,49 +55,49 @@ namespace TencentCloud.Teo.V20220901.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>Log type. Valid values: <ul><li> l7-access-logs: Layer 7 Access Logs;</li><li>web-attack: Managed rule log.</li></ul></p>
+        /// <p>Log type. Valid values: <ul><li> l7-access-logs: L7 access log;</li><li>web-attack: managed rule log.</li></ul></p>
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }
 
         /// <summary>
-        /// <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>. Maximum length 12KB.</p>
+        /// <p><a href="https://www.tencentcloud.com/document/product/1552/124662?from_cn_redirect=1">Log match condition</a>, with a maximum length of 12 KB.</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// <p>File format, valid values:</p><ul><li>csv.</li></ul>
+        /// <p>File format. Valid values:</p><ul><li>csv.</li></ul>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
         /// <summary>
-        /// <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: ascending order;</li><li>desc: descending order.</li></ul></p>
+        /// <p>Whether raw logs are returned in time sequence. Valid values: <ul><li>asc: in ascending order;</li><li>desc: in descending order.</li></ul></p>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// <p>Task status, valid values: <ul><li>loading: being processed, waiting to generate download link;</li><li> failed: processing failure, current task cannot be downloaded;</li><li>completed: packaging completed, ready for download.</li></ul></p>
+        /// <p>Task status. Valid values: <ul><li>loading: processing, waiting to generate a download link;</li><li> failed: processing failure, the current task cannot be downloaded;</li><li>completed: packaged and ready for download.</li></ul></p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// <p>Task creation time. After successful task creation, the retention period is 3 days.</p>
+        /// <p>Task creation time. It will be retained for 3 days after successful task creation.</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// <p>Download link, only returned when Status = completed.</p>
+        /// <p>Download URL. It is returned only when Status = completed.</p>
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// <p>Task expiration time. After expiry, the download address will be unavailable. Please obtain a new download address through this API.</p>
+        /// <p>Task expiration time for download. The download address will be unavailable after expiry. Obtain a new download address through this API.</p>
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the origin-pull authentication parameter type. valid values: <li>QueryString: indicates setting the origin-pull authentication parameter type to query string.</li><li>Header: indicates setting the origin-pull authentication parameter type to request Header.</li>.
+        /// Set the origin-pull authentication parameter type. Valid values: <li>QueryString: Set the origin-pull authentication parameter type to query string.</li><li>Header: Set the origin-pull authentication parameter type to request header.</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// Specifies the parameter name for the origin-pull authentication type.
+        /// Name of the parameter corresponding to the origin-pull authentication type.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Specifies the parameter value for the origin-pull authentication type.
+        /// Set the parameter value corresponding to the origin-pull authentication type.
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

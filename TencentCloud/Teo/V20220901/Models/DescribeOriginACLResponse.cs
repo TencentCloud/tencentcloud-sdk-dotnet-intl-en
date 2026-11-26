@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Describes the binding relationship between the l7 acceleration domain/l4 proxy instance and the origin server IP range.
+        /// Details of the binding relationship between an L7 acceleration domain name/L4 proxy instance and an origin-pull IP range.
         /// </summary>
         [JsonProperty("OriginACLInfo")]
         public OriginACLInfo OriginACLInfo{ get; set; }

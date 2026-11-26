@@ -25,75 +25,75 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The start time.
+        /// Start time.
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// End time. the query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
+        /// End time. The query time range (`EndTime` - `StartTime`) must be less than or equal to 31 days.
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// The statistical metric. Values:
-        /// <li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
-        /// <li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
-        /// <li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
-        /// <li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
-        /// <li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
-        /// <li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
+        /// Queried statistical metric. Valid values:
+        /// <li>ddos_attackFlux_protocol: ranking of attack traffic by protocol;</li>
+        /// <li>ddos_attackPackageNum_protocol: ranking by attack packet volume of each protocol;</li>
+        /// <li>ddos_attackNum_attackType: Ranking by number of attacks for each attack type;</li>
+        /// <li>ddos_attackNum_sregion: ranking by number of attacks by attack source region;</li>
+        /// <li>ddos_attackFlux_sip: ranking by number of attacks from attack source IPs;</li>
+        /// <li>ddos_attackFlux_sregion: ranking of attackNum by attack source region.</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// Site ID set. this parameter will change from option to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). a maximum of 100 site ids can be imported. use `*` to query all site data under the tencent cloud root account. querying account-level data requires all resource permissions for all sites in this interface.
+        /// Site ID set. This parameter will change from optional to required after May 30, 2024. For details, see the announcement: [Tencent Cloud EdgeOne Cloud API Change Notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). Import up to 100 site IDs. To query data of all sites under the Tencent Cloud root account, use `*` instead. To query account-level data, you need permission for all site resources of this interface.
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
+        /// Set of DDoS policy group IDs. If not specified, all policy IDs are selected by default.
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// The attack type. Values:
-        /// <li>`flood`: Flood;</li>
-        /// <li>`icmpFlood`: ICMP flood;</li>
-        /// <li>`all`: All attack types.</li>This field will be set to the default value `all` if not specified.
+        /// Attack type. Valid values:
+        /// <li>flood: flood attack;</li>
+        /// <li>icmpFlood: ICMP flood attack;</li>
+        /// <li>all: all attack types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all attack types.
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// The protocol type. Values:
-        /// <li>`tcp`: TCP protocol;</li>
-        /// <li>`udp`: UDP protocol;</li>
-        /// <li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+        /// Protocol type. Valid values:
+        /// <li>tcp: TCP protocol;</li>
+        /// <li>udp: UDP protocol;</li>
+        /// <li>all: all protocol types.</li>If this parameter is not input, the default value `all` is used, indicating a query for all protocols.
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// The port number.
+        /// Port number.
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// Queries the top n rows of data. Top 10 rows of data will be queried if this field is not specified.
+        /// Indicates the top N data to be queried. If this parameter is not input, the default value is 10, indicating querying the top 10 data.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Data storage region. Values:
-        /// <li>`overseas`: Global (outside the Chinese mainland);</li>
-        /// <li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user's location.
+        /// Data ownership region. Valid values:
+        /// <li>overseas: global (excluding the Chinese mainland) data;</li>
+        /// <li>mainland: Chinese mainland data.</li>If not specified, the region will be smart selected according to the user's location.
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

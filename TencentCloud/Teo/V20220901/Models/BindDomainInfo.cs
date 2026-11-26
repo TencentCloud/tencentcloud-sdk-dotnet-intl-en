@@ -31,16 +31,16 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// Zone ID to which the domain belongs.
+        /// Site ID of the domain name.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// Binding status. valid values:. 
-        /// <li>`process`: binding in progress</li>
-        /// <li>`online`: binding succeeded.</li>
-        /// <Li>`fail`: binding failed.</li>
+        /// Binding status. Valid values: 
+        /// <li>process: binding;</li>
+        /// <li>online: binding succeeded;</li>
+        /// <li>fail: Binding failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

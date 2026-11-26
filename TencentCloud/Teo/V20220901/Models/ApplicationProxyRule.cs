@@ -43,8 +43,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Origin server type. Valid values:
-        /// <li>custom: manually added;</li>
-        /// <li>loadbalancer: cloud load balancer;</li>
+        /// <li>`custom`: Manually added;</li>
+        /// <li>loadbalancer: load balancing;</li>
         /// <li>origins: origin server group.</li>
         /// </summary>
         [JsonProperty("OriginType")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <summary>
         /// Details of the origin server:
         /// <li>When OriginType is custom, it indicates one or more origin servers, such as `["8.8.8.8","9.9.9.9"]` or `OriginValue=["test.com"]`;</li>
-        /// <li>When OriginType is loadbalancer, it indicates a load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
+        /// <li>When OriginType is loadbalancer, it indicates a cloud load balancer, such as ["lb-3pbiw4d9iqz0"];</li>
         /// <li>When OriginType is origins, it requires one and only one element, indicating the origin server group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
         /// </summary>
         [JsonProperty("OriginValue")]
@@ -67,8 +67,8 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// Status. Valid values:
-        /// <li>online: enabled;</li>
-        /// <li>offline: disabled;</li>
+        /// <li>`online`: Enable;</li>
+        /// <li>`offline`: Disable;</li>
         /// <li>progress: deploying;</li>
         /// <li>stopping: disabling;</li>
         /// <li>fail: deployment or disabling failed.</li>
@@ -109,7 +109,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string OriginPort{ get; set; }
 
         /// <summary>
-        /// Tag of the rule.
+        /// Rule tag.
         /// </summary>
         [JsonProperty("RuleTag")]
         public string RuleTag{ get; set; }

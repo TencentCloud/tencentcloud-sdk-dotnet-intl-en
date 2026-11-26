@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The start time recorded in UNIX timestamp.
+        /// Start time in unix timestamp.
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// The end time recorded in UNIX timestamp. `0` indicates the blocking is ongoing.
+        /// Termination time in unix timestamp. 0 means the ban is still in effect.
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// The regions blocked.
+        /// Block the affected area.
         /// </summary>
         [JsonProperty("BlockArea")]
         public string BlockArea{ get; set; }

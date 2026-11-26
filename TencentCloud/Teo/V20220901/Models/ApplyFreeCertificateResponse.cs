@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Specifies the verification information for free certificate application when VerificationMethod is dns_challenge.
+        /// Verification information related to applying for a free certificate for the domain name when VerificationMethod is dns_challenge.
         /// </summary>
         [JsonProperty("DnsVerification")]
         public DnsVerification DnsVerification{ get; set; }
 
         /// <summary>
-        /// Specifies the verification information related to the free certificate application for the domain name when VerificationMethod is http_challenge.
+        /// Verification information related to applying for a free certificate for the domain name when VerificationMethod is http_challenge.
         /// </summary>
         [JsonProperty("FileVerification")]
         public FileVerification FileVerification{ get; set; }

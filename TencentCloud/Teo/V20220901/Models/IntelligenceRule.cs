@@ -25,16 +25,15 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// Switch. valid values:.
+        /// Switch. Valid values:
         /// <li>`on`: Enable;</li>
-        /// 
         /// <li>off: Disable.</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Specifies the rule detail.
+        /// Rule details.
         /// </summary>
         [JsonProperty("IntelligenceRuleItems")]
         public IntelligenceRuleItem[] IntelligenceRuleItems{ get; set; }

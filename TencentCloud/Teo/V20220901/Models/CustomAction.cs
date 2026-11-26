@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// <p>ID of the custom configuration item.</p><p>You can obtain it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
+        /// <p>Configuration item ID for custom configuration.</p><p>You can get it through the returned value CustomActionSet[].ActionId of the DescribeAvailableCustomActionsForRuleEngine API.</p>
         /// </summary>
         [JsonProperty("ActionId")]
         public string ActionId{ get; set; }
 
         /// <summary>
-        /// <p>Parameter values of each parameter field under this custom configuration.</p><p>You can obtain them through the API return value CustomActionSet[].Parameters of DescribeAvailableCustomActionsForRuleEngine.</p>
+        /// <p>Values of each parameter field under this custom configuration item.</p><p>You can obtain them through the CustomActionSet[].Parameters field in the return value of the DescribeAvailableCustomActionsForRuleEngine API.</p>
         /// </summary>
         [JsonProperty("Parameters")]
         public CustomActionParameter[] Parameters{ get; set; }

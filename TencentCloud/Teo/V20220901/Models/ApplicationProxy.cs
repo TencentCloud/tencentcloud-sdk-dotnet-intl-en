@@ -25,94 +25,94 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// The site ID.
+        /// Site ID.
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// The site name.
+        /// Site name.
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// The proxy ID.
+        /// Proxy ID.
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// The domain name or subdomain name when `ProxyType=hostname`.
-        /// The instance name when `ProxyType=instance`.
+        /// When ProxyType=hostname, it indicates a domain name or subdomain.
+        /// When ProxyType=instance, it indicates the proxy name.
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// The proxy type. Values:
-        /// <li>`hostname`: The proxy is created by subdomain name.</li>
-        /// <li>`instance`: The proxy is created by instance.</li>
+        /// L4 proxy mode. Valid values:
+        /// <li>`hostname`: Create by subdomain name;</li>
+        /// <li>`instance`: Create by instance.</li>
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// The scheduling mode. Values:
-        /// <li>`ip`: Schedule via Anycast IP.</li>
-        /// <li>`domain`: Schedule via CNAME.</li>
+        /// Scheduling mode. Valid values:
+        /// <li>`ip`: Anycast IP;</li>
+        /// <li>`domain`: CNAME.</li>
         /// </summary>
         [JsonProperty("PlatType")]
         public string PlatType{ get; set; }
 
         /// <summary>
-        /// Acceleration region. Values:
-        /// <li>`mainland`: Chinese mainland.</li>
-        /// <li>`overseas`: Global (outside the Chinese mainland);</li>
-        /// Default value: overseas.
+        /// Acceleration region. Valid values:
+        /// <li>mainland: within the Chinese mainland;</li>
+        /// <li>overseas: global (excluding the Chinese mainland).</li>
+        /// Default value: overseas
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// Whether to enable security protection. Values:
-        /// <li>`0`: Disable security protection.</li>
-        /// <li>`1`: Enable security protection.</li>
+        /// Whether security is enabled. Valid values:
+        /// <li>0: Disable security;</li>
+        /// <li>1: Enable security.</li>
         /// </summary>
         [JsonProperty("SecurityType")]
         public long? SecurityType{ get; set; }
 
         /// <summary>
-        /// Whether to enable acceleration. Values:
-        /// <li>`0`: Disable acceleration.</li>
-        /// <li>`1`: Enable acceleration.</li>
+        /// Whether to enable acceleration. Valid values:
+        /// <li>0: disable acceleration;</li>
+        /// <li>1: Enable acceleration.</li>
         /// </summary>
         [JsonProperty("AccelerateType")]
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// Session hold time, unit: seconds.
+        /// Session hold time, in seconds.
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// The rule status. Values:
-        /// <li>`online`: Enabled</li>
-        /// <li>`offline`: Disabled</li>
-        /// <li>`progress`: Deploying</li>
-        /// <li>`stopping`: Disabling</li>
-        /// <li>`fail`: Failed to deploy or disable</li>
+        /// Status. Valid values:
+        /// <li>`online`: Enable;</li>
+        /// <li>`offline`: Disable;</li>
+        /// <li>progress: deploying;</li>
+        /// <li>stopping: disabling;</li>
+        /// <li>fail: deployment or disabling failed.</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// The blocking status of the proxy. Values:
-        /// <li>`banned`: Blocked</li>
-        /// <li>`banning`: Blocking</li>
-        /// <li>`recover`: Unblocked</li>
-        /// <li>`recovering`: Unblocking</li>
+        /// Blocking status. Valid values:
+        /// <li>banned: blocked;</li>
+        /// <li>banning: Being banned;</li>
+        /// <li>recover: unblocked;</li>
+        /// <li>`recovering`: The name server is being unblocked.</li>
         /// </summary>
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
@@ -124,32 +124,32 @@ namespace TencentCloud.Teo.V20220901.Models
         public string[] ScheduleValue{ get; set; }
 
         /// <summary>
-        /// When `ProxyType=hostname`:
-        /// This field indicates the unique ID of the subdomain name.
+        /// When ProxyType=hostname:
+        /// Indicates the unique ID of the proxy acceleration.
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
 
         /// <summary>
-        /// The IPv6 access configuration.
+        /// Ipv6 access configuration.
         /// </summary>
         [JsonProperty("Ipv6")]
         public Ipv6 Ipv6{ get; set; }
 
         /// <summary>
-        /// The update time.
+        /// Update time.
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// List of rules.
+        /// Rule list.
         /// </summary>
         [JsonProperty("ApplicationProxyRules")]
         public ApplicationProxyRule[] ApplicationProxyRules{ get; set; }
 
         /// <summary>
-        /// Cross-MLC-border acceleration.
+        /// Acceleration optimization configuration for the Chinese mainland.
         /// </summary>
         [JsonProperty("AccelerateMainland")]
         public AccelerateMainland AccelerateMainland{ get; set; }
