@@ -25,40 +25,52 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID
+        /// <p>File system ID.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// VPC ID
+        /// <p>Virtual Private Cloud (VPC) ID.</p>
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// Subnet ID
+        /// <p>Subnet ID.</p>
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// Offset paging number. default 0.
+        /// <p>Offset for pagination. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit page size. default value 10.
+        /// <p>Limit for page size. Default value: 10.</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// User-defined name
+        /// <p>User-defined name.</p>
         /// </summary>
         [JsonProperty("CreationToken")]
         public string CreationToken{ get; set; }
+
+        /// <summary>
+        /// <p>Filter conditions.<br><br><li>Protocol - Array of String - optional - (Filter condition) Filters by protocol. (NFS | CIFS | TURBO) </li><br><br><li>StorageType - Array of String - optional - (Filter condition) Filters by storage type. (SD | HP | TB | TP | THP) </li><br><br><li>LifeCycleState - Array of String - optional - (Filter condition) Filters by lifecycle state. (creating | create_failed | available | deleting | delete_failed | upgrading | unserviced | expanding) </li><br><br><li>Zone - Array of String - optional - (Filter condition) Filters by AZ. (For example: ap-guangzhou-3) </li><br><br><li>IpAddress - Array of String - optional - (Filter condition) Filters by export point IP address. (For example: 10.0.0.3) </li><br><br><li>PGroupId - Array of String - optional - (Filter condition) Filters by permission group ID. (For example: pgroup-xxxxxrxt) </li><br><br><li>PGroupName - Array of String - optional - (Filter condition) Filters by permission group name. (For example: default permission group) </li><br><br><li>Scenario- Array of String - optional - (Filter condition) Filters by permission group name. (For example: AgentSandbox) </li></p>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// <p>Tag.</p>
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "CreationToken", this.CreationToken);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -25,79 +25,79 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+        /// <p>File system ID, which can be obtained through the API for querying file systems <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// Source data type; includes S3_COS, S3_L5.
+        /// <p>Source data type. Valid values: S3_COS and S3_L5.</p>
         /// </summary>
         [JsonProperty("SourceStorageType")]
         public string SourceStorageType{ get; set; }
 
         /// <summary>
-        /// Source storage address.
+        /// <p>Source storage address</p>
         /// </summary>
         [JsonProperty("SourceStorageAddress")]
         public string SourceStorageAddress{ get; set; }
 
         /// <summary>
-        /// Source path.
+        /// <p>Source path</p>
         /// </summary>
         [JsonProperty("SourcePath")]
         public string SourcePath{ get; set; }
 
         /// <summary>
-        /// Target path in the file system.
+        /// <p>Target path in the file system specified when setting data flow. It must start with /cfs/ and represents a logical path inside the file storage instance, not a local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted, and you need to map the source directory on object storage to test1/test2 under the mount path, the value of this parameter is /cfs/subdir/test1/test2.</li></ul>
         /// </summary>
         [JsonProperty("TargetPath")]
         public string TargetPath{ get; set; }
 
         /// <summary>
-        /// Key ID.
+        /// <p>Secret ID</p>
         /// </summary>
         [JsonProperty("SecretId")]
         public string SecretId{ get; set; }
 
         /// <summary>
-        /// key.
+        /// <p>Secret key</p>
         /// </summary>
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// Data flow name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+        /// <p>Data flow name. It supports up to 64 characters, including Chinese characters, digits, underscores (_), and hyphens (-).</p>
         /// </summary>
         [JsonProperty("DataFlowName")]
         public string DataFlowName{ get; set; }
 
         /// <summary>
-        /// 0: disable auto-update  1: enable auto-update.
+        /// <p>0: Automatic update disabled. 1: Automatic update enabled.</p>
         /// </summary>
         [JsonProperty("AutoRefresh")]
         public ulong? AutoRefresh{ get; set; }
 
         /// <summary>
-        /// Topic Parameter used by KafkaConsumer during consumption
+        /// <p>Topic parameter used by KafkaConsumer for consumption</p>
         /// </summary>
         [JsonProperty("UserKafkaTopic")]
         public string UserKafkaTopic{ get; set; }
 
         /// <summary>
-        /// 	Service address example value: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095.
+        /// <p>Service address. Example: kafkaconsumer-ap-beijing.cls.tencentyun.com:9095</p>
         /// </summary>
         [JsonProperty("ServerAddr")]
         public string ServerAddr{ get; set; }
 
         /// <summary>
-        /// Kafka consuming user name. example value: name.
+        /// <p>Kafka consumer username. Example: name</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// Kafka consuming user password. default ${SecretId}#${SecretKey}.
+        /// <p>Kafka consumer password. Default value: ${SecretId}#${SecretKey}.</p>
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

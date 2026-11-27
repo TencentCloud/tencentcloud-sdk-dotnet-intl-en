@@ -28,7 +28,7 @@ namespace TencentCloud.Controlcenter.V20230110
 
        private const string endpoint = "controlcenter.intl.tencentcloudapi.com";
        private const string version = "2023-01-10";
-       private const string sdkVersion = "SDK_NET_3.0.1244";
+       private const string sdkVersion = "SDK_NET_3.0.1436";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Controlcenter.V20230110
         }
 
         /// <summary>
-        /// This API is used to obtain account factory system baseline items.
+        /// This API is used to obtain Account Factory system baseline items.
         /// </summary>
         /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
         /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Controlcenter.V20230110
         }
 
         /// <summary>
-        /// This API is used to obtain account factory system baseline items.
+        /// This API is used to obtain Account Factory system baseline items.
         /// </summary>
         /// <param name="req"><see cref="ListAccountFactoryBaselineItemsRequest"/></param>
         /// <returns><see cref="ListAccountFactoryBaselineItemsResponse"/></returns>

@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Data flow manage ID.
+        /// <p>Data flow management ID</p>
         /// </summary>
         [JsonProperty("DataFlowId")]
         public string DataFlowId{ get; set; }

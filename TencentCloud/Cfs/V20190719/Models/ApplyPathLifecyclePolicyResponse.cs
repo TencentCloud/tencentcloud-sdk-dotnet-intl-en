@@ -25,8 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Returns existing rule information if there is a rule conflict.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Information of existing conflicting rules returned when rule conflicts occur.</p>
         /// </summary>
         [JsonProperty("CheckResults")]
         public CheckResult[] CheckResults{ get; set; }

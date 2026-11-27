@@ -25,49 +25,49 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system creation time
+        /// <p>File system creation time.</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// Custom file system name
+        /// <p>User-defined file system name.</p>
         /// </summary>
         [JsonProperty("CreationToken")]
         public string CreationToken{ get; set; }
 
         /// <summary>
-        /// File system ID
+        /// <p>File system ID.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+        /// <p>File system status. Possible statuses include: "creating": Creating, "create_failed": Creation failed, "available": Available, "unserviced": Unavailable, "upgrading": Upgrading, and "deleting": Deleting.</p>
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// Storage used by the file system, in bytes
+        /// <p>Used capacity of the file system, in bytes.</p>
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// AZ ID
+        /// <p>AZ ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Custom file system name
+        /// <p>User-defined file system name.</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Whether a file system is encrypted
+        /// <p>Whether the file system is encrypted.</p>
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }

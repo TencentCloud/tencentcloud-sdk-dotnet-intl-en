@@ -28,7 +28,7 @@ namespace TencentCloud.Cfs.V20190719
 
        private const string endpoint = "cfs.intl.tencentcloudapi.com";
        private const string version = "2019-07-19";
-       private const string sdkVersion = "SDK_NET_3.0.1365";
+       private const string sdkVersion = "SDK_NET_3.0.1436";
 
         /// <summary>
         /// Client constructor.
@@ -92,6 +92,27 @@ namespace TencentCloud.Cfs.V20190719
         public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicySync(BindAutoSnapshotPolicyRequest req)
         {
             return InternalRequestAsync<BindAutoSnapshotPolicyResponse>(req, "BindAutoSnapshotPolicy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to create an automatic data deletion policy for a specified CFS file system.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoDeletePolicyResponse"/></returns>
+        public Task<CreateAutoDeletePolicyResponse> CreateAutoDeletePolicy(CreateAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoDeletePolicyResponse>(req, "CreateAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to create an automatic data deletion policy for a specified CFS file system.
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="CreateAutoDeletePolicyResponse"/></returns>
+        public CreateAutoDeletePolicyResponse CreateAutoDeletePolicySync(CreateAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<CreateAutoDeletePolicyResponse>(req, "CreateAutoDeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -222,6 +243,27 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to create data retrieval.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataRetrievalRequest"/></param>
+        /// <returns><see cref="CreateDataRetrievalResponse"/></returns>
+        public Task<CreateDataRetrievalResponse> CreateDataRetrieval(CreateDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<CreateDataRetrievalResponse>(req, "CreateDataRetrieval");
+        }
+
+        /// <summary>
+        /// This API is used to create data retrieval.
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataRetrievalRequest"/></param>
+        /// <returns><see cref="CreateDataRetrievalResponse"/></returns>
+        public CreateDataRetrievalResponse CreateDataRetrievalSync(CreateDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<CreateDataRetrievalResponse>(req, "CreateDataRetrieval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Support proactive settlement/preheat API.
         /// </summary>
         /// <param name="req"><see cref="CreateLifecycleDataTaskRequest"/></param>
@@ -302,6 +344,27 @@ namespace TencentCloud.Cfs.V20190719
         public CreateMigrationTaskResponse CreateMigrationTaskSync(CreateMigrationTaskRequest req)
         {
             return InternalRequestAsync<CreateMigrationTaskResponse>(req, "CreateMigrationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified automatic deletion policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoDeletePolicyResponse"/></returns>
+        public Task<DeleteAutoDeletePolicyResponse> DeleteAutoDeletePolicy(DeleteAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoDeletePolicyResponse>(req, "DeleteAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to delete a specified automatic deletion policy.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="DeleteAutoDeletePolicyResponse"/></returns>
+        public DeleteAutoDeletePolicyResponse DeleteAutoDeletePolicySync(DeleteAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<DeleteAutoDeletePolicyResponse>(req, "DeleteAutoDeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -432,6 +495,31 @@ namespace TencentCloud.Cfs.V20190719
         }
 
         /// <summary>
+        /// This API is used to delete data retrieval.
+        /// 
+        /// This API is used to delete a specified data retrieval configuration. Deletion is not allowed when associated tasks exist. After this API is called, if the corresponding data retrieval cannot be found through the DescribeDataRetrieval API, the deletion is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataRetrievalRequest"/></param>
+        /// <returns><see cref="DeleteDataRetrievalResponse"/></returns>
+        public Task<DeleteDataRetrievalResponse> DeleteDataRetrieval(DeleteDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DeleteDataRetrievalResponse>(req, "DeleteDataRetrieval");
+        }
+
+        /// <summary>
+        /// This API is used to delete data retrieval.
+        /// 
+        /// This API is used to delete a specified data retrieval configuration. Deletion is not allowed when associated tasks exist. After this API is called, if the corresponding data retrieval cannot be found through the DescribeDataRetrieval API, the deletion is successful.
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataRetrievalRequest"/></param>
+        /// <returns><see cref="DeleteDataRetrievalResponse"/></returns>
+        public DeleteDataRetrievalResponse DeleteDataRetrievalSync(DeleteDataRetrievalRequest req)
+        {
+            return InternalRequestAsync<DeleteDataRetrievalResponse>(req, "DeleteDataRetrieval")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Delete a lifecycle management policy.
         /// </summary>
         /// <param name="req"><see cref="DeleteLifecyclePolicyRequest"/></param>
@@ -470,6 +558,27 @@ namespace TencentCloud.Cfs.V20190719
         public DeleteMigrationTaskResponse DeleteMigrationTaskSync(DeleteMigrationTaskRequest req)
         {
             return InternalRequestAsync<DeleteMigrationTaskResponse>(req, "DeleteMigrationTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to query the list of automatic data deletion policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDeletePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoDeletePoliciesResponse"/></returns>
+        public Task<DescribeAutoDeletePoliciesResponse> DescribeAutoDeletePolicies(DescribeAutoDeletePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoDeletePoliciesResponse>(req, "DescribeAutoDeletePolicies");
+        }
+
+        /// <summary>
+        /// This API is used to query the list of automatic data deletion policies.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDeletePoliciesRequest"/></param>
+        /// <returns><see cref="DescribeAutoDeletePoliciesResponse"/></returns>
+        public DescribeAutoDeletePoliciesResponse DescribeAutoDeletePoliciesSync(DescribeAutoDeletePoliciesRequest req)
+        {
+            return InternalRequestAsync<DescribeAutoDeletePoliciesResponse>(req, "DescribeAutoDeletePolicies")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -829,6 +938,27 @@ namespace TencentCloud.Cfs.V20190719
         public DoDirectoryOperationResponse DoDirectoryOperationSync(DoDirectoryOperationRequest req)
         {
             return InternalRequestAsync<DoDirectoryOperationResponse>(req, "DoDirectoryOperation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// This API is used to modify the name or cleanup path of an automatic deletion policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="ModifyAutoDeletePolicyResponse"/></returns>
+        public Task<ModifyAutoDeletePolicyResponse> ModifyAutoDeletePolicy(ModifyAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoDeletePolicyResponse>(req, "ModifyAutoDeletePolicy");
+        }
+
+        /// <summary>
+        /// This API is used to modify the name or cleanup path of an automatic deletion policy.
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAutoDeletePolicyRequest"/></param>
+        /// <returns><see cref="ModifyAutoDeletePolicyResponse"/></returns>
+        public ModifyAutoDeletePolicyResponse ModifyAutoDeletePolicySync(ModifyAutoDeletePolicyRequest req)
+        {
+            return InternalRequestAsync<ModifyAutoDeletePolicyResponse>(req, "ModifyAutoDeletePolicy")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,73 +25,82 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Storage type after data dump. among them: InfrequentAccess: infrequent medium storage; ColdStorage: cold storage.
+        /// <p>Storage type after data dumping. Valid values: InfrequentAccess: Infrequent Access storage. ColdStorage: Cold storage.</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Data dump FILE type. among them, BIG_FILE: extra large FILE; STD_FILE: regular FILE; SMALL_FILE: SMALL FILE; ALL: ALL files.
+        /// <p>File type for data dumping. Valid values: BIG_FILE: Very large files. STD_FILE: Standard files. SMALL_FILE: Small files. ALL: All files.</p>
         /// </summary>
         [JsonProperty("FileType")]
         public string FileType{ get; set; }
 
         /// <summary>
-        /// Data dumping action. among them, Archive: settlement; Noarchive: no settlement.
+        /// <p>Data dumping behavior. Valid values: Archive: Archive. Noarchive: Do not archive.</p>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// Data dump trigger time. consists of "DEFAULT_ATIME_" and a number, in days. keep it empty when Action is Noarchive.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Trigger time for data dumping. It consists of "DEFAULT_ATIME_" and a number, in the unit of days. Leave this parameter empty when Action is Noarchive.</p>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// Maximum specification for data dump files. the value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Maximum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
         /// </summary>
         [JsonProperty("FileMaxSize")]
         public string FileMaxSize{ get; set; }
 
         /// <summary>
-        /// Minimum specification of the dump file. its numeric value needs to use the "number+measurement unit" format, and the supported units are K (KiB), M (MiB), and G (GiB).
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Minimum size of a file for data dumping. The value must be in the format of "number + unit". Supported units: K (KiB), M (MiB), and G (GiB).</p>
         /// </summary>
         [JsonProperty("FileMinSize")]
         public string FileMinSize{ get; set; }
 
         /// <summary>
-        /// Policy type.
+        /// <p>Policy type</p>
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// Threshold range: 10-90.
+        /// <p>Threshold range [10-90]</p>
         /// </summary>
         [JsonProperty("ExpireThreshold")]
         public ulong? ExpireThreshold{ get; set; }
 
         /// <summary>
-        /// Threshold range: 10-90.
+        /// <p>Threshold range [10-90]</p>
         /// </summary>
         [JsonProperty("TargetThreshold")]
         public ulong? TargetThreshold{ get; set; }
 
         /// <summary>
-        /// When a file in CFSTurbo and an external storage have the same name, whether to overwrite.
-        /// 
-        /// Override.
-        /// 
-        /// false: not overwrite (at the same time will not release hot data storage).
-        /// 
-        /// Default false when empty.
+        /// <p>Whether to overwrite a file in CFSTurbo if it has the same name as a file in the external storage.</p><p>true: Overwrite.</p><p>false: Do not overwrite (and hot storage data will not be released).</p><p>If this parameter is left empty, the default value is false.</p>
         /// </summary>
         [JsonProperty("IsOverwrite")]
         public bool? IsOverwrite{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to sync new files to S3 in near real time. true: Near real-time sync (within 30 seconds). false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage.</p>
+        /// </summary>
+        [JsonProperty("IsCreateRealTimeSync")]
+        public bool? IsCreateRealTimeSync{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to sync modified files to S3 in near real time. true: Near real-time sync (within 30 seconds) / false: Sync based on the time configured in the policy. The default value is false. This parameter takes effect only when StorageType=ExternalStorage. It is independent of IsOverwrite.</p>
+        /// </summary>
+        [JsonProperty("IsModifyRealTimeSync")]
+        public bool? IsModifyRealTimeSync{ get; set; }
+
+        /// <summary>
+        /// <p>Whether to sync file deletion to S3. true: Sync deletion (within 30 seconds) / false: Do not sync deletion. The default value is false. If this parameter is set to true, versioning must be enabled for the destination COS Bucket. This parameter takes effect only when StorageType=ExternalStorage.</p>
+        /// </summary>
+        [JsonProperty("IsSyncDelete")]
+        public bool? IsSyncDelete{ get; set; }
 
 
         /// <summary>
@@ -109,6 +118,9 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "ExpireThreshold", this.ExpireThreshold);
             this.SetParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
             this.SetParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
+            this.SetParamSimple(map, prefix + "IsCreateRealTimeSync", this.IsCreateRealTimeSync);
+            this.SetParamSimple(map, prefix + "IsModifyRealTimeSync", this.IsModifyRealTimeSync);
+            this.SetParamSimple(map, prefix + "IsSyncDelete", this.IsSyncDelete);
         }
     }
 }

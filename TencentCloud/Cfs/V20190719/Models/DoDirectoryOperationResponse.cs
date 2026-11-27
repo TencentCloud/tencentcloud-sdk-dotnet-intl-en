@@ -25,7 +25,7 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// 1: success 0: failure. for the create directory operation, 1 indicates successful creation, 0 indicates creation failed. for the confirm directory existence operation, 1 indicates the directory exists, 0 indicates the directory does not exist. in addition, if the directory already exists during the create directory operation, it will also return creation succeeded.
+        /// <p>1: success. 0: failure. For the operation of creating a directory, 1 indicates that the directory is created successfully, and 0 indicates a creation failure. For the operation of checking whether a directory exists, 1 indicates that the directory exists, and 0 indicates that the directory does not exist. In addition, if the directory already exists during the directory creation operation, the creation is also considered successful.</p>
         /// </summary>
         [JsonProperty("Result")]
         public long? Result{ get; set; }

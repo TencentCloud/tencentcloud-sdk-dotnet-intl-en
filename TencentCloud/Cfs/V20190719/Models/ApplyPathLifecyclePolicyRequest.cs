@@ -25,13 +25,13 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Lifecycle management policy ID.
+        /// <p>Lifecycle management policy ID.</p>
         /// </summary>
         [JsonProperty("LifecyclePolicyID")]
         public string LifecyclePolicyID{ get; set; }
 
         /// <summary>
-        /// List of absolute paths for directories associated with the lifecycle management policy.
+        /// <p>List of directory paths associated with the lifecycle management policy. Each path must start with /cfs/, representing a logical path within the file storage instance, not a local mount point path.</p><p>Examples:</p><ul><li>If the CFS root directory / is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/test1/test2.</li><li>If the CFS subdirectory /subdir is mounted and you need to associate test1/test2 under the mount path, the input value is /cfs/subdir/test1/test2.</li></ul>
         /// </summary>
         [JsonProperty("Paths")]
         public PathInfo[] Paths{ get; set; }

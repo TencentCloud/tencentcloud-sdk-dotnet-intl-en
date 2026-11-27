@@ -25,33 +25,31 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// File system ID. currently, only Turbo series file systems support calling this api. general series file systems (including enhanced) do not support calling.
+        /// <p>File system ID. Currently, only Turbo file systems support this API. General-purpose file systems (including enhanced ones) do not support this API.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// create a directory, equivalent to mkdir.
-        /// check: confirm the existence of the directory, equivalent to stat.
-        /// move: rename a file or directory, equivalent to mv.
+        /// <p>create: creates a directory, equivalent to mkdir.<br>check: checks whether a directory exists, equivalent to stat.<br>move: renames a file or directory, equivalent to mv.</p>
         /// </summary>
         [JsonProperty("OpetationType")]
         public string OpetationType{ get; set; }
 
         /// <summary>
-        /// Absolute path of the directory. recursive creation is enabled by default (if the directory contains non-existent subdirectories, create the corresponding subdirectory first).
+        /// <p>The system recursively creates all parent directories in the path by default. The path must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li><p>If the operation is create/check</p><ul><li>If the CFS root directory / is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to create/check whether test1/test2 exists under the mount path, the input value is /cfs/subdir/test1/test2</li></ul></li><li><p>If the operation is move</p><ul><li>If the CFS root directory / is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/test1/test2</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under test1/test2 to DestPath, the input value is /cfs/subdir/test1/test2</li></ul></li></ul>
         /// </summary>
         [JsonProperty("DirectoryPath")]
         public string DirectoryPath{ get; set; }
 
         /// <summary>
-        /// Permission to create directory. if not specified, it defaults to 0755. if OperationType is check, this value is meaningless.
+        /// <p>Permission for creating the directory. If not specified, the default value is 0755. If OperationType is check, this value is meaningless.</p>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// The destination directory name for the mv operation. the path must start with /cfs/.
+        /// <p>Target directory path for the mv operation. It must start with /cfs/, which represents the logical path inside the file storage instance, not the local mount point path.<br>Example:</p><ul><li>If the CFS root directory / is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/test3/test4</li><li>If the CFS subdirectory /subdir is mounted, and you need to move files under DirectoryPath to test3/test4 under the mount path, the input value is /cfs/subdir/test3/test4</li></ul>
         /// </summary>
         [JsonProperty("DestPath")]
         public string DestPath{ get; set; }

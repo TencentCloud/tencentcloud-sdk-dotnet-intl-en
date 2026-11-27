@@ -25,61 +25,61 @@ namespace TencentCloud.Controlcenter.V20230110.Models
     {
         
         /// <summary>
-        /// Specifies the unique identifier for account factory baseline item, can only contain english letters, digits, and @, ,._[]-:()()[]+=., with a length of 2-128 characters.
+        /// Unique ID of the Account Factory baseline item, which can contain only English letters, numbers, and symbols (@,._[]-:()+=), and must be 2 to 128 characters in length.
         /// </summary>
         [JsonProperty("Identifier")]
         public string Identifier{ get; set; }
 
         /// <summary>
-        /// Baseline item name. specifies a unique name for the feature item. supports a combination of english letters, numbers, chinese characters, and symbols @, &, _, [, ], -. valid values: 1-25 chinese or english characters.
+        /// Baseline item name, which is unique, supports only the combination of English letters, digits, and symbols (@&_[]-), and is 1 to 25 characters in length.
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// Baseline item english name. specifies a unique name for the baseline item. supports a combination of english letters, digits, spaces, and symbols @, &, _, [], -. valid values: 1-64 english characters.
+        /// Baseline item English name, which must be unique, can contain only English letters, numbers, spaces, and symbols (@&_[]-), and must be 1 to 64 characters in length.
         /// </summary>
         [JsonProperty("NameEn")]
         public string NameEn{ get; set; }
 
         /// <summary>
-        /// Baseline item weight. the smaller the value, the higher the weight. value range equal to or greater than 0.
+        /// Baseline item weight. A smaller value indicates a higher priority. Value range: greater than or equal to 0.
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }
 
         /// <summary>
-        /// Specifies whether the baseline item is required (1: required; 0: optional).
+        /// Whether the baseline item is required. Valid values: 1 (yes) and 0 (no).
         /// </summary>
         [JsonProperty("Required")]
         public long? Required{ get; set; }
 
         /// <summary>
-        /// Baseline item dependency. value range of N depends on the count of other baseline items it relies on.
+        /// Baseline item dependencies. The value range of N depends on the number of other baseline items that the current baseline item depends on.
         /// </summary>
         [JsonProperty("DependsOn")]
         public DependsOnItem[] DependsOn{ get; set; }
 
         /// <summary>
-        /// Baseline description, with a length of 2 to 256 english or chinese characters. it is empty by default.
+        /// Baseline description, which is 2 to 256 English characters in length. The default value is empty.
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Baseline item english description, with a length of 2 to 1024 english characters. it is empty by default.
+        /// Baseline item English description, which is 2 to 1024 English characters in length. The default value is empty.
         /// </summary>
         [JsonProperty("DescriptionEn")]
         public string DescriptionEn{ get; set; }
 
         /// <summary>
-        /// Baseline classification. length: 2-32 english or chinese characters. values cannot be empty.
+        /// Baseline category, which is 2 to 32 English characters in length and cannot be empty.
         /// </summary>
         [JsonProperty("Classify")]
         public string Classify{ get; set; }
 
         /// <summary>
-        /// Baseline english classification, with a length of 2-64 english characters. cannot be empty.
+        /// Baseline English category, which is 2 to 64 English characters in length and cannot be empty.
         /// </summary>
         [JsonProperty("ClassifyEn")]
         public string ClassifyEn{ get; set; }

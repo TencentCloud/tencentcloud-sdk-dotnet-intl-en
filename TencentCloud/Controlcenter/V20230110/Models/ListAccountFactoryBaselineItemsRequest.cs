@@ -25,13 +25,13 @@ namespace TencentCloud.Controlcenter.V20230110.Models
     {
         
         /// <summary>
-        /// Maximum number of returned records. value ranges from 0 to 200.
+        /// Maximum number of returned records. Value range: 0-200.
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// Offset. valid values are equal to or greater than 0.
+        /// Offset. Value range: greater than or equal to 0.
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

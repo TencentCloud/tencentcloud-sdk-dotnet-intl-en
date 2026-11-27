@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.intl.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1427";
+       private const string sdkVersion = "SDK_NET_3.0.1436";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to obtain a BizToken before each call to the Web verification service. Save the BizToken to initiate the verification process and retrieve the result upon completion. The BizToken is valid for 10 minutes.
+        /// Before each call to the Web verification service, you need to call this API to obtain a BizToken and save it for initiating the verification process. After the verification is completed, the BizToken is used to obtain the result information. The BizToken is valid for 10 minutes.
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// This API is used to obtain a BizToken before each call to the Web verification service. Save the BizToken to initiate the verification process and retrieve the result upon completion. The BizToken is valid for 10 minutes.
+        /// Before each call to the Web verification service, you need to call this API to obtain a BizToken and save it for initiating the verification process. After the verification is completed, the BizToken is used to obtain the result information. The BizToken is valid for 10 minutes.
         /// </summary>
         /// <param name="req"><see cref="ApplyWebVerificationBizTokenIntlRequest"/></param>
         /// <returns><see cref="ApplyWebVerificationBizTokenIntlResponse"/></returns>

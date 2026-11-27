@@ -25,22 +25,20 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// The token identifying this web-based verification process, valid for 7,200s after issuance. It is required for getting the result after the verification process is completed.
-        /// Example: `https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442`
+        /// <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
         /// </summary>
         [JsonProperty("VerificationUrl")]
         [System.Obsolete]
         public string VerificationUrl{ get; set; }
 
         /// <summary>
-        /// A token that identifies a Web verification process, with a validity time of 10 minutes. after the process is complete, the token can be used to obtain the verification result.
+        /// <p>The token that identifies a Web verification process, valid for 10 minutes. After the process is completed, this token can be used to obtain the verification result information.</p>
         /// </summary>
         [JsonProperty("BizToken")]
         public string BizToken{ get; set; }
 
         /// <summary>
-        /// The verification URL to be opened with a browser to start the verification process.
-        /// Example: https://intl.faceid.qq.com/reflect/?token=81EEF678-28EE-4759-A82E-6CBBBE6BC442
+        /// <p>The URL of the current verification process. After it is returned to the browser frontend, open this URL to start the verification process.</p>
         /// </summary>
         [JsonProperty("VerificationURL")]
         public string VerificationURL{ get; set; }

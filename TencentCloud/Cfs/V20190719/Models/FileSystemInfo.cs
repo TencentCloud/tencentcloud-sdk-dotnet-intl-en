@@ -25,183 +25,196 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Creation time
+        /// <p>Creation time.</p>
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// Custom name
+        /// <p>User-defined name.</p>
         /// </summary>
         [JsonProperty("CreationToken")]
         public string CreationToken{ get; set; }
 
         /// <summary>
-        /// File system ID
+        /// <p>File system ID.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// File system status. Valid values:
-        /// - creating
-        /// - mounting
-        /// - create_failed
-        /// - available
-        /// - unserviced
-        /// - upgrading
+        /// <p>File system status. Valid values:</p><ul><li>creating: Creating</li><li>mounting: Mounting</li><li>create_failed: Failed to create</li><li>available: Available</li><li>unserviced: Service suspended</li><li>upgrading: Upgrading</li></ul>
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// Used capacity of the file system, in Byte.
+        /// <p>Used capacity of the file system. Unit: Byte.</p>
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }
 
         /// <summary>
-        /// File system space limit, in GiB.
+        /// <p>File system space limit. Unit: GiB.</p>
         /// </summary>
         [JsonProperty("SizeLimit")]
         public ulong? SizeLimit{ get; set; }
 
         /// <summary>
-        /// Region ID
+        /// <p>Region ID.</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// Region name
+        /// <p>Region name.</p>
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// File system protocol type. Valid values: NFS, CIFS, and TURBO.
+        /// <p>File system protocol type. Valid values: NFS, CIFS, and TURBO.</p>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+        /// <p>Storage type. Valid values: HP: General performance; SD: General standard; TP: turbo performance; TB: turbo standard; THP: Throughput.</p>
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// Prepaid storage pack bound with the file system
+        /// <p>Prepaid storage pack bound to the file system.</p>
         /// </summary>
         [JsonProperty("StorageResourcePkg")]
         public string StorageResourcePkg{ get; set; }
 
         /// <summary>
-        /// Prepaid bandwidth pack bound to a file system (not supported currently)
+        /// <p>Prepaid bandwidth pack bound to the file system (not supported yet).</p>
         /// </summary>
         [JsonProperty("BandwidthResourcePkg")]
         public string BandwidthResourcePkg{ get; set; }
 
         /// <summary>
-        /// Information of permission groups bound to a file system
+        /// <p>Information of the permission group bound to the file system.</p>
         /// </summary>
         [JsonProperty("PGroup")]
         public PGroup PGroup{ get; set; }
 
         /// <summary>
-        /// Custom name
+        /// <p>User-defined name.</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Is the file system encrypted. true: encrypted. false: non-encrypted.
+        /// <p>Whether the file system is encrypted. true: encrypted; false: not encrypted.</p>
         /// </summary>
         [JsonProperty("Encrypted")]
         public bool? Encrypted{ get; set; }
 
         /// <summary>
-        /// Key used for encryption, which can be the key ID or ARN
+        /// <p>Key used for encryption, which can be the key ID or ARN.</p>
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// Application ID
+        /// <p>Application ID.</p>
         /// </summary>
         [JsonProperty("AppId")]
         public long? AppId{ get; set; }
 
         /// <summary>
-        /// Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+        /// <p>Maximum file system throughput, which is determined by the current used storage capacity of the file system, the bound storage pack, and the throughput pack. Unit: MiB/s.</p>
         /// </summary>
         [JsonProperty("BandwidthLimit")]
         public float? BandwidthLimit{ get; set; }
 
         /// <summary>
-        /// Snapshot policy associated with the file system.
+        /// <p>Snapshot policy associated with the file system.</p>
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+        /// <p>Snapshot processing status of the file system. snapping: snapshot in progress; normal: normal status.</p>
         /// </summary>
         [JsonProperty("SnapStatus")]
         public string SnapStatus{ get; set; }
 
         /// <summary>
-        /// Upper limit of file system capacity.
-        /// Unit: GiB.
+        /// <p>Maximum capacity specification of the file system.<br>Unit: GiB.</p>
         /// </summary>
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
 
         /// <summary>
-        /// File system tag list
+        /// <p>List of file system tags.</p>
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// Status of file system lifecycle management.
-        /// NotAvailable: unavailable.
-        /// Available.
+        /// <p>Lifecycle management status of the file system.<br>NotAvailable: Unavailable.<br>Available: Available.</p>
         /// </summary>
         [JsonProperty("TieringState")]
         public string TieringState{ get; set; }
 
         /// <summary>
-        /// Layered storage detail.
+        /// <p>Tiered storage details.</p>
         /// </summary>
         [JsonProperty("TieringDetail")]
         public TieringDetailInfo TieringDetail{ get; set; }
 
         /// <summary>
-        /// File system auto scale-out policy.
+        /// <p>Automatic scaling policy of the file system.</p>
         /// </summary>
         [JsonProperty("AutoScaleUpRule")]
         public AutoScaleUpRule AutoScaleUpRule{ get; set; }
 
         /// <summary>
-        /// File System Version
+        /// <p>File system version.</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// Additional performance info.
-        /// Note: This field may return null, indicating that no valid values can be obtained.
+        /// <p>Additional performance information.</p>
         /// </summary>
         [JsonProperty("ExstraPerformanceInfo")]
         public ExstraPerformanceInfo[] ExstraPerformanceInfo{ get; set; }
 
         /// <summary>
-        /// basic: standard version metadata type.
-        /// enhanced: additional metadata type.
+        /// <p>basic: standard metadata type.<br>enhanced: enhanced metadata type.</p>
         /// </summary>
         [JsonProperty("MetaType")]
         public string MetaType{ get; set; }
+
+        /// <summary>
+        /// <p>Business scenario.</p><p>Valid values:</p><ul><li>AgentSandbox: Create AgentCFS.</li></ul>
+        /// </summary>
+        [JsonProperty("Scenario")]
+        public string Scenario{ get; set; }
+
+        /// <summary>
+        /// <p>Overfull deletion capacity ratio. 0.0 indicates disabled.</p><p>Value range: [0.0, 1.0].</p>
+        /// </summary>
+        [JsonProperty("FullDeleteCapacityUsage")]
+        public float? FullDeleteCapacityUsage{ get; set; }
+
+        /// <summary>
+        /// <p>Minimum survival time before overfull deletion, in seconds.</p><p>Unit: seconds.</p>
+        /// </summary>
+        [JsonProperty("FullDeleteMinTtl")]
+        public ulong? FullDeleteMinTtl{ get; set; }
+
+        /// <summary>
+        /// <p>Expiration deletion TTL, in seconds. 0 indicates disabled.</p><p>Unit: seconds.</p>
+        /// </summary>
+        [JsonProperty("ExpireDeleteTtl")]
+        public ulong? ExpireDeleteTtl{ get; set; }
 
 
         /// <summary>
@@ -237,6 +250,10 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
             this.SetParamSimple(map, prefix + "MetaType", this.MetaType);
+            this.SetParamSimple(map, prefix + "Scenario", this.Scenario);
+            this.SetParamSimple(map, prefix + "FullDeleteCapacityUsage", this.FullDeleteCapacityUsage);
+            this.SetParamSimple(map, prefix + "FullDeleteMinTtl", this.FullDeleteMinTtl);
+            this.SetParamSimple(map, prefix + "ExpireDeleteTtl", this.ExpireDeleteTtl);
         }
     }
 }

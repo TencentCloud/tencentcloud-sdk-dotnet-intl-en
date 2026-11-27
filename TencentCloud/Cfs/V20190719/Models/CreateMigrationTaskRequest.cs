@@ -25,97 +25,97 @@ namespace TencentCloud.Cfs.V20190719.Models
     {
         
         /// <summary>
-        /// Migration task name
+        /// <p>Migration task name.</p>
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+        /// <p>Migration mode flag. Default value: 0. 0: Bucket migration; 1: Inventory migration.</p>
         /// </summary>
         [JsonProperty("MigrationType")]
         public ulong? MigrationType{ get; set; }
 
         /// <summary>
-        /// Migration mode. Default value: `0` (full migration).
+        /// <p>Migration mode. Default value: 0. 0: Full migration.</p>
         /// </summary>
         [JsonProperty("MigrationMode")]
         public ulong? MigrationMode{ get; set; }
 
         /// <summary>
-        /// SecretId of the data source account.
+        /// <p>SecretId of the data source account.</p>
         /// </summary>
         [JsonProperty("SrcSecretId")]
         public string SrcSecretId{ get; set; }
 
         /// <summary>
-        /// SecretKey of the data source account.
+        /// <p>SecretKey of the data source account.</p>
         /// </summary>
         [JsonProperty("SrcSecretKey")]
         public string SrcSecretKey{ get; set; }
 
         /// <summary>
-        /// File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+        /// <p>File system instance ID, which can be obtained through <a href="https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1">DescribeCfsFileSystems</a>.</p>
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// File system path
+        /// <p>Directory path in the file system. It does not involve the actual mounted subdirectory or root directory, and does not need to be prefixed with /cfs/.</p>
         /// </summary>
         [JsonProperty("FsPath")]
         public string FsPath{ get; set; }
 
         /// <summary>
-        /// Overwrite policy for files with the same name. Valid values: `0` (retain the file with the latest modified time), `1` (overwrite); and `2` (not overwrite). Default value: `0`.
+        /// <p>Overwrite policy for files with the same name during migration. Default value: 0. 0: The file with the latest modification time takes precedence; 1: Full overwrite; 2: No overwrite.</p>
         /// </summary>
         [JsonProperty("CoverType")]
         public ulong? CoverType{ get; set; }
 
         /// <summary>
-        /// Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+        /// <p>Data source service provider.</p><p>Valid values:</p><ul><li>COS: Tencent Cloud COS</li><li>OSS: Alibaba Cloud OSS</li><li>OBS: Huawei Cloud OBS</li><li>BOS: Baidu Cloud BOS</li><li>TOS: Volcano Engine TOS</li></ul>
         /// </summary>
         [JsonProperty("SrcService")]
         public string SrcService{ get; set; }
 
         /// <summary>
-        /// Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+        /// <p>Name of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }
 
         /// <summary>
-        /// Data source bucket region
+        /// <p>Region of the data source bucket.</p>
         /// </summary>
         [JsonProperty("BucketRegion")]
         public string BucketRegion{ get; set; }
 
         /// <summary>
-        /// Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+        /// <p>Address of the data source bucket. For bucket migration, either BucketName or BucketAddress is required. For inventory migration, this parameter is not required.</p>
         /// </summary>
         [JsonProperty("BucketAddress")]
         public string BucketAddress{ get; set; }
 
         /// <summary>
-        /// List address. This parameter is required if `MigrationType` is set to `1` (list).
+        /// <p>Inventory address. Required when the migration mode is inventory migration.</p>
         /// </summary>
         [JsonProperty("ListAddress")]
         public string ListAddress{ get; set; }
 
         /// <summary>
-        /// Target file system name
+        /// <p>Name of the destination file system.</p>
         /// </summary>
         [JsonProperty("FsName")]
         public string FsName{ get; set; }
 
         /// <summary>
-        /// Source bucket path, defaults to /.
+        /// <p>Source bucket path. Default value: /.</p>
         /// </summary>
         [JsonProperty("BucketPath")]
         public string BucketPath{ get; set; }
 
         /// <summary>
-        /// Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+        /// <p>Migration direction. 0: Migrate from object storage to file system. 1: Migrate from file system to object storage. Default value: 0.</p>
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
